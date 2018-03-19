@@ -244,6 +244,12 @@ bool DrmPlane::UpdateProperties(drmModeAtomicReqPtr property_set,
   int fence = kms_fence_;
   if (test_commit) {
     fence = layer->GetAcquireFence();
+#ifdef BUFFER_TRACING
+  } else {
+    if (buffer_) {
+      buffer_->MarkBufferInUse();
+    }
+#endif
   }
 
   if (layer->GetBlending() == HWCBlending::kBlendingPremult)

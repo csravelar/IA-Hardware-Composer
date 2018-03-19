@@ -36,7 +36,9 @@ bool NativeGLResource::PrepareResources(
       ETRACE("Failed to make import image.");
       return false;
     }
-
+#ifdef BUFFER_TRACING
+    buffer->MarkBufferInUse();
+#endif
     layer_textures_.emplace_back(import_image.texture_);
   }
 

@@ -33,6 +33,12 @@
 
 namespace hwcomposer {
 
+#ifdef BUFFER_TRACING
+static int i = 0;
+static std::vector<int> created_buffers;
+static std::vector<int> in_use_buffers;
+#endif
+
 DrmBuffer::~DrmBuffer() {
   if (media_image_.surface_ == VA_INVALID_ID) {
     resource_manager_->MarkResourceForDeletion(image_, image_.texture_ > 0);
@@ -45,9 +51,29 @@ DrmBuffer::~DrmBuffer() {
 
     resource_manager_->MarkMediaResourceForDeletion(media_image_);
   }
+
+#ifdef BUFFER_TRACING
+  std::vector<int> active_buffers;
+  for (size_t z = 0; z < created_buffers.size(); z++) {
+    int temp = created_buffers.at(z);
+    if (temp == id_) {
+      continue;
+    }
+
+    active_buffers.emplace_back(temp);
+  }
+
+  active_buffers.swap(created_buffers);
+#endif
 }
 
 void DrmBuffer::Initialize(const HwcBuffer& bo) {
+#ifdef BUFFER_TRACING
+  id_ = i;
+  created_buffers.emplace_back(i);
+  i++;
+#endif
+
   width_ = bo.width_;
   height_ = bo.height_;
   for (uint32_t i = 0; i < 4; i++) {
@@ -403,5 +429,34 @@ void DrmBuffer::Dump() {
 std::shared_ptr<OverlayBuffer> OverlayBuffer::CreateOverlayBuffer() {
   return std::make_shared<DrmBuffer>();
 }
+
+#ifdef BUFFER_TRACING
+void DrmBuffer::MarkBufferInUse() const {
+  bool id_found = false;
+  for (size_t z = 0; z < in_use_buffers.size(); z++) {
+    int temp = in_use_buffers.at(z);
+    if (temp == id_) {
+      id_found = true;
+      break;
+    }
+  }
+
+  if (!id_found)
+    in_use_buffers.emplace_back(id_);
+}
+
+void OverlayBuffer::PrintBufferStats() {
+  for (size_t z = 0; z < created_buffers.size(); z++) {
+    IBUFFERTRACE("Buffers Alive %d \n", created_buffers.at(z));
+  }
+
+  for (size_t z = 0; z < in_use_buffers.size(); z++) {
+    IBUFFERTRACE("Buffers in Use as compared to last frame: %d \n",
+                 in_use_buffers.at(z));
+  }
+
+  std::vector<int>().swap(in_use_buffers);
+}
+#endif
 
 }  // namespace hwcomposer

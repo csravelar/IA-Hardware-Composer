@@ -231,6 +231,10 @@ class DisplayQueue {
 
       if (resource_manager_->PreparePurgedResources())
         compositor_.FreeResources();
+#ifdef BUFFER_TRACING
+      ETRACE("Printing Buffer stats for this frame: \n");
+      OverlayBuffer::PrintBufferStats();
+#endif
     }
 
    private:

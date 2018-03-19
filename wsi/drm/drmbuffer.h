@@ -91,7 +91,9 @@ class DrmBuffer : public OverlayBuffer {
   bool CreateFrameBuffer(uint32_t gpu_fd) override;
 
   void Dump() override;
-
+#ifdef BUFFER_TRACING
+  void MarkBufferInUse() const override;
+#endif
  private:
   void Initialize(const HwcBuffer& bo);
   uint32_t width_ = 0;
@@ -110,6 +112,9 @@ class DrmBuffer : public OverlayBuffer {
   MediaResourceHandle media_image_;
   std::unique_ptr<PixelBuffer> pixel_buffer_;
   void* data_;
+#ifdef BUFFER_TRACING
+  uint32_t id_ = 0;
+#endif
 };
 
 }  // namespace hwcomposer

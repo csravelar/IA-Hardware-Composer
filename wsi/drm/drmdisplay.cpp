@@ -374,8 +374,15 @@ bool DrmDisplay::CommitFrame(
       plane->SetNativeFence(-1);
     }
 
-    if (comp_plane.Scanout() && !comp_plane.IsSurfaceRecycled())
+    if (comp_plane.Scanout() && !comp_plane.IsSurfaceRecycled()) {
       plane->SetBuffer(layer->GetSharedBuffer());
+#ifdef BUFFER_TRACING
+    } else {
+      if (layer->GetBuffer()) {
+        layer->GetBuffer()->MarkBufferInUse();
+      }
+#endif
+    }
 
     if (!plane->UpdateProperties(pset, crtc_id_, layer))
       return false;

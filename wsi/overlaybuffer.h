@@ -24,6 +24,8 @@
 
 #include "hwcdefs.h"
 
+#include "hwctrace.h"
+
 namespace hwcomposer {
 
 class NativeBufferHandler;
@@ -32,6 +34,8 @@ class ResourceManager;
 class OverlayBuffer {
  public:
   static std::shared_ptr<OverlayBuffer> CreateOverlayBuffer();
+
+  static void PrintBufferStats();
 
   OverlayBuffer(OverlayBuffer&& rhs) = default;
   OverlayBuffer& operator=(OverlayBuffer&& other) = default;
@@ -94,6 +98,9 @@ class OverlayBuffer {
   virtual bool CreateFrameBuffer(uint32_t gpu_fd) = 0;
 
   virtual void Dump() = 0;
+#ifdef BUFFER_TRACING
+  virtual void MarkBufferInUse() const = 0;
+#endif
 };
 
 }  // namespace hwcomposer
