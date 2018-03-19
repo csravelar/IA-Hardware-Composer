@@ -232,7 +232,7 @@ void OverlayLayer::InitializeState(HwcLayer* layer,
     state_ |= kLayerOrderChanged;
   }
 
-  surface_damage_ = layer->GetLayerDamage();
+  surface_damage_ = display_frame_;
   SetBuffer(layer->GetNativeHandle(), layer->GetAcquireFence(),
             resource_manager, true, layer);
 
