@@ -25,13 +25,12 @@
 #include "displaymanager.h"
 #include "logicaldisplaymanager.h"
 #include "nativedisplay.h"
-#include "hwcthread.h"
 
 namespace hwcomposer {
 
 class NativeDisplay;
 
-class GpuDevice : public HWCThread {
+class GpuDevice {
  public:
   GpuDevice();
 
@@ -81,28 +80,11 @@ class GpuDevice : public HWCThread {
   void DisableHDCPSessionForAllDisplays();
 
  private:
-  enum InitializationType {
-    kUnInitialized = 0,               // Nothing Initialized.
-    kHWCSettingsInProgress = 1 << 0,  // Reading HWC Settings is in progress.
-    kHWCSettingsDone = 1 << 1,        // Reading HWC Settings is done.
-    kInitializeHotPlugMonitor =
-        1 << 2,  // Initialize resources to monitor for Hotplug events.
-    kInitializedHotPlugMonitor =
-        1 << 3,  // Initialized resources to monitor for Hotplug events.
-    kInitialized = 1 << 4  // Everything Initialized
-  };
-
-  void HandleHWCSettings();
-  void InitializeHotPlugEvents(bool take_lock = true);
-  void HandleRoutine() override;
   std::unique_ptr<DisplayManager> display_manager_;
   std::vector<std::unique_ptr<LogicalDisplayManager>> logical_display_manager_;
   std::vector<std::unique_ptr<NativeDisplay>> mosaic_displays_;
   std::vector<NativeDisplay*> total_displays_;
-  uint32_t initialization_state_ = kUnInitialized;
-  SpinLock initialization_state_lock_;
-  SpinLock thread_stage_lock_;
-  SpinLock thread_sync_lock_;
+  bool initialized_;
 };
 
 }  // namespace hwcomposer

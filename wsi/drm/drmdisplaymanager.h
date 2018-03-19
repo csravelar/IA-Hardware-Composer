@@ -48,12 +48,6 @@ class DrmDisplayManager : public HWCThread, public DisplayManager {
 
   bool Initialize() override;
 
-  void InitializeDisplayResources() override;
-
-  void InitializeExternalLockMonitor(bool splash = false) override;
-
-  void StartHotPlugMonitor() override;
-
   NativeDisplay *GetVirtualDisplay() override;
   NativeDisplay *GetNestedDisplay() override;
 
