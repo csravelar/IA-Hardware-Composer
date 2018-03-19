@@ -30,6 +30,7 @@
 #include "drmdisplay.h"
 #include "drmscopedtypes.h"
 #include "hwcthread.h"
+#include "hwclock.h"
 #include "vblankeventhandler.h"
 #include "virtualdisplay.h"
 #include "nesteddisplay.h"
@@ -42,12 +43,14 @@ class NativeDisplay;
 
 class DrmDisplayManager : public HWCThread, public DisplayManager {
  public:
-  DrmDisplayManager(GpuDevice *device);
+  DrmDisplayManager();
   ~DrmDisplayManager() override;
 
   bool Initialize() override;
 
   void InitializeDisplayResources() override;
+
+  void InitializeExternalLockMonitor(bool splash = false) override;
 
   void StartHotPlugMonitor() override;
 
@@ -59,9 +62,7 @@ class DrmDisplayManager : public HWCThread, public DisplayManager {
   void RegisterHotPlugEventCallback(
       std::shared_ptr<DisplayHotPlugEventCallback> callback) override;
 
-  void ForceRefresh() override;
-
-  void IgnoreUpdates() override;
+  void ForceRefresh();
 
   void NotifyClientsOfDisplayChangeStatus();
 
@@ -76,10 +77,10 @@ class DrmDisplayManager : public HWCThread, public DisplayManager {
   bool UpdateDisplayState();
   std::unique_ptr<NativeDisplay> virtual_display_;
   std::unique_ptr<NativeDisplay> nested_display_;
+  std::unique_ptr<HWCLock> hwc_lock_;
   std::vector<std::unique_ptr<DrmDisplay>> displays_;
   std::shared_ptr<DisplayHotPlugEventCallback> callback_ = NULL;
   std::unique_ptr<NativeBufferHandler> buffer_handler_;
-  GpuDevice *device_ = NULL;
   int fd_ = -1;
   int hotplug_fd_ = -1;
   bool notify_client_ = false;

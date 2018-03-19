@@ -285,7 +285,7 @@ class DisplayQueue {
   int state_ = kConfigurationChanged;
   PhysicalDisplay* display_ = NULL;
   SpinLock power_mode_lock_;
-  bool handle_display_initializations_ = true;  // to disable hwclock monitoring.
+  bool handle_display_initializations_ = true;  // to disable hwclock thread.
   uint32_t plane_transform_ = kIdentity;
   SpinLock video_lock_;
   bool requested_video_effect_ = false;

@@ -16,8 +16,6 @@
 
 #include <gpudevice.h>
 
-#include <sys/file.h>
-
 #include "mosaicdisplay.h"
 
 #include "hwctrace.h"
@@ -42,7 +40,7 @@ bool GpuDevice::Initialize() {
   }
 
   thread_stage_lock_.lock();
-  display_manager_.reset(DisplayManager::CreateDisplayManager(this));
+  display_manager_.reset(DisplayManager::CreateDisplayManager());
 
   bool success = display_manager_->Initialize();
   if (!success) {
@@ -59,9 +57,11 @@ bool GpuDevice::Initialize() {
   thread_sync_lock_.lock();
   initialization_state_ |= kInitialized;
   initialization_state_ &= ~kHWCSettingsDone;
+  // TODO: Add splash screen support.
+  display_manager_->InitializeExternalLockMonitor();
   thread_sync_lock_.unlock();
 
-  if (use_thread && lock_fd_ == -1) {
+  if (use_thread) {
     // Exit thread as we don't need worker thread after
     // Initialization.
     HWCThread::Exit();
@@ -587,41 +587,7 @@ void GpuDevice::InitializeHotPlugEvents(bool take_lock) {
 void GpuDevice::HandleRoutine() {
   thread_sync_lock_.lock();
   HandleHWCSettings();
-
-  // Iniitialize resources to monitor external events.
-  // These can be two types:
-  // 1) We are showing splash screen and another App
-  //    needs to take the control. In this case splash
-  //    is true.
-  // 2) Another app is having control of display and we
-  //    we need to take control.
-  // TODO: Add splash screen support.
-  lock_fd_ = open("/vendor/hwc.lock", O_RDONLY);
-  if (lock_fd_ == -1) {
-    thread_sync_lock_.unlock();
-    return;
-  }
-
   thread_sync_lock_.unlock();
-  display_manager_->IgnoreUpdates();
-
-  if (flock(lock_fd_, LOCK_EX) != 0)
-    ETRACE("Failed to wait on hwc lock.");
-
-  close(lock_fd_);
-  lock_fd_ = -1;
-
-  display_manager_->ForceRefresh();
-}
-
-void GpuDevice::HandleWait() {
-  if (lock_fd_ == -1) {
-    HWCThread::HandleWait();
-  }
-}
-
-void GpuDevice::DisableWatch() {
-  HWCThread::Exit();
 }
 
 }  // namespace hwcomposer

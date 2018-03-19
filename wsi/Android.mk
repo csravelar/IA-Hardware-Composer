@@ -54,7 +54,8 @@ LOCAL_SRC_FILES := \
         drm/drmplane.cpp \
 	drm/drmpixelbuffer.cpp \
         drm/drmdisplaymanager.cpp \
-	drm/drmscopedtypes.cpp
+	drm/drmscopedtypes.cpp \
+	drm/hwclock.cpp
 
 ifeq ($(strip $(ENABLE_NESTED_DISPLAY_SUPPORT)), true)
 LOCAL_CPPFLAGS += -DNESTED_DISPLAY_SUPPORT
