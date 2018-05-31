@@ -1,4 +1,3 @@
 ^tests/googletests/include/gtest/*
-^tests/googletests/src/*
-^tests/googletests/src/.*
-^tests/googletests/src/*.*
+^tests/googletests/src/gtest-death-test.cc
+tests/googletests/src/gtest-death-test.cc
