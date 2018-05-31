@@ -1,2 +1,4 @@
 ^tests/googletests/include/gtest/*
 ^tests/googletests/src/*
+^tests/googletests/src/.*
+^tests/googletests/src/*.*
