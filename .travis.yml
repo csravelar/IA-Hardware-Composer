@@ -166,6 +166,3 @@ script:
 - cd -
 - os/linux/weston/build_script.sh --weston-dir=../weston --iahwc-dir=$(pwd) --build
 
-branches:
-  only:
-  - master
