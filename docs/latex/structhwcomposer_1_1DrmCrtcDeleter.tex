@@ -1,0 +1,43 @@
+\hypertarget{structhwcomposer_1_1DrmCrtcDeleter}{}\section{hwcomposer\+:\+:Drm\+Crtc\+Deleter Struct Reference}
+\label{structhwcomposer_1_1DrmCrtcDeleter}\index{hwcomposer\+::\+Drm\+Crtc\+Deleter@{hwcomposer\+::\+Drm\+Crtc\+Deleter}}
+
+
+{\ttfamily \#include $<$drmscopedtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1DrmCrtcDeleter_a2a3db04810a8ad4a2fa5f7169ff3cc2e}{operator()}} (\mbox{\hyperlink{drmscopedtypes_8h_a847e3d935cfc3d51910e1a3934e88a1b}{drm\+Mode\+Crtc}} $\ast$crtc) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file drmscopedtypes.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrmCrtcDeleter_a2a3db04810a8ad4a2fa5f7169ff3cc2e}\label{structhwcomposer_1_1DrmCrtcDeleter_a2a3db04810a8ad4a2fa5f7169ff3cc2e}} 
+\index{hwcomposer\+::\+Drm\+Crtc\+Deleter@{hwcomposer\+::\+Drm\+Crtc\+Deleter}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+Drm\+Crtc\+Deleter@{hwcomposer\+::\+Drm\+Crtc\+Deleter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Crtc\+Deleter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drmscopedtypes_8h_a847e3d935cfc3d51910e1a3934e88a1b}{drm\+Mode\+Crtc}} $\ast$}]{crtc }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 31 of file drmscopedtypes.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                                        \{}
+\DoxyCodeLine{32   drmModeFreeCrtc(crtc);}
+\DoxyCodeLine{33 \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8h}{drmscopedtypes.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8cpp}{drmscopedtypes.\+cpp}}\end{DoxyCompactItemize}

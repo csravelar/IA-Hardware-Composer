@@ -1,0 +1,2102 @@
+\hypertarget{classhwcomposer_1_1PhysicalDisplay}{}\section{hwcomposer\+:\+:Physical\+Display Class Reference}
+\label{classhwcomposer_1_1PhysicalDisplay}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+
+
+{\ttfamily \#include $<$physicaldisplay.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Physical\+Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classhwcomposer_1_1PhysicalDisplay}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af08453e7ec5a9f8e792063b09b2e9305}{Physical\+Display}} (uint32\+\_\+t gpu\+\_\+fd, uint32\+\_\+t pipe\+\_\+id)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a06260ef1c571e04df545721406e94d7b}{$\sim$\+Physical\+Display}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a594319095f4b6c7078282c56d9cbe9f4}{Initialize}} (\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$buffer\+\_\+handler, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager) override
+\item 
+Display\+Type \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa2a50f9dbb2740cf40256bcadad666c4}{Type}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a63c3f3123c8d148205e29c177bcd5bd6}{Width}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa6f009efb2eb6733c2476696b54c9461}{Height}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a8339a14dbaa5ac9a1d4d4c3dc3694a10}{Power\+Mode}} () const override
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a8bcd7d925e60afbea75bf3aa18b7aa75}{Get\+Display\+Pipe}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1b2e31ee497b3fec8178abe481462560}{Set\+Active\+Config}} (uint32\+\_\+t config) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6dfc5d017719115af233f12911c71d84}{Get\+Active\+Config}} (uint32\+\_\+t $\ast$config) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a8f67530a852d9e6e65874e4835b35dab}{Set\+Custom\+Resolution}} (const Hwc\+Rect$<$ int32\+\_\+t $>$ \&) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a4fc0fbe6c307de00cd10a3c998c74b51}{Set\+Power\+Mode}} (uint32\+\_\+t power\+\_\+mode) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aafc7fc562c026ce24ac7900c12023bd8}{Present}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&source\+\_\+layers, int32\+\_\+t $\ast$retire\+\_\+fence, \mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$call\+\_\+back=\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}, bool handle\+\_\+constraints=false) override
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac003447bfca005292fc052d5b573869e}{Register\+Vsync\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aaa21f6de6805e8e6d0d5771c3207cfd6}{Register\+Refresh\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RefreshCallback}{Refresh\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac56013d7b3323ca84594779358aeb254}{Register\+Hot\+Plug\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1HotPlugCallback}{Hot\+Plug\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a058a5c3a853da43fb76b129cc4e24ef8}{V\+Sync\+Control}} (bool enabled) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad4986df79c02c4c30e205065028cc050}{Check\+Plane\+Format}} (uint32\+\_\+t format) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a48f186ada1686b22a91a888482b8c915}{Set\+Gamma}} (float red, float green, float blue) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af88a8e27861d615a2356fb749c3e0c7c}{Set\+Contrast}} (uint32\+\_\+t red, uint32\+\_\+t green, uint32\+\_\+t blue) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa6a598f275a6b67ba5c256ee0d830b59}{Set\+Color\+Transform}} (const float $\ast$matrix, \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}} hint) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae2d98d76852bced610ccff933486a741}{Set\+Brightness}} (uint32\+\_\+t red, uint32\+\_\+t green, uint32\+\_\+t blue) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a995cabfaf5aca42854711dacef743373}{Set\+Explicit\+Sync\+Support}} (bool disable\+\_\+explicit\+\_\+sync) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a90bb99a363f4e24b9653f984d52d9ba7}{Set\+Video\+Scaling\+Mode}} (uint32\+\_\+t mode) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7a58ed7399533404438fbed2682fdd54}{Set\+Video\+Color}} (H\+W\+C\+Color\+Control color, float value) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a827605530b26ace9d48203c645d11b71}{Get\+Video\+Color}} (H\+W\+C\+Color\+Control color, float $\ast$value, float $\ast$start, float $\ast$end) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6d060b4d7ba7e8f53c1181c14163b188}{Set\+Canvas\+Color}} (uint16\+\_\+t bpc, uint16\+\_\+t red, uint16\+\_\+t green, uint16\+\_\+t blue, uint16\+\_\+t alpha) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac9b499aa64a9bbc3c49e55011c56e819}{Restore\+Video\+Default\+Color}} (H\+W\+C\+Color\+Control color) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a9e8d4b629a28d38bd51239b73b3cdd0c}{Set\+Video\+Deinterlace}} (H\+W\+C\+Deinterlace\+Flag flag, H\+W\+C\+Deinterlace\+Control mode) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a9b8a4d32a3279f79f27878857c22d863}{Restore\+Video\+Default\+Deinterlace}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a83777a9b17a33aa45295c7c354e802b2}{Connect}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af6acaa76c25101eb47883a499311422f}{Is\+Connected}} () const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a3c71b07e973c29b5603c35c333a42991}{Test\+Commit}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayPlane}{Overlay\+Plane}} $>$ \&commit\+\_\+planes) const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_afe0c0a304dab32918d3c40520f00d991}{Populate\+Planes}} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $>$$>$ \&overlay\+\_\+planes) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a58541ff74976131b84a4dac060a48c45}{Update\+Scaling\+Ratio}} (uint32\+\_\+t primary\+\_\+width, uint32\+\_\+t primary\+\_\+height, uint32\+\_\+t display\+\_\+width, uint32\+\_\+t display\+\_\+height) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca407c116394ab91581293e8a919cf78}{Clone\+Display}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$source\+\_\+display) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a3432baaabedbb27e45ea64fcc894a344}{Present\+Clone}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7a76ed244ccea12e69c0fad38be23b84}{Get\+Display\+Attribute}} (uint32\+\_\+t, H\+W\+C\+Display\+Attribute attribute, int32\+\_\+t $\ast$value) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af02d333622a2c80fd79387ce40253e62}{Get\+Display\+Configs}} (uint32\+\_\+t $\ast$num\+\_\+configs, uint32\+\_\+t $\ast$configs) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1d0fe5aac11bc35aa95a55289993d9a8}{Get\+Display\+Name}} (uint32\+\_\+t $\ast$size, char $\ast$name) override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6ed8f896bdb7adc6a20bf25c3fe41f8f}{Get\+X\+Translation}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7c390445fe926da9b501187678d1cb04}{Get\+Y\+Translation}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a3e66e1f2bd3cff0c0ad7e99b8d5fb2ba}{Own\+Presentation}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$clone) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aba785358d36ee129092a1a9ec66f3ff4}{Dis\+Own\+Presentation}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$clone) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae5d26a97e43c84a53d396ca946afbbef}{Set\+Display\+Order}} (uint32\+\_\+t display\+\_\+order) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae9650158e46bd03af1d06aa0e64f3ae6}{Rotate\+Display}} (H\+W\+C\+Rotation rotation) override
+\item 
+const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab10ddca2b99e21d8fef188205900d021}{Get\+Native\+Buffer\+Handler}} () const override
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a81bddc91d8f593a1f1cb2248d7206386}{Set\+Color\+Correction}} (struct \mbox{\hyperlink{structhwcomposer_1_1gamma__colors}{gamma\+\_\+colors}} gamma, uint32\+\_\+t contrast, uint32\+\_\+t brightness) const =0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a89ded7e09902c8c3c707c041412f1c02}{Set\+Color\+Transform\+Matrix}} (const float $\ast$color\+\_\+transform\+\_\+matrix, \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}} color\+\_\+transform\+\_\+hint) const =0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af309ebed456ecdf3eb935ce693f326d1}{Disable}} (const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&composition\+\_\+planes)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1db680248cf31fdf1d2d1e926355916d}{Commit}} (const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&composition\+\_\+planes, const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&previous\+\_\+composition\+\_\+planes, bool disable\+\_\+explicit\+\_\+fence, int32\+\_\+t previous\+\_\+fence, int32\+\_\+t $\ast$commit\+\_\+fence, bool $\ast$previous\+\_\+fence\+\_\+released)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa3cb8537967c34dce7e8ba7762cbd48c}{Update\+Display\+Config}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a954fbb8be8c69890094ddacc510f4a85}{Power\+On}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1800b4ee66d4ec790d661106564b6fca}{Initialize\+Display}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aefba7f9543d7ef74d42f9e06dd0f1a58}{Notify\+Clients\+Of\+Display\+Change\+Status}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a3aeed39dd1af137ed16d83c4dfdcafad}{Set\+Pipe\+Canvas\+Color}} (uint16\+\_\+t bpc, uint16\+\_\+t red, uint16\+\_\+t green, uint16\+\_\+t blue, uint16\+\_\+t alpha) const =0
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a4ef2dfb7a531523ca92c33acf5d86992}{Mark\+For\+Disconnect}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a2bc69ef05899f3079fc48c9fd2907ee0}{Notify\+Client\+Of\+Connected\+State}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a59fb1c1042c6c83e8b1515d27f110e6e}{Notify\+Client\+Of\+Dis\+Connected\+State}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac1fb0f67cead30c43f410e7216f08f9e}{Notify\+Display\+WA}} (bool enable\+\_\+wa)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a14d33c040470fbd1bc3de5bd67c5ae73}{Force\+Refresh}} ()
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad219e79a0c40b94e3cb5f52ad60990f2}{Dis\+Connect}} ()
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab8e24e90adf5eaa76da5cb827ad82c65}{Handle\+Lazy\+Initialization}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5e}{Display\+Connection\+Status}} \{ \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eab95c1164f32874d129854064fe8ac934}{k\+Disconnected}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{k\+Connected}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eabbfe6d9e0ed5ba48cbb1fe7ea2802ad2}{k\+Disconnection\+In\+Progress}} = 1 $<$$<$ 2
+ \}
+\item 
+enum \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fb}{Display\+State}} \{ \newline
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba926d32deff70954c6d218ea554e4b49b}{k\+None}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba52e2505c897030e88bcaa6498019cb4e}{k\+Needs\+Modeset}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba0485d8518da4007d6a1cf2782d439815}{k\+Pending\+Power\+Mode}} = 1 $<$$<$ 2, 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf4469b87df06c81a292ea166c7e6f4e2}{k\+Update\+Display}} = 1 $<$$<$ 3, 
+\newline
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba49dfa5449a227286abb50b84cc029943}{k\+Initialized}} = 1 $<$$<$ 4, 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}{k\+Refresh\+Cloned\+Displays}} = 1 $<$$<$ 5, 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba7fce778372da6b08297c65bd0c162f97}{k\+Handle\+Pending\+Hot\+Plug\+Notifications}} = 1 $<$$<$ 6, 
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}{k\+Notify\+Client}} = 1 $<$$<$ 7, 
+\newline
+\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba07b537e9a0d1cde09c75dc181f709b5b}{k\+Update\+Config}} = 1 $<$$<$ 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a75eb0d6243de4021ad8e49141becc4a0}{config\+\_\+}} = 0
+\item 
+int32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a87ad7236b44be5af4e29233fab50408c}{width\+\_\+}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af7c7ae74664eee51055985f0035aac8c}{height\+\_\+}}
+\item 
+Hwc\+Rect$<$ int32\+\_\+t $>$ \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\+\_\+}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\+\_\+resolution\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\+\_\+fd\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}{power\+\_\+mode\+\_\+}} = \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{k\+On}}
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\+\_\+state\+\_\+}} = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba926d32deff70954c6d218ea554e4b49b}{k\+None}}
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\+\_\+state\+\_\+}} = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eab95c1164f32874d129854064fe8ac934}{k\+Disconnected}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\+\_\+plug\+\_\+display\+\_\+id\+\_\+}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7531be13b7e44445ec42879dc283f7d4}{ordered\+\_\+display\+\_\+id\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1SpinLock}{Spin\+Lock}} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\+\_\+lock\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue}{Display\+Queue}} $>$ \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\+\_\+queue\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1HotPlugCallback}{Hot\+Plug\+Callback}} $>$ \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\+\_\+callback\+\_\+}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\+\_\+display\+\_\+}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ $>$ \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a646651bb227f0d0c18317a864d36d767}{cloned\+\_\+displays\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ $>$ \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab56848042a1534cdd00730e679350b95}{clones\+\_\+}}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_afd057257acfb8801ece8f51d9d7a7abe}{fb\+\_\+manager\+\_\+}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file physicaldisplay.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5e}\label{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5e}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Display\+Connection\+Status@{Display\+Connection\+Status}}
+\index{Display\+Connection\+Status@{Display\+Connection\+Status}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Display\+Connection\+Status}{DisplayConnectionStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5e}{hwcomposer\+::\+Physical\+Display\+::\+Display\+Connection\+Status}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Disconnected@{k\+Disconnected}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Disconnected@{k\+Disconnected}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eab95c1164f32874d129854064fe8ac934}\label{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eab95c1164f32874d129854064fe8ac934}} 
+k\+Disconnected&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Connected@{k\+Connected}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Connected@{k\+Connected}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}\label{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}} 
+k\+Connected&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Disconnection\+In\+Progress@{k\+Disconnection\+In\+Progress}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Disconnection\+In\+Progress@{k\+Disconnection\+In\+Progress}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eabbfe6d9e0ed5ba48cbb1fe7ea2802ad2}\label{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eabbfe6d9e0ed5ba48cbb1fe7ea2802ad2}} 
+k\+Disconnection\+In\+Progress&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 260 of file physicaldisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{260                                \{}
+\DoxyCodeLine{261     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eab95c1164f32874d129854064fe8ac934}{kDisconnected}} = 1 << 0,}
+\DoxyCodeLine{262     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}} = 1 << 1,}
+\DoxyCodeLine{263     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eabbfe6d9e0ed5ba48cbb1fe7ea2802ad2}{kDisconnectionInProgress}} = 1 << 2}
+\DoxyCodeLine{264   \};}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fb}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fb}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Display\+State@{Display\+State}}
+\index{Display\+State@{Display\+State}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Display\+State}{DisplayState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fb}{hwcomposer\+::\+Physical\+Display\+::\+Display\+State}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+None@{k\+None}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+None@{k\+None}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba926d32deff70954c6d218ea554e4b49b}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba926d32deff70954c6d218ea554e4b49b}} 
+k\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Needs\+Modeset@{k\+Needs\+Modeset}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Needs\+Modeset@{k\+Needs\+Modeset}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba52e2505c897030e88bcaa6498019cb4e}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba52e2505c897030e88bcaa6498019cb4e}} 
+k\+Needs\+Modeset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Pending\+Power\+Mode@{k\+Pending\+Power\+Mode}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Pending\+Power\+Mode@{k\+Pending\+Power\+Mode}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba0485d8518da4007d6a1cf2782d439815}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba0485d8518da4007d6a1cf2782d439815}} 
+k\+Pending\+Power\+Mode&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Update\+Display@{k\+Update\+Display}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Update\+Display@{k\+Update\+Display}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf4469b87df06c81a292ea166c7e6f4e2}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf4469b87df06c81a292ea166c7e6f4e2}} 
+k\+Update\+Display&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Initialized@{k\+Initialized}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Initialized@{k\+Initialized}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba49dfa5449a227286abb50b84cc029943}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba49dfa5449a227286abb50b84cc029943}} 
+k\+Initialized&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Refresh\+Cloned\+Displays@{k\+Refresh\+Cloned\+Displays}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Refresh\+Cloned\+Displays@{k\+Refresh\+Cloned\+Displays}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}} 
+k\+Refresh\+Cloned\+Displays&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Handle\+Pending\+Hot\+Plug\+Notifications@{k\+Handle\+Pending\+Hot\+Plug\+Notifications}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Handle\+Pending\+Hot\+Plug\+Notifications@{k\+Handle\+Pending\+Hot\+Plug\+Notifications}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba7fce778372da6b08297c65bd0c162f97}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba7fce778372da6b08297c65bd0c162f97}} 
+k\+Handle\+Pending\+Hot\+Plug\+Notifications&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Notify\+Client@{k\+Notify\+Client}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Notify\+Client@{k\+Notify\+Client}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}} 
+k\+Notify\+Client&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Update\+Config@{k\+Update\+Config}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!k\+Update\+Config@{k\+Update\+Config}}}\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba07b537e9a0d1cde09c75dc181f709b5b}\label{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba07b537e9a0d1cde09c75dc181f709b5b}} 
+k\+Update\+Config&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 266 of file physicaldisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{266                     \{}
+\DoxyCodeLine{267     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba926d32deff70954c6d218ea554e4b49b}{kNone}} = 1 << 0,}
+\DoxyCodeLine{268     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba52e2505c897030e88bcaa6498019cb4e}{kNeedsModeset}} = 1 << 1,}
+\DoxyCodeLine{269     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba0485d8518da4007d6a1cf2782d439815}{kPendingPowerMode}} = 1 << 2,}
+\DoxyCodeLine{270     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf4469b87df06c81a292ea166c7e6f4e2}{kUpdateDisplay}} = 1 << 3,}
+\DoxyCodeLine{271     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba49dfa5449a227286abb50b84cc029943}{kInitialized}} = 1 << 4,  \textcolor{comment}{// Display Queue is initialized.}}
+\DoxyCodeLine{272     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}{kRefreshClonedDisplays}} = 1 << 5,}
+\DoxyCodeLine{273     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba7fce778372da6b08297c65bd0c162f97}{kHandlePendingHotPlugNotifications}} = 1 << 6,}
+\DoxyCodeLine{274     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}{kNotifyClient}} = 1 << 7,  \textcolor{comment}{// Notify client as display connection physical}}
+\DoxyCodeLine{275                              \textcolor{comment}{// status has changed.}}
+\DoxyCodeLine{276     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba07b537e9a0d1cde09c75dc181f709b5b}{kUpdateConfig}} = 1 << 8}
+\DoxyCodeLine{277   \};}
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_af08453e7ec5a9f8e792063b09b2e9305}\label{classhwcomposer_1_1PhysicalDisplay_af08453e7ec5a9f8e792063b09b2e9305}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Physical\+Display@{Physical\+Display}}
+\index{Physical\+Display@{Physical\+Display}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Physical\+Display()}{PhysicalDisplay()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Physical\+Display\+::\+Physical\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{uint32\+\_\+t}]{pipe\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37     : \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}}(pipe\_id),}
+\DoxyCodeLine{38       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a87ad7236b44be5af4e29233fab50408c}{width\_}}(0),}
+\DoxyCodeLine{39       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af7c7ae74664eee51055985f0035aac8c}{height\_}}(0),}
+\DoxyCodeLine{40       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}}(\textcolor{keyword}{false}),}
+\DoxyCodeLine{41       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}(gpu\_fd),}
+\DoxyCodeLine{42       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}{power\_mode\_}}(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{kOn}}) \{}
+\DoxyCodeLine{43 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a06260ef1c571e04df545721406e94d7b}\label{classhwcomposer_1_1PhysicalDisplay_a06260ef1c571e04df545721406e94d7b}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!````~Physical\+Display@{$\sim$\+Physical\+Display}}
+\index{````~Physical\+Display@{$\sim$\+Physical\+Display}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{$\sim$\+Physical\+Display()}{~PhysicalDisplay()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Physical\+Display\+::$\sim$\+Physical\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 45 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                   \{}
+\DoxyCodeLine{46 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ad4986df79c02c4c30e205065028cc050}\label{classhwcomposer_1_1PhysicalDisplay_ad4986df79c02c4c30e205065028cc050}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Check\+Plane\+Format@{Check\+Plane\+Format}}
+\index{Check\+Plane\+Format@{Check\+Plane\+Format}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Check\+Plane\+Format()}{CheckPlaneFormat()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Check\+Plane\+Format (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI to check the format support on the device 
+\begin{DoxyParams}{Parameters}
+{\em format} & valid D\+RM formats found in drm\+\_\+fourcc.\+h. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4e856b5754054bdf77467e6663cb5b50}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 413 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{413                                                       \{}
+\DoxyCodeLine{414   \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->CheckPlaneFormat(format);}
+\DoxyCodeLine{415 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aca407c116394ab91581293e8a919cf78}\label{classhwcomposer_1_1PhysicalDisplay_aca407c116394ab91581293e8a919cf78}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Clone\+Display@{Clone\+Display}}
+\index{Clone\+Display@{Clone\+Display}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Clone\+Display()}{CloneDisplay()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Clone\+Display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This display needs to clone source\+\_\+display. We cannot have a display in cloned mode and extended mode at same time or clone more than one source\+\_\+display at same time. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ad244fa57c9c6380fb04bfd57da3cb28b}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 490 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{490                                                                 \{}
+\DoxyCodeLine{491   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\_display\_}}) \{}
+\DoxyCodeLine{492     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\_display\_}}->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ac7d72bf8971e3b84068b9bd59099c854}{DisOwnPresentation}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{493     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetCloneMode(\textcolor{keyword}{false});}
+\DoxyCodeLine{494     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\_display\_}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{495   \}}
+\DoxyCodeLine{496 }
+\DoxyCodeLine{497   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\_display\_}} = source\_display;}
+\DoxyCodeLine{498   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\_display\_}}) \{}
+\DoxyCodeLine{499     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\_display\_}}->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a47b40cd84fa21b50202ff14831826ae9}{OwnPresentation}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{500     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetCloneMode(\textcolor{keyword}{true});}
+\DoxyCodeLine{501   \}}
+\DoxyCodeLine{502 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a1db680248cf31fdf1d2d1e926355916d}\label{classhwcomposer_1_1PhysicalDisplay_a1db680248cf31fdf1d2d1e926355916d}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Commit@{Commit}}
+\index{Commit@{Commit}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Commit()}{Commit()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Physical\+Display\+::\+Commit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{composition\+\_\+planes,  }\item[{const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{previous\+\_\+composition\+\_\+planes,  }\item[{bool}]{disable\+\_\+explicit\+\_\+fence,  }\item[{int32\+\_\+t}]{previous\+\_\+fence,  }\item[{int32\+\_\+t $\ast$}]{commit\+\_\+fence,  }\item[{bool $\ast$}]{previous\+\_\+fence\+\_\+released }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for showing content on display 
+\begin{DoxyParams}{Parameters}
+{\em composition\+\_\+planes} & contains list of layers which need to displayed. \\
+\hline
+{\em previous\+\_\+composition\+\_\+planes} & contains list of planes enabled last frame. \\
+\hline
+{\em disable\+\_\+explicit\+\_\+fence} & is set to true if we want a hardware fence associated with this commit request set to commit\+\_\+fence. \\
+\hline
+{\em commit\+\_\+fence} & hardware fence associated with this commit request. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a83b00eac01a21d6a5e50b4664df6b279}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a83777a9b17a33aa45295c7c354e802b2}\label{classhwcomposer_1_1PhysicalDisplay_a83777a9b17a33aa45295c7c354e802b2}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Connect@{Connect}}
+\index{Connect@{Connect}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI to connect the display. Note that this doesn\textquotesingle{}t necessarily mean display is turned on. Implementation is free to reset any display state which they seem appropriate for this state. Any subsequent calls to Present after this call will show content on screen provided Powermode is kon. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a5c40ff028a9d547b1775b1c6f40df868}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 142 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{142                               \{}
+\DoxyCodeLine{143   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eabbfe6d9e0ed5ba48cbb1fe7ea2802ad2}{kDisconnectionInProgress}};}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\_display\_}}) \{}
+\DoxyCodeLine{150     \textcolor{comment}{// Current display is a cloned display, set the source\_display\_'s}}
+\DoxyCodeLine{151     \textcolor{comment}{// k\_RefreshClonedDisplays flag. This makes clone parent have a}}
+\DoxyCodeLine{152     \textcolor{comment}{// chance to update it's cloned display list}}
+\DoxyCodeLine{153     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af08453e7ec5a9f8e792063b09b2e9305}{PhysicalDisplay}} *p\_clone\_parent = (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af08453e7ec5a9f8e792063b09b2e9305}{PhysicalDisplay}} *)
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\_display\_}};}
+\DoxyCodeLine{154     \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(p\_clone\_parent->modeset\_lock\_);}
+\DoxyCodeLine{155     p\_clone\_parent->display\_state\_ |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}{kRefreshClonedDisplays}};}
+\DoxyCodeLine{156     \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(p\_clone\_parent->modeset\_lock\_);}
+\DoxyCodeLine{157   \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{160   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}}) \{}
+\DoxyCodeLine{161     \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{162     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{163   \}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}};}
+\DoxyCodeLine{166   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba49dfa5449a227286abb50b84cc029943}{kInitialized}};}
+\DoxyCodeLine{167   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}{kNotifyClient}};}
+\DoxyCodeLine{168   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"PhysicalDisplay::Connect recieved. \%p \(\backslash\)n"}, \textcolor{keyword}{this});}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->Initialize(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a87ad7236b44be5af4e29233fab50408c}{width\_}}, 
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af7c7ae74664eee51055985f0035aac8c}{height\_}}, \textcolor{keyword}{this}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_afd057257acfb8801ece8f51d9d7a7abe}{fb\_manager\_}})) \{}
+\DoxyCodeLine{171     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initialize Display Queue."});}
+\DoxyCodeLine{172   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{173     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba49dfa5449a227286abb50b84cc029943}{kInitialized}};}
+\DoxyCodeLine{174   \}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba07b537e9a0d1cde09c75dc181f709b5b}{kUpdateConfig}}) \{}
+\DoxyCodeLine{177     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba07b537e9a0d1cde09c75dc181f709b5b}{kUpdateConfig}};}
+\DoxyCodeLine{178     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->DisplayConfigurationChanged();}
+\DoxyCodeLine{179     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa3cb8537967c34dce7e8ba7762cbd48c}{UpdateDisplayConfig}}();}
+\DoxyCodeLine{180   \}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182   UpdatePowerMode();}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{185 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_af309ebed456ecdf3eb935ce693f326d1}\label{classhwcomposer_1_1PhysicalDisplay_af309ebed456ecdf3eb935ce693f326d1}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Disable@{Disable}}
+\index{Disable@{Disable}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Physical\+Display\+::\+Disable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{composition\+\_\+planes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI is called when display needs to be disabled. 
+\begin{DoxyParams}{Parameters}
+{\em composition\+\_\+planes} & contains list of planes enabled last frame. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a4596c2736f70fdd4c87ceb2dccf14848}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ad219e79a0c40b94e3cb5f52ad60990f2}\label{classhwcomposer_1_1PhysicalDisplay_ad219e79a0c40b94e3cb5f52ad60990f2}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Dis\+Connect@{Dis\+Connect}}
+\index{Dis\+Connect@{Dis\+Connect}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Dis\+Connect()}{DisConnect()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Dis\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+A\+PI to disconnect the display. This is called when this display is physically disconnected. 
+
+Definition at line 102 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                  \{}
+\DoxyCodeLine{103   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eabbfe6d9e0ed5ba48cbb1fe7ea2802ad2}{kDisconnectionInProgress}};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107   \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}})) \{}
+\DoxyCodeLine{108     \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{111   \}}
+\DoxyCodeLine{112   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{113       \textcolor{stringliteral}{"PhysicalDisplay DisConnect called for Display: \%p hotplugdisplayid: \%d "}}
+\DoxyCodeLine{114       \textcolor{stringliteral}{"\(\backslash\)n"},}
+\DoxyCodeLine{115       \textcolor{keyword}{this}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\_plug\_display\_id\_}});}
+\DoxyCodeLine{116   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}{kNotifyClient}};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}{power\_mode\_}} != \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}}) \{}
+\DoxyCodeLine{119     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetPowerMode(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}});}
+\DoxyCodeLine{120   \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}};}
+\DoxyCodeLine{123   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf4469b87df06c81a292ea166c7e6f4e2}{kUpdateDisplay}};}
+\DoxyCodeLine{124   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{125 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aba785358d36ee129092a1a9ec66f3ff4}\label{classhwcomposer_1_1PhysicalDisplay_aba785358d36ee129092a1a9ec66f3ff4}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Dis\+Own\+Presentation@{Dis\+Own\+Presentation}}
+\index{Dis\+Own\+Presentation@{Dis\+Own\+Presentation}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Dis\+Own\+Presentation()}{DisOwnPresentation()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Dis\+Own\+Presentation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{clone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ac7d72bf8971e3b84068b9bd59099c854}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 509 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{509                                                              \{}
+\DoxyCodeLine{510   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a646651bb227f0d0c18317a864d36d767}{cloned\_displays\_}}.empty())}
+\DoxyCodeLine{511     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{512 }
+\DoxyCodeLine{513   std::vector<NativeDisplay *> displays;}
+\DoxyCodeLine{514   \textcolor{keywordtype}{size\_t} size = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a646651bb227f0d0c18317a864d36d767}{cloned\_displays\_}}.size();}
+\DoxyCodeLine{515   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; i++) \{}
+\DoxyCodeLine{516     \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ab1dc6bceb8fe62a576a99c75c7ae732b}{NativeDisplay}} *display = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a646651bb227f0d0c18317a864d36d767}{cloned\_displays\_}}.at(i);}
+\DoxyCodeLine{517     \textcolor{keywordflow}{if} (display == clone)}
+\DoxyCodeLine{518       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{519 }
+\DoxyCodeLine{520     displays.emplace\_back(display);}
+\DoxyCodeLine{521   \}}
+\DoxyCodeLine{522 }
+\DoxyCodeLine{523   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a646651bb227f0d0c18317a864d36d767}{cloned\_displays\_}}.swap(displays);}
+\DoxyCodeLine{524   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}{kRefreshClonedDisplays}};}
+\DoxyCodeLine{525 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a14d33c040470fbd1bc3de5bd67c5ae73}\label{classhwcomposer_1_1PhysicalDisplay_a14d33c040470fbd1bc3de5bd67c5ae73}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Force\+Refresh@{Force\+Refresh}}
+\index{Force\+Refresh@{Force\+Refresh}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Force\+Refresh()}{ForceRefresh()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Force\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A\+PI to refresh display in case of hot plug event. 
+
+Definition at line 133 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133                                    \{}
+\DoxyCodeLine{134   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{135   \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}}) \&\&}
+\DoxyCodeLine{136       (!\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->IsIgnoreUpdates())) \{}
+\DoxyCodeLine{137     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->ForceRefresh();}
+\DoxyCodeLine{138   \}}
+\DoxyCodeLine{139   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{140 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a6dfc5d017719115af233f12911c71d84}\label{classhwcomposer_1_1PhysicalDisplay_a6dfc5d017719115af233f12911c71d84}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Get\+Active\+Config@{Get\+Active\+Config}}
+\index{Get\+Active\+Config@{Get\+Active\+Config}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Get\+Active\+Config()}{GetActiveConfig()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Get\+Active\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9d4d9d2f6633fe37025210cac6e8cc6c}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 219 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{219                                                       \{}
+\DoxyCodeLine{220   \textcolor{keywordflow}{if} (!config)}
+\DoxyCodeLine{221     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{222   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{223       \textcolor{stringliteral}{"GetActiveConfig: Current config being used Config: \%d pipe: \%d display: "}}
+\DoxyCodeLine{224       \textcolor{stringliteral}{"\%p"},}
+\DoxyCodeLine{225       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a75eb0d6243de4021ad8e49141becc4a0}{config\_}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{226   *config = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a75eb0d6243de4021ad8e49141becc4a0}{config\_}};}
+\DoxyCodeLine{227   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{228 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a7a76ed244ccea12e69c0fad38be23b84}\label{classhwcomposer_1_1PhysicalDisplay_a7a76ed244ccea12e69c0fad38be23b84}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Get\+Display\+Attribute@{Get\+Display\+Attribute}}
+\index{Get\+Display\+Attribute@{Get\+Display\+Attribute}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Attribute()}{GetDisplayAttribute()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Get\+Display\+Attribute (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{H\+W\+C\+Display\+Attribute}]{attribute,  }\item[{int32\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 563 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{565                                                           \{}
+\DoxyCodeLine{566   \textcolor{comment}{// We always get the values from preferred mode config.}}
+\DoxyCodeLine{567   \textcolor{keywordflow}{switch} (attribute) \{}
+\DoxyCodeLine{568     \textcolor{keywordflow}{case} HWCDisplayAttribute::kWidth:}
+\DoxyCodeLine{569       *value = 1920;}
+\DoxyCodeLine{570       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{571     \textcolor{keywordflow}{case} HWCDisplayAttribute::kHeight:}
+\DoxyCodeLine{572       *value = 1080;}
+\DoxyCodeLine{573       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{574     \textcolor{keywordflow}{case} HWCDisplayAttribute::kRefreshRate:}
+\DoxyCodeLine{575       \textcolor{comment}{// in nanoseconds}}
+\DoxyCodeLine{576       *value = 16666666;}
+\DoxyCodeLine{577       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{578     \textcolor{keywordflow}{case} HWCDisplayAttribute::kDpiX:}
+\DoxyCodeLine{579       \textcolor{comment}{// Dots per 1000 inches}}
+\DoxyCodeLine{580       *value = 1;}
+\DoxyCodeLine{581       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{582     \textcolor{keywordflow}{case} HWCDisplayAttribute::kDpiY:}
+\DoxyCodeLine{583       \textcolor{comment}{// Dots per 1000 inches}}
+\DoxyCodeLine{584       *value = 1;}
+\DoxyCodeLine{585       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{586     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{587       *value = -1;}
+\DoxyCodeLine{588       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{589   \}}
+\DoxyCodeLine{590 }
+\DoxyCodeLine{591   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{592 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_af02d333622a2c80fd79387ce40253e62}\label{classhwcomposer_1_1PhysicalDisplay_af02d333622a2c80fd79387ce40253e62}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Get\+Display\+Configs@{Get\+Display\+Configs}}
+\index{Get\+Display\+Configs@{Get\+Display\+Configs}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Configs()}{GetDisplayConfigs()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Get\+Display\+Configs (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{num\+\_\+configs,  }\item[{uint32\+\_\+t $\ast$}]{configs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 616 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{617                                                            \{}
+\DoxyCodeLine{618   *num\_configs = 1;}
+\DoxyCodeLine{619   \textcolor{keywordflow}{if} (configs) \{}
+\DoxyCodeLine{620     configs[0] = 1;}
+\DoxyCodeLine{621   \}}
+\DoxyCodeLine{622   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{623 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a1d0fe5aac11bc35aa95a55289993d9a8}\label{classhwcomposer_1_1PhysicalDisplay_a1d0fe5aac11bc35aa95a55289993d9a8}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Get\+Display\+Name@{Get\+Display\+Name}}
+\index{Get\+Display\+Name@{Get\+Display\+Name}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Name()}{GetDisplayName()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Get\+Display\+Name (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{size,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a28c095d6d08c84e40b5d5160d038f0b5}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 625 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{625                                                                \{}
+\DoxyCodeLine{626   std::ostringstream stream;}
+\DoxyCodeLine{627   stream << \textcolor{stringliteral}{"Headless"};}
+\DoxyCodeLine{628   std::string \textcolor{keywordtype}{string} = stream.str();}
+\DoxyCodeLine{629   \textcolor{keywordtype}{size\_t} length = \textcolor{keywordtype}{string}.length();}
+\DoxyCodeLine{630   \textcolor{keywordflow}{if} (!name) \{}
+\DoxyCodeLine{631     *size = length;}
+\DoxyCodeLine{632     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{633   \}}
+\DoxyCodeLine{634 }
+\DoxyCodeLine{635   *size = std::min<uint32\_t>(\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(length + 1), *size);}
+\DoxyCodeLine{636   strncpy(name, \textcolor{keywordtype}{string}.c\_str(), *size);}
+\DoxyCodeLine{637   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{638 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a8bcd7d925e60afbea75bf3aa18b7aa75}\label{classhwcomposer_1_1PhysicalDisplay_a8bcd7d925e60afbea75bf3aa18b7aa75}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Get\+Display\+Pipe@{Get\+Display\+Pipe}}
+\index{Get\+Display\+Pipe@{Get\+Display\+Pipe}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Pipe()}{GetDisplayPipe()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Physical\+Display\+::\+Get\+Display\+Pipe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for getting connected display\textquotesingle{}s pipe id. \begin{DoxyReturn}{Returns}
+\char`\"{}-\/1\char`\"{} for unconnected display, valid values are 0 $\sim$ 2. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aaf80095ae6aed35c64dd633a6a2f101a}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 198 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{198                                     \{}
+\DoxyCodeLine{199   \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}};}
+\DoxyCodeLine{200 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ab10ddca2b99e21d8fef188205900d021}\label{classhwcomposer_1_1PhysicalDisplay_ab10ddca2b99e21d8fef188205900d021}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Get\+Native\+Buffer\+Handler@{Get\+Native\+Buffer\+Handler}}
+\index{Get\+Native\+Buffer\+Handler@{Get\+Native\+Buffer\+Handler}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Get\+Native\+Buffer\+Handler()}{GetNativeBufferHandler()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$ hwcomposer\+::\+Physical\+Display\+::\+Get\+Native\+Buffer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a3f15664f1f298f6109c6504bdd46019a}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 56 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                                                          \{}
+\DoxyCodeLine{57   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}) \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->GetNativeBufferHandler();}
+\DoxyCodeLine{59   \}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61   \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{62 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a827605530b26ace9d48203c645d11b71}\label{classhwcomposer_1_1PhysicalDisplay_a827605530b26ace9d48203c645d11b71}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Get\+Video\+Color@{Get\+Video\+Color}}
+\index{Get\+Video\+Color@{Get\+Video\+Color}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Get\+Video\+Color()}{GetVideoColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Get\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{,  }\item[{float $\ast$}]{,  }\item[{float $\ast$}]{,  }\item[{float $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for getting video color in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a2db52a8a234064113a0e250a059663ac}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 447 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{448                                                               \{}
+\DoxyCodeLine{449   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->GetVideoColor(color, value, start, end);}
+\DoxyCodeLine{450 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a6ed8f896bdb7adc6a20bf25c3fe41f8f}\label{classhwcomposer_1_1PhysicalDisplay_a6ed8f896bdb7adc6a20bf25c3fe41f8f}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Get\+X\+Translation@{Get\+X\+Translation}}
+\index{Get\+X\+Translation@{Get\+X\+Translation}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Get\+X\+Translation()}{GetXTranslation()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::\+Get\+X\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for composition to non-\/zero X coordinate. This is applicable when float mode is enabled. Parameters are read from config file. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a1f934e9ab6149fb35bd2868605c215dd}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 131 of file physicaldisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                                       \{}
+\DoxyCodeLine{132     \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.left;}
+\DoxyCodeLine{133   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a7c390445fe926da9b501187678d1cb04}\label{classhwcomposer_1_1PhysicalDisplay_a7c390445fe926da9b501187678d1cb04}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Get\+Y\+Translation@{Get\+Y\+Translation}}
+\index{Get\+Y\+Translation@{Get\+Y\+Translation}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Get\+Y\+Translation()}{GetYTranslation()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::\+Get\+Y\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for composition to non-\/zero Y coordinate. This is applicable when float mode is enabled. Parameters are read from config file. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a761f39e34a12a88b4f8a4c1ef49e2b10}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 140 of file physicaldisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140                                       \{}
+\DoxyCodeLine{141     \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.top;}
+\DoxyCodeLine{142   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ab8e24e90adf5eaa76da5cb827ad82c65}\label{classhwcomposer_1_1PhysicalDisplay_ab8e24e90adf5eaa76da5cb827ad82c65}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Handle\+Lazy\+Initialization@{Handle\+Lazy\+Initialization}}
+\index{Handle\+Lazy\+Initialization@{Handle\+Lazy\+Initialization}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Handle\+Lazy\+Initialization()}{HandleLazyInitialization()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Physical\+Display\+::\+Handle\+Lazy\+Initialization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI to handle any lazy initializations which need to be handled during first present call. 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a7dd459cd835df8ff956350d3b53628e8}{hwcomposer\+::\+Drm\+Display}}.
+
+
+
+Definition at line 251 of file physicaldisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{251                                           \{}
+\DoxyCodeLine{252   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aa6f009efb2eb6733c2476696b54c9461}\label{classhwcomposer_1_1PhysicalDisplay_aa6f009efb2eb6733c2476696b54c9461}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Height@{Height}}
+\index{Height@{Height}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Height()}{Height()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a09a19377e64e1fed90ae8315a8e71864}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 57 of file physicaldisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                    \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af7c7ae74664eee51055985f0035aac8c}{height\_}};}
+\DoxyCodeLine{59   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a594319095f4b6c7078282c56d9cbe9f4}\label{classhwcomposer_1_1PhysicalDisplay_a594319095f4b6c7078282c56d9cbe9f4}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$}]{buffer\+\_\+handler,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a008eb015dda9b4ead93186b4897c2e3c}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 48 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                                                            \{}
+\DoxyCodeLine{50   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_afd057257acfb8801ece8f51d9d7a7abe}{fb\_manager\_}} = frame\_buffer\_manager;}
+\DoxyCodeLine{51   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}.reset(\textcolor{keyword}{new} DisplayQueue(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, \textcolor{keyword}{false}, buffer\_handler, \textcolor{keyword}{this}));}
+\DoxyCodeLine{52   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1800b4ee66d4ec790d661106564b6fca}{InitializeDisplay}}();}
+\DoxyCodeLine{53   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{54 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a1800b4ee66d4ec790d661106564b6fca}\label{classhwcomposer_1_1PhysicalDisplay_a1800b4ee66d4ec790d661106564b6fca}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Initialize\+Display@{Initialize\+Display}}
+\index{Initialize\+Display@{Initialize\+Display}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Initialize\+Display()}{InitializeDisplay()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Physical\+Display\+::\+Initialize\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for initializing display. Implementation needs to handle all things needed to set up the physical display. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a6dd7060290f6be414485d743d1e7d226}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_af6acaa76c25101eb47883a499311422f}\label{classhwcomposer_1_1PhysicalDisplay_af6acaa76c25101eb47883a499311422f}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Is\+Connected@{Is\+Connected}}
+\index{Is\+Connected@{Is\+Connected}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Is\+Connected()}{IsConnected()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI to check if display is connected. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_af22694b3396866fd4f003755f4951b18}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 187 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{187                                         \{}
+\DoxyCodeLine{188   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eabbfe6d9e0ed5ba48cbb1fe7ea2802ad2}{kDisconnectionInProgress}})}
+\DoxyCodeLine{189     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191   \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}};}
+\DoxyCodeLine{192 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a4ef2dfb7a531523ca92c33acf5d86992}\label{classhwcomposer_1_1PhysicalDisplay_a4ef2dfb7a531523ca92c33acf5d86992}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Mark\+For\+Disconnect@{Mark\+For\+Disconnect}}
+\index{Mark\+For\+Disconnect@{Mark\+For\+Disconnect}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Mark\+For\+Disconnect()}{MarkForDisconnect()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Mark\+For\+Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A\+PI for informing the display that it might be disconnected in near future. 
+
+Definition at line 64 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                         \{}
+\DoxyCodeLine{65   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"PhysicalDisplay::MarkForDisconnect recieved."});}
+\DoxyCodeLine{68   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eabbfe6d9e0ed5ba48cbb1fe7ea2802ad2}{kDisconnectionInProgress}};}
+\DoxyCodeLine{69   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}{kRefreshClonedDisplays}};}
+\DoxyCodeLine{70   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{71 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a2bc69ef05899f3079fc48c9fd2907ee0}\label{classhwcomposer_1_1PhysicalDisplay_a2bc69ef05899f3079fc48c9fd2907ee0}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Notify\+Client\+Of\+Connected\+State@{Notify\+Client\+Of\+Connected\+State}}
+\index{Notify\+Client\+Of\+Connected\+State@{Notify\+Client\+Of\+Connected\+State}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Notify\+Client\+Of\+Connected\+State()}{NotifyClientOfConnectedState()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Notify\+Client\+Of\+Connected\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A\+PI for informing the clients resgistered via Register\+Hot\+Plug\+Callback that this display had been disconnected. 
+
+Definition at line 73 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                                    \{}
+\DoxyCodeLine{74   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{75   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}} \&\& (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& 
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}}) \&\&}
+\DoxyCodeLine{76       (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}{kNotifyClient}})) \{}
+\DoxyCodeLine{77     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{78         \textcolor{stringliteral}{"PhysicalDisplay Sent Hotplug even call back with connected value set "}}
+\DoxyCodeLine{79         \textcolor{stringliteral}{"to true. \%p hotplugdisplayid: \%d \(\backslash\)n"},}
+\DoxyCodeLine{80         \textcolor{keyword}{this}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\_plug\_display\_id\_}});}
+\DoxyCodeLine{81     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}}->Callback(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\_plug\_display\_id\_}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{82     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}{kNotifyClient}};}
+\DoxyCodeLine{83   \}}
+\DoxyCodeLine{84   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{85 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a59fb1c1042c6c83e8b1515d27f110e6e}\label{classhwcomposer_1_1PhysicalDisplay_a59fb1c1042c6c83e8b1515d27f110e6e}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Notify\+Client\+Of\+Dis\+Connected\+State@{Notify\+Client\+Of\+Dis\+Connected\+State}}
+\index{Notify\+Client\+Of\+Dis\+Connected\+State@{Notify\+Client\+Of\+Dis\+Connected\+State}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Notify\+Client\+Of\+Dis\+Connected\+State()}{NotifyClientOfDisConnectedState()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Notify\+Client\+Of\+Dis\+Connected\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A\+PI for informing the clients resgistered via Register\+Hot\+Plug\+Callback that this display had been connected. 
+
+Definition at line 87 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87                                                       \{}
+\DoxyCodeLine{88   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}} \&\& !(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& 
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}}) \&\&}
+\DoxyCodeLine{91       (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}{kNotifyClient}})) \{}
+\DoxyCodeLine{92     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{93         \textcolor{stringliteral}{"PhysicalDisplay Sent Hotplug even call back with connected value set "}}
+\DoxyCodeLine{94         \textcolor{stringliteral}{"to false. \%p hotplugdisplayid: \%d \(\backslash\)n"},}
+\DoxyCodeLine{95         \textcolor{keyword}{this}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\_plug\_display\_id\_}});}
+\DoxyCodeLine{96     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}}->Callback(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\_plug\_display\_id\_}}, \textcolor{keyword}{false});}
+\DoxyCodeLine{97     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}{kNotifyClient}};}
+\DoxyCodeLine{98   \}}
+\DoxyCodeLine{99   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{100 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aefba7f9543d7ef74d42f9e06dd0f1a58}\label{classhwcomposer_1_1PhysicalDisplay_aefba7f9543d7ef74d42f9e06dd0f1a58}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Notify\+Clients\+Of\+Display\+Change\+Status@{Notify\+Clients\+Of\+Display\+Change\+Status}}
+\index{Notify\+Clients\+Of\+Display\+Change\+Status@{Notify\+Clients\+Of\+Display\+Change\+Status}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Notify\+Clients\+Of\+Display\+Change\+Status()}{NotifyClientsOfDisplayChangeStatus()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Physical\+Display\+::\+Notify\+Clients\+Of\+Display\+Change\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_af4cf9ce1ea43e3520506dfc75c751c1f}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ac1fb0f67cead30c43f410e7216f08f9e}\label{classhwcomposer_1_1PhysicalDisplay_ac1fb0f67cead30c43f410e7216f08f9e}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Notify\+Display\+WA@{Notify\+Display\+WA}}
+\index{Notify\+Display\+WA@{Notify\+Display\+WA}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Notify\+Display\+W\+A()}{NotifyDisplayWA()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Notify\+Display\+WA (\begin{DoxyParamCaption}\item[{bool}]{enable\+\_\+wa }\end{DoxyParamCaption})}
+
+A\+PI for ensuring \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue}{Display\+Queue}} can handle any W/A needed for Multi plane/multi port cases. 
+
+Definition at line 127 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{127                                                     \{}
+\DoxyCodeLine{128   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{129   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->NotifyDisplayWA(enable\_wa);}
+\DoxyCodeLine{130   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{131 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a3e66e1f2bd3cff0c0ad7e99b8d5fb2ba}\label{classhwcomposer_1_1PhysicalDisplay_a3e66e1f2bd3cff0c0ad7e99b8d5fb2ba}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Own\+Presentation@{Own\+Presentation}}
+\index{Own\+Presentation@{Own\+Presentation}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Own\+Presentation()}{OwnPresentation()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Own\+Presentation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{clone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a47b40cd84fa21b50202ff14831826ae9}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 504 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{504                                                           \{}
+\DoxyCodeLine{505   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a646651bb227f0d0c18317a864d36d767}{cloned\_displays\_}}.emplace\_back(clone);}
+\DoxyCodeLine{506   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}{kRefreshClonedDisplays}};}
+\DoxyCodeLine{507 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_afe0c0a304dab32918d3c40520f00d991}\label{classhwcomposer_1_1PhysicalDisplay_afe0c0a304dab32918d3c40520f00d991}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Populate\+Planes@{Populate\+Planes}}
+\index{Populate\+Planes@{Populate\+Planes}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Populate\+Planes()}{PopulatePlanes()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Populate\+Planes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $>$$>$ \&}]{overlay\+\_\+planes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler_aa4d32269c693dbf4a4c91c31ed577784}{hwcomposer\+::\+Display\+Plane\+Handler}}.
+
+
+
+Definition at line 470 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{471                                                 \{}
+\DoxyCodeLine{472   \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"PopulatePlanes unimplemented in PhysicalDisplay."});}
+\DoxyCodeLine{473   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{474 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a8339a14dbaa5ac9a1d4d4c3dc3694a10}\label{classhwcomposer_1_1PhysicalDisplay_a8339a14dbaa5ac9a1d4d4c3dc3694a10}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Power\+Mode@{Power\+Mode}}
+\index{Power\+Mode@{Power\+Mode}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Power\+Mode()}{PowerMode()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::\+Power\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_af03b22112e421559c5f59837a2209716}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 194 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{194                                           \{}
+\DoxyCodeLine{195   \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}{power\_mode\_}};}
+\DoxyCodeLine{196 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a954fbb8be8c69890094ddacc510f4a85}\label{classhwcomposer_1_1PhysicalDisplay_a954fbb8be8c69890094ddacc510f4a85}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Power\+On@{Power\+On}}
+\index{Power\+On@{Power\+On}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Power\+On()}{PowerOn()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Physical\+Display\+::\+Power\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for powering on the display 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a0212cd45757cc2a74dac62094da103ec}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aafc7fc562c026ce24ac7900c12023bd8}\label{classhwcomposer_1_1PhysicalDisplay_aafc7fc562c026ce24ac7900c12023bd8}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Present@{Present}}
+\index{Present@{Present}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Present()}{Present()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Present (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&}]{source\+\_\+layers,  }\item[{int32\+\_\+t $\ast$}]{retire\+\_\+fence,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$}]{call\+\_\+back = {\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}},  }\item[{bool}]{handle\+\_\+constraints = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for showing content on screen. 
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+layers,are} & the layers to be shown on screen for this frame. \\
+\hline
+{\em retire\+\_\+fence} & will be populated with Native Fence object provided we are able to display source\+\_\+layers. When retire\+\_\+fence is signalled source\+\_\+layers are shown on the output and any previous frame composition results can be invalidated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4825b8bc4b85e03b396ed6d2cf5bd8c0}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 283 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{286                                                        \{}
+\DoxyCodeLine{287   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{288   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{290   \textcolor{keywordtype}{bool} handle\_hotplug\_notifications = \textcolor{keyword}{false};}
+\DoxyCodeLine{291   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba7fce778372da6b08297c65bd0c162f97}{kHandlePendingHotPlugNotifications}}) \{}
+\DoxyCodeLine{292     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba7fce778372da6b08297c65bd0c162f97}{kHandlePendingHotPlugNotifications}};}
+\DoxyCodeLine{293     handle\_hotplug\_notifications = \textcolor{keyword}{true};}
+\DoxyCodeLine{294   \}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296   \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf4469b87df06c81a292ea166c7e6f4e2}{kUpdateDisplay}})) \{}
+\DoxyCodeLine{297     \textcolor{keywordtype}{bool} success = \textcolor{keyword}{true};}
+\DoxyCodeLine{298     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}{power\_mode\_}} != \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea35f99ee0a3c1ecc81db3f51e82f1f103}{kDozeSuspend}}) \{}
+\DoxyCodeLine{299       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Trying to update an Disconnected Display.\%p \(\backslash\)n"}, \textcolor{keyword}{this});}
+\DoxyCodeLine{300     \}}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302     \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304     \textcolor{keywordflow}{if} (handle\_hotplug\_notifications) \{}
+\DoxyCodeLine{305       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aefba7f9543d7ef74d42f9e06dd0f1a58}{NotifyClientsOfDisplayChangeStatus}}();}
+\DoxyCodeLine{306     \}}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308     \textcolor{keywordflow}{return} success;}
+\DoxyCodeLine{309   \}}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}{source\_display\_}}) \{}
+\DoxyCodeLine{312     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Trying to update display independently when in cloned mode.\%p \(\backslash\)n"},}
+\DoxyCodeLine{313            \textcolor{keyword}{this});}
+\DoxyCodeLine{314   \}}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}{kRefreshClonedDisplays}}) \{}
+\DoxyCodeLine{317     RefreshClones();}
+\DoxyCodeLine{318   \}}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322   \textcolor{keywordflow}{if} (handle\_hotplug\_notifications) \{}
+\DoxyCodeLine{323     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aefba7f9543d7ef74d42f9e06dd0f1a58}{NotifyClientsOfDisplayChangeStatus}}();}
+\DoxyCodeLine{324     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"Handle\_hoplug\_notifications done. \%p \(\backslash\)n"}, \textcolor{keyword}{this});}
+\DoxyCodeLine{325   \}}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327   \textcolor{keywordtype}{bool} ignore\_clone\_update = \textcolor{keyword}{false};}
+\DoxyCodeLine{328   \textcolor{keywordtype}{bool} success = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->QueueUpdate(source\_layers, retire\_fence,}
+\DoxyCodeLine{329                                              \&ignore\_clone\_update, call\_back,}
+\DoxyCodeLine{330                                              handle\_constraints);}
+\DoxyCodeLine{331   \textcolor{keywordflow}{if} (success \&\& !\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab56848042a1534cdd00730e679350b95}{clones\_}}.empty() \&\& !ignore\_clone\_update) \{}
+\DoxyCodeLine{332     HandleClonedDisplays(\textcolor{keyword}{this});}
+\DoxyCodeLine{333   \}}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335   \textcolor{keywordtype}{size\_t} size = source\_layers.size();}
+\DoxyCodeLine{336   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} layer\_index = 0; layer\_index < size; layer\_index++) \{}
+\DoxyCodeLine{337     HwcLayer *layer = source\_layers.at(layer\_index);}
+\DoxyCodeLine{338     \textcolor{keywordflow}{if} (!layer->IsVisible())}
+\DoxyCodeLine{339       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341     layer->Validate();}
+\DoxyCodeLine{342   \}}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344   \textcolor{keywordflow}{return} success;}
+\DoxyCodeLine{345 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a3432baaabedbb27e45ea64fcc894a344}\label{classhwcomposer_1_1PhysicalDisplay_a3432baaabedbb27e45ea64fcc894a344}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Present\+Clone@{Present\+Clone}}
+\index{Present\+Clone@{Present\+Clone}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Present\+Clone()}{PresentClone()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Present\+Clone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae031f7f90f8a4ab3fba24a31c4cc6b74}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 347 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{347                                                          \{}
+\DoxyCodeLine{348   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{349   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{351   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fbaf7922729d49834cad207ba6eddf200d2}{kRefreshClonedDisplays}}) \{}
+\DoxyCodeLine{352     RefreshClones();}
+\DoxyCodeLine{353   \}}
+\DoxyCodeLine{354   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->PresentClonedCommit(}
+\DoxyCodeLine{357       static\_cast<PhysicalDisplay *>(display)->\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}.get());}
+\DoxyCodeLine{358   HandleClonedDisplays(display);}
+\DoxyCodeLine{359   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{360 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ac56013d7b3323ca84594779358aeb254}\label{classhwcomposer_1_1PhysicalDisplay_ac56013d7b3323ca84594779358aeb254}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Register\+Hot\+Plug\+Callback@{Register\+Hot\+Plug\+Callback}}
+\index{Register\+Hot\+Plug\+Callback@{Register\+Hot\+Plug\+Callback}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Register\+Hot\+Plug\+Callback()}{RegisterHotPlugCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Register\+Hot\+Plug\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1HotPlugCallback}{Hot\+Plug\+Callback}} $>$}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for registering for hotplug callback requests. 
+\begin{DoxyParams}{Parameters}
+{\em callback,function} & which will be used by H\+WC to notify client of a hot plug event. \\
+\hline
+{\em display\+\_\+id} & will be populated with id of the display. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4080879c203571d6404ba3b3aff53631}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 381 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{382                                                                   \{}
+\DoxyCodeLine{383   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{384   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\_plug\_display\_id\_}} = display\_id;}
+\DoxyCodeLine{385   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}} = callback;}
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#ifndef ENABLE\_ANDROID\_WA}}
+\DoxyCodeLine{387   \textcolor{keywordtype}{bool} connected = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}};}
+\DoxyCodeLine{388 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{389   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#ifdef ENABLE\_ANDROID\_WA}}
+\DoxyCodeLine{391   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}} \&\& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7531be13b7e44445ec42879dc283f7d4}{ordered\_display\_id\_}} == 0) \{}
+\DoxyCodeLine{392     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba43b49cea0fce4cfcbfc19525376bb30b}{kNotifyClient}};}
+\DoxyCodeLine{393     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba7fce778372da6b08297c65bd0c162f97}{kHandlePendingHotPlugNotifications}};}
+\DoxyCodeLine{394     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"RegisterHotPlugCallback: pipe: \%d display: \%p"}, 
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}},}
+\DoxyCodeLine{395                        \textcolor{keyword}{this});}
+\DoxyCodeLine{396     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}}->Callback(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\_plug\_display\_id\_}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{397   \}}
+\DoxyCodeLine{398 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{399   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}}) \{}
+\DoxyCodeLine{400     \textcolor{keywordflow}{if} (connected) \{}
+\DoxyCodeLine{401       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}}->Callback(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\_plug\_display\_id\_}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{402     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{403       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}{hotplug\_callback\_}}->Callback(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}{hot\_plug\_display\_id\_}}, \textcolor{keyword}{false});}
+\DoxyCodeLine{404     \}}
+\DoxyCodeLine{405   \}}
+\DoxyCodeLine{406 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{407 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aaa21f6de6805e8e6d0d5771c3207cfd6}\label{classhwcomposer_1_1PhysicalDisplay_aaa21f6de6805e8e6d0d5771c3207cfd6}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Register\+Refresh\+Callback@{Register\+Refresh\+Callback}}
+\index{Register\+Refresh\+Callback@{Register\+Refresh\+Callback}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Register\+Refresh\+Callback()}{RegisterRefreshCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Register\+Refresh\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RefreshCallback}{Refresh\+Callback}} $>$}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for registering for refresh callback requests. 
+\begin{DoxyParams}{Parameters}
+{\em callback,function} & which will be used by H\+WC to request client to trigger a screen refresh. This will be used to optimize scenarios like idle mode. \\
+\hline
+{\em display\+\_\+id} & will be populated with id of the display. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a237627e6cacf9246813bc7f48c5817cd}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 376 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{377                                                                   \{}
+\DoxyCodeLine{378   \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->RegisterRefreshCallback(callback, display\_id);}
+\DoxyCodeLine{379 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ac003447bfca005292fc052d5b573869e}\label{classhwcomposer_1_1PhysicalDisplay_ac003447bfca005292fc052d5b573869e}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Register\+Vsync\+Callback@{Register\+Vsync\+Callback}}
+\index{Register\+Vsync\+Callback@{Register\+Vsync\+Callback}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Register\+Vsync\+Callback()}{RegisterVsyncCallback()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Physical\+Display\+::\+Register\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$}]{callback,  }\item[{uint32\+\_\+t}]{display\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 371 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{372                                                                 \{}
+\DoxyCodeLine{373   \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->RegisterVsyncCallback(callback, display\_id);}
+\DoxyCodeLine{374 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ac9b499aa64a9bbc3c49e55011c56e819}\label{classhwcomposer_1_1PhysicalDisplay_ac9b499aa64a9bbc3c49e55011c56e819}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}}
+\index{Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Color()}{RestoreVideoDefaultColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Restore\+Video\+Default\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for restoring video default color in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a06390d47f61b776338a03bee737634b3}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 452 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{452                                                                     \{}
+\DoxyCodeLine{453   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->RestoreVideoDefaultColor(color);}
+\DoxyCodeLine{454 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a9b8a4d32a3279f79f27878857c22d863}\label{classhwcomposer_1_1PhysicalDisplay_a9b8a4d32a3279f79f27878857c22d863}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}}
+\index{Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Deinterlace()}{RestoreVideoDefaultDeinterlace()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Restore\+Video\+Default\+Deinterlace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for restoring video default deinterlace in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a686a2906dbe6543523a9f5fb5b4ae3f7}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 461 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{461                                                      \{}
+\DoxyCodeLine{462   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->RestoreVideoDefaultDeinterlace();}
+\DoxyCodeLine{463 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae9650158e46bd03af1d06aa0e64f3ae6}\label{classhwcomposer_1_1PhysicalDisplay_ae9650158e46bd03af1d06aa0e64f3ae6}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Rotate\+Display@{Rotate\+Display}}
+\index{Rotate\+Display@{Rotate\+Display}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Rotate\+Display()}{RotateDisplay()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Rotate\+Display (\begin{DoxyParamCaption}\item[{H\+W\+C\+Rotation}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aae775a72140fa5ec526d30218b466348}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 531 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{531                                                         \{}
+\DoxyCodeLine{532   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->RotateDisplay(rotation);}
+\DoxyCodeLine{533 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a1b2e31ee497b3fec8178abe481462560}\label{classhwcomposer_1_1PhysicalDisplay_a1b2e31ee497b3fec8178abe481462560}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Active\+Config@{Set\+Active\+Config}}
+\index{Set\+Active\+Config@{Set\+Active\+Config}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Active\+Config()}{SetActiveConfig()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Set\+Active\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a63c51853e0d82baf9d6445cf831a5ad1}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 202 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{202                                                      \{}
+\DoxyCodeLine{203   \textcolor{comment}{// update the activeConfig}}
+\DoxyCodeLine{204   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{205       \textcolor{stringliteral}{"SetActiveConfig: New config to be used \%d pipe: \%p display: \%p"}, config,}
+\DoxyCodeLine{206       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{207   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a75eb0d6243de4021ad8e49141becc4a0}{config\_}} = config;}
+\DoxyCodeLine{208   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba52e2505c897030e88bcaa6498019cb4e}{kNeedsModeset}};}
+\DoxyCodeLine{209   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}}) \{}
+\DoxyCodeLine{210     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->DisplayConfigurationChanged();}
+\DoxyCodeLine{211     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa3cb8537967c34dce7e8ba7762cbd48c}{UpdateDisplayConfig}}();}
+\DoxyCodeLine{212   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{213     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba07b537e9a0d1cde09c75dc181f709b5b}{kUpdateConfig}};}
+\DoxyCodeLine{214   \}}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{217 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae2d98d76852bced610ccff933486a741}\label{classhwcomposer_1_1PhysicalDisplay_ae2d98d76852bced610ccff933486a741}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Brightness@{Set\+Brightness}}
+\index{Set\+Brightness@{Set\+Brightness}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Brightness()}{SetBrightness()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Brightness (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting display color brightness in H\+WC 
+\begin{DoxyParams}{Parameters}
+{\em red} & valid value is 0 $\sim$ 255, bigger value with stronger brightness \\
+\hline
+{\em green} & valid value is 0 $\sim$ 255, bigger value with stronger brightness \\
+\hline
+{\em blue} & valid value is 0 $\sim$ 255, bigger value with stronger brightness \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6ebf02e96a0c6e674cf091dda937ebb2}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 430 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{431                                                    \{}
+\DoxyCodeLine{432   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetBrightness(red, green, blue);}
+\DoxyCodeLine{433 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a6d060b4d7ba7e8f53c1181c14163b188}\label{classhwcomposer_1_1PhysicalDisplay_a6d060b4d7ba7e8f53c1181c14163b188}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Canvas\+Color@{Set\+Canvas\+Color}}
+\index{Set\+Canvas\+Color@{Set\+Canvas\+Color}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Canvas\+Color()}{SetCanvasColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Canvas\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{,  }\item[{uint16\+\_\+t}]{,  }\item[{uint16\+\_\+t}]{,  }\item[{uint16\+\_\+t}]{,  }\item[{uint16\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting the color of the pipe canvas. The caller of this function must pass the individual color component values which will all be used to convert into a format expected by the kernel driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bpc} & specifies how many bits are used per color componenet \\
+\hline
+{\em red} & bits representing the red color componenet \\
+\hline
+{\em green} & bits representing the green color componenet \\
+\hline
+{\em blue} & bits representing the blue color componenet \\
+\hline
+{\em alpha} & bits representing the alpha color componenet \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aa0f5c182365aa5cf1f14db9cdf6e974b}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 465 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{466                                                                     \{}
+\DoxyCodeLine{467   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetCanvasColor(bpc, red, green, blue, alpha);}
+\DoxyCodeLine{468 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a81bddc91d8f593a1f1cb2248d7206386}\label{classhwcomposer_1_1PhysicalDisplay_a81bddc91d8f593a1f1cb2248d7206386}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Color\+Correction@{Set\+Color\+Correction}}
+\index{Set\+Color\+Correction@{Set\+Color\+Correction}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Color\+Correction()}{SetColorCorrection()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Physical\+Display\+::\+Set\+Color\+Correction (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structhwcomposer_1_1gamma__colors}{gamma\+\_\+colors}}}]{gamma,  }\item[{uint32\+\_\+t}]{contrast,  }\item[{uint32\+\_\+t}]{brightness }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for setting color correction for display. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a8da99b54fe8c1261f1bf9a3d00474133}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aa6a598f275a6b67ba5c256ee0d830b59}\label{classhwcomposer_1_1PhysicalDisplay_aa6a598f275a6b67ba5c256ee0d830b59}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Color\+Transform@{Set\+Color\+Transform}}
+\index{Set\+Color\+Transform@{Set\+Color\+Transform}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Color\+Transform()}{SetColorTransform()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Color\+Transform (\begin{DoxyParamCaption}\item[{const float $\ast$}]{,  }\item[{\mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting a color transform which will be applied after composition.
+
+The matrix provided is an affine color transformation of the following form\+:
+
+$\vert$r.r r.\+g r.\+b 0$\vert$ $\vert$g.r g.\+g g.\+b 0$\vert$ $\vert$b.r b.\+g b.\+b 0$\vert$ $\vert$\+Tr Tg Tb 1$\vert$
+
+This matrix will be provided in row-\/major form\+: \{r.\+r, r.\+g, r.\+b, 0, g.\+r, ...\}.
+
+Given a matrix of this form and an input color \mbox{[}R\+\_\+in, G\+\_\+in, B\+\_\+in\mbox{]}, the output color \mbox{[}R\+\_\+out, G\+\_\+out, B\+\_\+out\mbox{]} will be\+:
+
+R\+\_\+out = R\+\_\+in $\ast$ r.\+r + G\+\_\+in $\ast$ g.\+r + B\+\_\+in $\ast$ b.\+r + Tr G\+\_\+out = R\+\_\+in $\ast$ r.\+g + G\+\_\+in $\ast$ g.\+g + B\+\_\+in $\ast$ b.\+g + Tg B\+\_\+out = R\+\_\+in $\ast$ r.\+b + G\+\_\+in $\ast$ g.\+b + B\+\_\+in $\ast$ b.\+b + Tb
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & a 4x4 transform matrix (16 floats) as described above \\
+\hline
+{\em hint} & a hint value to specify the transform type, applying no transform or applying transform defined by given matrix \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_adcce47013e2de6f18ef7384954a95d4e}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 421 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{422                                                                 \{}
+\DoxyCodeLine{423   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetColorTransform(matrix, hint);}
+\DoxyCodeLine{424 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a89ded7e09902c8c3c707c041412f1c02}\label{classhwcomposer_1_1PhysicalDisplay_a89ded7e09902c8c3c707c041412f1c02}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Color\+Transform\+Matrix@{Set\+Color\+Transform\+Matrix}}
+\index{Set\+Color\+Transform\+Matrix@{Set\+Color\+Transform\+Matrix}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Color\+Transform\+Matrix()}{SetColorTransformMatrix()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Physical\+Display\+::\+Set\+Color\+Transform\+Matrix (\begin{DoxyParamCaption}\item[{const float $\ast$}]{color\+\_\+transform\+\_\+matrix,  }\item[{\mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}}}]{color\+\_\+transform\+\_\+hint }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for setting color transform matrix. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a43bbf2421bd4b0b4e7b0612020060e3e}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_af88a8e27861d615a2356fb749c3e0c7c}\label{classhwcomposer_1_1PhysicalDisplay_af88a8e27861d615a2356fb749c3e0c7c}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Contrast@{Set\+Contrast}}
+\index{Set\+Contrast@{Set\+Contrast}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Contrast()}{SetContrast()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Contrast (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting display color contrast in H\+WC 
+\begin{DoxyParams}{Parameters}
+{\em red} & valid value is 0 $\sim$ 255, bigger value with stronger contrast \\
+\hline
+{\em green} & valid value is 0 $\sim$ 255, bigger value with stronger contrast \\
+\hline
+{\em blue} & valid value is 0 $\sim$ 255, bigger value with stronger contrast \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ac12f3a73bcf169c4cca38f994431ddfb}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 426 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{426                                                                              \{}
+\DoxyCodeLine{427   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetContrast(red, green, blue);}
+\DoxyCodeLine{428 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a8f67530a852d9e6e65874e4835b35dab}\label{classhwcomposer_1_1PhysicalDisplay_a8f67530a852d9e6e65874e4835b35dab}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Custom\+Resolution@{Set\+Custom\+Resolution}}
+\index{Set\+Custom\+Resolution@{Set\+Custom\+Resolution}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Custom\+Resolution()}{SetCustomResolution()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Set\+Custom\+Resolution (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ int32\+\_\+t $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting custom resolution. By default the resolution is set as per the display hardware capability. This A\+PI sets the resolution from the configuration file. 
+\begin{DoxyParams}{Parameters}
+{\em rectangle} & as per the resolution required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if set passes, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a8c3c29de10cc3c6e33a90e176d65b003}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 595 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{595                                                                       \{}
+\DoxyCodeLine{596   \textcolor{keywordflow}{if} ((rect.right - rect.left) \&\& (rect.bottom - rect.top)) \{}
+\DoxyCodeLine{597     \textcolor{comment}{// Custom rectangle with valid width and height}}
+\DoxyCodeLine{598     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.left = rect.left;}
+\DoxyCodeLine{599     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.top = rect.top;}
+\DoxyCodeLine{600     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.right = rect.right;}
+\DoxyCodeLine{601     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.bottom = rect.bottom;}
+\DoxyCodeLine{602     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{603 }
+\DoxyCodeLine{604     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{605         \textcolor{stringliteral}{"SetCustomResolution: custom width \%d, height \%d, bool \%d"},}
+\DoxyCodeLine{606         \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.right - \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.left, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.bottom - \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.top, 
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}});}
+\DoxyCodeLine{607 }
+\DoxyCodeLine{608     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{609   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{610     \textcolor{comment}{// Default display rectangle}}
+\DoxyCodeLine{611     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{612     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{613   \}}
+\DoxyCodeLine{614 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ae5d26a97e43c84a53d396ca946afbbef}\label{classhwcomposer_1_1PhysicalDisplay_ae5d26a97e43c84a53d396ca946afbbef}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Display\+Order@{Set\+Display\+Order}}
+\index{Set\+Display\+Order@{Set\+Display\+Order}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Display\+Order()}{SetDisplayOrder()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Display\+Order (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display\+\_\+order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a86dd66badac1df8de1ca56133249a222}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 527 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{527                                                             \{}
+\DoxyCodeLine{528   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7531be13b7e44445ec42879dc283f7d4}{ordered\_display\_id\_}} = display\_order;}
+\DoxyCodeLine{529 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a995cabfaf5aca42854711dacef743373}\label{classhwcomposer_1_1PhysicalDisplay_a995cabfaf5aca42854711dacef743373}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}}
+\index{Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Explicit\+Sync\+Support()}{SetExplicitSyncSupport()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Explicit\+Sync\+Support (\begin{DoxyParamCaption}\item[{bool}]{disable\+\_\+explicit\+\_\+sync }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a986975322078e900da95f78be42ad88b}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 435 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{435                                                                        \{}
+\DoxyCodeLine{436   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetExplicitSyncSupport(disable\_explicit\_sync);}
+\DoxyCodeLine{437 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a48f186ada1686b22a91a888482b8c915}\label{classhwcomposer_1_1PhysicalDisplay_a48f186ada1686b22a91a888482b8c915}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Gamma@{Set\+Gamma}}
+\index{Set\+Gamma@{Set\+Gamma}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Gamma()}{SetGamma()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Gamma (\begin{DoxyParamCaption}\item[{float}]{,  }\item[{float}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting color gamma value of display in H\+WC, which be used to remap original color brightness to new one by gamma color correction. H\+WC uses default gamma value 2.\+2 which popular display is using, and allow users to change gamma value for R\+GB colors by this A\+PI, e.\+g. 0 will remap all gradient brightness of the color to brightest value (solid color).
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & red color gamma value \\
+\hline
+{\em green} & blue color gamma value \\
+\hline
+{\em blue} & blue color gamma value \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a2956fb8a26ec77521a613ae1c0eaaf49}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 417 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{417                                                                  \{}
+\DoxyCodeLine{418   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetGamma(red, green, blue);}
+\DoxyCodeLine{419 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a3aeed39dd1af137ed16d83c4dfdcafad}\label{classhwcomposer_1_1PhysicalDisplay_a3aeed39dd1af137ed16d83c4dfdcafad}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Pipe\+Canvas\+Color@{Set\+Pipe\+Canvas\+Color}}
+\index{Set\+Pipe\+Canvas\+Color@{Set\+Pipe\+Canvas\+Color}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Pipe\+Canvas\+Color()}{SetPipeCanvasColor()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Physical\+Display\+::\+Set\+Pipe\+Canvas\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{bpc,  }\item[{uint16\+\_\+t}]{red,  }\item[{uint16\+\_\+t}]{green,  }\item[{uint16\+\_\+t}]{blue,  }\item[{uint16\+\_\+t}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for setting the color of the pipe canvas. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_aca6b6791dc9c5a4498895509e854bcfa}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a4fc0fbe6c307de00cd10a3c998c74b51}\label{classhwcomposer_1_1PhysicalDisplay_a4fc0fbe6c307de00cd10a3c998c74b51}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Power\+Mode@{Set\+Power\+Mode}}
+\index{Set\+Power\+Mode@{Set\+Power\+Mode}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Power\+Mode()}{SetPowerMode()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Set\+Power\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{power\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 230 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{230                                                       \{}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#ifndef DISABLE\_HOTPLUG\_NOTIFICATION}}
+\DoxyCodeLine{232   ScopedSpinLock lock(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}{modeset\_lock\_}});}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}{power\_mode\_}} == power\_mode) \{}
+\DoxyCodeLine{236     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{237   \}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}{power\_mode\_}} = power\_mode;}
+\DoxyCodeLine{240   \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}})) \{}
+\DoxyCodeLine{241     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{242         \textcolor{stringliteral}{"PhysicalDisplay is not connected, postponing power mode update."});}
+\DoxyCodeLine{243     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba0485d8518da4007d6a1cf2782d439815}{kPendingPowerMode}};}
+\DoxyCodeLine{244     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{245   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eabbfe6d9e0ed5ba48cbb1fe7ea2802ad2}{kDisconnectionInProgress}}) \{}
+\DoxyCodeLine{246     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{247         \textcolor{stringliteral}{"PhysicalDisplay diconnection in progress, postponing power mode "}}
+\DoxyCodeLine{248         \textcolor{stringliteral}{"update."});}
+\DoxyCodeLine{249     \textcolor{comment}{// Don't update power mode in case disconnect is in}}
+\DoxyCodeLine{250     \textcolor{comment}{// progress.}}
+\DoxyCodeLine{251     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} |= \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba0485d8518da4007d6a1cf2782d439815}{kPendingPowerMode}};}
+\DoxyCodeLine{252     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{253   \}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255   \textcolor{keywordflow}{return} UpdatePowerMode();}
+\DoxyCodeLine{256 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a7a58ed7399533404438fbed2682fdd54}\label{classhwcomposer_1_1PhysicalDisplay_a7a58ed7399533404438fbed2682fdd54}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Video\+Color@{Set\+Video\+Color}}
+\index{Set\+Video\+Color@{Set\+Video\+Color}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Video\+Color()}{SetVideoColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting video color in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a373e7c998f9d2767bafedc918c4001bc}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 443 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{443                                                                       \{}
+\DoxyCodeLine{444   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetVideoColor(color, value);}
+\DoxyCodeLine{445 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a9e8d4b629a28d38bd51239b73b3cdd0c}\label{classhwcomposer_1_1PhysicalDisplay_a9e8d4b629a28d38bd51239b73b3cdd0c}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}}
+\index{Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Video\+Deinterlace()}{SetVideoDeinterlace()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Video\+Deinterlace (\begin{DoxyParamCaption}\item[{H\+W\+C\+Deinterlace\+Flag}]{,  }\item[{H\+W\+C\+Deinterlace\+Control}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting video deinterlace in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae0c6d8eebaae9cdacd1e4bfba84585bf}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 456 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{457                                                                       \{}
+\DoxyCodeLine{458   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetVideoDeinterlace(flag, mode);}
+\DoxyCodeLine{459 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a90bb99a363f4e24b9653f984d52d9ba7}\label{classhwcomposer_1_1PhysicalDisplay_a90bb99a363f4e24b9653f984d52d9ba7}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}}
+\index{Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Set\+Video\+Scaling\+Mode()}{SetVideoScalingMode()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Set\+Video\+Scaling\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting video scaling mode in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ad35507d4c266627b1b20a0ebd116f907}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 439 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{439                                                        \{}
+\DoxyCodeLine{440   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetVideoScalingMode(mode);}
+\DoxyCodeLine{441 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a3c71b07e973c29b5603c35c333a42991}\label{classhwcomposer_1_1PhysicalDisplay_a3c71b07e973c29b5603c35c333a42991}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Test\+Commit@{Test\+Commit}}
+\index{Test\+Commit@{Test\+Commit}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Test\+Commit()}{TestCommit()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Physical\+Display\+::\+Test\+Commit (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayPlane}{Overlay\+Plane}} $>$ \&}]{commit\+\_\+planes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler_a1135b134010e6736aa49304100c9d3b9}{hwcomposer\+::\+Display\+Plane\+Handler}}.
+
+
+
+Definition at line 476 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{477                                              \{}
+\DoxyCodeLine{478   \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"TestCommit unimplemented in PhysicalDisplay."});}
+\DoxyCodeLine{479   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{480 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aa2a50f9dbb2740cf40256bcadad666c4}\label{classhwcomposer_1_1PhysicalDisplay_aa2a50f9dbb2740cf40256bcadad666c4}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Type@{Type}}
+\index{Type@{Type}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Type()}{Type()}}
+{\footnotesize\ttfamily Display\+Type hwcomposer\+::\+Physical\+Display\+::\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a67018275066174f9e5d4b801cd6fea31}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 49 of file physicaldisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                     \{}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} DisplayType::kInternal;}
+\DoxyCodeLine{51   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aa3cb8537967c34dce7e8ba7762cbd48c}\label{classhwcomposer_1_1PhysicalDisplay_aa3cb8537967c34dce7e8ba7762cbd48c}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Update\+Display\+Config@{Update\+Display\+Config}}
+\index{Update\+Display\+Config@{Update\+Display\+Config}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Update\+Display\+Config()}{UpdateDisplayConfig()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Physical\+Display\+::\+Update\+Display\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI is called if current active display configuration has changed. Implementations need to reset any state in this case. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_aa235de1fc4a01177e1afea36d4554870}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a58541ff74976131b84a4dac060a48c45}\label{classhwcomposer_1_1PhysicalDisplay_a58541ff74976131b84a4dac060a48c45}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Update\+Scaling\+Ratio@{Update\+Scaling\+Ratio}}
+\index{Update\+Scaling\+Ratio@{Update\+Scaling\+Ratio}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Update\+Scaling\+Ratio()}{UpdateScalingRatio()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+Update\+Scaling\+Ratio (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Scales layers of display to match it\textquotesingle{}s resolutions in case this display is in cloned mode and resolution doesn\textquotesingle{}t match with Source Display. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_abfad592c2a5e956760c194fa7831171c}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 482 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{485                                                                   \{}
+\DoxyCodeLine{486   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->UpdateScalingRatio(primary\_width, primary\_height,}
+\DoxyCodeLine{487                                      display\_width, display\_height);}
+\DoxyCodeLine{488 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a058a5c3a853da43fb76b129cc4e24ef8}\label{classhwcomposer_1_1PhysicalDisplay_a058a5c3a853da43fb76b129cc4e24ef8}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!V\+Sync\+Control@{V\+Sync\+Control}}
+\index{V\+Sync\+Control@{V\+Sync\+Control}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{V\+Sync\+Control()}{VSyncControl()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Physical\+Display\+::\+V\+Sync\+Control (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 409 of file physicaldisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{409                                                \{}
+\DoxyCodeLine{410   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->VSyncControl(enabled);}
+\DoxyCodeLine{411 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a63c3f3123c8d148205e29c177bcd5bd6}\label{classhwcomposer_1_1PhysicalDisplay_a63c3f3123c8d148205e29c177bcd5bd6}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!Width@{Width}}
+\index{Width@{Width}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{Width()}{Width()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9a18c3dfba567c86c088b06febda4019}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 53 of file physicaldisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                   \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a87ad7236b44be5af4e29233fab50408c}{width\_}};}
+\DoxyCodeLine{55   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a646651bb227f0d0c18317a864d36d767}\label{classhwcomposer_1_1PhysicalDisplay_a646651bb227f0d0c18317a864d36d767}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!cloned\+\_\+displays\+\_\+@{cloned\+\_\+displays\+\_\+}}
+\index{cloned\+\_\+displays\+\_\+@{cloned\+\_\+displays\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{cloned\+\_\+displays\+\_\+}{cloned\_displays\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$$>$ hwcomposer\+::\+Physical\+Display\+::cloned\+\_\+displays\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 302 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ab56848042a1534cdd00730e679350b95}\label{classhwcomposer_1_1PhysicalDisplay_ab56848042a1534cdd00730e679350b95}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!clones\+\_\+@{clones\+\_\+}}
+\index{clones\+\_\+@{clones\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{clones\+\_\+}{clones\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$$>$ hwcomposer\+::\+Physical\+Display\+::clones\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 303 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a75eb0d6243de4021ad8e49141becc4a0}\label{classhwcomposer_1_1PhysicalDisplay_a75eb0d6243de4021ad8e49141becc4a0}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!config\+\_\+@{config\+\_\+}}
+\index{config\+\_\+@{config\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{config\+\_\+}{config\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::config\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 283 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}\label{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!connection\+\_\+state\+\_\+@{connection\+\_\+state\+\_\+}}
+\index{connection\+\_\+state\+\_\+@{connection\+\_\+state\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{connection\+\_\+state\+\_\+}{connection\_state\_}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Physical\+Display\+::connection\+\_\+state\+\_\+ = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5eab95c1164f32874d129854064fe8ac934}{k\+Disconnected}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 292 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}\label{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!custom\+\_\+resolution\+\_\+@{custom\+\_\+resolution\+\_\+}}
+\index{custom\+\_\+resolution\+\_\+@{custom\+\_\+resolution\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{custom\+\_\+resolution\+\_\+}{custom\_resolution\_}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Physical\+Display\+::custom\+\_\+resolution\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 288 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}\label{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!display\+\_\+queue\+\_\+@{display\+\_\+queue\+\_\+}}
+\index{display\+\_\+queue\+\_\+@{display\+\_\+queue\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{display\+\_\+queue\+\_\+}{display\_queue\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classhwcomposer_1_1DisplayQueue}{Display\+Queue}}$>$ hwcomposer\+::\+Physical\+Display\+::display\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 299 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}\label{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!display\+\_\+state\+\_\+@{display\+\_\+state\+\_\+}}
+\index{display\+\_\+state\+\_\+@{display\+\_\+state\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{display\+\_\+state\+\_\+}{display\_state\_}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Physical\+Display\+::display\+\_\+state\+\_\+ = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba926d32deff70954c6d218ea554e4b49b}{k\+None}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 291 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_afd057257acfb8801ece8f51d9d7a7abe}\label{classhwcomposer_1_1PhysicalDisplay_afd057257acfb8801ece8f51d9d7a7abe}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!fb\+\_\+manager\+\_\+@{fb\+\_\+manager\+\_\+}}
+\index{fb\+\_\+manager\+\_\+@{fb\+\_\+manager\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{fb\+\_\+manager\+\_\+}{fb\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}}$\ast$ hwcomposer\+::\+Physical\+Display\+::fb\+\_\+manager\+\_\+ = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 304 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}\label{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!gpu\+\_\+fd\+\_\+@{gpu\+\_\+fd\+\_\+}}
+\index{gpu\+\_\+fd\+\_\+@{gpu\+\_\+fd\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{gpu\+\_\+fd\+\_\+}{gpu\_fd\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::gpu\+\_\+fd\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 289 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_af7c7ae74664eee51055985f0035aac8c}\label{classhwcomposer_1_1PhysicalDisplay_af7c7ae74664eee51055985f0035aac8c}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!height\+\_\+@{height\+\_\+}}
+\index{height\+\_\+@{height\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{height\+\_\+}{height\_}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Physical\+Display\+::height\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 286 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}\label{classhwcomposer_1_1PhysicalDisplay_aa76360816511c63806ef65f5ea9fd2b9}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!hot\+\_\+plug\+\_\+display\+\_\+id\+\_\+@{hot\+\_\+plug\+\_\+display\+\_\+id\+\_\+}}
+\index{hot\+\_\+plug\+\_\+display\+\_\+id\+\_\+@{hot\+\_\+plug\+\_\+display\+\_\+id\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{hot\+\_\+plug\+\_\+display\+\_\+id\+\_\+}{hot\_plug\_display\_id\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::hot\+\_\+plug\+\_\+display\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 293 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}\label{classhwcomposer_1_1PhysicalDisplay_aca921bd8eb098023a65d9280dcc8fbec}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!hotplug\+\_\+callback\+\_\+@{hotplug\+\_\+callback\+\_\+}}
+\index{hotplug\+\_\+callback\+\_\+@{hotplug\+\_\+callback\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{hotplug\+\_\+callback\+\_\+}{hotplug\_callback\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classhwcomposer_1_1HotPlugCallback}{Hot\+Plug\+Callback}}$>$ hwcomposer\+::\+Physical\+Display\+::hotplug\+\_\+callback\+\_\+ = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 300 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}\label{classhwcomposer_1_1PhysicalDisplay_a6af6dc9958e383376e61c721869339f6}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!modeset\+\_\+lock\+\_\+@{modeset\+\_\+lock\+\_\+}}
+\index{modeset\+\_\+lock\+\_\+@{modeset\+\_\+lock\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{modeset\+\_\+lock\+\_\+}{modeset\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1SpinLock}{Spin\+Lock}} hwcomposer\+::\+Physical\+Display\+::modeset\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 298 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a7531be13b7e44445ec42879dc283f7d4}\label{classhwcomposer_1_1PhysicalDisplay_a7531be13b7e44445ec42879dc283f7d4}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!ordered\+\_\+display\+\_\+id\+\_\+@{ordered\+\_\+display\+\_\+id\+\_\+}}
+\index{ordered\+\_\+display\+\_\+id\+\_\+@{ordered\+\_\+display\+\_\+id\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{ordered\+\_\+display\+\_\+id\+\_\+}{ordered\_display\_id\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::ordered\+\_\+display\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 297 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}\label{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!pipe\+\_\+@{pipe\+\_\+}}
+\index{pipe\+\_\+@{pipe\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{pipe\+\_\+}{pipe\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::pipe\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 279 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}\label{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!power\+\_\+mode\+\_\+@{power\+\_\+mode\+\_\+}}
+\index{power\+\_\+mode\+\_\+@{power\+\_\+mode\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{power\+\_\+mode\+\_\+}{power\_mode\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Physical\+Display\+::power\+\_\+mode\+\_\+ = \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{k\+On}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 290 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}\label{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!rect\+\_\+@{rect\+\_\+}}
+\index{rect\+\_\+@{rect\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{rect\+\_\+}{rect\_}}
+{\footnotesize\ttfamily Hwc\+Rect$<$int32\+\_\+t$>$ hwcomposer\+::\+Physical\+Display\+::rect\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 287 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}\label{classhwcomposer_1_1PhysicalDisplay_ad0fce5567e675b70d8f9f127929453a3}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!source\+\_\+display\+\_\+@{source\+\_\+display\+\_\+}}
+\index{source\+\_\+display\+\_\+@{source\+\_\+display\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{source\+\_\+display\+\_\+}{source\_display\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}$\ast$ hwcomposer\+::\+Physical\+Display\+::source\+\_\+display\+\_\+ = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 301 of file physicaldisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1PhysicalDisplay_a87ad7236b44be5af4e29233fab50408c}\label{classhwcomposer_1_1PhysicalDisplay_a87ad7236b44be5af4e29233fab50408c}} 
+\index{hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}!width\+\_\+@{width\+\_\+}}
+\index{width\+\_\+@{width\+\_\+}!hwcomposer\+::\+Physical\+Display@{hwcomposer\+::\+Physical\+Display}}
+\subsubsection{\texorpdfstring{width\+\_\+}{width\_}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Physical\+Display\+::width\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 285 of file physicaldisplay.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/\mbox{\hyperlink{physicaldisplay_8h}{physicaldisplay.\+h}}\item 
+wsi/\mbox{\hyperlink{physicaldisplay_8cpp}{physicaldisplay.\+cpp}}\end{DoxyCompactItemize}

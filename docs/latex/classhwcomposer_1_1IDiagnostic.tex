@@ -1,0 +1,108 @@
+\hypertarget{classhwcomposer_1_1IDiagnostic}{}\section{hwcomposer\+:\+:I\+Diagnostic Class Reference}
+\label{classhwcomposer_1_1IDiagnostic}\index{hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}}
+
+
+{\ttfamily \#include $<$idiagnostic.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:I\+Diagnostic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1IDiagnostic}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic_a56d1a1e037a9dfa35652205e24362776a58f5959ce571ee0e01c774fad36118b6}{e\+Log\+Truncated}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IDiagnostic_a9993955822071212ea5ccbc9e85987d2}{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}} (Diagnostic)
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic_ade22f6b73a1912c02dec2a2baaa14a4a}{Read\+Log\+Parcel}} (android\+::\+Parcel $\ast$reply)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic_a56f95024619fc80d9f022462392818e3}{Enable\+Display}} (uint32\+\_\+t d)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic_ad5ea1c34401b325c6d795f9417c2cd89}{Disable\+Display}} (uint32\+\_\+t d, bool b\+Blank)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic_aadfea7c0adee73575567a580105f841e}{Mask\+Layer}} (uint32\+\_\+t d, uint32\+\_\+t layer, bool b\+Hide)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic_ad3e81bebcbc3bf7dac6431eb50a33304}{Dump\+Frames}} (uint32\+\_\+t d, int32\+\_\+t frames, bool b\+Sync)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file idiagnostic.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IDiagnostic_a56d1a1e037a9dfa35652205e24362776}\label{classhwcomposer_1_1IDiagnostic_a56d1a1e037a9dfa35652205e24362776}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Log\+Truncated@{e\+Log\+Truncated}!hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}}\index{hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}!e\+Log\+Truncated@{e\+Log\+Truncated}}}\mbox{\Hypertarget{classhwcomposer_1_1IDiagnostic_a56d1a1e037a9dfa35652205e24362776a58f5959ce571ee0e01c774fad36118b6}\label{classhwcomposer_1_1IDiagnostic_a56d1a1e037a9dfa35652205e24362776a58f5959ce571ee0e01c774fad36118b6}} 
+e\+Log\+Truncated&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 34 of file idiagnostic.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34        \{}
+\DoxyCodeLine{35     \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic_a56d1a1e037a9dfa35652205e24362776a58f5959ce571ee0e01c774fad36118b6}{eLogTruncated}} =}
+\DoxyCodeLine{36         101,  \textcolor{comment}{// Status to indicate log entries have been overwritten}}
+\DoxyCodeLine{37   \};}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IDiagnostic_a9993955822071212ea5ccbc9e85987d2}\label{classhwcomposer_1_1IDiagnostic_a9993955822071212ea5ccbc9e85987d2}} 
+\index{hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}!D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E()}{DECLARE\_META\_INTERFACE()}}
+{\footnotesize\ttfamily hwcomposer\+::\+I\+Diagnostic\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE (\begin{DoxyParamCaption}\item[{Diagnostic}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IDiagnostic_ad5ea1c34401b325c6d795f9417c2cd89}\label{classhwcomposer_1_1IDiagnostic_ad5ea1c34401b325c6d795f9417c2cd89}} 
+\index{hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}!Disable\+Display@{Disable\+Display}}
+\index{Disable\+Display@{Disable\+Display}!hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}}
+\subsubsection{\texorpdfstring{Disable\+Display()}{DisableDisplay()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+I\+Diagnostic\+::\+Disable\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{bool}]{b\+Blank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IDiagnostic_ad3e81bebcbc3bf7dac6431eb50a33304}\label{classhwcomposer_1_1IDiagnostic_ad3e81bebcbc3bf7dac6431eb50a33304}} 
+\index{hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}!Dump\+Frames@{Dump\+Frames}}
+\index{Dump\+Frames@{Dump\+Frames}!hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}}
+\subsubsection{\texorpdfstring{Dump\+Frames()}{DumpFrames()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+I\+Diagnostic\+::\+Dump\+Frames (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{int32\+\_\+t}]{frames,  }\item[{bool}]{b\+Sync }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IDiagnostic_a56f95024619fc80d9f022462392818e3}\label{classhwcomposer_1_1IDiagnostic_a56f95024619fc80d9f022462392818e3}} 
+\index{hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}!Enable\+Display@{Enable\+Display}}
+\index{Enable\+Display@{Enable\+Display}!hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}}
+\subsubsection{\texorpdfstring{Enable\+Display()}{EnableDisplay()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+I\+Diagnostic\+::\+Enable\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IDiagnostic_aadfea7c0adee73575567a580105f841e}\label{classhwcomposer_1_1IDiagnostic_aadfea7c0adee73575567a580105f841e}} 
+\index{hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}!Mask\+Layer@{Mask\+Layer}}
+\index{Mask\+Layer@{Mask\+Layer}!hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}}
+\subsubsection{\texorpdfstring{Mask\+Layer()}{MaskLayer()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+I\+Diagnostic\+::\+Mask\+Layer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{uint32\+\_\+t}]{layer,  }\item[{bool}]{b\+Hide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IDiagnostic_ade22f6b73a1912c02dec2a2baaa14a4a}\label{classhwcomposer_1_1IDiagnostic_ade22f6b73a1912c02dec2a2baaa14a4a}} 
+\index{hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}!Read\+Log\+Parcel@{Read\+Log\+Parcel}}
+\index{Read\+Log\+Parcel@{Read\+Log\+Parcel}!hwcomposer\+::\+I\+Diagnostic@{hwcomposer\+::\+I\+Diagnostic}}
+\subsubsection{\texorpdfstring{Read\+Log\+Parcel()}{ReadLogParcel()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Diagnostic\+::\+Read\+Log\+Parcel (\begin{DoxyParamCaption}\item[{android\+::\+Parcel $\ast$}]{reply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/android/libhwcservice/\mbox{\hyperlink{idiagnostic_8h}{idiagnostic.\+h}}\end{DoxyCompactItemize}

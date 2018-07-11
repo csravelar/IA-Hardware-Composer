@@ -1,0 +1,1195 @@
+\hypertarget{structhwcomposer_1_1HwcLayer}{}\section{hwcomposer\+:\+:Hwc\+Layer Struct Reference}
+\label{structhwcomposer_1_1HwcLayer}\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+
+
+{\ttfamily \#include $<$hwclayer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a209e2bfb04df70ba732ef94ca8f394aa}{$\sim$\+Hwc\+Layer}} ()
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_abaf8cc652a8f941398bdd54be6eeeba2}{Hwc\+Layer}} ()=default
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} \& \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a7aecfe497014881ef0dee984ee20a006}{operator=}} (const \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} \&rhs)=delete
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_aeaeb1f0fd1d4c5754e0946b43c6eef84}{Set\+Native\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle)
+\item 
+\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a970873c68e816a7cfdbbe900262b8b44}{Get\+Native\+Handle}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_ab30467eafc63b3b95059ff6ca3738933}{Set\+Transform}} (int32\+\_\+t sf\+\_\+transform)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a93f6c42bb261d8ce5899d7058948b1f7}{Get\+Transform}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a312a7530c7cdca364df62c950ccbd024}{Set\+Alpha}} (uint8\+\_\+t alpha)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a3108c9e303ad88d33782dd44d228e50e}{Get\+Alpha}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a7705d2ba4b36529f37dc0f7e706417eb}{Set\+Blending}} (H\+W\+C\+Blending blending)
+\item 
+H\+W\+C\+Blending \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_abbe3b975bb12172acb20688b734b9b35}{Get\+Blending}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a83bafbef5b9c98ad5821acdeddd9a26e}{Set\+Source\+Crop}} (const Hwc\+Rect$<$ float $>$ \&source\+\_\+crop)
+\item 
+const Hwc\+Rect$<$ float $>$ \& \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a354a0a0e70a92dc2f0b2f13aacba99d6}{Get\+Source\+Crop}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a0bf1d6ab9b9d45a7e118567b493dd346}{Set\+Display\+Frame}} (const Hwc\+Rect$<$ int $>$ \&display\+\_\+frame, int translate\+\_\+x\+\_\+pos, int translate\+\_\+y\+\_\+pos)
+\item 
+const Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_af16f9a9bd3043eb237a4cf4f46846e66}{Get\+Display\+Frame}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_af844642f16862bedc2617030a87f7ab4}{Get\+Source\+Crop\+Width}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_af6a9eb3cc6b6c2eec606b3646d40e183}{Get\+Source\+Crop\+Height}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_acc6d5b593c0fda37daa52928f8491cc4}{Get\+Display\+Frame\+Width}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a60e360a2299f130894b65fa1515d4746}{Get\+Display\+Frame\+Height}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a25ec3931c5bb7108c4b8c39c839b26dc}{Set\+Surface\+Damage}} (const Hwc\+Region \&surface\+\_\+damage)
+\item 
+const Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_ada1b7ecdb1a62513e4c985deccb60cd7}{Get\+Surface\+Damage}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_afdc82d35f4385b0f3caa3541aa8abedb}{Has\+Surface\+Damage\+Region\+Changed}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a1cb06b2874c743a6dce634b037a49794}{Has\+Layer\+Content\+Changed}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a27744cfd952d0648168a1d28c65ff092}{Set\+Visible\+Region}} (const Hwc\+Region \&visible\+\_\+region)
+\item 
+const Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a610c7437c3e292b6b8cc7384891fbfc2}{Get\+Visible\+Rect}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a609fb3677b99ffd99c2ebd0b312ef3c9}{Has\+Visible\+Region\+Changed}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a9d448b96cbef38c1f174f17d43a49c6b}{Has\+Display\+Rect\+Changed}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a2dbe49a6892208c58f09858f6f01a311}{Has\+Source\+Rect\+Changed}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a9c5860d1891bc9bbd1349e03455880e1}{Is\+Visible}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a1721d8448311768aad11378bbc76f659}{Has\+Layer\+Attributes\+Changed}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a07742b64885d1461243ee38d2b0dc37a}{Set\+Release\+Fence}} (int32\+\_\+t fd)
+\item 
+int32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a48545fc3311aa7dd014d697ec461e348}{Get\+Release\+Fence}} ()
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_aaa01965ccb44cf807ec30956651c431a}{Set\+Acquire\+Fence}} (int32\+\_\+t fd)
+\item 
+int32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_add109f8c8a6e9051c10a34ad9535a822}{Get\+Acquire\+Fence}} ()
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a57e83759a42bcbc3cc2351ab7239bbc5}{Is\+Validated}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_af77099fee2df8a72be63df308622f40e}{Set\+Layer\+Z\+Order}} (uint32\+\_\+t z\+\_\+order)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a66c6767ed9f3df9daf20ed8439d34eaf}{Get\+Zorder}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a1696a94398a763306db26829088ea45b}{Has\+Zorder\+Changed}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_aa7d4d6bfadb5492c28d795f5d3197a86}{Set\+Left\+Constraint}} (int32\+\_\+t left\+\_\+constraint)
+\item 
+int32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_ab1fcb6990d20cf2aabe9fa48fc24d45d}{Get\+Left\+Constraint}} ()
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_aae0fe742a000713f6e77a093f3f4729b}{Set\+Right\+Constraint}} (int32\+\_\+t right\+\_\+constraint)
+\item 
+int32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_aab827de433954ca578f981e25f340747}{Get\+Right\+Constraint}} ()
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_ae0efd88202c2ecda46279405e7618db2}{Set\+Left\+Source\+Constraint}} (int32\+\_\+t left\+\_\+constraint)
+\item 
+int32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a6e67d33007cd1fd5d7b4882e9c9e27b4}{Get\+Left\+Source\+Constraint}} ()
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a1c089e26cd35485fd7a8a368434298ab}{Set\+Right\+Source\+Constraint}} (int32\+\_\+t right\+\_\+constraint)
+\item 
+int32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a6ab5474e985f9f88d8eaac4de4dda5a5}{Get\+Right\+Source\+Constraint}} ()
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a7556bacbb2697f51b2c2cc30a9ed661a}{Mark\+As\+Cursor\+Layer}} ()
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_ac6692424ce0f4839a3e59793cf3efd16}{Is\+Cursor\+Layer}} () const
+\item 
+const Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a223024192844b0dec2cbfa695874b8d8}{Get\+Layer\+Damage}} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a95c8d2c73f3d42e358849aecbd0d691a}{Virtual\+Display}}
+\item 
+class \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a3e381d9464ef96b091fe38d2919fda4a}{Physical\+Display}}
+\item 
+class \mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a8bb316b15cb60543aa8339f1d11a8ae1}{Mosaic\+Display}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 26 of file hwclayer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a209e2bfb04df70ba732ef94ca8f394aa}\label{structhwcomposer_1_1HwcLayer_a209e2bfb04df70ba732ef94ca8f394aa}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!````~Hwc\+Layer@{$\sim$\+Hwc\+Layer}}
+\index{````~Hwc\+Layer@{$\sim$\+Hwc\+Layer}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{$\sim$\+Hwc\+Layer()}{~HwcLayer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Hwc\+Layer\+::$\sim$\+Hwc\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                     \{}
+\DoxyCodeLine{26   \textcolor{keywordflow}{if} (release\_fd\_ > 0) \{}
+\DoxyCodeLine{27     close(release\_fd\_);}
+\DoxyCodeLine{28   \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30   \textcolor{keywordflow}{if} (acquire\_fence\_ > 0) \{}
+\DoxyCodeLine{31     close(acquire\_fence\_);}
+\DoxyCodeLine{32   \}}
+\DoxyCodeLine{33 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_abaf8cc652a8f941398bdd54be6eeeba2}\label{structhwcomposer_1_1HwcLayer_abaf8cc652a8f941398bdd54be6eeeba2}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Hwc\+Layer@{Hwc\+Layer}}
+\index{Hwc\+Layer@{Hwc\+Layer}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Hwc\+Layer()}{HwcLayer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Hwc\+Layer\+::\+Hwc\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_add109f8c8a6e9051c10a34ad9535a822}\label{structhwcomposer_1_1HwcLayer_add109f8c8a6e9051c10a34ad9535a822}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Acquire\+Fence@{Get\+Acquire\+Fence}}
+\index{Get\+Acquire\+Fence@{Get\+Acquire\+Fence}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Acquire\+Fence()}{GetAcquireFence()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Acquire\+Fence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A\+PI for getting acquire fence of this layer. \begin{DoxyReturn}{Returns}
+\char`\"{}-\/1\char`\"{} if no valid acquire fence present for this layer. Ownership of acquire fence is passed to caller and caller is responsible for closing the fd. 
+\end{DoxyReturn}
+
+
+Definition at line 187 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{187                                   \{}
+\DoxyCodeLine{188   int32\_t old\_fd = acquire\_fence\_;}
+\DoxyCodeLine{189   acquire\_fence\_ = -1;}
+\DoxyCodeLine{190   \textcolor{keywordflow}{return} old\_fd;}
+\DoxyCodeLine{191 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a3108c9e303ad88d33782dd44d228e50e}\label{structhwcomposer_1_1HwcLayer_a3108c9e303ad88d33782dd44d228e50e}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Alpha@{Get\+Alpha}}
+\index{Get\+Alpha@{Get\+Alpha}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Alpha()}{GetAlpha()}}
+{\footnotesize\ttfamily uint8\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Alpha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 47 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                            \{}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} alpha\_;}
+\DoxyCodeLine{49   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_abbe3b975bb12172acb20688b734b9b35}\label{structhwcomposer_1_1HwcLayer_abbe3b975bb12172acb20688b734b9b35}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Blending@{Get\+Blending}}
+\index{Get\+Blending@{Get\+Blending}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Blending()}{GetBlending()}}
+{\footnotesize\ttfamily H\+W\+C\+Blending hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Blending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 53 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                   \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} blending\_;}
+\DoxyCodeLine{55   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_af16f9a9bd3043eb237a4cf4f46846e66}\label{structhwcomposer_1_1HwcLayer_af16f9a9bd3043eb237a4cf4f46846e66}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Display\+Frame@{Get\+Display\+Frame}}
+\index{Get\+Display\+Frame@{Get\+Display\+Frame}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Display\+Frame()}{GetDisplayFrame()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$int$>$\& hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Display\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 65 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                                               \{}
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} display\_frame\_;}
+\DoxyCodeLine{67   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a60e360a2299f130894b65fa1515d4746}\label{structhwcomposer_1_1HwcLayer_a60e360a2299f130894b65fa1515d4746}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Display\+Frame\+Height@{Get\+Display\+Frame\+Height}}
+\index{Get\+Display\+Frame\+Height@{Get\+Display\+Frame\+Height}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Display\+Frame\+Height()}{GetDisplayFrameHeight()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Display\+Frame\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 81 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81                                          \{}
+\DoxyCodeLine{82     \textcolor{keywordflow}{return} display\_frame\_height\_;}
+\DoxyCodeLine{83   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_acc6d5b593c0fda37daa52928f8491cc4}\label{structhwcomposer_1_1HwcLayer_acc6d5b593c0fda37daa52928f8491cc4}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Display\+Frame\+Width@{Get\+Display\+Frame\+Width}}
+\index{Get\+Display\+Frame\+Width@{Get\+Display\+Frame\+Width}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Display\+Frame\+Width()}{GetDisplayFrameWidth()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Display\+Frame\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 77 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                         \{}
+\DoxyCodeLine{78     \textcolor{keywordflow}{return} display\_frame\_width\_;}
+\DoxyCodeLine{79   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a223024192844b0dec2cbfa695874b8d8}\label{structhwcomposer_1_1HwcLayer_a223024192844b0dec2cbfa695874b8d8}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Layer\+Damage@{Get\+Layer\+Damage}}
+\index{Get\+Layer\+Damage@{Get\+Layer\+Damage}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Layer\+Damage()}{GetLayerDamage()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$ int $>$ \& hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Layer\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A\+PI for getting damage area caused by this layer for current frame update. 
+
+Definition at line 328 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{328                                              \{}
+\DoxyCodeLine{329   \textcolor{keywordflow}{if} (!damage\_dirty\_) \{}
+\DoxyCodeLine{330     \textcolor{keywordflow}{return} current\_rendering\_damage\_;}
+\DoxyCodeLine{331   \}}
+\DoxyCodeLine{332 }
+\DoxyCodeLine{333   current\_rendering\_damage\_.reset();}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335   \textcolor{keywordtype}{int} ox = 0, oy = 0;}
+\DoxyCodeLine{336   HwcRect<int> translated\_damage =}
+\DoxyCodeLine{337       \mbox{\hyperlink{namespacehwcomposer_ac60601bf8e2068d963dbbf172e08a317}{TranslateRect}}(surface\_damage\_, -source\_crop\_.left, -source\_crop\_.top);}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{339   \textcolor{keywordflow}{if} (transform\_ == hwcomposer::HWCTransform::kTransform270) \{}
+\DoxyCodeLine{340     ox = display\_frame\_.left;}
+\DoxyCodeLine{341     oy = display\_frame\_.bottom;}
+\DoxyCodeLine{342     current\_rendering\_damage\_.left = ox + translated\_damage.top;}
+\DoxyCodeLine{343     current\_rendering\_damage\_.top = oy - translated\_damage.right;}
+\DoxyCodeLine{344     current\_rendering\_damage\_.right = ox + translated\_damage.bottom;}
+\DoxyCodeLine{345     current\_rendering\_damage\_.bottom = oy - translated\_damage.left;}
+\DoxyCodeLine{346   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform\_ == hwcomposer::HWCTransform::kTransform180) \{}
+\DoxyCodeLine{347     ox = display\_frame\_.right;}
+\DoxyCodeLine{348     oy = display\_frame\_.bottom;}
+\DoxyCodeLine{349     current\_rendering\_damage\_.left = ox - translated\_damage.right;}
+\DoxyCodeLine{350     current\_rendering\_damage\_.top = oy - translated\_damage.bottom;}
+\DoxyCodeLine{351     current\_rendering\_damage\_.right = ox - translated\_damage.left;}
+\DoxyCodeLine{352     current\_rendering\_damage\_.bottom = oy - translated\_damage.top;}
+\DoxyCodeLine{353   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform\_ \& hwcomposer::HWCTransform::kTransform90) \{}
+\DoxyCodeLine{354     \textcolor{keywordflow}{if} (transform\_ \& hwcomposer::HWCTransform::kReflectX) \{}
+\DoxyCodeLine{355       ox = display\_frame\_.left;}
+\DoxyCodeLine{356       oy = display\_frame\_.top;}
+\DoxyCodeLine{357       current\_rendering\_damage\_.left = ox + translated\_damage.top;}
+\DoxyCodeLine{358       current\_rendering\_damage\_.top = oy + translated\_damage.left;}
+\DoxyCodeLine{359       current\_rendering\_damage\_.right = ox + translated\_damage.bottom;}
+\DoxyCodeLine{360       current\_rendering\_damage\_.bottom = oy + translated\_damage.right;}
+\DoxyCodeLine{361     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform\_ \& hwcomposer::HWCTransform::kReflectY) \{}
+\DoxyCodeLine{362       ox = display\_frame\_.right;}
+\DoxyCodeLine{363       oy = display\_frame\_.bottom;}
+\DoxyCodeLine{364       current\_rendering\_damage\_.left = ox - translated\_damage.bottom;}
+\DoxyCodeLine{365       current\_rendering\_damage\_.top = oy - translated\_damage.right;}
+\DoxyCodeLine{366       current\_rendering\_damage\_.right = ox - translated\_damage.top;}
+\DoxyCodeLine{367       current\_rendering\_damage\_.bottom = oy - translated\_damage.left;}
+\DoxyCodeLine{368     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{369       ox = display\_frame\_.right;}
+\DoxyCodeLine{370       oy = display\_frame\_.top;}
+\DoxyCodeLine{371       current\_rendering\_damage\_.left = ox - translated\_damage.bottom;}
+\DoxyCodeLine{372       current\_rendering\_damage\_.top = oy + translated\_damage.left;}
+\DoxyCodeLine{373       current\_rendering\_damage\_.right = ox - translated\_damage.top;}
+\DoxyCodeLine{374       current\_rendering\_damage\_.bottom = oy + translated\_damage.right;}
+\DoxyCodeLine{375     \}}
+\DoxyCodeLine{376   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform\_ == 0) \{}
+\DoxyCodeLine{377     ox = display\_frame\_.left;}
+\DoxyCodeLine{378     oy = display\_frame\_.top;}
+\DoxyCodeLine{379     current\_rendering\_damage\_.left = ox + translated\_damage.left;}
+\DoxyCodeLine{380     current\_rendering\_damage\_.top = oy + translated\_damage.top;}
+\DoxyCodeLine{381     current\_rendering\_damage\_.right = ox + translated\_damage.right;}
+\DoxyCodeLine{382     current\_rendering\_damage\_.bottom = oy + translated\_damage.bottom;}
+\DoxyCodeLine{383   \}}
+\DoxyCodeLine{384 }
+\DoxyCodeLine{385   \textcolor{keywordflow}{if} (state\_ \& kVisibleRegionSet) \{}
+\DoxyCodeLine{386     current\_rendering\_damage\_ =}
+\DoxyCodeLine{387         \mbox{\hyperlink{namespacehwcomposer_a7e2b9700821805cf321089445e486447}{Intersection}}(current\_rendering\_damage\_, visible\_rect\_);}
+\DoxyCodeLine{388   \}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390   damage\_dirty\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{391 }
+\DoxyCodeLine{392   \textcolor{keywordflow}{return} current\_rendering\_damage\_;}
+\DoxyCodeLine{393 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_ab1fcb6990d20cf2aabe9fa48fc24d45d}\label{structhwcomposer_1_1HwcLayer_ab1fcb6990d20cf2aabe9fa48fc24d45d}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Left\+Constraint@{Get\+Left\+Constraint}}
+\index{Get\+Left\+Constraint@{Get\+Left\+Constraint}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Left\+Constraint()}{GetLeftConstraint()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Left\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 240 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{240                                     \{}
+\DoxyCodeLine{241   \textcolor{keywordtype}{size\_t} total = left\_constraint\_.size();}
+\DoxyCodeLine{242   \textcolor{keywordflow}{if} (total == 0)}
+\DoxyCodeLine{243     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245   \textcolor{keywordflow}{if} (total == 1)}
+\DoxyCodeLine{246     \textcolor{keywordflow}{return} left\_constraint\_.at(0);}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248   std::vector<int32\_t> temp;}
+\DoxyCodeLine{249   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < total; i++) \{}
+\DoxyCodeLine{250     temp.emplace\_back(left\_constraint\_.at(i));}
+\DoxyCodeLine{251   \}}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253   uint32\_t value = left\_constraint\_.at(0);}
+\DoxyCodeLine{254   left\_constraint\_.swap(temp);}
+\DoxyCodeLine{255   \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{256 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a6e67d33007cd1fd5d7b4882e9c9e27b4}\label{structhwcomposer_1_1HwcLayer_a6e67d33007cd1fd5d7b4882e9c9e27b4}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Left\+Source\+Constraint@{Get\+Left\+Source\+Constraint}}
+\index{Get\+Left\+Source\+Constraint@{Get\+Left\+Source\+Constraint}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Left\+Source\+Constraint()}{GetLeftSourceConstraint()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Left\+Source\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 284 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{284                                           \{}
+\DoxyCodeLine{285   \textcolor{keywordtype}{size\_t} total = left\_source\_constraint\_.size();}
+\DoxyCodeLine{286   \textcolor{keywordflow}{if} (total == 0)}
+\DoxyCodeLine{287     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{289   \textcolor{keywordflow}{if} (total == 1)}
+\DoxyCodeLine{290     \textcolor{keywordflow}{return} left\_source\_constraint\_.at(0);}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292   std::vector<int32\_t> temp;}
+\DoxyCodeLine{293   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < total; i++) \{}
+\DoxyCodeLine{294     temp.emplace\_back(left\_source\_constraint\_.at(i));}
+\DoxyCodeLine{295   \}}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297   uint32\_t value = left\_source\_constraint\_.at(0);}
+\DoxyCodeLine{298   left\_source\_constraint\_.swap(temp);}
+\DoxyCodeLine{299   \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{300 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a970873c68e816a7cfdbbe900262b8b44}\label{structhwcomposer_1_1HwcLayer_a970873c68e816a7cfdbbe900262b8b44}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Native\+Handle@{Get\+Native\+Handle}}
+\index{Get\+Native\+Handle@{Get\+Native\+Handle}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Native\+Handle()}{GetNativeHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Native\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                           \{}
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} sf\_handle\_;}
+\DoxyCodeLine{37   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a48545fc3311aa7dd014d697ec461e348}\label{structhwcomposer_1_1HwcLayer_a48545fc3311aa7dd014d697ec461e348}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Release\+Fence@{Get\+Release\+Fence}}
+\index{Get\+Release\+Fence@{Get\+Release\+Fence}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Release\+Fence()}{GetReleaseFence()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Release\+Fence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A\+PI for getting release fence of this layer. \begin{DoxyReturn}{Returns}
+\char`\"{}-\/1\char`\"{} if no valid release fence present for this layer. Ownership of fd is passed to caller and caller is responsible for closing the fd. 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{172                                   \{}
+\DoxyCodeLine{173   int32\_t old\_fd = release\_fd\_;}
+\DoxyCodeLine{174   release\_fd\_ = -1;}
+\DoxyCodeLine{175   \textcolor{keywordflow}{return} old\_fd;}
+\DoxyCodeLine{176 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_aab827de433954ca578f981e25f340747}\label{structhwcomposer_1_1HwcLayer_aab827de433954ca578f981e25f340747}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Right\+Constraint@{Get\+Right\+Constraint}}
+\index{Get\+Right\+Constraint@{Get\+Right\+Constraint}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Right\+Constraint()}{GetRightConstraint()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Right\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 258 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{258                                      \{}
+\DoxyCodeLine{259   \textcolor{keywordtype}{size\_t} total = right\_constraint\_.size();}
+\DoxyCodeLine{260   \textcolor{keywordflow}{if} (total == 0)}
+\DoxyCodeLine{261     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263   \textcolor{keywordflow}{if} (total == 1)}
+\DoxyCodeLine{264     \textcolor{keywordflow}{return} right\_constraint\_.at(0);}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266   std::vector<int32\_t> temp;}
+\DoxyCodeLine{267   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < total; i++) \{}
+\DoxyCodeLine{268     temp.emplace\_back(right\_constraint\_.at(i));}
+\DoxyCodeLine{269   \}}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{271   uint32\_t value = right\_constraint\_.at(0);}
+\DoxyCodeLine{272   right\_constraint\_.swap(temp);}
+\DoxyCodeLine{273   \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{274 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a6ab5474e985f9f88d8eaac4de4dda5a5}\label{structhwcomposer_1_1HwcLayer_a6ab5474e985f9f88d8eaac4de4dda5a5}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Right\+Source\+Constraint@{Get\+Right\+Source\+Constraint}}
+\index{Get\+Right\+Source\+Constraint@{Get\+Right\+Source\+Constraint}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Right\+Source\+Constraint()}{GetRightSourceConstraint()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Right\+Source\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 302 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{302                                            \{}
+\DoxyCodeLine{303   \textcolor{keywordtype}{size\_t} total = right\_source\_constraint\_.size();}
+\DoxyCodeLine{304   \textcolor{keywordflow}{if} (total == 0)}
+\DoxyCodeLine{305     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307   \textcolor{keywordflow}{if} (total == 1)}
+\DoxyCodeLine{308     \textcolor{keywordflow}{return} right\_source\_constraint\_.at(0);}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310   std::vector<int32\_t> temp;}
+\DoxyCodeLine{311   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < total; i++) \{}
+\DoxyCodeLine{312     temp.emplace\_back(right\_source\_constraint\_.at(i));}
+\DoxyCodeLine{313   \}}
+\DoxyCodeLine{314 }
+\DoxyCodeLine{315   uint32\_t value = right\_source\_constraint\_.at(0);}
+\DoxyCodeLine{316   right\_source\_constraint\_.swap(temp);}
+\DoxyCodeLine{317   \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{318 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a354a0a0e70a92dc2f0b2f13aacba99d6}\label{structhwcomposer_1_1HwcLayer_a354a0a0e70a92dc2f0b2f13aacba99d6}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Source\+Crop@{Get\+Source\+Crop}}
+\index{Get\+Source\+Crop@{Get\+Source\+Crop}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Source\+Crop()}{GetSourceCrop()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$float$>$\& hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Source\+Crop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 58 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                                               \{}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} source\_crop\_;}
+\DoxyCodeLine{60   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_af6a9eb3cc6b6c2eec606b3646d40e183}\label{structhwcomposer_1_1HwcLayer_af6a9eb3cc6b6c2eec606b3646d40e183}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Source\+Crop\+Height@{Get\+Source\+Crop\+Height}}
+\index{Get\+Source\+Crop\+Height@{Get\+Source\+Crop\+Height}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Source\+Crop\+Height()}{GetSourceCropHeight()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Source\+Crop\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 73 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                        \{}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} source\_crop\_height\_;}
+\DoxyCodeLine{75   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_af844642f16862bedc2617030a87f7ab4}\label{structhwcomposer_1_1HwcLayer_af844642f16862bedc2617030a87f7ab4}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Source\+Crop\+Width@{Get\+Source\+Crop\+Width}}
+\index{Get\+Source\+Crop\+Width@{Get\+Source\+Crop\+Width}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Source\+Crop\+Width()}{GetSourceCropWidth()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Source\+Crop\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 69 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                       \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} source\_crop\_width\_;}
+\DoxyCodeLine{71   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_ada1b7ecdb1a62513e4c985deccb60cd7}\label{structhwcomposer_1_1HwcLayer_ada1b7ecdb1a62513e4c985deccb60cd7}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Surface\+Damage@{Get\+Surface\+Damage}}
+\index{Get\+Surface\+Damage@{Get\+Surface\+Damage}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Surface\+Damage()}{GetSurfaceDamage()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$int$>$\& hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Surface\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for getting surface damage of this layer. 
+
+Definition at line 99 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                                                \{}
+\DoxyCodeLine{100     \textcolor{keywordflow}{return} surface\_damage\_;}
+\DoxyCodeLine{101   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a93f6c42bb261d8ce5899d7058948b1f7}\label{structhwcomposer_1_1HwcLayer_a93f6c42bb261d8ce5899d7058948b1f7}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Transform@{Get\+Transform}}
+\index{Get\+Transform@{Get\+Transform}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Transform()}{GetTransform()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 41 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                 \{}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} transform\_;}
+\DoxyCodeLine{43   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a610c7437c3e292b6b8cc7384891fbfc2}\label{structhwcomposer_1_1HwcLayer_a610c7437c3e292b6b8cc7384891fbfc2}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Visible\+Rect@{Get\+Visible\+Rect}}
+\index{Get\+Visible\+Rect@{Get\+Visible\+Rect}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Visible\+Rect()}{GetVisibleRect()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$int$>$\& hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Visible\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for getting visible rect of this layer. 
+
+Definition at line 132 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{132                                              \{}
+\DoxyCodeLine{133     \textcolor{keywordflow}{return} visible\_rect\_;}
+\DoxyCodeLine{134   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a66c6767ed9f3df9daf20ed8439d34eaf}\label{structhwcomposer_1_1HwcLayer_a66c6767ed9f3df9daf20ed8439d34eaf}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Get\+Zorder@{Get\+Zorder}}
+\index{Get\+Zorder@{Get\+Zorder}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Zorder()}{GetZorder()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Hwc\+Layer\+::\+Get\+Zorder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for getting Z\+Order for this layer. 
+
+Definition at line 227 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{227                              \{}
+\DoxyCodeLine{228     \textcolor{keywordflow}{return} z\_order\_;}
+\DoxyCodeLine{229   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a9d448b96cbef38c1f174f17d43a49c6b}\label{structhwcomposer_1_1HwcLayer_a9d448b96cbef38c1f174f17d43a49c6b}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Has\+Display\+Rect\+Changed@{Has\+Display\+Rect\+Changed}}
+\index{Has\+Display\+Rect\+Changed@{Has\+Display\+Rect\+Changed}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Display\+Rect\+Changed()}{HasDisplayRectChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Has\+Display\+Rect\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for querying if Display Frame\+Rect has changed from last Present call to \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}. 
+
+Definition at line 148 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{148                                      \{}
+\DoxyCodeLine{149     \textcolor{keywordflow}{return} layer\_cache\_ \& kDisplayFrameRectChanged;}
+\DoxyCodeLine{150   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a1721d8448311768aad11378bbc76f659}\label{structhwcomposer_1_1HwcLayer_a1721d8448311768aad11378bbc76f659}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Has\+Layer\+Attributes\+Changed@{Has\+Layer\+Attributes\+Changed}}
+\index{Has\+Layer\+Attributes\+Changed@{Has\+Layer\+Attributes\+Changed}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Layer\+Attributes\+Changed()}{HasLayerAttributesChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Has\+Layer\+Attributes\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for querying if layer attributes has changed from last Present call to \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}. This takes into consideration any changes to transform of the layer. 
+
+Definition at line 173 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{173                                          \{}
+\DoxyCodeLine{174     \textcolor{keywordflow}{return} layer\_cache\_ \& kLayerAttributesChanged;}
+\DoxyCodeLine{175   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a1cb06b2874c743a6dce634b037a49794}\label{structhwcomposer_1_1HwcLayer_a1cb06b2874c743a6dce634b037a49794}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Has\+Layer\+Content\+Changed@{Has\+Layer\+Content\+Changed}}
+\index{Has\+Layer\+Content\+Changed@{Has\+Layer\+Content\+Changed}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Layer\+Content\+Changed()}{HasLayerContentChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Has\+Layer\+Content\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for querying if content of layer has changed for last Present call to \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}. 
+
+Definition at line 116 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116                                       \{}
+\DoxyCodeLine{117     \textcolor{keywordflow}{return} state\_ \& kLayerContentChanged;}
+\DoxyCodeLine{118   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a2dbe49a6892208c58f09858f6f01a311}\label{structhwcomposer_1_1HwcLayer_a2dbe49a6892208c58f09858f6f01a311}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Has\+Source\+Rect\+Changed@{Has\+Source\+Rect\+Changed}}
+\index{Has\+Source\+Rect\+Changed@{Has\+Source\+Rect\+Changed}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Source\+Rect\+Changed()}{HasSourceRectChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Has\+Source\+Rect\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for querying if Layer source rect has changed from last Present call to \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}. 
+
+Definition at line 156 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{156                                     \{}
+\DoxyCodeLine{157     \textcolor{keywordflow}{return} layer\_cache\_ \& kSourceRectChanged;}
+\DoxyCodeLine{158   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_afdc82d35f4385b0f3caa3541aa8abedb}\label{structhwcomposer_1_1HwcLayer_afdc82d35f4385b0f3caa3541aa8abedb}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Has\+Surface\+Damage\+Region\+Changed@{Has\+Surface\+Damage\+Region\+Changed}}
+\index{Has\+Surface\+Damage\+Region\+Changed@{Has\+Surface\+Damage\+Region\+Changed}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Surface\+Damage\+Region\+Changed()}{HasSurfaceDamageRegionChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Has\+Surface\+Damage\+Region\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for querying damage region of this layer has changed from last Present call to \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}. 
+
+Definition at line 108 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{108                                              \{}
+\DoxyCodeLine{109     \textcolor{keywordflow}{return} state\_ \& kSurfaceDamageChanged;}
+\DoxyCodeLine{110   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a609fb3677b99ffd99c2ebd0b312ef3c9}\label{structhwcomposer_1_1HwcLayer_a609fb3677b99ffd99c2ebd0b312ef3c9}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Has\+Visible\+Region\+Changed@{Has\+Visible\+Region\+Changed}}
+\index{Has\+Visible\+Region\+Changed@{Has\+Visible\+Region\+Changed}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Visible\+Region\+Changed()}{HasVisibleRegionChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Has\+Visible\+Region\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for querying if visible region has changed from last Present call to \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}. 
+
+Definition at line 140 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140                                        \{}
+\DoxyCodeLine{141     \textcolor{keywordflow}{return} state\_ \& kVisibleRegionChanged;}
+\DoxyCodeLine{142   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a1696a94398a763306db26829088ea45b}\label{structhwcomposer_1_1HwcLayer_a1696a94398a763306db26829088ea45b}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Has\+Zorder\+Changed@{Has\+Zorder\+Changed}}
+\index{Has\+Zorder\+Changed@{Has\+Zorder\+Changed}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Zorder\+Changed()}{HasZorderChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Has\+Zorder\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 231 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{231                                 \{}
+\DoxyCodeLine{232     \textcolor{keywordflow}{return} state\_ \& kZorderChanged;}
+\DoxyCodeLine{233   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_ac6692424ce0f4839a3e59793cf3efd16}\label{structhwcomposer_1_1HwcLayer_ac6692424ce0f4839a3e59793cf3efd16}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Is\+Cursor\+Layer@{Is\+Cursor\+Layer}}
+\index{Is\+Cursor\+Layer@{Is\+Cursor\+Layer}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Is\+Cursor\+Layer()}{IsCursorLayer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Is\+Cursor\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 324 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{324                                    \{}
+\DoxyCodeLine{325   \textcolor{keywordflow}{return} is\_cursor\_layer\_;}
+\DoxyCodeLine{326 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a57e83759a42bcbc3cc2351ab7239bbc5}\label{structhwcomposer_1_1HwcLayer_a57e83759a42bcbc3cc2351ab7239bbc5}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Is\+Validated@{Is\+Validated}}
+\index{Is\+Validated@{Is\+Validated}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Is\+Validated()}{IsValidated()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Is\+Validated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for querying if this layer has been presented atleast once during Present call to \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}. 
+
+Definition at line 215 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{215                            \{}
+\DoxyCodeLine{216     \textcolor{keywordflow}{return} state\_ \& kLayerValidated;}
+\DoxyCodeLine{217   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a9c5860d1891bc9bbd1349e03455880e1}\label{structhwcomposer_1_1HwcLayer_a9c5860d1891bc9bbd1349e03455880e1}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Is\+Visible@{Is\+Visible}}
+\index{Is\+Visible@{Is\+Visible}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Is\+Visible()}{IsVisible()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwc\+Layer\+::\+Is\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A\+PI for querying if layer is visible. 
+
+Definition at line 163 of file hwclayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                          \{}
+\DoxyCodeLine{164     \textcolor{keywordflow}{return} state\_ \& kVisible;}
+\DoxyCodeLine{165   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a7556bacbb2697f51b2c2cc30a9ed661a}\label{structhwcomposer_1_1HwcLayer_a7556bacbb2697f51b2c2cc30a9ed661a}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Mark\+As\+Cursor\+Layer@{Mark\+As\+Cursor\+Layer}}
+\index{Mark\+As\+Cursor\+Layer@{Mark\+As\+Cursor\+Layer}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Mark\+As\+Cursor\+Layer()}{MarkAsCursorLayer()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Mark\+As\+Cursor\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 320 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{320                                  \{}
+\DoxyCodeLine{321   is\_cursor\_layer\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{322 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a7aecfe497014881ef0dee984ee20a006}\label{structhwcomposer_1_1HwcLayer_a7aecfe497014881ef0dee984ee20a006}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}}\& hwcomposer\+::\+Hwc\+Layer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_aaa01965ccb44cf807ec30956651c431a}\label{structhwcomposer_1_1HwcLayer_aaa01965ccb44cf807ec30956651c431a}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Acquire\+Fence@{Set\+Acquire\+Fence}}
+\index{Set\+Acquire\+Fence@{Set\+Acquire\+Fence}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Acquire\+Fence()}{SetAcquireFence()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Acquire\+Fence (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{fd }\end{DoxyParamCaption})}
+
+A\+PI for setting acquire fence for this layer. 
+\begin{DoxyParams}{Parameters}
+{\em fd} & will be populated with Native Fence object. When fd is signalled, the buffer associated with the layer is ready to be read from. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 178 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{178                                          \{}
+\DoxyCodeLine{179   \textcolor{keywordflow}{if} (acquire\_fence\_ > 0) \{}
+\DoxyCodeLine{180     close(acquire\_fence\_);}
+\DoxyCodeLine{181     acquire\_fence\_ = -1;}
+\DoxyCodeLine{182   \}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184   acquire\_fence\_ = fd;}
+\DoxyCodeLine{185 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a312a7530c7cdca364df62c950ccbd024}\label{structhwcomposer_1_1HwcLayer_a312a7530c7cdca364df62c950ccbd024}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Alpha@{Set\+Alpha}}
+\index{Set\+Alpha@{Set\+Alpha}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Alpha()}{SetAlpha()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Alpha (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                      \{}
+\DoxyCodeLine{47   \textcolor{keywordflow}{if} (alpha\_ != alpha) \{}
+\DoxyCodeLine{48     alpha\_ = alpha;}
+\DoxyCodeLine{49   \}}
+\DoxyCodeLine{50 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a7705d2ba4b36529f37dc0f7e706417eb}\label{structhwcomposer_1_1HwcLayer_a7705d2ba4b36529f37dc0f7e706417eb}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Blending@{Set\+Blending}}
+\index{Set\+Blending@{Set\+Blending}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Blending()}{SetBlending()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Blending (\begin{DoxyParamCaption}\item[{H\+W\+C\+Blending}]{blending }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                                \{}
+\DoxyCodeLine{53   \textcolor{keywordflow}{if} (blending != blending\_) \{}
+\DoxyCodeLine{54     blending\_ = blending;}
+\DoxyCodeLine{55   \}}
+\DoxyCodeLine{56 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a0bf1d6ab9b9d45a7e118567b493dd346}\label{structhwcomposer_1_1HwcLayer_a0bf1d6ab9b9d45a7e118567b493dd346}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Display\+Frame@{Set\+Display\+Frame}}
+\index{Set\+Display\+Frame@{Set\+Display\+Frame}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Display\+Frame()}{SetDisplayFrame()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Display\+Frame (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ int $>$ \&}]{display\+\_\+frame,  }\item[{int}]{translate\+\_\+x\+\_\+pos,  }\item[{int}]{translate\+\_\+y\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                                                          \{}
+\DoxyCodeLine{74   \textcolor{keywordflow}{if} (((display\_frame.left + translate\_x\_pos) != display\_frame\_.left) ||}
+\DoxyCodeLine{75       ((display\_frame.right + translate\_x\_pos) != display\_frame\_.right) ||}
+\DoxyCodeLine{76       ((display\_frame.top + translate\_y\_pos) != display\_frame\_.top) ||}
+\DoxyCodeLine{77       ((display\_frame.bottom + translate\_y\_pos) != display\_frame\_.bottom)) \{}
+\DoxyCodeLine{78     layer\_cache\_ |= kDisplayFrameRectChanged;}
+\DoxyCodeLine{79     HwcRect<int> frame = display\_frame;}
+\DoxyCodeLine{80     frame.left += translate\_x\_pos;}
+\DoxyCodeLine{81     frame.right += translate\_x\_pos;}
+\DoxyCodeLine{82     frame.top += translate\_y\_pos;}
+\DoxyCodeLine{83     frame.bottom += translate\_y\_pos;}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     display\_frame\_ = frame;}
+\DoxyCodeLine{86     display\_frame\_width\_ = display\_frame\_.right - display\_frame\_.left;}
+\DoxyCodeLine{87     display\_frame\_height\_ = display\_frame\_.bottom - display\_frame\_.top;}
+\DoxyCodeLine{88     damage\_dirty\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{89   \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91   \textcolor{keywordflow}{if} (!(state\_ \& kVisibleRegionSet)) \{}
+\DoxyCodeLine{92     visible\_rect\_ = display\_frame\_;}
+\DoxyCodeLine{93   \}}
+\DoxyCodeLine{94 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_af77099fee2df8a72be63df308622f40e}\label{structhwcomposer_1_1HwcLayer_af77099fee2df8a72be63df308622f40e}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Layer\+Z\+Order@{Set\+Layer\+Z\+Order}}
+\index{Set\+Layer\+Z\+Order@{Set\+Layer\+Z\+Order}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Layer\+Z\+Order()}{SetLayerZOrder()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Layer\+Z\+Order (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{z\+\_\+order }\end{DoxyParamCaption})}
+
+A\+PI for setting Z\+Order for this layer. 
+
+Definition at line 225 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{225                                             \{}
+\DoxyCodeLine{226   \textcolor{keywordflow}{if} (z\_order\_ != static\_cast<int>(order)) \{}
+\DoxyCodeLine{227     z\_order\_ = order;}
+\DoxyCodeLine{228     state\_ |= kZorderChanged;}
+\DoxyCodeLine{229   \}}
+\DoxyCodeLine{230 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_aa7d4d6bfadb5492c28d795f5d3197a86}\label{structhwcomposer_1_1HwcLayer_aa7d4d6bfadb5492c28d795f5d3197a86}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Left\+Constraint@{Set\+Left\+Constraint}}
+\index{Set\+Left\+Constraint@{Set\+Left\+Constraint}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Left\+Constraint()}{SetLeftConstraint()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Left\+Constraint (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{left\+\_\+constraint }\end{DoxyParamCaption})}
+
+
+
+Definition at line 232 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{232                                                         \{}
+\DoxyCodeLine{233   left\_constraint\_.emplace\_back(left\_constraint);}
+\DoxyCodeLine{234 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_ae0efd88202c2ecda46279405e7618db2}\label{structhwcomposer_1_1HwcLayer_ae0efd88202c2ecda46279405e7618db2}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Left\+Source\+Constraint@{Set\+Left\+Source\+Constraint}}
+\index{Set\+Left\+Source\+Constraint@{Set\+Left\+Source\+Constraint}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Left\+Source\+Constraint()}{SetLeftSourceConstraint()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Left\+Source\+Constraint (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{left\+\_\+constraint }\end{DoxyParamCaption})}
+
+
+
+Definition at line 276 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{276                                                               \{}
+\DoxyCodeLine{277   left\_source\_constraint\_.emplace\_back(left\_constraint);}
+\DoxyCodeLine{278 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_aeaeb1f0fd1d4c5754e0946b43c6eef84}\label{structhwcomposer_1_1HwcLayer_aeaeb1f0fd1d4c5754e0946b43c6eef84}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Native\+Handle@{Set\+Native\+Handle}}
+\index{Set\+Native\+Handle@{Set\+Native\+Handle}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Native\+Handle()}{SetNativeHandle()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Native\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                      \{}
+\DoxyCodeLine{36   sf\_handle\_ = handle;}
+\DoxyCodeLine{37 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a07742b64885d1461243ee38d2b0dc37a}\label{structhwcomposer_1_1HwcLayer_a07742b64885d1461243ee38d2b0dc37a}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Release\+Fence@{Set\+Release\+Fence}}
+\index{Set\+Release\+Fence@{Set\+Release\+Fence}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Release\+Fence()}{SetReleaseFence()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Release\+Fence (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{fd }\end{DoxyParamCaption})}
+
+A\+PI for setting release fence for this layer. 
+\begin{DoxyParams}{Parameters}
+{\em fd} & will be populated with Native Fence object. When fd is signalled, any previous frame composition results can be invalidated. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 163 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                                          \{}
+\DoxyCodeLine{164   \textcolor{keywordflow}{if} (release\_fd\_ > 0) \{}
+\DoxyCodeLine{165     close(release\_fd\_);}
+\DoxyCodeLine{166     release\_fd\_ = -1;}
+\DoxyCodeLine{167   \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169   release\_fd\_ = fd;}
+\DoxyCodeLine{170 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_aae0fe742a000713f6e77a093f3f4729b}\label{structhwcomposer_1_1HwcLayer_aae0fe742a000713f6e77a093f3f4729b}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Right\+Constraint@{Set\+Right\+Constraint}}
+\index{Set\+Right\+Constraint@{Set\+Right\+Constraint}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Right\+Constraint()}{SetRightConstraint()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Right\+Constraint (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{right\+\_\+constraint }\end{DoxyParamCaption})}
+
+
+
+Definition at line 236 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{236                                                           \{}
+\DoxyCodeLine{237   right\_constraint\_.emplace\_back(right\_constraint);}
+\DoxyCodeLine{238 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a1c089e26cd35485fd7a8a368434298ab}\label{structhwcomposer_1_1HwcLayer_a1c089e26cd35485fd7a8a368434298ab}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Right\+Source\+Constraint@{Set\+Right\+Source\+Constraint}}
+\index{Set\+Right\+Source\+Constraint@{Set\+Right\+Source\+Constraint}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Right\+Source\+Constraint()}{SetRightSourceConstraint()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Right\+Source\+Constraint (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{right\+\_\+constraint }\end{DoxyParamCaption})}
+
+
+
+Definition at line 280 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{280                                                                 \{}
+\DoxyCodeLine{281   right\_source\_constraint\_.emplace\_back(right\_constraint);}
+\DoxyCodeLine{282 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a83bafbef5b9c98ad5821acdeddd9a26e}\label{structhwcomposer_1_1HwcLayer_a83bafbef5b9c98ad5821acdeddd9a26e}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Source\+Crop@{Set\+Source\+Crop}}
+\index{Set\+Source\+Crop@{Set\+Source\+Crop}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Source\+Crop()}{SetSourceCrop()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Source\+Crop (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ float $>$ \&}]{source\+\_\+crop }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                                                               \{}
+\DoxyCodeLine{59   \textcolor{keywordflow}{if} ((source\_crop.left != source\_crop\_.left) ||}
+\DoxyCodeLine{60       (source\_crop.right != source\_crop\_.right) ||}
+\DoxyCodeLine{61       (source\_crop.top != source\_crop\_.top) ||}
+\DoxyCodeLine{62       (source\_crop.bottom != source\_crop\_.bottom)) \{}
+\DoxyCodeLine{63     layer\_cache\_ |= kSourceRectChanged;}
+\DoxyCodeLine{64     source\_crop\_ = source\_crop;}
+\DoxyCodeLine{65     source\_crop\_width\_ =}
+\DoxyCodeLine{66         \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(ceilf(source\_crop.right - source\_crop.left));}
+\DoxyCodeLine{67     source\_crop\_height\_ =}
+\DoxyCodeLine{68         \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(ceilf(source\_crop.bottom - source\_crop.top));}
+\DoxyCodeLine{69   \}}
+\DoxyCodeLine{70 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a25ec3931c5bb7108c4b8c39c839b26dc}\label{structhwcomposer_1_1HwcLayer_a25ec3931c5bb7108c4b8c39c839b26dc}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Surface\+Damage@{Set\+Surface\+Damage}}
+\index{Set\+Surface\+Damage@{Set\+Surface\+Damage}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Surface\+Damage()}{SetSurfaceDamage()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Surface\+Damage (\begin{DoxyParamCaption}\item[{const Hwc\+Region \&}]{surface\+\_\+damage }\end{DoxyParamCaption})}
+
+A\+PI for setting surface damage for this layer. 
+\begin{DoxyParams}{Parameters}
+{\em surface\+\_\+damage} & should contain exactly 1 rect with all zeros if content of the layer has not changed from last Present call. If no of rects is zero than assumption is that the contents of layer has completely changed from last Present call. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                                                \{}
+\DoxyCodeLine{97   uint32\_t rects = surface\_damage.size();}
+\DoxyCodeLine{98   state\_ |= kLayerContentChanged;}
+\DoxyCodeLine{99   HwcRect<int> rect;}
+\DoxyCodeLine{100   \mbox{\hyperlink{namespacehwcomposer_a691c500dd8ba703991673286e1920bd9}{ResetRectToRegion}}(surface\_damage, rect);}
+\DoxyCodeLine{101   \textcolor{keywordflow}{if} (rects == 1) \{}
+\DoxyCodeLine{102     \textcolor{keywordflow}{if} ((rect.top == 0) \&\& (rect.bottom == 0) \&\& (rect.left == 0) \&\&}
+\DoxyCodeLine{103         (rect.right == 0)) \{}
+\DoxyCodeLine{104       state\_ \&= ~kLayerContentChanged;}
+\DoxyCodeLine{105       state\_ \&= ~kSurfaceDamageChanged;}
+\DoxyCodeLine{106       \textcolor{keywordflow}{if} (!surface\_damage\_.empty()) \{}
+\DoxyCodeLine{107         damage\_dirty\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{108         surface\_damage\_.reset();}
+\DoxyCodeLine{109       \}}
+\DoxyCodeLine{110       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{111     \}}
+\DoxyCodeLine{112   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (rects == 0) \{}
+\DoxyCodeLine{113     rect = display\_frame\_;}
+\DoxyCodeLine{114   \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116   \textcolor{keywordflow}{if} ((surface\_damage\_.left == rect.left) \&\&}
+\DoxyCodeLine{117       (surface\_damage\_.top == rect.top) \&\&}
+\DoxyCodeLine{118       (surface\_damage\_.right == rect.right) \&\&}
+\DoxyCodeLine{119       (surface\_damage\_.bottom == rect.bottom)) \{}
+\DoxyCodeLine{120     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{121   \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123   state\_ |= kSurfaceDamageChanged;}
+\DoxyCodeLine{124   damage\_dirty\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126   surface\_damage\_ = rect;}
+\DoxyCodeLine{127 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_ab30467eafc63b3b95059ff6ca3738933}\label{structhwcomposer_1_1HwcLayer_ab30467eafc63b3b95059ff6ca3738933}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Transform@{Set\+Transform}}
+\index{Set\+Transform@{Set\+Transform}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Transform()}{SetTransform()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Transform (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{sf\+\_\+transform }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                              \{}
+\DoxyCodeLine{40   \textcolor{keywordflow}{if} (transform != transform\_) \{}
+\DoxyCodeLine{41     layer\_cache\_ |= kLayerAttributesChanged;}
+\DoxyCodeLine{42     transform\_ = transform;}
+\DoxyCodeLine{43   \}}
+\DoxyCodeLine{44 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a27744cfd952d0648168a1d28c65ff092}\label{structhwcomposer_1_1HwcLayer_a27744cfd952d0648168a1d28c65ff092}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Set\+Visible\+Region@{Set\+Visible\+Region}}
+\index{Set\+Visible\+Region@{Set\+Visible\+Region}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Visible\+Region()}{SetVisibleRegion()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwc\+Layer\+::\+Set\+Visible\+Region (\begin{DoxyParamCaption}\item[{const Hwc\+Region \&}]{visible\+\_\+region }\end{DoxyParamCaption})}
+
+A\+PI for setting visible region for this layer. The new visible region will take into effect in next Present call, by default this would be same as default frame. 
+\begin{DoxyParams}{Parameters}
+{\em visible\+\_\+region} & should contain regions of layer which are visible. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 129 of file hwclayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129                                                                \{}
+\DoxyCodeLine{130   uint32\_t rects = visible\_region.size();}
+\DoxyCodeLine{131   \textcolor{keyword}{const} HwcRect<int>\& new\_region = visible\_region.at(0);}
+\DoxyCodeLine{132   HwcRect<int> new\_visible\_rect = new\_region;}
+\DoxyCodeLine{133   state\_ |= kVisibleRegionSet;}
+\DoxyCodeLine{134   state\_ \&= ~kVisibleRegionChanged;}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   \textcolor{keywordflow}{for} (uint32\_t r = 1; r < rects; r++) \{}
+\DoxyCodeLine{137     \textcolor{keyword}{const} HwcRect<int>\& rect = visible\_region.at(r);}
+\DoxyCodeLine{138     new\_visible\_rect.left = std::min(new\_region.left, rect.left);}
+\DoxyCodeLine{139     new\_visible\_rect.top = std::min(new\_region.top, rect.top);}
+\DoxyCodeLine{140     new\_visible\_rect.right = std::max(new\_region.right, rect.right);}
+\DoxyCodeLine{141     new\_visible\_rect.bottom = std::max(new\_region.bottom, rect.bottom);}
+\DoxyCodeLine{142   \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144   \textcolor{keywordflow}{if} ((visible\_rect\_.left == new\_visible\_rect.left) \&\&}
+\DoxyCodeLine{145       (visible\_rect\_.top == new\_visible\_rect.top) \&\&}
+\DoxyCodeLine{146       (visible\_rect\_.right == new\_visible\_rect.right) \&\&}
+\DoxyCodeLine{147       (visible\_rect\_.bottom == new\_visible\_rect.bottom)) \{}
+\DoxyCodeLine{148     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{149   \}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151   state\_ |= kVisibleRegionChanged;}
+\DoxyCodeLine{152   damage\_dirty\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{153   visible\_rect\_ = new\_visible\_rect;}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155   \textcolor{keywordflow}{if} ((visible\_rect\_.top == 0) \&\& (visible\_rect\_.bottom == 0) \&\&}
+\DoxyCodeLine{156       (visible\_rect\_.left == 0) \&\& (visible\_rect\_.right == 0)) \{}
+\DoxyCodeLine{157     state\_ \&= ~kVisible;}
+\DoxyCodeLine{158   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{159     state\_ |= kVisible;}
+\DoxyCodeLine{160   \}}
+\DoxyCodeLine{161 \}}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a8bb316b15cb60543aa8339f1d11a8ae1}\label{structhwcomposer_1_1HwcLayer_a8bb316b15cb60543aa8339f1d11a8ae1}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Mosaic\+Display@{Mosaic\+Display}}
+\index{Mosaic\+Display@{Mosaic\+Display}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Mosaic\+Display}{MosaicDisplay}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay}{Mosaic\+Display}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 261 of file hwclayer.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a3e381d9464ef96b091fe38d2919fda4a}\label{structhwcomposer_1_1HwcLayer_a3e381d9464ef96b091fe38d2919fda4a}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Physical\+Display@{Physical\+Display}}
+\index{Physical\+Display@{Physical\+Display}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Physical\+Display}{PhysicalDisplay}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay}{Physical\+Display}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 260 of file hwclayer.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwcLayer_a95c8d2c73f3d42e358849aecbd0d691a}\label{structhwcomposer_1_1HwcLayer_a95c8d2c73f3d42e358849aecbd0d691a}} 
+\index{hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}!Virtual\+Display@{Virtual\+Display}}
+\index{Virtual\+Display@{Virtual\+Display}!hwcomposer\+::\+Hwc\+Layer@{hwcomposer\+::\+Hwc\+Layer}}
+\subsubsection{\texorpdfstring{Virtual\+Display}{VirtualDisplay}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay}{Virtual\+Display}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 259 of file hwclayer.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+public/\mbox{\hyperlink{hwclayer_8h}{hwclayer.\+h}}\item 
+common/core/\mbox{\hyperlink{hwclayer_8cpp}{hwclayer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,137 @@
+\hypertarget{classhwcomposer_1_1ScopedVABufferID}{}\section{hwcomposer\+:\+:Scoped\+V\+A\+Buffer\+ID Class Reference}
+\label{classhwcomposer_1_1ScopedVABufferID}\index{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}}
+
+
+{\ttfamily \#include $<$varenderer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1ScopedVABufferID_add5661b918c947ec845a2305e759493f}{Scoped\+V\+A\+Buffer\+ID}} (V\+A\+Display display)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1ScopedVABufferID_ab65a90a95ce0fd4e661086cdbad8fff9}{$\sim$\+Scoped\+V\+A\+Buffer\+ID}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1ScopedVABufferID_a180ba4428678cb4206539af1eed5193c}{Create\+Buffer}} (V\+A\+Context\+ID context, V\+A\+Buffer\+Type type, uint32\+\_\+t size, uint32\+\_\+t num, void $\ast$data)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1ScopedVABufferID_a2ecadd61dd682c9ff200d701e4e4c59f}{operator V\+A\+Buffer\+ID}} () const
+\item 
+V\+A\+Buffer\+ID \mbox{\hyperlink{classhwcomposer_1_1ScopedVABufferID_addd0a1e123031e370d1ff6e42f579132}{buffer}} () const
+\item 
+V\+A\+Buffer\+ID \& \mbox{\hyperlink{classhwcomposer_1_1ScopedVABufferID_a355ed1e666eefa3216225eab3a2dfedb}{buffer}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file varenderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1ScopedVABufferID_add5661b918c947ec845a2305e759493f}\label{classhwcomposer_1_1ScopedVABufferID_add5661b918c947ec845a2305e759493f}} 
+\index{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}!Scoped\+V\+A\+Buffer\+ID@{Scoped\+V\+A\+Buffer\+ID}}
+\index{Scoped\+V\+A\+Buffer\+ID@{Scoped\+V\+A\+Buffer\+ID}!hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}}
+\subsubsection{\texorpdfstring{Scoped\+V\+A\+Buffer\+I\+D()}{ScopedVABufferID()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Scoped\+V\+A\+Buffer\+I\+D\+::\+Scoped\+V\+A\+Buffer\+ID (\begin{DoxyParamCaption}\item[{V\+A\+Display}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file varenderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36                                       : display\_(display) \{}
+\DoxyCodeLine{37   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1ScopedVABufferID_ab65a90a95ce0fd4e661086cdbad8fff9}\label{classhwcomposer_1_1ScopedVABufferID_ab65a90a95ce0fd4e661086cdbad8fff9}} 
+\index{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}!````~Scoped\+V\+A\+Buffer\+ID@{$\sim$\+Scoped\+V\+A\+Buffer\+ID}}
+\index{````~Scoped\+V\+A\+Buffer\+ID@{$\sim$\+Scoped\+V\+A\+Buffer\+ID}!hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}}
+\subsubsection{\texorpdfstring{$\sim$\+Scoped\+V\+A\+Buffer\+I\+D()}{~ScopedVABufferID()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Scoped\+V\+A\+Buffer\+I\+D\+::$\sim$\+Scoped\+V\+A\+Buffer\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 38 of file varenderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                       \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{if} (buffer\_ != VA\_INVALID\_ID)}
+\DoxyCodeLine{40       vaDestroyBuffer(display\_, buffer\_);}
+\DoxyCodeLine{41   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1ScopedVABufferID_addd0a1e123031e370d1ff6e42f579132}\label{classhwcomposer_1_1ScopedVABufferID_addd0a1e123031e370d1ff6e42f579132}} 
+\index{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}!buffer@{buffer}}
+\index{buffer@{buffer}!hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}}
+\subsubsection{\texorpdfstring{buffer()}{buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily V\+A\+Buffer\+ID hwcomposer\+::\+Scoped\+V\+A\+Buffer\+I\+D\+::buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 54 of file varenderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                             \{}
+\DoxyCodeLine{55     \textcolor{keywordflow}{return} buffer\_;}
+\DoxyCodeLine{56   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1ScopedVABufferID_a355ed1e666eefa3216225eab3a2dfedb}\label{classhwcomposer_1_1ScopedVABufferID_a355ed1e666eefa3216225eab3a2dfedb}} 
+\index{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}!buffer@{buffer}}
+\index{buffer@{buffer}!hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}}
+\subsubsection{\texorpdfstring{buffer()}{buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily V\+A\+Buffer\+ID\& hwcomposer\+::\+Scoped\+V\+A\+Buffer\+I\+D\+::buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 58 of file varenderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                        \{}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} buffer\_;}
+\DoxyCodeLine{60   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1ScopedVABufferID_a180ba4428678cb4206539af1eed5193c}\label{classhwcomposer_1_1ScopedVABufferID_a180ba4428678cb4206539af1eed5193c}} 
+\index{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}!Create\+Buffer@{Create\+Buffer}}
+\index{Create\+Buffer@{Create\+Buffer}!hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}}
+\subsubsection{\texorpdfstring{Create\+Buffer()}{CreateBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Scoped\+V\+A\+Buffer\+I\+D\+::\+Create\+Buffer (\begin{DoxyParamCaption}\item[{V\+A\+Context\+ID}]{context,  }\item[{V\+A\+Buffer\+Type}]{type,  }\item[{uint32\+\_\+t}]{size,  }\item[{uint32\+\_\+t}]{num,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file varenderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                               \{}
+\DoxyCodeLine{45     VAStatus ret =}
+\DoxyCodeLine{46         vaCreateBuffer(display\_, context, type, size, num, data, \&buffer\_);}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} ret == VA\_STATUS\_SUCCESS ? true : \textcolor{keyword}{false};}
+\DoxyCodeLine{48   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1ScopedVABufferID_a2ecadd61dd682c9ff200d701e4e4c59f}\label{classhwcomposer_1_1ScopedVABufferID_a2ecadd61dd682c9ff200d701e4e4c59f}} 
+\index{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}!operator V\+A\+Buffer\+ID@{operator V\+A\+Buffer\+ID}}
+\index{operator V\+A\+Buffer\+ID@{operator V\+A\+Buffer\+ID}!hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID@{hwcomposer\+::\+Scoped\+V\+A\+Buffer\+ID}}
+\subsubsection{\texorpdfstring{operator V\+A\+Buffer\+I\+D()}{operator VABufferID()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Scoped\+V\+A\+Buffer\+I\+D\+::operator V\+A\+Buffer\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 50 of file varenderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                               \{}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} buffer\_;}
+\DoxyCodeLine{52   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/va/\mbox{\hyperlink{varenderer_8h}{varenderer.\+h}}\end{DoxyCompactItemize}

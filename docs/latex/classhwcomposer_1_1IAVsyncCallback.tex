@@ -1,0 +1,70 @@
+\hypertarget{classhwcomposer_1_1IAVsyncCallback}{}\section{hwcomposer\+:\+:I\+A\+Vsync\+Callback Class Reference}
+\label{classhwcomposer_1_1IAVsyncCallback}\index{hwcomposer\+::\+I\+A\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+Vsync\+Callback}}
+Inheritance diagram for hwcomposer\+:\+:I\+A\+Vsync\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1IAVsyncCallback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IAVsyncCallback_afdf960ef784e276e17e6d0775b2c9142}{I\+A\+Vsync\+Callback}} (hwf\+\_\+callback const $\ast$procs)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1IAVsyncCallback_a9ccc6eb6a50d308473716a225e320c8d}{Callback}} (uint32\+\_\+t display, int64\+\_\+t timestamp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 388 of file hwf\+\_\+alioshal.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAVsyncCallback_afdf960ef784e276e17e6d0775b2c9142}\label{classhwcomposer_1_1IAVsyncCallback_afdf960ef784e276e17e6d0775b2c9142}} 
+\index{hwcomposer\+::\+I\+A\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+Vsync\+Callback}!I\+A\+Vsync\+Callback@{I\+A\+Vsync\+Callback}}
+\index{I\+A\+Vsync\+Callback@{I\+A\+Vsync\+Callback}!hwcomposer\+::\+I\+A\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{I\+A\+Vsync\+Callback()}{IAVsyncCallback()}}
+{\footnotesize\ttfamily hwcomposer\+::\+I\+A\+Vsync\+Callback\+::\+I\+A\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{hwf\+\_\+callback const $\ast$}]{procs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 390 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{390                                              : m\_pCB(procs) \{}
+\DoxyCodeLine{391   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAVsyncCallback_a9ccc6eb6a50d308473716a225e320c8d}\label{classhwcomposer_1_1IAVsyncCallback_a9ccc6eb6a50d308473716a225e320c8d}} 
+\index{hwcomposer\+::\+I\+A\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+Vsync\+Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!hwcomposer\+::\+I\+A\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{Callback()}{Callback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+I\+A\+Vsync\+Callback\+::\+Callback (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{int64\+\_\+t}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback_a632ac6a2e13e1b387df9508507a2ed4d}{hwcomposer\+::\+Vsync\+Callback}}.
+
+
+
+Definition at line 393 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{393                                                      \{}
+\DoxyCodeLine{394     m\_pCB->vsyncEvent(m\_pCB,}
+\DoxyCodeLine{395                       display > 0 ? HWF\_DISPLAY\_EXTERNAL : HWF\_DISPLAY\_PRIMARY,}
+\DoxyCodeLine{396                       timestamp);}
+\DoxyCodeLine{397   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/alios/\mbox{\hyperlink{hwf__alioshal_8cpp}{hwf\+\_\+alioshal.\+cpp}}\end{DoxyCompactItemize}

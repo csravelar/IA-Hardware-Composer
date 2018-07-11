@@ -1,0 +1,708 @@
+\hypertarget{classhwcomposer_1_1NativeSurface}{}\section{hwcomposer\+:\+:Native\+Surface Class Reference}
+\label{classhwcomposer_1_1NativeSurface}\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+
+
+{\ttfamily \#include $<$nativesurface.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Native\+Surface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1NativeSurface}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6}{Clear\+Type}} \{ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a61ab9864bcc7860917f12c33382befbc}{k\+None}} = 0, 
+\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{k\+Full\+Clear}} = 1, 
+\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a9013ff88c3057374f48271defba26707}{k\+Partial\+Clear}} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a17e5ae7ecfd166faa21ccba1e6b03197}{Native\+Surface}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a9027ed717fedb2d2f99bc42c6bb82b70}{Native\+Surface}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a92d9adc1ade0f86e5a37a55658e2fbaa}{Native\+Surface}} (const \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} \& \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_ad293b1c21e9bc452744cde6595227433}{operator=}} (const \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} \&rhs)=delete
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_aedd0dc3037e1291937656921c97dd1a6}{$\sim$\+Native\+Surface}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a6e70cd7f3a013619235dd05934c33930}{Init}} (\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$resource\+\_\+manager, uint32\+\_\+t format, uint32\+\_\+t usage, uint64\+\_\+t modifier, bool $\ast$modifier\+\_\+succeeded, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a1fcece06f9889170f33b3b6a028e149e}{Initialize\+For\+Off\+Screen\+Rendering}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} native\+\_\+handle, \mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$resource\+\_\+manager)
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a2e3bdea36f4b2d3f655a5f6d38670d51}{Make\+Current}} ()
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_ad5004373efe783622a47ba9203d9fdcc}{Get\+Width}} () const
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0c3d4c50d2ca532db49ee4214778b264}{Get\+Height}} () const
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_ad14ba0261093321209ef08a170417d06}{Get\+Layer}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_ae063b2a36b6a7f6afbd26b7ddad97d30}{Set\+Native\+Fence}} (int32\+\_\+t fd)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_ad2dd3e317071362a6dfefe3df74d91b0}{Set\+Clear\+Surface}} (\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6}{Native\+Surface\+::\+Clear\+Type}} clear\+\_\+surface)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_ae4962a443d1967e8b8434fd145441880}{Set\+Surface\+Age}} (int age)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a8d8893395324edd2143ecb849409fee9}{Get\+Surface\+Age}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_aa949aa0e97d9d75a4a2e735cef5a0551}{Clear\+Surface}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a48ffa5457f41a7a41cf746bbd8325e92}{Is\+Partial\+Clear}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_ae9be14606ef52e79a97723c8770709da}{Set\+Plane\+Target}} (const \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&plane)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a47d68f0fa81d378f14a57d10f0e82ac9}{Reset\+Display\+Frame}} (const Hwc\+Rect$<$ int $>$ \&display\+\_\+frame)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_ab8dc5bcc4d8dc7d5529e193617ff126d}{Reset\+Source\+Crop}} (const Hwc\+Rect$<$ float $>$ \&source\+\_\+crop)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a201535c94e9fa28789482f5841064791}{Update\+Surface\+Damage}} (const Hwc\+Rect$<$ int $>$ \&currentsurface\+\_\+damage, bool force)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a27af1f56db8a926c53c93d0e2035efe9}{Reset\+Damage}} ()
+\item 
+const Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a9cfe44d16b854e232ae5869b815ca542}{Get\+Surface\+Damage}} () const
+\item 
+const Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a16a0986ac3a561ad37569b58e5e6458c}{Get\+Previous\+Surface\+Damage}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a7f123d6ace53db320cfb78cdb65a82b5}{Set\+Transform}} (uint32\+\_\+t transform)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_aade46fbf22c8eb3bdb7edccdf2257423}{Is\+Surface\+Damage\+Changed}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a852d42c61250c745ba92b486cf47e98f}{Is\+On\+Screen}} () const
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_adc54d2c153bc3b9a07620d51105ca85f}{Get\+Modifier}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\+\_\+}}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_afcf0d94e1da86afddd75e62df22a0753}{resource\+\_\+manager\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file nativesurface.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6}\label{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Clear\+Type@{Clear\+Type}}
+\index{Clear\+Type@{Clear\+Type}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Clear\+Type}{ClearType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6}{hwcomposer\+::\+Native\+Surface\+::\+Clear\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+None@{k\+None}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!k\+None@{k\+None}}}\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a61ab9864bcc7860917f12c33382befbc}\label{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a61ab9864bcc7860917f12c33382befbc}} 
+k\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Full\+Clear@{k\+Full\+Clear}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!k\+Full\+Clear@{k\+Full\+Clear}}}\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}\label{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}} 
+k\+Full\+Clear&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Partial\+Clear@{k\+Partial\+Clear}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!k\+Partial\+Clear@{k\+Partial\+Clear}}}\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a9013ff88c3057374f48271defba26707}\label{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a9013ff88c3057374f48271defba26707}} 
+k\+Partial\+Clear&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 33 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                  \{}
+\DoxyCodeLine{34     \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a61ab9864bcc7860917f12c33382befbc}{kNone}} = 0,         \textcolor{comment}{// No need to clear the buffer.}}
+\DoxyCodeLine{35     \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{kFullClear}} = 1,    \textcolor{comment}{// Clear the whole buffer.}}
+\DoxyCodeLine{36     \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a9013ff88c3057374f48271defba26707}{kPartialClear}} = 2  \textcolor{comment}{// Clear rect equal to SurfaceDamage of this layer.}}
+\DoxyCodeLine{37   \};}
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a17e5ae7ecfd166faa21ccba1e6b03197}\label{classhwcomposer_1_1NativeSurface_a17e5ae7ecfd166faa21ccba1e6b03197}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Native\+Surface@{Native\+Surface}}
+\index{Native\+Surface@{Native\+Surface}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Native\+Surface()}{NativeSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Native\+Surface\+::\+Native\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a9027ed717fedb2d2f99bc42c6bb82b70}\label{classhwcomposer_1_1NativeSurface_a9027ed717fedb2d2f99bc42c6bb82b70}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Native\+Surface@{Native\+Surface}}
+\index{Native\+Surface@{Native\+Surface}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Native\+Surface()}{NativeSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Native\+Surface\+::\+Native\+Surface (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29     : \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_afcf0d94e1da86afddd75e62df22a0753}{resource\_manager\_}}(\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}),}
+\DoxyCodeLine{30       native\_handle\_(0),}
+\DoxyCodeLine{31       width\_(width),}
+\DoxyCodeLine{32       height\_(height),}
+\DoxyCodeLine{33       clear\_surface\_(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{kFullClear}}),}
+\DoxyCodeLine{34       surface\_age\_(0) \{}
+\DoxyCodeLine{35 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a92d9adc1ade0f86e5a37a55658e2fbaa}\label{classhwcomposer_1_1NativeSurface_a92d9adc1ade0f86e5a37a55658e2fbaa}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Native\+Surface@{Native\+Surface}}
+\index{Native\+Surface@{Native\+Surface}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Native\+Surface()}{NativeSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Native\+Surface\+::\+Native\+Surface (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_aedd0dc3037e1291937656921c97dd1a6}\label{classhwcomposer_1_1NativeSurface_aedd0dc3037e1291937656921c97dd1a6}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!````~Native\+Surface@{$\sim$\+Native\+Surface}}
+\index{````~Native\+Surface@{$\sim$\+Native\+Surface}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{$\sim$\+Native\+Surface()}{~NativeSurface()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Native\+Surface\+::$\sim$\+Native\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 37 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                               \{}
+\DoxyCodeLine{38   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_afcf0d94e1da86afddd75e62df22a0753}{resource\_manager\_}} \&\& native\_handle\_) \{}
+\DoxyCodeLine{39     \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{ResourceHandle}} temp;}
+\DoxyCodeLine{40     temp.handle\_ = native\_handle\_;}
+\DoxyCodeLine{41     \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_afcf0d94e1da86afddd75e62df22a0753}{resource\_manager\_}}->\mbox{\hyperlink{classhwcomposer_1_1ResourceManager_aed72efa73f3037049b1328ea35f162b3}{MarkResourceForDeletion}}(temp, \textcolor{keyword}{false});}
+\DoxyCodeLine{42   \}}
+\DoxyCodeLine{43 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_aa949aa0e97d9d75a4a2e735cef5a0551}\label{classhwcomposer_1_1NativeSurface_aa949aa0e97d9d75a4a2e735cef5a0551}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Clear\+Surface@{Clear\+Surface}}
+\index{Clear\+Surface@{Clear\+Surface}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Clear\+Surface()}{ClearSurface()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Native\+Surface\+::\+Clear\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 88 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                             \{}
+\DoxyCodeLine{89     \textcolor{keywordflow}{return} clear\_surface\_ == \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{kFullClear}};}
+\DoxyCodeLine{90   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a0c3d4c50d2ca532db49ee4214778b264}\label{classhwcomposer_1_1NativeSurface_a0c3d4c50d2ca532db49ee4214778b264}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Get\+Height()}{GetHeight()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Native\+Surface\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 61 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                         \{}
+\DoxyCodeLine{62     \textcolor{keywordflow}{return} height\_;}
+\DoxyCodeLine{63   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_ad14ba0261093321209ef08a170417d06}\label{classhwcomposer_1_1NativeSurface_ad14ba0261093321209ef08a170417d06}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Get\+Layer@{Get\+Layer}}
+\index{Get\+Layer@{Get\+Layer}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Get\+Layer()}{GetLayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}}$\ast$ hwcomposer\+::\+Native\+Surface\+::\+Get\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 65 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                            \{}
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} \&\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}};}
+\DoxyCodeLine{67   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_adc54d2c153bc3b9a07620d51105ca85f}\label{classhwcomposer_1_1NativeSurface_adc54d2c153bc3b9a07620d51105ca85f}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Get\+Modifier@{Get\+Modifier}}
+\index{Get\+Modifier@{Get\+Modifier}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Get\+Modifier()}{GetModifier()}}
+{\footnotesize\ttfamily uint64\+\_\+t hwcomposer\+::\+Native\+Surface\+::\+Get\+Modifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 134 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134                                \{}
+\DoxyCodeLine{135     \textcolor{keywordflow}{return} modifier\_;}
+\DoxyCodeLine{136   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a16a0986ac3a561ad37569b58e5e6458c}\label{classhwcomposer_1_1NativeSurface_a16a0986ac3a561ad37569b58e5e6458c}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Get\+Previous\+Surface\+Damage@{Get\+Previous\+Surface\+Damage}}
+\index{Get\+Previous\+Surface\+Damage@{Get\+Previous\+Surface\+Damage}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Get\+Previous\+Surface\+Damage()}{GetPreviousSurfaceDamage()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$int$>$\& hwcomposer\+::\+Native\+Surface\+::\+Get\+Previous\+Surface\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 117 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                                                        \{}
+\DoxyCodeLine{118     \textcolor{keywordflow}{return} previous\_damage\_;}
+\DoxyCodeLine{119   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a8d8893395324edd2143ecb849409fee9}\label{classhwcomposer_1_1NativeSurface_a8d8893395324edd2143ecb849409fee9}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Get\+Surface\+Age@{Get\+Surface\+Age}}
+\index{Get\+Surface\+Age@{Get\+Surface\+Age}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Get\+Surface\+Age()}{GetSurfaceAge()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Native\+Surface\+::\+Get\+Surface\+Age (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 84 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                             \{}
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} surface\_age\_;}
+\DoxyCodeLine{86   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a9cfe44d16b854e232ae5869b815ca542}\label{classhwcomposer_1_1NativeSurface_a9cfe44d16b854e232ae5869b815ca542}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Get\+Surface\+Damage@{Get\+Surface\+Damage}}
+\index{Get\+Surface\+Damage@{Get\+Surface\+Damage}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Get\+Surface\+Damage()}{GetSurfaceDamage()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$int$>$\& hwcomposer\+::\+Native\+Surface\+::\+Get\+Surface\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 112 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{112                                                \{}
+\DoxyCodeLine{113     \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ac2065d8c195e568d7f9db77854762a7e}{GetSurfaceDamage}}();}
+\DoxyCodeLine{114   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_ad5004373efe783622a47ba9203d9fdcc}\label{classhwcomposer_1_1NativeSurface_ad5004373efe783622a47ba9203d9fdcc}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Get\+Width@{Get\+Width}}
+\index{Get\+Width@{Get\+Width}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Get\+Width()}{GetWidth()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Native\+Surface\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 57 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                        \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} width\_;}
+\DoxyCodeLine{59   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a6e70cd7f3a013619235dd05934c33930}\label{classhwcomposer_1_1NativeSurface_a6e70cd7f3a013619235dd05934c33930}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Native\+Surface\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{resource\+\_\+manager,  }\item[{uint32\+\_\+t}]{format,  }\item[{uint32\+\_\+t}]{usage,  }\item[{uint64\+\_\+t}]{modifier,  }\item[{bool $\ast$}]{modifier\+\_\+succeeded,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                                    \{}
+\DoxyCodeLine{49   fb\_manager\_ = frame\_buffer\_manager;}
+\DoxyCodeLine{50   \textcolor{keyword}{const} NativeBufferHandler *handler =}
+\DoxyCodeLine{51       resource\_manager->GetNativeBufferHandler();}
+\DoxyCodeLine{52   \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_afcf0d94e1da86afddd75e62df22a0753}{resource\_manager\_}} = resource\_manager;}
+\DoxyCodeLine{53   \mbox{\hyperlink{structyalloc__handle}{HWCNativeHandle}} native\_handle = 0;}
+\DoxyCodeLine{54   *modifier\_succeeded = \textcolor{keyword}{false};}
+\DoxyCodeLine{55   \textcolor{keywordtype}{bool} modifier\_used = \textcolor{keyword}{false};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \textcolor{keywordflow}{if} (usage == hwcomposer::kLayerVideo) \{}
+\DoxyCodeLine{58     modifier = 0;}
+\DoxyCodeLine{59   \}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61   handler->CreateBuffer(width\_, height\_, format, \&native\_handle, usage,}
+\DoxyCodeLine{62                         \&modifier\_used, modifier);}
+\DoxyCodeLine{63   \textcolor{keywordflow}{if} (!native\_handle) \{}
+\DoxyCodeLine{64     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to create buffer\(\backslash\)n"});}
+\DoxyCodeLine{65     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{66   \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   InitializeLayer(native\_handle);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70   \textcolor{keywordflow}{if} (modifier\_used \&\& modifier > 0) \{}
+\DoxyCodeLine{71     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a92e6edaec1053b6a2c015fe3f7c400c0}{GetBuffer}}()->\mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_ab7f56dcd75f7724d8b1b2ca384f91312}{CreateFrameBufferWithModifier}}(modifier)) \{}
+\DoxyCodeLine{72       \mbox{\hyperlink{alios_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}{WTRACE}}(\textcolor{stringliteral}{"FB creation failed with modifier, removing modifier usage\(\backslash\)n"});}
+\DoxyCodeLine{73       \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{ResourceHandle}} temp;}
+\DoxyCodeLine{74       temp.handle\_ = native\_handle;}
+\DoxyCodeLine{75       \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_afcf0d94e1da86afddd75e62df22a0753}{resource\_manager\_}}->\mbox{\hyperlink{classhwcomposer_1_1ResourceManager_aed72efa73f3037049b1328ea35f162b3}{MarkResourceForDeletion}}(temp, \textcolor{keyword}{false});}
+\DoxyCodeLine{76       native\_handle = 0;}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78       handler->CreateBuffer(width\_, height\_, format, \&native\_handle, usage, 0);}
+\DoxyCodeLine{79       \textcolor{keywordflow}{if} (!native\_handle) \{}
+\DoxyCodeLine{80         \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to create buffer\(\backslash\)n"});}
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{82       \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84       InitializeLayer(native\_handle);}
+\DoxyCodeLine{85     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{86       *modifier\_succeeded = \textcolor{keyword}{true};}
+\DoxyCodeLine{87     \}}
+\DoxyCodeLine{88   \}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90   modifier\_ = modifier;}
+\DoxyCodeLine{91   native\_handle\_ = native\_handle;}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{94 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a1fcece06f9889170f33b3b6a028e149e}\label{classhwcomposer_1_1NativeSurface_a1fcece06f9889170f33b3b6a028e149e}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Initialize\+For\+Off\+Screen\+Rendering@{Initialize\+For\+Off\+Screen\+Rendering}}
+\index{Initialize\+For\+Off\+Screen\+Rendering@{Initialize\+For\+Off\+Screen\+Rendering}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Initialize\+For\+Off\+Screen\+Rendering()}{InitializeForOffScreenRendering()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Native\+Surface\+::\+Initialize\+For\+Off\+Screen\+Rendering (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{native\+\_\+handle,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{resource\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 96 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97                                                                       \{}
+\DoxyCodeLine{98   \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_afcf0d94e1da86afddd75e62df22a0753}{resource\_manager\_}} = resource\_manager;}
+\DoxyCodeLine{99   InitializeLayer(native\_handle);}
+\DoxyCodeLine{100   \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ab72c90d71d1cf45d90cd176c68b0a2e7}{SetSourceCrop}}(HwcRect<float>(0, 0, width\_, height\_));}
+\DoxyCodeLine{101   \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_adea7a64df0a33bc0139c3773eff82ef5}{SetDisplayFrame}}(HwcRect<int>(0, 0, width\_, height\_));}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{104 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a852d42c61250c745ba92b486cf47e98f}\label{classhwcomposer_1_1NativeSurface_a852d42c61250c745ba92b486cf47e98f}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Is\+On\+Screen@{Is\+On\+Screen}}
+\index{Is\+On\+Screen@{Is\+On\+Screen}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Is\+On\+Screen()}{IsOnScreen()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Native\+Surface\+::\+Is\+On\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 130 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130                           \{}
+\DoxyCodeLine{131     \textcolor{keywordflow}{return} on\_screen\_;}
+\DoxyCodeLine{132   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a48ffa5457f41a7a41cf746bbd8325e92}\label{classhwcomposer_1_1NativeSurface_a48ffa5457f41a7a41cf746bbd8325e92}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Is\+Partial\+Clear@{Is\+Partial\+Clear}}
+\index{Is\+Partial\+Clear@{Is\+Partial\+Clear}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Is\+Partial\+Clear()}{IsPartialClear()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Native\+Surface\+::\+Is\+Partial\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 92 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{92                               \{}
+\DoxyCodeLine{93     \textcolor{keywordflow}{return} clear\_surface\_ == \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a9013ff88c3057374f48271defba26707}{kPartialClear}};}
+\DoxyCodeLine{94   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_aade46fbf22c8eb3bdb7edccdf2257423}\label{classhwcomposer_1_1NativeSurface_aade46fbf22c8eb3bdb7edccdf2257423}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Is\+Surface\+Damage\+Changed@{Is\+Surface\+Damage\+Changed}}
+\index{Is\+Surface\+Damage\+Changed@{Is\+Surface\+Damage\+Changed}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Is\+Surface\+Damage\+Changed()}{IsSurfaceDamageChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Native\+Surface\+::\+Is\+Surface\+Damage\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 132 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{132                                                  \{}
+\DoxyCodeLine{133   \textcolor{keywordflow}{return} damage\_changed\_;}
+\DoxyCodeLine{134 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a2e3bdea36f4b2d3f655a5f6d38670d51}\label{classhwcomposer_1_1NativeSurface_a2e3bdea36f4b2d3f655a5f6d38670d51}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Make\+Current@{Make\+Current}}
+\index{Make\+Current@{Make\+Current}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Make\+Current()}{MakeCurrent()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Surface\+::\+Make\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1GLSurface_a5d2720365cbfe670344bc74831a7895a}{hwcomposer\+::\+G\+L\+Surface}}, and \mbox{\hyperlink{classhwcomposer_1_1VKSurface_a4df93ef0688ea34a96557da2ad411f53}{hwcomposer\+::\+V\+K\+Surface}}.
+
+
+
+Definition at line 53 of file nativesurface.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                              \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{55   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_ad293b1c21e9bc452744cde6595227433}\label{classhwcomposer_1_1NativeSurface_ad293b1c21e9bc452744cde6595227433}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}}\& hwcomposer\+::\+Native\+Surface\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a27af1f56db8a926c53c93d0e2035efe9}\label{classhwcomposer_1_1NativeSurface_a27af1f56db8a926c53c93d0e2035efe9}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Reset\+Damage@{Reset\+Damage}}
+\index{Reset\+Damage@{Reset\+Damage}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Reset\+Damage()}{ResetDamage()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+Surface\+::\+Reset\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 207 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{207                                 \{}
+\DoxyCodeLine{208   reset\_damage\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{209   previous\_damage\_ = \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ac2065d8c195e568d7f9db77854762a7e}{GetSurfaceDamage}}();}
+\DoxyCodeLine{210   damage\_changed\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{211 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a47d68f0fa81d378f14a57d10f0e82ac9}\label{classhwcomposer_1_1NativeSurface_a47d68f0fa81d378f14a57d10f0e82ac9}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Reset\+Display\+Frame@{Reset\+Display\+Frame}}
+\index{Reset\+Display\+Frame@{Reset\+Display\+Frame}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Reset\+Display\+Frame()}{ResetDisplayFrame()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+Surface\+::\+Reset\+Display\+Frame (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ int $>$ \&}]{display\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Definition at line 151 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{151                                                                        \{}
+\DoxyCodeLine{152   \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_adea7a64df0a33bc0139c3773eff82ef5}{SetDisplayFrame}}(display\_frame);}
+\DoxyCodeLine{153 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_ab8dc5bcc4d8dc7d5529e193617ff126d}\label{classhwcomposer_1_1NativeSurface_ab8dc5bcc4d8dc7d5529e193617ff126d}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Reset\+Source\+Crop@{Reset\+Source\+Crop}}
+\index{Reset\+Source\+Crop@{Reset\+Source\+Crop}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Reset\+Source\+Crop()}{ResetSourceCrop()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+Surface\+::\+Reset\+Source\+Crop (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ float $>$ \&}]{source\+\_\+crop }\end{DoxyParamCaption})}
+
+
+
+Definition at line 155 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{155                                                                      \{}
+\DoxyCodeLine{156   \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ab72c90d71d1cf45d90cd176c68b0a2e7}{SetSourceCrop}}(source\_crop);}
+\DoxyCodeLine{157 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_ad2dd3e317071362a6dfefe3df74d91b0}\label{classhwcomposer_1_1NativeSurface_ad2dd3e317071362a6dfefe3df74d91b0}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Set\+Clear\+Surface@{Set\+Clear\+Surface}}
+\index{Set\+Clear\+Surface@{Set\+Clear\+Surface}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Set\+Clear\+Surface()}{SetClearSurface()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+Surface\+::\+Set\+Clear\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6}{Native\+Surface\+::\+Clear\+Type}}}]{clear\+\_\+surface }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110                                                            \{}
+\DoxyCodeLine{111   \textcolor{keywordflow}{if} (clear\_surface\_ != clear\_surface) \{}
+\DoxyCodeLine{112     clear\_surface\_ = clear\_surface;}
+\DoxyCodeLine{113     \textcolor{keywordflow}{if} (clear\_surface\_ != \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a61ab9864bcc7860917f12c33382befbc}{kNone}}) \{}
+\DoxyCodeLine{114       damage\_changed\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116   \}}
+\DoxyCodeLine{117 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_ae063b2a36b6a7f6afbd26b7ddad97d30}\label{classhwcomposer_1_1NativeSurface_ae063b2a36b6a7f6afbd26b7ddad97d30}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Set\+Native\+Fence@{Set\+Native\+Fence}}
+\index{Set\+Native\+Fence@{Set\+Native\+Fence}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Set\+Native\+Fence()}{SetNativeFence()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+Surface\+::\+Set\+Native\+Fence (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 106 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106                                              \{}
+\DoxyCodeLine{107   \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ab6058186fdd91bd43be0abfd37e8ee97}{SetAcquireFence}}(fd);}
+\DoxyCodeLine{108 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_ae9be14606ef52e79a97723c8770709da}\label{classhwcomposer_1_1NativeSurface_ae9be14606ef52e79a97723c8770709da}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Set\+Plane\+Target@{Set\+Plane\+Target}}
+\index{Set\+Plane\+Target@{Set\+Plane\+Target}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Set\+Plane\+Target()}{SetPlaneTarget()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+Surface\+::\+Set\+Plane\+Target (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&}]{plane }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{136                                                                  \{}
+\DoxyCodeLine{137   HwcRect<int> \&current\_damage = \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ac2065d8c195e568d7f9db77854762a7e}{GetSurfaceDamage}}();}
+\DoxyCodeLine{138   \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a03a621f753c088c1bd25973adc039def}{GetDisplayFrame}}(), current\_damage);}
+\DoxyCodeLine{139   \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(plane.GetDisplayFrame(), current\_damage);}
+\DoxyCodeLine{140   previous\_damage\_ = current\_damage;}
+\DoxyCodeLine{141   previous\_nc\_damage\_ = current\_damage;}
+\DoxyCodeLine{142   clear\_surface\_ = \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{kFullClear}};}
+\DoxyCodeLine{143   damage\_changed\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{144   on\_screen\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{145   surface\_age\_ = 0;}
+\DoxyCodeLine{146   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a92e6edaec1053b6a2c015fe3f7c400c0}{GetBuffer}}()->\mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a9860269bb8712eee5c7c4ca1c8846e9a}{GetFb}}() == 0) \{}
+\DoxyCodeLine{147     \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a92e6edaec1053b6a2c015fe3f7c400c0}{GetBuffer}}()->\mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_ac680ba90c1b51512ad7c0b2a6483b39c}{CreateFrameBuffer}}();}
+\DoxyCodeLine{148   \}}
+\DoxyCodeLine{149 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_ae4962a443d1967e8b8434fd145441880}\label{classhwcomposer_1_1NativeSurface_ae4962a443d1967e8b8434fd145441880}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Set\+Surface\+Age@{Set\+Surface\+Age}}
+\index{Set\+Surface\+Age@{Set\+Surface\+Age}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Set\+Surface\+Age()}{SetSurfaceAge()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+Surface\+::\+Set\+Surface\+Age (\begin{DoxyParamCaption}\item[{int}]{age }\end{DoxyParamCaption})}
+
+
+
+Definition at line 123 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{123                                            \{}
+\DoxyCodeLine{124   surface\_age\_ = value;}
+\DoxyCodeLine{125   \textcolor{keywordflow}{if} (surface\_age\_ >= 0) \{}
+\DoxyCodeLine{126     on\_screen\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{127   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{128     on\_screen\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{129   \}}
+\DoxyCodeLine{130 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a7f123d6ace53db320cfb78cdb65a82b5}\label{classhwcomposer_1_1NativeSurface_a7f123d6ace53db320cfb78cdb65a82b5}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Set\+Transform@{Set\+Transform}}
+\index{Set\+Transform@{Set\+Transform}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Set\+Transform()}{SetTransform()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+Surface\+::\+Set\+Transform (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{transform }\end{DoxyParamCaption})}
+
+
+
+Definition at line 119 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119                                                    \{}
+\DoxyCodeLine{120   \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a531c1e127f6f5d5ea7df1eb438f116fc}{SetTransform}}(transform);}
+\DoxyCodeLine{121 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a201535c94e9fa28789482f5841064791}\label{classhwcomposer_1_1NativeSurface_a201535c94e9fa28789482f5841064791}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!Update\+Surface\+Damage@{Update\+Surface\+Damage}}
+\index{Update\+Surface\+Damage@{Update\+Surface\+Damage}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{Update\+Surface\+Damage()}{UpdateSurfaceDamage()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+Surface\+::\+Update\+Surface\+Damage (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ int $>$ \&}]{currentsurface\+\_\+damage,  }\item[{bool}]{force }\end{DoxyParamCaption})}
+
+
+
+Definition at line 159 of file nativesurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{160                                                            \{}
+\DoxyCodeLine{161   HwcRect<int> current\_damage = currentsurface\_damage;}
+\DoxyCodeLine{162   \textcolor{keywordflow}{if} (current\_damage.right > width\_) \{}
+\DoxyCodeLine{163     current\_damage.right = width\_;}
+\DoxyCodeLine{164   \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166   \textcolor{keywordflow}{if} (current\_damage.bottom > height\_) \{}
+\DoxyCodeLine{167     current\_damage.bottom = height\_;}
+\DoxyCodeLine{168   \}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170   HwcRect<int> \&surface\_damage = \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}{layer\_}}.\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ac2065d8c195e568d7f9db77854762a7e}{GetSurfaceDamage}}();}
+\DoxyCodeLine{171   \textcolor{keywordflow}{if} (reset\_damage\_) \{}
+\DoxyCodeLine{172     reset\_damage\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{173     surface\_damage.reset();}
+\DoxyCodeLine{174   \}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176   \textcolor{keywordflow}{if} (surface\_damage.empty()) \{}
+\DoxyCodeLine{177     surface\_damage = current\_damage;}
+\DoxyCodeLine{178     damage\_changed\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180     \textcolor{keywordflow}{if} (!surface\_damage.empty()) \{}
+\DoxyCodeLine{181       \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(previous\_nc\_damage\_, surface\_damage);}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183       previous\_nc\_damage\_ = current\_damage;}
+\DoxyCodeLine{184     \}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186     \textcolor{keywordflow}{if} (!force \&\& (previous\_damage\_ == surface\_damage))}
+\DoxyCodeLine{187       damage\_changed\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{190   \}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192   \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(current\_damage, previous\_nc\_damage\_);}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194   \textcolor{keywordflow}{if} (current\_damage == surface\_damage) \{}
+\DoxyCodeLine{195     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{196   \}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198   \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(current\_damage, surface\_damage);}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200   \textcolor{keywordflow}{if} (!damage\_changed\_) \{}
+\DoxyCodeLine{201     damage\_changed\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{202     \textcolor{keywordflow}{if} (!force \&\& (previous\_damage\_ == surface\_damage))}
+\DoxyCodeLine{203       damage\_changed\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{204   \}}
+\DoxyCodeLine{205 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}\label{classhwcomposer_1_1NativeSurface_a4e045387083e61724dbccf9a03df6c4f}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!layer\+\_\+@{layer\+\_\+}}
+\index{layer\+\_\+@{layer\+\_\+}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{layer\+\_\+}{layer\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} hwcomposer\+::\+Native\+Surface\+::layer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 139 of file nativesurface.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeSurface_afcf0d94e1da86afddd75e62df22a0753}\label{classhwcomposer_1_1NativeSurface_afcf0d94e1da86afddd75e62df22a0753}} 
+\index{hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}!resource\+\_\+manager\+\_\+@{resource\+\_\+manager\+\_\+}}
+\index{resource\+\_\+manager\+\_\+@{resource\+\_\+manager\+\_\+}!hwcomposer\+::\+Native\+Surface@{hwcomposer\+::\+Native\+Surface}}
+\subsubsection{\texorpdfstring{resource\+\_\+manager\+\_\+}{resource\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}}$\ast$ hwcomposer\+::\+Native\+Surface\+::resource\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 140 of file nativesurface.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/\mbox{\hyperlink{nativesurface_8h}{nativesurface.\+h}}\item 
+common/compositor/\mbox{\hyperlink{nativesurface_8cpp}{nativesurface.\+cpp}}\end{DoxyCompactItemize}

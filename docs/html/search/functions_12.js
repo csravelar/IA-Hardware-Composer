@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['unflatten',['unflatten',['../classLogEntry.html#ae5b14d452a6f948ed9a00a5446d5aa1b',1,'LogEntry']]],
+  ['unflattenfrombuffer',['unflattenFromBuffer',['../logentry_8h.html#a5684e7020dd011489e425f87e9d6be92',1,'logentry.h']]],
+  ['unlock',['unlock',['../classhwcomposer_1_1SpinLock.html#ae5cf624b4f0ec710833ce44e945b85d7',1,'hwcomposer::SpinLock']]],
+  ['unmap',['UnMap',['../classhwcomposer_1_1YallocBufferHandler.html#aea0fe826446e533862bea12e882c59ba',1,'hwcomposer::YallocBufferHandler::UnMap()'],['../classhwcomposer_1_1Gralloc1BufferHandler.html#a147ec425ec0fda400f1d4dd5c60764d9',1,'hwcomposer::Gralloc1BufferHandler::UnMap()'],['../classhwcomposer_1_1GbmBufferHandler.html#af26a61bbdd91d36780e41b406e8b8dd9',1,'hwcomposer::GbmBufferHandler::UnMap()'],['../classhwcomposer_1_1NativeBufferHandler.html#ae0da63bfef3f8342460fa1a958f8359c',1,'hwcomposer::NativeBufferHandler::UnMap()']]],
+  ['unpack',['unpack',['../classhwcomposer_1_1AbstractLogWrite.html#a4888d603916411aed97cbab06cdabbad',1,'hwcomposer::AbstractLogWrite']]],
+  ['unregisterlistener',['UnregisterListener',['../classandroid_1_1HwcService.html#a8da7d6a6c098ab6334308a94c9508e84',1,'android::HwcService']]],
+  ['updatedamage',['UpdateDamage',['../classhwcomposer_1_1DisplayPlaneState.html#a49ce8c1f129155876a310a60a8609fae',1,'hwcomposer::DisplayPlaneState']]],
+  ['updatedisplayconfig',['UpdateDisplayConfig',['../classhwcomposer_1_1DrmDisplay.html#aa235de1fc4a01177e1afea36d4554870',1,'hwcomposer::DrmDisplay::UpdateDisplayConfig()'],['../classhwcomposer_1_1PhysicalDisplay.html#aa3cb8537967c34dce7e8ba7762cbd48c',1,'hwcomposer::PhysicalDisplay::UpdateDisplayConfig()']]],
+  ['updatelayerpixeldata',['UpdateLayerPixelData',['../classhwcomposer_1_1PixelUploader.html#ae2154e6039f703b8ce95ac3ffe8e8c8b',1,'hwcomposer::PixelUploader']]],
+  ['updatepowermode',['UpdatePowerMode',['../classhwcomposer_1_1LogicalDisplayManager.html#a8a297a2d1b94f5db2e3cf0b209abbecd',1,'hwcomposer::LogicalDisplayManager']]],
+  ['updateproperties',['UpdateProperties',['../classhwcomposer_1_1DrmPlane.html#a50a1d74a0acdd8c4b213733f387fa695',1,'hwcomposer::DrmPlane']]],
+  ['updatescalingratio',['UpdateScalingRatio',['../classhwcomposer_1_1LogicalDisplay.html#ad4813941543f9765790888d7e7c6865f',1,'hwcomposer::LogicalDisplay::UpdateScalingRatio()'],['../classhwcomposer_1_1MosaicDisplay.html#aa0d5befb882537555f4476130863c27c',1,'hwcomposer::MosaicDisplay::UpdateScalingRatio()'],['../classhwcomposer_1_1NestedDisplay.html#a0eb08cdb0c39587a72021ff945d33b72',1,'hwcomposer::NestedDisplay::UpdateScalingRatio()'],['../classhwcomposer_1_1DisplayQueue.html#af7a7db40de2431b949dc66e757983fea',1,'hwcomposer::DisplayQueue::UpdateScalingRatio()'],['../classhwcomposer_1_1NativeDisplay.html#abfad592c2a5e956760c194fa7831171c',1,'hwcomposer::NativeDisplay::UpdateScalingRatio()'],['../classhwcomposer_1_1PhysicalDisplay.html#a58541ff74976131b84a4dac060a48c45',1,'hwcomposer::PhysicalDisplay::UpdateScalingRatio()']]],
+  ['updatesurfacedamage',['UpdateSurfaceDamage',['../classhwcomposer_1_1NativeSurface.html#a201535c94e9fa28789482f5841064791',1,'hwcomposer::NativeSurface']]],
+  ['updatevsynccontrol',['UpdateVSyncControl',['../classhwcomposer_1_1LogicalDisplayManager.html#aa3d7e2fdfaf389a38dc07861b980b81b',1,'hwcomposer::LogicalDisplayManager']]],
+  ['uploaddone',['UploadDone',['../classhwcomposer_1_1IAHWC_1_1IAHWCLayer.html#a70158d804e3bf021d32847ffaa33d98d',1,'hwcomposer::IAHWC::IAHWCLayer::UploadDone()'],['../classhwcomposer_1_1PixelUploaderLayerCallback.html#a3234bfd4e803b50e8f41cb53ff430559',1,'hwcomposer::PixelUploaderLayerCallback::UploadDone()']]],
+  ['useplanescalar',['UsePlaneScalar',['../classhwcomposer_1_1DisplayPlaneState.html#aa09162c79c85636721823091e7af9f66',1,'hwcomposer::DisplayPlaneState']]],
+  ['useprogram',['UseProgram',['../classhwcomposer_1_1GLProgram.html#a59b867819bd92a020986adf4da964892',1,'hwcomposer::GLProgram::UseProgram()'],['../classhwcomposer_1_1VKProgram.html#a072cd6d43e404500c842cf120e431c52',1,'hwcomposer::VKProgram::UseProgram()']]]
+];

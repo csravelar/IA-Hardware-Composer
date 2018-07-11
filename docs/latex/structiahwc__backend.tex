@@ -1,0 +1,557 @@
+\hypertarget{structiahwc__backend}{}\section{iahwc\+\_\+backend Struct Reference}
+\label{structiahwc__backend}\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct weston\+\_\+backend \mbox{\hyperlink{structiahwc__backend_ae18b2807a275166da755b8d581fed9df}{base}}
+\item 
+struct weston\+\_\+compositor $\ast$ \mbox{\hyperlink{structiahwc__backend_aff09ba1b906f8c90ab72d6ea9e2604d1}{compositor}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a6a0009d570fc041f403dee1e0fd68cf9}{iahwc\+\_\+module\+\_\+t}} $\ast$ \mbox{\hyperlink{structiahwc__backend_a2461d5cf72f5c1a53021d8a0cfc13ced}{iahwc\+\_\+module}}
+\item 
+\mbox{\hyperlink{iahwc_8h_aa44e63a48d7c328d160f28888a6b3edd}{iahwc\+\_\+device\+\_\+t}} $\ast$ \mbox{\hyperlink{structiahwc__backend_a51a72ed97e57edb8d9ac90a0331cd5c4}{iahwc\+\_\+device}}
+\item 
+struct udev $\ast$ \mbox{\hyperlink{structiahwc__backend_abeae3866ace09fded61e453b79f65bb3}{udev}}
+\item 
+struct wl\+\_\+event\+\_\+source $\ast$ \mbox{\hyperlink{structiahwc__backend_af61090e88d7d5da92836b2e8ca24e200}{iahwc\+\_\+source}}
+\item 
+struct udev\+\_\+monitor $\ast$ \mbox{\hyperlink{structiahwc__backend_ac719de9c1f60ef6a7467146430f5f017}{udev\+\_\+monitor}}
+\item 
+struct wl\+\_\+event\+\_\+source $\ast$ \mbox{\hyperlink{structiahwc__backend_aa0eec87be32613771a08de5b9db049ed}{udev\+\_\+iahwc\+\_\+source}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>int \mbox{\hyperlink{structiahwc__backend_ab40e91d97ef75d0dfcedf72629ab9e41}{id}}\\
+\>int \mbox{\hyperlink{structiahwc__backend_ab041d01c689a974d72c2515470c3c441}{fd}}\\
+\>char $\ast$ \mbox{\hyperlink{structiahwc__backend_af34ed10fa4d2996a450c37e4337f111b}{filename}}\\
+\} \mbox{\hyperlink{structiahwc__backend_a1a0cf789154c92044ad8ac724258ea26}{iahwc}}\\
+
+\end{tabbing}\item 
+struct gbm\+\_\+device $\ast$ \mbox{\hyperlink{structiahwc__backend_a7e7a9ad912e8a70a7e87a6c571583953}{gbm}}
+\item 
+struct wl\+\_\+listener \mbox{\hyperlink{structiahwc__backend_a12f886ff09a8cbe3c0e59537cc17c237}{session\+\_\+listener}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structiahwc__backend_a983b85b4da49b9cfaa8c2bb2d1a96660}{gbm\+\_\+format}}
+\item 
+\mbox{\hyperlink{iahwc_8h_ac94a67ed01b360e5d07e47e73666d01a}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+D\+I\+S\+P\+L\+A\+YS}} \mbox{\hyperlink{structiahwc__backend_a6ee376e76dc4568bba993f155a977bd5}{iahwc\+\_\+get\+\_\+num\+\_\+displays}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a6cf69c9a3a26fbdf5fec62d16485e5cf}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} \mbox{\hyperlink{structiahwc__backend_a0a12d7395fba844cdfd4ffc2093e80fe}{iahwc\+\_\+register\+\_\+callback}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a79bdf92b174300d2af098db065a6f0fd}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+I\+N\+FO}} \mbox{\hyperlink{structiahwc__backend_a85bf879c1fbd6ad3c4b60093fd81fd8f}{iahwc\+\_\+get\+\_\+display\+\_\+info}}
+\item 
+\mbox{\hyperlink{iahwc_8h_ad2adbed7924879769d74abf89313f6d6}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+N\+A\+ME}} \mbox{\hyperlink{structiahwc__backend_acd2af93ffe7dd200b432b95e9f74552e}{iahwc\+\_\+get\+\_\+display\+\_\+name}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a2dfc704af6f663d2fdec94baa5192687}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+GS}} \mbox{\hyperlink{structiahwc__backend_a8c8b683d490c99df7dbd5f0080cb7728}{iahwc\+\_\+get\+\_\+display\+\_\+configs}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a3f83a3da3341f6a8f0379f326cd909b6}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+E\+T\+\_\+\+G\+A\+M\+MA}} \mbox{\hyperlink{structiahwc__backend_a7788f472f5cdadb4dc8e620eadfd264d}{iahwc\+\_\+set\+\_\+display\+\_\+gamma}}
+\item 
+\mbox{\hyperlink{iahwc_8h_afcb6a612f77fca2fc5d6f1c80d8e2f78}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+F\+IG}} \mbox{\hyperlink{structiahwc__backend_abe716daeccdcb10684aa103a5f8d0f7c}{iahwc\+\_\+set\+\_\+display\+\_\+config}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a6038ea0f083ac033a6891bbcc4de917b}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+IG}} \mbox{\hyperlink{structiahwc__backend_af74cf4aa921a9fd29fa9af0b705e8dcb}{iahwc\+\_\+get\+\_\+display\+\_\+config}}
+\item 
+\mbox{\hyperlink{iahwc_8h_af6ed4d8004aabdfa73e634604204b186}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+E\+T\+\_\+\+P\+O\+W\+E\+R\+\_\+\+M\+O\+DE}} \mbox{\hyperlink{structiahwc__backend_adf78fcd106a4edfb0192d013f7401c6e}{iahwc\+\_\+display\+\_\+set\+\_\+power\+\_\+mode}}
+\item 
+\mbox{\hyperlink{iahwc_8h_aa17514d93b69c9a54c9d82ecf0d11a62}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+L\+L\+\_\+\+L\+A\+Y\+E\+RS}} \mbox{\hyperlink{structiahwc__backend_a646d3bce546d9b5c350e72ae15e26873}{iahwc\+\_\+display\+\_\+clear\+\_\+all\+\_\+layers}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a1415d2bd6d7268e5a19569bea1253d53}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+P\+R\+E\+S\+E\+N\+T\+\_\+\+D\+I\+S\+P\+L\+AY}} \mbox{\hyperlink{structiahwc__backend_a88fa0cf8eac2b62782be05e11116658e}{iahwc\+\_\+present\+\_\+display}}
+\item 
+\mbox{\hyperlink{iahwc_8h_af4834e97f88b6d3621d46d3ae1886795}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+O\+V\+E\+R\+L\+A\+Y\+\_\+\+U\+S\+A\+GE}} \mbox{\hyperlink{structiahwc__backend_abaad0b59fa72161793343346912aaf0f}{iahwc\+\_\+disable\+\_\+overlay\+\_\+usage}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a4cf034c28a745167ba7ca2c8a6440e6a}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+O\+V\+E\+R\+L\+A\+Y\+\_\+\+U\+S\+A\+GE}} \mbox{\hyperlink{structiahwc__backend_acfdc89ce3877a820441c8268159bbf00}{iahwc\+\_\+enable\+\_\+overlay\+\_\+usage}}
+\item 
+\mbox{\hyperlink{iahwc_8h_ac4ba2d58145583caa8d4f483c38a9ca3}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+L\+A\+Y\+ER}} \mbox{\hyperlink{structiahwc__backend_aa2c44d21d4005027a84fc589791ef7c0}{iahwc\+\_\+create\+\_\+layer}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a258e5369457dcb3860d3ce84b35eaf2a}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+\_\+\+L\+A\+Y\+ER}} \mbox{\hyperlink{structiahwc__backend_ada814727f58788eacd9410ab005b8f76}{iahwc\+\_\+destroy\+\_\+layer}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a0b77b3ec5acd37ce148cf7e50edfc5cc}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+BO}} \mbox{\hyperlink{structiahwc__backend_ab926a60c3459282236e606c015eec784}{iahwc\+\_\+layer\+\_\+set\+\_\+bo}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a1e1e576efc77f032d0550357bb0d98f1}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+R\+A\+W\+\_\+\+P\+I\+X\+E\+L\+\_\+\+D\+A\+TA}} \mbox{\hyperlink{structiahwc__backend_a21bf458ddb692a832ebae333b1cd77e3}{iahwc\+\_\+layer\+\_\+set\+\_\+raw\+\_\+pixel\+\_\+data}}
+\item 
+\mbox{\hyperlink{iahwc_8h_ac7b199c17ecff5d053dfdfae361b1bbe}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+C\+R\+OP}} \mbox{\hyperlink{structiahwc__backend_a9b4abeb6617a115f1679f919952906bd}{iahwc\+\_\+layer\+\_\+set\+\_\+source\+\_\+crop}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a118f1525809f1ef328dd5688df041e35}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+F\+R\+A\+ME}} \mbox{\hyperlink{structiahwc__backend_a6826b4e3cd481f2e44bcfc0f4e2902b7}{iahwc\+\_\+layer\+\_\+set\+\_\+display\+\_\+frame}}
+\item 
+\mbox{\hyperlink{iahwc_8h_adcfd825452e18516d0fa2e4ff3925c93}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+S\+U\+R\+F\+A\+C\+E\+\_\+\+D\+A\+M\+A\+GE}} \mbox{\hyperlink{structiahwc__backend_aaf78efc58c573fe0d579f7e94cdf6c1f}{iahwc\+\_\+layer\+\_\+set\+\_\+surface\+\_\+damage}}
+\item 
+\mbox{\hyperlink{iahwc_8h_ab100143d2efa481cc3c432169016db23}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+P\+L\+A\+N\+E\+\_\+\+A\+L\+P\+HA}} \mbox{\hyperlink{structiahwc__backend_aae2c9d162d5de645e9b0ebcf307cb50d}{iahwc\+\_\+layer\+\_\+set\+\_\+plane\+\_\+alpha}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a2c73f4cf07f8202b6234fe9888104112}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+A\+C\+Q\+U\+I\+R\+E\+\_\+\+F\+E\+N\+CE}} \mbox{\hyperlink{structiahwc__backend_a6cda4905154cccf3a82fa500a74430b8}{iahwc\+\_\+layer\+\_\+set\+\_\+acquire\+\_\+fence}}
+\item 
+\mbox{\hyperlink{iahwc_8h_a956199a9af0a303b122e92efc7b59538}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+U\+S\+A\+GE}} \mbox{\hyperlink{structiahwc__backend_afc0aa0cbc9e636caa6c64f6b3e625e72}{iahwc\+\_\+layer\+\_\+set\+\_\+usage}}
+\item 
+\mbox{\hyperlink{iahwc_8h_ad53e9282840022f0aa2169e3182f1f5b}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+I\+N\+D\+EX}} \mbox{\hyperlink{structiahwc__backend_a20bd8e070d00883888c78d19739d94a4}{iahwc\+\_\+layer\+\_\+set\+\_\+index}}
+\item 
+int \mbox{\hyperlink{structiahwc__backend_ad046cdbf61ed56df228151a267a93f5d}{sprites\+\_\+are\+\_\+broken}}
+\item 
+int \mbox{\hyperlink{structiahwc__backend_ac14877b403d04d40e989df9ae9482722}{sprites\+\_\+hidden}}
+\item 
+void $\ast$ \mbox{\hyperlink{structiahwc__backend_af4bd6373d3284521062a544c9b95f412}{repaint\+\_\+data}}
+\item 
+struct udev\+\_\+input \mbox{\hyperlink{structiahwc__backend_a1155955cbc2d37d6034d7f51de2cdba5}{input}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structiahwc__backend_a34129c63afc03d555d69bec8c60e6a5a}{cursor\+\_\+width}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structiahwc__backend_ac205deb5c98e8d2b25f7455948df5899}{cursor\+\_\+height}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 83 of file compositor-\/iahwc.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structiahwc__backend_ae18b2807a275166da755b8d581fed9df}\label{structiahwc__backend_ae18b2807a275166da755b8d581fed9df}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!base@{base}}
+\index{base@{base}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily struct weston\+\_\+backend iahwc\+\_\+backend\+::base}
+
+
+
+Definition at line 84 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_aff09ba1b906f8c90ab72d6ea9e2604d1}\label{structiahwc__backend_aff09ba1b906f8c90ab72d6ea9e2604d1}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!compositor@{compositor}}
+\index{compositor@{compositor}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{compositor}{compositor}}
+{\footnotesize\ttfamily struct weston\+\_\+compositor$\ast$ iahwc\+\_\+backend\+::compositor}
+
+
+
+Definition at line 85 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_ac205deb5c98e8d2b25f7455948df5899}\label{structiahwc__backend_ac205deb5c98e8d2b25f7455948df5899}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!cursor\+\_\+height@{cursor\+\_\+height}}
+\index{cursor\+\_\+height@{cursor\+\_\+height}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{cursor\+\_\+height}{cursor\_height}}
+{\footnotesize\ttfamily int32\+\_\+t iahwc\+\_\+backend\+::cursor\+\_\+height}
+
+
+
+Definition at line 139 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a34129c63afc03d555d69bec8c60e6a5a}\label{structiahwc__backend_a34129c63afc03d555d69bec8c60e6a5a}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!cursor\+\_\+width@{cursor\+\_\+width}}
+\index{cursor\+\_\+width@{cursor\+\_\+width}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{cursor\+\_\+width}{cursor\_width}}
+{\footnotesize\ttfamily int32\+\_\+t iahwc\+\_\+backend\+::cursor\+\_\+width}
+
+
+
+Definition at line 138 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_ab041d01c689a974d72c2515470c3c441}\label{structiahwc__backend_ab041d01c689a974d72c2515470c3c441}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!fd@{fd}}
+\index{fd@{fd}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily int iahwc\+\_\+backend\+::fd}
+
+
+
+Definition at line 98 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_af34ed10fa4d2996a450c37e4337f111b}\label{structiahwc__backend_af34ed10fa4d2996a450c37e4337f111b}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!filename@{filename}}
+\index{filename@{filename}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily char$\ast$ iahwc\+\_\+backend\+::filename}
+
+
+
+Definition at line 99 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a7e7a9ad912e8a70a7e87a6c571583953}\label{structiahwc__backend_a7e7a9ad912e8a70a7e87a6c571583953}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!gbm@{gbm}}
+\index{gbm@{gbm}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{gbm}{gbm}}
+{\footnotesize\ttfamily struct gbm\+\_\+device$\ast$ iahwc\+\_\+backend\+::gbm}
+
+
+
+Definition at line 102 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a983b85b4da49b9cfaa8c2bb2d1a96660}\label{structiahwc__backend_a983b85b4da49b9cfaa8c2bb2d1a96660}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!gbm\+\_\+format@{gbm\+\_\+format}}
+\index{gbm\+\_\+format@{gbm\+\_\+format}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{gbm\+\_\+format}{gbm\_format}}
+{\footnotesize\ttfamily uint32\+\_\+t iahwc\+\_\+backend\+::gbm\+\_\+format}
+
+
+
+Definition at line 104 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a1a0cf789154c92044ad8ac724258ea26}\label{structiahwc__backend_a1a0cf789154c92044ad8ac724258ea26}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc@{iahwc}}
+\index{iahwc@{iahwc}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc}{iahwc}}
+{\footnotesize\ttfamily struct \{ ... \}   iahwc\+\_\+backend\+::iahwc}
+
+\mbox{\Hypertarget{structiahwc__backend_aa2c44d21d4005027a84fc589791ef7c0}\label{structiahwc__backend_aa2c44d21d4005027a84fc589791ef7c0}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+create\+\_\+layer@{iahwc\+\_\+create\+\_\+layer}}
+\index{iahwc\+\_\+create\+\_\+layer@{iahwc\+\_\+create\+\_\+layer}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+create\+\_\+layer}{iahwc\_create\_layer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_ac4ba2d58145583caa8d4f483c38a9ca3}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+L\+A\+Y\+ER}} iahwc\+\_\+backend\+::iahwc\+\_\+create\+\_\+layer}
+
+
+
+Definition at line 119 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_ada814727f58788eacd9410ab005b8f76}\label{structiahwc__backend_ada814727f58788eacd9410ab005b8f76}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+destroy\+\_\+layer@{iahwc\+\_\+destroy\+\_\+layer}}
+\index{iahwc\+\_\+destroy\+\_\+layer@{iahwc\+\_\+destroy\+\_\+layer}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+destroy\+\_\+layer}{iahwc\_destroy\_layer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a258e5369457dcb3860d3ce84b35eaf2a}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+\_\+\+L\+A\+Y\+ER}} iahwc\+\_\+backend\+::iahwc\+\_\+destroy\+\_\+layer}
+
+
+
+Definition at line 120 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a51a72ed97e57edb8d9ac90a0331cd5c4}\label{structiahwc__backend_a51a72ed97e57edb8d9ac90a0331cd5c4}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+device@{iahwc\+\_\+device}}
+\index{iahwc\+\_\+device@{iahwc\+\_\+device}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+device}{iahwc\_device}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_aa44e63a48d7c328d160f28888a6b3edd}{iahwc\+\_\+device\+\_\+t}}$\ast$ iahwc\+\_\+backend\+::iahwc\+\_\+device}
+
+
+
+Definition at line 88 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_abaad0b59fa72161793343346912aaf0f}\label{structiahwc__backend_abaad0b59fa72161793343346912aaf0f}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+disable\+\_\+overlay\+\_\+usage@{iahwc\+\_\+disable\+\_\+overlay\+\_\+usage}}
+\index{iahwc\+\_\+disable\+\_\+overlay\+\_\+usage@{iahwc\+\_\+disable\+\_\+overlay\+\_\+usage}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+disable\+\_\+overlay\+\_\+usage}{iahwc\_disable\_overlay\_usage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_af4834e97f88b6d3621d46d3ae1886795}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+O\+V\+E\+R\+L\+A\+Y\+\_\+\+U\+S\+A\+GE}} iahwc\+\_\+backend\+::iahwc\+\_\+disable\+\_\+overlay\+\_\+usage}
+
+
+
+Definition at line 117 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a646d3bce546d9b5c350e72ae15e26873}\label{structiahwc__backend_a646d3bce546d9b5c350e72ae15e26873}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+display\+\_\+clear\+\_\+all\+\_\+layers@{iahwc\+\_\+display\+\_\+clear\+\_\+all\+\_\+layers}}
+\index{iahwc\+\_\+display\+\_\+clear\+\_\+all\+\_\+layers@{iahwc\+\_\+display\+\_\+clear\+\_\+all\+\_\+layers}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+display\+\_\+clear\+\_\+all\+\_\+layers}{iahwc\_display\_clear\_all\_layers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_aa17514d93b69c9a54c9d82ecf0d11a62}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+L\+L\+\_\+\+L\+A\+Y\+E\+RS}} iahwc\+\_\+backend\+::iahwc\+\_\+display\+\_\+clear\+\_\+all\+\_\+layers}
+
+
+
+Definition at line 115 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_adf78fcd106a4edfb0192d013f7401c6e}\label{structiahwc__backend_adf78fcd106a4edfb0192d013f7401c6e}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+display\+\_\+set\+\_\+power\+\_\+mode@{iahwc\+\_\+display\+\_\+set\+\_\+power\+\_\+mode}}
+\index{iahwc\+\_\+display\+\_\+set\+\_\+power\+\_\+mode@{iahwc\+\_\+display\+\_\+set\+\_\+power\+\_\+mode}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+display\+\_\+set\+\_\+power\+\_\+mode}{iahwc\_display\_set\_power\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_af6ed4d8004aabdfa73e634604204b186}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+E\+T\+\_\+\+P\+O\+W\+E\+R\+\_\+\+M\+O\+DE}} iahwc\+\_\+backend\+::iahwc\+\_\+display\+\_\+set\+\_\+power\+\_\+mode}
+
+
+
+Definition at line 114 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_acfdc89ce3877a820441c8268159bbf00}\label{structiahwc__backend_acfdc89ce3877a820441c8268159bbf00}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+enable\+\_\+overlay\+\_\+usage@{iahwc\+\_\+enable\+\_\+overlay\+\_\+usage}}
+\index{iahwc\+\_\+enable\+\_\+overlay\+\_\+usage@{iahwc\+\_\+enable\+\_\+overlay\+\_\+usage}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+enable\+\_\+overlay\+\_\+usage}{iahwc\_enable\_overlay\_usage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a4cf034c28a745167ba7ca2c8a6440e6a}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+O\+V\+E\+R\+L\+A\+Y\+\_\+\+U\+S\+A\+GE}} iahwc\+\_\+backend\+::iahwc\+\_\+enable\+\_\+overlay\+\_\+usage}
+
+
+
+Definition at line 118 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_af74cf4aa921a9fd29fa9af0b705e8dcb}\label{structiahwc__backend_af74cf4aa921a9fd29fa9af0b705e8dcb}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+get\+\_\+display\+\_\+config@{iahwc\+\_\+get\+\_\+display\+\_\+config}}
+\index{iahwc\+\_\+get\+\_\+display\+\_\+config@{iahwc\+\_\+get\+\_\+display\+\_\+config}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+get\+\_\+display\+\_\+config}{iahwc\_get\_display\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a6038ea0f083ac033a6891bbcc4de917b}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+IG}} iahwc\+\_\+backend\+::iahwc\+\_\+get\+\_\+display\+\_\+config}
+
+
+
+Definition at line 113 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a8c8b683d490c99df7dbd5f0080cb7728}\label{structiahwc__backend_a8c8b683d490c99df7dbd5f0080cb7728}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+get\+\_\+display\+\_\+configs@{iahwc\+\_\+get\+\_\+display\+\_\+configs}}
+\index{iahwc\+\_\+get\+\_\+display\+\_\+configs@{iahwc\+\_\+get\+\_\+display\+\_\+configs}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+get\+\_\+display\+\_\+configs}{iahwc\_get\_display\_configs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a2dfc704af6f663d2fdec94baa5192687}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+GS}} iahwc\+\_\+backend\+::iahwc\+\_\+get\+\_\+display\+\_\+configs}
+
+
+
+Definition at line 110 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a85bf879c1fbd6ad3c4b60093fd81fd8f}\label{structiahwc__backend_a85bf879c1fbd6ad3c4b60093fd81fd8f}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+get\+\_\+display\+\_\+info@{iahwc\+\_\+get\+\_\+display\+\_\+info}}
+\index{iahwc\+\_\+get\+\_\+display\+\_\+info@{iahwc\+\_\+get\+\_\+display\+\_\+info}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+get\+\_\+display\+\_\+info}{iahwc\_get\_display\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a79bdf92b174300d2af098db065a6f0fd}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+I\+N\+FO}} iahwc\+\_\+backend\+::iahwc\+\_\+get\+\_\+display\+\_\+info}
+
+
+
+Definition at line 108 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_acd2af93ffe7dd200b432b95e9f74552e}\label{structiahwc__backend_acd2af93ffe7dd200b432b95e9f74552e}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+get\+\_\+display\+\_\+name@{iahwc\+\_\+get\+\_\+display\+\_\+name}}
+\index{iahwc\+\_\+get\+\_\+display\+\_\+name@{iahwc\+\_\+get\+\_\+display\+\_\+name}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+get\+\_\+display\+\_\+name}{iahwc\_get\_display\_name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_ad2adbed7924879769d74abf89313f6d6}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+N\+A\+ME}} iahwc\+\_\+backend\+::iahwc\+\_\+get\+\_\+display\+\_\+name}
+
+
+
+Definition at line 109 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a6ee376e76dc4568bba993f155a977bd5}\label{structiahwc__backend_a6ee376e76dc4568bba993f155a977bd5}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+get\+\_\+num\+\_\+displays@{iahwc\+\_\+get\+\_\+num\+\_\+displays}}
+\index{iahwc\+\_\+get\+\_\+num\+\_\+displays@{iahwc\+\_\+get\+\_\+num\+\_\+displays}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+get\+\_\+num\+\_\+displays}{iahwc\_get\_num\_displays}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_ac94a67ed01b360e5d07e47e73666d01a}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+D\+I\+S\+P\+L\+A\+YS}} iahwc\+\_\+backend\+::iahwc\+\_\+get\+\_\+num\+\_\+displays}
+
+
+
+Definition at line 106 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a6cda4905154cccf3a82fa500a74430b8}\label{structiahwc__backend_a6cda4905154cccf3a82fa500a74430b8}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+layer\+\_\+set\+\_\+acquire\+\_\+fence@{iahwc\+\_\+layer\+\_\+set\+\_\+acquire\+\_\+fence}}
+\index{iahwc\+\_\+layer\+\_\+set\+\_\+acquire\+\_\+fence@{iahwc\+\_\+layer\+\_\+set\+\_\+acquire\+\_\+fence}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+layer\+\_\+set\+\_\+acquire\+\_\+fence}{iahwc\_layer\_set\_acquire\_fence}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a2c73f4cf07f8202b6234fe9888104112}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+A\+C\+Q\+U\+I\+R\+E\+\_\+\+F\+E\+N\+CE}} iahwc\+\_\+backend\+::iahwc\+\_\+layer\+\_\+set\+\_\+acquire\+\_\+fence}
+
+
+
+Definition at line 127 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_ab926a60c3459282236e606c015eec784}\label{structiahwc__backend_ab926a60c3459282236e606c015eec784}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+layer\+\_\+set\+\_\+bo@{iahwc\+\_\+layer\+\_\+set\+\_\+bo}}
+\index{iahwc\+\_\+layer\+\_\+set\+\_\+bo@{iahwc\+\_\+layer\+\_\+set\+\_\+bo}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+layer\+\_\+set\+\_\+bo}{iahwc\_layer\_set\_bo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a0b77b3ec5acd37ce148cf7e50edfc5cc}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+BO}} iahwc\+\_\+backend\+::iahwc\+\_\+layer\+\_\+set\+\_\+bo}
+
+
+
+Definition at line 121 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a6826b4e3cd481f2e44bcfc0f4e2902b7}\label{structiahwc__backend_a6826b4e3cd481f2e44bcfc0f4e2902b7}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+layer\+\_\+set\+\_\+display\+\_\+frame@{iahwc\+\_\+layer\+\_\+set\+\_\+display\+\_\+frame}}
+\index{iahwc\+\_\+layer\+\_\+set\+\_\+display\+\_\+frame@{iahwc\+\_\+layer\+\_\+set\+\_\+display\+\_\+frame}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+layer\+\_\+set\+\_\+display\+\_\+frame}{iahwc\_layer\_set\_display\_frame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a118f1525809f1ef328dd5688df041e35}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+F\+R\+A\+ME}} iahwc\+\_\+backend\+::iahwc\+\_\+layer\+\_\+set\+\_\+display\+\_\+frame}
+
+
+
+Definition at line 124 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a20bd8e070d00883888c78d19739d94a4}\label{structiahwc__backend_a20bd8e070d00883888c78d19739d94a4}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+layer\+\_\+set\+\_\+index@{iahwc\+\_\+layer\+\_\+set\+\_\+index}}
+\index{iahwc\+\_\+layer\+\_\+set\+\_\+index@{iahwc\+\_\+layer\+\_\+set\+\_\+index}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+layer\+\_\+set\+\_\+index}{iahwc\_layer\_set\_index}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_ad53e9282840022f0aa2169e3182f1f5b}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+I\+N\+D\+EX}} iahwc\+\_\+backend\+::iahwc\+\_\+layer\+\_\+set\+\_\+index}
+
+
+
+Definition at line 129 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_aae2c9d162d5de645e9b0ebcf307cb50d}\label{structiahwc__backend_aae2c9d162d5de645e9b0ebcf307cb50d}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+layer\+\_\+set\+\_\+plane\+\_\+alpha@{iahwc\+\_\+layer\+\_\+set\+\_\+plane\+\_\+alpha}}
+\index{iahwc\+\_\+layer\+\_\+set\+\_\+plane\+\_\+alpha@{iahwc\+\_\+layer\+\_\+set\+\_\+plane\+\_\+alpha}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+layer\+\_\+set\+\_\+plane\+\_\+alpha}{iahwc\_layer\_set\_plane\_alpha}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_ab100143d2efa481cc3c432169016db23}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+P\+L\+A\+N\+E\+\_\+\+A\+L\+P\+HA}} iahwc\+\_\+backend\+::iahwc\+\_\+layer\+\_\+set\+\_\+plane\+\_\+alpha}
+
+
+
+Definition at line 126 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a21bf458ddb692a832ebae333b1cd77e3}\label{structiahwc__backend_a21bf458ddb692a832ebae333b1cd77e3}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+layer\+\_\+set\+\_\+raw\+\_\+pixel\+\_\+data@{iahwc\+\_\+layer\+\_\+set\+\_\+raw\+\_\+pixel\+\_\+data}}
+\index{iahwc\+\_\+layer\+\_\+set\+\_\+raw\+\_\+pixel\+\_\+data@{iahwc\+\_\+layer\+\_\+set\+\_\+raw\+\_\+pixel\+\_\+data}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+layer\+\_\+set\+\_\+raw\+\_\+pixel\+\_\+data}{iahwc\_layer\_set\_raw\_pixel\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a1e1e576efc77f032d0550357bb0d98f1}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+R\+A\+W\+\_\+\+P\+I\+X\+E\+L\+\_\+\+D\+A\+TA}} iahwc\+\_\+backend\+::iahwc\+\_\+layer\+\_\+set\+\_\+raw\+\_\+pixel\+\_\+data}
+
+
+
+Definition at line 122 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a9b4abeb6617a115f1679f919952906bd}\label{structiahwc__backend_a9b4abeb6617a115f1679f919952906bd}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+layer\+\_\+set\+\_\+source\+\_\+crop@{iahwc\+\_\+layer\+\_\+set\+\_\+source\+\_\+crop}}
+\index{iahwc\+\_\+layer\+\_\+set\+\_\+source\+\_\+crop@{iahwc\+\_\+layer\+\_\+set\+\_\+source\+\_\+crop}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+layer\+\_\+set\+\_\+source\+\_\+crop}{iahwc\_layer\_set\_source\_crop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_ac7b199c17ecff5d053dfdfae361b1bbe}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+C\+R\+OP}} iahwc\+\_\+backend\+::iahwc\+\_\+layer\+\_\+set\+\_\+source\+\_\+crop}
+
+
+
+Definition at line 123 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_aaf78efc58c573fe0d579f7e94cdf6c1f}\label{structiahwc__backend_aaf78efc58c573fe0d579f7e94cdf6c1f}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+layer\+\_\+set\+\_\+surface\+\_\+damage@{iahwc\+\_\+layer\+\_\+set\+\_\+surface\+\_\+damage}}
+\index{iahwc\+\_\+layer\+\_\+set\+\_\+surface\+\_\+damage@{iahwc\+\_\+layer\+\_\+set\+\_\+surface\+\_\+damage}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+layer\+\_\+set\+\_\+surface\+\_\+damage}{iahwc\_layer\_set\_surface\_damage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_adcfd825452e18516d0fa2e4ff3925c93}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+S\+U\+R\+F\+A\+C\+E\+\_\+\+D\+A\+M\+A\+GE}} iahwc\+\_\+backend\+::iahwc\+\_\+layer\+\_\+set\+\_\+surface\+\_\+damage}
+
+
+
+Definition at line 125 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_afc0aa0cbc9e636caa6c64f6b3e625e72}\label{structiahwc__backend_afc0aa0cbc9e636caa6c64f6b3e625e72}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+layer\+\_\+set\+\_\+usage@{iahwc\+\_\+layer\+\_\+set\+\_\+usage}}
+\index{iahwc\+\_\+layer\+\_\+set\+\_\+usage@{iahwc\+\_\+layer\+\_\+set\+\_\+usage}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+layer\+\_\+set\+\_\+usage}{iahwc\_layer\_set\_usage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a956199a9af0a303b122e92efc7b59538}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+E\+T\+\_\+\+U\+S\+A\+GE}} iahwc\+\_\+backend\+::iahwc\+\_\+layer\+\_\+set\+\_\+usage}
+
+
+
+Definition at line 128 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a2461d5cf72f5c1a53021d8a0cfc13ced}\label{structiahwc__backend_a2461d5cf72f5c1a53021d8a0cfc13ced}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+module@{iahwc\+\_\+module}}
+\index{iahwc\+\_\+module@{iahwc\+\_\+module}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+module}{iahwc\_module}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a6a0009d570fc041f403dee1e0fd68cf9}{iahwc\+\_\+module\+\_\+t}}$\ast$ iahwc\+\_\+backend\+::iahwc\+\_\+module}
+
+
+
+Definition at line 87 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a88fa0cf8eac2b62782be05e11116658e}\label{structiahwc__backend_a88fa0cf8eac2b62782be05e11116658e}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+present\+\_\+display@{iahwc\+\_\+present\+\_\+display}}
+\index{iahwc\+\_\+present\+\_\+display@{iahwc\+\_\+present\+\_\+display}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+present\+\_\+display}{iahwc\_present\_display}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a1415d2bd6d7268e5a19569bea1253d53}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+P\+R\+E\+S\+E\+N\+T\+\_\+\+D\+I\+S\+P\+L\+AY}} iahwc\+\_\+backend\+::iahwc\+\_\+present\+\_\+display}
+
+
+
+Definition at line 116 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a0a12d7395fba844cdfd4ffc2093e80fe}\label{structiahwc__backend_a0a12d7395fba844cdfd4ffc2093e80fe}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+register\+\_\+callback@{iahwc\+\_\+register\+\_\+callback}}
+\index{iahwc\+\_\+register\+\_\+callback@{iahwc\+\_\+register\+\_\+callback}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+register\+\_\+callback}{iahwc\_register\_callback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a6cf69c9a3a26fbdf5fec62d16485e5cf}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} iahwc\+\_\+backend\+::iahwc\+\_\+register\+\_\+callback}
+
+
+
+Definition at line 107 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_abe716daeccdcb10684aa103a5f8d0f7c}\label{structiahwc__backend_abe716daeccdcb10684aa103a5f8d0f7c}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+set\+\_\+display\+\_\+config@{iahwc\+\_\+set\+\_\+display\+\_\+config}}
+\index{iahwc\+\_\+set\+\_\+display\+\_\+config@{iahwc\+\_\+set\+\_\+display\+\_\+config}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+set\+\_\+display\+\_\+config}{iahwc\_set\_display\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_afcb6a612f77fca2fc5d6f1c80d8e2f78}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+F\+IG}} iahwc\+\_\+backend\+::iahwc\+\_\+set\+\_\+display\+\_\+config}
+
+
+
+Definition at line 112 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a7788f472f5cdadb4dc8e620eadfd264d}\label{structiahwc__backend_a7788f472f5cdadb4dc8e620eadfd264d}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+set\+\_\+display\+\_\+gamma@{iahwc\+\_\+set\+\_\+display\+\_\+gamma}}
+\index{iahwc\+\_\+set\+\_\+display\+\_\+gamma@{iahwc\+\_\+set\+\_\+display\+\_\+gamma}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+set\+\_\+display\+\_\+gamma}{iahwc\_set\_display\_gamma}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iahwc_8h_a3f83a3da3341f6a8f0379f326cd909b6}{I\+A\+H\+W\+C\+\_\+\+P\+F\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+S\+E\+T\+\_\+\+G\+A\+M\+MA}} iahwc\+\_\+backend\+::iahwc\+\_\+set\+\_\+display\+\_\+gamma}
+
+
+
+Definition at line 111 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_af61090e88d7d5da92836b2e8ca24e200}\label{structiahwc__backend_af61090e88d7d5da92836b2e8ca24e200}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!iahwc\+\_\+source@{iahwc\+\_\+source}}
+\index{iahwc\+\_\+source@{iahwc\+\_\+source}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{iahwc\+\_\+source}{iahwc\_source}}
+{\footnotesize\ttfamily struct wl\+\_\+event\+\_\+source$\ast$ iahwc\+\_\+backend\+::iahwc\+\_\+source}
+
+
+
+Definition at line 91 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_ab40e91d97ef75d0dfcedf72629ab9e41}\label{structiahwc__backend_ab40e91d97ef75d0dfcedf72629ab9e41}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!id@{id}}
+\index{id@{id}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int iahwc\+\_\+backend\+::id}
+
+
+
+Definition at line 97 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a1155955cbc2d37d6034d7f51de2cdba5}\label{structiahwc__backend_a1155955cbc2d37d6034d7f51de2cdba5}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!input@{input}}
+\index{input@{input}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{input}{input}}
+{\footnotesize\ttfamily struct udev\+\_\+input iahwc\+\_\+backend\+::input}
+
+
+
+Definition at line 136 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_af4bd6373d3284521062a544c9b95f412}\label{structiahwc__backend_af4bd6373d3284521062a544c9b95f412}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!repaint\+\_\+data@{repaint\+\_\+data}}
+\index{repaint\+\_\+data@{repaint\+\_\+data}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{repaint\+\_\+data}{repaint\_data}}
+{\footnotesize\ttfamily void$\ast$ iahwc\+\_\+backend\+::repaint\+\_\+data}
+
+
+
+Definition at line 134 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_a12f886ff09a8cbe3c0e59537cc17c237}\label{structiahwc__backend_a12f886ff09a8cbe3c0e59537cc17c237}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!session\+\_\+listener@{session\+\_\+listener}}
+\index{session\+\_\+listener@{session\+\_\+listener}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{session\+\_\+listener}{session\_listener}}
+{\footnotesize\ttfamily struct wl\+\_\+listener iahwc\+\_\+backend\+::session\+\_\+listener}
+
+
+
+Definition at line 103 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_ad046cdbf61ed56df228151a267a93f5d}\label{structiahwc__backend_ad046cdbf61ed56df228151a267a93f5d}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!sprites\+\_\+are\+\_\+broken@{sprites\+\_\+are\+\_\+broken}}
+\index{sprites\+\_\+are\+\_\+broken@{sprites\+\_\+are\+\_\+broken}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{sprites\+\_\+are\+\_\+broken}{sprites\_are\_broken}}
+{\footnotesize\ttfamily int iahwc\+\_\+backend\+::sprites\+\_\+are\+\_\+broken}
+
+
+
+Definition at line 131 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_ac14877b403d04d40e989df9ae9482722}\label{structiahwc__backend_ac14877b403d04d40e989df9ae9482722}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!sprites\+\_\+hidden@{sprites\+\_\+hidden}}
+\index{sprites\+\_\+hidden@{sprites\+\_\+hidden}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{sprites\+\_\+hidden}{sprites\_hidden}}
+{\footnotesize\ttfamily int iahwc\+\_\+backend\+::sprites\+\_\+hidden}
+
+
+
+Definition at line 132 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_abeae3866ace09fded61e453b79f65bb3}\label{structiahwc__backend_abeae3866ace09fded61e453b79f65bb3}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!udev@{udev}}
+\index{udev@{udev}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{udev}{udev}}
+{\footnotesize\ttfamily struct udev$\ast$ iahwc\+\_\+backend\+::udev}
+
+
+
+Definition at line 90 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_aa0eec87be32613771a08de5b9db049ed}\label{structiahwc__backend_aa0eec87be32613771a08de5b9db049ed}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!udev\+\_\+iahwc\+\_\+source@{udev\+\_\+iahwc\+\_\+source}}
+\index{udev\+\_\+iahwc\+\_\+source@{udev\+\_\+iahwc\+\_\+source}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{udev\+\_\+iahwc\+\_\+source}{udev\_iahwc\_source}}
+{\footnotesize\ttfamily struct wl\+\_\+event\+\_\+source$\ast$ iahwc\+\_\+backend\+::udev\+\_\+iahwc\+\_\+source}
+
+
+
+Definition at line 94 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__backend_ac719de9c1f60ef6a7467146430f5f017}\label{structiahwc__backend_ac719de9c1f60ef6a7467146430f5f017}} 
+\index{iahwc\+\_\+backend@{iahwc\+\_\+backend}!udev\+\_\+monitor@{udev\+\_\+monitor}}
+\index{udev\+\_\+monitor@{udev\+\_\+monitor}!iahwc\+\_\+backend@{iahwc\+\_\+backend}}
+\subsubsection{\texorpdfstring{udev\+\_\+monitor}{udev\_monitor}}
+{\footnotesize\ttfamily struct udev\+\_\+monitor$\ast$ iahwc\+\_\+backend\+::udev\+\_\+monitor}
+
+
+
+Definition at line 93 of file compositor-\/iahwc.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/weston/plugin/\mbox{\hyperlink{compositor-iahwc_8c}{compositor-\/iahwc.\+c}}\end{DoxyCompactItemize}

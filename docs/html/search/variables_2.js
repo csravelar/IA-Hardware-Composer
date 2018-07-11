@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['callback_5fdata',['callback_data',['../structiahwc__raw__pixel__data.html#ab7e2bf82485679c69226d5d42bbe7e1c',1,'iahwc_raw_pixel_data']]],
+  ['caps_5f',['caps_',['../structhwcomposer_1_1HwcColorBalanceCap.html#aa30a2c4929e1994c25d3611dd209a1bd',1,'hwcomposer::HwcColorBalanceCap::caps_()'],['../structhwcomposer_1_1HwcFilterCap.html#a142f15f008008849faa7f8102e7ed7c3',1,'hwcomposer::HwcFilterCap::caps_()'],['../structhwcomposer_1_1__HwcDeinterlaceCap.html#ad5822e137156ac4bd12edd5a7da72e8f',1,'hwcomposer::_HwcDeinterlaceCap::caps_()']]],
+  ['cloned_5fdisplays_5f',['cloned_displays_',['../classhwcomposer_1_1PhysicalDisplay.html#a646651bb227f0d0c18317a864d36d767',1,'hwcomposer::PhysicalDisplay']]],
+  ['clones_5f',['clones_',['../classhwcomposer_1_1PhysicalDisplay.html#ab56848042a1534cdd00730e679350b95',1,'hwcomposer::PhysicalDisplay']]],
+  ['close',['close',['../structiahwc__device.html#a147ff8b5cced2b745222742c89fd3e08',1,'iahwc_device']]],
+  ['colors_5f',['colors_',['../structhwcomposer_1_1MediaState.html#a63b705c25506563ee4b6fdde3f4b5817',1,'hwcomposer::MediaState']]],
+  ['compositor',['compositor',['../structiahwc__backend.html#aff09ba1b906f8c90ab72d6ea9e2604d1',1,'iahwc_backend']]],
+  ['config_5f',['config_',['../classhwcomposer_1_1PhysicalDisplay.html#a75eb0d6243de4021ad8e49141becc4a0',1,'hwcomposer::PhysicalDisplay']]],
+  ['config_5fid',['config_id',['../structiahwc__mode.html#a38ce4032966c7348a378c1eb1a04113a',1,'iahwc_mode']]],
+  ['configure_5fdevice',['configure_device',['../structweston__iahwc__backend__config.html#af60c36d07f2eae72f1164e2497a072f2',1,'weston_iahwc_backend_config']]],
+  ['connection_5fstate_5f',['connection_state_',['../classhwcomposer_1_1PhysicalDisplay.html#ab51d20d93d47856931757c5cf5b6bf5d',1,'hwcomposer::PhysicalDisplay']]],
+  ['connector',['connector',['../structiahwc__output.html#ab3dc520b844eed75e64c4732b8355f35',1,'iahwc_output']]],
+  ['connector_5fid',['connector_id',['../structiahwc__output.html#ae1cf365db62f007f6a3d30bd19b5b0c8',1,'iahwc_output']]],
+  ['crop_5fbounds_5f',['crop_bounds_',['../structhwcomposer_1_1RenderState_1_1LayerState.html#a2ae0d2985cd27e57fe473666a9e57243',1,'hwcomposer::RenderState::LayerState']]],
+  ['crtc_5fid',['crtc_id',['../structiahwc__output.html#a6e3ab85b62b65859fdb94afd042bfd00',1,'iahwc_output']]],
+  ['cstroffset',['cStrOffset',['../classhwcomposer_1_1AbstractLogWrite.html#a926b1236104dd30fd5262cfd7f66fa79',1,'hwcomposer::AbstractLogWrite']]],
+  ['ctx',['ctx',['../structandroid_1_1HwcDisplay.html#a66a47d55af0cc45dfa51bad548194c9b',1,'android::HwcDisplay']]],
+  ['current_5fdpms',['current_dpms',['../structiahwc__output.html#a20868af3c280be48cfcbf0b96b0ab67c',1,'iahwc_output']]],
+  ['cursor_5fheight',['cursor_height',['../structiahwc__backend.html#ac205deb5c98e8d2b25f7455948df5899',1,'iahwc_backend']]],
+  ['cursor_5fwidth',['cursor_width',['../structiahwc__backend.html#a34129c63afc03d555d69bec8c60e6a5a',1,'iahwc_backend']]],
+  ['custom_5fresolution_5f',['custom_resolution_',['../classhwcomposer_1_1PhysicalDisplay.html#adac42ad60327a0ad4ebbaef554a4fafa',1,'hwcomposer::PhysicalDisplay']]]
+];

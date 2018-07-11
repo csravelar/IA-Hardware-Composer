@@ -1,0 +1,147 @@
+\hypertarget{linux_2platformdefines_8h}{}\section{os/linux/platformdefines.h File Reference}
+\label{linux_2platformdefines_8h}\index{os/linux/platformdefines.\+h@{os/linux/platformdefines.\+h}}
+{\ttfamily \#include $<$gbm.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$va/va\+\_\+drm.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$libsync.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}platformcommondefines.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgbm__handle}{gbm\+\_\+handle}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{linux_2platformdefines_8h_ae69eb3ae60a4b88fdfcf918d2171efca}{V\+T\+R\+A\+CE}}(fmt, ...)~fprintf(stderr, \char`\"{}\%s\+: \textbackslash{}n\char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{linux_2platformdefines_8h_adacf8735c8504b8cc864a299145acc52}{D\+T\+R\+A\+CE}}(fmt, ...)~fprintf(stderr, \char`\"{}\%s\+: \textbackslash{}n\char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{linux_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}{I\+T\+R\+A\+CE}}(fmt, ...)~fprintf(stderr, \char`\"{}\textbackslash{}n\char`\"{} fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{linux_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}{W\+T\+R\+A\+CE}}(fmt, ...)~fprintf(stderr, \char`\"{}\%s\+: \textbackslash{}n\char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{linux_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{E\+T\+R\+A\+CE}}(fmt, ...)~fprintf(stderr, \char`\"{}\%s\+: \textbackslash{}n\char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{linux_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}{S\+T\+R\+A\+CE}}()~((void)0)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structgbm__handle}{gbm\+\_\+handle}} $\ast$ \mbox{\hyperlink{linux_2platformdefines_8h_a002bc25515810b2ddc1fd74c74c1f382}{H\+W\+C\+Native\+Handle}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{linux_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}{Get\+Native\+Buffer}} (uint32\+\_\+t gpu\+\_\+fd, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{linux_2platformdefines_8h_adacf8735c8504b8cc864a299145acc52}\label{linux_2platformdefines_8h_adacf8735c8504b8cc864a299145acc52}} 
+\index{linux/platformdefines.\+h@{linux/platformdefines.\+h}!D\+T\+R\+A\+CE@{D\+T\+R\+A\+CE}}
+\index{D\+T\+R\+A\+CE@{D\+T\+R\+A\+CE}!linux/platformdefines.\+h@{linux/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+R\+A\+CE}{DTRACE}}
+{\footnotesize\ttfamily \#define D\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~fprintf(stderr, \char`\"{}\%s\+: \textbackslash{}n\char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 58 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{linux_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}\label{linux_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}} 
+\index{linux/platformdefines.\+h@{linux/platformdefines.\+h}!E\+T\+R\+A\+CE@{E\+T\+R\+A\+CE}}
+\index{E\+T\+R\+A\+CE@{E\+T\+R\+A\+CE}!linux/platformdefines.\+h@{linux/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{E\+T\+R\+A\+CE}{ETRACE}}
+{\footnotesize\ttfamily \#define E\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~fprintf(stderr, \char`\"{}\%s\+: \textbackslash{}n\char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 61 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{linux_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}\label{linux_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}} 
+\index{linux/platformdefines.\+h@{linux/platformdefines.\+h}!I\+T\+R\+A\+CE@{I\+T\+R\+A\+CE}}
+\index{I\+T\+R\+A\+CE@{I\+T\+R\+A\+CE}!linux/platformdefines.\+h@{linux/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{I\+T\+R\+A\+CE}{ITRACE}}
+{\footnotesize\ttfamily \#define I\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~fprintf(stderr, \char`\"{}\textbackslash{}n\char`\"{} fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 59 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{linux_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}\label{linux_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}} 
+\index{linux/platformdefines.\+h@{linux/platformdefines.\+h}!S\+T\+R\+A\+CE@{S\+T\+R\+A\+CE}}
+\index{S\+T\+R\+A\+CE@{S\+T\+R\+A\+CE}!linux/platformdefines.\+h@{linux/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+R\+A\+CE}{STRACE}}
+{\footnotesize\ttfamily \#define S\+T\+R\+A\+CE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 62 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{linux_2platformdefines_8h_ae69eb3ae60a4b88fdfcf918d2171efca}\label{linux_2platformdefines_8h_ae69eb3ae60a4b88fdfcf918d2171efca}} 
+\index{linux/platformdefines.\+h@{linux/platformdefines.\+h}!V\+T\+R\+A\+CE@{V\+T\+R\+A\+CE}}
+\index{V\+T\+R\+A\+CE@{V\+T\+R\+A\+CE}!linux/platformdefines.\+h@{linux/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{V\+T\+R\+A\+CE}{VTRACE}}
+{\footnotesize\ttfamily \#define V\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~fprintf(stderr, \char`\"{}\%s\+: \textbackslash{}n\char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 57 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{linux_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}\label{linux_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}} 
+\index{linux/platformdefines.\+h@{linux/platformdefines.\+h}!W\+T\+R\+A\+CE@{W\+T\+R\+A\+CE}}
+\index{W\+T\+R\+A\+CE@{W\+T\+R\+A\+CE}!linux/platformdefines.\+h@{linux/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{W\+T\+R\+A\+CE}{WTRACE}}
+{\footnotesize\ttfamily \#define W\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~fprintf(stderr, \char`\"{}\%s\+: \textbackslash{}n\char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 60 of file platformdefines.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{linux_2platformdefines_8h_a002bc25515810b2ddc1fd74c74c1f382}\label{linux_2platformdefines_8h_a002bc25515810b2ddc1fd74c74c1f382}} 
+\index{linux/platformdefines.\+h@{linux/platformdefines.\+h}!H\+W\+C\+Native\+Handle@{H\+W\+C\+Native\+Handle}}
+\index{H\+W\+C\+Native\+Handle@{H\+W\+C\+Native\+Handle}!linux/platformdefines.\+h@{linux/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{H\+W\+C\+Native\+Handle}{HWCNativeHandle}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structgbm__handle}{gbm\+\_\+handle}}$\ast$ \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}
+
+
+
+Definition at line 51 of file platformdefines.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{linux_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}\label{linux_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}} 
+\index{linux/platformdefines.\+h@{linux/platformdefines.\+h}!Get\+Native\+Buffer@{Get\+Native\+Buffer}}
+\index{Get\+Native\+Buffer@{Get\+Native\+Buffer}!linux/platformdefines.\+h@{linux/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{Get\+Native\+Buffer()}{GetNativeBuffer()}}
+{\footnotesize\ttfamily uint32\+\_\+t Get\+Native\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 64 of file platformdefines.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                                          \{}
+\DoxyCodeLine{65   uint32\_t \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{66   uint32\_t prime\_fd = -1;}
+\DoxyCodeLine{67   \textcolor{keywordflow}{if} (!handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[0]) \{}
+\DoxyCodeLine{68     prime\_fd = handle->import\_data.fd\_data.fd;}
+\DoxyCodeLine{69   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{70     prime\_fd = handle->import\_data.fd\_modifier\_data.fds[0];}
+\DoxyCodeLine{71   \}}
+\DoxyCodeLine{72   \textcolor{keywordflow}{if} (drmPrimeFDToHandle(gpu\_fd, prime\_fd, \&\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{73     \mbox{\hyperlink{linux_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Error generate handle from prime fd \%d"}, prime\_fd);}
+\DoxyCodeLine{74   \}}
+\DoxyCodeLine{75   \textcolor{keywordflow}{return} id;}
+\DoxyCodeLine{76 \}}
+\end{DoxyCode}

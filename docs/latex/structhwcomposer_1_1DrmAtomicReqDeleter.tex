@@ -1,0 +1,43 @@
+\hypertarget{structhwcomposer_1_1DrmAtomicReqDeleter}{}\section{hwcomposer\+:\+:Drm\+Atomic\+Req\+Deleter Struct Reference}
+\label{structhwcomposer_1_1DrmAtomicReqDeleter}\index{hwcomposer\+::\+Drm\+Atomic\+Req\+Deleter@{hwcomposer\+::\+Drm\+Atomic\+Req\+Deleter}}
+
+
+{\ttfamily \#include $<$drmscopedtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1DrmAtomicReqDeleter_aaeed58939f975e58157cac39ade689f7}{operator()}} (\mbox{\hyperlink{drmscopedtypes_8h_a6d8c8b40283089c14de1005f7fb2ee0c}{drm\+Mode\+Atomic\+Req}} $\ast$property) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 60 of file drmscopedtypes.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrmAtomicReqDeleter_aaeed58939f975e58157cac39ade689f7}\label{structhwcomposer_1_1DrmAtomicReqDeleter_aaeed58939f975e58157cac39ade689f7}} 
+\index{hwcomposer\+::\+Drm\+Atomic\+Req\+Deleter@{hwcomposer\+::\+Drm\+Atomic\+Req\+Deleter}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+Drm\+Atomic\+Req\+Deleter@{hwcomposer\+::\+Drm\+Atomic\+Req\+Deleter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Atomic\+Req\+Deleter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drmscopedtypes_8h_a6d8c8b40283089c14de1005f7fb2ee0c}{drm\+Mode\+Atomic\+Req}} $\ast$}]{property }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 56 of file drmscopedtypes.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                                                      \{}
+\DoxyCodeLine{57   drmModeAtomicFree(property);}
+\DoxyCodeLine{58 \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8h}{drmscopedtypes.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8cpp}{drmscopedtypes.\+cpp}}\end{DoxyCompactItemize}

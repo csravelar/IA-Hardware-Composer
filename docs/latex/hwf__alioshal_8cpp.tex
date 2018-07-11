@@ -1,0 +1,78 @@
+\hypertarget{hwf__alioshal_8cpp}{}\section{os/alios/hwf\+\_\+alioshal.cpp File Reference}
+\label{hwf__alioshal_8cpp}\index{os/alios/hwf\+\_\+alioshal.\+cpp@{os/alios/hwf\+\_\+alioshal.\+cpp}}
+{\ttfamily \#include \char`\"{}hwf\+\_\+alioshal.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cutils/hwflinger.\+h$>$}\newline
+{\ttfamily \#include $<$cutils/hwflinger\+\_\+defs.\+h$>$}\newline
+{\ttfamily \#include $<$log/\+Log.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}hwctrace.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classhwcomposer_1_1IAVsyncCallback}{hwcomposer\+::\+I\+A\+Vsync\+Callback}}
+\item 
+class \mbox{\hyperlink{classhwcomposer_1_1IAHotPlugEventCallback}{hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehwcomposer}{hwcomposer}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hwf__alioshal_8cpp_a7ce0df38eb467e59f209470c8f5ac4e6}{L\+O\+G\+\_\+\+T\+AG}}~\char`\"{}I\+A\+H\+WF\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacehwcomposer_ad88999c228f7a7e6b7909139f75d8d21}{hwcomposer\+::\+D\+B\+G\+\_\+\+Dump\+Hwf\+Layer\+Info}} (struct hwf\+\_\+device\+\_\+t $\ast$device, int disp\+Count, hwf\+\_\+display\+\_\+t $\ast$$\ast$displays)
+\item 
+int32\+\_\+t \mbox{\hyperlink{namespacehwcomposer_a63478f90a6b0dbbd556b8ba0aad962c4}{hwcomposer\+::hwf\+\_\+close}} (Vendor\+Device $\ast$device)
+\item 
+int32\+\_\+t \mbox{\hyperlink{namespacehwcomposer_a758867c4aa2dca920b8764c3407f5bf6}{hwcomposer\+::hwf\+\_\+open}} (struct hwf\+\_\+device\+\_\+t $\ast$$\ast$device, const Vendor\+Module $\ast$module)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+hwf\+\_\+module\+\_\+t \mbox{\hyperlink{hwf__alioshal_8cpp_a65af534683e3281701d5622fde0fe74c}{hwf\+\_\+module\+\_\+entry}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hwf__alioshal_8cpp_a7ce0df38eb467e59f209470c8f5ac4e6}\label{hwf__alioshal_8cpp_a7ce0df38eb467e59f209470c8f5ac4e6}} 
+\index{hwf\+\_\+alioshal.\+cpp@{hwf\+\_\+alioshal.\+cpp}!L\+O\+G\+\_\+\+T\+AG@{L\+O\+G\+\_\+\+T\+AG}}
+\index{L\+O\+G\+\_\+\+T\+AG@{L\+O\+G\+\_\+\+T\+AG}!hwf\+\_\+alioshal.\+cpp@{hwf\+\_\+alioshal.\+cpp}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+T\+AG}{LOG\_TAG}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+AG~\char`\"{}I\+A\+H\+WF\char`\"{}}
+
+
+
+Definition at line 28 of file hwf\+\_\+alioshal.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{hwf__alioshal_8cpp_a65af534683e3281701d5622fde0fe74c}\label{hwf__alioshal_8cpp_a65af534683e3281701d5622fde0fe74c}} 
+\index{hwf\+\_\+alioshal.\+cpp@{hwf\+\_\+alioshal.\+cpp}!hwf\+\_\+module\+\_\+entry@{hwf\+\_\+module\+\_\+entry}}
+\index{hwf\+\_\+module\+\_\+entry@{hwf\+\_\+module\+\_\+entry}!hwf\+\_\+alioshal.\+cpp@{hwf\+\_\+alioshal.\+cpp}}
+\subsubsection{\texorpdfstring{hwf\+\_\+module\+\_\+entry}{hwf\_module\_entry}}
+{\footnotesize\ttfamily hwf\+\_\+module\+\_\+t hwf\+\_\+module\+\_\+entry}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    .common = \{}
+\DoxyCodeLine{        .version = 1,}
+\DoxyCodeLine{        .id = \textcolor{stringliteral}{"Hwf"},}
+\DoxyCodeLine{        .name = \textcolor{stringliteral}{"Hwf"},}
+\DoxyCodeLine{        .author = \textcolor{stringliteral}{"intel"},}
+\DoxyCodeLine{        .createDevice = \&hwcomposer::hwf\_device\_open,}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Definition at line 627 of file hwf\+\_\+alioshal.\+cpp.
+

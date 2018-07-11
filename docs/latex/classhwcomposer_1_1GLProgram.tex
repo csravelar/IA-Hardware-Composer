@@ -1,0 +1,164 @@
+\hypertarget{classhwcomposer_1_1GLProgram}{}\section{hwcomposer\+:\+:G\+L\+Program Class Reference}
+\label{classhwcomposer_1_1GLProgram}\index{hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}}
+
+
+{\ttfamily \#include $<$glprogram.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GLProgram_a845d1b2a0bd592416096deb38fde602a}{G\+L\+Program}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GLProgram_ac6d8b653f16b95ef5d46aa6bbb6f692b}{G\+L\+Program}} (const \mbox{\hyperlink{classhwcomposer_1_1GLProgram}{G\+L\+Program}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GLProgram}{G\+L\+Program}} \& \mbox{\hyperlink{classhwcomposer_1_1GLProgram_a59c20c8a8960d691d6962777922d2c20}{operator=}} (const \mbox{\hyperlink{classhwcomposer_1_1GLProgram}{G\+L\+Program}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GLProgram_a5ff19da08cd1ebf54338891adb2b86e9}{$\sim$\+G\+L\+Program}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1GLProgram_acdb8a88311314231b1dfcd001dea4c36}{Init}} (unsigned texture\+\_\+count)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GLProgram_a59b867819bd92a020986adf4da964892}{Use\+Program}} (const \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} \&cmd, G\+Luint viewport\+\_\+width, G\+Luint viewport\+\_\+height)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file glprogram.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1GLProgram_a845d1b2a0bd592416096deb38fde602a}\label{classhwcomposer_1_1GLProgram_a845d1b2a0bd592416096deb38fde602a}} 
+\index{hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}!G\+L\+Program@{G\+L\+Program}}
+\index{G\+L\+Program@{G\+L\+Program}!hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}}
+\subsubsection{\texorpdfstring{G\+L\+Program()}{GLProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+G\+L\+Program\+::\+G\+L\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 291 of file glprogram.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{292     : program\_(0),}
+\DoxyCodeLine{293       viewport\_loc\_(0),}
+\DoxyCodeLine{294       crop\_loc\_(0),}
+\DoxyCodeLine{295       alpha\_loc\_(0),}
+\DoxyCodeLine{296       premult\_loc\_(0),}
+\DoxyCodeLine{297       tex\_matrix\_loc\_(0),}
+\DoxyCodeLine{298       initialized\_(\textcolor{keyword}{false}) \{}
+\DoxyCodeLine{299 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GLProgram_ac6d8b653f16b95ef5d46aa6bbb6f692b}\label{classhwcomposer_1_1GLProgram_ac6d8b653f16b95ef5d46aa6bbb6f692b}} 
+\index{hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}!G\+L\+Program@{G\+L\+Program}}
+\index{G\+L\+Program@{G\+L\+Program}!hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}}
+\subsubsection{\texorpdfstring{G\+L\+Program()}{GLProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+G\+L\+Program\+::\+G\+L\+Program (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1GLProgram}{G\+L\+Program}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1GLProgram_a5ff19da08cd1ebf54338891adb2b86e9}\label{classhwcomposer_1_1GLProgram_a5ff19da08cd1ebf54338891adb2b86e9}} 
+\index{hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}!````~G\+L\+Program@{$\sim$\+G\+L\+Program}}
+\index{````~G\+L\+Program@{$\sim$\+G\+L\+Program}!hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}}
+\subsubsection{\texorpdfstring{$\sim$\+G\+L\+Program()}{~GLProgram()}}
+{\footnotesize\ttfamily hwcomposer\+::\+G\+L\+Program\+::$\sim$\+G\+L\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 301 of file glprogram.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{301                       \{}
+\DoxyCodeLine{302   \textcolor{keywordflow}{if} (program\_ != 0)}
+\DoxyCodeLine{303     glDeleteProgram(program\_);}
+\DoxyCodeLine{304 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1GLProgram_acdb8a88311314231b1dfcd001dea4c36}\label{classhwcomposer_1_1GLProgram_acdb8a88311314231b1dfcd001dea4c36}} 
+\index{hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+G\+L\+Program\+::\+Init (\begin{DoxyParamCaption}\item[{unsigned}]{texture\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 306 of file glprogram.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{306                                            \{}
+\DoxyCodeLine{307   std::ostringstream shader\_log;}
+\DoxyCodeLine{308   program\_ = GenerateProgram(texture\_count, \&shader\_log);}
+\DoxyCodeLine{309   \textcolor{keywordflow}{if} (!program\_) \{}
+\DoxyCodeLine{310     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"\%s"}, shader\_log.str().c\_str());}
+\DoxyCodeLine{311     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{312   \}}
+\DoxyCodeLine{313 }
+\DoxyCodeLine{314   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{315 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GLProgram_a59c20c8a8960d691d6962777922d2c20}\label{classhwcomposer_1_1GLProgram_a59c20c8a8960d691d6962777922d2c20}} 
+\index{hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1GLProgram}{G\+L\+Program}}\& hwcomposer\+::\+G\+L\+Program\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1GLProgram}{G\+L\+Program}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1GLProgram_a59b867819bd92a020986adf4da964892}\label{classhwcomposer_1_1GLProgram_a59b867819bd92a020986adf4da964892}} 
+\index{hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}!Use\+Program@{Use\+Program}}
+\index{Use\+Program@{Use\+Program}!hwcomposer\+::\+G\+L\+Program@{hwcomposer\+::\+G\+L\+Program}}
+\subsubsection{\texorpdfstring{Use\+Program()}{UseProgram()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+G\+L\+Program\+::\+Use\+Program (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} \&}]{cmd,  }\item[{G\+Luint}]{viewport\+\_\+width,  }\item[{G\+Luint}]{viewport\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 317 of file glprogram.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{318                                                    \{}
+\DoxyCodeLine{319   glUseProgram(program\_);}
+\DoxyCodeLine{320   \textcolor{keywordtype}{unsigned} size = state.layer\_state\_.size();}
+\DoxyCodeLine{321   \textcolor{keywordflow}{if} (!initialized\_) \{}
+\DoxyCodeLine{322     viewport\_loc\_ = glGetUniformLocation(program\_, \textcolor{stringliteral}{"uViewport"});}
+\DoxyCodeLine{323     crop\_loc\_ = glGetUniformLocation(program\_, \textcolor{stringliteral}{"uLayerCrop"});}
+\DoxyCodeLine{324     alpha\_loc\_ = glGetUniformLocation(program\_, \textcolor{stringliteral}{"uLayerAlpha"});}
+\DoxyCodeLine{325     premult\_loc\_ = glGetUniformLocation(program\_, \textcolor{stringliteral}{"uLayerPremult"});}
+\DoxyCodeLine{326     tex\_matrix\_loc\_ = glGetUniformLocation(program\_, \textcolor{stringliteral}{"uTexMatrix"});}
+\DoxyCodeLine{327     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} src\_index = 0; src\_index < size; src\_index++) \{}
+\DoxyCodeLine{328       std::ostringstream texture\_name\_formatter;}
+\DoxyCodeLine{329       texture\_name\_formatter << \textcolor{stringliteral}{"uLayerTexture"} << src\_index;}
+\DoxyCodeLine{330       GLuint tex\_loc =}
+\DoxyCodeLine{331           glGetUniformLocation(program\_, texture\_name\_formatter.str().c\_str());}
+\DoxyCodeLine{332       glUniform1i(tex\_loc, src\_index);}
+\DoxyCodeLine{333     \}}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335     initialized\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{336   \}}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338   glUniform4f(viewport\_loc\_, state.x\_ / (\textcolor{keywordtype}{float})viewport\_width,}
+\DoxyCodeLine{339               state.y\_ / (\textcolor{keywordtype}{float})viewport\_height,}
+\DoxyCodeLine{340               (state.width\_) / (\textcolor{keywordtype}{float})viewport\_width,}
+\DoxyCodeLine{341               (state.height\_) / (\textcolor{keywordtype}{float})viewport\_height);}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} src\_index = 0; src\_index < size; src\_index++) \{}
+\DoxyCodeLine{344     \textcolor{keyword}{const} RenderState::LayerState \&src = state.layer\_state\_[src\_index];}
+\DoxyCodeLine{345     glUniform1f(alpha\_loc\_ + src\_index, src.alpha\_);}
+\DoxyCodeLine{346     glUniform1f(premult\_loc\_ + src\_index, src.premult\_);}
+\DoxyCodeLine{347     glUniform4f(crop\_loc\_ + src\_index, src.crop\_bounds\_[0], src.crop\_bounds\_[1],}
+\DoxyCodeLine{348                 src.crop\_bounds\_[2] - src.crop\_bounds\_[0],}
+\DoxyCodeLine{349                 src.crop\_bounds\_[3] - src.crop\_bounds\_[1]);}
+\DoxyCodeLine{350     glUniformMatrix2fv(tex\_matrix\_loc\_ + src\_index, 1, GL\_FALSE,}
+\DoxyCodeLine{351                        src.texture\_matrix\_);}
+\DoxyCodeLine{352     glActiveTexture(GL\_TEXTURE0 + src\_index);}
+\DoxyCodeLine{353     glBindTexture(GL\_TEXTURE\_EXTERNAL\_OES, src.handle\_);}
+\DoxyCodeLine{354   \}}
+\DoxyCodeLine{355 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/gl/\mbox{\hyperlink{glprogram_8h}{glprogram.\+h}}\item 
+common/compositor/gl/\mbox{\hyperlink{glprogram_8cpp}{glprogram.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,1256 @@
+\hypertarget{hwcserviceapi_8h}{}\section{os/android/libhwcservice/hwcserviceapi.h File Reference}
+\label{hwcserviceapi_8h}\index{os/android/libhwcservice/hwcserviceapi.\+h@{os/android/libhwcservice/hwcserviceapi.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__HwcsDisplayModeInfo}{\+\_\+\+Hwcs\+Display\+Mode\+Info}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hwcserviceapi_8h_aa755f0dd6df8b3f0b914b3b2432d00b5}{H\+W\+C\+S\+\_\+\+V\+E\+R\+S\+I\+ON}}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}
+\item 
+typedef enum \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37}{\+\_\+\+E\+Hwcs\+Bool}} \mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}}
+\item 
+typedef int \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1}{\+\_\+\+E\+Hwcs\+Scaling\+Mode}} \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}}
+\item 
+typedef enum \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9}{\+\_\+\+E\+Hwcs\+Color\+Control}} \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}
+\item 
+typedef enum \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8}{\+\_\+\+E\+Hwcs\+Deinterlace\+Control}} \mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{E\+Hwcs\+Deinterlace\+Control}}
+\item 
+typedef enum \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142}{\+\_\+\+E\+Hwcs\+Content\+Type}} \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}
+\item 
+typedef enum \mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71}{\+\_\+\+E\+Hwcs\+Mode\+Flags}} \mbox{\hyperlink{hwcserviceapi_8h_a648e82dbabaf7ed3b0ff644f0fe30134}{E\+Hwcs\+Mode\+Flags}}
+\item 
+typedef enum \mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76}{\+\_\+\+E\+Hwcs\+Mode\+Aspect\+Ratio}} \mbox{\hyperlink{hwcserviceapi_8h_ad50a8cea2f6a7638546937dcdcd24640}{E\+Hwcs\+Mode\+Aspect\+Ratio}}
+\item 
+typedef struct \mbox{\hyperlink{struct__HwcsDisplayModeInfo}{\+\_\+\+Hwcs\+Display\+Mode\+Info}} \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}}
+\item 
+typedef enum \mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58}{\+\_\+\+E\+Hwcs\+Optimization\+Mode}} \mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{E\+Hwcs\+Optimization\+Mode}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37}{\+\_\+\+E\+Hwcs\+Bool}} \{ \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37a11d8e71cb8f69c2133de2171c172f012}{H\+W\+C\+S\+\_\+\+F\+A\+L\+SE}} = 0, 
+\mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37aa8068872066720ad4a79932d1e93d29b}{H\+W\+C\+S\+\_\+\+T\+R\+UE}} = 1
+ \}
+\item 
+enum \{ \mbox{\hyperlink{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55ba0d3068e4f31603793a86ac1479935af3}{H\+W\+C\+S\+\_\+\+M\+A\+X\+\_\+\+O\+V\+E\+R\+S\+C\+AN}} = 100, 
+\mbox{\hyperlink{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55ba608e6a23b6f025af3147af93cc61d130}{H\+W\+C\+S\+\_\+\+O\+V\+E\+R\+S\+C\+A\+N\+\_\+\+R\+A\+N\+GE}} = 15
+ \}
+\item 
+enum \mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1}{\+\_\+\+E\+Hwcs\+Scaling\+Mode}} \{ \newline
+\mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a96c7d625ff253e13f1575381983bd403}{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+C\+E\+N\+T\+RE}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a960e072718da429448f6589acae0bc52}{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+T\+R\+E\+T\+CH}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a9b6ca8b97bd4a138d2c4d434655ba24d}{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+IT}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1adf38586562338ace55aecf9cd926474c}{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+I\+LL}}, 
+\newline
+\mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a2cdc0010ea4bdd4cd3756e67f7e64d27}{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+M\+A\+X\+\_\+\+E\+N\+UM}}
+ \}
+\item 
+enum \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9}{\+\_\+\+E\+Hwcs\+Color\+Control}} \{ \newline
+\mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9af9eaa70566b84b6163af36f48ccb2743}{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+SS}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a57e070e45176356d2bfc62d1d59f1012}{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+N\+T\+R\+A\+ST}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a65d8b859e37576230fc8af925f7eccc6}{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+A\+M\+MA}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a1ba29b6ff917e1f37f94bba04857def4}{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+A\+T\+U\+R\+A\+T\+I\+ON}}, 
+\newline
+\mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a8592c707e8c00c92623cd8d497658dbf}{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+H\+UE}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a75eddedd091233f7cb4ee969ebedbac5}{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+H\+A\+RP}}
+ \}
+\item 
+enum \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8}{\+\_\+\+E\+Hwcs\+Deinterlace\+Control}} \{ \newline
+\mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a01b32c5d4110d574b52317262ebd1331}{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+N\+O\+NE}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a4ffd8300a639c567676b412aa03318b6}{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+B\+OB}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8ad2f195e47b5cac30a65b93d61f56414d}{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+W\+E\+A\+VE}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a66086075439dbc172d22d2b4d379fbdc}{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+A\+D\+A\+P\+T\+I\+VE}}, 
+\newline
+\mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a17f001e04037aaa2fdb85ac65d0a5fc7}{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+C\+O\+M\+P\+E\+N\+S\+A\+T\+ED}}
+ \}
+\item 
+enum \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142}{\+\_\+\+E\+Hwcs\+Content\+Type}} \{ \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142abb45aa3fb0c853d7d55d84e149c05145}{H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E0}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142af0fc741639c5bd530c1d21db89198688}{H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E1}}
+ \}
+\item 
+enum \mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71}{\+\_\+\+E\+Hwcs\+Mode\+Flags}} \{ \newline
+\mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71a58022c1410862e0b9d1adf4948bdd909}{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71a14cb006261ca9e714bc4811a7e090f2b}{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71af7e324ed360603c92bea72410694e6f3}{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+S\+E\+C\+U\+RE}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71ad5140a3d816ae1f7d5ab73029d92f12e}{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+T\+E\+R\+L\+A\+C\+ED}} = 1 $<$$<$ 2, 
+\newline
+\mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71aaac27168465df2674c179c7c2216cee2}{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+U\+R\+R\+E\+NT}} = 1 $<$$<$ 4
+ \}
+\item 
+enum \mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76}{\+\_\+\+E\+Hwcs\+Mode\+Aspect\+Ratio}} \{ \mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76a83ed2a9cade907bbb84c0590ebb9cc00}{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+\+A\+NY}} = 0x00000000, 
+\mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76a330b5b10ffe86f4c6c5cb403a531bc9d}{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+4\+\_\+3}} = 0x00040003, 
+\mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76ab6fd054d9d52326a0dd64050f0ce7d9b}{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+16\+\_\+9}} = 0x00100009
+ \}
+\item 
+enum \mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58}{\+\_\+\+E\+Hwcs\+Optimization\+Mode}} \{ \mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58a410bfe259d70975cc9a5098758309844}{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+N\+O\+R\+M\+AL}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58aa5a32c6ce963542e389df46515ef66fa}{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+V\+I\+D\+EO}}, 
+\mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58ac5fa165b65844b565e32afdd2083eeb8}{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+C\+A\+M\+E\+RA}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} \mbox{\hyperlink{hwcserviceapi_8h_aef64c719bf0fd204b2ac846cdf1785b0}{Hwc\+Service\+\_\+\+Connect}} ()
+\item 
+void \mbox{\hyperlink{hwcserviceapi_8h_a2d3ca18881c7bba975cf9897ed520061}{Hwc\+Service\+\_\+\+Disconnect}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs)
+\item 
+const char $\ast$ \mbox{\hyperlink{hwcserviceapi_8h_a13dcced21c674448a6ebda95e352435a}{Hwc\+Service\+\_\+\+Get\+Hwc\+Version}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a04907fdcdf1882fdc95179db91e68176}{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Overscan}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, int32\+\_\+t xoverscan, int32\+\_\+t yoverscan)
+\begin{DoxyCompactList}\small\item\em Set overscan in the range +/-\/M\+A\+X\+\_\+\+O\+V\+E\+R\+S\+C\+AN inclusive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_afb6ccb74db5380963898acbcefa6ffef}{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Overscan}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, int32\+\_\+t $\ast$xoverscan, int32\+\_\+t $\ast$yoverscan)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a78003256892e1ddca556006b97dc4ce6}{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Scaling}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}} e\+Scaling\+Mode)
+\begin{DoxyCompactList}\small\item\em Set scaling to one of E\+Scaling\+Mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_add41493b4309f8484e857e26c67f281c}{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Scaling}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}} $\ast$e\+Scaling\+Mode)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_aec013df302fe1142c52e91e6258a23c1}{Hwc\+Service\+\_\+\+Display\+\_\+\+Enable\+Blank}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}} blank)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_affdbd5dfd8c5520751ff39a5e82c42ee}{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Color\+Param}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}} color)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_abea8e630b6e3b7341eea68bbb18f9380}{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Deinterlace\+Param}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_aa7a575f6b43e2683d053f355baee25f7}{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Color\+Param}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}} color, float $\ast$value, float $\ast$startvalue, float $\ast$endvalue)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a8adcae611e4dacfccc64e026a18c96b4}{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Color\+Param}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}} color, float value)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a8950096d4a65678114099d067c9aa881}{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Deinterlace\+Param}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, uint32\+\_\+t mode)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_afc11e204a9a1e90c9a741ebe4ad67de2}{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Available\+Modes}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, std\+::vector$<$ \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $>$ \&p\+Mode\+List)
+\begin{DoxyCompactList}\small\item\em query all available modes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_ade48267d8ce8cfe56de4344d99e67fc4}{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Mode}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $\ast$p\+Mode)
+\begin{DoxyCompactList}\small\item\em get current mode \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a895e5f54f3fcaadc37dcf34bbfc87d15}{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Set\+Mode}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, const uint32\+\_\+t config)
+\begin{DoxyCompactList}\small\item\em set mode \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a39c762642428ed1b8f2488f8641e10ad}{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}} content\+\_\+type)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a2f92ba97618729b4c1de0eec71037f39}{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}} content\+\_\+type)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a1f9c29347152f491d89f11da67e82ffc}{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t display)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a7867ed6ec60cda914d3b52a4e026fb48}{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_ac791620c031163bd16b56b0f2c0a5395}{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+Encrypted\+Session}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t session\+ID, uint32\+\_\+t instance\+ID)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a845ac303b6417c107387b296206e428c}{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+Encrypted\+Session}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t session\+ID)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a494eec9e73ec928d8365dc7c08ed3eca}{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+All\+Encrypted\+Sessions}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}} \mbox{\hyperlink{hwcserviceapi_8h_ad22aa20249de2c74f1b2ee279c55a5f6}{Hwc\+Service\+\_\+\+Video\+\_\+\+Is\+Encrypted\+Session\+Enabled}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, uint32\+\_\+t session\+ID, uint32\+\_\+t instance\+ID)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a9d558b3db38b1478c717ea38b723369c}{Hwc\+Service\+\_\+\+Video\+\_\+\+Set\+Optimization\+Mode}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, \mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{E\+Hwcs\+Optimization\+Mode}} mode)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a9c4b24af69acc9d9e1c486a6d1c58f35}{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+State}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, int64\+\_\+t video\+Session\+ID, \mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}} is\+Prepared)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_af83cefcbc1e6b08282d3e2e9880c1751}{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+F\+PS}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, int64\+\_\+t video\+Session\+ID, int32\+\_\+t fps)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a4a9d4055ebd1044b90a0c01ba6fdc8ed}{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Input\+State}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, \mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}} state)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_a282f30800337c79733b0e6097293986c}{Hwc\+Service\+\_\+\+Widi\+\_\+\+Get\+Single\+Display}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, \mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}} $\ast$enable)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{hwcserviceapi_8h_aa4bd5a422580b176028eef84e04b7b49}{Hwc\+Service\+\_\+\+Widi\+\_\+\+Set\+Single\+Display}} (\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} hwcs, \mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}} enable)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hwcserviceapi_8h_aa755f0dd6df8b3f0b914b3b2432d00b5}\label{hwcserviceapi_8h_aa755f0dd6df8b3f0b914b3b2432d00b5}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+V\+E\+R\+S\+I\+ON@{H\+W\+C\+S\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{H\+W\+C\+S\+\_\+\+V\+E\+R\+S\+I\+ON@{H\+W\+C\+S\+\_\+\+V\+E\+R\+S\+I\+ON}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+V\+E\+R\+S\+I\+ON}{HWCS\_VERSION}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+V\+E\+R\+S\+I\+ON~1}
+
+
+
+Definition at line 30 of file hwcserviceapi.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}\label{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!E\+Hwcs\+Bool@{E\+Hwcs\+Bool}}
+\index{E\+Hwcs\+Bool@{E\+Hwcs\+Bool}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{E\+Hwcs\+Bool}{EHwcsBool}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37}{\+\_\+\+E\+Hwcs\+Bool}}  \mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}}}
+
+\mbox{\Hypertarget{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}\label{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!E\+Hwcs\+Color\+Control@{E\+Hwcs\+Color\+Control}}
+\index{E\+Hwcs\+Color\+Control@{E\+Hwcs\+Color\+Control}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{E\+Hwcs\+Color\+Control}{EHwcsColorControl}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9}{\+\_\+\+E\+Hwcs\+Color\+Control}}  \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}
+
+\mbox{\Hypertarget{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}\label{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!E\+Hwcs\+Content\+Type@{E\+Hwcs\+Content\+Type}}
+\index{E\+Hwcs\+Content\+Type@{E\+Hwcs\+Content\+Type}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{E\+Hwcs\+Content\+Type}{EHwcsContentType}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142}{\+\_\+\+E\+Hwcs\+Content\+Type}}  \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}}
+
+\mbox{\Hypertarget{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}\label{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!E\+Hwcs\+Deinterlace\+Control@{E\+Hwcs\+Deinterlace\+Control}}
+\index{E\+Hwcs\+Deinterlace\+Control@{E\+Hwcs\+Deinterlace\+Control}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{E\+Hwcs\+Deinterlace\+Control}{EHwcsDeinterlaceControl}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8}{\+\_\+\+E\+Hwcs\+Deinterlace\+Control}}  \mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{E\+Hwcs\+Deinterlace\+Control}}}
+
+\mbox{\Hypertarget{hwcserviceapi_8h_ad50a8cea2f6a7638546937dcdcd24640}\label{hwcserviceapi_8h_ad50a8cea2f6a7638546937dcdcd24640}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!E\+Hwcs\+Mode\+Aspect\+Ratio@{E\+Hwcs\+Mode\+Aspect\+Ratio}}
+\index{E\+Hwcs\+Mode\+Aspect\+Ratio@{E\+Hwcs\+Mode\+Aspect\+Ratio}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{E\+Hwcs\+Mode\+Aspect\+Ratio}{EHwcsModeAspectRatio}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76}{\+\_\+\+E\+Hwcs\+Mode\+Aspect\+Ratio}}  \mbox{\hyperlink{hwcserviceapi_8h_ad50a8cea2f6a7638546937dcdcd24640}{E\+Hwcs\+Mode\+Aspect\+Ratio}}}
+
+Enumerations for common aspect ratios Any ratio can be supported, with the upper 16 bits containing one dimension, the lower 16 bits contains the lower dimension \mbox{\Hypertarget{hwcserviceapi_8h_a648e82dbabaf7ed3b0ff644f0fe30134}\label{hwcserviceapi_8h_a648e82dbabaf7ed3b0ff644f0fe30134}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!E\+Hwcs\+Mode\+Flags@{E\+Hwcs\+Mode\+Flags}}
+\index{E\+Hwcs\+Mode\+Flags@{E\+Hwcs\+Mode\+Flags}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{E\+Hwcs\+Mode\+Flags}{EHwcsModeFlags}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71}{\+\_\+\+E\+Hwcs\+Mode\+Flags}}  \mbox{\hyperlink{hwcserviceapi_8h_a648e82dbabaf7ed3b0ff644f0fe30134}{E\+Hwcs\+Mode\+Flags}}}
+
+\mbox{\Hypertarget{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}\label{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!E\+Hwcs\+Optimization\+Mode@{E\+Hwcs\+Optimization\+Mode}}
+\index{E\+Hwcs\+Optimization\+Mode@{E\+Hwcs\+Optimization\+Mode}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{E\+Hwcs\+Optimization\+Mode}{EHwcsOptimizationMode}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58}{\+\_\+\+E\+Hwcs\+Optimization\+Mode}}  \mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{E\+Hwcs\+Optimization\+Mode}}}
+
+\mbox{\Hypertarget{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}\label{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!E\+Hwcs\+Scaling\+Mode@{E\+Hwcs\+Scaling\+Mode}}
+\index{E\+Hwcs\+Scaling\+Mode@{E\+Hwcs\+Scaling\+Mode}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{E\+Hwcs\+Scaling\+Mode}{EHwcsScalingMode}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1}{\+\_\+\+E\+Hwcs\+Scaling\+Mode}}  \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}}}
+
+\mbox{\Hypertarget{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}\label{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwcs\+Display\+Mode\+Info@{Hwcs\+Display\+Mode\+Info}}
+\index{Hwcs\+Display\+Mode\+Info@{Hwcs\+Display\+Mode\+Info}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwcs\+Display\+Mode\+Info}{HwcsDisplayModeInfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__HwcsDisplayModeInfo}{\+\_\+\+Hwcs\+Display\+Mode\+Info}}  \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}}}
+
+\mbox{\Hypertarget{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}\label{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+H\+A\+N\+D\+LE@{H\+W\+C\+S\+H\+A\+N\+D\+LE}}
+\index{H\+W\+C\+S\+H\+A\+N\+D\+LE@{H\+W\+C\+S\+H\+A\+N\+D\+LE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+H\+A\+N\+D\+LE}{HWCSHANDLE}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}
+
+
+
+Definition at line 32 of file hwcserviceapi.\+h.
+
+\mbox{\Hypertarget{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}\label{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!status\+\_\+t@{status\+\_\+t}}
+\index{status\+\_\+t@{status\+\_\+t}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{status\+\_\+t}{status\_t}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}}}
+
+
+
+Definition at line 39 of file hwcserviceapi.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55b}\label{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+M\+A\+X\+\_\+\+O\+V\+E\+R\+S\+C\+AN@{H\+W\+C\+S\+\_\+\+M\+A\+X\+\_\+\+O\+V\+E\+R\+S\+C\+AN}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+M\+A\+X\+\_\+\+O\+V\+E\+R\+S\+C\+AN@{H\+W\+C\+S\+\_\+\+M\+A\+X\+\_\+\+O\+V\+E\+R\+S\+C\+AN}}}\mbox{\Hypertarget{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55ba0d3068e4f31603793a86ac1479935af3}\label{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55ba0d3068e4f31603793a86ac1479935af3}} 
+H\+W\+C\+S\+\_\+\+M\+A\+X\+\_\+\+O\+V\+E\+R\+S\+C\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+O\+V\+E\+R\+S\+C\+A\+N\+\_\+\+R\+A\+N\+GE@{H\+W\+C\+S\+\_\+\+O\+V\+E\+R\+S\+C\+A\+N\+\_\+\+R\+A\+N\+GE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+O\+V\+E\+R\+S\+C\+A\+N\+\_\+\+R\+A\+N\+GE@{H\+W\+C\+S\+\_\+\+O\+V\+E\+R\+S\+C\+A\+N\+\_\+\+R\+A\+N\+GE}}}\mbox{\Hypertarget{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55ba608e6a23b6f025af3147af93cc61d130}\label{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55ba608e6a23b6f025af3147af93cc61d130}} 
+H\+W\+C\+S\+\_\+\+O\+V\+E\+R\+S\+C\+A\+N\+\_\+\+R\+A\+N\+GE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 49 of file hwcserviceapi.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49      \{}
+\DoxyCodeLine{50   \mbox{\hyperlink{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55ba0d3068e4f31603793a86ac1479935af3}{HWCS\_MAX\_OVERSCAN}} = 100,   \textcolor{comment}{// The limit of the control parameters are}}
+\DoxyCodeLine{51                              \textcolor{comment}{// +/-HWCS\_MAX\_OVERSCAN inclusive.}}
+\DoxyCodeLine{52   \mbox{\hyperlink{hwcserviceapi_8h_a06fc87d81c62e9abb8790b6e5713c55ba608e6a23b6f025af3147af93cc61d130}{HWCS\_OVERSCAN\_RANGE}} = 15,  \textcolor{comment}{// HWCS\_OVERSCAN\_RANGE describes the \% of the}}
+\DoxyCodeLine{53                              \textcolor{comment}{// display size a max control setting will adjust}}
+\DoxyCodeLine{54                              \textcolor{comment}{// by.}}
+\DoxyCodeLine{55 \};}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37}\label{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!\+\_\+\+E\+Hwcs\+Bool@{\+\_\+\+E\+Hwcs\+Bool}}
+\index{\+\_\+\+E\+Hwcs\+Bool@{\+\_\+\+E\+Hwcs\+Bool}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+Hwcs\+Bool}{\_EHwcsBool}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37}{\+\_\+\+E\+Hwcs\+Bool}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+F\+A\+L\+SE@{H\+W\+C\+S\+\_\+\+F\+A\+L\+SE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+F\+A\+L\+SE@{H\+W\+C\+S\+\_\+\+F\+A\+L\+SE}}}\mbox{\Hypertarget{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37a11d8e71cb8f69c2133de2171c172f012}\label{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37a11d8e71cb8f69c2133de2171c172f012}} 
+H\+W\+C\+S\+\_\+\+F\+A\+L\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+T\+R\+UE@{H\+W\+C\+S\+\_\+\+T\+R\+UE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+T\+R\+UE@{H\+W\+C\+S\+\_\+\+T\+R\+UE}}}\mbox{\Hypertarget{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37aa8068872066720ad4a79932d1e93d29b}\label{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37aa8068872066720ad4a79932d1e93d29b}} 
+H\+W\+C\+S\+\_\+\+T\+R\+UE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 34 of file hwcserviceapi.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                         \{}
+\DoxyCodeLine{35   \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37a11d8e71cb8f69c2133de2171c172f012}{HWCS\_FALSE}} = 0,}
+\DoxyCodeLine{36   \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37aa8068872066720ad4a79932d1e93d29b}{HWCS\_TRUE}} = 1,}
+\DoxyCodeLine{37 \} \mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{EHwcsBool}};}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9}\label{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!\+\_\+\+E\+Hwcs\+Color\+Control@{\+\_\+\+E\+Hwcs\+Color\+Control}}
+\index{\+\_\+\+E\+Hwcs\+Color\+Control@{\+\_\+\+E\+Hwcs\+Color\+Control}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+Hwcs\+Color\+Control}{\_EHwcsColorControl}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9}{\+\_\+\+E\+Hwcs\+Color\+Control}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+SS@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+SS}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+SS@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+SS}}}\mbox{\Hypertarget{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9af9eaa70566b84b6163af36f48ccb2743}\label{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9af9eaa70566b84b6163af36f48ccb2743}} 
+H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+SS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+N\+T\+R\+A\+ST@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+N\+T\+R\+A\+ST}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+N\+T\+R\+A\+ST@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+N\+T\+R\+A\+ST}}}\mbox{\Hypertarget{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a57e070e45176356d2bfc62d1d59f1012}\label{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a57e070e45176356d2bfc62d1d59f1012}} 
+H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+N\+T\+R\+A\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+A\+M\+MA@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+A\+M\+MA}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+A\+M\+MA@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+A\+M\+MA}}}\mbox{\Hypertarget{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a65d8b859e37576230fc8af925f7eccc6}\label{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a65d8b859e37576230fc8af925f7eccc6}} 
+H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+A\+M\+MA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+A\+T\+U\+R\+A\+T\+I\+ON@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+A\+T\+U\+R\+A\+T\+I\+ON}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+A\+T\+U\+R\+A\+T\+I\+ON@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+A\+T\+U\+R\+A\+T\+I\+ON}}}\mbox{\Hypertarget{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a1ba29b6ff917e1f37f94bba04857def4}\label{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a1ba29b6ff917e1f37f94bba04857def4}} 
+H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+A\+T\+U\+R\+A\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+H\+UE@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+H\+UE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+H\+UE@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+H\+UE}}}\mbox{\Hypertarget{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a8592c707e8c00c92623cd8d497658dbf}\label{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a8592c707e8c00c92623cd8d497658dbf}} 
+H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+H\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+H\+A\+RP@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+H\+A\+RP}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+H\+A\+RP@{H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+H\+A\+RP}}}\mbox{\Hypertarget{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a75eddedd091233f7cb4ee969ebedbac5}\label{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a75eddedd091233f7cb4ee969ebedbac5}} 
+H\+W\+C\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+H\+A\+RP&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 97 of file hwcserviceapi.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97                                 \{}
+\DoxyCodeLine{98   \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9af9eaa70566b84b6163af36f48ccb2743}{HWCS\_COLOR\_BRIGHTNESS}},}
+\DoxyCodeLine{99   \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a57e070e45176356d2bfc62d1d59f1012}{HWCS\_COLOR\_CONTRAST}},}
+\DoxyCodeLine{100   \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a65d8b859e37576230fc8af925f7eccc6}{HWCS\_COLOR\_GAMMA}},}
+\DoxyCodeLine{101   \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a1ba29b6ff917e1f37f94bba04857def4}{HWCS\_COLOR\_SATURATION}},}
+\DoxyCodeLine{102   \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a8592c707e8c00c92623cd8d497658dbf}{HWCS\_COLOR\_HUE}},}
+\DoxyCodeLine{103   \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a75eddedd091233f7cb4ee969ebedbac5}{HWCS\_COLOR\_SHARP}},}
+\DoxyCodeLine{104 \} \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{EHwcsColorControl}};}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142}\label{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!\+\_\+\+E\+Hwcs\+Content\+Type@{\+\_\+\+E\+Hwcs\+Content\+Type}}
+\index{\+\_\+\+E\+Hwcs\+Content\+Type@{\+\_\+\+E\+Hwcs\+Content\+Type}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+Hwcs\+Content\+Type}{\_EHwcsContentType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142}{\+\_\+\+E\+Hwcs\+Content\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E0@{H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E0}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E0@{H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E0}}}\mbox{\Hypertarget{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142abb45aa3fb0c853d7d55d84e149c05145}\label{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142abb45aa3fb0c853d7d55d84e149c05145}} 
+H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E1@{H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E1}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E1@{H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E1}}}\mbox{\Hypertarget{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142af0fc741639c5bd530c1d21db89198688}\label{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142af0fc741639c5bd530c1d21db89198688}} 
+H\+W\+C\+S\+\_\+\+C\+P\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E1&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 115 of file hwcserviceapi.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115                                \{}
+\DoxyCodeLine{116   \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142abb45aa3fb0c853d7d55d84e149c05145}{HWCS\_CP\_CONTENT\_TYPE0}},  \textcolor{comment}{// Can support any HDCP specifiction.}}
+\DoxyCodeLine{117   \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142af0fc741639c5bd530c1d21db89198688}{HWCS\_CP\_CONTENT\_TYPE1}},  \textcolor{comment}{// Can support only HDCP 2.2 and higher specification.}}
+\DoxyCodeLine{118 \} \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{EHwcsContentType}};}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8}\label{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!\+\_\+\+E\+Hwcs\+Deinterlace\+Control@{\+\_\+\+E\+Hwcs\+Deinterlace\+Control}}
+\index{\+\_\+\+E\+Hwcs\+Deinterlace\+Control@{\+\_\+\+E\+Hwcs\+Deinterlace\+Control}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+Hwcs\+Deinterlace\+Control}{\_EHwcsDeinterlaceControl}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8}{\+\_\+\+E\+Hwcs\+Deinterlace\+Control}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+N\+O\+NE@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+N\+O\+NE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+N\+O\+NE@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a01b32c5d4110d574b52317262ebd1331}\label{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a01b32c5d4110d574b52317262ebd1331}} 
+H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+B\+OB@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+B\+OB}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+B\+OB@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+B\+OB}}}\mbox{\Hypertarget{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a4ffd8300a639c567676b412aa03318b6}\label{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a4ffd8300a639c567676b412aa03318b6}} 
+H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+B\+OB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+W\+E\+A\+VE@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+W\+E\+A\+VE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+W\+E\+A\+VE@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+W\+E\+A\+VE}}}\mbox{\Hypertarget{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8ad2f195e47b5cac30a65b93d61f56414d}\label{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8ad2f195e47b5cac30a65b93d61f56414d}} 
+H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+W\+E\+A\+VE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+A\+D\+A\+P\+T\+I\+VE@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+A\+D\+A\+P\+T\+I\+VE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+A\+D\+A\+P\+T\+I\+VE@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+A\+D\+A\+P\+T\+I\+VE}}}\mbox{\Hypertarget{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a66086075439dbc172d22d2b4d379fbdc}\label{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a66086075439dbc172d22d2b4d379fbdc}} 
+H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+A\+D\+A\+P\+T\+I\+VE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+C\+O\+M\+P\+E\+N\+S\+A\+T\+ED@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+C\+O\+M\+P\+E\+N\+S\+A\+T\+ED}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+C\+O\+M\+P\+E\+N\+S\+A\+T\+ED@{H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+C\+O\+M\+P\+E\+N\+S\+A\+T\+ED}}}\mbox{\Hypertarget{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a17f001e04037aaa2fdb85ac65d0a5fc7}\label{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a17f001e04037aaa2fdb85ac65d0a5fc7}} 
+H\+W\+C\+S\+\_\+\+D\+E\+I\+N\+T\+E\+R\+L\+A\+C\+E\+\_\+\+M\+O\+T\+I\+O\+N\+C\+O\+M\+P\+E\+N\+S\+A\+T\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 106 of file hwcserviceapi.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106                                       \{}
+\DoxyCodeLine{107   \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a01b32c5d4110d574b52317262ebd1331}{HWCS\_DEINTERLACE\_NONE}},}
+\DoxyCodeLine{108   \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a4ffd8300a639c567676b412aa03318b6}{HWCS\_DEINTERLACE\_BOB}},}
+\DoxyCodeLine{109   \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8ad2f195e47b5cac30a65b93d61f56414d}{HWCS\_DEINTERLACE\_WEAVE}},}
+\DoxyCodeLine{110   \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a66086075439dbc172d22d2b4d379fbdc}{HWCS\_DEINTERLACE\_MOTIONADAPTIVE}},}
+\DoxyCodeLine{111   \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a17f001e04037aaa2fdb85ac65d0a5fc7}{HWCS\_DEINTERLACE\_MOTIONCOMPENSATED}},}
+\DoxyCodeLine{112 \} \mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{EHwcsDeinterlaceControl}};}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76}\label{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!\+\_\+\+E\+Hwcs\+Mode\+Aspect\+Ratio@{\+\_\+\+E\+Hwcs\+Mode\+Aspect\+Ratio}}
+\index{\+\_\+\+E\+Hwcs\+Mode\+Aspect\+Ratio@{\+\_\+\+E\+Hwcs\+Mode\+Aspect\+Ratio}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+Hwcs\+Mode\+Aspect\+Ratio}{\_EHwcsModeAspectRatio}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76}{\+\_\+\+E\+Hwcs\+Mode\+Aspect\+Ratio}}}
+
+Enumerations for common aspect ratios Any ratio can be supported, with the upper 16 bits containing one dimension, the lower 16 bits contains the lower dimension \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+\+A\+NY@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+\+A\+NY}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+\+A\+NY@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+\+A\+NY}}}\mbox{\Hypertarget{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76a83ed2a9cade907bbb84c0590ebb9cc00}\label{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76a83ed2a9cade907bbb84c0590ebb9cc00}} 
+H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+\+A\+NY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+4\+\_\+3@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+4\+\_\+3}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+4\+\_\+3@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+4\+\_\+3}}}\mbox{\Hypertarget{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76a330b5b10ffe86f4c6c5cb403a531bc9d}\label{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76a330b5b10ffe86f4c6c5cb403a531bc9d}} 
+H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+4\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+16\+\_\+9@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+16\+\_\+9}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+16\+\_\+9@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+16\+\_\+9}}}\mbox{\Hypertarget{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76ab6fd054d9d52326a0dd64050f0ce7d9b}\label{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76ab6fd054d9d52326a0dd64050f0ce7d9b}} 
+H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+I\+O\+\_\+16\+\_\+9&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 147 of file hwcserviceapi.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{147                                    \{}
+\DoxyCodeLine{148   \mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76a83ed2a9cade907bbb84c0590ebb9cc00}{HWCS\_MODE\_ASPECT\_RATIO\_ANY}} = 0x00000000,}
+\DoxyCodeLine{149   \mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76a330b5b10ffe86f4c6c5cb403a531bc9d}{HWCS\_MODE\_ASPECT\_RATIO\_4\_3}} = 0x00040003,}
+\DoxyCodeLine{150   \mbox{\hyperlink{hwcserviceapi_8h_a663c3570091d421c15e164c187b01c76ab6fd054d9d52326a0dd64050f0ce7d9b}{HWCS\_MODE\_ASPECT\_RATIO\_16\_9}} = 0x00100009,}
+\DoxyCodeLine{151 \} \mbox{\hyperlink{hwcserviceapi_8h_ad50a8cea2f6a7638546937dcdcd24640}{EHwcsModeAspectRatio}};}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71}\label{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!\+\_\+\+E\+Hwcs\+Mode\+Flags@{\+\_\+\+E\+Hwcs\+Mode\+Flags}}
+\index{\+\_\+\+E\+Hwcs\+Mode\+Flags@{\+\_\+\+E\+Hwcs\+Mode\+Flags}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+Hwcs\+Mode\+Flags}{\_EHwcsModeFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71}{\+\_\+\+E\+Hwcs\+Mode\+Flags}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71a58022c1410862e0b9d1adf4948bdd909}\label{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71a58022c1410862e0b9d1adf4948bdd909}} 
+H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED}}}\mbox{\Hypertarget{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71a14cb006261ca9e714bc4811a7e090f2b}\label{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71a14cb006261ca9e714bc4811a7e090f2b}} 
+H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+S\+E\+C\+U\+RE@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+S\+E\+C\+U\+RE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+S\+E\+C\+U\+RE@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+S\+E\+C\+U\+RE}}}\mbox{\Hypertarget{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71af7e324ed360603c92bea72410694e6f3}\label{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71af7e324ed360603c92bea72410694e6f3}} 
+H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+S\+E\+C\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+T\+E\+R\+L\+A\+C\+ED@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+T\+E\+R\+L\+A\+C\+ED}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+T\+E\+R\+L\+A\+C\+ED@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+T\+E\+R\+L\+A\+C\+ED}}}\mbox{\Hypertarget{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71ad5140a3d816ae1f7d5ab73029d92f12e}\label{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71ad5140a3d816ae1f7d5ab73029d92f12e}} 
+H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+T\+E\+R\+L\+A\+C\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+U\+R\+R\+E\+NT@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+U\+R\+R\+E\+NT}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+U\+R\+R\+E\+NT@{H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+U\+R\+R\+E\+NT}}}\mbox{\Hypertarget{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71aaac27168465df2674c179c7c2216cee2}\label{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71aaac27168465df2674c179c7c2216cee2}} 
+H\+W\+C\+S\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+U\+R\+R\+E\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 136 of file hwcserviceapi.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{136                              \{}
+\DoxyCodeLine{137   \mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71a58022c1410862e0b9d1adf4948bdd909}{HWCS\_MODE\_FLAG\_NONE}} = 0,}
+\DoxyCodeLine{138   \mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71a14cb006261ca9e714bc4811a7e090f2b}{HWCS\_MODE\_FLAG\_PREFERRED}} = 1 << 0,}
+\DoxyCodeLine{139   \mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71af7e324ed360603c92bea72410694e6f3}{HWCS\_MODE\_FLAG\_SECURE}} = 1 << 1,}
+\DoxyCodeLine{140   \mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71ad5140a3d816ae1f7d5ab73029d92f12e}{HWCS\_MODE\_FLAG\_INTERLACED}} = 1 << 2,}
+\DoxyCodeLine{141   \mbox{\hyperlink{hwcserviceapi_8h_a27cdb2ed673649cb04334a9ed1380e71aaac27168465df2674c179c7c2216cee2}{HWCS\_MODE\_FLAG\_CURRENT}} = 1 << 4,}
+\DoxyCodeLine{142 \} \mbox{\hyperlink{hwcserviceapi_8h_a648e82dbabaf7ed3b0ff644f0fe30134}{EHwcsModeFlags}};}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58}\label{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!\+\_\+\+E\+Hwcs\+Optimization\+Mode@{\+\_\+\+E\+Hwcs\+Optimization\+Mode}}
+\index{\+\_\+\+E\+Hwcs\+Optimization\+Mode@{\+\_\+\+E\+Hwcs\+Optimization\+Mode}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+Hwcs\+Optimization\+Mode}{\_EHwcsOptimizationMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58}{\+\_\+\+E\+Hwcs\+Optimization\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+N\+O\+R\+M\+AL@{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+N\+O\+R\+M\+AL}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+N\+O\+R\+M\+AL@{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+N\+O\+R\+M\+AL}}}\mbox{\Hypertarget{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58a410bfe259d70975cc9a5098758309844}\label{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58a410bfe259d70975cc9a5098758309844}} 
+H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+N\+O\+R\+M\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+V\+I\+D\+EO@{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+V\+I\+D\+EO}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+V\+I\+D\+EO@{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+V\+I\+D\+EO}}}\mbox{\Hypertarget{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58aa5a32c6ce963542e389df46515ef66fa}\label{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58aa5a32c6ce963542e389df46515ef66fa}} 
+H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+V\+I\+D\+EO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+C\+A\+M\+E\+RA@{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+C\+A\+M\+E\+RA}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+C\+A\+M\+E\+RA@{H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+C\+A\+M\+E\+RA}}}\mbox{\Hypertarget{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58ac5fa165b65844b565e32afdd2083eeb8}\label{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58ac5fa165b65844b565e32afdd2083eeb8}} 
+H\+W\+C\+S\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+C\+A\+M\+E\+RA&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 246 of file hwcserviceapi.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{246                                     \{}
+\DoxyCodeLine{247   \mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58a410bfe259d70975cc9a5098758309844}{HWCS\_OPTIMIZE\_NORMAL}},}
+\DoxyCodeLine{248   \mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58aa5a32c6ce963542e389df46515ef66fa}{HWCS\_OPTIMIZE\_VIDEO}},}
+\DoxyCodeLine{249   \mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58ac5fa165b65844b565e32afdd2083eeb8}{HWCS\_OPTIMIZE\_CAMERA}},}
+\DoxyCodeLine{250 \} \mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{EHwcsOptimizationMode}};}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1}\label{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!\+\_\+\+E\+Hwcs\+Scaling\+Mode@{\+\_\+\+E\+Hwcs\+Scaling\+Mode}}
+\index{\+\_\+\+E\+Hwcs\+Scaling\+Mode@{\+\_\+\+E\+Hwcs\+Scaling\+Mode}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+Hwcs\+Scaling\+Mode}{\_EHwcsScalingMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1}{\+\_\+\+E\+Hwcs\+Scaling\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+C\+E\+N\+T\+RE@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+C\+E\+N\+T\+RE}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+C\+E\+N\+T\+RE@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+C\+E\+N\+T\+RE}}}\mbox{\Hypertarget{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a96c7d625ff253e13f1575381983bd403}\label{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a96c7d625ff253e13f1575381983bd403}} 
+H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+C\+E\+N\+T\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+T\+R\+E\+T\+CH@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+T\+R\+E\+T\+CH}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+T\+R\+E\+T\+CH@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+T\+R\+E\+T\+CH}}}\mbox{\Hypertarget{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a960e072718da429448f6589acae0bc52}\label{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a960e072718da429448f6589acae0bc52}} 
+H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+T\+R\+E\+T\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+IT@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+IT}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+IT@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+IT}}}\mbox{\Hypertarget{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a9b6ca8b97bd4a138d2c4d434655ba24d}\label{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a9b6ca8b97bd4a138d2c4d434655ba24d}} 
+H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+I\+LL@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+I\+LL}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+I\+LL@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+I\+LL}}}\mbox{\Hypertarget{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1adf38586562338ace55aecf9cd926474c}\label{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1adf38586562338ace55aecf9cd926474c}} 
+H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+F\+I\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+M\+A\+X\+\_\+\+E\+N\+UM@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+M\+A\+X\+\_\+\+E\+N\+UM}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+M\+A\+X\+\_\+\+E\+N\+UM@{H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+M\+A\+X\+\_\+\+E\+N\+UM}}}\mbox{\Hypertarget{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a2cdc0010ea4bdd4cd3756e67f7e64d27}\label{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a2cdc0010ea4bdd4cd3756e67f7e64d27}} 
+H\+W\+C\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+M\+A\+X\+\_\+\+E\+N\+UM&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 68 of file hwcserviceapi.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                \{}
+\DoxyCodeLine{69   \mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a96c7d625ff253e13f1575381983bd403}{HWCS\_SCALE\_CENTRE}} =}
+\DoxyCodeLine{70       0,               \textcolor{comment}{// Present the content centred at 1:1 source resolution.}}
+\DoxyCodeLine{71   \mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a960e072718da429448f6589acae0bc52}{HWCS\_SCALE\_STRETCH}},  \textcolor{comment}{// Do not preserve aspect ratio - scale to fill the}}
+\DoxyCodeLine{72                        \textcolor{comment}{// display without cropping.}}
+\DoxyCodeLine{73   \mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a9b6ca8b97bd4a138d2c4d434655ba24d}{HWCS\_SCALE\_FIT}},      \textcolor{comment}{// Preserve aspect ratio - scale to closest edge (may be}}
+\DoxyCodeLine{74                        \textcolor{comment}{// letterboxed or pillarboxed).}}
+\DoxyCodeLine{75   \mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1adf38586562338ace55aecf9cd926474c}{HWCS\_SCALE\_FILL}},     \textcolor{comment}{// Preserve aspect ratio - scale to fill the display (may}}
+\DoxyCodeLine{76                        \textcolor{comment}{// crop the content).}}
+\DoxyCodeLine{77   \mbox{\hyperlink{hwcserviceapi_8h_ad4b6f7ee9b8ba932ea9308645ac64ee1a2cdc0010ea4bdd4cd3756e67f7e64d27}{HWCS\_SCALE\_MAX\_ENUM}}  \textcolor{comment}{// End of enum.}}
+\DoxyCodeLine{78 \} \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{EHwcsScalingMode}};}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{hwcserviceapi_8h_aef64c719bf0fd204b2ac846cdf1785b0}\label{hwcserviceapi_8h_aef64c719bf0fd204b2ac846cdf1785b0}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Connect@{Hwc\+Service\+\_\+\+Connect}}
+\index{Hwc\+Service\+\_\+\+Connect@{Hwc\+Service\+\_\+\+Connect}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Connect()}{HwcService\_Connect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}} Hwc\+Service\+\_\+\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                 \{}
+\DoxyCodeLine{40   ProcessState::self()}
+\DoxyCodeLine{41       ->startThreadPool();  \textcolor{comment}{// Required for starting binder threads}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43   \mbox{\hyperlink{structHwcsContext}{HwcsContext}} context;}
+\DoxyCodeLine{44   context.\mbox{\hyperlink{structHwcsContext_abf6c1271671afe3edc9b193df2fa320d}{mHwcService}} = interface\_cast<\mbox{\hyperlink{classhwcomposer_1_1IService}{IService}}>(}
+\DoxyCodeLine{45       defaultServiceManager()->getService(String16(\mbox{\hyperlink{iservice_8h_a03d122faa3f4367040f301a1a6d90091}{IA\_HWC\_SERVICE\_NAME}})));}
+\DoxyCodeLine{46   \textcolor{keywordflow}{if} (context.\mbox{\hyperlink{structHwcsContext_abf6c1271671afe3edc9b193df2fa320d}{mHwcService}} == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{48   \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50   context.\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}} = context.\mbox{\hyperlink{structHwcsContext_abf6c1271671afe3edc9b193df2fa320d}{mHwcService}}->GetControls();}
+\DoxyCodeLine{51   \textcolor{keywordflow}{if} (context.\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}} == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{53   \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{structHwcsContext}{HwcsContext}}(context);}
+\DoxyCodeLine{56 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a2d3ca18881c7bba975cf9897ed520061}\label{hwcserviceapi_8h_a2d3ca18881c7bba975cf9897ed520061}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Disconnect@{Hwc\+Service\+\_\+\+Disconnect}}
+\index{Hwc\+Service\+\_\+\+Disconnect@{Hwc\+Service\+\_\+\+Disconnect}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Disconnect()}{HwcService\_Disconnect()}}
+{\footnotesize\ttfamily void Hwc\+Service\+\_\+\+Disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                                             \{}
+\DoxyCodeLine{59   \textcolor{keywordflow}{if} (hwcs != \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{60     \textcolor{keyword}{delete} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{61   \}}
+\DoxyCodeLine{62 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_aec013df302fe1142c52e91e6258a23c1}\label{hwcserviceapi_8h_aec013df302fe1142c52e91e6258a23c1}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Enable\+Blank@{Hwc\+Service\+\_\+\+Display\+\_\+\+Enable\+Blank}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Enable\+Blank@{Hwc\+Service\+\_\+\+Display\+\_\+\+Enable\+Blank}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Enable\+Blank()}{HwcService\_Display\_EnableBlank()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Enable\+Blank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}}}]{blank }\end{DoxyParamCaption})}
+
+
+
+Definition at line 114 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115                                                          \{}
+\DoxyCodeLine{116   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{117   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{118     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{119   \}}
+\DoxyCodeLine{120   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplayEnableBlank(display, blank);}
+\DoxyCodeLine{121 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_aa7a575f6b43e2683d053f355baee25f7}\label{hwcserviceapi_8h_aa7a575f6b43e2683d053f355baee25f7}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Color\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Color\+Param}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Color\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Color\+Param}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Color\+Param()}{HwcService\_Display\_GetColorParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Color\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}]{color,  }\item[{float $\ast$}]{value,  }\item[{float $\ast$}]{startvalue,  }\item[{float $\ast$}]{endvalue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 142 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{144                                                                               \{}
+\DoxyCodeLine{145   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{146   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{147     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{148   \}}
+\DoxyCodeLine{149   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplayGetColorParam(display, color, value,}
+\DoxyCodeLine{150                                                    startvalue, endvalue);}
+\DoxyCodeLine{151 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_afb6ccb74db5380963898acbcefa6ffef}\label{hwcserviceapi_8h_afb6ccb74db5380963898acbcefa6ffef}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Overscan@{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Overscan}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Overscan@{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Overscan}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Overscan()}{HwcService\_Display\_GetOverscan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Overscan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{int32\+\_\+t $\ast$}]{xoverscan,  }\item[{int32\+\_\+t $\ast$}]{yoverscan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                                                             \{}
+\DoxyCodeLine{89   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{90   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{91     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{92   \}}
+\DoxyCodeLine{93   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplayGetOverscan(display, xoverscan, yoverscan);}
+\DoxyCodeLine{94 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_add41493b4309f8484e857e26c67f281c}\label{hwcserviceapi_8h_add41493b4309f8484e857e26c67f281c}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Scaling@{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Scaling}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Scaling@{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Scaling}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Scaling()}{HwcService\_Display\_GetScaling()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Get\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}} $\ast$}]{e\+Scaling\+Mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106                                                                        \{}
+\DoxyCodeLine{107   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{108   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{109     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{110   \}}
+\DoxyCodeLine{111   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplayGetScaling(display, eScalingMode);}
+\DoxyCodeLine{112 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_affdbd5dfd8c5520751ff39a5e82c42ee}\label{hwcserviceapi_8h_affdbd5dfd8c5520751ff39a5e82c42ee}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Color\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Color\+Param}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Color\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Color\+Param}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Color\+Param()}{HwcService\_Display\_RestoreDefaultColorParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Color\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line 123 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{125                                                                               \{}
+\DoxyCodeLine{126   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{127   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{128     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{129   \}}
+\DoxyCodeLine{130   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplayRestoreDefaultColorParam(display, color);}
+\DoxyCodeLine{131 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_abea8e630b6e3b7341eea68bbb18f9380}\label{hwcserviceapi_8h_abea8e630b6e3b7341eea68bbb18f9380}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Deinterlace\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Deinterlace\+Param}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Deinterlace\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Deinterlace\+Param}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Deinterlace\+Param()}{HwcService\_Display\_RestoreDefaultDeinterlaceParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Restore\+Default\+Deinterlace\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 133 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134                                                                              \{}
+\DoxyCodeLine{135   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{136   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{137     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{138   \}}
+\DoxyCodeLine{139   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplayRestoreDefaultDeinterlaceParam(display);}
+\DoxyCodeLine{140 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a8adcae611e4dacfccc64e026a18c96b4}\label{hwcserviceapi_8h_a8adcae611e4dacfccc64e026a18c96b4}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Color\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Color\+Param}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Color\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Color\+Param}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Color\+Param()}{HwcService\_Display\_SetColorParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Color\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}]{color,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 153 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{155                                                        \{}
+\DoxyCodeLine{156   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{157   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{158     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{159   \}}
+\DoxyCodeLine{160   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplaySetColorParam(display, color, value);}
+\DoxyCodeLine{161 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a8950096d4a65678114099d067c9aa881}\label{hwcserviceapi_8h_a8950096d4a65678114099d067c9aa881}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Deinterlace\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Deinterlace\+Param}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Deinterlace\+Param@{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Deinterlace\+Param}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Deinterlace\+Param()}{HwcService\_Display\_SetDeinterlaceParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Deinterlace\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{uint32\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 163 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{165                                                                \{}
+\DoxyCodeLine{166   \mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{EHwcsDeinterlaceControl}} de\_mode;}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168   \textcolor{keywordflow}{switch} (mode) \{}
+\DoxyCodeLine{169     \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{170       de\_mode = \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a01b32c5d4110d574b52317262ebd1331}{HWCS\_DEINTERLACE\_NONE}};}
+\DoxyCodeLine{171       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{172     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{173       de\_mode = \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a4ffd8300a639c567676b412aa03318b6}{HWCS\_DEINTERLACE\_BOB}};}
+\DoxyCodeLine{174       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{175     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{176       de\_mode = \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8ad2f195e47b5cac30a65b93d61f56414d}{HWCS\_DEINTERLACE\_WEAVE}};}
+\DoxyCodeLine{177       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{178     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{179       de\_mode = \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a66086075439dbc172d22d2b4d379fbdc}{HWCS\_DEINTERLACE\_MOTIONADAPTIVE}};}
+\DoxyCodeLine{180       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{181     \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{182       de\_mode = \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a17f001e04037aaa2fdb85ac65d0a5fc7}{HWCS\_DEINTERLACE\_MOTIONCOMPENSATED}};}
+\DoxyCodeLine{183       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{184     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{185       de\_mode = \mbox{\hyperlink{hwcserviceapi_8h_af1d1ea2e2e6afaca19f171416297cee8a01b32c5d4110d574b52317262ebd1331}{HWCS\_DEINTERLACE\_NONE}};}
+\DoxyCodeLine{186       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{187   \}}
+\DoxyCodeLine{188   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{189   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{190     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{191   \}}
+\DoxyCodeLine{192   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplaySetDeinterlaceParam(display, de\_mode);}
+\DoxyCodeLine{193 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a04907fdcdf1882fdc95179db91e68176}\label{hwcserviceapi_8h_a04907fdcdf1882fdc95179db91e68176}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Overscan@{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Overscan}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Overscan@{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Overscan}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Overscan()}{HwcService\_Display\_SetOverscan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Overscan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{int32\+\_\+t}]{xoverscan,  }\item[{int32\+\_\+t}]{yoverscan }\end{DoxyParamCaption})}
+
+
+
+Set overscan in the range +/-\/M\+A\+X\+\_\+\+O\+V\+E\+R\+S\+C\+AN inclusive. 
+
+
+
+Definition at line 77 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                                               \{}
+\DoxyCodeLine{79   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{80   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{81     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{82   \}}
+\DoxyCodeLine{83   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplaySetOverscan(display, xoverscan, yoverscan);}
+\DoxyCodeLine{84 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a78003256892e1ddca556006b97dc4ce6}\label{hwcserviceapi_8h_a78003256892e1ddca556006b97dc4ce6}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Scaling@{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Scaling}}
+\index{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Scaling@{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Scaling}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Scaling()}{HwcService\_Display\_SetScaling()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+\_\+\+Set\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}}}]{e\+Scaling\+Mode }\end{DoxyParamCaption})}
+
+
+
+Set scaling to one of E\+Scaling\+Mode. 
+
+
+
+Definition at line 96 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97                                                                       \{}
+\DoxyCodeLine{98   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{99   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{100     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{101   \}}
+\DoxyCodeLine{102   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplaySetScaling(display, eScalingMode);}
+\DoxyCodeLine{103 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_afc11e204a9a1e90c9a741ebe4ad67de2}\label{hwcserviceapi_8h_afc11e204a9a1e90c9a741ebe4ad67de2}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Available\+Modes@{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Available\+Modes}}
+\index{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Available\+Modes@{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Available\+Modes}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Available\+Modes()}{HwcService\_DisplayMode\_GetAvailableModes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Available\+Modes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{std\+::vector$<$ \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $>$ \&}]{p\+Mode\+List }\end{DoxyParamCaption})}
+
+
+
+query all available modes 
+
+
+
+Definition at line 195 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{197                                                \{}
+\DoxyCodeLine{198   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{199   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{200     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{201   \}}
+\DoxyCodeLine{202   pModeList = pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplayModeGetAvailableModes(display);}
+\DoxyCodeLine{203   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{204 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_ade48267d8ce8cfe56de4344d99e67fc4}\label{hwcserviceapi_8h_ade48267d8ce8cfe56de4344d99e67fc4}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Mode@{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Mode}}
+\index{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Mode@{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Mode}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Mode()}{HwcService\_DisplayMode\_GetMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Get\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $\ast$}]{p\+Mode }\end{DoxyParamCaption})}
+
+
+
+get current mode 
+
+
+
+Definition at line 206 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{207                                                                     \{}
+\DoxyCodeLine{208   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{209   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{210     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{211   \}}
+\DoxyCodeLine{212   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplayModeGetMode(display, pMode);}
+\DoxyCodeLine{213 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a895e5f54f3fcaadc37dcf34bbfc87d15}\label{hwcserviceapi_8h_a895e5f54f3fcaadc37dcf34bbfc87d15}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Set\+Mode@{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Set\+Mode}}
+\index{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Set\+Mode@{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Set\+Mode}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Set\+Mode()}{HwcService\_DisplayMode\_SetMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Display\+Mode\+\_\+\+Set\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{const uint32\+\_\+t}]{config }\end{DoxyParamCaption})}
+
+
+
+set mode 
+
+
+
+Definition at line 215 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{216                                                                \{}
+\DoxyCodeLine{217   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{218   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{219     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{220   \}}
+\DoxyCodeLine{221   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisplayModeSetMode(display, config);}
+\DoxyCodeLine{222 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a13dcced21c674448a6ebda95e352435a}\label{hwcserviceapi_8h_a13dcced21c674448a6ebda95e352435a}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Get\+Hwc\+Version@{Hwc\+Service\+\_\+\+Get\+Hwc\+Version}}
+\index{Hwc\+Service\+\_\+\+Get\+Hwc\+Version@{Hwc\+Service\+\_\+\+Get\+Hwc\+Version}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Get\+Hwc\+Version()}{HwcService\_GetHwcVersion()}}
+{\footnotesize\ttfamily const char$\ast$ Hwc\+Service\+\_\+\+Get\+Hwc\+Version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                       \{}
+\DoxyCodeLine{65   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{66   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{67     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{68   \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70   \textcolor{keyword}{static} String8 version = pContext->\mbox{\hyperlink{structHwcsContext_abf6c1271671afe3edc9b193df2fa320d}{mHwcService}}->GetHwcVersion();}
+\DoxyCodeLine{71   \textcolor{keywordflow}{if} (version.length() == 0) \{}
+\DoxyCodeLine{72     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{73   \}}
+\DoxyCodeLine{74   \textcolor{keywordflow}{return} version;}
+\DoxyCodeLine{75 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a4a9d4055ebd1044b90a0c01ba6fdc8ed}\label{hwcserviceapi_8h_a4a9d4055ebd1044b90a0c01ba6fdc8ed}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Input\+State@{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Input\+State}}
+\index{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Input\+State@{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Input\+State}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Input\+State()}{HwcService\_MDS\_UpdateInputState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Input\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line 333 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{333                                                                            \{}
+\DoxyCodeLine{334   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{335   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{336     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{337   \}}
+\DoxyCodeLine{338   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->MdsUpdateInputState(state);}
+\DoxyCodeLine{339 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_af83cefcbc1e6b08282d3e2e9880c1751}\label{hwcserviceapi_8h_af83cefcbc1e6b08282d3e2e9880c1751}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+F\+PS@{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+F\+PS}}
+\index{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+F\+PS@{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+F\+PS}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+F\+P\+S()}{HwcService\_MDS\_UpdateVideoFPS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+F\+PS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{int64\+\_\+t}]{video\+Session\+ID,  }\item[{int32\+\_\+t}]{fps }\end{DoxyParamCaption})}
+
+
+
+Definition at line 324 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{325                                                     \{}
+\DoxyCodeLine{326   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{327   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{328     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{329   \}}
+\DoxyCodeLine{330   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->MdsUpdateVideoFPS(videoSessionID, fps);}
+\DoxyCodeLine{331 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a9c4b24af69acc9d9e1c486a6d1c58f35}\label{hwcserviceapi_8h_a9c4b24af69acc9d9e1c486a6d1c58f35}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+State@{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+State}}
+\index{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+State@{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+State}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+State()}{HwcService\_MDS\_UpdateVideoState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+M\+D\+S\+\_\+\+Update\+Video\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{int64\+\_\+t}]{video\+Session\+ID,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}}}]{is\+Prepared }\end{DoxyParamCaption})}
+
+
+
+Definition at line 314 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{316                                                                \{}
+\DoxyCodeLine{317   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{318   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{319     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{320   \}}
+\DoxyCodeLine{321   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->MdsUpdateVideoState(videoSessionID, isPrepared);}
+\DoxyCodeLine{322 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a494eec9e73ec928d8365dc7c08ed3eca}\label{hwcserviceapi_8h_a494eec9e73ec928d8365dc7c08ed3eca}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+All\+Encrypted\+Sessions@{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+All\+Encrypted\+Sessions}}
+\index{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+All\+Encrypted\+Sessions@{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+All\+Encrypted\+Sessions}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+All\+Encrypted\+Sessions()}{HwcService\_Video\_DisableAllEncryptedSessions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+All\+Encrypted\+Sessions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 284 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{284                                                                        \{}
+\DoxyCodeLine{285   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{286   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{287     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{288   \}}
+\DoxyCodeLine{289   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->VideoDisableAllEncryptedSessions();}
+\DoxyCodeLine{290 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a845ac303b6417c107387b296206e428c}\label{hwcserviceapi_8h_a845ac303b6417c107387b296206e428c}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+Encrypted\+Session@{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+Encrypted\+Session}}
+\index{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+Encrypted\+Session@{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+Encrypted\+Session}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+Encrypted\+Session()}{HwcService\_Video\_DisableEncryptedSession()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+Encrypted\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{session\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line 275 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{276                                                                       \{}
+\DoxyCodeLine{277   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{278   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{279     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{280   \}}
+\DoxyCodeLine{281   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->VideoDisableAllEncryptedSessions(sessionID);}
+\DoxyCodeLine{282 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a7867ed6ec60cda914d3b52a4e026fb48}\label{hwcserviceapi_8h_a7867ed6ec60cda914d3b52a4e026fb48}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays@{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays}}
+\index{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays@{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays()}{HwcService\_Video\_DisableHDCPSession\_AllDisplays()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 255 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{255                                                                           \{}
+\DoxyCodeLine{256   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{257   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{258     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{259   \}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisableHDCPSessionForAllDisplays();}
+\DoxyCodeLine{262 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a1f9c29347152f491d89f11da67e82ffc}\label{hwcserviceapi_8h_a1f9c29347152f491d89f11da67e82ffc}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display@{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display}}
+\index{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display@{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display()}{HwcService\_Video\_DisableHDCPSession\_ForDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Video\+\_\+\+Disable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 245 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{246                                                                           \{}
+\DoxyCodeLine{247   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{248   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{249     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{250   \}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->DisableHDCPSessionForDisplay(display);}
+\DoxyCodeLine{253 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_ac791620c031163bd16b56b0f2c0a5395}\label{hwcserviceapi_8h_ac791620c031163bd16b56b0f2c0a5395}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+Encrypted\+Session@{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+Encrypted\+Session}}
+\index{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+Encrypted\+Session@{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+Encrypted\+Session}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+Encrypted\+Session()}{HwcService\_Video\_EnableEncryptedSession()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+Encrypted\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{session\+ID,  }\item[{uint32\+\_\+t}]{instance\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line 264 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{266                                                                       \{}
+\DoxyCodeLine{267   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{268   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{269     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{270   \}}
+\DoxyCodeLine{271   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->VideoEnableEncryptedSession(sessionID,}
+\DoxyCodeLine{272                                                           instanceID);}
+\DoxyCodeLine{273 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a2f92ba97618729b4c1de0eec71037f39}\label{hwcserviceapi_8h_a2f92ba97618729b4c1de0eec71037f39}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays@{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays}}
+\index{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays@{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays()}{HwcService\_Video\_EnableHDCPSession\_AllDisplays()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+All\+Displays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 235 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{236                                                     \{}
+\DoxyCodeLine{237   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{238   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{239     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{240   \}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->EnableHDCPSessionForAllDisplays(content\_type);}
+\DoxyCodeLine{243 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a39c762642428ed1b8f2488f8641e10ad}\label{hwcserviceapi_8h_a39c762642428ed1b8f2488f8641e10ad}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display@{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display}}
+\index{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display@{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display()}{HwcService\_Video\_EnableHDCPSession\_ForDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Video\+\_\+\+Enable\+H\+D\+C\+P\+Session\+\_\+\+For\+Display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 224 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{225                                                                       \{}
+\DoxyCodeLine{226   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{227   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{228     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{229   \}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->EnableHDCPSessionForDisplay(display,}
+\DoxyCodeLine{232                                                           content\_type);}
+\DoxyCodeLine{233 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_ad22aa20249de2c74f1b2ee279c55a5f6}\label{hwcserviceapi_8h_ad22aa20249de2c74f1b2ee279c55a5f6}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Video\+\_\+\+Is\+Encrypted\+Session\+Enabled@{Hwc\+Service\+\_\+\+Video\+\_\+\+Is\+Encrypted\+Session\+Enabled}}
+\index{Hwc\+Service\+\_\+\+Video\+\_\+\+Is\+Encrypted\+Session\+Enabled@{Hwc\+Service\+\_\+\+Video\+\_\+\+Is\+Encrypted\+Session\+Enabled}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Video\+\_\+\+Is\+Encrypted\+Session\+Enabled()}{HwcService\_Video\_IsEncryptedSessionEnabled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}} Hwc\+Service\+\_\+\+Video\+\_\+\+Is\+Encrypted\+Session\+Enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{uint32\+\_\+t}]{session\+ID,  }\item[{uint32\+\_\+t}]{instance\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line 292 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{294                                                                           \{}
+\DoxyCodeLine{295   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{296   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{297     \textcolor{keywordflow}{return} \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37a11d8e71cb8f69c2133de2171c172f012}{HWCS\_FALSE}};}
+\DoxyCodeLine{298   \}}
+\DoxyCodeLine{299   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->VideoIsEncryptedSessionEnabled(sessionID,}
+\DoxyCodeLine{300                                                              instanceID)}
+\DoxyCodeLine{301              ? \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37aa8068872066720ad4a79932d1e93d29b}{HWCS\_TRUE}}}
+\DoxyCodeLine{302              : \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37a11d8e71cb8f69c2133de2171c172f012}{HWCS\_FALSE}};}
+\DoxyCodeLine{303 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a9d558b3db38b1478c717ea38b723369c}\label{hwcserviceapi_8h_a9d558b3db38b1478c717ea38b723369c}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Video\+\_\+\+Set\+Optimization\+Mode@{Hwc\+Service\+\_\+\+Video\+\_\+\+Set\+Optimization\+Mode}}
+\index{Hwc\+Service\+\_\+\+Video\+\_\+\+Set\+Optimization\+Mode@{Hwc\+Service\+\_\+\+Video\+\_\+\+Set\+Optimization\+Mode}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Video\+\_\+\+Set\+Optimization\+Mode()}{HwcService\_Video\_SetOptimizationMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Video\+\_\+\+Set\+Optimization\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{E\+Hwcs\+Optimization\+Mode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 305 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{306                                                                           \{}
+\DoxyCodeLine{307   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{308   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{309     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{310   \}}
+\DoxyCodeLine{311   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->VideoSetOptimizationMode(mode);}
+\DoxyCodeLine{312 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_a282f30800337c79733b0e6097293986c}\label{hwcserviceapi_8h_a282f30800337c79733b0e6097293986c}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Widi\+\_\+\+Get\+Single\+Display@{Hwc\+Service\+\_\+\+Widi\+\_\+\+Get\+Single\+Display}}
+\index{Hwc\+Service\+\_\+\+Widi\+\_\+\+Get\+Single\+Display@{Hwc\+Service\+\_\+\+Widi\+\_\+\+Get\+Single\+Display}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Widi\+\_\+\+Get\+Single\+Display()}{HwcService\_Widi\_GetSingleDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Widi\+\_\+\+Get\+Single\+Display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}} $\ast$}]{enable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 341 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{341                                                                               \{}
+\DoxyCodeLine{342   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{343   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{344     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{345   \}}
+\DoxyCodeLine{346   \textcolor{keywordflow}{if} (!enable) \{}
+\DoxyCodeLine{347     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{348   \}}
+\DoxyCodeLine{349   \textcolor{keywordtype}{bool} bEnabled = \textcolor{keyword}{false};}
+\DoxyCodeLine{350   \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->WidiGetSingleDisplay(\&bEnabled);}
+\DoxyCodeLine{351   *enable = bEnabled ? \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37aa8068872066720ad4a79932d1e93d29b}{HWCS\_TRUE}} : \mbox{\hyperlink{hwcserviceapi_8h_af4a68f4afe2bf0fdee6de0e71962ff37a11d8e71cb8f69c2133de2171c172f012}{HWCS\_FALSE}};}
+\DoxyCodeLine{352   \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{353 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcserviceapi_8h_aa4bd5a422580b176028eef84e04b7b49}\label{hwcserviceapi_8h_aa4bd5a422580b176028eef84e04b7b49}} 
+\index{hwcserviceapi.\+h@{hwcserviceapi.\+h}!Hwc\+Service\+\_\+\+Widi\+\_\+\+Set\+Single\+Display@{Hwc\+Service\+\_\+\+Widi\+\_\+\+Set\+Single\+Display}}
+\index{Hwc\+Service\+\_\+\+Widi\+\_\+\+Set\+Single\+Display@{Hwc\+Service\+\_\+\+Widi\+\_\+\+Set\+Single\+Display}!hwcserviceapi.\+h@{hwcserviceapi.\+h}}
+\subsubsection{\texorpdfstring{Hwc\+Service\+\_\+\+Widi\+\_\+\+Set\+Single\+Display()}{HwcService\_Widi\_SetSingleDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Hwc\+Service\+\_\+\+Widi\+\_\+\+Set\+Single\+Display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{H\+W\+C\+S\+H\+A\+N\+D\+LE}}}]{hwcs,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1b4e720c3d06bbb7d79f0f73dc4d9115}{E\+Hwcs\+Bool}}}]{enable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 355 of file hwcserviceapi.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{355                                                                              \{}
+\DoxyCodeLine{356   \mbox{\hyperlink{structHwcsContext}{HwcsContext}}* pContext = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structHwcsContext}{HwcsContext}}*\textcolor{keyword}{>}(hwcs);}
+\DoxyCodeLine{357   \textcolor{keywordflow}{if} (!pContext) \{}
+\DoxyCodeLine{358     \textcolor{keywordflow}{return} android::BAD\_VALUE;}
+\DoxyCodeLine{359   \}}
+\DoxyCodeLine{360   \textcolor{keywordflow}{return} pContext->\mbox{\hyperlink{structHwcsContext_a70d64a8f6b439384a60d911982ecfb1a}{mControls}}->WidiSetSingleDisplay(enable);}
+\DoxyCodeLine{361 \}}
+\end{DoxyCode}

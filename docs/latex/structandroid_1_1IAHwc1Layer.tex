@@ -1,0 +1,208 @@
+\hypertarget{structandroid_1_1IAHwc1Layer}{}\section{android\+:\+:I\+A\+Hwc1Layer Struct Reference}
+\label{structandroid_1_1IAHwc1Layer}\index{android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structandroid_1_1IAHwc1Layer_adbcac701e32e99206ceb911be824939b}{$\sim$\+I\+A\+Hwc1\+Layer}} ()
+\item 
+\mbox{\hyperlink{structandroid_1_1IAHwc1Layer_ae51948343602ce0238d90b88d5eb2006}{I\+A\+Hwc1\+Layer}} ()=default
+\item 
+\mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a43a8e6a94f32bad32521134468b70ea0}{I\+A\+Hwc1\+Layer}} (const \mbox{\hyperlink{structandroid_1_1IAHwc1Layer}{I\+A\+Hwc1\+Layer}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{structandroid_1_1IAHwc1Layer}{I\+A\+Hwc1\+Layer}} \& \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_ad88da4784772f560e2c8e84c4e179099}{operator=}} (const \mbox{\hyperlink{structandroid_1_1IAHwc1Layer}{I\+A\+Hwc1\+Layer}} \&rhs)=delete
+\item 
+int \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a0a89271f00ea9f41b4d6c538c88e4db3}{Init\+From\+Hwc\+Layer}} (hwc\+\_\+layer\+\_\+1\+\_\+t $\ast$sf\+\_\+layer)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgralloc__handle}{gralloc\+\_\+handle}} \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a81d694f9efc870a94da031fe93cedc2c}{native\+\_\+handle\+\_\+}}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{hwcomposer\+::\+Hwc\+Layer}} $\ast$ \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\+\_\+layer\+\_\+}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a3cc6f201467654efe8814e2264f927e1}{index\+\_\+}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 80 of file iahwc1.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structandroid_1_1IAHwc1Layer_adbcac701e32e99206ceb911be824939b}\label{structandroid_1_1IAHwc1Layer_adbcac701e32e99206ceb911be824939b}} 
+\index{android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}!````~I\+A\+Hwc1\+Layer@{$\sim$\+I\+A\+Hwc1\+Layer}}
+\index{````~I\+A\+Hwc1\+Layer@{$\sim$\+I\+A\+Hwc1\+Layer}!android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+A\+Hwc1\+Layer()}{~IAHwc1Layer()}}
+{\footnotesize\ttfamily android\+::\+I\+A\+Hwc1\+Layer\+::$\sim$\+I\+A\+Hwc1\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 81 of file iahwc1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81                  \{}
+\DoxyCodeLine{82     \textcolor{keyword}{delete} \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}};}
+\DoxyCodeLine{83     \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{84   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structandroid_1_1IAHwc1Layer_ae51948343602ce0238d90b88d5eb2006}\label{structandroid_1_1IAHwc1Layer_ae51948343602ce0238d90b88d5eb2006}} 
+\index{android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}!I\+A\+Hwc1\+Layer@{I\+A\+Hwc1\+Layer}}
+\index{I\+A\+Hwc1\+Layer@{I\+A\+Hwc1\+Layer}!android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}}
+\subsubsection{\texorpdfstring{I\+A\+Hwc1\+Layer()}{IAHwc1Layer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily android\+::\+I\+A\+Hwc1\+Layer\+::\+I\+A\+Hwc1\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structandroid_1_1IAHwc1Layer_a43a8e6a94f32bad32521134468b70ea0}\label{structandroid_1_1IAHwc1Layer_a43a8e6a94f32bad32521134468b70ea0}} 
+\index{android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}!I\+A\+Hwc1\+Layer@{I\+A\+Hwc1\+Layer}}
+\index{I\+A\+Hwc1\+Layer@{I\+A\+Hwc1\+Layer}!android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}}
+\subsubsection{\texorpdfstring{I\+A\+Hwc1\+Layer()}{IAHwc1Layer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily android\+::\+I\+A\+Hwc1\+Layer\+::\+I\+A\+Hwc1\+Layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structandroid_1_1IAHwc1Layer}{I\+A\+Hwc1\+Layer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structandroid_1_1IAHwc1Layer_a0a89271f00ea9f41b4d6c538c88e4db3}\label{structandroid_1_1IAHwc1Layer_a0a89271f00ea9f41b4d6c538c88e4db3}} 
+\index{android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}!Init\+From\+Hwc\+Layer@{Init\+From\+Hwc\+Layer}}
+\index{Init\+From\+Hwc\+Layer@{Init\+From\+Hwc\+Layer}!android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}}
+\subsubsection{\texorpdfstring{Init\+From\+Hwc\+Layer()}{InitFromHwcLayer()}}
+{\footnotesize\ttfamily int android\+::\+I\+A\+Hwc1\+Layer\+::\+Init\+From\+Hwc\+Layer (\begin{DoxyParamCaption}\item[{hwc\+\_\+layer\+\_\+1\+\_\+t $\ast$}]{sf\+\_\+layer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 171 of file iahwc1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{171                                                          \{}
+\DoxyCodeLine{172   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}) \{}
+\DoxyCodeLine{173     \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}} = \textcolor{keyword}{new} \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{hwcomposer::HwcLayer}}();}
+\DoxyCodeLine{174   \}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176   \textcolor{keywordtype}{bool} surface\_damage = \textcolor{keyword}{true};}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178   \textcolor{keywordflow}{if} (\mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a970873c68e816a7cfdbbe900262b8b44}{GetNativeHandle}}() \&\&}
+\DoxyCodeLine{179       (\mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a970873c68e816a7cfdbbe900262b8b44}{GetNativeHandle}}()->handle\_ == sf\_layer->handle))}
+\DoxyCodeLine{180     surface\_damage = \textcolor{keyword}{false};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182   \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a81d694f9efc870a94da031fe93cedc2c}{native\_handle\_}}.\mbox{\hyperlink{structgralloc__handle_a7ab2601be21b021ab2a14d6549c6a537}{handle\_}} = sf\_layer->handle;}
+\DoxyCodeLine{183   \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_aeaeb1f0fd1d4c5754e0946b43c6eef84}{SetNativeHandle}}(\&\mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a81d694f9efc870a94da031fe93cedc2c}{native\_handle\_}});}
+\DoxyCodeLine{184   \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a312a7530c7cdca364df62c950ccbd024}{SetAlpha}}(sf\_layer->planeAlpha);}
+\DoxyCodeLine{185   \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a83bafbef5b9c98ad5821acdeddd9a26e}{SetSourceCrop}}(hwcomposer::HwcRect<float>(}
+\DoxyCodeLine{186       sf\_layer->sourceCropf.left, sf\_layer->sourceCropf.top,}
+\DoxyCodeLine{187       sf\_layer->sourceCropf.right, sf\_layer->sourceCropf.bottom));}
+\DoxyCodeLine{188   \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a0bf1d6ab9b9d45a7e118567b493dd346}{SetDisplayFrame}}(hwcomposer::HwcRect<int>(}
+\DoxyCodeLine{189       sf\_layer->displayFrame.left, sf\_layer->displayFrame.top,}
+\DoxyCodeLine{190       sf\_layer->displayFrame.right, sf\_layer->displayFrame.bottom));}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192   uint32\_t transform = 0;}
+\DoxyCodeLine{193   \textcolor{keywordflow}{if} (sf\_layer->transform == HWC\_TRANSFORM\_ROT\_270) \{}
+\DoxyCodeLine{194     transform = hwcomposer::HWCTransform::kTransform270;}
+\DoxyCodeLine{195   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (sf\_layer->transform == HWC\_TRANSFORM\_ROT\_180) \{}
+\DoxyCodeLine{196     transform = hwcomposer::HWCTransform::kTransform180;}
+\DoxyCodeLine{197   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{198     \textcolor{keywordflow}{if} (sf\_layer->transform \& HWC\_TRANSFORM\_FLIP\_H)}
+\DoxyCodeLine{199       transform |= hwcomposer::HWCTransform::kReflectX;}
+\DoxyCodeLine{200     \textcolor{keywordflow}{if} (sf\_layer->transform \& HWC\_TRANSFORM\_FLIP\_V)}
+\DoxyCodeLine{201       transform |= hwcomposer::HWCTransform::kReflectY;}
+\DoxyCodeLine{202     \textcolor{keywordflow}{if} (sf\_layer->transform \& HWC\_TRANSFORM\_ROT\_90)}
+\DoxyCodeLine{203       transform |= hwcomposer::HWCTransform::kTransform90;}
+\DoxyCodeLine{204   \}}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206   \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_ab30467eafc63b3b95059ff6ca3738933}{SetTransform}}(transform);}
+\DoxyCodeLine{207   \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_aaa01965ccb44cf807ec30956651c431a}{SetAcquireFence}}(dup(sf\_layer->acquireFenceFd));}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209   \textcolor{keywordflow}{switch} (sf\_layer->blending) \{}
+\DoxyCodeLine{210     \textcolor{keywordflow}{case} HWC\_BLENDING\_NONE:}
+\DoxyCodeLine{211       \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a7705d2ba4b36529f37dc0f7e706417eb}{SetBlending}}(hwcomposer::HWCBlending::kBlendingNone);}
+\DoxyCodeLine{212       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{213     \textcolor{keywordflow}{case} HWC\_BLENDING\_PREMULT:}
+\DoxyCodeLine{214       \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a7705d2ba4b36529f37dc0f7e706417eb}{SetBlending}}(hwcomposer::HWCBlending::kBlendingPremult);}
+\DoxyCodeLine{215       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{216     \textcolor{keywordflow}{case} HWC\_BLENDING\_COVERAGE:}
+\DoxyCodeLine{217       \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a7705d2ba4b36529f37dc0f7e706417eb}{SetBlending}}(hwcomposer::HWCBlending::kBlendingCoverage);}
+\DoxyCodeLine{218       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{219     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{220       ALOGE(\textcolor{stringliteral}{"Invalid blending in hwc\_layer\_1\_t \%d"}, sf\_layer->blending);}
+\DoxyCodeLine{221       \textcolor{keywordflow}{return} -EINVAL;}
+\DoxyCodeLine{222   \}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224   \textcolor{keywordflow}{if} (surface\_damage) \{}
+\DoxyCodeLine{225     uint32\_t num\_rects = sf\_layer->surfaceDamage.numRects;}
+\DoxyCodeLine{226     hwcomposer::HwcRegion hwc\_region;}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} rect = 0; rect < num\_rects; ++rect) \{}
+\DoxyCodeLine{229       hwc\_region.emplace\_back(sf\_layer->surfaceDamage.rects[rect].left,}
+\DoxyCodeLine{230                               sf\_layer->surfaceDamage.rects[rect].top,}
+\DoxyCodeLine{231                               sf\_layer->surfaceDamage.rects[rect].right,}
+\DoxyCodeLine{232                               sf\_layer->surfaceDamage.rects[rect].bottom);}
+\DoxyCodeLine{233     \}}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235     \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a25ec3931c5bb7108c4b8c39c839b26dc}{SetSurfaceDamage}}(hwc\_region);}
+\DoxyCodeLine{236   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{237     hwcomposer::HwcRegion hwc\_region;}
+\DoxyCodeLine{238     hwc\_region.emplace\_back(0, 0, 0, 0);}
+\DoxyCodeLine{239     \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a25ec3931c5bb7108c4b8c39c839b26dc}{SetSurfaceDamage}}(hwc\_region);}
+\DoxyCodeLine{240   \}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242   uint32\_t num\_rects = sf\_layer->visibleRegionScreen.numRects;}
+\DoxyCodeLine{243   hwcomposer::HwcRegion visible\_region;}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} rect = 0; rect < num\_rects; ++rect) \{}
+\DoxyCodeLine{246     visible\_region.emplace\_back(}
+\DoxyCodeLine{247         sf\_layer->visibleRegionScreen.rects[rect].left,}
+\DoxyCodeLine{248         sf\_layer->visibleRegionScreen.rects[rect].top,}
+\DoxyCodeLine{249         sf\_layer->visibleRegionScreen.rects[rect].right,}
+\DoxyCodeLine{250         sf\_layer->visibleRegionScreen.rects[rect].bottom);}
+\DoxyCodeLine{251   \}}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253   \mbox{\hyperlink{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a27744cfd952d0648168a1d28c65ff092}{SetVisibleRegion}}(visible\_region);}
+\DoxyCodeLine{254   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{255 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structandroid_1_1IAHwc1Layer_ad88da4784772f560e2c8e84c4e179099}\label{structandroid_1_1IAHwc1Layer_ad88da4784772f560e2c8e84c4e179099}} 
+\index{android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}!operator=@{operator=}}
+\index{operator=@{operator=}!android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structandroid_1_1IAHwc1Layer}{I\+A\+Hwc1\+Layer}}\& android\+::\+I\+A\+Hwc1\+Layer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structandroid_1_1IAHwc1Layer}{I\+A\+Hwc1\+Layer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}\label{structandroid_1_1IAHwc1Layer_a98d5f605974a027cf3fda34ede0860fb}} 
+\index{android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}!hwc\+\_\+layer\+\_\+@{hwc\+\_\+layer\+\_\+}}
+\index{hwc\+\_\+layer\+\_\+@{hwc\+\_\+layer\+\_\+}!android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}}
+\subsubsection{\texorpdfstring{hwc\+\_\+layer\+\_\+}{hwc\_layer\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{hwcomposer\+::\+Hwc\+Layer}}$\ast$ android\+::\+I\+A\+Hwc1\+Layer\+::hwc\+\_\+layer\+\_\+ = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}}
+
+
+
+Definition at line 92 of file iahwc1.\+cpp.
+
+\mbox{\Hypertarget{structandroid_1_1IAHwc1Layer_a3cc6f201467654efe8814e2264f927e1}\label{structandroid_1_1IAHwc1Layer_a3cc6f201467654efe8814e2264f927e1}} 
+\index{android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}!index\+\_\+@{index\+\_\+}}
+\index{index\+\_\+@{index\+\_\+}!android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}}
+\subsubsection{\texorpdfstring{index\+\_\+}{index\_}}
+{\footnotesize\ttfamily uint32\+\_\+t android\+::\+I\+A\+Hwc1\+Layer\+::index\+\_\+ = 0}
+
+
+
+Definition at line 93 of file iahwc1.\+cpp.
+
+\mbox{\Hypertarget{structandroid_1_1IAHwc1Layer_a81d694f9efc870a94da031fe93cedc2c}\label{structandroid_1_1IAHwc1Layer_a81d694f9efc870a94da031fe93cedc2c}} 
+\index{android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}!native\+\_\+handle\+\_\+@{native\+\_\+handle\+\_\+}}
+\index{native\+\_\+handle\+\_\+@{native\+\_\+handle\+\_\+}!android\+::\+I\+A\+Hwc1\+Layer@{android\+::\+I\+A\+Hwc1\+Layer}}
+\subsubsection{\texorpdfstring{native\+\_\+handle\+\_\+}{native\_handle\_}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structgralloc__handle}{gralloc\+\_\+handle}} android\+::\+I\+A\+Hwc1\+Layer\+::native\+\_\+handle\+\_\+}
+
+
+
+Definition at line 91 of file iahwc1.\+cpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/android/\mbox{\hyperlink{iahwc1_8cpp}{iahwc1.\+cpp}}\end{DoxyCompactItemize}

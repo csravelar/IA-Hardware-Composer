@@ -1,0 +1,200 @@
+\hypertarget{classhwcomposer_1_1DisplayManager}{}\section{hwcomposer\+:\+:Display\+Manager Class Reference}
+\label{classhwcomposer_1_1DisplayManager}\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+
+
+{\ttfamily \#include $<$displaymanager.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Display\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1DisplayManager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayManager_ae0d38f8308c54359c9de7e1c8e8f13c2}{Display\+Manager}} ()=default
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a34d71bf6f39f064b958920bbdc07c761}{$\sim$\+Display\+Manager}} ()
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_abb67b1deed55bf20584f86aea2ae5167}{Initialize}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a26b46eb7c0d15384fceaecdd8be9be45}{Initialize\+Display\+Resources}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a9728735ff10a6e52861c4201bf8c6fb2}{Start\+Hot\+Plug\+Monitor}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a678df886d9faff854111d8ace155befc}{Force\+Refresh}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_ac5d98f9c1c32dc2dbc3afb342a113af5}{Ignore\+Updates}} ()=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a7af00ef1c1c9dc8f3fd58699460ab14d}{Get\+FD}} () const =0
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a5fa2b92896cab774d8a85215dfac1d62}{Get\+Virtual\+Display}} ()=0
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_ac05cc0db0d8191465746828b2027a6f7}{Get\+Nested\+Display}} ()=0
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ $>$ \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_aec3ebc4b4d22031e983856a424dd43a6}{Get\+All\+Displays}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a2c1138176c411a5164052e83f623595d}{Register\+Hot\+Plug\+Event\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayHotPlugEventCallback}{Display\+Hot\+Plug\+Event\+Callback}} $>$ callback)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classhwcomposer_1_1DisplayManager}{Display\+Manager}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_aed4adf531c3ea168ff4e2f7c82fd1cbb}{Create\+Display\+Manager}} (\mbox{\hyperlink{classhwcomposer_1_1GpuDevice}{Gpu\+Device}} $\ast$device)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file displaymanager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_ae0d38f8308c54359c9de7e1c8e8f13c2}\label{classhwcomposer_1_1DisplayManager_ae0d38f8308c54359c9de7e1c8e8f13c2}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Display\+Manager@{Display\+Manager}}
+\index{Display\+Manager@{Display\+Manager}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Display\+Manager()}{DisplayManager()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Display\+Manager\+::\+Display\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_a34d71bf6f39f064b958920bbdc07c761}\label{classhwcomposer_1_1DisplayManager_a34d71bf6f39f064b958920bbdc07c761}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!````~Display\+Manager@{$\sim$\+Display\+Manager}}
+\index{````~Display\+Manager@{$\sim$\+Display\+Manager}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Display\+Manager()}{~DisplayManager()}}
+{\footnotesize\ttfamily virtual hwcomposer\+::\+Display\+Manager\+::$\sim$\+Display\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 31 of file displaymanager.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                             \{}
+\DoxyCodeLine{32   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_aed4adf531c3ea168ff4e2f7c82fd1cbb}\label{classhwcomposer_1_1DisplayManager_aed4adf531c3ea168ff4e2f7c82fd1cbb}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Create\+Display\+Manager@{Create\+Display\+Manager}}
+\index{Create\+Display\+Manager@{Create\+Display\+Manager}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Create\+Display\+Manager()}{CreateDisplayManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1DisplayManager}{Display\+Manager}} $\ast$ hwcomposer\+::\+Display\+Manager\+::\+Create\+Display\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1GpuDevice}{Gpu\+Device}} $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 452 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{452                                                                       \{}
+\DoxyCodeLine{453   \textcolor{keywordflow}{return} \textcolor{keyword}{new} DrmDisplayManager(device);}
+\DoxyCodeLine{454 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_a678df886d9faff854111d8ace155befc}\label{classhwcomposer_1_1DisplayManager_a678df886d9faff854111d8ace155befc}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Force\+Refresh@{Force\+Refresh}}
+\index{Force\+Refresh@{Force\+Refresh}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Force\+Refresh()}{ForceRefresh()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Display\+Manager\+::\+Force\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a254ab8fd550f20f056c2ec1e458442c9}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_aec3ebc4b4d22031e983856a424dd43a6}\label{classhwcomposer_1_1DisplayManager_aec3ebc4b4d22031e983856a424dd43a6}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Get\+All\+Displays@{Get\+All\+Displays}}
+\index{Get\+All\+Displays@{Get\+All\+Displays}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+All\+Displays()}{GetAllDisplays()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$$>$ hwcomposer\+::\+Display\+Manager\+::\+Get\+All\+Displays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_acff7605550c750e5f799f698e9b82d2a}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_a7af00ef1c1c9dc8f3fd58699460ab14d}\label{classhwcomposer_1_1DisplayManager_a7af00ef1c1c9dc8f3fd58699460ab14d}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Get\+FD@{Get\+FD}}
+\index{Get\+FD@{Get\+FD}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+F\+D()}{GetFD()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Display\+Manager\+::\+Get\+FD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_aed1b4e61f4bbda4069138675156a9564}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_ac05cc0db0d8191465746828b2027a6f7}\label{classhwcomposer_1_1DisplayManager_ac05cc0db0d8191465746828b2027a6f7}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Get\+Nested\+Display@{Get\+Nested\+Display}}
+\index{Get\+Nested\+Display@{Get\+Nested\+Display}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Nested\+Display()}{GetNestedDisplay()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}$\ast$ hwcomposer\+::\+Display\+Manager\+::\+Get\+Nested\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_ae3df43b4c4c9cc1181ec13cbefd764f1}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_a5fa2b92896cab774d8a85215dfac1d62}\label{classhwcomposer_1_1DisplayManager_a5fa2b92896cab774d8a85215dfac1d62}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Get\+Virtual\+Display@{Get\+Virtual\+Display}}
+\index{Get\+Virtual\+Display@{Get\+Virtual\+Display}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Virtual\+Display()}{GetVirtualDisplay()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}$\ast$ hwcomposer\+::\+Display\+Manager\+::\+Get\+Virtual\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a80e39b4389e271ed5a72421c46ce5f36}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_ac5d98f9c1c32dc2dbc3afb342a113af5}\label{classhwcomposer_1_1DisplayManager_ac5d98f9c1c32dc2dbc3afb342a113af5}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Ignore\+Updates@{Ignore\+Updates}}
+\index{Ignore\+Updates@{Ignore\+Updates}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Ignore\+Updates()}{IgnoreUpdates()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Display\+Manager\+::\+Ignore\+Updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_ac10c8fb07bf822c4430cd54722ceee16}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_abb67b1deed55bf20584f86aea2ae5167}\label{classhwcomposer_1_1DisplayManager_abb67b1deed55bf20584f86aea2ae5167}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Display\+Manager\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a1597ef6208030337c9554b70dcdf0a95}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_a26b46eb7c0d15384fceaecdd8be9be45}\label{classhwcomposer_1_1DisplayManager_a26b46eb7c0d15384fceaecdd8be9be45}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Initialize\+Display\+Resources@{Initialize\+Display\+Resources}}
+\index{Initialize\+Display\+Resources@{Initialize\+Display\+Resources}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Initialize\+Display\+Resources()}{InitializeDisplayResources()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Display\+Manager\+::\+Initialize\+Display\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a775eee42523dabde8e4187770cbe9c6c}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_a2c1138176c411a5164052e83f623595d}\label{classhwcomposer_1_1DisplayManager_a2c1138176c411a5164052e83f623595d}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Register\+Hot\+Plug\+Event\+Callback@{Register\+Hot\+Plug\+Event\+Callback}}
+\index{Register\+Hot\+Plug\+Event\+Callback@{Register\+Hot\+Plug\+Event\+Callback}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Register\+Hot\+Plug\+Event\+Callback()}{RegisterHotPlugEventCallback()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Display\+Manager\+::\+Register\+Hot\+Plug\+Event\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayHotPlugEventCallback}{Display\+Hot\+Plug\+Event\+Callback}} $>$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_ab11e4353cddc68652abcae61dd26027d}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayManager_a9728735ff10a6e52861c4201bf8c6fb2}\label{classhwcomposer_1_1DisplayManager_a9728735ff10a6e52861c4201bf8c6fb2}} 
+\index{hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}!Start\+Hot\+Plug\+Monitor@{Start\+Hot\+Plug\+Monitor}}
+\index{Start\+Hot\+Plug\+Monitor@{Start\+Hot\+Plug\+Monitor}!hwcomposer\+::\+Display\+Manager@{hwcomposer\+::\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Start\+Hot\+Plug\+Monitor()}{StartHotPlugMonitor()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Display\+Manager\+::\+Start\+Hot\+Plug\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a103a45f1e7e31c813dc7e185e244d944}{hwcomposer\+::\+Drm\+Display\+Manager}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/\mbox{\hyperlink{displaymanager_8h}{displaymanager.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmdisplaymanager_8cpp}{drmdisplaymanager.\+cpp}}\end{DoxyCompactItemize}

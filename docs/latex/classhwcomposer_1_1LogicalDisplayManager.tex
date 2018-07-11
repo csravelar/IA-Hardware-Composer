@@ -1,0 +1,380 @@
+\hypertarget{classhwcomposer_1_1LogicalDisplayManager}{}\section{hwcomposer\+:\+:Logical\+Display\+Manager Class Reference}
+\label{classhwcomposer_1_1LogicalDisplayManager}\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+
+
+{\ttfamily \#include $<$logicaldisplaymanager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a0831d51c9223869945fd1dbb1c7a2472}{Logical\+Display\+Manager}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$physical\+\_\+display)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a3eca76258ea847e523a15acb1f558069}{$\sim$\+Logical\+Display\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a009d47157fe5b3290d9cbe3faa3414b0}{Initialize\+Logical\+Displays}} (uint32\+\_\+t total)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a8a297a2d1b94f5db2e3cf0b209abbecd}{Update\+Power\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_aa3d7e2fdfaf389a38dc07861b980b81b}{Update\+V\+Sync\+Control}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a3ce0f929bd07deb3b9f1bcf146a3cf3d}{Register\+Hot\+Plug\+Notification}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_af8fd8256d46d61b64cb53371d86aaff0}{Present}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&source\+\_\+layers, int32\+\_\+t $\ast$retire\+\_\+fence, \mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$call\+\_\+back, bool handle\+\_\+constraints)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a799b4d580b33a54016d7694380aefcec}{V\+Sync\+Callback}} (int64\+\_\+t timestamp)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a9c4ee93396e79041eab1a7b9ce2838ca}{Refresh\+Callback}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a486979f93dbb27770df066a633eef336}{Hot\+Plug\+Callback}} (bool connected)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a12c8ae63b4cc087498caf1f4d35825b7}{Get\+Physical\+Display}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a84058e10e2f9a62eeea76ba586b07238}{Get\+Logical\+Displays}} (std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay}{Logical\+Display}} $\ast$$>$ \&displays)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplayManager_a6b25f88f36b16d9cee0b4e3574a63cb3}{Set\+H\+D\+C\+P\+State}} (H\+W\+C\+Content\+Protection state, H\+W\+C\+Content\+Type content\+\_\+type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file logicaldisplaymanager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a0831d51c9223869945fd1dbb1c7a2472}\label{classhwcomposer_1_1LogicalDisplayManager_a0831d51c9223869945fd1dbb1c7a2472}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Logical\+Display\+Manager@{Logical\+Display\+Manager}}
+\index{Logical\+Display\+Manager@{Logical\+Display\+Manager}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Logical\+Display\+Manager()}{LogicalDisplayManager()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Logical\+Display\+Manager\+::\+Logical\+Display\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{physical\+\_\+display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                                                             \{}
+\DoxyCodeLine{64   physical\_display\_ = physical\_display;}
+\DoxyCodeLine{65 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a3eca76258ea847e523a15acb1f558069}\label{classhwcomposer_1_1LogicalDisplayManager_a3eca76258ea847e523a15acb1f558069}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!````~Logical\+Display\+Manager@{$\sim$\+Logical\+Display\+Manager}}
+\index{````~Logical\+Display\+Manager@{$\sim$\+Logical\+Display\+Manager}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Logical\+Display\+Manager()}{~LogicalDisplayManager()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Logical\+Display\+Manager\+::$\sim$\+Logical\+Display\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                               \{}
+\DoxyCodeLine{68   physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}{RegisterVsyncCallback}}(\textcolor{keyword}{nullptr}, 0);}
+\DoxyCodeLine{69   physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a237627e6cacf9246813bc7f48c5817cd}{RegisterRefreshCallback}}(\textcolor{keyword}{nullptr}, 0);}
+\DoxyCodeLine{70   physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4080879c203571d6404ba3b3aff53631}{RegisterHotPlugCallback}}(\textcolor{keyword}{nullptr}, 0);}
+\DoxyCodeLine{71 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a84058e10e2f9a62eeea76ba586b07238}\label{classhwcomposer_1_1LogicalDisplayManager_a84058e10e2f9a62eeea76ba586b07238}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Get\+Logical\+Displays@{Get\+Logical\+Displays}}
+\index{Get\+Logical\+Displays@{Get\+Logical\+Displays}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Logical\+Displays()}{GetLogicalDisplays()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Logical\+Display\+Manager\+::\+Get\+Logical\+Displays (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay}{Logical\+Display}} $\ast$$>$ \&}]{displays }\end{DoxyParamCaption})}
+
+
+
+Definition at line 218 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{219                                           \{}
+\DoxyCodeLine{220   uint32\_t size = displays\_.size();}
+\DoxyCodeLine{221   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{222     displays.emplace\_back(displays\_.at(i).get());}
+\DoxyCodeLine{223   \}}
+\DoxyCodeLine{224 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a12c8ae63b4cc087498caf1f4d35825b7}\label{classhwcomposer_1_1LogicalDisplayManager_a12c8ae63b4cc087498caf1f4d35825b7}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Get\+Physical\+Display@{Get\+Physical\+Display}}
+\index{Get\+Physical\+Display@{Get\+Physical\+Display}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Physical\+Display()}{GetPhysicalDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}$\ast$ hwcomposer\+::\+Logical\+Display\+Manager\+::\+Get\+Physical\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 49 of file logicaldisplaymanager.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                             \{}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} physical\_display\_;}
+\DoxyCodeLine{51   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a486979f93dbb27770df066a633eef336}\label{classhwcomposer_1_1LogicalDisplayManager_a486979f93dbb27770df066a633eef336}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Hot\+Plug\+Callback@{Hot\+Plug\+Callback}}
+\index{Hot\+Plug\+Callback@{Hot\+Plug\+Callback}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Hot\+Plug\+Callback()}{HotPlugCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Logical\+Display\+Manager\+::\+Hot\+Plug\+Callback (\begin{DoxyParamCaption}\item[{bool}]{connected }\end{DoxyParamCaption})}
+
+
+
+Definition at line 211 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{211                                                           \{}
+\DoxyCodeLine{212   uint32\_t size = displays\_.size();}
+\DoxyCodeLine{213   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{214     displays\_.at(i)->HotPlugUpdate(connected);}
+\DoxyCodeLine{215   \}}
+\DoxyCodeLine{216 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a009d47157fe5b3290d9cbe3faa3414b0}\label{classhwcomposer_1_1LogicalDisplayManager_a009d47157fe5b3290d9cbe3faa3414b0}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Initialize\+Logical\+Displays@{Initialize\+Logical\+Displays}}
+\index{Initialize\+Logical\+Displays@{Initialize\+Logical\+Displays}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Initialize\+Logical\+Displays()}{InitializeLogicalDisplays()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Logical\+Display\+Manager\+::\+Initialize\+Logical\+Displays (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{total }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                                                     \{}
+\DoxyCodeLine{74   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < total; i++) \{}
+\DoxyCodeLine{75     std::unique\_ptr<LogicalDisplay> display(}
+\DoxyCodeLine{76         \textcolor{keyword}{new} LogicalDisplay(\textcolor{keyword}{this}, physical\_display\_, total, i));}
+\DoxyCodeLine{77     displays\_.emplace\_back(std::move(display));}
+\DoxyCodeLine{78   \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80   \textcolor{keyword}{auto} r\_callback = std::make\_shared<LDMRefreshCallback>(\textcolor{keyword}{this});}
+\DoxyCodeLine{81   physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a237627e6cacf9246813bc7f48c5817cd}{RegisterRefreshCallback}}(}
+\DoxyCodeLine{82       r\_callback, physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aaf80095ae6aed35c64dd633a6a2f101a}{GetDisplayPipe}}());}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84   \textcolor{keyword}{auto} v\_callback = std::make\_shared<LDMVsyncCallback>(\textcolor{keyword}{this});}
+\DoxyCodeLine{85   physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}{RegisterVsyncCallback}}(v\_callback,}
+\DoxyCodeLine{86                                            physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aaf80095ae6aed35c64dd633a6a2f101a}{GetDisplayPipe}}());}
+\DoxyCodeLine{87 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_af8fd8256d46d61b64cb53371d86aaff0}\label{classhwcomposer_1_1LogicalDisplayManager_af8fd8256d46d61b64cb53371d86aaff0}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Present@{Present}}
+\index{Present@{Present}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Present()}{Present()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Logical\+Display\+Manager\+::\+Present (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&}]{source\+\_\+layers,  }\item[{int32\+\_\+t $\ast$}]{retire\+\_\+fence,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$}]{call\+\_\+back,  }\item[{bool}]{handle\+\_\+constraints }\end{DoxyParamCaption})}
+
+
+
+Definition at line 135 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138                                                              \{}
+\DoxyCodeLine{139   uint32\_t total\_size = displays\_.size();}
+\DoxyCodeLine{140   \textcolor{keywordflow}{if} (handle\_hoplug\_notifications\_) \{}
+\DoxyCodeLine{141     uint32\_t size = displays\_.size();}
+\DoxyCodeLine{142     \textcolor{keywordflow}{for} (uint32\_t i = 1; i < size; i++) \{}
+\DoxyCodeLine{143       displays\_.at(i)->HotPlugUpdate(\textcolor{keyword}{true});}
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145     handle\_hoplug\_notifications\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{146     \textcolor{comment}{// In Mosaic case, we expect Present calls for all}}
+\DoxyCodeLine{147     \textcolor{comment}{// logical displays.}}
+\DoxyCodeLine{148     \textcolor{keywordflow}{if} (!handle\_constraints)}
+\DoxyCodeLine{149       total\_size = 1;}
+\DoxyCodeLine{150   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{151     uint32\_t size = displays\_.size();}
+\DoxyCodeLine{152     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{153       \textcolor{keywordflow}{if} (displays\_.at(i)->PowerMode() == \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}}) \{}
+\DoxyCodeLine{154         total\_size--;}
+\DoxyCodeLine{155       \}}
+\DoxyCodeLine{156     \}}
+\DoxyCodeLine{157   \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159   \textcolor{keywordflow}{if} (total\_size == 0) \{}
+\DoxyCodeLine{160     std::vector<HwcLayer*>().swap(cursor\_layers\_);}
+\DoxyCodeLine{161     std::vector<HwcLayer*>().swap(layers\_);}
+\DoxyCodeLine{162     queued\_displays\_ = 0;}
+\DoxyCodeLine{163     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"logical dpm total\_size == 0 \(\backslash\)n"});}
+\DoxyCodeLine{164     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{165   \}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167   \textcolor{keywordflow}{if} (queued\_displays\_ != total\_size) \{}
+\DoxyCodeLine{168     uint32\_t size = source\_layers.size();}
+\DoxyCodeLine{169     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{170       HwcLayer* layer = source\_layers.at(i);}
+\DoxyCodeLine{171       \textcolor{keywordflow}{if} (layer->IsCursorLayer()) \{}
+\DoxyCodeLine{172         cursor\_layers\_.emplace\_back(layer);}
+\DoxyCodeLine{173       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{174         layers\_.emplace\_back(layer);}
+\DoxyCodeLine{175       \}}
+\DoxyCodeLine{176     \}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178     queued\_displays\_++;}
+\DoxyCodeLine{179     \textcolor{keywordflow}{if} (queued\_displays\_ < total\_size) \{}
+\DoxyCodeLine{180       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{181     \}}
+\DoxyCodeLine{182   \}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184   uint32\_t cursor\_layers = cursor\_layers\_.size();}
+\DoxyCodeLine{185   \textcolor{keywordflow}{for} (uint32\_t j = 0; j < cursor\_layers; j++) \{}
+\DoxyCodeLine{186     layers\_.emplace\_back(cursor\_layers\_.at(j));}
+\DoxyCodeLine{187   \}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189   \textcolor{keywordtype}{bool} success = physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4825b8bc4b85e03b396ed6d2cf5bd8c0}{Present}}(layers\_, retire\_fence, call\_back,}
+\DoxyCodeLine{190                                             handle\_constraints);}
+\DoxyCodeLine{191   std::vector<HwcLayer*>().swap(cursor\_layers\_);}
+\DoxyCodeLine{192   std::vector<HwcLayer*>().swap(layers\_);}
+\DoxyCodeLine{193   queued\_displays\_ = 0;}
+\DoxyCodeLine{194   \textcolor{keywordflow}{return} success;}
+\DoxyCodeLine{195 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a9c4ee93396e79041eab1a7b9ce2838ca}\label{classhwcomposer_1_1LogicalDisplayManager_a9c4ee93396e79041eab1a7b9ce2838ca}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Refresh\+Callback@{Refresh\+Callback}}
+\index{Refresh\+Callback@{Refresh\+Callback}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Refresh\+Callback()}{RefreshCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Logical\+Display\+Manager\+::\+Refresh\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 204 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{204                                             \{}
+\DoxyCodeLine{205   uint32\_t size = displays\_.size();}
+\DoxyCodeLine{206   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{207     displays\_.at(i)->RefreshUpdate();}
+\DoxyCodeLine{208   \}}
+\DoxyCodeLine{209 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a3ce0f929bd07deb3b9f1bcf146a3cf3d}\label{classhwcomposer_1_1LogicalDisplayManager_a3ce0f929bd07deb3b9f1bcf146a3cf3d}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Register\+Hot\+Plug\+Notification@{Register\+Hot\+Plug\+Notification}}
+\index{Register\+Hot\+Plug\+Notification@{Register\+Hot\+Plug\+Notification}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Register\+Hot\+Plug\+Notification()}{RegisterHotPlugNotification()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Logical\+Display\+Manager\+::\+Register\+Hot\+Plug\+Notification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 123 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{123                                                         \{}
+\DoxyCodeLine{124   \textcolor{keywordflow}{if} (hot\_plug\_registered\_)}
+\DoxyCodeLine{125     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127   hot\_plug\_registered\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{128   handle\_hoplug\_notifications\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130   \textcolor{keyword}{auto} h\_callback = std::make\_shared<LDMHotPlugEventCallback>(\textcolor{keyword}{this});}
+\DoxyCodeLine{131   physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4080879c203571d6404ba3b3aff53631}{RegisterHotPlugCallback}}(}
+\DoxyCodeLine{132       std::move(h\_callback), physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aaf80095ae6aed35c64dd633a6a2f101a}{GetDisplayPipe}}());}
+\DoxyCodeLine{133 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a6b25f88f36b16d9cee0b4e3574a63cb3}\label{classhwcomposer_1_1LogicalDisplayManager_a6b25f88f36b16d9cee0b4e3574a63cb3}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Set\+H\+D\+C\+P\+State@{Set\+H\+D\+C\+P\+State}}
+\index{Set\+H\+D\+C\+P\+State@{Set\+H\+D\+C\+P\+State}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Set\+H\+D\+C\+P\+State()}{SetHDCPState()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Logical\+Display\+Manager\+::\+Set\+H\+D\+C\+P\+State (\begin{DoxyParamCaption}\item[{H\+W\+C\+Content\+Protection}]{state,  }\item[{H\+W\+C\+Content\+Type}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 226 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{227                                                                       \{}
+\DoxyCodeLine{228   uint32\_t size = displays\_.size();}
+\DoxyCodeLine{229   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{230     displays\_.at(i)->SetHDCPState(state, content\_type);}
+\DoxyCodeLine{231   \}}
+\DoxyCodeLine{232 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a8a297a2d1b94f5db2e3cf0b209abbecd}\label{classhwcomposer_1_1LogicalDisplayManager_a8a297a2d1b94f5db2e3cf0b209abbecd}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Update\+Power\+Mode@{Update\+Power\+Mode}}
+\index{Update\+Power\+Mode@{Update\+Power\+Mode}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Update\+Power\+Mode()}{UpdatePowerMode()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Logical\+Display\+Manager\+::\+Update\+Power\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                             \{}
+\DoxyCodeLine{90   \textcolor{keywordtype}{bool} power\_off = \textcolor{keyword}{true};}
+\DoxyCodeLine{91   uint32\_t size = displays\_.size();}
+\DoxyCodeLine{92   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{93     \textcolor{keywordflow}{if} (displays\_.at(i)->PowerMode() != \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}}) \{}
+\DoxyCodeLine{94       power\_off = \textcolor{keyword}{false};}
+\DoxyCodeLine{95       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{96     \}}
+\DoxyCodeLine{97   \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   \textcolor{keywordflow}{if} (power\_off) \{}
+\DoxyCodeLine{100     physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}{SetPowerMode}}(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}});}
+\DoxyCodeLine{101   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{102     physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}{SetPowerMode}}(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{kOn}});}
+\DoxyCodeLine{103   \}}
+\DoxyCodeLine{104 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_aa3d7e2fdfaf389a38dc07861b980b81b}\label{classhwcomposer_1_1LogicalDisplayManager_aa3d7e2fdfaf389a38dc07861b980b81b}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!Update\+V\+Sync\+Control@{Update\+V\+Sync\+Control}}
+\index{Update\+V\+Sync\+Control@{Update\+V\+Sync\+Control}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Update\+V\+Sync\+Control()}{UpdateVSyncControl()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Logical\+Display\+Manager\+::\+Update\+V\+Sync\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 106 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106                                                \{}
+\DoxyCodeLine{107   \textcolor{keywordtype}{bool} vsync\_control = \textcolor{keyword}{false};}
+\DoxyCodeLine{108   uint32\_t size = displays\_.size();}
+\DoxyCodeLine{109   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{110     \textcolor{keywordflow}{if} (displays\_.at(i)->EnableVSync()) \{}
+\DoxyCodeLine{111       vsync\_control = \textcolor{keyword}{true};}
+\DoxyCodeLine{112       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{114   \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116   \textcolor{keywordflow}{if} (vsync\_control) \{}
+\DoxyCodeLine{117     physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}{VSyncControl}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{118   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{119     physical\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}{VSyncControl}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{120   \}}
+\DoxyCodeLine{121 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1LogicalDisplayManager_a799b4d580b33a54016d7694380aefcec}\label{classhwcomposer_1_1LogicalDisplayManager_a799b4d580b33a54016d7694380aefcec}} 
+\index{hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}!V\+Sync\+Callback@{V\+Sync\+Callback}}
+\index{V\+Sync\+Callback@{V\+Sync\+Callback}!hwcomposer\+::\+Logical\+Display\+Manager@{hwcomposer\+::\+Logical\+Display\+Manager}}
+\subsubsection{\texorpdfstring{V\+Sync\+Callback()}{VSyncCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Logical\+Display\+Manager\+::\+V\+Sync\+Callback (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{timestamp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file logicaldisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{197                                                            \{}
+\DoxyCodeLine{198   uint32\_t size = displays\_.size();}
+\DoxyCodeLine{199   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{200     displays\_.at(i)->VSyncUpdate(timestamp);}
+\DoxyCodeLine{201   \}}
+\DoxyCodeLine{202 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/core/\mbox{\hyperlink{logicaldisplaymanager_8h}{logicaldisplaymanager.\+h}}\item 
+common/core/\mbox{\hyperlink{logicaldisplaymanager_8cpp}{logicaldisplaymanager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,534 @@
+\hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay}{}\section{hwcomposer\+:\+:I\+A\+H\+WC\+:\+:I\+A\+H\+W\+C\+Display Class Reference}
+\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay}\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+
+
+{\ttfamily \#include $<$linux\+\_\+frontend.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:I\+A\+H\+WC\+:\+:I\+A\+H\+W\+C\+Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a19e2e52283f3cb2a9d75e5486a2d1746}{I\+A\+H\+W\+C\+Display}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a506385cf1a72c499ed057af40a67eb08}{$\sim$\+I\+A\+H\+W\+C\+Display}} ()
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af339a6dc789ef156c41d19bf288f44e4}{Init}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer\+::\+Native\+Display}} $\ast$display, uint32\+\_\+t gpu\+\_\+fd)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_abac8759ae7be9065fb6a579e1b384c23}{Get\+Display\+Info}} (uint32\+\_\+t config, int attribute, int32\+\_\+t $\ast$value)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af090eee5e7afcef5e96f8990815cf712}{Get\+Display\+Name}} (uint32\+\_\+t $\ast$size, char $\ast$name)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a186346b470891a51643e415468ca5550}{Get\+Display\+Configs}} (uint32\+\_\+t $\ast$num\+\_\+configs, uint32\+\_\+t $\ast$configs)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af334fba3fe056cf75884939ed8cf6fbc}{Set\+Display\+Gamma}} (float r, float b, float g)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ae4a7bf880a35f4df5e649003f7f7a212}{Set\+Display\+Config}} (uint32\+\_\+t config)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a7088d0da276eca2dc2b4458f20270258}{Get\+Display\+Config}} (uint32\+\_\+t $\ast$config)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_abff19b5001304bd1f0e3c582a409f672}{Set\+Power\+Mode}} (uint32\+\_\+t power\+\_\+mode)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a5dcd39e69f99da275fa1d7b64f0dd3b2}{Clear\+All\+Layers}} ()
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a530a804beb0192c173f7311b35d0909f}{Present\+Display}} (int32\+\_\+t $\ast$release\+\_\+fd)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af1ec4019ff9078b6e3971ede75ad9393}{Register\+Vsync\+Callback}} (\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}} data, \mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}} hook)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ac7299bb8f8312073ba44cf2858642b15}{Register\+Pixel\+Uploader\+Callback}} (\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}} data, \mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}} hook)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ab8ad988a0d79affe7116a0487b8cf72b}{Create\+Layer}} (uint32\+\_\+t $\ast$layer\+\_\+handle)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a36b592a04e93dba90b1f33587c3e4e11}{Destroy\+Layer}} (uint32\+\_\+t layer\+\_\+handle)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a834ade616fea8f09f45b7d1867a2e113}{Is\+Connected}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCLayer}{I\+A\+H\+W\+C\+Layer}} \& \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ad83653e1509f4fd12d93cb27848bbb93}{get\+\_\+layer}} (\mbox{\hyperlink{iahwc_8h_a603c5018c43d1f6b98fbb7eeef6a43ac}{iahwc\+\_\+layer\+\_\+t}} layer)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ac5d4d8c593d2aa79f1b76a19501b2c08}{Disable\+Overlay\+Usage}} ()
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af95bd016a960dbc57da39b41f5b05cb7}{Enable\+Overlay\+Usage}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a5911dd47943840836040cdeb9b3ae67b}{Synchronize}} () override
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ad210be9712294200396ffaf911d31457}{Register\+Hot\+Plug\+Callback}} (\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}} data, \mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}} func)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a011a99d6cc9dda103cb57a76036bdd9b}{Run\+Pixel\+Uploader}} (bool enable)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 78 of file linux\+\_\+frontend.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a19e2e52283f3cb2a9d75e5486a2d1746}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a19e2e52283f3cb2a9d75e5486a2d1746}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!I\+A\+H\+W\+C\+Display@{I\+A\+H\+W\+C\+Display}}
+\index{I\+A\+H\+W\+C\+Display@{I\+A\+H\+W\+C\+Display}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{I\+A\+H\+W\+C\+Display()}{IAHWCDisplay()}}
+{\footnotesize\ttfamily hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+I\+A\+H\+W\+C\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 284 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{284                                 : native\_display\_(\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{285 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a506385cf1a72c499ed057af40a67eb08}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a506385cf1a72c499ed057af40a67eb08}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!````~I\+A\+H\+W\+C\+Display@{$\sim$\+I\+A\+H\+W\+C\+Display}}
+\index{````~I\+A\+H\+W\+C\+Display@{$\sim$\+I\+A\+H\+W\+C\+Display}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+A\+H\+W\+C\+Display()}{~IAHWCDisplay()}}
+{\footnotesize\ttfamily hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::$\sim$\+I\+A\+H\+W\+C\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 287 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{287                                  \{}
+\DoxyCodeLine{288   \textcolor{keyword}{delete} raw\_data\_uploader\_;}
+\DoxyCodeLine{289 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a5dcd39e69f99da275fa1d7b64f0dd3b2}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a5dcd39e69f99da275fa1d7b64f0dd3b2}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Clear\+All\+Layers@{Clear\+All\+Layers}}
+\index{Clear\+All\+Layers@{Clear\+All\+Layers}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Clear\+All\+Layers()}{ClearAllLayers()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Clear\+All\+Layers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 361 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{361                                       \{}
+\DoxyCodeLine{362   layers\_.clear();}
+\DoxyCodeLine{363   native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a63f75b429e692fbdd9259afd8145a44e}{ResetLayerHashGenerator}}();}
+\DoxyCodeLine{364 }
+\DoxyCodeLine{365   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{366 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ab8ad988a0d79affe7116a0487b8cf72b}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ab8ad988a0d79affe7116a0487b8cf72b}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Create\+Layer@{Create\+Layer}}
+\index{Create\+Layer@{Create\+Layer}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Create\+Layer()}{CreateLayer()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Create\+Layer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{layer\+\_\+handle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 420 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{420                                                          \{}
+\DoxyCodeLine{421   *layer\_handle = native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a20416186adee927aa4a72dd9ae1b0e87}{AcquireId}}();}
+\DoxyCodeLine{422   layers\_.emplace(*layer\_handle, IAHWCLayer(raw\_data\_uploader\_));}
+\DoxyCodeLine{423 }
+\DoxyCodeLine{424   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{425 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a36b592a04e93dba90b1f33587c3e4e11}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a36b592a04e93dba90b1f33587c3e4e11}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Destroy\+Layer@{Destroy\+Layer}}
+\index{Destroy\+Layer@{Destroy\+Layer}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Destroy\+Layer()}{DestroyLayer()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Destroy\+Layer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{layer\+\_\+handle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 427 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{427                                                          \{}
+\DoxyCodeLine{428   \textcolor{keywordflow}{if} (layers\_.empty())}
+\DoxyCodeLine{429     \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431   \textcolor{keywordflow}{if} (layers\_.erase(layer\_handle))}
+\DoxyCodeLine{432     native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_abce90b16515ced50d859da54b34ed4f0}{ReleaseId}}(layer\_handle);}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{434   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{435 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ac5d4d8c593d2aa79f1b76a19501b2c08}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ac5d4d8c593d2aa79f1b76a19501b2c08}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Disable\+Overlay\+Usage@{Disable\+Overlay\+Usage}}
+\index{Disable\+Overlay\+Usage@{Disable\+Overlay\+Usage}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Disable\+Overlay\+Usage()}{DisableOverlayUsage()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Disable\+Overlay\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 389 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{389                                            \{}
+\DoxyCodeLine{390   native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a986975322078e900da95f78be42ad88b}{SetExplicitSyncSupport}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{391   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{392 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af95bd016a960dbc57da39b41f5b05cb7}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af95bd016a960dbc57da39b41f5b05cb7}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Enable\+Overlay\+Usage@{Enable\+Overlay\+Usage}}
+\index{Enable\+Overlay\+Usage@{Enable\+Overlay\+Usage}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Enable\+Overlay\+Usage()}{EnableOverlayUsage()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Enable\+Overlay\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 394 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{394                                           \{}
+\DoxyCodeLine{395   native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a986975322078e900da95f78be42ad88b}{SetExplicitSyncSupport}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{396   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{397 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ad83653e1509f4fd12d93cb27848bbb93}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ad83653e1509f4fd12d93cb27848bbb93}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!get\+\_\+layer@{get\+\_\+layer}}
+\index{get\+\_\+layer@{get\+\_\+layer}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{get\+\_\+layer()}{get\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1IAHWC_1_1IAHWCLayer}{I\+A\+H\+W\+C\+Layer}}\& hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::get\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iahwc_8h_a603c5018c43d1f6b98fbb7eeef6a43ac}{iahwc\+\_\+layer\+\_\+t}}}]{layer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 99 of file linux\+\_\+frontend.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                                                \{}
+\DoxyCodeLine{100       \textcolor{keywordflow}{return} layers\_.at(layer);}
+\DoxyCodeLine{101     \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a7088d0da276eca2dc2b4458f20270258}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a7088d0da276eca2dc2b4458f20270258}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Get\+Display\+Config@{Get\+Display\+Config}}
+\index{Get\+Display\+Config@{Get\+Display\+Config}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Config()}{GetDisplayConfig()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Get\+Display\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Definition at line 352 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{352                                                         \{}
+\DoxyCodeLine{353   \textcolor{keywordtype}{bool} ret = native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9d4d9d2f6633fe37025210cac6e8cc6c}{GetActiveConfig}}(config);}
+\DoxyCodeLine{354 }
+\DoxyCodeLine{355   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{356     \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568aa7d9713c00f2aba2417e7b030f4839ce}{IAHWC\_ERROR\_NO\_RESOURCES}};}
+\DoxyCodeLine{357 }
+\DoxyCodeLine{358   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{359 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a186346b470891a51643e415468ca5550}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a186346b470891a51643e415468ca5550}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Get\+Display\+Configs@{Get\+Display\+Configs}}
+\index{Get\+Display\+Configs@{Get\+Display\+Configs}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Configs()}{GetDisplayConfigs()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Get\+Display\+Configs (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{num\+\_\+configs,  }\item[{uint32\+\_\+t $\ast$}]{configs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 322 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{323                                                               \{}
+\DoxyCodeLine{324   \textcolor{keywordtype}{bool} ret = native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}{GetDisplayConfigs}}(num\_configs, configs);}
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{327     \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568aa7d9713c00f2aba2417e7b030f4839ce}{IAHWC\_ERROR\_NO\_RESOURCES}};}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{330 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_abac8759ae7be9065fb6a579e1b384c23}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_abac8759ae7be9065fb6a579e1b384c23}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Get\+Display\+Info@{Get\+Display\+Info}}
+\index{Get\+Display\+Info@{Get\+Display\+Info}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Info()}{GetDisplayInfo()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Get\+Display\+Info (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{config,  }\item[{int}]{attribute,  }\item[{int32\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 300 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{301                                                         \{}
+\DoxyCodeLine{302   hwcomposer::HWCDisplayAttribute attrib =}
+\DoxyCodeLine{303       \textcolor{keyword}{static\_cast<}hwcomposer::HWCDisplayAttribute\textcolor{keyword}{>}(attribute);}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305   \textcolor{keywordtype}{bool} ret = native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(config, attrib, value);}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{308     \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568aa7d9713c00f2aba2417e7b030f4839ce}{IAHWC\_ERROR\_NO\_RESOURCES}};}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{311 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af090eee5e7afcef5e96f8990815cf712}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af090eee5e7afcef5e96f8990815cf712}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Get\+Display\+Name@{Get\+Display\+Name}}
+\index{Get\+Display\+Name@{Get\+Display\+Name}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Name()}{GetDisplayName()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Get\+Display\+Name (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{size,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 313 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{313                                                                 \{}
+\DoxyCodeLine{314   \textcolor{keywordtype}{bool} ret = native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a28c095d6d08c84e40b5d5160d038f0b5}{GetDisplayName}}(size, name);}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{317     \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568aa7d9713c00f2aba2417e7b030f4839ce}{IAHWC\_ERROR\_NO\_RESOURCES}};}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{319   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{320 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af339a6dc789ef156c41d19bf288f44e4}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af339a6dc789ef156c41d19bf288f44e4}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer\+::\+Native\+Display}} $\ast$}]{display,  }\item[{uint32\+\_\+t}]{gpu\+\_\+fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 291 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{292                                                \{}
+\DoxyCodeLine{293   native\_display\_ = display;}
+\DoxyCodeLine{294   native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae6fdebc523f394adc23f10a8df58e296}{InitializeLayerHashGenerator}}(4);}
+\DoxyCodeLine{295   raw\_data\_uploader\_ =}
+\DoxyCodeLine{296       \textcolor{keyword}{new} PixelUploader(native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a3f15664f1f298f6109c6504bdd46019a}{GetNativeBufferHandler}}());}
+\DoxyCodeLine{297   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{298 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a834ade616fea8f09f45b7d1867a2e113}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a834ade616fea8f09f45b7d1867a2e113}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Is\+Connected@{Is\+Connected}}
+\index{Is\+Connected@{Is\+Connected}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Is\+Connected()}{IsConnected()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 455 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{455                                     \{}
+\DoxyCodeLine{456   \textcolor{keywordflow}{return} native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_af22694b3396866fd4f003755f4951b18}{IsConnected}}();}
+\DoxyCodeLine{457 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a530a804beb0192c173f7311b35d0909f}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a530a804beb0192c173f7311b35d0909f}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Present\+Display@{Present\+Display}}
+\index{Present\+Display@{Present\+Display}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Present\+Display()}{PresentDisplay()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Present\+Display (\begin{DoxyParamCaption}\item[{int32\+\_\+t $\ast$}]{release\+\_\+fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 367 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{367                                                          \{}
+\DoxyCodeLine{368   std::vector<hwcomposer::HwcLayer*> layers;}
+\DoxyCodeLine{369   \textcolor{comment}{/*}}
+\DoxyCodeLine{370 \textcolor{comment}{   * Here the assumption is that the layer index set by the compositor}}
+\DoxyCodeLine{371 \textcolor{comment}{   * is numbered from bottom -> top, i.e. the bottom most layer has the}}
+\DoxyCodeLine{372 \textcolor{comment}{   * index of 0 and increases upwards.}}
+\DoxyCodeLine{373 \textcolor{comment}{   */}}
+\DoxyCodeLine{374   uint32\_t total\_layers = layers\_.size();}
+\DoxyCodeLine{375   layers.resize(total\_layers);}
+\DoxyCodeLine{376   total\_layers -= 1;}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378   \textcolor{keywordflow}{for} (std::pair<const iahwc\_layer\_t, IAHWCLayer>\& l : layers\_) \{}
+\DoxyCodeLine{379     IAHWCLayer\& temp = l.second;}
+\DoxyCodeLine{380     uint32\_t layer\_index = total\_layers - temp.GetLayerIndex();}
+\DoxyCodeLine{381     layers[layer\_index] = temp.GetLayer();}
+\DoxyCodeLine{382   \}}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384   native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4825b8bc4b85e03b396ed6d2cf5bd8c0}{Present}}(layers, release\_fd, \textcolor{keyword}{this});}
+\DoxyCodeLine{385 }
+\DoxyCodeLine{386   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{387 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ad210be9712294200396ffaf911d31457}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ad210be9712294200396ffaf911d31457}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Register\+Hot\+Plug\+Callback@{Register\+Hot\+Plug\+Callback}}
+\index{Register\+Hot\+Plug\+Callback@{Register\+Hot\+Plug\+Callback}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Register\+Hot\+Plug\+Callback()}{RegisterHotPlugCallback()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Register\+Hot\+Plug\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}}}]{data,  }\item[{\mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}}}]{func }\end{DoxyParamCaption})}
+
+
+
+Definition at line 403 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{404                                                                             \{}
+\DoxyCodeLine{405   \textcolor{keyword}{auto} callback = std::make\_shared<IAHWCHotPlugEventCallback>(data, func, \textcolor{keyword}{this});}
+\DoxyCodeLine{406   \textcolor{comment}{// TODO:XXX send proper handle}}
+\DoxyCodeLine{407   native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4080879c203571d6404ba3b3aff53631}{RegisterHotPlugCallback}}(std::move(callback),}
+\DoxyCodeLine{408                                            static\_cast<int>(0));}
+\DoxyCodeLine{409   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{410 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ac7299bb8f8312073ba44cf2858642b15}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ac7299bb8f8312073ba44cf2858642b15}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Register\+Pixel\+Uploader\+Callback@{Register\+Pixel\+Uploader\+Callback}}
+\index{Register\+Pixel\+Uploader\+Callback@{Register\+Pixel\+Uploader\+Callback}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Register\+Pixel\+Uploader\+Callback()}{RegisterPixelUploaderCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Register\+Pixel\+Uploader\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}}}]{data,  }\item[{\mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}}}]{hook }\end{DoxyParamCaption})}
+
+
+
+Definition at line 449 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{450                                                            \{}
+\DoxyCodeLine{451   \textcolor{keyword}{auto} callback = std::make\_shared<IAPixelUploaderCallback>(data, hook, 0);}
+\DoxyCodeLine{452   raw\_data\_uploader\_->\mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a8318f648f5452cffdb1dd2c54f452ef2}{RegisterPixelUploaderCallback}}(std::move(callback));}
+\DoxyCodeLine{453 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af1ec4019ff9078b6e3971ede75ad9393}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af1ec4019ff9078b6e3971ede75ad9393}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Register\+Vsync\+Callback@{Register\+Vsync\+Callback}}
+\index{Register\+Vsync\+Callback@{Register\+Vsync\+Callback}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Register\+Vsync\+Callback()}{RegisterVsyncCallback()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Register\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}}}]{data,  }\item[{\mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}}}]{hook }\end{DoxyParamCaption})}
+
+
+
+Definition at line 437 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{438                                                                           \{}
+\DoxyCodeLine{439   \textcolor{keyword}{auto} callback = std::make\_shared<IAHWCVsyncCallback>(data, hook);}
+\DoxyCodeLine{440   native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}{VSyncControl}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{441   \textcolor{keywordtype}{int} ret = native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}{RegisterVsyncCallback}}(std::move(callback),}
+\DoxyCodeLine{442                                                    static\_cast<int>(0));}
+\DoxyCodeLine{443   \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{444     \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568ac823ecf7b5f576845d9924ed4f62f01e}{IAHWC\_ERROR\_BAD\_DISPLAY}};}
+\DoxyCodeLine{445   \}}
+\DoxyCodeLine{446   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{447 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a011a99d6cc9dda103cb57a76036bdd9b}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a011a99d6cc9dda103cb57a76036bdd9b}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Run\+Pixel\+Uploader@{Run\+Pixel\+Uploader}}
+\index{Run\+Pixel\+Uploader@{Run\+Pixel\+Uploader}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Run\+Pixel\+Uploader()}{RunPixelUploader()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Run\+Pixel\+Uploader (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 412 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{412                                                    \{}
+\DoxyCodeLine{413   \textcolor{keywordflow}{if} (enable)}
+\DoxyCodeLine{414     raw\_data\_uploader\_->\mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a6d835746b222526f59cb5df426d7885d}{Initialize}}();}
+\DoxyCodeLine{415   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{416     raw\_data\_uploader\_->\mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a445ba292fde6978ce93994706574e6ed}{ExitThread}}();}
+\DoxyCodeLine{417   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{418 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ae4a7bf880a35f4df5e649003f7f7a212}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_ae4a7bf880a35f4df5e649003f7f7a212}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Set\+Display\+Config@{Set\+Display\+Config}}
+\index{Set\+Display\+Config@{Set\+Display\+Config}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Set\+Display\+Config()}{SetDisplayConfig()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Set\+Display\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{config }\end{DoxyParamCaption})}
+
+
+
+Definition at line 343 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{343                                                        \{}
+\DoxyCodeLine{344   \textcolor{keywordtype}{bool} ret = native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a63c51853e0d82baf9d6445cf831a5ad1}{SetActiveConfig}}(config);}
+\DoxyCodeLine{345 }
+\DoxyCodeLine{346   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{347     \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568aa7d9713c00f2aba2417e7b030f4839ce}{IAHWC\_ERROR\_NO\_RESOURCES}};}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{349   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{350 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af334fba3fe056cf75884939ed8cf6fbc}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_af334fba3fe056cf75884939ed8cf6fbc}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Set\+Display\+Gamma@{Set\+Display\+Gamma}}
+\index{Set\+Display\+Gamma@{Set\+Display\+Gamma}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Set\+Display\+Gamma()}{SetDisplayGamma()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Set\+Display\+Gamma (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{b,  }\item[{float}]{g }\end{DoxyParamCaption})}
+
+
+
+Definition at line 338 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{338                                                                 \{}
+\DoxyCodeLine{339   native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a2956fb8a26ec77521a613ae1c0eaaf49}{SetGamma}}(r, g, b);}
+\DoxyCodeLine{340   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{341 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_abff19b5001304bd1f0e3c582a409f672}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_abff19b5001304bd1f0e3c582a409f672}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Set\+Power\+Mode@{Set\+Power\+Mode}}
+\index{Set\+Power\+Mode@{Set\+Power\+Mode}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Set\+Power\+Mode()}{SetPowerMode()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Set\+Power\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{power\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 332 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{332                                                        \{}
+\DoxyCodeLine{333   native\_display\_->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}{SetPowerMode}}(power\_mode);}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335   \textcolor{keywordflow}{return} \mbox{\hyperlink{iahwc_8h_a3ae9e9f48343f1ca3ad7f13a0f000568a4cbfac667065e764d037daea4df0cb42}{IAHWC\_ERROR\_NONE}};}
+\DoxyCodeLine{336 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a5911dd47943840836040cdeb9b3ae67b}\label{classhwcomposer_1_1IAHWC_1_1IAHWCDisplay_a5911dd47943840836040cdeb9b3ae67b}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}!Synchronize@{Synchronize}}
+\index{Synchronize@{Synchronize}!hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display@{hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display}}
+\subsubsection{\texorpdfstring{Synchronize()}{Synchronize()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+I\+A\+H\+W\+C\+::\+I\+A\+H\+W\+C\+Display\+::\+Synchronize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback_aba7239332010fd18deb7152b1c4cecc3}{hwcomposer\+::\+Pixel\+Uploader\+Callback}}.
+
+
+
+Definition at line 399 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{399                                     \{}
+\DoxyCodeLine{400   raw\_data\_uploader\_->\mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a1ae866ac73ce4866d88479cebeb16e41}{Synchronize}}();}
+\DoxyCodeLine{401 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/\mbox{\hyperlink{linux__frontend_8h}{linux\+\_\+frontend.\+h}}\item 
+os/linux/\mbox{\hyperlink{linux__frontend_8cpp}{linux\+\_\+frontend.\+cpp}}\end{DoxyCompactItemize}

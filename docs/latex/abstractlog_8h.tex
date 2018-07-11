@@ -1,0 +1,58 @@
+\hypertarget{abstractlog_8h}{}\section{common/utils/val/abstractlog.h File Reference}
+\label{abstractlog_8h}\index{common/utils/val/abstractlog.\+h@{common/utils/val/abstractlog.\+h}}
+{\ttfamily \#include $<$utils/\+Timers.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite}{hwcomposer\+::\+Abstract\+Log\+Write}}
+\item 
+class \mbox{\hyperlink{classhwcomposer_1_1AbstractLogRead}{hwcomposer\+::\+Abstract\+Log\+Read}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehwcomposer}{hwcomposer}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{abstractlog_8h_a18067cac65f01b250d218a7619c7055b}{H\+W\+C\+L\+O\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+R\+E\+S\+E\+R\+V\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE}}~1024
+\item 
+\#define \mbox{\hyperlink{abstractlog_8h_ab1653e3b088cd6dc486df2ea3ed50ed7}{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+TR}}~\char`\"{}\%\char`\"{} P\+R\+Ii64 \char`\"{}s \%03\char`\"{} P\+R\+Ii64 \char`\"{}ms\char`\"{}
+\item 
+\#define \mbox{\hyperlink{abstractlog_8h_aabe22c3ff3edf3be19fa13f044aa7a9d}{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+P\+A\+R\+AM}}(T)~(T) / 1000000000, ((T) \% 1000000000) / 1000000
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{abstractlog_8h_a18067cac65f01b250d218a7619c7055b}\label{abstractlog_8h_a18067cac65f01b250d218a7619c7055b}} 
+\index{abstractlog.\+h@{abstractlog.\+h}!H\+W\+C\+L\+O\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+R\+E\+S\+E\+R\+V\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE@{H\+W\+C\+L\+O\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+R\+E\+S\+E\+R\+V\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE}}
+\index{H\+W\+C\+L\+O\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+R\+E\+S\+E\+R\+V\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE@{H\+W\+C\+L\+O\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+R\+E\+S\+E\+R\+V\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE}!abstractlog.\+h@{abstractlog.\+h}}
+\subsubsection{\texorpdfstring{H\+W\+C\+L\+O\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+R\+E\+S\+E\+R\+V\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE}{HWCLOG\_STRING\_RESERVATION\_SIZE}}
+{\footnotesize\ttfamily \#define H\+W\+C\+L\+O\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+R\+E\+S\+E\+R\+V\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE~1024}
+
+
+
+Definition at line 25 of file abstractlog.\+h.
+
+\mbox{\Hypertarget{abstractlog_8h_aabe22c3ff3edf3be19fa13f044aa7a9d}\label{abstractlog_8h_aabe22c3ff3edf3be19fa13f044aa7a9d}} 
+\index{abstractlog.\+h@{abstractlog.\+h}!O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+P\+A\+R\+AM@{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+P\+A\+R\+AM}}
+\index{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+P\+A\+R\+AM@{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+P\+A\+R\+AM}!abstractlog.\+h@{abstractlog.\+h}}
+\subsubsection{\texorpdfstring{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+P\+A\+R\+AM}{OS\_ANDROID\_HWC\_TIMESTAMP\_PARAM}}
+{\footnotesize\ttfamily \#define O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+P\+A\+R\+AM(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})~(T) / 1000000000, ((T) \% 1000000000) / 1000000}
+
+
+
+Definition at line 28 of file abstractlog.\+h.
+
+\mbox{\Hypertarget{abstractlog_8h_ab1653e3b088cd6dc486df2ea3ed50ed7}\label{abstractlog_8h_ab1653e3b088cd6dc486df2ea3ed50ed7}} 
+\index{abstractlog.\+h@{abstractlog.\+h}!O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+TR@{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+TR}}
+\index{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+TR@{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+TR}!abstractlog.\+h@{abstractlog.\+h}}
+\subsubsection{\texorpdfstring{O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+TR}{OS\_ANDROID\_HWC\_TIMESTAMP\_STR}}
+{\footnotesize\ttfamily \#define O\+S\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+H\+W\+C\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+TR~\char`\"{}\%\char`\"{} P\+R\+Ii64 \char`\"{}s \%03\char`\"{} P\+R\+Ii64 \char`\"{}ms\char`\"{}}
+
+
+
+Definition at line 27 of file abstractlog.\+h.
+

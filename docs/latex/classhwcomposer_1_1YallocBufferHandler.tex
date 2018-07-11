@@ -1,0 +1,382 @@
+\hypertarget{classhwcomposer_1_1YallocBufferHandler}{}\section{hwcomposer\+:\+:Yalloc\+Buffer\+Handler Class Reference}
+\label{classhwcomposer_1_1YallocBufferHandler}\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+
+
+{\ttfamily \#include $<$yallocbufferhandler.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Yalloc\+Buffer\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1YallocBufferHandler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_adc3ffd722ea3f127968d3f630c4613cc}{Yalloc\+Buffer\+Handler}} (uint32\+\_\+t fd)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_aae88b979e1b15888fe798383a26e3b11}{$\sim$\+Yalloc\+Buffer\+Handler}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_ab7d3dfe778d60eab2a9213c9e9acfcdd}{Init}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a33d2042ab272653ebac4fcab8e957c8f}{Create\+Buffer}} (uint32\+\_\+t w, uint32\+\_\+t h, int format, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$handle, uint32\+\_\+t layer\+\_\+type=k\+Layer\+Normal, bool $\ast$modifier\+\_\+used=\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}, int64\+\_\+t modifier=-\/1, bool raw\+\_\+pixel\+\_\+buffer=false) const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a1d9ec2a830f6a8df3f454d1e2ac8893c}{Release\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_ae82e3553b77e8dfd8cbe2e30e7a153a3}{Destroy\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a25a75efa29a03adff56a37623ac6242c}{Copy\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} source, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$target) const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_aac23a7e72fca258da40cd033c78ccd02}{Import\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a257b6f65f6c57915ecabb0b6ecd43237}{Get\+Total\+Planes}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+void $\ast$ \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a855e524c54da7c897dfeb8dfabfdb29a}{Map}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, uint32\+\_\+t x, uint32\+\_\+t y, uint32\+\_\+t width, uint32\+\_\+t height, uint32\+\_\+t $\ast$stride, void $\ast$$\ast$map\+\_\+data, size\+\_\+t plane) const override
+\item 
+int32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_aea0fe826446e533862bea12e882c59ba}{Un\+Map}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, void $\ast$map\+\_\+data) const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a793b507e933f4cd256ea37e302152bb4}{Get\+Fd}} () const override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file yallocbufferhandler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_adc3ffd722ea3f127968d3f630c4613cc}\label{classhwcomposer_1_1YallocBufferHandler_adc3ffd722ea3f127968d3f630c4613cc}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Yalloc\+Buffer\+Handler@{Yalloc\+Buffer\+Handler}}
+\index{Yalloc\+Buffer\+Handler@{Yalloc\+Buffer\+Handler}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Yalloc\+Buffer\+Handler()}{YallocBufferHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Yalloc\+Buffer\+Handler (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 54 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                                     : fd\_(fd), device\_(0) \{}
+\DoxyCodeLine{55 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_aae88b979e1b15888fe798383a26e3b11}\label{classhwcomposer_1_1YallocBufferHandler_aae88b979e1b15888fe798383a26e3b11}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!````~Yalloc\+Buffer\+Handler@{$\sim$\+Yalloc\+Buffer\+Handler}}
+\index{````~Yalloc\+Buffer\+Handler@{$\sim$\+Yalloc\+Buffer\+Handler}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Yalloc\+Buffer\+Handler()}{~YallocBufferHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::$\sim$\+Yalloc\+Buffer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 57 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                           \{}
+\DoxyCodeLine{58   \textcolor{keywordflow}{if} (device\_)}
+\DoxyCodeLine{59     yalloc\_close(device\_);}
+\DoxyCodeLine{60 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_a25a75efa29a03adff56a37623ac6242c}\label{classhwcomposer_1_1YallocBufferHandler_a25a75efa29a03adff56a37623ac6242c}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Copy\+Handle@{Copy\+Handle}}
+\index{Copy\+Handle@{Copy\+Handle}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Copy\+Handle()}{CopyHandle()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Copy\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{source,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a96581fb8bd36e959c8da6b9f634ecd32}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 145 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{146                                                                     \{}
+\DoxyCodeLine{147   CopyBufferHandle(source, target);}
+\DoxyCodeLine{148 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_a33d2042ab272653ebac4fcab8e957c8f}\label{classhwcomposer_1_1YallocBufferHandler_a33d2042ab272653ebac4fcab8e957c8f}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Create\+Buffer@{Create\+Buffer}}
+\index{Create\+Buffer@{Create\+Buffer}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Create\+Buffer()}{CreateBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Create\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{w,  }\item[{uint32\+\_\+t}]{h,  }\item[{int}]{format,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$}]{handle,  }\item[{uint32\+\_\+t}]{layer\+\_\+type = {\ttfamily kLayerNormal},  }\item[{bool $\ast$}]{modifier\+\_\+used = {\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}},  }\item[{int64\+\_\+t}]{modifier = {\ttfamily -\/1},  }\item[{bool}]{raw\+\_\+pixel\+\_\+buffer = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a7e58e3d81d3f56cbee34c963b4999fde}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 74 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                      \{}
+\DoxyCodeLine{79   \textcolor{comment}{// LOG\_I("YallocBufferHandler::CreateBuffer --> enter.\(\backslash\)n");}}
+\DoxyCodeLine{80   \textcolor{comment}{// LOG\_I("\(\backslash\)tw: \%d, h: \%d, format: \%x.\(\backslash\)n", w, h, format);}}
+\DoxyCodeLine{81   \textcolor{comment}{// FIXME:: Take Modifiers into use.}}
+\DoxyCodeLine{82   \textcolor{keywordflow}{if} (modifier\_used)}
+\DoxyCodeLine{83     *modifier\_used = \textcolor{keyword}{false};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85   \textcolor{keyword}{struct }\mbox{\hyperlink{structyalloc__handle}{yalloc\_handle}} *temp = \textcolor{keyword}{new} \textcolor{keyword}{struct }\mbox{\hyperlink{structyalloc__handle}{yalloc\_handle}}();}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87   uint32\_t pixel\_format = 0;}
+\DoxyCodeLine{88   \textcolor{keywordflow}{if} (format != 0) \{}
+\DoxyCodeLine{89     pixel\_format = DrmFormatToHALFormat(format);}
+\DoxyCodeLine{90   \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92   \textcolor{keywordflow}{if} (pixel\_format == 0) \{}
+\DoxyCodeLine{93     pixel\_format = YUN\_HAL\_FORMAT\_RGBA\_8888;}
+\DoxyCodeLine{94   \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96   \textcolor{keywordtype}{bool} force\_normal\_usage = \textcolor{keyword}{false};}
+\DoxyCodeLine{97   \textcolor{keywordflow}{if} ((layer\_type == hwcomposer::kLayerVideo) \&\&}
+\DoxyCodeLine{98       !\mbox{\hyperlink{namespacehwcomposer_a96195339fc55ee57f41cc4597a56746c}{IsSupportedMediaFormat}}(format)) \{}
+\DoxyCodeLine{99     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Forcing normal usage for Video Layer. \(\backslash\)n"});}
+\DoxyCodeLine{100     force\_normal\_usage = \textcolor{keyword}{true};}
+\DoxyCodeLine{101   \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103   uint32\_t usage = 0;}
+\DoxyCodeLine{104   \textcolor{keywordflow}{if} ((layer\_type == hwcomposer::kLayerNormal) || force\_normal\_usage) \{}
+\DoxyCodeLine{105     usage |= YALLOC\_FLAG\_HW\_COMPOSER | YALLOC\_FLAG\_HW\_RENDER |}
+\DoxyCodeLine{106              YALLOC\_FLAG\_HW\_TEXTURE;}
+\DoxyCodeLine{107   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (layer\_type == hwcomposer::kLayerVideo) \{}
+\DoxyCodeLine{108     \textcolor{keywordflow}{switch} (pixel\_format) \{}
+\DoxyCodeLine{109       \textcolor{keywordflow}{case} YUN\_HAL\_FORMAT\_YCbCr\_422\_I:}
+\DoxyCodeLine{110       \textcolor{keywordflow}{case} YUN\_HAL\_FORMAT\_Y8:}
+\DoxyCodeLine{111         usage |= YALLOC\_FLAG\_HW\_TEXTURE | YALLOC\_FLAG\_HW\_VIDEO\_DECODER;}
+\DoxyCodeLine{112         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{113       \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{114         usage |= YALLOC\_FLAG\_HW\_CAMERA\_WRITE | YALLOC\_FLAG\_HW\_CAMERA\_READ |}
+\DoxyCodeLine{115                  YALLOC\_FLAG\_HW\_VIDEO\_ENCODER | YALLOC\_FLAG\_HW\_TEXTURE;}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (layer\_type == hwcomposer::kLayerCursor) \{}
+\DoxyCodeLine{118     usage |= YALLOC\_FLAG\_CURSOR;}
+\DoxyCodeLine{119   \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121   \textcolor{keywordtype}{int} stride;}
+\DoxyCodeLine{122   device\_->alloc(device\_, w, h, pixel\_format, usage, \&(temp->\mbox{\hyperlink{structyalloc__handle_a36250e79fcdc6f1e58020a9d2b891a48}{target\_}}), \&stride);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124   temp->\mbox{\hyperlink{structyalloc__handle_ad1b5a7934204f6636871eb6270329654}{hwc\_buffer\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126   *handle = temp;}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{129 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_ae82e3553b77e8dfd8cbe2e30e7a153a3}\label{classhwcomposer_1_1YallocBufferHandler_ae82e3553b77e8dfd8cbe2e30e7a153a3}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Destroy\+Handle@{Destroy\+Handle}}
+\index{Destroy\+Handle@{Destroy\+Handle}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Destroy\+Handle()}{DestroyHandle()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Destroy\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_ab1e22d9737ca9f6c3e75d1b550e34ce9}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 141 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141                                                                     \{}
+\DoxyCodeLine{142   DestroyBufferHandle(handle);}
+\DoxyCodeLine{143 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_a793b507e933f4cd256ea37e302152bb4}\label{classhwcomposer_1_1YallocBufferHandler_a793b507e933f4cd256ea37e302152bb4}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Get\+Fd@{Get\+Fd}}
+\index{Get\+Fd@{Get\+Fd}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Fd()}{GetFd()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Get\+Fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_adb5a4c6d14c012f8a5c71fbb2c984438}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 202 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{202                                           \{}
+\DoxyCodeLine{203   \textcolor{keywordflow}{return} fd\_;}
+\DoxyCodeLine{204 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_a257b6f65f6c57915ecabb0b6ecd43237}\label{classhwcomposer_1_1YallocBufferHandler_a257b6f65f6c57915ecabb0b6ecd43237}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Get\+Total\+Planes@{Get\+Total\+Planes}}
+\index{Get\+Total\+Planes@{Get\+Total\+Planes}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Total\+Planes()}{GetTotalPlanes()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Get\+Total\+Planes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a3b4115de8c13c53b6cd233f755f46dc9}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 161 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{161                                                                          \{}
+\DoxyCodeLine{162   \textcolor{keyword}{auto} yr\_handle =}
+\DoxyCodeLine{163       (\textcolor{keyword}{struct }yalloc\_drm\_handle\_t *)handle->\mbox{\hyperlink{structyalloc__handle_a3f3364ba0854ad9263dd49bb7f121053}{imported\_target\_}}->attributes.data;}
+\DoxyCodeLine{164   if (!yr\_handle) \{}
+\DoxyCodeLine{165     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"could not find yalloc drm handle"});}
+\DoxyCodeLine{166     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{167   \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169   \textcolor{keywordtype}{int} plane\_num;}
+\DoxyCodeLine{170   \textcolor{keywordtype}{int} bpp[3];}
+\DoxyCodeLine{171   yalloc\_drm\_get\_bpp(yr\_handle->format, \&plane\_num, bpp);}
+\DoxyCodeLine{172   \textcolor{keywordflow}{return} plane\_num;}
+\DoxyCodeLine{173 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_aac23a7e72fca258da40cd033c78ccd02}\label{classhwcomposer_1_1YallocBufferHandler_aac23a7e72fca258da40cd033c78ccd02}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Import\+Buffer@{Import\+Buffer}}
+\index{Import\+Buffer@{Import\+Buffer}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Import\+Buffer()}{ImportBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Import\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a5841be467d2aa11e8c4d7233596fda3c}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 150 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{150                                                                    \{}
+\DoxyCodeLine{151   \textcolor{keywordflow}{if} (!handle->\mbox{\hyperlink{structyalloc__handle_a3f3364ba0854ad9263dd49bb7f121053}{imported\_target\_}}) \{}
+\DoxyCodeLine{152     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"could not find yalloc drm target"});}
+\DoxyCodeLine{153     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{154   \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156   device\_->authorizeBuffer(device\_, handle->\mbox{\hyperlink{structyalloc__handle_a3f3364ba0854ad9263dd49bb7f121053}{imported\_target\_}});}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158   \textcolor{keywordflow}{return} ImportGraphicsBuffer(handle, fd\_, \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a257b6f65f6c57915ecabb0b6ecd43237}{GetTotalPlanes}}(handle));}
+\DoxyCodeLine{159 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_ab7d3dfe778d60eab2a9213c9e9acfcdd}\label{classhwcomposer_1_1YallocBufferHandler_ab7d3dfe778d60eab2a9213c9e9acfcdd}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62                                \{}
+\DoxyCodeLine{63   VendorModule *module =}
+\DoxyCodeLine{64       (VendorModule *)LOAD\_VENDOR\_MODULE(YALLOC\_VENDOR\_MODULE\_ID);}
+\DoxyCodeLine{65   \textcolor{keywordflow}{if} (module == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{66     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"LOAD\_VENDOR\_MODULE Failed\(\backslash\)n"});}
+\DoxyCodeLine{67     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{68   \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70   yalloc\_open(module, \&device\_);}
+\DoxyCodeLine{71   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{72 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_a855e524c54da7c897dfeb8dfabfdb29a}\label{classhwcomposer_1_1YallocBufferHandler_a855e524c54da7c897dfeb8dfabfdb29a}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Map@{Map}}
+\index{Map@{Map}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily void $\ast$ hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{uint32\+\_\+t}]{x,  }\item[{uint32\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{uint32\+\_\+t $\ast$}]{stride,  }\item[{void $\ast$$\ast$}]{map\+\_\+data,  }\item[{size\+\_\+t}]{plane }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a4ef1e64030d28540265fac46d503e9b8}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 175 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{178                                                    \{}
+\DoxyCodeLine{179   \textcolor{keywordflow}{if} (!handle->\mbox{\hyperlink{structyalloc__handle_a3f3364ba0854ad9263dd49bb7f121053}{imported\_target\_}}) \{}
+\DoxyCodeLine{180     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"could not find yalloc drm handle"});}
+\DoxyCodeLine{181     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{182   \}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184   \textcolor{keywordtype}{int} error =}
+\DoxyCodeLine{185       device\_->map(device\_, handle->\mbox{\hyperlink{structyalloc__handle_a3f3364ba0854ad9263dd49bb7f121053}{imported\_target\_}},}
+\DoxyCodeLine{186                    YALLOC\_FLAG\_SW\_READ\_OFTEN | YALLOC\_FLAG\_SW\_WRITE\_OFTEN, x, y,}
+\DoxyCodeLine{187                    width, height, map\_data);}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189   \textcolor{keywordflow}{return} error ? \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} : *map\_data;}
+\DoxyCodeLine{190 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_a1d9ec2a830f6a8df3f454d1e2ac8893c}\label{classhwcomposer_1_1YallocBufferHandler_a1d9ec2a830f6a8df3f454d1e2ac8893c}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Release\+Buffer@{Release\+Buffer}}
+\index{Release\+Buffer@{Release\+Buffer}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Release\+Buffer()}{ReleaseBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Release\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_abff911db92343545a36a0cc44a8d2eb8}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 131 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                                                                     \{}
+\DoxyCodeLine{132   \textcolor{keywordflow}{if} (handle->\mbox{\hyperlink{structyalloc__handle_ad1b5a7934204f6636871eb6270329654}{hwc\_buffer\_}}) \{}
+\DoxyCodeLine{133     device\_->free(device\_, handle->\mbox{\hyperlink{structyalloc__handle_a36250e79fcdc6f1e58020a9d2b891a48}{target\_}});}
+\DoxyCodeLine{134   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (handle->\mbox{\hyperlink{structyalloc__handle_a3f3364ba0854ad9263dd49bb7f121053}{imported\_target\_}}) \{}
+\DoxyCodeLine{135     device\_->free(device\_, handle->\mbox{\hyperlink{structyalloc__handle_a3f3364ba0854ad9263dd49bb7f121053}{imported\_target\_}});}
+\DoxyCodeLine{136   \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{139 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1YallocBufferHandler_aea0fe826446e533862bea12e882c59ba}\label{classhwcomposer_1_1YallocBufferHandler_aea0fe826446e533862bea12e882c59ba}} 
+\index{hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}!Un\+Map@{Un\+Map}}
+\index{Un\+Map@{Un\+Map}!hwcomposer\+::\+Yalloc\+Buffer\+Handler@{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Un\+Map()}{UnMap()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Yalloc\+Buffer\+Handler\+::\+Un\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{void $\ast$}]{map\+\_\+data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_ae0da63bfef3f8342460fa1a958f8359c}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 192 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{193                                                          \{}
+\DoxyCodeLine{194   \textcolor{keywordflow}{if} (!handle->\mbox{\hyperlink{structyalloc__handle_a3f3364ba0854ad9263dd49bb7f121053}{imported\_target\_}}) \{}
+\DoxyCodeLine{195     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"could not find gralloc drm handle"});}
+\DoxyCodeLine{196     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{197   \}}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199   \textcolor{keywordflow}{return} device\_->unmap(device\_, handle->\mbox{\hyperlink{structyalloc__handle_a3f3364ba0854ad9263dd49bb7f121053}{imported\_target\_}});}
+\DoxyCodeLine{200 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/alios/\mbox{\hyperlink{yallocbufferhandler_8h}{yallocbufferhandler.\+h}}\item 
+os/alios/\mbox{\hyperlink{yallocbufferhandler_8cpp}{yallocbufferhandler.\+cpp}}\end{DoxyCompactItemize}

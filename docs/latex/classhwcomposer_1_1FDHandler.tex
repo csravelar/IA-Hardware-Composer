@@ -1,0 +1,185 @@
+\hypertarget{classhwcomposer_1_1FDHandler}{}\section{hwcomposer\+:\+:F\+D\+Handler Class Reference}
+\label{classhwcomposer_1_1FDHandler}\index{hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}}
+
+
+{\ttfamily \#include $<$fdhandler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1FDHandler_aa11b62797841898883bbf3b3f9b55726}{F\+D\+Handler}} ()
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1FDHandler_ace6e0ca1463839042229d717b9a2ae3a}{$\sim$\+F\+D\+Handler}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1FDHandler_aee421fa4ae54b7d4fcc352ebea15b4f8}{Add\+Fd}} (int fd)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1FDHandler_a41262bff4e932281e66b8cebaabced1d}{Remove\+Fd}} (int fd)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1FDHandler_a5ab233d1f474eab69552321e87159a9d}{Poll}} (int timeout)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1FDHandler_ad635c0c7631838aa99e0140c4164425f}{Is\+Ready}} (int fd) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file fdhandler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1FDHandler_aa11b62797841898883bbf3b3f9b55726}\label{classhwcomposer_1_1FDHandler_aa11b62797841898883bbf3b3f9b55726}} 
+\index{hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}!F\+D\+Handler@{F\+D\+Handler}}
+\index{F\+D\+Handler@{F\+D\+Handler}!hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}}
+\subsubsection{\texorpdfstring{F\+D\+Handler()}{FDHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+F\+D\+Handler\+::\+F\+D\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file fdhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28                      \{}
+\DoxyCodeLine{29 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1FDHandler_ace6e0ca1463839042229d717b9a2ae3a}\label{classhwcomposer_1_1FDHandler_ace6e0ca1463839042229d717b9a2ae3a}} 
+\index{hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}!````~F\+D\+Handler@{$\sim$\+F\+D\+Handler}}
+\index{````~F\+D\+Handler@{$\sim$\+F\+D\+Handler}!hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+F\+D\+Handler()}{~FDHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+F\+D\+Handler\+::$\sim$\+F\+D\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 31 of file fdhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                       \{}
+\DoxyCodeLine{32 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1FDHandler_aee421fa4ae54b7d4fcc352ebea15b4f8}\label{classhwcomposer_1_1FDHandler_aee421fa4ae54b7d4fcc352ebea15b4f8}} 
+\index{hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}!Add\+Fd@{Add\+Fd}}
+\index{Add\+Fd@{Add\+Fd}!hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}}
+\subsubsection{\texorpdfstring{Add\+Fd()}{AddFd()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+F\+D\+Handler\+::\+Add\+Fd (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file fdhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                             \{}
+\DoxyCodeLine{35   \textcolor{keywordflow}{if} (fd < 0) \{}
+\DoxyCodeLine{36     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Cannot add negative fd: \%d"}, fd);}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{38   \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40   \textcolor{keyword}{auto} it = fds\_.find(fd);}
+\DoxyCodeLine{41   \textcolor{keywordflow}{if} (it != fds\_.end()) \{}
+\DoxyCodeLine{42     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"FD already being watched: \%d\(\backslash\)n"}, it->first);}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{44   \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46   fds\_.emplace(fd, FDWatch());}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{49 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1FDHandler_ad635c0c7631838aa99e0140c4164425f}\label{classhwcomposer_1_1FDHandler_ad635c0c7631838aa99e0140c4164425f}} 
+\index{hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}!Is\+Ready@{Is\+Ready}}
+\index{Is\+Ready@{Is\+Ready}!hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}}
+\subsubsection{\texorpdfstring{Is\+Ready()}{IsReady()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+F\+D\+Handler\+::\+Is\+Ready (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 83 of file fdhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                                    \{}
+\DoxyCodeLine{84   \textcolor{keyword}{const} \textcolor{keyword}{auto} \&it = fds\_.find(fd);}
+\DoxyCodeLine{85   \textcolor{keywordflow}{if} (it == fds\_.end()) \{}
+\DoxyCodeLine{86     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"FD \%d is being watched but we can't find it.\(\backslash\)n"}, fd);}
+\DoxyCodeLine{87     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{88   \}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90   \textcolor{keywordtype}{int} revents = it->second.revents;}
+\DoxyCodeLine{91   \textcolor{keywordflow}{if} (revents \& POLLIN)}
+\DoxyCodeLine{92     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{93   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (revents \& POLLERR)}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{95   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (revents \& POLLNVAL)}
+\DoxyCodeLine{96     \textcolor{keywordflow}{return} -2;}
+\DoxyCodeLine{97   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{98     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{99 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1FDHandler_a5ab233d1f474eab69552321e87159a9d}\label{classhwcomposer_1_1FDHandler_a5ab233d1f474eab69552321e87159a9d}} 
+\index{hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}!Poll@{Poll}}
+\index{Poll@{Poll}!hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}}
+\subsubsection{\texorpdfstring{Poll()}{Poll()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+F\+D\+Handler\+::\+Poll (\begin{DoxyParamCaption}\item[{int}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file fdhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62                                \{}
+\DoxyCodeLine{63   nfds\_t nfds = fds\_.size();}
+\DoxyCodeLine{64   \textcolor{keyword}{struct }pollfd fds[nfds];}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{67   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&it : fds\_) \{}
+\DoxyCodeLine{68     fds[i].fd = it.first;}
+\DoxyCodeLine{69     fds[i].events = POLLIN;}
+\DoxyCodeLine{70     it.second.idx = i;}
+\DoxyCodeLine{71     i++;}
+\DoxyCodeLine{72   \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74   \textcolor{keywordtype}{int} ret = poll(fds, nfds, timeout);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&it : fds\_) \{}
+\DoxyCodeLine{77     it.second.revents = fds[it.second.idx].revents;}
+\DoxyCodeLine{78   \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80   \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{81 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1FDHandler_a41262bff4e932281e66b8cebaabced1d}\label{classhwcomposer_1_1FDHandler_a41262bff4e932281e66b8cebaabced1d}} 
+\index{hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}!Remove\+Fd@{Remove\+Fd}}
+\index{Remove\+Fd@{Remove\+Fd}!hwcomposer\+::\+F\+D\+Handler@{hwcomposer\+::\+F\+D\+Handler}}
+\subsubsection{\texorpdfstring{Remove\+Fd()}{RemoveFd()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+F\+D\+Handler\+::\+Remove\+Fd (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file fdhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                \{}
+\DoxyCodeLine{52   \textcolor{keyword}{const} \textcolor{keyword}{auto} \&fd\_iter = fds\_.find(fd);}
+\DoxyCodeLine{53   \textcolor{keywordflow}{if} (fd\_iter == fds\_.end()) \{}
+\DoxyCodeLine{54     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"FD \%d is not being watched.\(\backslash\)n"}, fd);}
+\DoxyCodeLine{55     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{56   \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58   fds\_.erase(fd\_iter);}
+\DoxyCodeLine{59   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{60 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/utils/\mbox{\hyperlink{fdhandler_8h}{fdhandler.\+h}}\item 
+common/utils/\mbox{\hyperlink{fdhandler_8cpp}{fdhandler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+\hypertarget{structhwcomposer_1_1DrmPlaneDeleter}{}\section{hwcomposer\+:\+:Drm\+Plane\+Deleter Struct Reference}
+\label{structhwcomposer_1_1DrmPlaneDeleter}\index{hwcomposer\+::\+Drm\+Plane\+Deleter@{hwcomposer\+::\+Drm\+Plane\+Deleter}}
+
+
+{\ttfamily \#include $<$drmscopedtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1DrmPlaneDeleter_ab7ca49d08c4397de86e270144c1b89de}{operator()}} (\mbox{\hyperlink{drmscopedtypes_8h_a41627c0f0f83a8fc263e592ae28ae6b4}{drm\+Mode\+Plane}} $\ast$plane) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 50 of file drmscopedtypes.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrmPlaneDeleter_ab7ca49d08c4397de86e270144c1b89de}\label{structhwcomposer_1_1DrmPlaneDeleter_ab7ca49d08c4397de86e270144c1b89de}} 
+\index{hwcomposer\+::\+Drm\+Plane\+Deleter@{hwcomposer\+::\+Drm\+Plane\+Deleter}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+Drm\+Plane\+Deleter@{hwcomposer\+::\+Drm\+Plane\+Deleter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Plane\+Deleter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drmscopedtypes_8h_a41627c0f0f83a8fc263e592ae28ae6b4}{drm\+Mode\+Plane}} $\ast$}]{plane }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 44 of file drmscopedtypes.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                                           \{}
+\DoxyCodeLine{45   drmModeFreePlane(plane);}
+\DoxyCodeLine{46 \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8h}{drmscopedtypes.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8cpp}{drmscopedtypes.\+cpp}}\end{DoxyCompactItemize}

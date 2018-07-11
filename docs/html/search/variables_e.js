@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['recorder',['recorder',['../structiahwc__output.html#a3fe7dd1b11d07065ec10a0066bad6b0b',1,'iahwc_output']]],
+  ['recorder_5fframe_5flistener',['recorder_frame_listener',['../structiahwc__output.html#a8d3cfee58372ebf417ed0e6b8ef08db1',1,'iahwc_output']]],
+  ['rect',['rect',['../structhwcomposer_1_1RectSet.html#a7c8d95db3edda0fe888c524886426a2d',1,'hwcomposer::RectSet']]],
+  ['rect_5f',['rect_',['../classhwcomposer_1_1PhysicalDisplay.html#aa50206430baa8d901e604787a73fe9b8',1,'hwcomposer::PhysicalDisplay']]],
+  ['rect_5fid',['rect_id',['../structhwcomposer_1_1YPOI.html#a7013c2713330905fb2fe5027f43fc645',1,'hwcomposer::YPOI::rect_id()'],['../structhwcomposer_1_1POI.html#a1140eb53d6ffdc71b5964b60d112ece3',1,'hwcomposer::POI::rect_id()']]],
+  ['rect_5fids',['rect_ids',['../structhwcomposer_1_1Region.html#ab5d133570f0a2acb9b3f20ac6297b133',1,'hwcomposer::Region']]],
+  ['rects',['rects',['../structiahwc__region.html#a94a878c575f670019f83b1cac59094a5',1,'iahwc_region']]],
+  ['red',['red',['../structhwcomposer_1_1gamma__colors.html#a02c6848074b1bf52bedf0a97a791fbbd',1,'hwcomposer::gamma_colors::red()'],['../structhwcomposer_1_1canvas__color__comps.html#a1fe32ff54751b722cf22aa5552bbf639',1,'hwcomposer::canvas_color_comps::red()'],['../structdrm__color__ctm__post__offset.html#a5b7b2feda04ca2d62ba2c569d2458dc3',1,'drm_color_ctm_post_offset::red()']]],
+  ['refresh',['refresh',['../struct__HwcsDisplayModeInfo.html#afbc17f7325634fd5b86eeb0a2023c635',1,'_HwcsDisplayModeInfo']]],
+  ['release_5ffence',['release_fence',['../structiahwc__output.html#a3137bfd94446ab2ee1cc823575894b2a',1,'iahwc_output']]],
+  ['release_5ffence_5fsource',['release_fence_source',['../structiahwc__output.html#a34dcb2b1a9089f0dcc5f36afb845e399',1,'iahwc_output']]],
+  ['render_5fpass_5f',['render_pass_',['../namespacehwcomposer.html#a4d9a582f332eed1a524e91fce91d09c2',1,'hwcomposer']]],
+  ['repaint_5fdata',['repaint_data',['../structiahwc__backend.html#af4bd6373d3284521062a544c9b95f412',1,'iahwc_backend']]],
+  ['resource_5fmanager_5f',['resource_manager_',['../classhwcomposer_1_1NativeSurface.html#afcf0d94e1da86afddd75e62df22a0753',1,'hwcomposer::NativeSurface']]],
+  ['retire_5ffence_5f',['retire_fence_',['../structhwcomposer_1_1DrawState.html#ab8ef923f9bdefc5965a143656b3fe188',1,'hwcomposer::DrawState']]],
+  ['right',['right',['../structiahwc__rect.html#a94734af35b59300dd43a54e42bb68ea4',1,'iahwc_rect::right()'],['../structhwcomposer_1_1Rect.html#ab93cc23bb659c53ef273acd7ab27ef9a',1,'hwcomposer::Rect::right()']]],
+  ['ring_5fbuffer_5f',['ring_buffer_',['../namespacehwcomposer.html#a2fbb38712cfea2b605d1beeac8e33990',1,'hwcomposer']]]
+];

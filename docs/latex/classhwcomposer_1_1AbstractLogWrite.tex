@@ -1,0 +1,207 @@
+\hypertarget{classhwcomposer_1_1AbstractLogWrite}{}\section{hwcomposer\+:\+:Abstract\+Log\+Write Class Reference}
+\label{classhwcomposer_1_1AbstractLogWrite}\index{hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}}
+
+
+{\ttfamily \#include $<$abstractlog.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual char $\ast$ \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a1e91aa0a8644b25d1a5631aa27c2e12a}{reserve}} (uint32\+\_\+t max\+Size)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a48270085d3c27b1bf677ad0cd1e1e6f4}{log}} (char $\ast$end\+Ptr)=0
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_af4ffd5e02ff4ab0793240f277a977490}{$\sim$\+Abstract\+Log\+Write}} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a71a35f2cc404fda44f1be588ba0704ea}{addV}} (const char $\ast$description, va\+\_\+list \&args)
+\item 
+const char $\ast$ \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a20e581518ad33452f943f249baa1a9f8}{add}} (const char $\ast$fmt,...)
+\item 
+const char $\ast$ \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a4888d603916411aed97cbab06cdabbad}{unpack}} (const char $\ast$ptr, pid\+\_\+t \&pid, int64\+\_\+t \&timestamp)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a926b1236104dd30fd5262cfd7f66fa79}{c\+Str\+Offset}} = sizeof(pid\+\_\+t) + sizeof(uint64\+\_\+t)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a854cb2e7bfd9f4b5a32235b057e24a6f}{log\+To\+Logcat}} (const char $\ast$ptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file abstractlog.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1AbstractLogWrite_af4ffd5e02ff4ab0793240f277a977490}\label{classhwcomposer_1_1AbstractLogWrite_af4ffd5e02ff4ab0793240f277a977490}} 
+\index{hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}!````~Abstract\+Log\+Write@{$\sim$\+Abstract\+Log\+Write}}
+\index{````~Abstract\+Log\+Write@{$\sim$\+Abstract\+Log\+Write}!hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}}
+\subsubsection{\texorpdfstring{$\sim$\+Abstract\+Log\+Write()}{~AbstractLogWrite()}}
+{\footnotesize\ttfamily virtual hwcomposer\+::\+Abstract\+Log\+Write\+::$\sim$\+Abstract\+Log\+Write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 61 of file abstractlog.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                               \{}
+\DoxyCodeLine{62   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1AbstractLogWrite_a20e581518ad33452f943f249baa1a9f8}\label{classhwcomposer_1_1AbstractLogWrite_a20e581518ad33452f943f249baa1a9f8}} 
+\index{hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}!add@{add}}
+\index{add@{add}!hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily const char$\ast$ hwcomposer\+::\+Abstract\+Log\+Write\+::add (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 109 of file abstractlog.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109                                         \{}
+\DoxyCodeLine{110     va\_list args;}
+\DoxyCodeLine{111     va\_start(args, fmt);}
+\DoxyCodeLine{112     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* ptr = \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a71a35f2cc404fda44f1be588ba0704ea}{addV}}(fmt, args);}
+\DoxyCodeLine{113     va\_end(args);}
+\DoxyCodeLine{114     \textcolor{keywordflow}{return} ptr;}
+\DoxyCodeLine{115   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1AbstractLogWrite_a71a35f2cc404fda44f1be588ba0704ea}\label{classhwcomposer_1_1AbstractLogWrite_a71a35f2cc404fda44f1be588ba0704ea}} 
+\index{hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}!addV@{addV}}
+\index{addV@{addV}!hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}}
+\subsubsection{\texorpdfstring{add\+V()}{addV()}}
+{\footnotesize\ttfamily const char$\ast$ hwcomposer\+::\+Abstract\+Log\+Write\+::addV (\begin{DoxyParamCaption}\item[{const char $\ast$}]{description,  }\item[{va\+\_\+list \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 67 of file abstractlog.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                                            \{}
+\DoxyCodeLine{68     \textcolor{comment}{// Determine space requirement to flatten the layers}}
+\DoxyCodeLine{69     \textcolor{keywordtype}{size\_t} logAllocSize = \textcolor{keyword}{sizeof}(int);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \textcolor{comment}{// ... and an amount for the tid, time, and a fixed allocation for the}}
+\DoxyCodeLine{72     \textcolor{comment}{// string}}
+\DoxyCodeLine{73     logAllocSize += \textcolor{keyword}{sizeof}(pid\_t) + \textcolor{keyword}{sizeof}(uint64\_t) + strlen(description) +}
+\DoxyCodeLine{74                     \mbox{\hyperlink{abstractlog_8h_a18067cac65f01b250d218a7619c7055b}{HWCLOG\_STRING\_RESERVATION\_SIZE}};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{comment}{// Allocate a log entry with enough space for all that}}
+\DoxyCodeLine{77     \textcolor{keywordtype}{char}* entry = \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a1e91aa0a8644b25d1a5631aa27c2e12a}{reserve}}(logAllocSize);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{keywordflow}{if} (entry == 0) \{}
+\DoxyCodeLine{80       \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};}
+\DoxyCodeLine{81     \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{char}* ptr = entry;}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{comment}{// Write the tid}}
+\DoxyCodeLine{86     pid\_t threadid = gettid();}
+\DoxyCodeLine{87     serialize(ptr, threadid);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{comment}{// Write the time}}
+\DoxyCodeLine{90     nsecs\_t timestamp = systemTime(CLOCK\_MONOTONIC);}
+\DoxyCodeLine{91     serialize(ptr, timestamp);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     \textcolor{comment}{// Write the formatted string}}
+\DoxyCodeLine{94     \textcolor{keywordtype}{int} maxlen = entry + logAllocSize - ptr;}
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} len = vsnprintf(ptr, maxlen, description, args) + 1;}
+\DoxyCodeLine{96     \textcolor{comment}{// NB string will be null-terminated within maxlen characters}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     \textcolor{keywordflow}{if} (len > maxlen) \{}
+\DoxyCodeLine{99       len = maxlen;}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a48270085d3c27b1bf677ad0cd1e1e6f4}{log}}(ptr + len);}
+\DoxyCodeLine{103     \textcolor{keywordflow}{return} ptr;}
+\DoxyCodeLine{104   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1AbstractLogWrite_a48270085d3c27b1bf677ad0cd1e1e6f4}\label{classhwcomposer_1_1AbstractLogWrite_a48270085d3c27b1bf677ad0cd1e1e6f4}} 
+\index{hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}!log@{log}}
+\index{log@{log}!hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Abstract\+Log\+Write\+::log (\begin{DoxyParamCaption}\item[{char $\ast$}]{end\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1AbstractLogWrite_a854cb2e7bfd9f4b5a32235b057e24a6f}\label{classhwcomposer_1_1AbstractLogWrite_a854cb2e7bfd9f4b5a32235b057e24a6f}} 
+\index{hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}!log\+To\+Logcat@{log\+To\+Logcat}}
+\index{log\+To\+Logcat@{log\+To\+Logcat}!hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}}
+\subsubsection{\texorpdfstring{log\+To\+Logcat()}{logToLogcat()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Abstract\+Log\+Write\+::log\+To\+Logcat (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 124 of file abstractlog.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                     \{}
+\DoxyCodeLine{125     pid\_t threadid;}
+\DoxyCodeLine{126     nsecs\_t timestamp;}
+\DoxyCodeLine{127     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* str = \mbox{\hyperlink{classhwcomposer_1_1AbstractLogWrite_a4888d603916411aed97cbab06cdabbad}{unpack}}(ptr, threadid, timestamp);}
+\DoxyCodeLine{128     \textcolor{comment}{// Long multi line strings to logcat get truncated when they are too large.}}
+\DoxyCodeLine{129     \textcolor{comment}{// Hence, break up the output into one logcat entry per line of text.}}
+\DoxyCodeLine{130     std::string inputstr(str);}
+\DoxyCodeLine{131     std::string delimiter(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{132     \textcolor{keywordtype}{size\_t} pos = 0;}
+\DoxyCodeLine{133     std::string token;}
+\DoxyCodeLine{134     \textcolor{keywordflow}{while} ((pos = inputstr.find(delimiter)) != std::string::npos) \{}
+\DoxyCodeLine{135       token = inputstr.substr(0, pos);}
+\DoxyCodeLine{136       ALOGI(\textcolor{stringliteral}{"\%s"}, token.c\_str());}
+\DoxyCodeLine{137       inputstr.erase(0, pos + delimiter.length());}
+\DoxyCodeLine{138     \}}
+\DoxyCodeLine{139   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1AbstractLogWrite_a1e91aa0a8644b25d1a5631aa27c2e12a}\label{classhwcomposer_1_1AbstractLogWrite_a1e91aa0a8644b25d1a5631aa27c2e12a}} 
+\index{hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}!reserve@{reserve}}
+\index{reserve@{reserve}!hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}}
+\subsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily virtual char$\ast$ hwcomposer\+::\+Abstract\+Log\+Write\+::reserve (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1AbstractLogWrite_a4888d603916411aed97cbab06cdabbad}\label{classhwcomposer_1_1AbstractLogWrite_a4888d603916411aed97cbab06cdabbad}} 
+\index{hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}!unpack@{unpack}}
+\index{unpack@{unpack}!hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}}
+\subsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily const char$\ast$ hwcomposer\+::\+Abstract\+Log\+Write\+::unpack (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ptr,  }\item[{pid\+\_\+t \&}]{pid,  }\item[{int64\+\_\+t \&}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 117 of file abstractlog.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                                                                       \{}
+\DoxyCodeLine{118     pid = unserialize<pid\_t>(ptr);}
+\DoxyCodeLine{119     timestamp = unserialize<int64\_t>(ptr);}
+\DoxyCodeLine{120     \textcolor{keywordflow}{return} ptr;}
+\DoxyCodeLine{121   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1AbstractLogWrite_a926b1236104dd30fd5262cfd7f66fa79}\label{classhwcomposer_1_1AbstractLogWrite_a926b1236104dd30fd5262cfd7f66fa79}} 
+\index{hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}!c\+Str\+Offset@{c\+Str\+Offset}}
+\index{c\+Str\+Offset@{c\+Str\+Offset}!hwcomposer\+::\+Abstract\+Log\+Write@{hwcomposer\+::\+Abstract\+Log\+Write}}
+\subsubsection{\texorpdfstring{c\+Str\+Offset}{cStrOffset}}
+{\footnotesize\ttfamily const size\+\_\+t hwcomposer\+::\+Abstract\+Log\+Write\+::c\+Str\+Offset = sizeof(pid\+\_\+t) + sizeof(uint64\+\_\+t)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 40 of file abstractlog.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/utils/val/\mbox{\hyperlink{abstractlog_8h}{abstractlog.\+h}}\end{DoxyCompactItemize}

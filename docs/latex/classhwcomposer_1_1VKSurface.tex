@@ -1,0 +1,114 @@
+\hypertarget{classhwcomposer_1_1VKSurface}{}\section{hwcomposer\+:\+:V\+K\+Surface Class Reference}
+\label{classhwcomposer_1_1VKSurface}\index{hwcomposer\+::\+V\+K\+Surface@{hwcomposer\+::\+V\+K\+Surface}}
+
+
+{\ttfamily \#include $<$vksurface.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:V\+K\+Surface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1VKSurface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VKSurface_a2bb4ff78df502cff6fe5430fe4a8eeb0}{V\+K\+Surface}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VKSurface_abf37c906a41c145b0d9685490bdf37df}{$\sim$\+V\+K\+Surface}} () override
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VKSurface_addf1196e6a5a52cb9a3bbfbd3ee38610}{V\+K\+Surface}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VKSurface_a4df93ef0688ea34a96557da2ad411f53}{Make\+Current}} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file vksurface.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VKSurface_a2bb4ff78df502cff6fe5430fe4a8eeb0}\label{classhwcomposer_1_1VKSurface_a2bb4ff78df502cff6fe5430fe4a8eeb0}} 
+\index{hwcomposer\+::\+V\+K\+Surface@{hwcomposer\+::\+V\+K\+Surface}!V\+K\+Surface@{V\+K\+Surface}}
+\index{V\+K\+Surface@{V\+K\+Surface}!hwcomposer\+::\+V\+K\+Surface@{hwcomposer\+::\+V\+K\+Surface}}
+\subsubsection{\texorpdfstring{V\+K\+Surface()}{VKSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+K\+Surface\+::\+V\+K\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1VKSurface_abf37c906a41c145b0d9685490bdf37df}\label{classhwcomposer_1_1VKSurface_abf37c906a41c145b0d9685490bdf37df}} 
+\index{hwcomposer\+::\+V\+K\+Surface@{hwcomposer\+::\+V\+K\+Surface}!````~V\+K\+Surface@{$\sim$\+V\+K\+Surface}}
+\index{````~V\+K\+Surface@{$\sim$\+V\+K\+Surface}!hwcomposer\+::\+V\+K\+Surface@{hwcomposer\+::\+V\+K\+Surface}}
+\subsubsection{\texorpdfstring{$\sim$\+V\+K\+Surface()}{~VKSurface()}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+K\+Surface\+::$\sim$\+V\+K\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 28 of file vksurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28                       \{}
+\DoxyCodeLine{29   vkDestroyFramebuffer(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, surface\_fb\_, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{30   vkDestroyImageView(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, image\_view\_, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{31   vkDestroyImage(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, image\_, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{32   vkFreeMemory(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, image\_memory\_, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{33 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKSurface_addf1196e6a5a52cb9a3bbfbd3ee38610}\label{classhwcomposer_1_1VKSurface_addf1196e6a5a52cb9a3bbfbd3ee38610}} 
+\index{hwcomposer\+::\+V\+K\+Surface@{hwcomposer\+::\+V\+K\+Surface}!V\+K\+Surface@{V\+K\+Surface}}
+\index{V\+K\+Surface@{V\+K\+Surface}!hwcomposer\+::\+V\+K\+Surface@{hwcomposer\+::\+V\+K\+Surface}}
+\subsubsection{\texorpdfstring{V\+K\+Surface()}{VKSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+K\+Surface\+::\+V\+K\+Surface (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file vksurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21     : \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a17e5ae7ecfd166faa21ccba1e6b03197}{NativeSurface}}(width, height) \{}
+\DoxyCodeLine{22   image\_memory\_ = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{23   image\_ = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{24   image\_view\_ = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{25   surface\_fb\_ = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{26 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VKSurface_a4df93ef0688ea34a96557da2ad411f53}\label{classhwcomposer_1_1VKSurface_a4df93ef0688ea34a96557da2ad411f53}} 
+\index{hwcomposer\+::\+V\+K\+Surface@{hwcomposer\+::\+V\+K\+Surface}!Make\+Current@{Make\+Current}}
+\index{Make\+Current@{Make\+Current}!hwcomposer\+::\+V\+K\+Surface@{hwcomposer\+::\+V\+K\+Surface}}
+\subsubsection{\texorpdfstring{Make\+Current()}{MakeCurrent()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+V\+K\+Surface\+::\+Make\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a2e3bdea36f4b2d3f655a5f6d38670d51}{hwcomposer\+::\+Native\+Surface}}.
+
+
+
+Definition at line 105 of file vksurface.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{105                             \{}
+\DoxyCodeLine{106   \textcolor{keywordflow}{if} (surface\_fb\_ == VK\_NULL\_HANDLE \&\& !InitializeGPUResources()) \{}
+\DoxyCodeLine{107     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initialize gpu resources."});}
+\DoxyCodeLine{108     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{109   \}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111   \mbox{\hyperlink{namespacehwcomposer_a9761a93547da000b91c035dbfeef55df}{framebuffer\_}} = surface\_fb\_;}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{114 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/vk/\mbox{\hyperlink{vksurface_8h}{vksurface.\+h}}\item 
+common/compositor/vk/\mbox{\hyperlink{vksurface_8cpp}{vksurface.\+cpp}}\end{DoxyCompactItemize}

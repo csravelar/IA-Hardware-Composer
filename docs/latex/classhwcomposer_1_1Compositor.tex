@@ -1,0 +1,436 @@
+\hypertarget{classhwcomposer_1_1Compositor}{}\section{hwcomposer\+:\+:Compositor Class Reference}
+\label{classhwcomposer_1_1Compositor}\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+
+
+{\ttfamily \#include $<$compositor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1Compositor_a250a64e1755ec44fdd1daccc3e568ae8}{Compositor}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1Compositor_a0f17100bfab3e60f3f705ae491e5e664}{Compositor}} (const \mbox{\hyperlink{classhwcomposer_1_1Compositor}{Compositor}} \&)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1Compositor}{Compositor}} \& \mbox{\hyperlink{classhwcomposer_1_1Compositor_a12222f05927fd066716497c72377c4ab}{operator=}} (const \mbox{\hyperlink{classhwcomposer_1_1Compositor}{Compositor}} \&)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1Compositor_ae3ab0f1e2b38db1b6bb044675bfd8644}{$\sim$\+Compositor}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a5ad90c739aabb16ec737b9b6f8ceb991}{Init}} (\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$buffer\+\_\+manager, uint32\+\_\+t gpu\+\_\+fd, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a9e48d65a1b926f921acccccba51b69dc}{Reset}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a2a9da9e986a230cb68e322ed18ba4866}{Begin\+Frame}} (bool disable\+\_\+explicit\+\_\+sync)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1Compositor_ad1b2b9db52224ab8e5ae906df0c58a28}{Draw}} (\mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&planes, std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers, const std\+::vector$<$ Hwc\+Rect$<$ int $>$$>$ \&display\+\_\+frame)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1Compositor_aef10a796686b16de4a15f6eb0be7168f}{Draw\+Offscreen}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers, const std\+::vector$<$ Hwc\+Rect$<$ int $>$$>$ \&display\+\_\+frame, const std\+::vector$<$ size\+\_\+t $>$ \&source\+\_\+layers, \mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$resource\+\_\+manager, uint32\+\_\+t width, uint32\+\_\+t height, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} output\+\_\+handle, int32\+\_\+t acquire\+\_\+fence, int32\+\_\+t $\ast$retire\+\_\+fence)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a2f3fc19fcbe2de45982a5ee14c2c0f1d}{Free\+Resources}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a82b92f88271cc0c95555b5ca97620e59}{Set\+Video\+Scaling\+Mode}} (uint32\+\_\+t)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a150659a25023edf4aa162e2482959e87}{Set\+Video\+Color}} (H\+W\+C\+Color\+Control color, float value)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a736674112ad74dfb5b6f84a4521623d6}{Get\+Video\+Color}} (H\+W\+C\+Color\+Control color, float $\ast$value, float $\ast$start, float $\ast$end)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a2e970fc6261ed6ea871a16bf28e53cc5}{Restore\+Video\+Default\+Color}} (H\+W\+C\+Color\+Control color)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a9ee296456a843a9f1e9230afbd7576e2}{Set\+Video\+Deinterlace}} (H\+W\+C\+Deinterlace\+Flag flag, H\+W\+C\+Deinterlace\+Control mode)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Compositor_a3e6cdd578394ba6611b8efdd3ff9c2e1}{Restore\+Video\+Default\+Deinterlace}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 37 of file compositor.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a250a64e1755ec44fdd1daccc3e568ae8}\label{classhwcomposer_1_1Compositor_a250a64e1755ec44fdd1daccc3e568ae8}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Compositor@{Compositor}}
+\index{Compositor@{Compositor}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Compositor()}{Compositor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Compositor\+::\+Compositor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                        \{}
+\DoxyCodeLine{36   deinterlace\_.flag\_ = HWCDeinterlaceFlag::kDeinterlaceFlagNone;}
+\DoxyCodeLine{37   deinterlace\_.mode\_ = HWCDeinterlaceControl::kDeinterlaceNone;}
+\DoxyCodeLine{38 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a0f17100bfab3e60f3f705ae491e5e664}\label{classhwcomposer_1_1Compositor_a0f17100bfab3e60f3f705ae491e5e664}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Compositor@{Compositor}}
+\index{Compositor@{Compositor}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Compositor()}{Compositor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Compositor\+::\+Compositor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1Compositor}{Compositor}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_ae3ab0f1e2b38db1b6bb044675bfd8644}\label{classhwcomposer_1_1Compositor_ae3ab0f1e2b38db1b6bb044675bfd8644}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!````~Compositor@{$\sim$\+Compositor}}
+\index{````~Compositor@{$\sim$\+Compositor}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{$\sim$\+Compositor()}{~Compositor()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Compositor\+::$\sim$\+Compositor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                         \{}
+\DoxyCodeLine{41 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a2a9da9e986a230cb68e322ed18ba4866}\label{classhwcomposer_1_1Compositor_a2a9da9e986a230cb68e322ed18ba4866}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Begin\+Frame@{Begin\+Frame}}
+\index{Begin\+Frame@{Begin\+Frame}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Begin\+Frame()}{BeginFrame()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Begin\+Frame (\begin{DoxyParamCaption}\item[{bool}]{disable\+\_\+explicit\+\_\+sync }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                                       \{}
+\DoxyCodeLine{52   thread\_->SetExplicitSyncSupport(disable\_explicit\_sync);}
+\DoxyCodeLine{53 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_ad1b2b9db52224ab8e5ae906df0c58a28}\label{classhwcomposer_1_1Compositor_ad1b2b9db52224ab8e5ae906df0c58a28}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Draw@{Draw}}
+\index{Draw@{Draw}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Compositor\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{planes,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers,  }\item[{const std\+::vector$<$ Hwc\+Rect$<$ int $>$$>$ \&}]{display\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62                                                                     \{}
+\DoxyCodeLine{63   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{64   \textcolor{keyword}{const} DisplayPlaneState *comp = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{65   std::vector<size\_t> dedicated\_layers;}
+\DoxyCodeLine{66   std::vector<DrawState> draw\_state;}
+\DoxyCodeLine{67   std::vector<DrawState> media\_state;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69   \textcolor{keywordflow}{for} (DisplayPlaneState \&plane : comp\_planes) \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{if} (plane.Scanout()) \{}
+\DoxyCodeLine{71       \textcolor{keywordflow}{if} (!plane.IsSurfaceRecycled()) \{}
+\DoxyCodeLine{72         dedicated\_layers.insert(dedicated\_layers.end(),}
+\DoxyCodeLine{73                                 plane.GetSourceLayers().begin(),}
+\DoxyCodeLine{74                                 plane.GetSourceLayers().end());}
+\DoxyCodeLine{75       \}}
+\DoxyCodeLine{76     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (plane.IsVideoPlane()) \{}
+\DoxyCodeLine{77       dedicated\_layers.insert(dedicated\_layers.end(),}
+\DoxyCodeLine{78                               plane.GetSourceLayers().begin(),}
+\DoxyCodeLine{79                               plane.GetSourceLayers().end());}
+\DoxyCodeLine{80       media\_state.emplace\_back();}
+\DoxyCodeLine{81       plane.SwapSurfaceIfNeeded();}
+\DoxyCodeLine{82       DrawState \&state = media\_state.back();}
+\DoxyCodeLine{83       state.surface\_ = plane.GetOffScreenTarget();}
+\DoxyCodeLine{84       MediaState \&media\_state = state.media\_state\_;}
+\DoxyCodeLine{85       lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{86       media\_state.colors\_ = colors\_;}
+\DoxyCodeLine{87       media\_state.scaling\_mode\_ = scaling\_mode\_;}
+\DoxyCodeLine{88       media\_state.deinterlace\_ = deinterlace\_;}
+\DoxyCodeLine{89       lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{90       \textcolor{keyword}{const} OverlayLayer \&layer = layers[plane.GetSourceLayers().at(0)];}
+\DoxyCodeLine{91       media\_state.layer\_ = \&layer;}
+\DoxyCodeLine{92     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (plane.NeedsOffScreenComposition()) \{}
+\DoxyCodeLine{93       comp = \&plane;}
+\DoxyCodeLine{94       plane.SwapSurfaceIfNeeded();}
+\DoxyCodeLine{95       std::vector<CompositionRegion> \&comp\_regions =}
+\DoxyCodeLine{96           plane.GetCompositionRegion();}
+\DoxyCodeLine{97       \textcolor{keywordtype}{bool} regions\_empty = comp\_regions.empty();}
+\DoxyCodeLine{98       NativeSurface *surface = plane.GetOffScreenTarget();}
+\DoxyCodeLine{99       \textcolor{keywordflow}{if} (surface == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{100         \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"GetOffScreenTarget() returned NULL pointer 'surface'."});}
+\DoxyCodeLine{101         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{102       \}}
+\DoxyCodeLine{103       \textcolor{keywordflow}{if} (!regions\_empty \&\&}
+\DoxyCodeLine{104           (surface->ClearSurface() || surface->IsPartialClear() ||}
+\DoxyCodeLine{105            surface->IsSurfaceDamageChanged())) \{}
+\DoxyCodeLine{106         plane.ResetCompositionRegion();}
+\DoxyCodeLine{107         regions\_empty = \textcolor{keyword}{true};}
+\DoxyCodeLine{108       \}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110       \textcolor{keywordflow}{if} (surface->ClearSurface()) \{}
+\DoxyCodeLine{111         plane.UpdateDamage(plane.GetDisplayFrame());}
+\DoxyCodeLine{112       \}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114       \textcolor{keywordflow}{if} (regions\_empty) \{}
+\DoxyCodeLine{115         SeparateLayers(dedicated\_layers, comp->GetSourceLayers(), display\_frame,}
+\DoxyCodeLine{116                        surface->GetSurfaceDamage(), comp\_regions);}
+\DoxyCodeLine{117       \}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119       std::vector<size\_t>().swap(dedicated\_layers);}
+\DoxyCodeLine{120       \textcolor{keywordflow}{if} (comp\_regions.empty())}
+\DoxyCodeLine{121         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123       draw\_state.emplace\_back();}
+\DoxyCodeLine{124       DrawState \&state = draw\_state.back();}
+\DoxyCodeLine{125       state.surface\_ = surface;}
+\DoxyCodeLine{126       \textcolor{keywordtype}{size\_t} num\_regions = comp\_regions.size();}
+\DoxyCodeLine{127       state.states\_.reserve(num\_regions);}
+\DoxyCodeLine{128       \textcolor{keywordtype}{bool} use\_plane\_transform = \textcolor{keyword}{false};}
+\DoxyCodeLine{129       \textcolor{keywordflow}{if} (plane.GetRotationType() ==}
+\DoxyCodeLine{130           \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a5b98db46be3ebb427a634f7a07033357}{DisplayPlaneState::RotationType::kGPURotation}}) \{}
+\DoxyCodeLine{131         use\_plane\_transform = \textcolor{keyword}{true};}
+\DoxyCodeLine{132       \}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134       CalculateRenderState(layers, comp\_regions, state,}
+\DoxyCodeLine{135                            plane.GetDownScalingFactor(),}
+\DoxyCodeLine{136                            plane.IsUsingPlaneScalar(), use\_plane\_transform);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138       \textcolor{keywordflow}{if} (state.states\_.empty()) \{}
+\DoxyCodeLine{139         draw\_state.pop\_back();}
+\DoxyCodeLine{140       \}}
+\DoxyCodeLine{141     \}}
+\DoxyCodeLine{142   \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144   \textcolor{keywordtype}{bool} status = \textcolor{keyword}{true};}
+\DoxyCodeLine{145   \textcolor{keywordflow}{if} (!draw\_state.empty() || !media\_state.empty())}
+\DoxyCodeLine{146     status = thread\_->Draw(draw\_state, media\_state, layers);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148   \textcolor{keywordflow}{return} status;}
+\DoxyCodeLine{149 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_aef10a796686b16de4a15f6eb0be7168f}\label{classhwcomposer_1_1Compositor_aef10a796686b16de4a15f6eb0be7168f}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Draw\+Offscreen@{Draw\+Offscreen}}
+\index{Draw\+Offscreen@{Draw\+Offscreen}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Draw\+Offscreen()}{DrawOffscreen()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Compositor\+::\+Draw\+Offscreen (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers,  }\item[{const std\+::vector$<$ Hwc\+Rect$<$ int $>$$>$ \&}]{display\+\_\+frame,  }\item[{const std\+::vector$<$ size\+\_\+t $>$ \&}]{source\+\_\+layers,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{resource\+\_\+manager,  }\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{output\+\_\+handle,  }\item[{int32\+\_\+t}]{acquire\+\_\+fence,  }\item[{int32\+\_\+t $\ast$}]{retire\+\_\+fence }\end{DoxyParamCaption})}
+
+
+
+Definition at line 151 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{157                                                                              \{}
+\DoxyCodeLine{158   std::vector<CompositionRegion> comp\_regions;}
+\DoxyCodeLine{159   SeparateLayers(std::vector<size\_t>(), source\_layers, display\_frame,}
+\DoxyCodeLine{160                  HwcRect<int>(0, 0, width, height), comp\_regions);}
+\DoxyCodeLine{161   \textcolor{keywordflow}{if} (comp\_regions.empty()) \{}
+\DoxyCodeLine{162     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(}
+\DoxyCodeLine{163         \textcolor{stringliteral}{"Failed to prepare offscreen buffer. "}}
+\DoxyCodeLine{164         \textcolor{stringliteral}{"error: \%s"},}
+\DoxyCodeLine{165         \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{166     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{167   \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169   NativeSurface *surface = \mbox{\hyperlink{namespacehwcomposer_a0052e66c56b527255f759b8eb871ee46}{Create3DBuffer}}(width, height);}
+\DoxyCodeLine{170   surface->InitializeForOffScreenRendering(output\_handle, resource\_manager);}
+\DoxyCodeLine{171   std::vector<DrawState> draw;}
+\DoxyCodeLine{172   std::vector<DrawState> media;}
+\DoxyCodeLine{173   draw.emplace\_back();}
+\DoxyCodeLine{174   DrawState \&draw\_state = draw.back();}
+\DoxyCodeLine{175   draw\_state.destroy\_surface\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{176   draw\_state.surface\_ = surface;}
+\DoxyCodeLine{177   \textcolor{keywordtype}{size\_t} num\_regions = comp\_regions.size();}
+\DoxyCodeLine{178   draw\_state.states\_.reserve(num\_regions);}
+\DoxyCodeLine{179   CalculateRenderState(layers, comp\_regions, draw\_state, 1, \textcolor{keyword}{false});}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181   \textcolor{keywordflow}{if} (draw\_state.states\_.empty()) \{}
+\DoxyCodeLine{182     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{183   \}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185   \textcolor{keywordflow}{if} (acquire\_fence > 0) \{}
+\DoxyCodeLine{186     draw\_state.acquire\_fences\_.emplace\_back(acquire\_fence);}
+\DoxyCodeLine{187   \}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189   \textcolor{keywordtype}{bool} status = thread\_->Draw(draw, media, layers);}
+\DoxyCodeLine{190   \textcolor{keywordflow}{if} (status) \{}
+\DoxyCodeLine{191     *retire\_fence = draw\_state.retire\_fence\_;}
+\DoxyCodeLine{192   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{193     *retire\_fence = -1;}
+\DoxyCodeLine{194   \}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196   \textcolor{keywordflow}{return} status;}
+\DoxyCodeLine{197 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a2f3fc19fcbe2de45982a5ee14c2c0f1d}\label{classhwcomposer_1_1Compositor_a2f3fc19fcbe2de45982a5ee14c2c0f1d}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Free\+Resources@{Free\+Resources}}
+\index{Free\+Resources@{Free\+Resources}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Free\+Resources()}{FreeResources()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Free\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 199 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{199                                \{}
+\DoxyCodeLine{200   thread\_->FreeResources();}
+\DoxyCodeLine{201 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a736674112ad74dfb5b6f84a4521623d6}\label{classhwcomposer_1_1Compositor_a736674112ad74dfb5b6f84a4521623d6}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Get\+Video\+Color@{Get\+Video\+Color}}
+\index{Get\+Video\+Color@{Get\+Video\+Color}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Get\+Video\+Color()}{GetVideoColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Get\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{color,  }\item[{float $\ast$}]{value,  }\item[{float $\ast$}]{start,  }\item[{float $\ast$}]{end }\end{DoxyParamCaption})}
+
+
+
+Definition at line 244 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{245                                                      \{}
+\DoxyCodeLine{246   \textcolor{comment}{// TODO}}
+\DoxyCodeLine{247 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a5ad90c739aabb16ec737b9b6f8ceb991}\label{classhwcomposer_1_1Compositor_a5ad90c739aabb16ec737b9b6f8ceb991}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{buffer\+\_\+manager,  }\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                                                 \{}
+\DoxyCodeLine{45   \textcolor{keywordflow}{if} (!thread\_)}
+\DoxyCodeLine{46     thread\_.reset(\textcolor{keyword}{new} CompositorThread());}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48   thread\_->Initialize(resource\_manager, gpu\_fd, frame\_buffer\_manager);}
+\DoxyCodeLine{49 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a12222f05927fd066716497c72377c4ab}\label{classhwcomposer_1_1Compositor_a12222f05927fd066716497c72377c4ab}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1Compositor}{Compositor}}\& hwcomposer\+::\+Compositor\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1Compositor}{Compositor}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a9e48d65a1b926f921acccccba51b69dc}\label{classhwcomposer_1_1Compositor_a9e48d65a1b926f921acccccba51b69dc}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Reset@{Reset}}
+\index{Reset@{Reset}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                        \{}
+\DoxyCodeLine{56   \textcolor{keywordflow}{if} (thread\_)}
+\DoxyCodeLine{57     thread\_->ExitThread();}
+\DoxyCodeLine{58 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a2e970fc6261ed6ea871a16bf28e53cc5}\label{classhwcomposer_1_1Compositor_a2e970fc6261ed6ea871a16bf28e53cc5}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}}
+\index{Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Color()}{RestoreVideoDefaultColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Restore\+Video\+Default\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line 249 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{249                                                                \{}
+\DoxyCodeLine{250   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{251   colors\_[color].use\_default\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{252   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{253 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a3e6cdd578394ba6611b8efdd3ff9c2e1}\label{classhwcomposer_1_1Compositor_a3e6cdd578394ba6611b8efdd3ff9c2e1}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}}
+\index{Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Deinterlace()}{RestoreVideoDefaultDeinterlace()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Restore\+Video\+Default\+Deinterlace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 263 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{263                                                 \{}
+\DoxyCodeLine{264   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{265   deinterlace\_.flag\_ = HWCDeinterlaceFlag::kDeinterlaceFlagNone;}
+\DoxyCodeLine{266   deinterlace\_.mode\_ = HWCDeinterlaceControl::kDeinterlaceNone;}
+\DoxyCodeLine{267   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{268 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a150659a25023edf4aa162e2482959e87}\label{classhwcomposer_1_1Compositor_a150659a25023edf4aa162e2482959e87}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Set\+Video\+Color@{Set\+Video\+Color}}
+\index{Set\+Video\+Color@{Set\+Video\+Color}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Set\+Video\+Color()}{SetVideoColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Set\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{color,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 237 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{237                                                                  \{}
+\DoxyCodeLine{238   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{239   colors\_[color].value\_ = value;}
+\DoxyCodeLine{240   colors\_[color].use\_default\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{241   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{242 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a9ee296456a843a9f1e9230afbd7576e2}\label{classhwcomposer_1_1Compositor_a9ee296456a843a9f1e9230afbd7576e2}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}}
+\index{Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Set\+Video\+Deinterlace()}{SetVideoDeinterlace()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Set\+Video\+Deinterlace (\begin{DoxyParamCaption}\item[{H\+W\+C\+Deinterlace\+Flag}]{flag,  }\item[{H\+W\+C\+Deinterlace\+Control}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 255 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{256                                                                  \{}
+\DoxyCodeLine{257   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{258   deinterlace\_.flag\_ = flag;}
+\DoxyCodeLine{259   deinterlace\_.mode\_ = mode;}
+\DoxyCodeLine{260   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{261 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Compositor_a82b92f88271cc0c95555b5ca97620e59}\label{classhwcomposer_1_1Compositor_a82b92f88271cc0c95555b5ca97620e59}} 
+\index{hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}!Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}}
+\index{Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}!hwcomposer\+::\+Compositor@{hwcomposer\+::\+Compositor}}
+\subsubsection{\texorpdfstring{Set\+Video\+Scaling\+Mode()}{SetVideoScalingMode()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+::\+Set\+Video\+Scaling\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 231 of file compositor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{231                                                   \{}
+\DoxyCodeLine{232   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{233   scaling\_mode\_ = mode;}
+\DoxyCodeLine{234   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{235 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/\mbox{\hyperlink{compositor_8h}{compositor.\+h}}\item 
+common/compositor/\mbox{\hyperlink{compositor_8cpp}{compositor.\+cpp}}\end{DoxyCompactItemize}

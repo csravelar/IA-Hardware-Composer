@@ -1,0 +1,115 @@
+\hypertarget{classhwcomposer_1_1DisplayTimeLine}{}\section{hwcomposer\+:\+:Display\+Time\+Line Class Reference}
+\label{classhwcomposer_1_1DisplayTimeLine}\index{hwcomposer\+::\+Display\+Time\+Line@{hwcomposer\+::\+Display\+Time\+Line}}
+
+
+{\ttfamily \#include $<$hwf\+\_\+alioshal.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1DisplayTimeLine_a8f29703a84e1a0bcd0687831d6e59e44}{Init}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayTimeLine_a35b0b3c94f729a0356126ef7a89a81ef}{$\sim$\+Display\+Time\+Line}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayTimeLine_ad42e159c9bc63e507dfdae95a157f156}{Increment\+Time\+Line}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 44 of file hwf\+\_\+alioshal.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayTimeLine_a35b0b3c94f729a0356126ef7a89a81ef}\label{classhwcomposer_1_1DisplayTimeLine_a35b0b3c94f729a0356126ef7a89a81ef}} 
+\index{hwcomposer\+::\+Display\+Time\+Line@{hwcomposer\+::\+Display\+Time\+Line}!````~Display\+Time\+Line@{$\sim$\+Display\+Time\+Line}}
+\index{````~Display\+Time\+Line@{$\sim$\+Display\+Time\+Line}!hwcomposer\+::\+Display\+Time\+Line@{hwcomposer\+::\+Display\+Time\+Line}}
+\subsubsection{\texorpdfstring{$\sim$\+Display\+Time\+Line()}{~DisplayTimeLine()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Display\+Time\+Line\+::$\sim$\+Display\+Time\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 59 of file hwf\+\_\+alioshal.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                      \{}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#if USER\_FENCE\_SYNC}}
+\DoxyCodeLine{61     \textcolor{keywordflow}{if} (timeline\_fd\_ > 0) \{}
+\DoxyCodeLine{62       close(timeline\_fd\_);}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{65   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayTimeLine_ad42e159c9bc63e507dfdae95a157f156}\label{classhwcomposer_1_1DisplayTimeLine_ad42e159c9bc63e507dfdae95a157f156}} 
+\index{hwcomposer\+::\+Display\+Time\+Line@{hwcomposer\+::\+Display\+Time\+Line}!Increment\+Time\+Line@{Increment\+Time\+Line}}
+\index{Increment\+Time\+Line@{Increment\+Time\+Line}!hwcomposer\+::\+Display\+Time\+Line@{hwcomposer\+::\+Display\+Time\+Line}}
+\subsubsection{\texorpdfstring{Increment\+Time\+Line()}{IncrementTimeLine()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Display\+Time\+Line\+::\+Increment\+Time\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 67 of file hwf\+\_\+alioshal.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                               \{}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#if USER\_FENCE\_SYNC}}
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} ret =}
+\DoxyCodeLine{70         sw\_sync\_fence\_create(timeline\_fd\_, \textcolor{stringliteral}{"display fence"}, timeline\_pt\_ + 1);}
+\DoxyCodeLine{71     \textcolor{keywordflow}{if} (ret < 0) \{}
+\DoxyCodeLine{72       LOG\_E(\textcolor{stringliteral}{"Failed to create display fence \%d \%d"}, ret, timeline\_fd\_);}
+\DoxyCodeLine{73       \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{74     \}:}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76       int32\_t ret\_fd(ret);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     ret = sw\_sync\_timeline\_inc(timeline\_fd\_, 1);}
+\DoxyCodeLine{79     \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{80       LOG\_E(\textcolor{stringliteral}{"Failed to increment display sync timeline \%d"}, ret);}
+\DoxyCodeLine{81       \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     ++timeline\_pt\_;}
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} ret\_fd;}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{88     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{90   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayTimeLine_a8f29703a84e1a0bcd0687831d6e59e44}\label{classhwcomposer_1_1DisplayTimeLine_a8f29703a84e1a0bcd0687831d6e59e44}} 
+\index{hwcomposer\+::\+Display\+Time\+Line@{hwcomposer\+::\+Display\+Time\+Line}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+Display\+Time\+Line@{hwcomposer\+::\+Display\+Time\+Line}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Display\+Time\+Line\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 46 of file hwf\+\_\+alioshal.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46              \{}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#if USER\_FENCE\_SYNC}}
+\DoxyCodeLine{48     timeline\_fd\_ = open(\textcolor{stringliteral}{"/dev/sw\_sync"}, O\_RDWR);}
+\DoxyCodeLine{49     \textcolor{keywordflow}{if} (timeline\_fd\_ < 0)}
+\DoxyCodeLine{50       \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{55     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{57   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/alios/\mbox{\hyperlink{hwf__alioshal_8h}{hwf\+\_\+alioshal.\+h}}\end{DoxyCompactItemize}

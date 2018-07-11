@@ -1,0 +1,674 @@
+\hypertarget{classhwcomposer_1_1VirtualDisplay}{}\section{hwcomposer\+:\+:Virtual\+Display Class Reference}
+\label{classhwcomposer_1_1VirtualDisplay}\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+
+
+{\ttfamily \#include $<$virtualdisplay.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Virtual\+Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1VirtualDisplay}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a2759b53ddb478ce683047ac616c8c5c7}{Virtual\+Display}} (uint32\+\_\+t gpu\+\_\+fd, \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$buffer\+\_\+handler, uint32\+\_\+t pipe\+\_\+id, uint32\+\_\+t crtc\+\_\+id)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_aaec2188fd92ae61e9fcf96516ed93568}{Virtual\+Display}} (const \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay}{Virtual\+Display}} \&)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay}{Virtual\+Display}} \& \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a91b8eb8d9a3339e4623e9147b26a3f2d}{operator=}} (const \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay}{Virtual\+Display}} \&)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_afa01fd5c8820b86489bab16b0dfe4eef}{$\sim$\+Virtual\+Display}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ad0bde041f8a66ab112818ded26e650ad}{Init\+Virtual\+Display}} (uint32\+\_\+t width, uint32\+\_\+t height) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_aec4f2f29aebee6947f69920ec832a655}{Get\+Active\+Config}} (uint32\+\_\+t $\ast$config) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ae8a48c2d2449d3185b1653074e74e171}{Set\+Active\+Config}} (uint32\+\_\+t config) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ae97c6838a094e32117b496445e0a8c3e}{Present}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&source\+\_\+layers, int32\+\_\+t $\ast$retire\+\_\+fence, \mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$call\+\_\+back=\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}, bool handle\+\_\+constraints=false) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a392b98e9fbb3ee437212e10b0874512f}{Set\+Output\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} buffer, int32\+\_\+t acquire\+\_\+fence) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a86d1fb5bdab8aa74d11d223313fb4fd0}{Initialize}} (\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$buffer\+\_\+handler, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager) override
+\item 
+Display\+Type \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a20d0dc4afb2b131ffec31e81e046c52d}{Type}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ac860da388ef586d62f6864612db7fa2d}{Width}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a7136ba46d348b88dae1908a928e6ce2d}{Height}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a81f29d5b1642bb5f9dfc84fdfc497e8a}{Power\+Mode}} () const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_aa8dd83e78724b4b853a8d5e09ceffc56}{Get\+Display\+Attribute}} (uint32\+\_\+t config, H\+W\+C\+Display\+Attribute attribute, int32\+\_\+t $\ast$value) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ad432fc9a1edb46dff169f16f1bca6935}{Get\+Display\+Configs}} (uint32\+\_\+t $\ast$num\+\_\+configs, uint32\+\_\+t $\ast$configs) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a3f83c9978807be3b71c095f12d22359c}{Get\+Display\+Name}} (uint32\+\_\+t $\ast$size, char $\ast$name) override
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a7c627b12e08f7f95f85aad9d833cbc32}{Get\+Display\+Pipe}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a303aab0dcc612e932690885d1b88d985}{Set\+Power\+Mode}} (uint32\+\_\+t power\+\_\+mode) override
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ac7c9e2ca6a7f2e4f4acef44e4dd14ea6}{Register\+Vsync\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a96071f0a9aed7cbacbdae71ed3f46e6b}{V\+Sync\+Control}} (bool enabled) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a236888c443de310b6e0f23f575fd9d75}{Check\+Plane\+Format}} (uint32\+\_\+t format) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file virtualdisplay.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a2759b53ddb478ce683047ac616c8c5c7}\label{classhwcomposer_1_1VirtualDisplay_a2759b53ddb478ce683047ac616c8c5c7}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Virtual\+Display@{Virtual\+Display}}
+\index{Virtual\+Display@{Virtual\+Display}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Virtual\+Display()}{VirtualDisplay()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Virtual\+Display\+::\+Virtual\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$}]{buffer\+\_\+handler,  }\item[{uint32\+\_\+t}]{pipe\+\_\+id,  }\item[{uint32\+\_\+t}]{crtc\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37     : output\_handle\_(0), acquire\_fence\_(-1), width\_(0), height\_(0) \{}
+\DoxyCodeLine{38   resource\_manager\_.reset(\textcolor{keyword}{new} ResourceManager(buffer\_handler));}
+\DoxyCodeLine{39   \textcolor{keywordflow}{if} (!resource\_manager\_) \{}
+\DoxyCodeLine{40     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to construct hwc layer buffer manager"});}
+\DoxyCodeLine{41   \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43   compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a5ad90c739aabb16ec737b9b6f8ceb991}{Init}}(resource\_manager\_.get(), gpu\_fd, fb\_manager\_);}
+\DoxyCodeLine{44 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_aaec2188fd92ae61e9fcf96516ed93568}\label{classhwcomposer_1_1VirtualDisplay_aaec2188fd92ae61e9fcf96516ed93568}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Virtual\+Display@{Virtual\+Display}}
+\index{Virtual\+Display@{Virtual\+Display}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Virtual\+Display()}{VirtualDisplay()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Virtual\+Display\+::\+Virtual\+Display (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay}{Virtual\+Display}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_afa01fd5c8820b86489bab16b0dfe4eef}\label{classhwcomposer_1_1VirtualDisplay_afa01fd5c8820b86489bab16b0dfe4eef}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!````~Virtual\+Display@{$\sim$\+Virtual\+Display}}
+\index{````~Virtual\+Display@{$\sim$\+Virtual\+Display}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{$\sim$\+Virtual\+Display()}{~VirtualDisplay()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Virtual\+Display\+::$\sim$\+Virtual\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 46 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                 \{}
+\DoxyCodeLine{47   \textcolor{keywordflow}{if} (acquire\_fence\_ > 0) \{}
+\DoxyCodeLine{48     close(acquire\_fence\_);}
+\DoxyCodeLine{49   \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   \textcolor{keywordflow}{if} (handle\_) \{}
+\DoxyCodeLine{52     \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{ResourceHandle}} temp;}
+\DoxyCodeLine{53     temp.handle\_ = handle\_;}
+\DoxyCodeLine{54     resource\_manager\_->MarkResourceForDeletion(temp, \textcolor{keyword}{false});}
+\DoxyCodeLine{55   \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \textcolor{keyword}{delete} output\_handle\_;}
+\DoxyCodeLine{58   std::vector<OverlayLayer>().swap(in\_flight\_layers\_);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60   resource\_manager\_->PurgeBuffer();}
+\DoxyCodeLine{61   compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a9e48d65a1b926f921acccccba51b69dc}{Reset}}();}
+\DoxyCodeLine{62 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a236888c443de310b6e0f23f575fd9d75}\label{classhwcomposer_1_1VirtualDisplay_a236888c443de310b6e0f23f575fd9d75}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Check\+Plane\+Format@{Check\+Plane\+Format}}
+\index{Check\+Plane\+Format@{Check\+Plane\+Format}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Check\+Plane\+Format()}{CheckPlaneFormat()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Virtual\+Display\+::\+Check\+Plane\+Format (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI to check the format support on the device 
+\begin{DoxyParams}{Parameters}
+{\em format} & valid D\+RM formats found in drm\+\_\+fourcc.\+h. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4e856b5754054bdf77467e6663cb5b50}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 276 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{276                                                 \{}
+\DoxyCodeLine{277   \textcolor{comment}{// assuming that virtual display supports the format}}
+\DoxyCodeLine{278   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{279 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_aec4f2f29aebee6947f69920ec832a655}\label{classhwcomposer_1_1VirtualDisplay_aec4f2f29aebee6947f69920ec832a655}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Get\+Active\+Config@{Get\+Active\+Config}}
+\index{Get\+Active\+Config@{Get\+Active\+Config}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Get\+Active\+Config()}{GetActiveConfig()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Virtual\+Display\+::\+Get\+Active\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9d4d9d2f6633fe37025210cac6e8cc6c}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 69 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                                      \{}
+\DoxyCodeLine{70   \textcolor{keywordflow}{if} (!config)}
+\DoxyCodeLine{71     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73   config[0] = 1;}
+\DoxyCodeLine{74   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{75 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_aa8dd83e78724b4b853a8d5e09ceffc56}\label{classhwcomposer_1_1VirtualDisplay_aa8dd83e78724b4b853a8d5e09ceffc56}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Get\+Display\+Attribute@{Get\+Display\+Attribute}}
+\index{Get\+Display\+Attribute@{Get\+Display\+Attribute}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Attribute()}{GetDisplayAttribute()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Virtual\+Display\+::\+Get\+Display\+Attribute (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{config,  }\item[{H\+W\+C\+Display\+Attribute}]{attribute,  }\item[{int32\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 205 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{207                                                          \{}
+\DoxyCodeLine{208   \textcolor{comment}{// We always get the values from preferred mode config.}}
+\DoxyCodeLine{209   \textcolor{keywordflow}{switch} (attribute) \{}
+\DoxyCodeLine{210     \textcolor{keywordflow}{case} HWCDisplayAttribute::kWidth:}
+\DoxyCodeLine{211       *value = width\_;}
+\DoxyCodeLine{212       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{213     \textcolor{keywordflow}{case} HWCDisplayAttribute::kHeight:}
+\DoxyCodeLine{214       *value = height\_;}
+\DoxyCodeLine{215       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{216     \textcolor{keywordflow}{case} HWCDisplayAttribute::kRefreshRate:}
+\DoxyCodeLine{217       \textcolor{comment}{// in nanoseconds}}
+\DoxyCodeLine{218       *value = 16666666;}
+\DoxyCodeLine{219       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{220     \textcolor{keywordflow}{case} HWCDisplayAttribute::kDpiX:}
+\DoxyCodeLine{221       \textcolor{comment}{// Dots per 1000 inches}}
+\DoxyCodeLine{222       *value = 1;}
+\DoxyCodeLine{223       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{224     \textcolor{keywordflow}{case} HWCDisplayAttribute::kDpiY:}
+\DoxyCodeLine{225       \textcolor{comment}{// Dots per 1000 inches}}
+\DoxyCodeLine{226       *value = 1;}
+\DoxyCodeLine{227       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{228     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{229       *value = -1;}
+\DoxyCodeLine{230       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{231   \}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{234 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_ad432fc9a1edb46dff169f16f1bca6935}\label{classhwcomposer_1_1VirtualDisplay_ad432fc9a1edb46dff169f16f1bca6935}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Get\+Display\+Configs@{Get\+Display\+Configs}}
+\index{Get\+Display\+Configs@{Get\+Display\+Configs}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Configs()}{GetDisplayConfigs()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Virtual\+Display\+::\+Get\+Display\+Configs (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{num\+\_\+configs,  }\item[{uint32\+\_\+t $\ast$}]{configs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 236 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{237                                                           \{}
+\DoxyCodeLine{238   *num\_configs = 1;}
+\DoxyCodeLine{239   \textcolor{keywordflow}{if} (configs)}
+\DoxyCodeLine{240     configs[0] = 0;}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{243 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a3f83c9978807be3b71c095f12d22359c}\label{classhwcomposer_1_1VirtualDisplay_a3f83c9978807be3b71c095f12d22359c}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Get\+Display\+Name@{Get\+Display\+Name}}
+\index{Get\+Display\+Name@{Get\+Display\+Name}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Name()}{GetDisplayName()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Virtual\+Display\+::\+Get\+Display\+Name (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{size,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a28c095d6d08c84e40b5d5160d038f0b5}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 245 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{245                                                               \{}
+\DoxyCodeLine{246   std::ostringstream stream;}
+\DoxyCodeLine{247   stream << \textcolor{stringliteral}{"Virtual"};}
+\DoxyCodeLine{248   std::string \textcolor{keywordtype}{string} = stream.str();}
+\DoxyCodeLine{249   \textcolor{keywordtype}{size\_t} length = \textcolor{keywordtype}{string}.length();}
+\DoxyCodeLine{250   \textcolor{keywordflow}{if} (!name) \{}
+\DoxyCodeLine{251     *size = length;}
+\DoxyCodeLine{252     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{253   \}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255   *size = std::min<uint32\_t>(\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(length - 1), *size);}
+\DoxyCodeLine{256   strncpy(name, \textcolor{keywordtype}{string}.c\_str(), *size);}
+\DoxyCodeLine{257   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{258 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a7c627b12e08f7f95f85aad9d833cbc32}\label{classhwcomposer_1_1VirtualDisplay_a7c627b12e08f7f95f85aad9d833cbc32}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Get\+Display\+Pipe@{Get\+Display\+Pipe}}
+\index{Get\+Display\+Pipe@{Get\+Display\+Pipe}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Pipe()}{GetDisplayPipe()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Virtual\+Display\+::\+Get\+Display\+Pipe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for getting connected display\textquotesingle{}s pipe id. \begin{DoxyReturn}{Returns}
+\char`\"{}-\/1\char`\"{} for unconnected display, valid values are 0 $\sim$ 2. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aaf80095ae6aed35c64dd633a6a2f101a}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 260 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{260                                    \{}
+\DoxyCodeLine{261   \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{262 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a7136ba46d348b88dae1908a928e6ce2d}\label{classhwcomposer_1_1VirtualDisplay_a7136ba46d348b88dae1908a928e6ce2d}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Height@{Height}}
+\index{Height@{Height}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Height()}{Height()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Virtual\+Display\+::\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a09a19377e64e1fed90ae8315a8e71864}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 64 of file virtualdisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                    \{}
+\DoxyCodeLine{65     \textcolor{keywordflow}{return} height\_;}
+\DoxyCodeLine{66   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a86d1fb5bdab8aa74d11d223313fb4fd0}\label{classhwcomposer_1_1VirtualDisplay_a86d1fb5bdab8aa74d11d223313fb4fd0}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Virtual\+Display\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$}]{buffer\+\_\+handler,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a008eb015dda9b4ead93186b4897c2e3c}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 199 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{200                                                                           \{}
+\DoxyCodeLine{201   fb\_manager\_ = frame\_buffer\_manager;}
+\DoxyCodeLine{202   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{203 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_ad0bde041f8a66ab112818ded26e650ad}\label{classhwcomposer_1_1VirtualDisplay_ad0bde041f8a66ab112818ded26e650ad}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Init\+Virtual\+Display@{Init\+Virtual\+Display}}
+\index{Init\+Virtual\+Display@{Init\+Virtual\+Display}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Init\+Virtual\+Display()}{InitVirtualDisplay()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Virtual\+Display\+::\+Init\+Virtual\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_afea85ea07de4c4985b611873dac9af50}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 64 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                                        \{}
+\DoxyCodeLine{65   width\_ = width;}
+\DoxyCodeLine{66   height\_ = height;}
+\DoxyCodeLine{67 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a91b8eb8d9a3339e4623e9147b26a3f2d}\label{classhwcomposer_1_1VirtualDisplay_a91b8eb8d9a3339e4623e9147b26a3f2d}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay}{Virtual\+Display}}\& hwcomposer\+::\+Virtual\+Display\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay}{Virtual\+Display}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a81f29d5b1642bb5f9dfc84fdfc497e8a}\label{classhwcomposer_1_1VirtualDisplay_a81f29d5b1642bb5f9dfc84fdfc497e8a}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Power\+Mode@{Power\+Mode}}
+\index{Power\+Mode@{Power\+Mode}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Power\+Mode()}{PowerMode()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Virtual\+Display\+::\+Power\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_af03b22112e421559c5f59837a2209716}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 68 of file virtualdisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                       \{}
+\DoxyCodeLine{69     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{70   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_ae97c6838a094e32117b496445e0a8c3e}\label{classhwcomposer_1_1VirtualDisplay_ae97c6838a094e32117b496445e0a8c3e}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Present@{Present}}
+\index{Present@{Present}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Present()}{Present()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Virtual\+Display\+::\+Present (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&}]{source\+\_\+layers,  }\item[{int32\+\_\+t $\ast$}]{retire\+\_\+fence,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$}]{call\+\_\+back = {\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}},  }\item[{bool}]{handle\+\_\+constraints = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for showing content on screen. 
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+layers,are} & the layers to be shown on screen for this frame. \\
+\hline
+{\em retire\+\_\+fence} & will be populated with Native Fence object provided we are able to display source\+\_\+layers. When retire\+\_\+fence is signalled source\+\_\+layers are shown on the output and any previous frame composition results can be invalidated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4825b8bc4b85e03b396ed6d2cf5bd8c0}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 81 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                                       \{}
+\DoxyCodeLine{85   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{86   std::vector<OverlayLayer> layers;}
+\DoxyCodeLine{87   std::vector<HwcRect<int>> layers\_rects;}
+\DoxyCodeLine{88   std::vector<size\_t> index;}
+\DoxyCodeLine{89   \textcolor{keywordtype}{int} ret = 0;}
+\DoxyCodeLine{90   \textcolor{keywordtype}{size\_t} size = source\_layers.size();}
+\DoxyCodeLine{91   \textcolor{keywordtype}{size\_t} previous\_size = in\_flight\_layers\_.size();}
+\DoxyCodeLine{92   \textcolor{keywordtype}{bool} frame\_changed = (size != previous\_size);}
+\DoxyCodeLine{93   \textcolor{keywordtype}{bool} layers\_changed = frame\_changed;}
+\DoxyCodeLine{94   *retire\_fence = -1;}
+\DoxyCodeLine{95   uint32\_t z\_order = 0;}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97   resource\_manager\_->RefreshBufferCache();}
+\DoxyCodeLine{98   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} layer\_index = 0; layer\_index < size; layer\_index++) \{}
+\DoxyCodeLine{99     HwcLayer *layer = source\_layers.at(layer\_index);}
+\DoxyCodeLine{100     layer->SetReleaseFence(-1);}
+\DoxyCodeLine{101     \textcolor{keywordflow}{if} (!layer->IsVisible())}
+\DoxyCodeLine{102       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     layers.emplace\_back();}
+\DoxyCodeLine{105     OverlayLayer \&overlay\_layer = layers.back();}
+\DoxyCodeLine{106     OverlayLayer *previous\_layer = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{107     \textcolor{keywordflow}{if} (previous\_size > z\_order) \{}
+\DoxyCodeLine{108       previous\_layer = \&(in\_flight\_layers\_.at(z\_order));}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     overlay\_layer.InitializeFromHwcLayer(}
+\DoxyCodeLine{112         layer, resource\_manager\_.get(), previous\_layer, z\_order, layer\_index,}
+\DoxyCodeLine{113         height\_, kIdentity, handle\_constraints, fb\_manager\_);}
+\DoxyCodeLine{114     index.emplace\_back(z\_order);}
+\DoxyCodeLine{115     layers\_rects.emplace\_back(layer->GetDisplayFrame());}
+\DoxyCodeLine{116     z\_order++;}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     \textcolor{keywordflow}{if} (frame\_changed) \{}
+\DoxyCodeLine{119       layer->Validate();}
+\DoxyCodeLine{120       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{121     \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     \textcolor{keywordflow}{if} (!previous\_layer || overlay\_layer.HasLayerContentChanged() ||}
+\DoxyCodeLine{124         overlay\_layer.HasDimensionsChanged()) \{}
+\DoxyCodeLine{125       layers\_changed = \textcolor{keyword}{true};}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     layer->Validate();}
+\DoxyCodeLine{129   \}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131   \textcolor{keywordflow}{if} (layers\_changed) \{}
+\DoxyCodeLine{132     compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a2a9da9e986a230cb68e322ed18ba4866}{BeginFrame}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \textcolor{comment}{// Prepare for final composition.}}
+\DoxyCodeLine{135     \textcolor{keywordflow}{if} (!compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_aef10a796686b16de4a15f6eb0be7168f}{DrawOffscreen}}(}
+\DoxyCodeLine{136             layers, layers\_rects, index, resource\_manager\_.get(), width\_,}
+\DoxyCodeLine{137             height\_, output\_handle\_, acquire\_fence\_, retire\_fence)) \{}
+\DoxyCodeLine{138       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to prepare for the frame composition ret=\%d"}, ret);}
+\DoxyCodeLine{139       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{140     \}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     acquire\_fence\_ = 0;}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     in\_flight\_layers\_.swap(layers);}
+\DoxyCodeLine{145   \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147   int32\_t fence = *retire\_fence;}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149   \textcolor{keywordflow}{if} (fence > 0) \{}
+\DoxyCodeLine{150     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} layer\_index = 0; layer\_index < size; layer\_index++) \{}
+\DoxyCodeLine{151       HwcLayer *layer = source\_layers.at(layer\_index);}
+\DoxyCodeLine{152       layer->SetReleaseFence(dup(fence));}
+\DoxyCodeLine{153     \}}
+\DoxyCodeLine{154   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{155     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} layer\_index = 0; layer\_index < size; layer\_index++) \{}
+\DoxyCodeLine{156       \textcolor{keyword}{const} OverlayLayer \&overlay\_layer =}
+\DoxyCodeLine{157           in\_flight\_layers\_.at(index.at(layer\_index));}
+\DoxyCodeLine{158       HwcLayer *layer = source\_layers.at(overlay\_layer.GetLayerIndex());}
+\DoxyCodeLine{159       layer->SetReleaseFence(overlay\_layer.ReleaseAcquireFence());}
+\DoxyCodeLine{160     \}}
+\DoxyCodeLine{161   \}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163   compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a2f3fc19fcbe2de45982a5ee14c2c0f1d}{FreeResources}}();}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{166 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_ac7c9e2ca6a7f2e4f4acef44e4dd14ea6}\label{classhwcomposer_1_1VirtualDisplay_ac7c9e2ca6a7f2e4f4acef44e4dd14ea6}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Register\+Vsync\+Callback@{Register\+Vsync\+Callback}}
+\index{Register\+Vsync\+Callback@{Register\+Vsync\+Callback}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Register\+Vsync\+Callback()}{RegisterVsyncCallback()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Virtual\+Display\+::\+Register\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$}]{callback,  }\item[{uint32\+\_\+t}]{display\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 268 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{269                                                 \{}
+\DoxyCodeLine{270   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{271 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_ae8a48c2d2449d3185b1653074e74e171}\label{classhwcomposer_1_1VirtualDisplay_ae8a48c2d2449d3185b1653074e74e171}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Set\+Active\+Config@{Set\+Active\+Config}}
+\index{Set\+Active\+Config@{Set\+Active\+Config}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Set\+Active\+Config()}{SetActiveConfig()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Virtual\+Display\+::\+Set\+Active\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a63c51853e0d82baf9d6445cf831a5ad1}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 77 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                                \{}
+\DoxyCodeLine{78   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{79 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a392b98e9fbb3ee437212e10b0874512f}\label{classhwcomposer_1_1VirtualDisplay_a392b98e9fbb3ee437212e10b0874512f}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Set\+Output\+Buffer@{Set\+Output\+Buffer}}
+\index{Set\+Output\+Buffer@{Set\+Output\+Buffer}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Set\+Output\+Buffer()}{SetOutputBuffer()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Virtual\+Display\+::\+Set\+Output\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{,  }\item[{int32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting output buffer for virtual display. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & ownership is taken by display. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ab4214c41977cee260c2703cb01dfd030}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 168 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{169                                                             \{}
+\DoxyCodeLine{170   \textcolor{keywordflow}{if} (!output\_handle\_ || output\_handle\_ != buffer) \{}
+\DoxyCodeLine{171     \textcolor{keyword}{const} NativeBufferHandler *handler =}
+\DoxyCodeLine{172         resource\_manager\_->GetNativeBufferHandler();}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174     \textcolor{keywordflow}{if} (handle\_) \{}
+\DoxyCodeLine{175       \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{ResourceHandle}} temp;}
+\DoxyCodeLine{176       temp.handle\_ = handle\_;}
+\DoxyCodeLine{177       resource\_manager\_->MarkResourceForDeletion(temp, \textcolor{keyword}{false});}
+\DoxyCodeLine{178     \}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180     \textcolor{keyword}{delete} output\_handle\_;}
+\DoxyCodeLine{181     output\_handle\_ = buffer;}
+\DoxyCodeLine{182     handle\_ = 0;}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184     \textcolor{keywordflow}{if} (output\_handle\_) \{}
+\DoxyCodeLine{185       handler->CopyHandle(output\_handle\_, \&handle\_);}
+\DoxyCodeLine{186     \}}
+\DoxyCodeLine{187   \}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189   \textcolor{keywordflow}{if} (acquire\_fence\_ > 0) \{}
+\DoxyCodeLine{190     close(acquire\_fence\_);}
+\DoxyCodeLine{191     acquire\_fence\_ = -1;}
+\DoxyCodeLine{192   \}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194   \textcolor{keywordflow}{if} (acquire\_fence > 0) \{}
+\DoxyCodeLine{195     acquire\_fence\_ = dup(acquire\_fence);}
+\DoxyCodeLine{196   \}}
+\DoxyCodeLine{197 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a303aab0dcc612e932690885d1b88d985}\label{classhwcomposer_1_1VirtualDisplay_a303aab0dcc612e932690885d1b88d985}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Set\+Power\+Mode@{Set\+Power\+Mode}}
+\index{Set\+Power\+Mode@{Set\+Power\+Mode}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Set\+Power\+Mode()}{SetPowerMode()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Virtual\+Display\+::\+Set\+Power\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{power\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 264 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{264                                             \{}
+\DoxyCodeLine{265   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{266 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a20d0dc4afb2b131ffec31e81e046c52d}\label{classhwcomposer_1_1VirtualDisplay_a20d0dc4afb2b131ffec31e81e046c52d}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Type@{Type}}
+\index{Type@{Type}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Type()}{Type()}}
+{\footnotesize\ttfamily Display\+Type hwcomposer\+::\+Virtual\+Display\+::\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a67018275066174f9e5d4b801cd6fea31}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 56 of file virtualdisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                     \{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} DisplayType::kVirtual;}
+\DoxyCodeLine{58   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_a96071f0a9aed7cbacbdae71ed3f46e6b}\label{classhwcomposer_1_1VirtualDisplay_a96071f0a9aed7cbacbdae71ed3f46e6b}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!V\+Sync\+Control@{V\+Sync\+Control}}
+\index{V\+Sync\+Control@{V\+Sync\+Control}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{V\+Sync\+Control()}{VSyncControl()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Virtual\+Display\+::\+V\+Sync\+Control (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 273 of file virtualdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{273                                         \{}
+\DoxyCodeLine{274 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VirtualDisplay_ac860da388ef586d62f6864612db7fa2d}\label{classhwcomposer_1_1VirtualDisplay_ac860da388ef586d62f6864612db7fa2d}} 
+\index{hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}!Width@{Width}}
+\index{Width@{Width}!hwcomposer\+::\+Virtual\+Display@{hwcomposer\+::\+Virtual\+Display}}
+\subsubsection{\texorpdfstring{Width()}{Width()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Virtual\+Display\+::\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9a18c3dfba567c86c088b06febda4019}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 60 of file virtualdisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                   \{}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} width\_;}
+\DoxyCodeLine{62   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/display/\mbox{\hyperlink{virtualdisplay_8h}{virtualdisplay.\+h}}\item 
+common/display/\mbox{\hyperlink{virtualdisplay_8cpp}{virtualdisplay.\+cpp}}\end{DoxyCompactItemize}

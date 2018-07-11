@@ -1,0 +1,99 @@
+\hypertarget{structhwcomposer_1_1RectSet}{}\section{hwcomposer\+:\+:Rect\+Set$<$ T\+Num $>$ Struct Template Reference}
+\label{structhwcomposer_1_1RectSet}\index{hwcomposer\+::\+Rect\+Set$<$ T\+Num $>$@{hwcomposer\+::\+Rect\+Set$<$ T\+Num $>$}}
+
+
+{\ttfamily \#include $<$disjoint\+\_\+layers.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1RectSet_aac7c9adf4733e181912dcb3ae1125921}{Rect\+Set}} (const \mbox{\hyperlink{structhwcomposer_1_1RectIDs}{Rect\+I\+Ds}} \&i, const \mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$ T\+Num $>$ \&r)
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1RectSet_a1f00bb9520861c8b73f2cde21a71b211}{operator==}} (const \mbox{\hyperlink{structhwcomposer_1_1RectSet}{Rect\+Set}}$<$ T\+Num $>$ \&rhs) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1RectIDs}{Rect\+I\+Ds}} \mbox{\hyperlink{structhwcomposer_1_1RectSet_ace46c21607523eca5345936ba743f28c}{id\+\_\+set}}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$ T\+Num $>$ \mbox{\hyperlink{structhwcomposer_1_1RectSet_a7c8d95db3edda0fe888c524886426a2d}{rect}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T\+Num$>$\newline
+struct hwcomposer\+::\+Rect\+Set$<$ T\+Num $>$}
+
+
+
+Definition at line 86 of file disjoint\+\_\+layers.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1RectSet_aac7c9adf4733e181912dcb3ae1125921}\label{structhwcomposer_1_1RectSet_aac7c9adf4733e181912dcb3ae1125921}} 
+\index{hwcomposer\+::\+Rect\+Set@{hwcomposer\+::\+Rect\+Set}!Rect\+Set@{Rect\+Set}}
+\index{Rect\+Set@{Rect\+Set}!hwcomposer\+::\+Rect\+Set@{hwcomposer\+::\+Rect\+Set}}
+\subsubsection{\texorpdfstring{Rect\+Set()}{RectSet()}}
+{\footnotesize\ttfamily template$<$typename T\+Num$>$ \\
+\mbox{\hyperlink{structhwcomposer_1_1RectSet}{hwcomposer\+::\+Rect\+Set}}$<$ T\+Num $>$\+::\mbox{\hyperlink{structhwcomposer_1_1RectSet}{Rect\+Set}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1RectIDs}{Rect\+I\+Ds}} \&}]{i,  }\item[{const \mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$ T\+Num $>$ \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 90 of file disjoint\+\_\+layers.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90                                                  : \mbox{\hyperlink{structhwcomposer_1_1RectSet_ace46c21607523eca5345936ba743f28c}{id\_set}}(i), \mbox{\hyperlink{structhwcomposer_1_1RectSet_a7c8d95db3edda0fe888c524886426a2d}{rect}}(r) \{}
+\DoxyCodeLine{91   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1RectSet_a1f00bb9520861c8b73f2cde21a71b211}\label{structhwcomposer_1_1RectSet_a1f00bb9520861c8b73f2cde21a71b211}} 
+\index{hwcomposer\+::\+Rect\+Set@{hwcomposer\+::\+Rect\+Set}!operator==@{operator==}}
+\index{operator==@{operator==}!hwcomposer\+::\+Rect\+Set@{hwcomposer\+::\+Rect\+Set}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T\+Num$>$ \\
+bool \mbox{\hyperlink{structhwcomposer_1_1RectSet}{hwcomposer\+::\+Rect\+Set}}$<$ T\+Num $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1RectSet}{Rect\+Set}}$<$ T\+Num $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 93 of file disjoint\+\_\+layers.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                                                   \{}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} (\mbox{\hyperlink{structhwcomposer_1_1RectSet_ace46c21607523eca5345936ba743f28c}{id\_set}} == rhs.id\_set) \&\& (\mbox{\hyperlink{structhwcomposer_1_1RectSet_a7c8d95db3edda0fe888c524886426a2d}{rect}} == rhs.rect);}
+\DoxyCodeLine{95   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1RectSet_ace46c21607523eca5345936ba743f28c}\label{structhwcomposer_1_1RectSet_ace46c21607523eca5345936ba743f28c}} 
+\index{hwcomposer\+::\+Rect\+Set@{hwcomposer\+::\+Rect\+Set}!id\+\_\+set@{id\+\_\+set}}
+\index{id\+\_\+set@{id\+\_\+set}!hwcomposer\+::\+Rect\+Set@{hwcomposer\+::\+Rect\+Set}}
+\subsubsection{\texorpdfstring{id\+\_\+set}{id\_set}}
+{\footnotesize\ttfamily template$<$typename T\+Num$>$ \\
+\mbox{\hyperlink{structhwcomposer_1_1RectIDs}{Rect\+I\+Ds}} \mbox{\hyperlink{structhwcomposer_1_1RectSet}{hwcomposer\+::\+Rect\+Set}}$<$ T\+Num $>$\+::id\+\_\+set}
+
+
+
+Definition at line 87 of file disjoint\+\_\+layers.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1RectSet_a7c8d95db3edda0fe888c524886426a2d}\label{structhwcomposer_1_1RectSet_a7c8d95db3edda0fe888c524886426a2d}} 
+\index{hwcomposer\+::\+Rect\+Set@{hwcomposer\+::\+Rect\+Set}!rect@{rect}}
+\index{rect@{rect}!hwcomposer\+::\+Rect\+Set@{hwcomposer\+::\+Rect\+Set}}
+\subsubsection{\texorpdfstring{rect}{rect}}
+{\footnotesize\ttfamily template$<$typename T\+Num$>$ \\
+\mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$T\+Num$>$ \mbox{\hyperlink{structhwcomposer_1_1RectSet}{hwcomposer\+::\+Rect\+Set}}$<$ T\+Num $>$\+::rect}
+
+
+
+Definition at line 88 of file disjoint\+\_\+layers.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/utils/\mbox{\hyperlink{disjoint__layers_8h}{disjoint\+\_\+layers.\+h}}\end{DoxyCompactItemize}

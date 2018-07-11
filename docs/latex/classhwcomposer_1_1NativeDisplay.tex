@@ -1,0 +1,1215 @@
+\hypertarget{classhwcomposer_1_1NativeDisplay}{}\section{hwcomposer\+:\+:Native\+Display Class Reference}
+\label{classhwcomposer_1_1NativeDisplay}\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+
+
+{\ttfamily \#include $<$nativedisplay.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Native\+Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.796791cm]{classhwcomposer_1_1NativeDisplay}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a7857bc77d2bcd1ff8352ab0b60698a57}{$\sim$\+Native\+Display}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ab1dc6bceb8fe62a576a99c75c7ae732b}{Native\+Display}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6a0f2bcc4891497114cefa9fa8dd73f2}{Native\+Display}} (const \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} \& \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a548549436616b3b66b88fab4b4975f00}{operator=}} (const \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} \&rhs)=delete
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a008eb015dda9b4ead93186b4897c2e3c}{Initialize}} (\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$buffer\+\_\+handler, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)=0
+\item 
+virtual Display\+Type \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a67018275066174f9e5d4b801cd6fea31}{Type}} () const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9a18c3dfba567c86c088b06febda4019}{Width}} () const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a09a19377e64e1fed90ae8315a8e71864}{Height}} () const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_af03b22112e421559c5f59837a2209716}{Power\+Mode}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{Get\+Display\+Attribute}} (uint32\+\_\+t config, H\+W\+C\+Display\+Attribute attribute, int32\+\_\+t $\ast$value)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}{Get\+Display\+Configs}} (uint32\+\_\+t $\ast$num\+\_\+configs, uint32\+\_\+t $\ast$configs)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a28c095d6d08c84e40b5d5160d038f0b5}{Get\+Display\+Name}} (uint32\+\_\+t $\ast$size, char $\ast$name)=0
+\item 
+virtual int \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aaf80095ae6aed35c64dd633a6a2f101a}{Get\+Display\+Pipe}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a63c51853e0d82baf9d6445cf831a5ad1}{Set\+Active\+Config}} (uint32\+\_\+t config)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9d4d9d2f6633fe37025210cac6e8cc6c}{Get\+Active\+Config}} (uint32\+\_\+t $\ast$config)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a8c3c29de10cc3c6e33a90e176d65b003}{Set\+Custom\+Resolution}} (const Hwc\+Rect$<$ int32\+\_\+t $>$ \&)
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}{Set\+Power\+Mode}} (uint32\+\_\+t power\+\_\+mode)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4825b8bc4b85e03b396ed6d2cf5bd8c0}{Present}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&source\+\_\+layers, int32\+\_\+t $\ast$retire\+\_\+fence, \mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$call\+\_\+back=\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}, bool handle\+\_\+constraints=false)=0
+\item 
+virtual int \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}{Register\+Vsync\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}{V\+Sync\+Control}} (bool enabled)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a237627e6cacf9246813bc7f48c5817cd}{Register\+Refresh\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RefreshCallback}{Refresh\+Callback}} $>$, uint32\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4080879c203571d6404ba3b3aff53631}{Register\+Hot\+Plug\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1HotPlugCallback}{Hot\+Plug\+Callback}} $>$, uint32\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a2956fb8a26ec77521a613ae1c0eaaf49}{Set\+Gamma}} (float, float, float)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_adcce47013e2de6f18ef7384954a95d4e}{Set\+Color\+Transform}} (const float $\ast$, \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}})
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ac12f3a73bcf169c4cca38f994431ddfb}{Set\+Contrast}} (uint32\+\_\+t, uint32\+\_\+t, uint32\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6ebf02e96a0c6e674cf091dda937ebb2}{Set\+Brightness}} (uint32\+\_\+t, uint32\+\_\+t, uint32\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a373e7c998f9d2767bafedc918c4001bc}{Set\+Video\+Color}} (H\+W\+C\+Color\+Control, float)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a2db52a8a234064113a0e250a059663ac}{Get\+Video\+Color}} (H\+W\+C\+Color\+Control, float $\ast$, float $\ast$, float $\ast$)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a06390d47f61b776338a03bee737634b3}{Restore\+Video\+Default\+Color}} (H\+W\+C\+Color\+Control)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ad35507d4c266627b1b20a0ebd116f907}{Set\+Video\+Scaling\+Mode}} (uint32\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae0c6d8eebaae9cdacd1e4bfba84585bf}{Set\+Video\+Deinterlace}} (H\+W\+C\+Deinterlace\+Flag, H\+W\+C\+Deinterlace\+Control)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a686a2906dbe6543523a9f5fb5b4ae3f7}{Restore\+Video\+Default\+Deinterlace}} ()
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae7c13718b2b297caa04479a6782e38ea}{Set\+Broadcast\+R\+GB}} (const char $\ast$)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aa0f5c182365aa5cf1f14db9cdf6e974b}{Set\+Canvas\+Color}} (uint16\+\_\+t, uint16\+\_\+t, uint16\+\_\+t, uint16\+\_\+t, uint16\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_afea85ea07de4c4985b611873dac9af50}{Init\+Virtual\+Display}} (uint32\+\_\+t, uint32\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_abeaa73138aad163b3da6263818990ba4}{Init\+Nested\+Display}} (uint32\+\_\+t, uint32\+\_\+t, uint32\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ab4214c41977cee260c2703cb01dfd030}{Set\+Output\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}, int32\+\_\+t)
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4e856b5754054bdf77467e6663cb5b50}{Check\+Plane\+Format}} (uint32\+\_\+t format)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a986975322078e900da95f78be42ad88b}{Set\+Explicit\+Sync\+Support}} (bool)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a5c40ff028a9d547b1775b1c6f40df868}{Connect}} ()
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_af22694b3396866fd4f003755f4951b18}{Is\+Connected}} () const
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_abfad592c2a5e956760c194fa7831171c}{Update\+Scaling\+Ratio}} (uint32\+\_\+t, uint32\+\_\+t, uint32\+\_\+t, uint32\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ad244fa57c9c6380fb04bfd57da3cb28b}{Clone\+Display}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$)
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a1f934e9ab6149fb35bd2868605c215dd}{Get\+X\+Translation}} ()
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a761f39e34a12a88b4f8a4c1ef49e2b10}{Get\+Y\+Translation}} ()
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a991eb1bf6b9dcdb8dd08c171bc8b8b08}{Get\+Logical\+Index}} () const
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a30e5c044e3a84ed23d2b3a5cec3f9037}{Hot\+Plug\+Update}} (bool)
+\item 
+virtual int \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae6fdebc523f394adc23f10a8df58e296}{Initialize\+Layer\+Hash\+Generator}} (int size)
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a20416186adee927aa4a72dd9ae1b0e87}{Acquire\+Id}} ()
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_abce90b16515ced50d859da54b34ed4f0}{Release\+Id}} (uint64\+\_\+t id)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a63f75b429e692fbdd9259afd8145a44e}{Reset\+Layer\+Hash\+Generator}} ()
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ac65fa12ceb6737a2971cd2faa1a7785d}{Set\+H\+D\+C\+P\+State}} (H\+W\+C\+Content\+Protection, H\+W\+C\+Content\+Type)
+\item 
+virtual const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a3f15664f1f298f6109c6504bdd46019a}{Get\+Native\+Buffer\+Handler}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a47b40cd84fa21b50202ff14831826ae9}{Own\+Presentation}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ac7d72bf8971e3b84068b9bd59099c854}{Dis\+Own\+Presentation}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$)
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae031f7f90f8a4ab3fba24a31c4cc6b74}{Present\+Clone}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a86dd66badac1df8de1ca56133249a222}{Set\+Display\+Order}} (uint32\+\_\+t)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aae775a72140fa5ec526d30218b466348}{Rotate\+Display}} (H\+W\+C\+Rotation)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a3e381d9464ef96b091fe38d2919fda4a}{Physical\+Display}}
+\item 
+class \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_abf602e1622a3c4c754cc5c979a129a2c}{Gpu\+Device}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 65 of file nativedisplay.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a7857bc77d2bcd1ff8352ab0b60698a57}\label{classhwcomposer_1_1NativeDisplay_a7857bc77d2bcd1ff8352ab0b60698a57}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!````~Native\+Display@{$\sim$\+Native\+Display}}
+\index{````~Native\+Display@{$\sim$\+Native\+Display}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{$\sim$\+Native\+Display()}{~NativeDisplay()}}
+{\footnotesize\ttfamily virtual hwcomposer\+::\+Native\+Display\+::$\sim$\+Native\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 67 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                            \{}
+\DoxyCodeLine{68   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ab1dc6bceb8fe62a576a99c75c7ae732b}\label{classhwcomposer_1_1NativeDisplay_ab1dc6bceb8fe62a576a99c75c7ae732b}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Native\+Display@{Native\+Display}}
+\index{Native\+Display@{Native\+Display}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Native\+Display()}{NativeDisplay()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Native\+Display\+::\+Native\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a6a0f2bcc4891497114cefa9fa8dd73f2}\label{classhwcomposer_1_1NativeDisplay_a6a0f2bcc4891497114cefa9fa8dd73f2}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Native\+Display@{Native\+Display}}
+\index{Native\+Display@{Native\+Display}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Native\+Display()}{NativeDisplay()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Native\+Display\+::\+Native\+Display (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a20416186adee927aa4a72dd9ae1b0e87}\label{classhwcomposer_1_1NativeDisplay_a20416186adee927aa4a72dd9ae1b0e87}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Acquire\+Id@{Acquire\+Id}}
+\index{Acquire\+Id@{Acquire\+Id}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Acquire\+Id()}{AcquireId()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t hwcomposer\+::\+Native\+Display\+::\+Acquire\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Once the id pool is initialzed, use this to acquire an unused id for the layer. 
+
+Definition at line 379 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{379                                \{}
+\DoxyCodeLine{380     \textcolor{keywordflow}{if} (LayerIds\_.empty())}
+\DoxyCodeLine{381       \textcolor{keywordflow}{return} ++current\_max\_layer\_ids\_;}
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383     uint64\_t \textcolor{keywordtype}{id} = LayerIds\_.back();}
+\DoxyCodeLine{384     LayerIds\_.pop\_back();}
+\DoxyCodeLine{385 }
+\DoxyCodeLine{386     \textcolor{keywordflow}{return} id;}
+\DoxyCodeLine{387   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a4e856b5754054bdf77467e6663cb5b50}\label{classhwcomposer_1_1NativeDisplay_a4e856b5754054bdf77467e6663cb5b50}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Check\+Plane\+Format@{Check\+Plane\+Format}}
+\index{Check\+Plane\+Format@{Check\+Plane\+Format}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Check\+Plane\+Format()}{CheckPlaneFormat()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Check\+Plane\+Format (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI to check the format support on the device 
+\begin{DoxyParams}{Parameters}
+{\em format} & valid D\+RM formats found in drm\+\_\+fourcc.\+h. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a5e44d76d34b86354540abbee20ab046d}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a236888c443de310b6e0f23f575fd9d75}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ad4986df79c02c4c30e205065028cc050}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_ae54b9d9a1d980ed587f43aef1c2a6f2c}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a8978685de8d614113e49b3b774c9b723}{hwcomposer\+::\+Mosaic\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ad244fa57c9c6380fb04bfd57da3cb28b}\label{classhwcomposer_1_1NativeDisplay_ad244fa57c9c6380fb04bfd57da3cb28b}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Clone\+Display@{Clone\+Display}}
+\index{Clone\+Display@{Clone\+Display}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Clone\+Display()}{CloneDisplay()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Clone\+Display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This display needs to clone source\+\_\+display. We cannot have a display in cloned mode and extended mode at same time or clone more than one source\+\_\+display at same time. 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a5dda0f532650e43eec782e81074563b3}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aca407c116394ab91581293e8a919cf78}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a14d300f193051c5cd3e259bb0534401b}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a7944dd71d1efa68e0f94f68cc1bd30b2}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 337 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{337                                                \{}
+\DoxyCodeLine{338   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a5c40ff028a9d547b1775b1c6f40df868}\label{classhwcomposer_1_1NativeDisplay_a5c40ff028a9d547b1775b1c6f40df868}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Connect@{Connect}}
+\index{Connect@{Connect}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI to connect the display. Note that this doesn\textquotesingle{}t necessarily mean display is turned on. Implementation is free to reset any display state which they seem appropriate for this state. Any subsequent calls to Present after this call will show content on screen provided Powermode is kon. 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a83777a9b17a33aa45295c7c354e802b2}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 311 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{311                          \{}
+\DoxyCodeLine{312   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ac7d72bf8971e3b84068b9bd59099c854}\label{classhwcomposer_1_1NativeDisplay_ac7d72bf8971e3b84068b9bd59099c854}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Dis\+Own\+Presentation@{Dis\+Own\+Presentation}}
+\index{Dis\+Own\+Presentation@{Dis\+Own\+Presentation}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Dis\+Own\+Presentation()}{DisOwnPresentation()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Dis\+Own\+Presentation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aba785358d36ee129092a1a9ec66f3ff4}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 422 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{422                                                      \{}
+\DoxyCodeLine{423   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a9d4d9d2f6633fe37025210cac6e8cc6c}\label{classhwcomposer_1_1NativeDisplay_a9d4d9d2f6633fe37025210cac6e8cc6c}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+Active\+Config@{Get\+Active\+Config}}
+\index{Get\+Active\+Config@{Get\+Active\+Config}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+Active\+Config()}{GetActiveConfig()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Get\+Active\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_ac29629de6ce1e74a1086e8de7239b45a}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6dfc5d017719115af233f12911c71d84}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a8a88b08fd54dd02debe436718c569fff}{hwcomposer\+::\+Logical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a6283bdb8c3f0ababbb224d71726f4d2c}{hwcomposer\+::\+Mosaic\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_aec4f2f29aebee6947f69920ec832a655}{hwcomposer\+::\+Virtual\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}\label{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+Display\+Attribute@{Get\+Display\+Attribute}}
+\index{Get\+Display\+Attribute@{Get\+Display\+Attribute}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Attribute()}{GetDisplayAttribute()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Get\+Display\+Attribute (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{config,  }\item[{H\+W\+C\+Display\+Attribute}]{attribute,  }\item[{int32\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_aa63c8ca48c295a453afe8d9bec3d8561}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7a76ed244ccea12e69c0fad38be23b84}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a0ccbb1903cf15c1459f491aa1d3b3619}{hwcomposer\+::\+Logical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a7a03738eb7862a1b2e1585fbd80e710c}{hwcomposer\+::\+Mosaic\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_aa8dd83e78724b4b853a8d5e09ceffc56}{hwcomposer\+::\+Virtual\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a7625a0b44daa5be9b7acf1bce235663e}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}\label{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+Display\+Configs@{Get\+Display\+Configs}}
+\index{Get\+Display\+Configs@{Get\+Display\+Configs}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Configs()}{GetDisplayConfigs()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Get\+Display\+Configs (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{num\+\_\+configs,  }\item[{uint32\+\_\+t $\ast$}]{configs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a211f5d6783771f5bd7ffcf68566262ed}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af02d333622a2c80fd79387ce40253e62}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a4df433d0a996e29197dfc23067a75ab4}{hwcomposer\+::\+Logical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a18bc1bc98ff2814c710ee1202f868217}{hwcomposer\+::\+Mosaic\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ad432fc9a1edb46dff169f16f1bca6935}{hwcomposer\+::\+Virtual\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a44114f544fbb9328f385085e30d900f1}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a28c095d6d08c84e40b5d5160d038f0b5}\label{classhwcomposer_1_1NativeDisplay_a28c095d6d08c84e40b5d5160d038f0b5}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+Display\+Name@{Get\+Display\+Name}}
+\index{Get\+Display\+Name@{Get\+Display\+Name}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Name()}{GetDisplayName()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Get\+Display\+Name (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{size,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a0a1ca305ffa0ace0c2bd5ff601db9b18}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1d0fe5aac11bc35aa95a55289993d9a8}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a93e917448b225c7342d34ef589090987}{hwcomposer\+::\+Logical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ac76216611bf8bebcf182a1c18b3d0c04}{hwcomposer\+::\+Mosaic\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a3f83c9978807be3b71c095f12d22359c}{hwcomposer\+::\+Virtual\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_ac1feeb5b5c7b1f9dbb0faf1a2bd8befe}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_aaf80095ae6aed35c64dd633a6a2f101a}\label{classhwcomposer_1_1NativeDisplay_aaf80095ae6aed35c64dd633a6a2f101a}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+Display\+Pipe@{Get\+Display\+Pipe}}
+\index{Get\+Display\+Pipe@{Get\+Display\+Pipe}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Pipe()}{GetDisplayPipe()}}
+{\footnotesize\ttfamily virtual int hwcomposer\+::\+Native\+Display\+::\+Get\+Display\+Pipe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for getting connected display\textquotesingle{}s pipe id. \begin{DoxyReturn}{Returns}
+\char`\"{}-\/1\char`\"{} for unconnected display, valid values are 0 $\sim$ 2. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a71d26edcadd23a93362ca5643dc1f6cf}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a7c627b12e08f7f95f85aad9d833cbc32}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a8bcd7d925e60afbea75bf3aa18b7aa75}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_acd2630578257e1156d5e00b304df2db8}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_aab767066611a255bc84d50c4b53b3d5d}{hwcomposer\+::\+Mosaic\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a991eb1bf6b9dcdb8dd08c171bc8b8b08}\label{classhwcomposer_1_1NativeDisplay_a991eb1bf6b9dcdb8dd08c171bc8b8b08}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+Logical\+Index@{Get\+Logical\+Index}}
+\index{Get\+Logical\+Index@{Get\+Logical\+Index}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+Logical\+Index()}{GetLogicalIndex()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Native\+Display\+::\+Get\+Logical\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a5d45569f5a91a82ff525bee68f9497a7}{hwcomposer\+::\+Logical\+Display}}.
+
+
+
+Definition at line 353 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{353                                            \{}
+\DoxyCodeLine{354     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{355   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a3f15664f1f298f6109c6504bdd46019a}\label{classhwcomposer_1_1NativeDisplay_a3f15664f1f298f6109c6504bdd46019a}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+Native\+Buffer\+Handler@{Get\+Native\+Buffer\+Handler}}
+\index{Get\+Native\+Buffer\+Handler@{Get\+Native\+Buffer\+Handler}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+Native\+Buffer\+Handler()}{GetNativeBufferHandler()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}}$\ast$ hwcomposer\+::\+Native\+Display\+::\+Get\+Native\+Buffer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab10ddca2b99e21d8fef188205900d021}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 412 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{412                                                                     \{}
+\DoxyCodeLine{413     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{414   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a2db52a8a234064113a0e250a059663ac}\label{classhwcomposer_1_1NativeDisplay_a2db52a8a234064113a0e250a059663ac}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+Video\+Color@{Get\+Video\+Color}}
+\index{Get\+Video\+Color@{Get\+Video\+Color}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+Video\+Color()}{GetVideoColor()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Get\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{,  }\item[{float $\ast$}]{,  }\item[{float $\ast$}]{,  }\item[{float $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for getting video color in H\+WC 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a827605530b26ace9d48203c645d11b71}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a026e99a7fbdb31e02bba1c968c3e2842}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ab4b88eb3a5d9a811dada73b0f8d33c4d}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 225 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{226                                                    \{}
+\DoxyCodeLine{227   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a1f934e9ab6149fb35bd2868605c215dd}\label{classhwcomposer_1_1NativeDisplay_a1f934e9ab6149fb35bd2868605c215dd}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+X\+Translation@{Get\+X\+Translation}}
+\index{Get\+X\+Translation@{Get\+X\+Translation}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+X\+Translation()}{GetXTranslation()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Native\+Display\+::\+Get\+X\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6ed8f896bdb7adc6a20bf25c3fe41f8f}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a1eea402be34da5de3ce4d3c9927768ae}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a8f006e53e5d0e8c6caf8ac50f25ab407}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 340 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{340                                      \{}
+\DoxyCodeLine{341     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{342   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a761f39e34a12a88b4f8a4c1ef49e2b10}\label{classhwcomposer_1_1NativeDisplay_a761f39e34a12a88b4f8a4c1ef49e2b10}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Get\+Y\+Translation@{Get\+Y\+Translation}}
+\index{Get\+Y\+Translation@{Get\+Y\+Translation}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Get\+Y\+Translation()}{GetYTranslation()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Native\+Display\+::\+Get\+Y\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This is to position the composition to non-\/zero coordinates in display. When using float mode, the composition resolution is custom configured and it can be positioned as required. 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7c390445fe926da9b501187678d1cb04}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 349 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{349                                      \{}
+\DoxyCodeLine{350     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{351   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a09a19377e64e1fed90ae8315a8e71864}\label{classhwcomposer_1_1NativeDisplay_a09a19377e64e1fed90ae8315a8e71864}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Height@{Height}}
+\index{Height@{Height}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Height()}{Height()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Native\+Display\+::\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_ad83400a54d34d803fd427d9dc17ca95f}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a7136ba46d348b88dae1908a928e6ce2d}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa6f009efb2eb6733c2476696b54c9461}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a8c687fb1727e18b8a74db9740eccca88}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_af15fda20d779888c521095542b505f9d}{hwcomposer\+::\+Mosaic\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a30e5c044e3a84ed23d2b3a5cec3f9037}\label{classhwcomposer_1_1NativeDisplay_a30e5c044e3a84ed23d2b3a5cec3f9037}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Hot\+Plug\+Update@{Hot\+Plug\+Update}}
+\index{Hot\+Plug\+Update@{Hot\+Plug\+Update}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Hot\+Plug\+Update()}{HotPlugUpdate()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Hot\+Plug\+Update (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a1da3837cf3cb8fd5f3f2e9bdd7b339ff}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_ab216be63c504dc281fa1da2f7825e059}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_af529c96ce14e717b11759fa45648ea68}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 357 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{357                                      \{}
+\DoxyCodeLine{358   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a008eb015dda9b4ead93186b4897c2e3c}\label{classhwcomposer_1_1NativeDisplay_a008eb015dda9b4ead93186b4897c2e3c}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$}]{buffer\+\_\+handler,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a40b99528a66752bbdf03f253476e5255}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a86d1fb5bdab8aa74d11d223313fb4fd0}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a594319095f4b6c7078282c56d9cbe9f4}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a280447edbcba240ec782928273d87c65}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a31b15aba0948d8e1c65f12f2d79f1ecf}{hwcomposer\+::\+Mosaic\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ae6fdebc523f394adc23f10a8df58e296}\label{classhwcomposer_1_1NativeDisplay_ae6fdebc523f394adc23f10a8df58e296}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Initialize\+Layer\+Hash\+Generator@{Initialize\+Layer\+Hash\+Generator}}
+\index{Initialize\+Layer\+Hash\+Generator@{Initialize\+Layer\+Hash\+Generator}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Initialize\+Layer\+Hash\+Generator()}{InitializeLayerHashGenerator()}}
+{\footnotesize\ttfamily virtual int hwcomposer\+::\+Native\+Display\+::\+Initialize\+Layer\+Hash\+Generator (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Use this method to initalize the display\textquotesingle{}s pool of layer ids. The argument to the method is the initial size of the pool 
+
+Definition at line 365 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{365                                                      \{}
+\DoxyCodeLine{366     LayerIds\_.clear();}
+\DoxyCodeLine{367     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = size; i >= 0; i--) \{}
+\DoxyCodeLine{368       LayerIds\_.push\_back(i);}
+\DoxyCodeLine{369     \}}
+\DoxyCodeLine{370 }
+\DoxyCodeLine{371     current\_max\_layer\_ids\_ = size;}
+\DoxyCodeLine{372     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{373   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_abeaa73138aad163b3da6263818990ba4}\label{classhwcomposer_1_1NativeDisplay_abeaa73138aad163b3da6263818990ba4}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Init\+Nested\+Display@{Init\+Nested\+Display}}
+\index{Init\+Nested\+Display@{Init\+Nested\+Display}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Init\+Nested\+Display()}{InitNestedDisplay()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Init\+Nested\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a39b326bbbe10454953815bb3e339c821}{hwcomposer\+::\+Nested\+Display}}.
+
+
+
+Definition at line 284 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{285                                              \{}
+\DoxyCodeLine{286   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_afea85ea07de4c4985b611873dac9af50}\label{classhwcomposer_1_1NativeDisplay_afea85ea07de4c4985b611873dac9af50}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Init\+Virtual\+Display@{Init\+Virtual\+Display}}
+\index{Init\+Virtual\+Display@{Init\+Virtual\+Display}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Init\+Virtual\+Display()}{InitVirtualDisplay()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Init\+Virtual\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ad0bde041f8a66ab112818ded26e650ad}{hwcomposer\+::\+Virtual\+Display}}.
+
+
+
+Definition at line 280 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{280                                                           \{}
+\DoxyCodeLine{281   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_af22694b3396866fd4f003755f4951b18}\label{classhwcomposer_1_1NativeDisplay_af22694b3396866fd4f003755f4951b18}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Is\+Connected@{Is\+Connected}}
+\index{Is\+Connected@{Is\+Connected}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Is\+Connected()}{IsConnected()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI to check if display is connected. 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a3d55a6460b227f9f9e967d0f414d0159}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af6acaa76c25101eb47883a499311422f}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_ad1eb84dcbc22cbadbe3d0dc85f18bde3}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a837d28f710438d462fd88b85721528b0}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 317 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{317                                    \{}
+\DoxyCodeLine{318     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{319   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a548549436616b3b66b88fab4b4975f00}\label{classhwcomposer_1_1NativeDisplay_a548549436616b3b66b88fab4b4975f00}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}}\& hwcomposer\+::\+Native\+Display\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a47b40cd84fa21b50202ff14831826ae9}\label{classhwcomposer_1_1NativeDisplay_a47b40cd84fa21b50202ff14831826ae9}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Own\+Presentation@{Own\+Presentation}}
+\index{Own\+Presentation@{Own\+Presentation}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Own\+Presentation()}{OwnPresentation()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Own\+Presentation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a3e66e1f2bd3cff0c0ad7e99b8d5fb2ba}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 419 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{419                                                   \{}
+\DoxyCodeLine{420   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_af03b22112e421559c5f59837a2209716}\label{classhwcomposer_1_1NativeDisplay_af03b22112e421559c5f59837a2209716}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Power\+Mode@{Power\+Mode}}
+\index{Power\+Mode@{Power\+Mode}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Power\+Mode()}{PowerMode()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Native\+Display\+::\+Power\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a7f08b439ab7e67ba6344471b9efe7d62}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a81f29d5b1642bb5f9dfc84fdfc497e8a}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a8339a14dbaa5ac9a1d4d4c3dc3694a10}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_af0fd1b1d9b574403e9c4680f7b371c21}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a41e94410e4e73ee057ef672bb51aba65}{hwcomposer\+::\+Mosaic\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a4825b8bc4b85e03b396ed6d2cf5bd8c0}\label{classhwcomposer_1_1NativeDisplay_a4825b8bc4b85e03b396ed6d2cf5bd8c0}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Present@{Present}}
+\index{Present@{Present}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Present()}{Present()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Present (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&}]{source\+\_\+layers,  }\item[{int32\+\_\+t $\ast$}]{retire\+\_\+fence,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$}]{call\+\_\+back = {\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}},  }\item[{bool}]{handle\+\_\+constraints = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for showing content on screen. 
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+layers,are} & the layers to be shown on screen for this frame. \\
+\hline
+{\em retire\+\_\+fence} & will be populated with Native Fence object provided we are able to display source\+\_\+layers. When retire\+\_\+fence is signalled source\+\_\+layers are shown on the output and any previous frame composition results can be invalidated. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_af7983c8f6bafff1ab2077f7b3d38a0de}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aafc7fc562c026ce24ac7900c12023bd8}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a2cc998518219938311c9bba35cac4935}{hwcomposer\+::\+Logical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a84e8ddade543bca6659a1eb7bfe72bcd}{hwcomposer\+::\+Mosaic\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ae97c6838a094e32117b496445e0a8c3e}{hwcomposer\+::\+Virtual\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ae031f7f90f8a4ab3fba24a31c4cc6b74}\label{classhwcomposer_1_1NativeDisplay_ae031f7f90f8a4ab3fba24a31c4cc6b74}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Present\+Clone@{Present\+Clone}}
+\index{Present\+Clone@{Present\+Clone}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Present\+Clone()}{PresentClone()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Present\+Clone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_ae78bf526c8b23585edffc5e1d306647d}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a3432baaabedbb27e45ea64fcc894a344}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_acd399ec20ae92f1c68db2fbcff91f8f0}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a989d240e0d3287ec2b9e6cfbe1041bda}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 425 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{425                                                \{}
+\DoxyCodeLine{426     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{427   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a4080879c203571d6404ba3b3aff53631}\label{classhwcomposer_1_1NativeDisplay_a4080879c203571d6404ba3b3aff53631}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Register\+Hot\+Plug\+Callback@{Register\+Hot\+Plug\+Callback}}
+\index{Register\+Hot\+Plug\+Callback@{Register\+Hot\+Plug\+Callback}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Register\+Hot\+Plug\+Callback()}{RegisterHotPlugCallback()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Register\+Hot\+Plug\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1HotPlugCallback}{Hot\+Plug\+Callback}} $>$}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for registering for hotplug callback requests. 
+\begin{DoxyParams}{Parameters}
+{\em callback,function} & which will be used by H\+WC to notify client of a hot plug event. \\
+\hline
+{\em display\+\_\+id} & will be populated with id of the display. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a0e9948e4763ef5abcdfcd12e42ef7267}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac56013d7b3323ca84594779358aeb254}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a04e78f9e54b66e91bab3f9744a2a18f3}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a1d4f419cda4d1729dfb085f385a76afb}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 147 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{148                                                     \{}
+\DoxyCodeLine{149   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a237627e6cacf9246813bc7f48c5817cd}\label{classhwcomposer_1_1NativeDisplay_a237627e6cacf9246813bc7f48c5817cd}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Register\+Refresh\+Callback@{Register\+Refresh\+Callback}}
+\index{Register\+Refresh\+Callback@{Register\+Refresh\+Callback}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Register\+Refresh\+Callback()}{RegisterRefreshCallback()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Register\+Refresh\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RefreshCallback}{Refresh\+Callback}} $>$}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for registering for refresh callback requests. 
+\begin{DoxyParams}{Parameters}
+{\em callback,function} & which will be used by H\+WC to request client to trigger a screen refresh. This will be used to optimize scenarios like idle mode. \\
+\hline
+{\em display\+\_\+id} & will be populated with id of the display. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a821c1f2bf3622c4889e8c84f2a6935d3}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aaa21f6de6805e8e6d0d5771c3207cfd6}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a53dd3b4a4ee95af6a903327519278691}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a1deecbf2ba9b007fa7529b31da47d575}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 137 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138                                                     \{}
+\DoxyCodeLine{139   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}\label{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Register\+Vsync\+Callback@{Register\+Vsync\+Callback}}
+\index{Register\+Vsync\+Callback@{Register\+Vsync\+Callback}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Register\+Vsync\+Callback()}{RegisterVsyncCallback()}}
+{\footnotesize\ttfamily virtual int hwcomposer\+::\+Native\+Display\+::\+Register\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$}]{callback,  }\item[{uint32\+\_\+t}]{display\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a09a16cff82bc26e862eaa2e8bb9cbe67}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ac7c9e2ca6a7f2e4f4acef44e4dd14ea6}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac003447bfca005292fc052d5b573869e}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_af99c6d2e779060cb006ee5d0039386da}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ab95984da914029b9dd2c5fb728926dbc}{hwcomposer\+::\+Mosaic\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_abce90b16515ced50d859da54b34ed4f0}\label{classhwcomposer_1_1NativeDisplay_abce90b16515ced50d859da54b34ed4f0}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Release\+Id@{Release\+Id}}
+\index{Release\+Id@{Release\+Id}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Release\+Id()}{ReleaseId()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Release\+Id (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Method to return a destroyed layer\textquotesingle{}s id back into the pool 
+
+Definition at line 392 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{392                                       \{}
+\DoxyCodeLine{393     LayerIds\_.push\_back(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{394   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a63f75b429e692fbdd9259afd8145a44e}\label{classhwcomposer_1_1NativeDisplay_a63f75b429e692fbdd9259afd8145a44e}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Reset\+Layer\+Hash\+Generator@{Reset\+Layer\+Hash\+Generator}}
+\index{Reset\+Layer\+Hash\+Generator@{Reset\+Layer\+Hash\+Generator}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Reset\+Layer\+Hash\+Generator()}{ResetLayerHashGenerator()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Reset\+Layer\+Hash\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Call this to reset the id pool back to its initial state. 
+
+Definition at line 399 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{399                                          \{}
+\DoxyCodeLine{400     \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae6fdebc523f394adc23f10a8df58e296}{InitializeLayerHashGenerator}}(current\_max\_layer\_ids\_);}
+\DoxyCodeLine{401   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a06390d47f61b776338a03bee737634b3}\label{classhwcomposer_1_1NativeDisplay_a06390d47f61b776338a03bee737634b3}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}}
+\index{Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Color()}{RestoreVideoDefaultColor()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Restore\+Video\+Default\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for restoring video default color in H\+WC 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac9b499aa64a9bbc3c49e55011c56e819}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_aabeca956b6c48031fd0c9c862e7cd9cc}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_aaf2a3e4f69753b92366c23434db3d133}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 232 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{232                                                            \{}
+\DoxyCodeLine{233   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a686a2906dbe6543523a9f5fb5b4ae3f7}\label{classhwcomposer_1_1NativeDisplay_a686a2906dbe6543523a9f5fb5b4ae3f7}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}}
+\index{Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Deinterlace()}{RestoreVideoDefaultDeinterlace()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Restore\+Video\+Default\+Deinterlace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for restoring video default deinterlace in H\+WC 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a9b8a4d32a3279f79f27878857c22d863}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_ad0d206b9c0e41732b2f9635fd6ffeb6c}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a907f7b2e5c59a27e5335f8cfadba87f5}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 251 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{251                                                 \{}
+\DoxyCodeLine{252   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_aae775a72140fa5ec526d30218b466348}\label{classhwcomposer_1_1NativeDisplay_aae775a72140fa5ec526d30218b466348}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Rotate\+Display@{Rotate\+Display}}
+\index{Rotate\+Display@{Rotate\+Display}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Rotate\+Display()}{RotateDisplay()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Rotate\+Display (\begin{DoxyParamCaption}\item[{H\+W\+C\+Rotation}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae9650158e46bd03af1d06aa0e64f3ae6}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 439 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{439                                             \{}
+\DoxyCodeLine{440   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a63c51853e0d82baf9d6445cf831a5ad1}\label{classhwcomposer_1_1NativeDisplay_a63c51853e0d82baf9d6445cf831a5ad1}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Active\+Config@{Set\+Active\+Config}}
+\index{Set\+Active\+Config@{Set\+Active\+Config}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Active\+Config()}{SetActiveConfig()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Set\+Active\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_abfb4cca89f1ae116a487f92a6d1143a8}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1b2e31ee497b3fec8178abe481462560}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_aa758516a35c9f74cc34f4b679fa33307}{hwcomposer\+::\+Logical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_aaff4528ff2c22a7ec8ce8ab1bc8cbe07}{hwcomposer\+::\+Mosaic\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ae8a48c2d2449d3185b1653074e74e171}{hwcomposer\+::\+Virtual\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a6ebf02e96a0c6e674cf091dda937ebb2}\label{classhwcomposer_1_1NativeDisplay_a6ebf02e96a0c6e674cf091dda937ebb2}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Brightness@{Set\+Brightness}}
+\index{Set\+Brightness@{Set\+Brightness}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Brightness()}{SetBrightness()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Brightness (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting display color brightness in H\+WC 
+\begin{DoxyParams}{Parameters}
+{\em red} & valid value is 0 $\sim$ 255, bigger value with stronger brightness \\
+\hline
+{\em green} & valid value is 0 $\sim$ 255, bigger value with stronger brightness \\
+\hline
+{\em blue} & valid value is 0 $\sim$ 255, bigger value with stronger brightness \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_ada28a82438946b62966b8e3fb4ad3e9d}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae2d98d76852bced610ccff933486a741}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a3244bd17dbe005b1e8db94fd646f246f}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a113c244569faf509d03062f794216981}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 212 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{213                                          \{}
+\DoxyCodeLine{214   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ae7c13718b2b297caa04479a6782e38ea}\label{classhwcomposer_1_1NativeDisplay_ae7c13718b2b297caa04479a6782e38ea}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Broadcast\+R\+GB@{Set\+Broadcast\+R\+GB}}
+\index{Set\+Broadcast\+R\+GB@{Set\+Broadcast\+R\+GB}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Broadcast\+R\+G\+B()}{SetBroadcastRGB()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Set\+Broadcast\+R\+GB (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting display Broadcast R\+GB range property 
+\begin{DoxyParams}{Parameters}
+{\em range\+\_\+property} & supported property string, e.\+g. \char`\"{}\+Full\char`\"{}, \char`\"{}\+Automatic\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_abf4285912666230bf6172dae5a867ba7}{hwcomposer\+::\+Drm\+Display}}.
+
+
+
+Definition at line 258 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{258                                                \{}
+\DoxyCodeLine{259     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{260   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_aa0f5c182365aa5cf1f14db9cdf6e974b}\label{classhwcomposer_1_1NativeDisplay_aa0f5c182365aa5cf1f14db9cdf6e974b}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Canvas\+Color@{Set\+Canvas\+Color}}
+\index{Set\+Canvas\+Color@{Set\+Canvas\+Color}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Canvas\+Color()}{SetCanvasColor()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Canvas\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{,  }\item[{uint16\+\_\+t}]{,  }\item[{uint16\+\_\+t}]{,  }\item[{uint16\+\_\+t}]{,  }\item[{uint16\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting the color of the pipe canvas. The caller of this function must pass the individual color component values which will all be used to convert into a format expected by the kernel driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bpc} & specifies how many bits are used per color componenet \\
+\hline
+{\em red} & bits representing the red color componenet \\
+\hline
+{\em green} & bits representing the green color componenet \\
+\hline
+{\em blue} & bits representing the blue color componenet \\
+\hline
+{\em alpha} & bits representing the alpha color componenet \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6d060b4d7ba7e8f53c1181c14163b188}{hwcomposer\+::\+Physical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a8368cd424259347984eac3e2469bb660}{hwcomposer\+::\+Logical\+Display}}.
+
+
+
+Definition at line 274 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{276                                           \{}
+\DoxyCodeLine{277   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_adcce47013e2de6f18ef7384954a95d4e}\label{classhwcomposer_1_1NativeDisplay_adcce47013e2de6f18ef7384954a95d4e}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Color\+Transform@{Set\+Color\+Transform}}
+\index{Set\+Color\+Transform@{Set\+Color\+Transform}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Color\+Transform()}{SetColorTransform()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Color\+Transform (\begin{DoxyParamCaption}\item[{const float $\ast$}]{,  }\item[{\mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting a color transform which will be applied after composition.
+
+The matrix provided is an affine color transformation of the following form\+:
+
+$\vert$r.r r.\+g r.\+b 0$\vert$ $\vert$g.r g.\+g g.\+b 0$\vert$ $\vert$b.r b.\+g b.\+b 0$\vert$ $\vert$\+Tr Tg Tb 1$\vert$
+
+This matrix will be provided in row-\/major form\+: \{r.\+r, r.\+g, r.\+b, 0, g.\+r, ...\}.
+
+Given a matrix of this form and an input color \mbox{[}R\+\_\+in, G\+\_\+in, B\+\_\+in\mbox{]}, the output color \mbox{[}R\+\_\+out, G\+\_\+out, B\+\_\+out\mbox{]} will be\+:
+
+R\+\_\+out = R\+\_\+in $\ast$ r.\+r + G\+\_\+in $\ast$ g.\+r + B\+\_\+in $\ast$ b.\+r + Tr G\+\_\+out = R\+\_\+in $\ast$ r.\+g + G\+\_\+in $\ast$ g.\+g + B\+\_\+in $\ast$ b.\+g + Tg B\+\_\+out = R\+\_\+in $\ast$ r.\+b + G\+\_\+in $\ast$ g.\+b + B\+\_\+in $\ast$ b.\+b + Tb
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & a 4x4 transform matrix (16 floats) as described above \\
+\hline
+{\em hint} & a hint value to specify the transform type, applying no transform or applying transform defined by given matrix \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa6a598f275a6b67ba5c256ee0d830b59}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 193 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{194                                                       \{}
+\DoxyCodeLine{195   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ac12f3a73bcf169c4cca38f994431ddfb}\label{classhwcomposer_1_1NativeDisplay_ac12f3a73bcf169c4cca38f994431ddfb}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Contrast@{Set\+Contrast}}
+\index{Set\+Contrast@{Set\+Contrast}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Contrast()}{SetContrast()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Contrast (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting display color contrast in H\+WC 
+\begin{DoxyParams}{Parameters}
+{\em red} & valid value is 0 $\sim$ 255, bigger value with stronger contrast \\
+\hline
+{\em green} & valid value is 0 $\sim$ 255, bigger value with stronger contrast \\
+\hline
+{\em blue} & valid value is 0 $\sim$ 255, bigger value with stronger contrast \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_aa3509b6c817d6ff091e3cf5000d64bc3}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af88a8e27861d615a2356fb749c3e0c7c}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a84a63a9f28391e92765316afacf22402}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a6942a0aa562c459a89b014aa15fdcccd}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 203 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{204                                        \{}
+\DoxyCodeLine{205   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a8c3c29de10cc3c6e33a90e176d65b003}\label{classhwcomposer_1_1NativeDisplay_a8c3c29de10cc3c6e33a90e176d65b003}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Custom\+Resolution@{Set\+Custom\+Resolution}}
+\index{Set\+Custom\+Resolution@{Set\+Custom\+Resolution}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Custom\+Resolution()}{SetCustomResolution()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Set\+Custom\+Resolution (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ int32\+\_\+t $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting custom resolution. By default the resolution is set as per the display hardware capability. This A\+PI sets the resolution from the configuration file. 
+\begin{DoxyParams}{Parameters}
+{\em rectangle} & as per the resolution required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if set passes, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a8f67530a852d9e6e65874e4835b35dab}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 107 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107                                                              \{}
+\DoxyCodeLine{108     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{109   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a86dd66badac1df8de1ca56133249a222}\label{classhwcomposer_1_1NativeDisplay_a86dd66badac1df8de1ca56133249a222}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Display\+Order@{Set\+Display\+Order}}
+\index{Set\+Display\+Order@{Set\+Display\+Order}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Display\+Order()}{SetDisplayOrder()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Display\+Order (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae5d26a97e43c84a53d396ca946afbbef}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 433 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{433                                            \{}
+\DoxyCodeLine{434   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a986975322078e900da95f78be42ad88b}\label{classhwcomposer_1_1NativeDisplay_a986975322078e900da95f78be42ad88b}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}}
+\index{Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Explicit\+Sync\+Support()}{SetExplicitSyncSupport()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Explicit\+Sync\+Support (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a9567352fc212a0e9a4530183a9ec96ea}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a995cabfaf5aca42854711dacef743373}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_aafa5f07e92a828651f2d66b09df4896d}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_af9053256b801c0334bd89ed7b5e97912}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 301 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{301                                               \{}
+\DoxyCodeLine{302   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a2956fb8a26ec77521a613ae1c0eaaf49}\label{classhwcomposer_1_1NativeDisplay_a2956fb8a26ec77521a613ae1c0eaaf49}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Gamma@{Set\+Gamma}}
+\index{Set\+Gamma@{Set\+Gamma}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Gamma()}{SetGamma()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Gamma (\begin{DoxyParamCaption}\item[{float}]{,  }\item[{float}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting color gamma value of display in H\+WC, which be used to remap original color brightness to new one by gamma color correction. H\+WC uses default gamma value 2.\+2 which popular display is using, and allow users to change gamma value for R\+GB colors by this A\+PI, e.\+g. 0 will remap all gradient brightness of the color to brightest value (solid color).
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & red color gamma value \\
+\hline
+{\em green} & blue color gamma value \\
+\hline
+{\em blue} & blue color gamma value \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_ad43575ee1695666a74cf5cb44d64f98e}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a48f186ada1686b22a91a888482b8c915}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_aed2d919c0ee7f2eb177e062f0ac3cd1f}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a99609427012ce9c2e3b4e16ed13211a3}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 163 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                                                    \{}
+\DoxyCodeLine{164   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ac65fa12ceb6737a2971cd2faa1a7785d}\label{classhwcomposer_1_1NativeDisplay_ac65fa12ceb6737a2971cd2faa1a7785d}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+H\+D\+C\+P\+State@{Set\+H\+D\+C\+P\+State}}
+\index{Set\+H\+D\+C\+P\+State@{Set\+H\+D\+C\+P\+State}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+H\+D\+C\+P\+State()}{SetHDCPState()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+H\+D\+C\+P\+State (\begin{DoxyParamCaption}\item[{H\+W\+C\+Content\+Protection}]{,  }\item[{H\+W\+C\+Content\+Type}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Call this to set H\+D\+CP state for this display. This function tries to take advantage of any H\+D\+CP support advertised by the Kernel. 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a161e6fd394b077071d4087314ac1fd8a}{hwcomposer\+::\+Logical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a406e652e251f8f88ef628704a1e57b1f}{hwcomposer\+::\+Mosaic\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a8ea456de0530370e0ad5f57ba4c6d20a}{hwcomposer\+::\+Drm\+Display}}.
+
+
+
+Definition at line 408 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{409                                               \{}
+\DoxyCodeLine{410   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ab4214c41977cee260c2703cb01dfd030}\label{classhwcomposer_1_1NativeDisplay_ab4214c41977cee260c2703cb01dfd030}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Output\+Buffer@{Set\+Output\+Buffer}}
+\index{Set\+Output\+Buffer@{Set\+Output\+Buffer}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Output\+Buffer()}{SetOutputBuffer()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Output\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{,  }\item[{int32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting output buffer for virtual display. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & ownership is taken by display. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a392b98e9fbb3ee437212e10b0874512f}{hwcomposer\+::\+Virtual\+Display}}.
+
+
+
+Definition at line 292 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{293                                           \{}
+\DoxyCodeLine{294   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}\label{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Power\+Mode@{Set\+Power\+Mode}}
+\index{Set\+Power\+Mode@{Set\+Power\+Mode}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Power\+Mode()}{SetPowerMode()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Display\+::\+Set\+Power\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{power\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a4cab919931af541339c97f3b2d8b032d}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a303aab0dcc612e932690885d1b88d985}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a4fc0fbe6c307de00cd10a3c998c74b51}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_aed95336a0e93791e9e97b5e1c0940a7e}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a001b4f2775a2a50d380ff6eb33ba3683}{hwcomposer\+::\+Mosaic\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a373e7c998f9d2767bafedc918c4001bc}\label{classhwcomposer_1_1NativeDisplay_a373e7c998f9d2767bafedc918c4001bc}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Video\+Color@{Set\+Video\+Color}}
+\index{Set\+Video\+Color@{Set\+Video\+Color}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Video\+Color()}{SetVideoColor()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting video color in H\+WC 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7a58ed7399533404438fbed2682fdd54}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_af963f6dd39bb6d7f043b6908ea5c64e5}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_adba98086d56d0ccc2df7a57a87ddd4b0}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 219 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{219                                                          \{}
+\DoxyCodeLine{220   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ae0c6d8eebaae9cdacd1e4bfba84585bf}\label{classhwcomposer_1_1NativeDisplay_ae0c6d8eebaae9cdacd1e4bfba84585bf}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}}
+\index{Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Video\+Deinterlace()}{SetVideoDeinterlace()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Video\+Deinterlace (\begin{DoxyParamCaption}\item[{H\+W\+C\+Deinterlace\+Flag}]{,  }\item[{H\+W\+C\+Deinterlace\+Control}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting video deinterlace in H\+WC 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a9e8d4b629a28d38bd51239b73b3cdd0c}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a556ac92994853a0b0053132a3917bc75}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a28167d8f866c8b2c6ea01b42b442eb0f}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 244 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{245                                                             \{}
+\DoxyCodeLine{246   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_ad35507d4c266627b1b20a0ebd116f907}\label{classhwcomposer_1_1NativeDisplay_ad35507d4c266627b1b20a0ebd116f907}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}}
+\index{Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Set\+Video\+Scaling\+Mode()}{SetVideoScalingMode()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Set\+Video\+Scaling\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A\+PI for setting video scaling mode in H\+WC 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a90bb99a363f4e24b9653f984d52d9ba7}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a7f616d7c193e2afbf4b65df4775470c2}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ac634db4100aa1707f28ff2bbb77b8460}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 238 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{238                                                \{}
+\DoxyCodeLine{239   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a67018275066174f9e5d4b801cd6fea31}\label{classhwcomposer_1_1NativeDisplay_a67018275066174f9e5d4b801cd6fea31}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Type@{Type}}
+\index{Type@{Type}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Type()}{Type()}}
+{\footnotesize\ttfamily virtual Display\+Type hwcomposer\+::\+Native\+Display\+::\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a5e0cd87bc15e94b2997fcfbb37060602}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a20d0dc4afb2b131ffec31e81e046c52d}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa2a50f9dbb2740cf40256bcadad666c4}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a012b2a742cfd590405db34ff68f919a9}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a7c5288febea28948c2689d7f6feee183}{hwcomposer\+::\+Mosaic\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_abfad592c2a5e956760c194fa7831171c}\label{classhwcomposer_1_1NativeDisplay_abfad592c2a5e956760c194fa7831171c}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Update\+Scaling\+Ratio@{Update\+Scaling\+Ratio}}
+\index{Update\+Scaling\+Ratio@{Update\+Scaling\+Ratio}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Update\+Scaling\+Ratio()}{UpdateScalingRatio()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+Update\+Scaling\+Ratio (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Scales layers of display to match it\textquotesingle{}s resolutions in case this display is in cloned mode and resolution doesn\textquotesingle{}t match with Source Display. 
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_a0eb08cdb0c39587a72021ff945d33b72}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a58541ff74976131b84a4dac060a48c45}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_ad4813941543f9765790888d7e7c6865f}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_aa0d5befb882537555f4476130863c27c}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+Definition at line 326 of file nativedisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{329                                               \{}
+\DoxyCodeLine{330   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}\label{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!V\+Sync\+Control@{V\+Sync\+Control}}
+\index{V\+Sync\+Control@{V\+Sync\+Control}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{V\+Sync\+Control()}{VSyncControl()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Display\+::\+V\+Sync\+Control (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_ab6b0f8f36573b7c347805131734f0b47}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_a96071f0a9aed7cbacbdae71ed3f46e6b}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a058a5c3a853da43fb76b129cc4e24ef8}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_adfb3b051b8636f58226bc30da8fe1735}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a3843cd0fcbd50cfed44d7a0ebdf5539b}{hwcomposer\+::\+Mosaic\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a9a18c3dfba567c86c088b06febda4019}\label{classhwcomposer_1_1NativeDisplay_a9a18c3dfba567c86c088b06febda4019}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Width@{Width}}
+\index{Width@{Width}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Width()}{Width()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Native\+Display\+::\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1NestedDisplay_ab3c886e199ed0eb383496eb3c3b9da9c}{hwcomposer\+::\+Nested\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1VirtualDisplay_ac860da388ef586d62f6864612db7fa2d}{hwcomposer\+::\+Virtual\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a63c3f3123c8d148205e29c177bcd5bd6}{hwcomposer\+::\+Physical\+Display}}, \mbox{\hyperlink{classhwcomposer_1_1LogicalDisplay_a788d88b267f7d36ad6e70f523fd16c97}{hwcomposer\+::\+Logical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a5123a951bd40adef34cbe1e11d0a8e69}{hwcomposer\+::\+Mosaic\+Display}}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_abf602e1622a3c4c754cc5c979a129a2c}\label{classhwcomposer_1_1NativeDisplay_abf602e1622a3c4c754cc5c979a129a2c}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Gpu\+Device@{Gpu\+Device}}
+\index{Gpu\+Device@{Gpu\+Device}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Gpu\+Device}{GpuDevice}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classhwcomposer_1_1GpuDevice}{Gpu\+Device}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 418 of file nativedisplay.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeDisplay_a3e381d9464ef96b091fe38d2919fda4a}\label{classhwcomposer_1_1NativeDisplay_a3e381d9464ef96b091fe38d2919fda4a}} 
+\index{hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}!Physical\+Display@{Physical\+Display}}
+\index{Physical\+Display@{Physical\+Display}!hwcomposer\+::\+Native\+Display@{hwcomposer\+::\+Native\+Display}}
+\subsubsection{\texorpdfstring{Physical\+Display}{PhysicalDisplay}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay}{Physical\+Display}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 417 of file nativedisplay.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+public/\mbox{\hyperlink{nativedisplay_8h}{nativedisplay.\+h}}\end{DoxyCompactItemize}

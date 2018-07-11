@@ -1,0 +1,43 @@
+\hypertarget{structhwcomposer_1_1DrmResourcesDeleter}{}\section{hwcomposer\+:\+:Drm\+Resources\+Deleter Struct Reference}
+\label{structhwcomposer_1_1DrmResourcesDeleter}\index{hwcomposer\+::\+Drm\+Resources\+Deleter@{hwcomposer\+::\+Drm\+Resources\+Deleter}}
+
+
+{\ttfamily \#include $<$drmscopedtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1DrmResourcesDeleter_a1907aa858b4fdea7bf0b7578adc77647}{operator()}} (\mbox{\hyperlink{drmscopedtypes_8h_a394774c7e66da001652fbd93d026b853}{drm\+Mode\+Res}} $\ast$resources) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file drmscopedtypes.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrmResourcesDeleter_a1907aa858b4fdea7bf0b7578adc77647}\label{structhwcomposer_1_1DrmResourcesDeleter_a1907aa858b4fdea7bf0b7578adc77647}} 
+\index{hwcomposer\+::\+Drm\+Resources\+Deleter@{hwcomposer\+::\+Drm\+Resources\+Deleter}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+Drm\+Resources\+Deleter@{hwcomposer\+::\+Drm\+Resources\+Deleter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Resources\+Deleter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drmscopedtypes_8h_a394774c7e66da001652fbd93d026b853}{drm\+Mode\+Res}} $\ast$}]{resources }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 23 of file drmscopedtypes.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                                                 \{}
+\DoxyCodeLine{24   drmModeFreeResources(resources);}
+\DoxyCodeLine{25 \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8h}{drmscopedtypes.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8cpp}{drmscopedtypes.\+cpp}}\end{DoxyCompactItemize}

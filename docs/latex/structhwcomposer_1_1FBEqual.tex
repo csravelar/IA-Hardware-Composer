@@ -1,0 +1,46 @@
+\hypertarget{structhwcomposer_1_1FBEqual}{}\section{hwcomposer\+:\+:F\+B\+Equal Struct Reference}
+\label{structhwcomposer_1_1FBEqual}\index{hwcomposer\+::\+F\+B\+Equal@{hwcomposer\+::\+F\+B\+Equal}}
+
+
+{\ttfamily \#include $<$framebuffermanager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1FBEqual_ab9a95e7c00167cf1c81c8164868040ae}{operator()}} (const \mbox{\hyperlink{structFBKey}{F\+B\+Key}} \&p1, const \mbox{\hyperlink{structFBKey}{F\+B\+Key}} \&p2) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 68 of file framebuffermanager.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1FBEqual_ab9a95e7c00167cf1c81c8164868040ae}\label{structhwcomposer_1_1FBEqual_ab9a95e7c00167cf1c81c8164868040ae}} 
+\index{hwcomposer\+::\+F\+B\+Equal@{hwcomposer\+::\+F\+B\+Equal}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+F\+B\+Equal@{hwcomposer\+::\+F\+B\+Equal}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+F\+B\+Equal\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structFBKey}{F\+B\+Key}} \&}]{p1,  }\item[{const \mbox{\hyperlink{structFBKey}{F\+B\+Key}} \&}]{p2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 69 of file framebuffermanager.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                                           \{}
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} equal = (p1.\mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[0] == p2.\mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[0]) \&\&}
+\DoxyCodeLine{71                  (p1.\mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[1] == p2.\mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[1]) \&\&}
+\DoxyCodeLine{72                  (p1.\mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[2] == p2.\mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[2]) \&\&}
+\DoxyCodeLine{73                  (p1.\mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[3] == p2.\mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[3]);}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} equal;}
+\DoxyCodeLine{75   \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/core/\mbox{\hyperlink{framebuffermanager_8h}{framebuffermanager.\+h}}\end{DoxyCompactItemize}

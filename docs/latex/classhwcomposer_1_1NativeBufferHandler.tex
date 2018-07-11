@@ -1,0 +1,192 @@
+\hypertarget{classhwcomposer_1_1NativeBufferHandler}{}\section{hwcomposer\+:\+:Native\+Buffer\+Handler Class Reference}
+\label{classhwcomposer_1_1NativeBufferHandler}\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+
+
+{\ttfamily \#include $<$nativebufferhandler.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Native\+Buffer\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.659259cm]{classhwcomposer_1_1NativeBufferHandler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a646333d259ac8d876282312b1dcd599f}{$\sim$\+Native\+Buffer\+Handler}} ()
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a7e58e3d81d3f56cbee34c963b4999fde}{Create\+Buffer}} (uint32\+\_\+t w, uint32\+\_\+t h, int format, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$handle=\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}, uint32\+\_\+t layer\+\_\+type=k\+Layer\+Normal, bool $\ast$modifier\+\_\+used=\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}, int64\+\_\+t modifier=-\/1, bool raw\+\_\+pixel\+\_\+buffer=false) const =0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_abff911db92343545a36a0cc44a8d2eb8}{Release\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const =0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_ab1e22d9737ca9f6c3e75d1b550e34ce9}{Destroy\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const =0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a5841be467d2aa11e8c4d7233596fda3c}{Import\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const =0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a96581fb8bd36e959c8da6b9f634ecd32}{Copy\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} source, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$target) const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a3b4115de8c13c53b6cd233f755f46dc9}{Get\+Total\+Planes}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const =0
+\item 
+virtual void $\ast$ \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a4ef1e64030d28540265fac46d503e9b8}{Map}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, uint32\+\_\+t x, uint32\+\_\+t y, uint32\+\_\+t width, uint32\+\_\+t height, uint32\+\_\+t $\ast$stride, void $\ast$$\ast$map\+\_\+data, size\+\_\+t plane) const =0
+\item 
+virtual int32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_ae0da63bfef3f8342460fa1a958f8359c}{Un\+Map}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, void $\ast$map\+\_\+data) const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_adb5a4c6d14c012f8a5c71fbb2c984438}{Get\+Fd}} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a7cd90f5d6e7ba6a46758e7891168c332}{Create\+Instance}} (uint32\+\_\+t fd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file nativebufferhandler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_a646333d259ac8d876282312b1dcd599f}\label{classhwcomposer_1_1NativeBufferHandler_a646333d259ac8d876282312b1dcd599f}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!````~Native\+Buffer\+Handler@{$\sim$\+Native\+Buffer\+Handler}}
+\index{````~Native\+Buffer\+Handler@{$\sim$\+Native\+Buffer\+Handler}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Native\+Buffer\+Handler()}{~NativeBufferHandler()}}
+{\footnotesize\ttfamily virtual hwcomposer\+::\+Native\+Buffer\+Handler\+::$\sim$\+Native\+Buffer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 31 of file nativebufferhandler.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                  \{}
+\DoxyCodeLine{32   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_a96581fb8bd36e959c8da6b9f634ecd32}\label{classhwcomposer_1_1NativeBufferHandler_a96581fb8bd36e959c8da6b9f634ecd32}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Copy\+Handle@{Copy\+Handle}}
+\index{Copy\+Handle@{Copy\+Handle}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Copy\+Handle()}{CopyHandle()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Copy\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{source,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a87adf9132b6567a3b167741beebcd9d3}{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}, \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a25a75efa29a03adff56a37623ac6242c}{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}, and \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_ae730a1b13a177dcf02084c0c60bcafb6}{hwcomposer\+::\+Gbm\+Buffer\+Handler}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_a7e58e3d81d3f56cbee34c963b4999fde}\label{classhwcomposer_1_1NativeBufferHandler_a7e58e3d81d3f56cbee34c963b4999fde}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Create\+Buffer@{Create\+Buffer}}
+\index{Create\+Buffer@{Create\+Buffer}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Create\+Buffer()}{CreateBuffer()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Create\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{w,  }\item[{uint32\+\_\+t}]{h,  }\item[{int}]{format,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$}]{handle = {\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}},  }\item[{uint32\+\_\+t}]{layer\+\_\+type = {\ttfamily kLayerNormal},  }\item[{bool $\ast$}]{modifier\+\_\+used = {\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}},  }\item[{int64\+\_\+t}]{modifier = {\ttfamily -\/1},  }\item[{bool}]{raw\+\_\+pixel\+\_\+buffer = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a980ee5c0aa77d99861a89bdf6294d2db}{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}, \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a33d2042ab272653ebac4fcab8e957c8f}{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}, and \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_adf982a610866df90e9a2ee4f04801387}{hwcomposer\+::\+Gbm\+Buffer\+Handler}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_a7cd90f5d6e7ba6a46758e7891168c332}\label{classhwcomposer_1_1NativeBufferHandler_a7cd90f5d6e7ba6a46758e7891168c332}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Create\+Instance@{Create\+Instance}}
+\index{Create\+Instance@{Create\+Instance}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Create\+Instance()}{CreateInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$ hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Create\+Instance (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 40 of file yallocbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                                                     \{}
+\DoxyCodeLine{41   LOG\_I(\textcolor{stringliteral}{"\%s:\%d"}, \_\_func\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{42   YallocBufferHandler *handler = \textcolor{keyword}{new} YallocBufferHandler(fd);}
+\DoxyCodeLine{43   \textcolor{keywordflow}{if} (!handler)}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46   \textcolor{keywordflow}{if} (!handler->Init()) \{}
+\DoxyCodeLine{47     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initialize YallocBufferHandler."});}
+\DoxyCodeLine{48     \textcolor{keyword}{delete} handler;}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{50   \}}
+\DoxyCodeLine{51   \textcolor{keywordflow}{return} handler;}
+\DoxyCodeLine{52 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_ab1e22d9737ca9f6c3e75d1b550e34ce9}\label{classhwcomposer_1_1NativeBufferHandler_ab1e22d9737ca9f6c3e75d1b550e34ce9}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Destroy\+Handle@{Destroy\+Handle}}
+\index{Destroy\+Handle@{Destroy\+Handle}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Destroy\+Handle()}{DestroyHandle()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Destroy\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_aac10a3d48f5dab43e3057ef9783bd6ea}{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}, \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_ae82e3553b77e8dfd8cbe2e30e7a153a3}{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}, and \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a0786f7b82b504105c71881eced9b5270}{hwcomposer\+::\+Gbm\+Buffer\+Handler}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_adb5a4c6d14c012f8a5c71fbb2c984438}\label{classhwcomposer_1_1NativeBufferHandler_adb5a4c6d14c012f8a5c71fbb2c984438}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Get\+Fd@{Get\+Fd}}
+\index{Get\+Fd@{Get\+Fd}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Fd()}{GetFd()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Get\+Fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_aee03106dfff3a4b68b2a29a0d0350d07}{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}, \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a793b507e933f4cd256ea37e302152bb4}{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}, and \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_ac204254aef6007d09474f8e76f9b6470}{hwcomposer\+::\+Gbm\+Buffer\+Handler}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_a3b4115de8c13c53b6cd233f755f46dc9}\label{classhwcomposer_1_1NativeBufferHandler_a3b4115de8c13c53b6cd233f755f46dc9}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Get\+Total\+Planes@{Get\+Total\+Planes}}
+\index{Get\+Total\+Planes@{Get\+Total\+Planes}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Total\+Planes()}{GetTotalPlanes()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Get\+Total\+Planes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_ad86921fa69dbb60b82581bd6f893decc}{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}, \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a257b6f65f6c57915ecabb0b6ecd43237}{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}, and \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a55b6cac51fced2198ae9aee706d03452}{hwcomposer\+::\+Gbm\+Buffer\+Handler}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_a5841be467d2aa11e8c4d7233596fda3c}\label{classhwcomposer_1_1NativeBufferHandler_a5841be467d2aa11e8c4d7233596fda3c}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Import\+Buffer@{Import\+Buffer}}
+\index{Import\+Buffer@{Import\+Buffer}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Import\+Buffer()}{ImportBuffer()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Import\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_aac23a7e72fca258da40cd033c78ccd02}{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}, \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a0341cd413ba6e7d422edf30a161cd2b9}{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}, and \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a552812693a793705e94138855daaead0}{hwcomposer\+::\+Gbm\+Buffer\+Handler}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_a4ef1e64030d28540265fac46d503e9b8}\label{classhwcomposer_1_1NativeBufferHandler_a4ef1e64030d28540265fac46d503e9b8}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Map@{Map}}
+\index{Map@{Map}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily virtual void$\ast$ hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{uint32\+\_\+t}]{x,  }\item[{uint32\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{uint32\+\_\+t $\ast$}]{stride,  }\item[{void $\ast$$\ast$}]{map\+\_\+data,  }\item[{size\+\_\+t}]{plane }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a55e32dbd6cc8c32cb3fd3cac11d3f9f8}{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}, \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a855e524c54da7c897dfeb8dfabfdb29a}{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}, and \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_ad6120de07407c36ed5ab99c8fcb628fd}{hwcomposer\+::\+Gbm\+Buffer\+Handler}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_abff911db92343545a36a0cc44a8d2eb8}\label{classhwcomposer_1_1NativeBufferHandler_abff911db92343545a36a0cc44a8d2eb8}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Release\+Buffer@{Release\+Buffer}}
+\index{Release\+Buffer@{Release\+Buffer}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Release\+Buffer()}{ReleaseBuffer()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Release\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a21b27b52da92605736b164e8088b93fe}{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}, \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_a1d9ec2a830f6a8df3f454d1e2ac8893c}{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}, and \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a9c2554d5c2fe0a76b785352754d369a1}{hwcomposer\+::\+Gbm\+Buffer\+Handler}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeBufferHandler_ae0da63bfef3f8342460fa1a958f8359c}\label{classhwcomposer_1_1NativeBufferHandler_ae0da63bfef3f8342460fa1a958f8359c}} 
+\index{hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}!Un\+Map@{Un\+Map}}
+\index{Un\+Map@{Un\+Map}!hwcomposer\+::\+Native\+Buffer\+Handler@{hwcomposer\+::\+Native\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Un\+Map()}{UnMap()}}
+{\footnotesize\ttfamily virtual int32\+\_\+t hwcomposer\+::\+Native\+Buffer\+Handler\+::\+Un\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{void $\ast$}]{map\+\_\+data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a147ec425ec0fda400f1d4dd5c60764d9}{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}, \mbox{\hyperlink{classhwcomposer_1_1YallocBufferHandler_aea0fe826446e533862bea12e882c59ba}{hwcomposer\+::\+Yalloc\+Buffer\+Handler}}, and \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_af26a61bbdd91d36780e41b406e8b8dd9}{hwcomposer\+::\+Gbm\+Buffer\+Handler}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+public/\mbox{\hyperlink{nativebufferhandler_8h}{nativebufferhandler.\+h}}\item 
+os/alios/\mbox{\hyperlink{yallocbufferhandler_8cpp}{yallocbufferhandler.\+cpp}}\item 
+os/android/\mbox{\hyperlink{gralloc1bufferhandler_8cpp}{gralloc1bufferhandler.\+cpp}}\item 
+os/linux/\mbox{\hyperlink{gbmbufferhandler_8cpp}{gbmbufferhandler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{classhwcomposer_1_1IAPixelUploaderCallback}{}\section{hwcomposer\+:\+:I\+A\+Pixel\+Uploader\+Callback Class Reference}
+\label{classhwcomposer_1_1IAPixelUploaderCallback}\index{hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback@{hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback}}
+Inheritance diagram for hwcomposer\+:\+:I\+A\+Pixel\+Uploader\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1IAPixelUploaderCallback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IAPixelUploaderCallback_afe6ad27fcab01574ec2f70197f69e54e}{I\+A\+Pixel\+Uploader\+Callback}} (\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}} data, \mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}} hook, uint32\+\_\+t display\+\_\+id)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1IAPixelUploaderCallback_aadcf6756b46e8d237ac52a87199fc4eb}{Callback}} (bool start\+\_\+access, void $\ast$call\+\_\+back\+\_\+data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 45 of file linux\+\_\+frontend.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAPixelUploaderCallback_afe6ad27fcab01574ec2f70197f69e54e}\label{classhwcomposer_1_1IAPixelUploaderCallback_afe6ad27fcab01574ec2f70197f69e54e}} 
+\index{hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback@{hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback}!I\+A\+Pixel\+Uploader\+Callback@{I\+A\+Pixel\+Uploader\+Callback}}
+\index{I\+A\+Pixel\+Uploader\+Callback@{I\+A\+Pixel\+Uploader\+Callback}!hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback@{hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback}}
+\subsubsection{\texorpdfstring{I\+A\+Pixel\+Uploader\+Callback()}{IAPixelUploaderCallback()}}
+{\footnotesize\ttfamily hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback\+::\+I\+A\+Pixel\+Uploader\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}}}]{data,  }\item[{\mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}}}]{hook,  }\item[{uint32\+\_\+t}]{display\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 47 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49       : data\_(data), hook\_(hook), display\_(display\_id) \{}
+\DoxyCodeLine{50   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAPixelUploaderCallback_aadcf6756b46e8d237ac52a87199fc4eb}\label{classhwcomposer_1_1IAPixelUploaderCallback_aadcf6756b46e8d237ac52a87199fc4eb}} 
+\index{hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback@{hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback@{hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback}}
+\subsubsection{\texorpdfstring{Callback()}{Callback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+I\+A\+Pixel\+Uploader\+Callback\+::\+Callback (\begin{DoxyParamCaption}\item[{bool}]{start\+\_\+access,  }\item[{void $\ast$}]{call\+\_\+back\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1RawPixelUploadCallback_a37aa7f3e3a5b5e9b43d1a11f56806979}{hwcomposer\+::\+Raw\+Pixel\+Upload\+Callback}}.
+
+
+
+Definition at line 52 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                                          \{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{if} (hook\_ != \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{54       \textcolor{keyword}{auto} hook = \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{iahwc_8h_a12bf4b9fb3dc27eddd9f199c7ea8bb54}{IAHWC\_PFN\_PIXEL\_UPLOADER}}\textcolor{keyword}{>}(hook\_);}
+\DoxyCodeLine{55       hook(data\_, display\_, start\_access ? 1 : 0, call\_back\_data);}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/\mbox{\hyperlink{linux__frontend_8cpp}{linux\+\_\+frontend.\+cpp}}\end{DoxyCompactItemize}

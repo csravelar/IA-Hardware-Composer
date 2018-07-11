@@ -1,0 +1,113 @@
+\hypertarget{classandroid_1_1IAVsyncCallback}{}\section{android\+:\+:I\+A\+Vsync\+Callback Class Reference}
+\label{classandroid_1_1IAVsyncCallback}\index{android\+::\+I\+A\+Vsync\+Callback@{android\+::\+I\+A\+Vsync\+Callback}}
+Inheritance diagram for android\+:\+:I\+A\+Vsync\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classandroid_1_1IAVsyncCallback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classandroid_1_1IAVsyncCallback_a32db4a2123be74e0a801392871bfe48d}{I\+A\+Vsync\+Callback}} (hwc\+\_\+procs\+\_\+t const $\ast$procs)
+\item 
+void \mbox{\hyperlink{classandroid_1_1IAVsyncCallback_ab5d04e5b2c2c36fc58639bbd9867cb54}{Callback}} (uint32\+\_\+t display, int64\+\_\+t timestamp)
+\item 
+\mbox{\hyperlink{classandroid_1_1IAVsyncCallback_a52e1c4e87b7667af7d10a94079785716}{I\+A\+Vsync\+Callback}} (hwc2\+\_\+callback\+\_\+data\+\_\+t data, hwc2\+\_\+function\+\_\+pointer\+\_\+t hook)
+\item 
+void \mbox{\hyperlink{classandroid_1_1IAVsyncCallback_ab5d04e5b2c2c36fc58639bbd9867cb54}{Callback}} (uint32\+\_\+t display, int64\+\_\+t timestamp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 124 of file iahwc1.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classandroid_1_1IAVsyncCallback_a32db4a2123be74e0a801392871bfe48d}\label{classandroid_1_1IAVsyncCallback_a32db4a2123be74e0a801392871bfe48d}} 
+\index{android\+::\+I\+A\+Vsync\+Callback@{android\+::\+I\+A\+Vsync\+Callback}!I\+A\+Vsync\+Callback@{I\+A\+Vsync\+Callback}}
+\index{I\+A\+Vsync\+Callback@{I\+A\+Vsync\+Callback}!android\+::\+I\+A\+Vsync\+Callback@{android\+::\+I\+A\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{I\+A\+Vsync\+Callback()}{IAVsyncCallback()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily android\+::\+I\+A\+Vsync\+Callback\+::\+I\+A\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{hwc\+\_\+procs\+\_\+t const $\ast$}]{procs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 126 of file iahwc1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126                                             : procs\_(procs) \{}
+\DoxyCodeLine{127   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAVsyncCallback_a52e1c4e87b7667af7d10a94079785716}\label{classandroid_1_1IAVsyncCallback_a52e1c4e87b7667af7d10a94079785716}} 
+\index{android\+::\+I\+A\+Vsync\+Callback@{android\+::\+I\+A\+Vsync\+Callback}!I\+A\+Vsync\+Callback@{I\+A\+Vsync\+Callback}}
+\index{I\+A\+Vsync\+Callback@{I\+A\+Vsync\+Callback}!android\+::\+I\+A\+Vsync\+Callback@{android\+::\+I\+A\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{I\+A\+Vsync\+Callback()}{IAVsyncCallback()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily android\+::\+I\+A\+Vsync\+Callback\+::\+I\+A\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{hwc2\+\_\+callback\+\_\+data\+\_\+t}]{data,  }\item[{hwc2\+\_\+function\+\_\+pointer\+\_\+t}]{hook }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 44 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45       : data\_(data), hook\_(hook) \{}
+\DoxyCodeLine{46   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classandroid_1_1IAVsyncCallback_ab5d04e5b2c2c36fc58639bbd9867cb54}\label{classandroid_1_1IAVsyncCallback_ab5d04e5b2c2c36fc58639bbd9867cb54}} 
+\index{android\+::\+I\+A\+Vsync\+Callback@{android\+::\+I\+A\+Vsync\+Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!android\+::\+I\+A\+Vsync\+Callback@{android\+::\+I\+A\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{Callback()}{Callback()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void android\+::\+I\+A\+Vsync\+Callback\+::\+Callback (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{int64\+\_\+t}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback_a632ac6a2e13e1b387df9508507a2ed4d}{hwcomposer\+::\+Vsync\+Callback}}.
+
+
+
+Definition at line 48 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                      \{}
+\DoxyCodeLine{49     \textcolor{keywordflow}{if} (hook\_ != \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{50       \textcolor{keyword}{auto} hook = \textcolor{keyword}{reinterpret\_cast<}HWC2\_PFN\_VSYNC\textcolor{keyword}{>}(hook\_);}
+\DoxyCodeLine{51       hook(data\_, display, timestamp);}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAVsyncCallback_ab5d04e5b2c2c36fc58639bbd9867cb54}\label{classandroid_1_1IAVsyncCallback_ab5d04e5b2c2c36fc58639bbd9867cb54}} 
+\index{android\+::\+I\+A\+Vsync\+Callback@{android\+::\+I\+A\+Vsync\+Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!android\+::\+I\+A\+Vsync\+Callback@{android\+::\+I\+A\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{Callback()}{Callback()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void android\+::\+I\+A\+Vsync\+Callback\+::\+Callback (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{int64\+\_\+t}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback_a632ac6a2e13e1b387df9508507a2ed4d}{hwcomposer\+::\+Vsync\+Callback}}.
+
+
+
+Definition at line 129 of file iahwc1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129                                                      \{}
+\DoxyCodeLine{130     procs\_->vsync(procs\_, display > 0 ? HWC\_DISPLAY\_EXTERNAL\_BIT}
+\DoxyCodeLine{131                                       : HWC\_DISPLAY\_PRIMARY\_BIT,}
+\DoxyCodeLine{132                   timestamp);}
+\DoxyCodeLine{133   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/android/\mbox{\hyperlink{iahwc1_8cpp}{iahwc1.\+cpp}}\item 
+os/android/\mbox{\hyperlink{iahwc2_8cpp}{iahwc2.\+cpp}}\end{DoxyCompactItemize}

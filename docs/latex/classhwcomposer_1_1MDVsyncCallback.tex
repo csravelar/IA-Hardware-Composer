@@ -1,0 +1,68 @@
+\hypertarget{classhwcomposer_1_1MDVsyncCallback}{}\section{hwcomposer\+:\+:M\+D\+Vsync\+Callback Class Reference}
+\label{classhwcomposer_1_1MDVsyncCallback}\index{hwcomposer\+::\+M\+D\+Vsync\+Callback@{hwcomposer\+::\+M\+D\+Vsync\+Callback}}
+Inheritance diagram for hwcomposer\+:\+:M\+D\+Vsync\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1MDVsyncCallback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1MDVsyncCallback_ae05a59bf1001e3b9932ca903f9f6439d}{M\+D\+Vsync\+Callback}} (\mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay}{Mosaic\+Display}} $\ast$display)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MDVsyncCallback_af9ca73f30e00626c613f23871359f4d8}{Callback}} (uint32\+\_\+t, int64\+\_\+t timestamp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file mosaicdisplay.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1MDVsyncCallback_ae05a59bf1001e3b9932ca903f9f6439d}\label{classhwcomposer_1_1MDVsyncCallback_ae05a59bf1001e3b9932ca903f9f6439d}} 
+\index{hwcomposer\+::\+M\+D\+Vsync\+Callback@{hwcomposer\+::\+M\+D\+Vsync\+Callback}!M\+D\+Vsync\+Callback@{M\+D\+Vsync\+Callback}}
+\index{M\+D\+Vsync\+Callback@{M\+D\+Vsync\+Callback}!hwcomposer\+::\+M\+D\+Vsync\+Callback@{hwcomposer\+::\+M\+D\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{M\+D\+Vsync\+Callback()}{MDVsyncCallback()}}
+{\footnotesize\ttfamily hwcomposer\+::\+M\+D\+Vsync\+Callback\+::\+M\+D\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay}{Mosaic\+Display}} $\ast$}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 30 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                           : display\_(display) \{}
+\DoxyCodeLine{31   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1MDVsyncCallback_af9ca73f30e00626c613f23871359f4d8}\label{classhwcomposer_1_1MDVsyncCallback_af9ca73f30e00626c613f23871359f4d8}} 
+\index{hwcomposer\+::\+M\+D\+Vsync\+Callback@{hwcomposer\+::\+M\+D\+Vsync\+Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!hwcomposer\+::\+M\+D\+Vsync\+Callback@{hwcomposer\+::\+M\+D\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{Callback()}{Callback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+M\+D\+Vsync\+Callback\+::\+Callback (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{int64\+\_\+t}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback_a632ac6a2e13e1b387df9508507a2ed4d}{hwcomposer\+::\+Vsync\+Callback}}.
+
+
+
+Definition at line 33 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                \{}
+\DoxyCodeLine{34     display\_->\mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ab2d47bd2c1eac196990bb8d7c2f1ecd7}{VSyncUpdate}}(timestamp);}
+\DoxyCodeLine{35   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/core/\mbox{\hyperlink{mosaicdisplay_8cpp}{mosaicdisplay.\+cpp}}\end{DoxyCompactItemize}

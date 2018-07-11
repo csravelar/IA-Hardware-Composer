@@ -1,0 +1,536 @@
+\hypertarget{classhwcomposer_1_1DrmDisplayManager}{}\section{hwcomposer\+:\+:Drm\+Display\+Manager Class Reference}
+\label{classhwcomposer_1_1DrmDisplayManager}\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+
+
+{\ttfamily \#include $<$drmdisplaymanager.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Drm\+Display\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1DrmDisplayManager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a7fa49119fbf2a4aece3a9e299e9a9919}{Drm\+Display\+Manager}} (\mbox{\hyperlink{classhwcomposer_1_1GpuDevice}{Gpu\+Device}} $\ast$device)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a740d07df781fec91467ed8f6f240b407}{$\sim$\+Drm\+Display\+Manager}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a1597ef6208030337c9554b70dcdf0a95}{Initialize}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a775eee42523dabde8e4187770cbe9c6c}{Initialize\+Display\+Resources}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a103a45f1e7e31c813dc7e185e244d944}{Start\+Hot\+Plug\+Monitor}} () override
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a80e39b4389e271ed5a72421c46ce5f36}{Get\+Virtual\+Display}} () override
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_ae3df43b4c4c9cc1181ec13cbefd764f1}{Get\+Nested\+Display}} () override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ $>$ \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_acff7605550c750e5f799f698e9b82d2a}{Get\+All\+Displays}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_ab11e4353cddc68652abcae61dd26027d}{Register\+Hot\+Plug\+Event\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayHotPlugEventCallback}{Display\+Hot\+Plug\+Event\+Callback}} $>$ callback) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a254ab8fd550f20f056c2ec1e458442c9}{Force\+Refresh}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_ac10c8fb07bf822c4430cd54722ceee16}{Ignore\+Updates}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_aed1b4e61f4bbda4069138675156a9564}{Get\+FD}} () const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a087e35e0b0be34e4ff5efdb37c8a5684}{Notify\+Clients\+Of\+Display\+Change\+Status}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a9d52e745e20b0872b57d04ebdd3d12b6}{Handle\+Lazy\+Initialization}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_abcf8a2a9394d722a58b79060f9f51dbc}{Handle\+Wait}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a3f29044c35ff76edb4718ed19f340794}{Handle\+Routine}} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 44 of file drmdisplaymanager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a7fa49119fbf2a4aece3a9e299e9a9919}\label{classhwcomposer_1_1DrmDisplayManager_a7fa49119fbf2a4aece3a9e299e9a9919}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Drm\+Display\+Manager@{Drm\+Display\+Manager}}
+\index{Drm\+Display\+Manager@{Drm\+Display\+Manager}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Drm\+Display\+Manager()}{DrmDisplayManager()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Drm\+Display\+Manager\+::\+Drm\+Display\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1GpuDevice}{Gpu\+Device}} $\ast$}]{device }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42     : \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a8780175b1679005955a94aa89fa62be1}{HWCThread}}(-8, \textcolor{stringliteral}{"DisplayManager"}), device\_(device) \{}
+\DoxyCodeLine{43   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{44 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a740d07df781fec91467ed8f6f240b407}\label{classhwcomposer_1_1DrmDisplayManager_a740d07df781fec91467ed8f6f240b407}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!````~Drm\+Display\+Manager@{$\sim$\+Drm\+Display\+Manager}}
+\index{````~Drm\+Display\+Manager@{$\sim$\+Drm\+Display\+Manager}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Drm\+Display\+Manager()}{~DrmDisplayManager()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Drm\+Display\+Manager\+::$\sim$\+Drm\+Display\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 46 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                       \{}
+\DoxyCodeLine{47   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{48   std::vector<std::unique\_ptr<DrmDisplay>>().swap(displays\_);}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#ifndef DISABLE\_HOTPLUG\_NOTIFICATION}}
+\DoxyCodeLine{50   close(hotplug\_fd\_);}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{52   drmClose(fd\_);}
+\DoxyCodeLine{53 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a254ab8fd550f20f056c2ec1e458442c9}\label{classhwcomposer_1_1DrmDisplayManager_a254ab8fd550f20f056c2ec1e458442c9}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Force\+Refresh@{Force\+Refresh}}
+\index{Force\+Refresh@{Force\+Refresh}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Force\+Refresh()}{ForceRefresh()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+Manager\+::\+Force\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a678df886d9faff854111d8ace155befc}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 425 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{425                                      \{}
+\DoxyCodeLine{426   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{427   \textcolor{keywordtype}{size\_t} size = displays\_.size();}
+\DoxyCodeLine{428   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{429     displays\_.at(i)->ForceRefresh();}
+\DoxyCodeLine{430   \}}
+\DoxyCodeLine{431 }
+\DoxyCodeLine{432   release\_lock\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{433   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{434 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_acff7605550c750e5f799f698e9b82d2a}\label{classhwcomposer_1_1DrmDisplayManager_acff7605550c750e5f799f698e9b82d2a}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Get\+All\+Displays@{Get\+All\+Displays}}
+\index{Get\+All\+Displays@{Get\+All\+Displays}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+All\+Displays()}{GetAllDisplays()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ $>$ hwcomposer\+::\+Drm\+Display\+Manager\+::\+Get\+All\+Displays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_aec3ebc4b4d22031e983856a424dd43a6}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 407 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{407                                                              \{}
+\DoxyCodeLine{408   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{409   std::vector<NativeDisplay *> all\_displays;}
+\DoxyCodeLine{410   \textcolor{keywordtype}{size\_t} size = displays\_.size();}
+\DoxyCodeLine{411   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{412     all\_displays.emplace\_back(displays\_.at(i).get());}
+\DoxyCodeLine{413   \}}
+\DoxyCodeLine{414   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{415   \textcolor{keywordflow}{return} all\_displays;}
+\DoxyCodeLine{416 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_aed1b4e61f4bbda4069138675156a9564}\label{classhwcomposer_1_1DrmDisplayManager_aed1b4e61f4bbda4069138675156a9564}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Get\+FD@{Get\+FD}}
+\index{Get\+FD@{Get\+FD}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+F\+D()}{GetFD()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Display\+Manager\+::\+Get\+FD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a7af00ef1c1c9dc8f3fd58699460ab14d}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 67 of file drmdisplaymanager.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                   \{}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} fd\_;}
+\DoxyCodeLine{69   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_ae3df43b4c4c9cc1181ec13cbefd764f1}\label{classhwcomposer_1_1DrmDisplayManager_ae3df43b4c4c9cc1181ec13cbefd764f1}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Get\+Nested\+Display@{Get\+Nested\+Display}}
+\index{Get\+Nested\+Display@{Get\+Nested\+Display}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Nested\+Display()}{GetNestedDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ hwcomposer\+::\+Drm\+Display\+Manager\+::\+Get\+Nested\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_ac05cc0db0d8191465746828b2027a6f7}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 400 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{400                                                    \{}
+\DoxyCodeLine{401   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{402   NativeDisplay *display = nested\_display\_.get();}
+\DoxyCodeLine{403   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{404   \textcolor{keywordflow}{return} display;}
+\DoxyCodeLine{405 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a80e39b4389e271ed5a72421c46ce5f36}\label{classhwcomposer_1_1DrmDisplayManager_a80e39b4389e271ed5a72421c46ce5f36}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Get\+Virtual\+Display@{Get\+Virtual\+Display}}
+\index{Get\+Virtual\+Display@{Get\+Virtual\+Display}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Virtual\+Display()}{GetVirtualDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ hwcomposer\+::\+Drm\+Display\+Manager\+::\+Get\+Virtual\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a5fa2b92896cab774d8a85215dfac1d62}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 393 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{393                                                     \{}
+\DoxyCodeLine{394   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{395   NativeDisplay *display = virtual\_display\_.get();}
+\DoxyCodeLine{396   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{397   \textcolor{keywordflow}{return} display;}
+\DoxyCodeLine{398 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a9d52e745e20b0872b57d04ebdd3d12b6}\label{classhwcomposer_1_1DrmDisplayManager_a9d52e745e20b0872b57d04ebdd3d12b6}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Handle\+Lazy\+Initialization@{Handle\+Lazy\+Initialization}}
+\index{Handle\+Lazy\+Initialization@{Handle\+Lazy\+Initialization}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Handle\+Lazy\+Initialization()}{HandleLazyInitialization()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+Manager\+::\+Handle\+Lazy\+Initialization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 443 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{443                                                  \{}
+\DoxyCodeLine{444   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{445   \textcolor{keywordflow}{if} (release\_lock\_) \{}
+\DoxyCodeLine{446     device\_->DisableWatch();}
+\DoxyCodeLine{447     release\_lock\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{448   \}}
+\DoxyCodeLine{449   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{450 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a3f29044c35ff76edb4718ed19f340794}\label{classhwcomposer_1_1DrmDisplayManager_a3f29044c35ff76edb4718ed19f340794}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Handle\+Routine@{Handle\+Routine}}
+\index{Handle\+Routine@{Handle\+Routine}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Handle\+Routine()}{HandleRoutine()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+Manager\+::\+Handle\+Routine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a539ea080e6bf0e6cffe08e2341be1ee4}{hwcomposer\+::\+H\+W\+C\+Thread}}.
+
+
+
+Definition at line 200 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{200                                       \{}
+\DoxyCodeLine{201   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{202   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"DisplayManager::Routine."});}
+\DoxyCodeLine{203   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a26ef5b90fd394e2002d903ffd2521faf}{fd\_handler\_}}.\mbox{\hyperlink{classhwcomposer_1_1FDHandler_ad635c0c7631838aa99e0140c4164425f}{IsReady}}(hotplug\_fd\_)) \{}
+\DoxyCodeLine{204     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"Recieved Hot plug notification."});}
+\DoxyCodeLine{205     HotPlugEventHandler();}
+\DoxyCodeLine{206   \}}
+\DoxyCodeLine{207 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_abcf8a2a9394d722a58b79060f9f51dbc}\label{classhwcomposer_1_1DrmDisplayManager_abcf8a2a9394d722a58b79060f9f51dbc}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Handle\+Wait@{Handle\+Wait}}
+\index{Handle\+Wait@{Handle\+Wait}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Handle\+Wait()}{HandleWait()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+Manager\+::\+Handle\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1HWCThread_ab5acded48bbd1bf4d7c3a54dadb91ef9}{hwcomposer\+::\+H\+W\+C\+Thread}}.
+
+
+
+Definition at line 163 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                                    \{}
+\DoxyCodeLine{164   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a26ef5b90fd394e2002d903ffd2521faf}{fd\_handler\_}}.\mbox{\hyperlink{classhwcomposer_1_1FDHandler_a5ab233d1f474eab69552321e87159a9d}{Poll}}(-1) <= 0) \{}
+\DoxyCodeLine{165     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Poll Failed in DisplayManager \%s"}, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{166   \}}
+\DoxyCodeLine{167 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_ac10c8fb07bf822c4430cd54722ceee16}\label{classhwcomposer_1_1DrmDisplayManager_ac10c8fb07bf822c4430cd54722ceee16}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Ignore\+Updates@{Ignore\+Updates}}
+\index{Ignore\+Updates@{Ignore\+Updates}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Ignore\+Updates()}{IgnoreUpdates()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+Manager\+::\+Ignore\+Updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_ac5d98f9c1c32dc2dbc3afb342a113af5}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 436 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{436                                       \{}
+\DoxyCodeLine{437   \textcolor{keywordtype}{size\_t} size = displays\_.size();}
+\DoxyCodeLine{438   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{439     displays\_.at(i)->IgnoreUpdates();}
+\DoxyCodeLine{440   \}}
+\DoxyCodeLine{441 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a1597ef6208030337c9554b70dcdf0a95}\label{classhwcomposer_1_1DrmDisplayManager_a1597ef6208030337c9554b70dcdf0a95}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+Manager\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_abb67b1deed55bf20584f86aea2ae5167}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 55 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                                    \{}
+\DoxyCodeLine{56   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{57   fd\_ = drmOpen(\textcolor{stringliteral}{"i915"}, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{58   \textcolor{keywordflow}{if} (fd\_ < 0) \{}
+\DoxyCodeLine{59     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to open dri \%s"}, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{60     \textcolor{keywordflow}{return} -ENODEV;}
+\DoxyCodeLine{61   \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63   \textcolor{keyword}{struct }drm\_set\_client\_cap cap = \{DRM\_CLIENT\_CAP\_UNIVERSAL\_PLANES, 1\};}
+\DoxyCodeLine{64   drmIoctl(fd\_, DRM\_IOCTL\_SET\_CLIENT\_CAP, \&cap);}
+\DoxyCodeLine{65   \textcolor{keywordtype}{int} ret = drmSetClientCap(fd\_, DRM\_CLIENT\_CAP\_ATOMIC, 1);}
+\DoxyCodeLine{66   \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{67     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to set atomic cap \%s"}, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{69   \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71   ret = drmSetClientCap(fd\_, DRM\_CLIENT\_CAP\_ATOMIC, 1);}
+\DoxyCodeLine{72   \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{73     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to set atomic cap \%d"}, ret);}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{75   \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77   \mbox{\hyperlink{namespacehwcomposer_a88e61b5e1ae620a5424a9497d554aea7}{ScopedDrmResourcesPtr}} res(drmModeGetResources(fd\_));}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79   \textcolor{keywordflow}{for} (int32\_t i = 0; i < res->count\_crtcs; ++i) \{}
+\DoxyCodeLine{80     \mbox{\hyperlink{namespacehwcomposer_a9571d0c874674e369f17aa93c5d863e8}{ScopedDrmCrtcPtr}} c(drmModeGetCrtc(fd\_, res->crtcs[i]));}
+\DoxyCodeLine{81     \textcolor{keywordflow}{if} (!c) \{}
+\DoxyCodeLine{82       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to get crtc \%d"}, res->crtcs[i]);}
+\DoxyCodeLine{83       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{84     \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     std::unique\_ptr<DrmDisplay> display(}
+\DoxyCodeLine{87         \textcolor{keyword}{new} DrmDisplay(fd\_, i, c->crtc\_id, \textcolor{keyword}{this}));}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     displays\_.emplace\_back(std::move(display));}
+\DoxyCodeLine{90   \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#ifndef DISABLE\_HOTPLUG\_NOTIFICATION}}
+\DoxyCodeLine{93   hotplug\_fd\_ = socket(PF\_NETLINK, SOCK\_DGRAM, NETLINK\_KOBJECT\_UEVENT);}
+\DoxyCodeLine{94   \textcolor{keywordflow}{if} (hotplug\_fd\_ < 0) \{}
+\DoxyCodeLine{95     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to create socket for hot plug monitor. \%s"}, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{96     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{97   \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   \textcolor{keyword}{struct }sockaddr\_nl addr;}
+\DoxyCodeLine{100   memset(\&addr, 0, \textcolor{keyword}{sizeof}(addr));}
+\DoxyCodeLine{101   addr.nl\_family = AF\_NETLINK;}
+\DoxyCodeLine{102   addr.nl\_pid = getpid();}
+\DoxyCodeLine{103   addr.nl\_groups = 0xffffffff;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105   ret = bind(hotplug\_fd\_, (\textcolor{keyword}{struct} sockaddr *)\&addr, \textcolor{keyword}{sizeof}(addr));}
+\DoxyCodeLine{106   \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{107     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to bind sockaddr\_nl and hot plug monitor fd. \%s"},}
+\DoxyCodeLine{108            \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{109     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{110   \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a26ef5b90fd394e2002d903ffd2521faf}{fd\_handler\_}}.\mbox{\hyperlink{classhwcomposer_1_1FDHandler_aee421fa4ae54b7d4fcc352ebea15b4f8}{AddFd}}(hotplug\_fd\_);}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{114   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"DisplayManager Initialization succeeded."});}
+\DoxyCodeLine{115   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{116 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a775eee42523dabde8e4187770cbe9c6c}\label{classhwcomposer_1_1DrmDisplayManager_a775eee42523dabde8e4187770cbe9c6c}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Initialize\+Display\+Resources@{Initialize\+Display\+Resources}}
+\index{Initialize\+Display\+Resources@{Initialize\+Display\+Resources}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Initialize\+Display\+Resources()}{InitializeDisplayResources()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+Manager\+::\+Initialize\+Display\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a26b46eb7c0d15384fceaecdd8be9be45}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 169 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{169                                                    \{}
+\DoxyCodeLine{170   buffer\_handler\_.reset(\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a7cd90f5d6e7ba6a46758e7891168c332}{NativeBufferHandler::CreateInstance}}(fd\_));}
+\DoxyCodeLine{171   frame\_buffer\_manager\_.reset(\textcolor{keyword}{new} FrameBufferManager(fd\_));}
+\DoxyCodeLine{172   \textcolor{keywordflow}{if} (!buffer\_handler\_) \{}
+\DoxyCodeLine{173     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to create native buffer handler instance"});}
+\DoxyCodeLine{174     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{175   \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177   \textcolor{keywordtype}{int} size = displays\_.size();}
+\DoxyCodeLine{178   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{179     \textcolor{keywordflow}{if} (!displays\_.at(i)->Initialize(buffer\_handler\_.get(),}
+\DoxyCodeLine{180                                      frame\_buffer\_manager\_.get())) \{}
+\DoxyCodeLine{181       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to Initialize Display \%d"}, i);}
+\DoxyCodeLine{182     \}}
+\DoxyCodeLine{183   \}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185   virtual\_display\_.reset(\textcolor{keyword}{new} VirtualDisplay(fd\_, buffer\_handler\_.get(), 0, 0));}
+\DoxyCodeLine{186   nested\_display\_.reset(\textcolor{keyword}{new} NestedDisplay(fd\_, buffer\_handler\_.get()));}
+\DoxyCodeLine{187 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a087e35e0b0be34e4ff5efdb37c8a5684}\label{classhwcomposer_1_1DrmDisplayManager_a087e35e0b0be34e4ff5efdb37c8a5684}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Notify\+Clients\+Of\+Display\+Change\+Status@{Notify\+Clients\+Of\+Display\+Change\+Status}}
+\index{Notify\+Clients\+Of\+Display\+Change\+Status@{Notify\+Clients\+Of\+Display\+Change\+Status}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Notify\+Clients\+Of\+Display\+Change\+Status()}{NotifyClientsOfDisplayChangeStatus()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+Manager\+::\+Notify\+Clients\+Of\+Display\+Change\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 351 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{351                                                            \{}
+\DoxyCodeLine{352   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{353   \textcolor{keywordtype}{bool} disable\_last\_plane\_usage = \textcolor{keyword}{false};}
+\DoxyCodeLine{354   uint32\_t total\_connected\_displays = 0;}
+\DoxyCodeLine{355   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&display : displays\_) \{}
+\DoxyCodeLine{356     \textcolor{keywordflow}{if} (display->IsConnected()) \{}
+\DoxyCodeLine{357       display->NotifyClientOfDisConnectedState();}
+\DoxyCodeLine{358       total\_connected\_displays++;}
+\DoxyCodeLine{359     \}}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{361     \textcolor{keywordflow}{if} (total\_connected\_displays > 1) \{}
+\DoxyCodeLine{362       disable\_last\_plane\_usage = \textcolor{keyword}{true};}
+\DoxyCodeLine{363       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{364     \}}
+\DoxyCodeLine{365   \}}
+\DoxyCodeLine{366 }
+\DoxyCodeLine{367   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&display : displays\_) \{}
+\DoxyCodeLine{368     display->NotifyDisplayWA(disable\_last\_plane\_usage);}
+\DoxyCodeLine{369     display->ForceRefresh();}
+\DoxyCodeLine{370   \}}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{372   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&display : displays\_) \{}
+\DoxyCodeLine{373     \textcolor{keywordflow}{if} (!display->IsConnected()) \{}
+\DoxyCodeLine{374       display->NotifyClientOfDisConnectedState();}
+\DoxyCodeLine{375     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{376       display->NotifyClientOfConnectedState();}
+\DoxyCodeLine{377     \}}
+\DoxyCodeLine{378   \}}
+\DoxyCodeLine{379 }
+\DoxyCodeLine{380   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} nested\_display\_registered = \textcolor{keyword}{false};}
+\DoxyCodeLine{381   \textcolor{keywordflow}{if} (!nested\_display\_registered) \{}
+\DoxyCodeLine{382     nested\_display\_->HotPlugUpdate(\textcolor{keyword}{true});}
+\DoxyCodeLine{383     nested\_display\_registered = \textcolor{keyword}{true};}
+\DoxyCodeLine{384   \}}
+\DoxyCodeLine{385 }
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#ifdef ENABLE\_ANDROID\_WA}}
+\DoxyCodeLine{387   notify\_client\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{388 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{391 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_ab11e4353cddc68652abcae61dd26027d}\label{classhwcomposer_1_1DrmDisplayManager_ab11e4353cddc68652abcae61dd26027d}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Register\+Hot\+Plug\+Event\+Callback@{Register\+Hot\+Plug\+Event\+Callback}}
+\index{Register\+Hot\+Plug\+Event\+Callback@{Register\+Hot\+Plug\+Event\+Callback}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Register\+Hot\+Plug\+Event\+Callback()}{RegisterHotPlugEventCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+Manager\+::\+Register\+Hot\+Plug\+Event\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayHotPlugEventCallback}{Display\+Hot\+Plug\+Event\+Callback}} $>$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a2c1138176c411a5164052e83f623595d}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 418 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{419                                                          \{}
+\DoxyCodeLine{420   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{421   callback\_ = callback;}
+\DoxyCodeLine{422   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{423 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplayManager_a103a45f1e7e31c813dc7e185e244d944}\label{classhwcomposer_1_1DrmDisplayManager_a103a45f1e7e31c813dc7e185e244d944}} 
+\index{hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}!Start\+Hot\+Plug\+Monitor@{Start\+Hot\+Plug\+Monitor}}
+\index{Start\+Hot\+Plug\+Monitor@{Start\+Hot\+Plug\+Monitor}!hwcomposer\+::\+Drm\+Display\+Manager@{hwcomposer\+::\+Drm\+Display\+Manager}}
+\subsubsection{\texorpdfstring{Start\+Hot\+Plug\+Monitor()}{StartHotPlugMonitor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+Manager\+::\+Start\+Hot\+Plug\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayManager_a9728735ff10a6e52861c4201bf8c6fb2}{hwcomposer\+::\+Display\+Manager}}.
+
+
+
+Definition at line 189 of file drmdisplaymanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{189                                             \{}
+\DoxyCodeLine{190   \textcolor{keywordflow}{if} (!UpdateDisplayState()) \{}
+\DoxyCodeLine{191     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to connect display."});}
+\DoxyCodeLine{192   \}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7162d49a6b4026673f77ac048eb4d07b}{InitWorker}}()) \{}
+\DoxyCodeLine{195     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initalizer thread to monitor Hot Plug events. \%s"},}
+\DoxyCodeLine{196            \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{197   \}}
+\DoxyCodeLine{198 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmdisplaymanager_8h}{drmdisplaymanager.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmdisplaymanager_8cpp}{drmdisplaymanager.\+cpp}}\end{DoxyCompactItemize}

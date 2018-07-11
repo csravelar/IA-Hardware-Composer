@@ -1,0 +1,246 @@
+\hypertarget{classhwcomposer_1_1PixelUploader}{}\section{hwcomposer\+:\+:Pixel\+Uploader Class Reference}
+\label{classhwcomposer_1_1PixelUploader}\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+
+
+{\ttfamily \#include $<$pixeluploader.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Pixel\+Uploader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1PixelUploader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1PixelUploader_ae452a5d38f705baa48d6c9e78d35878b}{Pixel\+Uploader}} (const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$buffer\+\_\+handler)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a0b395681de457f6caa641e4cea6513f6}{$\sim$\+Pixel\+Uploader}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a6d835746b222526f59cb5df426d7885d}{Initialize}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a8318f648f5452cffdb1dd2c54f452ef2}{Register\+Pixel\+Uploader\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RawPixelUploadCallback}{Raw\+Pixel\+Upload\+Callback}} $>$ callback)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_ae2154e6039f703b8ce95ac3ffe8e8c8b}{Update\+Layer\+Pixel\+Data}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, uint32\+\_\+t original\+\_\+width, uint32\+\_\+t original\+\_\+height, uint32\+\_\+t original\+\_\+stride, void $\ast$callback\+\_\+data, uint8\+\_\+t $\ast$byteaddr, \mbox{\hyperlink{classhwcomposer_1_1PixelUploaderLayerCallback}{Pixel\+Uploader\+Layer\+Callback}} $\ast$layer\+\_\+callback, Hwc\+Rect$<$ int $>$ surface\+Damage)
+\item 
+const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a5fbbbd29b8712fe6fa6278e9422dd1e9}{Get\+Native\+Buffer\+Handler}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a73abd205b50c5cdcc693886536553889}{Handle\+Routine}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_ae6bfd528de70bc53d8eb30eb76b8d8fd}{Handle\+Exit}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a445ba292fde6978ce93994706574e6ed}{Exit\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a1ae866ac73ce4866d88479cebeb16e41}{Synchronize}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 50 of file pixeluploader.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_ae452a5d38f705baa48d6c9e78d35878b}\label{classhwcomposer_1_1PixelUploader_ae452a5d38f705baa48d6c9e78d35878b}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!Pixel\+Uploader@{Pixel\+Uploader}}
+\index{Pixel\+Uploader@{Pixel\+Uploader}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{Pixel\+Uploader()}{PixelUploader()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Pixel\+Uploader\+::\+Pixel\+Uploader (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$}]{buffer\+\_\+handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file pixeluploader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48     : \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a8780175b1679005955a94aa89fa62be1}{HWCThread}}(-8, \textcolor{stringliteral}{"PixelUploader"}), buffer\_handler\_(buffer\_handler) \{}
+\DoxyCodeLine{49   \textcolor{keywordflow}{if} (!cevent\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a5b5ee0d26d11c5697e20cde63a255e97}{Initialize}}())}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52   fd\_chandler\_.\mbox{\hyperlink{classhwcomposer_1_1FDHandler_aee421fa4ae54b7d4fcc352ebea15b4f8}{AddFd}}(cevent\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a103324deefcbf4402fd302b737474416}{get\_fd}}());}
+\DoxyCodeLine{53   gpu\_fd\_ = buffer\_handler\_->\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_adb5a4c6d14c012f8a5c71fbb2c984438}{GetFd}}();}
+\DoxyCodeLine{54 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_a0b395681de457f6caa641e4cea6513f6}\label{classhwcomposer_1_1PixelUploader_a0b395681de457f6caa641e4cea6513f6}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!````~Pixel\+Uploader@{$\sim$\+Pixel\+Uploader}}
+\index{````~Pixel\+Uploader@{$\sim$\+Pixel\+Uploader}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{$\sim$\+Pixel\+Uploader()}{~PixelUploader()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Pixel\+Uploader\+::$\sim$\+Pixel\+Uploader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 56 of file pixeluploader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                               \{}
+\DoxyCodeLine{57 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_a445ba292fde6978ce93994706574e6ed}\label{classhwcomposer_1_1PixelUploader_a445ba292fde6978ce93994706574e6ed}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!Exit\+Thread@{Exit\+Thread}}
+\index{Exit\+Thread@{Exit\+Thread}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{Exit\+Thread()}{ExitThread()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Pixel\+Uploader\+::\+Exit\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file pixeluploader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                                \{}
+\DoxyCodeLine{100   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_aa360360e4c27cbc7fed745f79990a190}{HWCThread::Exit}}();}
+\DoxyCodeLine{101   std::vector<PixelData>().swap(pixel\_data\_);}
+\DoxyCodeLine{102 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_a5fbbbd29b8712fe6fa6278e9422dd1e9}\label{classhwcomposer_1_1PixelUploader_a5fbbbd29b8712fe6fa6278e9422dd1e9}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!Get\+Native\+Buffer\+Handler@{Get\+Native\+Buffer\+Handler}}
+\index{Get\+Native\+Buffer\+Handler@{Get\+Native\+Buffer\+Handler}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{Get\+Native\+Buffer\+Handler()}{GetNativeBufferHandler()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}}$\ast$ hwcomposer\+::\+Pixel\+Uploader\+::\+Get\+Native\+Buffer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 66 of file pixeluploader.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                                                             \{}
+\DoxyCodeLine{67     \textcolor{keywordflow}{return} buffer\_handler\_;}
+\DoxyCodeLine{68   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_ae6bfd528de70bc53d8eb30eb76b8d8fd}\label{classhwcomposer_1_1PixelUploader_ae6bfd528de70bc53d8eb30eb76b8d8fd}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!Handle\+Exit@{Handle\+Exit}}
+\index{Handle\+Exit@{Handle\+Exit}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{Handle\+Exit()}{HandleExit()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Pixel\+Uploader\+::\+Handle\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a39a94bd0b12451fe3060729787921cbf}{hwcomposer\+::\+H\+W\+C\+Thread}}.
+
+
+
+Definition at line 104 of file pixeluploader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104                                \{}
+\DoxyCodeLine{105 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_a73abd205b50c5cdcc693886536553889}\label{classhwcomposer_1_1PixelUploader_a73abd205b50c5cdcc693886536553889}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!Handle\+Routine@{Handle\+Routine}}
+\index{Handle\+Routine@{Handle\+Routine}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{Handle\+Routine()}{HandleRoutine()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Pixel\+Uploader\+::\+Handle\+Routine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a539ea080e6bf0e6cffe08e2341be1ee4}{hwcomposer\+::\+H\+W\+C\+Thread}}.
+
+
+
+Definition at line 107 of file pixeluploader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107                                   \{}
+\DoxyCodeLine{108   HandleRawPixelUpdate();}
+\DoxyCodeLine{109 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_a6d835746b222526f59cb5df426d7885d}\label{classhwcomposer_1_1PixelUploader_a6d835746b222526f59cb5df426d7885d}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Pixel\+Uploader\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file pixeluploader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                \{}
+\DoxyCodeLine{60   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7162d49a6b4026673f77ac048eb4d07b}{InitWorker}}()) \{}
+\DoxyCodeLine{61     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initalize PixelUploader. \%s"}, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{62   \}}
+\DoxyCodeLine{63 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_a8318f648f5452cffdb1dd2c54f452ef2}\label{classhwcomposer_1_1PixelUploader_a8318f648f5452cffdb1dd2c54f452ef2}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!Register\+Pixel\+Uploader\+Callback@{Register\+Pixel\+Uploader\+Callback}}
+\index{Register\+Pixel\+Uploader\+Callback@{Register\+Pixel\+Uploader\+Callback}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{Register\+Pixel\+Uploader\+Callback()}{RegisterPixelUploaderCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Pixel\+Uploader\+::\+Register\+Pixel\+Uploader\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RawPixelUploadCallback}{Raw\+Pixel\+Upload\+Callback}} $>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file pixeluploader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                                                     \{}
+\DoxyCodeLine{67   callback\_ = callback;}
+\DoxyCodeLine{68 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_a1ae866ac73ce4866d88479cebeb16e41}\label{classhwcomposer_1_1PixelUploader_a1ae866ac73ce4866d88479cebeb16e41}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!Synchronize@{Synchronize}}
+\index{Synchronize@{Synchronize}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{Synchronize()}{Synchronize()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Pixel\+Uploader\+::\+Synchronize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 94 of file pixeluploader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94                                 \{}
+\DoxyCodeLine{95   sync\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{96   sync\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{97 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1PixelUploader_ae2154e6039f703b8ce95ac3ffe8e8c8b}\label{classhwcomposer_1_1PixelUploader_ae2154e6039f703b8ce95ac3ffe8e8c8b}} 
+\index{hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}!Update\+Layer\+Pixel\+Data@{Update\+Layer\+Pixel\+Data}}
+\index{Update\+Layer\+Pixel\+Data@{Update\+Layer\+Pixel\+Data}!hwcomposer\+::\+Pixel\+Uploader@{hwcomposer\+::\+Pixel\+Uploader}}
+\subsubsection{\texorpdfstring{Update\+Layer\+Pixel\+Data()}{UpdateLayerPixelData()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Pixel\+Uploader\+::\+Update\+Layer\+Pixel\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{uint32\+\_\+t}]{original\+\_\+width,  }\item[{uint32\+\_\+t}]{original\+\_\+height,  }\item[{uint32\+\_\+t}]{original\+\_\+stride,  }\item[{void $\ast$}]{callback\+\_\+data,  }\item[{uint8\+\_\+t $\ast$}]{byteaddr,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1PixelUploaderLayerCallback}{Pixel\+Uploader\+Layer\+Callback}} $\ast$}]{layer\+\_\+callback,  }\item[{Hwc\+Rect$<$ int $>$}]{surface\+Damage }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file pixeluploader.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                                                             \{}
+\DoxyCodeLine{74   pixel\_data\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{75   pixel\_data\_.emplace\_back();}
+\DoxyCodeLine{76   PixelData\& temp = pixel\_data\_.back();}
+\DoxyCodeLine{77   temp.handle\_ = handle;}
+\DoxyCodeLine{78   temp.original\_width\_ = original\_width;}
+\DoxyCodeLine{79   temp.original\_height\_ = original\_height;}
+\DoxyCodeLine{80   temp.original\_stride\_ = original\_stride;}
+\DoxyCodeLine{81   temp.callback\_data\_ = callback\_data;}
+\DoxyCodeLine{82   temp.data\_ = byteaddr;}
+\DoxyCodeLine{83   temp.layer\_callback\_ = layer\_callback;}
+\DoxyCodeLine{84   temp.surfaceDamage = surfaceDamage;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86   tasks\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{87   tasks\_ |= kRefreshRawPixelMap;}
+\DoxyCodeLine{88   tasks\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{89   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a5f38525b892525beaa7f37d2d4c50bde}{Resume}}();}
+\DoxyCodeLine{90   pixel\_data\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{91   Wait();}
+\DoxyCodeLine{92 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/\mbox{\hyperlink{pixeluploader_8h}{pixeluploader.\+h}}\item 
+os/linux/\mbox{\hyperlink{pixeluploader_8cpp}{pixeluploader.\+cpp}}\end{DoxyCompactItemize}

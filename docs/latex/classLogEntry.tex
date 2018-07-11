@@ -1,0 +1,362 @@
+\hypertarget{classLogEntry}{}\section{Log\+Entry Class Reference}
+\label{classLogEntry}\index{Log\+Entry@{Log\+Entry}}
+
+
+{\ttfamily \#include $<$logentry.\+h$>$}
+
+Inheritance diagram for Log\+Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLogEntry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogEntry_a78c2786c30d8d6ba4b2aa8b372f58305}{Log\+Entry}} ()
+\item 
+\mbox{\hyperlink{classLogEntry_a484dd0b15f1339e654b526a8a9a431a3}{Log\+Entry}} (nsecs\+\_\+t timestamp, String8 description)
+\item 
+\mbox{\hyperlink{classLogEntry_ae0da106e665ca859be1a30ea316cd7d2}{$\sim$\+Log\+Entry}} ()
+\item 
+pid\+\_\+t \mbox{\hyperlink{classLogEntry_a50403241bb451c7faabc6d7bb9650221}{get\+T\+ID}} () const
+\item 
+nsecs\+\_\+t \mbox{\hyperlink{classLogEntry_aaf6bd4d7c0c18071fdb39c49a2de6064}{get\+Timestamp}} () const
+\item 
+const String8 \& \mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{get\+Description}} () const
+\item 
+bool \mbox{\hyperlink{classLogEntry_a5711231fdc0709752e67aa82fad051e1}{is\+Fixed\+Size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classLogEntry_aecaa8f3ac612c7faa86c2790d8d6d420}{get\+Flattened\+Size}} () const
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classLogEntry_a479ac501aaf9e4fc11c5a6d118b65dc1}{flatten}} (void $\ast$buffer, size\+\_\+t size) const
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classLogEntry_ae5b14d452a6f948ed9a00a5446d5aa1b}{unflatten}} (void const $\ast$buffer, size\+\_\+t size)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classLogEntry_a1c92a359f9d4e3635ae3c2f228ff6206}{read}} (sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$ p\+Diagnostic)
+\item 
+void \mbox{\hyperlink{classLogEntry_a15620abfed3ae9b39e565de00b50cf00}{print}} (bool b\+Very\+Verbose=false, bool b\+Verbose=false, bool b\+Fences=false, bool b\+Buffer\+Manager=false, bool b\+Queue=false)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classLogEntry_ab914112fadd8cd8cf47a4e1e9e09fa72}{discard\+All}} (sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$ p\+Diagnostic)
+\item 
+static void \mbox{\hyperlink{classLogEntry_ac8cfea6c35e82f5cae1f37059791738b}{print\+All}} (sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$ p\+Diagnostic, bool b\+Very\+Verbose=false, bool b\+Verbose=false, bool b\+Fences=false, bool b\+Buffer\+Manager=false, bool b\+Queue=false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file logentry.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLogEntry_a78c2786c30d8d6ba4b2aa8b372f58305}\label{classLogEntry_a78c2786c30d8d6ba4b2aa8b372f58305}} 
+\index{Log\+Entry@{Log\+Entry}!Log\+Entry@{Log\+Entry}}
+\index{Log\+Entry@{Log\+Entry}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{Log\+Entry()}{LogEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Log\+Entry\+::\+Log\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                    : mTID(0), mTimestamp(0) \{}
+\DoxyCodeLine{68 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_a484dd0b15f1339e654b526a8a9a431a3}\label{classLogEntry_a484dd0b15f1339e654b526a8a9a431a3}} 
+\index{Log\+Entry@{Log\+Entry}!Log\+Entry@{Log\+Entry}}
+\index{Log\+Entry@{Log\+Entry}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{Log\+Entry()}{LogEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Log\+Entry\+::\+Log\+Entry (\begin{DoxyParamCaption}\item[{nsecs\+\_\+t}]{timestamp,  }\item[{String8}]{description }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71     : mTID(0), mTimestamp(timestamp), mDescription(description) \{}
+\DoxyCodeLine{72 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_ae0da106e665ca859be1a30ea316cd7d2}\label{classLogEntry_ae0da106e665ca859be1a30ea316cd7d2}} 
+\index{Log\+Entry@{Log\+Entry}!````~Log\+Entry@{$\sim$\+Log\+Entry}}
+\index{````~Log\+Entry@{$\sim$\+Log\+Entry}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{$\sim$\+Log\+Entry()}{~LogEntry()}}
+{\footnotesize\ttfamily Log\+Entry\+::$\sim$\+Log\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74                     \{}
+\DoxyCodeLine{75 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classLogEntry_ab914112fadd8cd8cf47a4e1e9e09fa72}\label{classLogEntry_ab914112fadd8cd8cf47a4e1e9e09fa72}} 
+\index{Log\+Entry@{Log\+Entry}!discard\+All@{discard\+All}}
+\index{discard\+All@{discard\+All}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{discard\+All()}{discardAll()}}
+{\footnotesize\ttfamily void Log\+Entry\+::discard\+All (\begin{DoxyParamCaption}\item[{sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$}]{p\+Diagnostic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 175 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{175                                                      \{}
+\DoxyCodeLine{176   \textcolor{keywordflow}{while} (1) \{}
+\DoxyCodeLine{177     \mbox{\hyperlink{classLogEntry}{LogEntry}} entry;}
+\DoxyCodeLine{178     \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = entry.\mbox{\hyperlink{classLogEntry_a1c92a359f9d4e3635ae3c2f228ff6206}{read}}(pDiagnostic);}
+\DoxyCodeLine{179     \textcolor{keywordflow}{if} (ret != OK)}
+\DoxyCodeLine{180       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{181   \}}
+\DoxyCodeLine{182 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_a479ac501aaf9e4fc11c5a6d118b65dc1}\label{classLogEntry_a479ac501aaf9e4fc11c5a6d118b65dc1}} 
+\index{Log\+Entry@{Log\+Entry}!flatten@{flatten}}
+\index{flatten@{flatten}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{flatten()}{flatten()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Log\+Entry\+::flatten (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}\label{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}} 
+\index{Log\+Entry@{Log\+Entry}!get\+Description@{get\+Description}}
+\index{get\+Description@{get\+Description}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{get\+Description()}{getDescription()}}
+{\footnotesize\ttfamily const String8\& Log\+Entry\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 40 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                         \{}
+\DoxyCodeLine{41     \textcolor{keywordflow}{return} mDescription;}
+\DoxyCodeLine{42   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_aecaa8f3ac612c7faa86c2790d8d6d420}\label{classLogEntry_aecaa8f3ac612c7faa86c2790d8d6d420}} 
+\index{Log\+Entry@{Log\+Entry}!get\+Flattened\+Size@{get\+Flattened\+Size}}
+\index{get\+Flattened\+Size@{get\+Flattened\+Size}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{get\+Flattened\+Size()}{getFlattenedSize()}}
+{\footnotesize\ttfamily size\+\_\+t Log\+Entry\+::get\+Flattened\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 46 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                   \{}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{48   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_a50403241bb451c7faabc6d7bb9650221}\label{classLogEntry_a50403241bb451c7faabc6d7bb9650221}} 
+\index{Log\+Entry@{Log\+Entry}!get\+T\+ID@{get\+T\+ID}}
+\index{get\+T\+ID@{get\+T\+ID}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{get\+T\+I\+D()}{getTID()}}
+{\footnotesize\ttfamily pid\+\_\+t Log\+Entry\+::get\+T\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 34 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                        \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} mTID;}
+\DoxyCodeLine{36   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_aaf6bd4d7c0c18071fdb39c49a2de6064}\label{classLogEntry_aaf6bd4d7c0c18071fdb39c49a2de6064}} 
+\index{Log\+Entry@{Log\+Entry}!get\+Timestamp@{get\+Timestamp}}
+\index{get\+Timestamp@{get\+Timestamp}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{get\+Timestamp()}{getTimestamp()}}
+{\footnotesize\ttfamily nsecs\+\_\+t Log\+Entry\+::get\+Timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                \{}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} mTimestamp;}
+\DoxyCodeLine{39   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_a5711231fdc0709752e67aa82fad051e1}\label{classLogEntry_a5711231fdc0709752e67aa82fad051e1}} 
+\index{Log\+Entry@{Log\+Entry}!is\+Fixed\+Size@{is\+Fixed\+Size}}
+\index{is\+Fixed\+Size@{is\+Fixed\+Size}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{is\+Fixed\+Size()}{isFixedSize()}}
+{\footnotesize\ttfamily bool Log\+Entry\+::is\+Fixed\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                   \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{45   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_a15620abfed3ae9b39e565de00b50cf00}\label{classLogEntry_a15620abfed3ae9b39e565de00b50cf00}} 
+\index{Log\+Entry@{Log\+Entry}!print@{print}}
+\index{print@{print}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Log\+Entry\+::print (\begin{DoxyParamCaption}\item[{bool}]{b\+Very\+Verbose = {\ttfamily false},  }\item[{bool}]{b\+Verbose = {\ttfamily false},  }\item[{bool}]{b\+Fences = {\ttfamily false},  }\item[{bool}]{b\+Buffer\+Manager = {\ttfamily false},  }\item[{bool}]{b\+Queue = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 131 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{132                                                        \{}
+\DoxyCodeLine{133   \textcolor{keywordflow}{if} (strstr(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"SF0 onPrepare Entry"}) ||}
+\DoxyCodeLine{134       strstr(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"InputAnalyzer SF0"})) \{}
+\DoxyCodeLine{135     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"});}
+\DoxyCodeLine{136   \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138   \textcolor{keywordflow}{if} (!bVeryVerbose \&\& bVerbose == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{139     \textcolor{comment}{// Strip out any 'verbose' matching strings}}
+\DoxyCodeLine{140     \textcolor{keywordflow}{if} (strstr(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"onPrepare Entry"}) ||}
+\DoxyCodeLine{141         strstr(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"onPrepare Exit"}) ||}
+\DoxyCodeLine{142         strstr(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"onSet Exit"}) ||}
+\DoxyCodeLine{143         strncmp(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"InternalBuffer"}, 14) == 0 ||}
+\DoxyCodeLine{144         strncmp(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"drm"}, 3) == 0 ||}
+\DoxyCodeLine{145         strncmp(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"adf"}, 3) == 0)}
+\DoxyCodeLine{146       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{147   \}}
+\DoxyCodeLine{148   \textcolor{keywordflow}{if} (!bVeryVerbose \&\& bFences == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{149     \textcolor{comment}{// Strip out any 'fence' matching strings.}}
+\DoxyCodeLine{150     \textcolor{keywordflow}{if} (strncmp(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"Fence:"}, 6) == 0)}
+\DoxyCodeLine{151       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{152     \textcolor{keywordflow}{if} (strncmp(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"NativeFence:"}, 12) == 0)}
+\DoxyCodeLine{153       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{154   \}}
+\DoxyCodeLine{155   \textcolor{keywordflow}{if} (!bVeryVerbose \&\& bBufferManager == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{156     \textcolor{comment}{// Strip out any 'buffer manager' matching strings.}}
+\DoxyCodeLine{157     \textcolor{keywordflow}{if} (strncmp(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"BufferManager:"}, 14) == 0)}
+\DoxyCodeLine{158       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{159   \}}
+\DoxyCodeLine{160   \textcolor{keywordflow}{if} (!bVeryVerbose \&\& bQueue == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{161     \textcolor{comment}{// Strip out any 'display queue' matching strings.}}
+\DoxyCodeLine{162     \textcolor{keywordflow}{if} (strncmp(\mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}(), \textcolor{stringliteral}{"Queue:"}, 6) == 0)}
+\DoxyCodeLine{163       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{164   \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166   printf(\textcolor{stringliteral}{"\%"} PRIi64 \textcolor{stringliteral}{"s \%03"} PRIi64 \textcolor{stringliteral}{"ms"}, \mbox{\hyperlink{classLogEntry_aaf6bd4d7c0c18071fdb39c49a2de6064}{getTimestamp}}() / 1000000000,}
+\DoxyCodeLine{167          (\mbox{\hyperlink{classLogEntry_aaf6bd4d7c0c18071fdb39c49a2de6064}{getTimestamp}}() \% 1000000000) / 1000000);}
+\DoxyCodeLine{168   \textcolor{keywordflow}{if} (bVerbose) \{}
+\DoxyCodeLine{169     printf(\textcolor{stringliteral}{" \%06"} PRIi64 \textcolor{stringliteral}{"ns"}, \mbox{\hyperlink{classLogEntry_aaf6bd4d7c0c18071fdb39c49a2de6064}{getTimestamp}}() \% 1000000);}
+\DoxyCodeLine{170     printf(\textcolor{stringliteral}{" TID:\%d"}, \mbox{\hyperlink{classLogEntry_a50403241bb451c7faabc6d7bb9650221}{getTID}}());}
+\DoxyCodeLine{171   \}}
+\DoxyCodeLine{172   printf(\textcolor{stringliteral}{" \%s\(\backslash\)n"}, \mbox{\hyperlink{classLogEntry_a90c8f3d3f2f52c237d6a43ca801d1b6d}{getDescription}}().\textcolor{keywordtype}{string}());}
+\DoxyCodeLine{173 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_ac8cfea6c35e82f5cae1f37059791738b}\label{classLogEntry_ac8cfea6c35e82f5cae1f37059791738b}} 
+\index{Log\+Entry@{Log\+Entry}!print\+All@{print\+All}}
+\index{print\+All@{print\+All}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{print\+All()}{printAll()}}
+{\footnotesize\ttfamily void Log\+Entry\+::print\+All (\begin{DoxyParamCaption}\item[{sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$}]{p\+Diagnostic,  }\item[{bool}]{b\+Very\+Verbose = {\ttfamily false},  }\item[{bool}]{b\+Verbose = {\ttfamily false},  }\item[{bool}]{b\+Fences = {\ttfamily false},  }\item[{bool}]{b\+Buffer\+Manager = {\ttfamily false},  }\item[{bool}]{b\+Queue = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 184 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{186                                      \{}
+\DoxyCodeLine{187   \textcolor{keywordflow}{while} (1) \{}
+\DoxyCodeLine{188     \mbox{\hyperlink{classLogEntry}{LogEntry}} entry;}
+\DoxyCodeLine{189     \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = entry.\mbox{\hyperlink{classLogEntry_a1c92a359f9d4e3635ae3c2f228ff6206}{read}}(pDiagnostic);}
+\DoxyCodeLine{190     \textcolor{keywordflow}{if} (ret != OK)}
+\DoxyCodeLine{191       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{192     entry.\mbox{\hyperlink{classLogEntry_a15620abfed3ae9b39e565de00b50cf00}{print}}(bVeryVerbose, bVerbose, bFences, bBufferManager, bQueue);}
+\DoxyCodeLine{193   \}}
+\DoxyCodeLine{194 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_a1c92a359f9d4e3635ae3c2f228ff6206}\label{classLogEntry_a1c92a359f9d4e3635ae3c2f228ff6206}} 
+\index{Log\+Entry@{Log\+Entry}!read@{read}}
+\index{read@{read}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Log\+Entry\+::read (\begin{DoxyParamCaption}\item[{sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$}]{p\+Diagnostic }\end{DoxyParamCaption})}
+
+
+
+Definition at line 98 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98                                                    \{}
+\DoxyCodeLine{99   \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = NO\_ERROR;}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101   \textcolor{keyword}{static} Parcel* spReply = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{102   \textcolor{keywordflow}{if} (spReply) \{}
+\DoxyCodeLine{103     ret = spReply->readInt32();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \textcolor{keywordflow}{if} (ret == NOT\_ENOUGH\_DATA) \{}
+\DoxyCodeLine{106       \textcolor{comment}{// Marks end of parcel, time to fetch a new one}}
+\DoxyCodeLine{107       \textcolor{keyword}{delete} spReply;}
+\DoxyCodeLine{108       spReply = 0;}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110   \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112   \textcolor{keywordflow}{if} (spReply == 0) \{}
+\DoxyCodeLine{113     spReply = \textcolor{keyword}{new} Parcel;}
+\DoxyCodeLine{114     pDiagnostic = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{115     \textcolor{comment}{// ret = pDiagnostic->readLogParcel(spReply);}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     \textcolor{keywordflow}{if} (ret >= 0)}
+\DoxyCodeLine{118       ret = spReply->readInt32();}
+\DoxyCodeLine{119   \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121   \textcolor{keywordflow}{if} (ret < 0) \{}
+\DoxyCodeLine{122     \textcolor{keyword}{delete} spReply;}
+\DoxyCodeLine{123     spReply = 0;}
+\DoxyCodeLine{124     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{125   \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127   spReply->read(*\textcolor{keyword}{this});}
+\DoxyCodeLine{128   \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{129 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogEntry_ae5b14d452a6f948ed9a00a5446d5aa1b}\label{classLogEntry_ae5b14d452a6f948ed9a00a5446d5aa1b}} 
+\index{Log\+Entry@{Log\+Entry}!unflatten@{unflatten}}
+\index{unflatten@{unflatten}!Log\+Entry@{Log\+Entry}}
+\subsubsection{\texorpdfstring{unflatten()}{unflatten()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} Log\+Entry\+::unflatten (\begin{DoxyParamCaption}\item[{void const $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                                             \{}
+\DoxyCodeLine{87   \textcolor{comment}{// Delete any existing data structures}}
+\DoxyCodeLine{88   \textcolor{keywordtype}{char} \textcolor{keyword}{const}* pBuffer = (\textcolor{keywordtype}{char} \textcolor{keyword}{const}*)buffer;}
+\DoxyCodeLine{89   \textcolor{keywordtype}{char} \textcolor{keyword}{const}* pBufferEnd = ((\textcolor{keywordtype}{char} \textcolor{keyword}{const}*)buffer) + size;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91   \mbox{\hyperlink{logentry_8h_a5684e7020dd011489e425f87e9d6be92}{unflattenFromBuffer}}(pBuffer, pBufferEnd, mTID);}
+\DoxyCodeLine{92   \mbox{\hyperlink{logentry_8h_a5684e7020dd011489e425f87e9d6be92}{unflattenFromBuffer}}(pBuffer, pBufferEnd, mTimestamp);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94   mDescription = pBuffer;}
+\DoxyCodeLine{95   \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{96 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/utils/\mbox{\hyperlink{logentry_8h}{logentry.\+h}}\end{DoxyCompactItemize}

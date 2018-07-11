@@ -1,0 +1,172 @@
+\hypertarget{classhwcomposer_1_1HWCEvent}{}\section{hwcomposer\+:\+:H\+W\+C\+Event Class Reference}
+\label{classhwcomposer_1_1HWCEvent}\index{hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}}
+
+
+{\ttfamily \#include $<$hwcevent.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a23337d4e705665043c9180dd38125e14}{H\+W\+C\+Event}} ()
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1HWCEvent_acdf1ef033d2add5c6651ee89c4710130}{$\sim$\+H\+W\+C\+Event}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a5b5ee0d26d11c5697e20cde63a255e97}{Initialize}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a3cd16bda8f4fd8bcbda6dae72ff15f57}{Signal}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a013f137de83e0e45988d72317179a7ef}{Wait}} ()
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a103324deefcbf4402fd302b737474416}{get\+\_\+fd}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file hwcevent.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCEvent_a23337d4e705665043c9180dd38125e14}\label{classhwcomposer_1_1HWCEvent_a23337d4e705665043c9180dd38125e14}} 
+\index{hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}!H\+W\+C\+Event@{H\+W\+C\+Event}}
+\index{H\+W\+C\+Event@{H\+W\+C\+Event}!hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}}
+\subsubsection{\texorpdfstring{H\+W\+C\+Event()}{HWCEvent()}}
+{\footnotesize\ttfamily hwcomposer\+::\+H\+W\+C\+Event\+::\+H\+W\+C\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file hwcevent.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                    : fd\_(0) \{}
+\DoxyCodeLine{31 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCEvent_acdf1ef033d2add5c6651ee89c4710130}\label{classhwcomposer_1_1HWCEvent_acdf1ef033d2add5c6651ee89c4710130}} 
+\index{hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}!````~H\+W\+C\+Event@{$\sim$\+H\+W\+C\+Event}}
+\index{````~H\+W\+C\+Event@{$\sim$\+H\+W\+C\+Event}!hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}}
+\subsubsection{\texorpdfstring{$\sim$\+H\+W\+C\+Event()}{~HWCEvent()}}
+{\footnotesize\ttfamily hwcomposer\+::\+H\+W\+C\+Event\+::$\sim$\+H\+W\+C\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 33 of file hwcevent.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                     \{}
+\DoxyCodeLine{34   \textcolor{keywordflow}{if} (fd\_ >= 0)}
+\DoxyCodeLine{35     close(fd\_);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37   fd\_ = -1;}
+\DoxyCodeLine{38 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCEvent_a103324deefcbf4402fd302b737474416}\label{classhwcomposer_1_1HWCEvent_a103324deefcbf4402fd302b737474416}} 
+\index{hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}!get\+\_\+fd@{get\+\_\+fd}}
+\index{get\+\_\+fd@{get\+\_\+fd}!hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}}
+\subsubsection{\texorpdfstring{get\+\_\+fd()}{get\_fd()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+H\+W\+C\+Event\+::get\+\_\+fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file hwcevent.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                      \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} fd\_;}
+\DoxyCodeLine{45   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCEvent_a5b5ee0d26d11c5697e20cde63a255e97}\label{classhwcomposer_1_1HWCEvent_a5b5ee0d26d11c5697e20cde63a255e97}} 
+\index{hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+H\+W\+C\+Event\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file hwcevent.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                           \{}
+\DoxyCodeLine{41   \textcolor{keywordflow}{if} (fd\_ > 0) \{}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{43   \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45   fd\_ = eventfd(0, \mbox{\hyperlink{hwcevent_8cpp_aa1cf1f9ea4d84916ad5fdf7105d4ee1f}{EFD\_SEMAPHORE}});}
+\DoxyCodeLine{46   \textcolor{keywordflow}{if} (fd\_ < 0) \{}
+\DoxyCodeLine{47     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initialize eventfd: \%s"}, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{49   \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{52 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCEvent_a3cd16bda8f4fd8bcbda6dae72ff15f57}\label{classhwcomposer_1_1HWCEvent_a3cd16bda8f4fd8bcbda6dae72ff15f57}} 
+\index{hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}!Signal@{Signal}}
+\index{Signal@{Signal}!hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}}
+\subsubsection{\texorpdfstring{Signal()}{Signal()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+H\+W\+C\+Event\+::\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file hwcevent.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                       \{}
+\DoxyCodeLine{55   uint64\_t inc = 1;}
+\DoxyCodeLine{56   ssize\_t ret = write(fd\_, \&inc, \textcolor{keyword}{sizeof}(inc));}
+\DoxyCodeLine{57   \textcolor{keywordflow}{if} (ret < 0) \{}
+\DoxyCodeLine{58     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"couldn't write to eventfd: \%zd (\%s)"}, ret, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{60   \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{63 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCEvent_a013f137de83e0e45988d72317179a7ef}\label{classhwcomposer_1_1HWCEvent_a013f137de83e0e45988d72317179a7ef}} 
+\index{hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}!Wait@{Wait}}
+\index{Wait@{Wait}!hwcomposer\+::\+H\+W\+C\+Event@{hwcomposer\+::\+H\+W\+C\+Event}}
+\subsubsection{\texorpdfstring{Wait()}{Wait()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+H\+W\+C\+Event\+::\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file hwcevent.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                     \{}
+\DoxyCodeLine{66   \textcolor{keywordflow}{if} (fd\_ < 0) \{}
+\DoxyCodeLine{67     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"invalid eventfd: \%d"}, fd\_);}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{69   \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71   uint64\_t result;}
+\DoxyCodeLine{72   ssize\_t ret = read(fd\_, \&result, \textcolor{keyword}{sizeof}(result));}
+\DoxyCodeLine{73   \textcolor{keywordflow}{if} (ret < 0) \{}
+\DoxyCodeLine{74     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"couldn't read from eventfd: \%zd (\%s)"}, ret, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{75     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{76   \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78   \textcolor{keywordflow}{if} (result != 1) \{}
+\DoxyCodeLine{79     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"read from eventfd has wrong value: \%"} PRIu64 \textcolor{stringliteral}{" (should be 1)"}, result);}
+\DoxyCodeLine{80     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{81   \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{84 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/utils/\mbox{\hyperlink{hwcevent_8h}{hwcevent.\+h}}\item 
+common/utils/\mbox{\hyperlink{hwcevent_8cpp}{hwcevent.\+cpp}}\end{DoxyCompactItemize}

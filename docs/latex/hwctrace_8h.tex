@@ -1,0 +1,303 @@
+\hypertarget{hwctrace_8h}{}\section{common/utils/hwctrace.h File Reference}
+\label{hwctrace_8h}\index{common/utils/hwctrace.\+h@{common/utils/hwctrace.\+h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}displayplane.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}platformdefines.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{C\+T\+R\+A\+CE}}()~\mbox{\hyperlink{linux_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}{S\+T\+R\+A\+CE}}()
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a499842a322218c2fdbf81124efc18299}{A\+T\+R\+A\+CE}}(fmt, ...)~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{D\+U\+M\+P\+T\+R\+A\+CE}}(fmt, ...)~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_ad78fc1a201a9edad01061dd29c60faf4}{I\+P\+A\+G\+E\+F\+L\+I\+P\+E\+V\+E\+N\+T\+T\+R\+A\+CE}}(fmt, ...)~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a6dea43d052a49723fcc708e2f2c84148}{I\+D\+I\+S\+P\+L\+A\+Y\+M\+A\+N\+A\+G\+E\+R\+T\+R\+A\+CE}}(fmt, ...)~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{I\+H\+O\+T\+P\+L\+U\+G\+E\+V\+E\+N\+T\+T\+R\+A\+CE}}(fmt, ...)~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a111568ee06382eb3cb6912168a5a57a4}{I\+M\+O\+S\+A\+I\+C\+D\+I\+S\+P\+L\+A\+Y\+T\+R\+A\+CE}}(fmt, ...)~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a58cbc02f40ecc84e207b9a5fa9dd4437}{I\+C\+O\+M\+P\+O\+S\+I\+T\+O\+R\+T\+R\+A\+CE}}(fmt, ...)~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a6221b5741097c2ba515a4f2f4937ce9d}{I\+C\+A\+C\+H\+E\+T\+R\+A\+CE}}~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{I\+S\+U\+R\+F\+A\+C\+E\+T\+R\+A\+CE}}~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{P\+R\+I\+N\+T\+E\+R\+R\+OR}}()~strerror(-\/errno)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a0f7fb9fe328792fe025bb43ac3a14da4}{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}(X)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_abfda34d8d32989f4e123fbcb8ea84e21}{R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+S\+E\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}()~\mbox{\hyperlink{hwctrace_8h_a0f7fb9fe328792fe025bb43ac3a14da4}{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}(false)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a53689929c5b36ca7fd198e93c8fe5252}{R\+E\+T\+U\+R\+N\+\_\+\+V\+O\+I\+D\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}()~\mbox{\hyperlink{hwctrace_8h_a0f7fb9fe328792fe025bb43ac3a14da4}{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}()
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a120f72544bc4738cd0a39ed46ea7fd20}{R\+E\+T\+U\+R\+N\+\_\+\+N\+U\+L\+L\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}()~\mbox{\hyperlink{hwctrace_8h_a0f7fb9fe328792fe025bb43ac3a14da4}{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}(0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a367f4177c1a6d6c9b4ed696f59618e9f}{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+SE}}(...)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_ad290f74e39ee452b60741a9cd852e7a4}{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+O\+BJ}}(X)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a41787cd3cbdc5b03bca9b4c4c150d523}{W\+A\+R\+N\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+D\+E\+I\+N\+IT}}()
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a69f77c8158af1ada4ca0299b9232f1d3}{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+P\+L\+A\+N\+ES}}()~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a23419e5261b9851ad679bcbf01916a5b}{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+N\+E\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS}}()~((void)0)
+\item 
+\#define \mbox{\hyperlink{hwctrace_8h_a2ceba86ff4c70e833f0ad289202baf22}{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS}}()~((void)0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hwctrace_8h_a499842a322218c2fdbf81124efc18299}\label{hwctrace_8h_a499842a322218c2fdbf81124efc18299}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!A\+T\+R\+A\+CE@{A\+T\+R\+A\+CE}}
+\index{A\+T\+R\+A\+CE@{A\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{A\+T\+R\+A\+CE}{ATRACE}}
+{\footnotesize\ttfamily \#define A\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 80 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a539a95897071c72babce1012d503b3ca}\label{hwctrace_8h_a539a95897071c72babce1012d503b3ca}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!C\+T\+R\+A\+CE@{C\+T\+R\+A\+CE}}
+\index{C\+T\+R\+A\+CE@{C\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{C\+T\+R\+A\+CE}{CTRACE}}
+{\footnotesize\ttfamily \#define C\+T\+R\+A\+CE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{linux_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}{S\+T\+R\+A\+CE}}()}
+
+
+
+Definition at line 73 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_ad290f74e39ee452b60741a9cd852e7a4}\label{hwctrace_8h_ad290f74e39ee452b60741a9cd852e7a4}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+O\+BJ@{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+O\+BJ}}
+\index{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+O\+BJ@{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+O\+BJ}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+O\+BJ}{DEINIT\_AND\_DELETE\_OBJ}}
+{\footnotesize\ttfamily \#define D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+O\+BJ(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (X) \{                       \(\backslash\)}
+\DoxyCodeLine{    X->deinitialize();           \(\backslash\)}
+\DoxyCodeLine{    delete X;                    \(\backslash\)}
+\DoxyCodeLine{    X = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};                    \(\backslash\)}
+\DoxyCodeLine{  \}}
+\end{DoxyCode}
+
+
+Definition at line 172 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a367f4177c1a6d6c9b4ed696f59618e9f}\label{hwctrace_8h_a367f4177c1a6d6c9b4ed696f59618e9f}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+SE@{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+SE}}
+\index{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+SE@{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+SE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+SE}{DEINIT\_AND\_RETURN\_FALSE}}
+{\footnotesize\ttfamily \#define D\+E\+I\+N\+I\+T\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+SE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                               \(\backslash\)}
+\DoxyCodeLine{    ETRACE(\_\_VA\_ARGS\_\_);             \(\backslash\)}
+\DoxyCodeLine{    deinitialize();                  \(\backslash\)}
+\DoxyCodeLine{    return \textcolor{keyword}{false};                    \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+\end{DoxyCode}
+
+
+Definition at line 165 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a69f77c8158af1ada4ca0299b9232f1d3}\label{hwctrace_8h_a69f77c8158af1ada4ca0299b9232f1d3}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+P\+L\+A\+N\+ES@{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+P\+L\+A\+N\+ES}}
+\index{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+P\+L\+A\+N\+ES@{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+P\+L\+A\+N\+ES}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+P\+L\+A\+N\+ES}{DUMP\_CURRENT\_COMPOSITION\_PLANES}}
+{\footnotesize\ttfamily \#define D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+P\+L\+A\+N\+ES(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 230 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a2ceba86ff4c70e833f0ad289202baf22}\label{hwctrace_8h_a2ceba86ff4c70e833f0ad289202baf22}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS@{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS}}
+\index{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS@{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS}{DUMP\_CURRENT\_DUPLICATE\_LAYER\_COMBINATIONS}}
+{\footnotesize\ttfamily \#define D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 391 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a23419e5261b9851ad679bcbf01916a5b}\label{hwctrace_8h_a23419e5261b9851ad679bcbf01916a5b}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+N\+E\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS@{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+N\+E\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS}}
+\index{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+N\+E\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS@{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+N\+E\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+N\+E\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS}{DUMP\_CURRENT\_LAYER\_PLANE\_COMBINATIONS}}
+{\footnotesize\ttfamily \#define D\+U\+M\+P\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+N\+E\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+NS(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 278 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}\label{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!D\+U\+M\+P\+T\+R\+A\+CE@{D\+U\+M\+P\+T\+R\+A\+CE}}
+\index{D\+U\+M\+P\+T\+R\+A\+CE@{D\+U\+M\+P\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{D\+U\+M\+P\+T\+R\+A\+CE}{DUMPTRACE}}
+{\footnotesize\ttfamily \#define D\+U\+M\+P\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 87 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a6221b5741097c2ba515a4f2f4937ce9d}\label{hwctrace_8h_a6221b5741097c2ba515a4f2f4937ce9d}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!I\+C\+A\+C\+H\+E\+T\+R\+A\+CE@{I\+C\+A\+C\+H\+E\+T\+R\+A\+CE}}
+\index{I\+C\+A\+C\+H\+E\+T\+R\+A\+CE@{I\+C\+A\+C\+H\+E\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{I\+C\+A\+C\+H\+E\+T\+R\+A\+CE}{ICACHETRACE}}
+{\footnotesize\ttfamily \#define I\+C\+A\+C\+H\+E\+T\+R\+A\+CE~((void)0)}
+
+
+
+Definition at line 124 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a58cbc02f40ecc84e207b9a5fa9dd4437}\label{hwctrace_8h_a58cbc02f40ecc84e207b9a5fa9dd4437}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!I\+C\+O\+M\+P\+O\+S\+I\+T\+O\+R\+T\+R\+A\+CE@{I\+C\+O\+M\+P\+O\+S\+I\+T\+O\+R\+T\+R\+A\+CE}}
+\index{I\+C\+O\+M\+P\+O\+S\+I\+T\+O\+R\+T\+R\+A\+CE@{I\+C\+O\+M\+P\+O\+S\+I\+T\+O\+R\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{I\+C\+O\+M\+P\+O\+S\+I\+T\+O\+R\+T\+R\+A\+CE}{ICOMPOSITORTRACE}}
+{\footnotesize\ttfamily \#define I\+C\+O\+M\+P\+O\+S\+I\+T\+O\+R\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 118 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a6dea43d052a49723fcc708e2f2c84148}\label{hwctrace_8h_a6dea43d052a49723fcc708e2f2c84148}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!I\+D\+I\+S\+P\+L\+A\+Y\+M\+A\+N\+A\+G\+E\+R\+T\+R\+A\+CE@{I\+D\+I\+S\+P\+L\+A\+Y\+M\+A\+N\+A\+G\+E\+R\+T\+R\+A\+CE}}
+\index{I\+D\+I\+S\+P\+L\+A\+Y\+M\+A\+N\+A\+G\+E\+R\+T\+R\+A\+CE@{I\+D\+I\+S\+P\+L\+A\+Y\+M\+A\+N\+A\+G\+E\+R\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{I\+D\+I\+S\+P\+L\+A\+Y\+M\+A\+N\+A\+G\+E\+R\+T\+R\+A\+CE}{IDISPLAYMANAGERTRACE}}
+{\footnotesize\ttfamily \#define I\+D\+I\+S\+P\+L\+A\+Y\+M\+A\+N\+A\+G\+E\+R\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 100 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}\label{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!I\+H\+O\+T\+P\+L\+U\+G\+E\+V\+E\+N\+T\+T\+R\+A\+CE@{I\+H\+O\+T\+P\+L\+U\+G\+E\+V\+E\+N\+T\+T\+R\+A\+CE}}
+\index{I\+H\+O\+T\+P\+L\+U\+G\+E\+V\+E\+N\+T\+T\+R\+A\+CE@{I\+H\+O\+T\+P\+L\+U\+G\+E\+V\+E\+N\+T\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{I\+H\+O\+T\+P\+L\+U\+G\+E\+V\+E\+N\+T\+T\+R\+A\+CE}{IHOTPLUGEVENTTRACE}}
+{\footnotesize\ttfamily \#define I\+H\+O\+T\+P\+L\+U\+G\+E\+V\+E\+N\+T\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 106 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a111568ee06382eb3cb6912168a5a57a4}\label{hwctrace_8h_a111568ee06382eb3cb6912168a5a57a4}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!I\+M\+O\+S\+A\+I\+C\+D\+I\+S\+P\+L\+A\+Y\+T\+R\+A\+CE@{I\+M\+O\+S\+A\+I\+C\+D\+I\+S\+P\+L\+A\+Y\+T\+R\+A\+CE}}
+\index{I\+M\+O\+S\+A\+I\+C\+D\+I\+S\+P\+L\+A\+Y\+T\+R\+A\+CE@{I\+M\+O\+S\+A\+I\+C\+D\+I\+S\+P\+L\+A\+Y\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{I\+M\+O\+S\+A\+I\+C\+D\+I\+S\+P\+L\+A\+Y\+T\+R\+A\+CE}{IMOSAICDISPLAYTRACE}}
+{\footnotesize\ttfamily \#define I\+M\+O\+S\+A\+I\+C\+D\+I\+S\+P\+L\+A\+Y\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 112 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_ad78fc1a201a9edad01061dd29c60faf4}\label{hwctrace_8h_ad78fc1a201a9edad01061dd29c60faf4}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!I\+P\+A\+G\+E\+F\+L\+I\+P\+E\+V\+E\+N\+T\+T\+R\+A\+CE@{I\+P\+A\+G\+E\+F\+L\+I\+P\+E\+V\+E\+N\+T\+T\+R\+A\+CE}}
+\index{I\+P\+A\+G\+E\+F\+L\+I\+P\+E\+V\+E\+N\+T\+T\+R\+A\+CE@{I\+P\+A\+G\+E\+F\+L\+I\+P\+E\+V\+E\+N\+T\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+A\+G\+E\+F\+L\+I\+P\+E\+V\+E\+N\+T\+T\+R\+A\+CE}{IPAGEFLIPEVENTTRACE}}
+{\footnotesize\ttfamily \#define I\+P\+A\+G\+E\+F\+L\+I\+P\+E\+V\+E\+N\+T\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+
+
+Definition at line 94 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}\label{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!I\+S\+U\+R\+F\+A\+C\+E\+T\+R\+A\+CE@{I\+S\+U\+R\+F\+A\+C\+E\+T\+R\+A\+CE}}
+\index{I\+S\+U\+R\+F\+A\+C\+E\+T\+R\+A\+CE@{I\+S\+U\+R\+F\+A\+C\+E\+T\+R\+A\+CE}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+U\+R\+F\+A\+C\+E\+T\+R\+A\+CE}{ISURFACETRACE}}
+{\footnotesize\ttfamily \#define I\+S\+U\+R\+F\+A\+C\+E\+T\+R\+A\+CE~((void)0)}
+
+
+
+Definition at line 131 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}\label{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!P\+R\+I\+N\+T\+E\+R\+R\+OR@{P\+R\+I\+N\+T\+E\+R\+R\+OR}}
+\index{P\+R\+I\+N\+T\+E\+R\+R\+OR@{P\+R\+I\+N\+T\+E\+R\+R\+OR}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+T\+E\+R\+R\+OR}{PRINTERROR}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+E\+R\+R\+OR(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~strerror(-\/errno)}
+
+
+
+Definition at line 135 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_abfda34d8d32989f4e123fbcb8ea84e21}\label{hwctrace_8h_abfda34d8d32989f4e123fbcb8ea84e21}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+S\+E\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT@{R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+S\+E\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}
+\index{R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+S\+E\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT@{R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+S\+E\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+S\+E\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}{RETURN\_FALSE\_IF\_NOT\_INIT}}
+{\footnotesize\ttfamily \#define R\+E\+T\+U\+R\+N\+\_\+\+F\+A\+L\+S\+E\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{hwctrace_8h_a0f7fb9fe328792fe025bb43ac3a14da4}{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}(false)}
+
+
+
+Definition at line 155 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a120f72544bc4738cd0a39ed46ea7fd20}\label{hwctrace_8h_a120f72544bc4738cd0a39ed46ea7fd20}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!R\+E\+T\+U\+R\+N\+\_\+\+N\+U\+L\+L\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT@{R\+E\+T\+U\+R\+N\+\_\+\+N\+U\+L\+L\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}
+\index{R\+E\+T\+U\+R\+N\+\_\+\+N\+U\+L\+L\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT@{R\+E\+T\+U\+R\+N\+\_\+\+N\+U\+L\+L\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+T\+U\+R\+N\+\_\+\+N\+U\+L\+L\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}{RETURN\_NULL\_IF\_NOT\_INIT}}
+{\footnotesize\ttfamily \#define R\+E\+T\+U\+R\+N\+\_\+\+N\+U\+L\+L\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{hwctrace_8h_a0f7fb9fe328792fe025bb43ac3a14da4}{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}(0)}
+
+
+
+Definition at line 157 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a53689929c5b36ca7fd198e93c8fe5252}\label{hwctrace_8h_a53689929c5b36ca7fd198e93c8fe5252}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!R\+E\+T\+U\+R\+N\+\_\+\+V\+O\+I\+D\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT@{R\+E\+T\+U\+R\+N\+\_\+\+V\+O\+I\+D\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}
+\index{R\+E\+T\+U\+R\+N\+\_\+\+V\+O\+I\+D\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT@{R\+E\+T\+U\+R\+N\+\_\+\+V\+O\+I\+D\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+T\+U\+R\+N\+\_\+\+V\+O\+I\+D\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}{RETURN\_VOID\_IF\_NOT\_INIT}}
+{\footnotesize\ttfamily \#define R\+E\+T\+U\+R\+N\+\_\+\+V\+O\+I\+D\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{hwctrace_8h_a0f7fb9fe328792fe025bb43ac3a14da4}{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}()}
+
+
+
+Definition at line 156 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a0f7fb9fe328792fe025bb43ac3a14da4}\label{hwctrace_8h_a0f7fb9fe328792fe025bb43ac3a14da4}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT@{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}}
+\index{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT@{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}{RETURN\_X\_IF\_NOT\_INIT}}
+{\footnotesize\ttfamily \#define R\+E\+T\+U\+R\+N\+\_\+\+X\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                                                                       \(\backslash\)}
+\DoxyCodeLine{    CTRACE();                                                                \(\backslash\)}
+\DoxyCodeLine{    if (\textcolor{keyword}{false} == mInitialized) \{                                             \(\backslash\)}
+\DoxyCodeLine{      LOG\_ALWAYS\_FATAL(\textcolor{stringliteral}{"\%s: Object is not initialized! Line = \%d"}, \_\_func\_\_, \(\backslash\)}
+\DoxyCodeLine{                       \_\_LINE\_\_);                                            \(\backslash\)}
+\DoxyCodeLine{      return X;                                                              \(\backslash\)}
+\DoxyCodeLine{    \}                                                                        \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+\end{DoxyCode}
+
+
+Definition at line 144 of file hwctrace.\+h.
+
+\mbox{\Hypertarget{hwctrace_8h_a41787cd3cbdc5b03bca9b4c4c150d523}\label{hwctrace_8h_a41787cd3cbdc5b03bca9b4c4c150d523}} 
+\index{hwctrace.\+h@{hwctrace.\+h}!W\+A\+R\+N\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+D\+E\+I\+N\+IT@{W\+A\+R\+N\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+D\+E\+I\+N\+IT}}
+\index{W\+A\+R\+N\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+D\+E\+I\+N\+IT@{W\+A\+R\+N\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+D\+E\+I\+N\+IT}!hwctrace.\+h@{hwctrace.\+h}}
+\subsubsection{\texorpdfstring{W\+A\+R\+N\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+D\+E\+I\+N\+IT}{WARN\_IF\_NOT\_DEINIT}}
+{\footnotesize\ttfamily \#define W\+A\+R\+N\+\_\+\+I\+F\+\_\+\+N\+O\+T\+\_\+\+D\+E\+I\+N\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();                                                                  \(\backslash\)}
+\DoxyCodeLine{  if (mInitialized) \{                                                        \(\backslash\)}
+\DoxyCodeLine{    LOG\_ALWAYS\_FATAL(\textcolor{stringliteral}{"\%s: Object is not deinitialized! Line = \%d"}, \_\_func\_\_, \(\backslash\)}
+\DoxyCodeLine{                     \_\_LINE\_\_);                                              \(\backslash\)}
+\DoxyCodeLine{  \}}
+\end{DoxyCode}
+
+
+Definition at line 179 of file hwctrace.\+h.
+

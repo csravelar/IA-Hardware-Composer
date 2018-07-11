@@ -1,0 +1,116 @@
+\hypertarget{compositor-iahwc_8c}{}\section{os/linux/weston/plugin/compositor-\/iahwc.\+c File Reference}
+\label{compositor-iahwc_8c}\index{os/linux/weston/plugin/compositor-\/iahwc.\+c@{os/linux/weston/plugin/compositor-\/iahwc.\+c}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$dlfcn.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$linux/input.\+h$>$}\newline
+{\ttfamily \#include $<$linux/vt.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$drm\+\_\+fourcc.\+h$>$}\newline
+{\ttfamily \#include $<$xf86drm.\+h$>$}\newline
+{\ttfamily \#include $<$xf86drm\+Mode.\+h$>$}\newline
+{\ttfamily \#include $<$gbm.\+h$>$}\newline
+{\ttfamily \#include $<$libudev.\+h$>$}\newline
+{\ttfamily \#include $<$libsync.\+h$>$}\newline
+{\ttfamily \#include $<$iahwc.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}compositor-\/iahwc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}compositor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gl-\/renderer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}launcher-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}libbacklight.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}libinput-\/seat.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}linux-\/dmabuf-\/unstable-\/v1-\/server-\/protocol.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}linux-\/dmabuf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pixel-\/formats.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pixman-\/renderer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}presentation-\/time-\/server-\/protocol.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shared/helpers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shared/timespec-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vaapi-\/recorder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}weston-\/egl-\/ext.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structiahwc__spinlock}{iahwc\+\_\+spinlock}}
+\item 
+struct \mbox{\hyperlink{structiahwc__backend}{iahwc\+\_\+backend}}
+\item 
+struct \mbox{\hyperlink{structiahwc__mode}{iahwc\+\_\+mode}}
+\item 
+struct \mbox{\hyperlink{structiahwc__edid}{iahwc\+\_\+edid}}
+\item 
+struct \mbox{\hyperlink{structiahwc__pending__state}{iahwc\+\_\+pending\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structiahwc__overlay}{iahwc\+\_\+overlay}}
+\item 
+struct \mbox{\hyperlink{structiahwc__output}{iahwc\+\_\+output}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{compositor-iahwc_8c_ad3aff0f2f31aa1b2db0e50458b5f742c}{G\+B\+M\+\_\+\+B\+O\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+S\+OR}}~G\+B\+M\+\_\+\+B\+O\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+64\+X64
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+W\+L\+\_\+\+E\+X\+P\+O\+RT int \mbox{\hyperlink{compositor-iahwc_8c_aa8d8304b0b4395de692301f67143b3d5}{weston\+\_\+backend\+\_\+init}} (struct weston\+\_\+compositor $\ast$compositor, struct weston\+\_\+backend\+\_\+config $\ast$config\+\_\+base)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{compositor-iahwc_8c_ad3aff0f2f31aa1b2db0e50458b5f742c}\label{compositor-iahwc_8c_ad3aff0f2f31aa1b2db0e50458b5f742c}} 
+\index{compositor-\/iahwc.\+c@{compositor-\/iahwc.\+c}!G\+B\+M\+\_\+\+B\+O\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+S\+OR@{G\+B\+M\+\_\+\+B\+O\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+S\+OR}}
+\index{G\+B\+M\+\_\+\+B\+O\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+S\+OR@{G\+B\+M\+\_\+\+B\+O\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+S\+OR}!compositor-\/iahwc.\+c@{compositor-\/iahwc.\+c}}
+\subsubsection{\texorpdfstring{G\+B\+M\+\_\+\+B\+O\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+S\+OR}{GBM\_BO\_USE\_CURSOR}}
+{\footnotesize\ttfamily \#define G\+B\+M\+\_\+\+B\+O\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+S\+OR~G\+B\+M\+\_\+\+B\+O\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+64\+X64}
+
+
+
+Definition at line 62 of file compositor-\/iahwc.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{compositor-iahwc_8c_aa8d8304b0b4395de692301f67143b3d5}\label{compositor-iahwc_8c_aa8d8304b0b4395de692301f67143b3d5}} 
+\index{compositor-\/iahwc.\+c@{compositor-\/iahwc.\+c}!weston\+\_\+backend\+\_\+init@{weston\+\_\+backend\+\_\+init}}
+\index{weston\+\_\+backend\+\_\+init@{weston\+\_\+backend\+\_\+init}!compositor-\/iahwc.\+c@{compositor-\/iahwc.\+c}}
+\subsubsection{\texorpdfstring{weston\+\_\+backend\+\_\+init()}{weston\_backend\_init()}}
+{\footnotesize\ttfamily W\+L\+\_\+\+E\+X\+P\+O\+RT int weston\+\_\+backend\+\_\+init (\begin{DoxyParamCaption}\item[{struct weston\+\_\+compositor $\ast$}]{compositor,  }\item[{struct weston\+\_\+backend\+\_\+config $\ast$}]{config\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1641 of file compositor-\/iahwc.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1642                                                                              \{}
+\DoxyCodeLine{1643   \textcolor{keyword}{struct }\mbox{\hyperlink{structiahwc__backend}{iahwc\_backend}} *b;}
+\DoxyCodeLine{1644   \textcolor{keyword}{struct }\mbox{\hyperlink{structweston__iahwc__backend__config}{weston\_iahwc\_backend\_config}} config = \{\{}
+\DoxyCodeLine{1645       0,}
+\DoxyCodeLine{1646   \}\};}
+\DoxyCodeLine{1647 }
+\DoxyCodeLine{1648   \textcolor{keywordflow}{if} (config\_base == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} ||}
+\DoxyCodeLine{1649       config\_base->struct\_version != \mbox{\hyperlink{compositor-iahwc_8h_a2134e720a3d8bfd4599d8eb817766d32}{WESTON\_IAHWC\_BACKEND\_CONFIG\_VERSION}} ||}
+\DoxyCodeLine{1650       config\_base->struct\_size > \textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structweston__iahwc__backend__config}{weston\_iahwc\_backend\_config}})) \{}
+\DoxyCodeLine{1651     weston\_log(\textcolor{stringliteral}{"iahwc backend config structure is invalid\(\backslash\)n"});}
+\DoxyCodeLine{1652     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{1653   \}}
+\DoxyCodeLine{1654 }
+\DoxyCodeLine{1655   config\_init\_to\_defaults(\&config);}
+\DoxyCodeLine{1656   memcpy(\&config, config\_base, config\_base->struct\_size);}
+\DoxyCodeLine{1657   b = iahwc\_backend\_create(compositor, \&config);}
+\DoxyCodeLine{1658   \textcolor{keywordflow}{if} (b == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})}
+\DoxyCodeLine{1659     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{1660 }
+\DoxyCodeLine{1661   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{1662 \}}
+\end{DoxyCode}

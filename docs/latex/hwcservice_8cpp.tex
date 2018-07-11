@@ -1,0 +1,195 @@
+\hypertarget{hwcservice_8cpp}{}\section{os/android/hwcservice.cpp File Reference}
+\label{hwcservice_8cpp}\index{os/android/hwcservice.\+cpp@{os/android/hwcservice.\+cpp}}
+{\ttfamily \#include \char`\"{}hwcservice.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$binder/\+I\+Interface.\+h$>$}\newline
+{\ttfamily \#include $<$binder/\+I\+Service\+Manager.\+h$>$}\newline
+{\ttfamily \#include $<$binder/\+Parcel.\+h$>$}\newline
+{\ttfamily \#include $<$binder/\+Process\+State.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hwcdefs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}iahwc2.\+h\char`\"{}}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceandroid}{android}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_a1dc46151b8c227cd440f0f34a34825b9}{H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}}
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_a9b11a1a8ad58024713d7a94bc3f991c4}{H\+W\+C\+S\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+F\+MT}}(fname,  fmt, ...)
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_a1dfdaa6efc011c148f57bd84a469b5cf}{H\+W\+C\+S\+\_\+\+E\+N\+T\+RY}}(fname)
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_a694b1f3a0870c08804b98bea1d21979e}{H\+W\+C\+S\+\_\+\+E\+R\+R\+OR}}(code)~Log\+::add(\char`\"{}\%s E\+R\+R\+OR \%d $<$-\/-\/\char`\"{}, \+\_\+\+\_\+\+\_\+\+H\+W\+C\+S\+\_\+\+F\+U\+N\+C\+T\+I\+ON, code)
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_a3fae2f634bf9eb0229961909ebe79ec5}{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+E\+R\+R\+OR}}(code)
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_afc170950ab57c77e60c2c40aa7647ca6}{H\+W\+C\+S\+\_\+\+O\+K\+\_\+\+F\+MT}}(fmt, ...)~Log\+::add(\char`\"{}\%s OK \char`\"{} fmt \char`\"{} $<$-\/-\/\char`\"{}, \+\_\+\+\_\+\+\_\+\+H\+W\+C\+S\+\_\+\+F\+U\+N\+C\+T\+I\+ON, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+);
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_acb39f548ca483eedf2f904488cd66bfb}{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+O\+K\+\_\+\+F\+MT}}(fmt, ...)
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_a472bc92e993f2d30f5d82c407fc53c59}{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+OK}}()
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_af90545e389630073e77c1266984feae4}{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+AR}}(code)
+\item 
+\#define \mbox{\hyperlink{hwcservice_8cpp_aae879797699ce83710af9a299ddbb50c}{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+A\+R\+\_\+\+F\+MT}}(code,  fmt, ...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hwcservice_8cpp_a1dc46151b8c227cd440f0f34a34825b9}\label{hwcservice_8cpp_a1dc46151b8c227cd440f0f34a34825b9}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG@{H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}}
+\index{H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG@{H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}{HWC\_VERSION\_STRING}}
+{\footnotesize\ttfamily \#define H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{stringliteral}{"VERSION:HWC 2.0 GIT Branch \& Latest Commit:"} HWC\_VERSION\_GIT\_BRANCH \(\backslash\)}
+\DoxyCodeLine{  \textcolor{stringliteral}{" "} HWC\_VERSION\_GIT\_SHA \textcolor{stringliteral}{" "} \_\_DATE\_\_ \textcolor{stringliteral}{" "} \_\_TIME\_\_}
+\end{DoxyCode}
+
+
+Definition at line 25 of file hwcservice.\+cpp.
+
+\mbox{\Hypertarget{hwcservice_8cpp_a1dfdaa6efc011c148f57bd84a469b5cf}\label{hwcservice_8cpp_a1dfdaa6efc011c148f57bd84a469b5cf}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+S\+\_\+\+E\+N\+T\+RY@{H\+W\+C\+S\+\_\+\+E\+N\+T\+RY}}
+\index{H\+W\+C\+S\+\_\+\+E\+N\+T\+RY@{H\+W\+C\+S\+\_\+\+E\+N\+T\+RY}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+E\+N\+T\+RY}{HWCS\_ENTRY}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+E\+N\+T\+RY(\begin{DoxyParamCaption}\item[{}]{fname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\_\_\_HWCS\_FUNCTION = fname; \(\backslash\)}
+\DoxyCodeLine{  Log::add(fname \textcolor{stringliteral}{" -->"})}
+\end{DoxyCode}
+
+
+Definition at line 152 of file hwcservice.\+cpp.
+
+\mbox{\Hypertarget{hwcservice_8cpp_a9b11a1a8ad58024713d7a94bc3f991c4}\label{hwcservice_8cpp_a9b11a1a8ad58024713d7a94bc3f991c4}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+S\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+F\+MT@{H\+W\+C\+S\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+F\+MT}}
+\index{H\+W\+C\+S\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+F\+MT@{H\+W\+C\+S\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+F\+MT}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+F\+MT}{HWCS\_ENTRY\_FMT}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+F\+MT(\begin{DoxyParamCaption}\item[{}]{fname,  }\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\_\_\_HWCS\_FUNCTION = fname; \(\backslash\)}
+\DoxyCodeLine{  Log::add(fname \textcolor{stringliteral}{" "} fmt \textcolor{stringliteral}{" -->"}, \_\_VA\_ARGS\_\_)}
+\end{DoxyCode}
+
+
+Definition at line 148 of file hwcservice.\+cpp.
+
+\mbox{\Hypertarget{hwcservice_8cpp_a694b1f3a0870c08804b98bea1d21979e}\label{hwcservice_8cpp_a694b1f3a0870c08804b98bea1d21979e}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+S\+\_\+\+E\+R\+R\+OR@{H\+W\+C\+S\+\_\+\+E\+R\+R\+OR}}
+\index{H\+W\+C\+S\+\_\+\+E\+R\+R\+OR@{H\+W\+C\+S\+\_\+\+E\+R\+R\+OR}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+E\+R\+R\+OR}{HWCS\_ERROR}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{code }\end{DoxyParamCaption})~Log\+::add(\char`\"{}\%s E\+R\+R\+OR \%d $<$-\/-\/\char`\"{}, \+\_\+\+\_\+\+\_\+\+H\+W\+C\+S\+\_\+\+F\+U\+N\+C\+T\+I\+ON, code)}
+
+
+
+Definition at line 156 of file hwcservice.\+cpp.
+
+\mbox{\Hypertarget{hwcservice_8cpp_a3fae2f634bf9eb0229961909ebe79ec5}\label{hwcservice_8cpp_a3fae2f634bf9eb0229961909ebe79ec5}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+E\+R\+R\+OR@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+E\+R\+R\+OR}}
+\index{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+E\+R\+R\+OR@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+E\+R\+R\+OR}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+E\+R\+R\+OR}{HWCS\_EXIT\_ERROR}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                        \(\backslash\)}
+\DoxyCodeLine{    int \_\_\_code = code;       \(\backslash\)}
+\DoxyCodeLine{    HWCS\_ERROR(\_\_\_code);      \(\backslash\)}
+\DoxyCodeLine{    return \_\_\_code;           \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+\end{DoxyCode}
+
+
+Definition at line 158 of file hwcservice.\+cpp.
+
+\mbox{\Hypertarget{hwcservice_8cpp_a472bc92e993f2d30f5d82c407fc53c59}\label{hwcservice_8cpp_a472bc92e993f2d30f5d82c407fc53c59}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+OK@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+OK}}
+\index{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+OK@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+OK}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+OK}{HWCS\_EXIT\_OK}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+OK(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                                       \(\backslash\)}
+\DoxyCodeLine{    Log::add(\textcolor{stringliteral}{"\%s OK <--"}, \_\_\_HWCS\_FUNCTION); \(\backslash\)}
+\DoxyCodeLine{    return OK;                               \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+\end{DoxyCode}
+
+
+Definition at line 174 of file hwcservice.\+cpp.
+
+\mbox{\Hypertarget{hwcservice_8cpp_acb39f548ca483eedf2f904488cd66bfb}\label{hwcservice_8cpp_acb39f548ca483eedf2f904488cd66bfb}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+O\+K\+\_\+\+F\+MT@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+O\+K\+\_\+\+F\+MT}}
+\index{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+O\+K\+\_\+\+F\+MT@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+O\+K\+\_\+\+F\+MT}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+O\+K\+\_\+\+F\+MT}{HWCS\_EXIT\_OK\_FMT}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+O\+K\+\_\+\+F\+MT(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                             \(\backslash\)}
+\DoxyCodeLine{    HWCS\_OK\_FMT(fmt, \_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{    return OK;                     \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+\end{DoxyCode}
+
+
+Definition at line 168 of file hwcservice.\+cpp.
+
+\mbox{\Hypertarget{hwcservice_8cpp_af90545e389630073e77c1266984feae4}\label{hwcservice_8cpp_af90545e389630073e77c1266984feae4}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+AR@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+AR}}
+\index{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+AR@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+AR}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+AR}{HWCS\_EXIT\_VAR}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+AR(\begin{DoxyParamCaption}\item[{}]{code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                         \(\backslash\)}
+\DoxyCodeLine{    int \_\_\_\_code = code;       \(\backslash\)}
+\DoxyCodeLine{    if (\_\_\_\_code == OK)        \(\backslash\)}
+\DoxyCodeLine{      HWCS\_EXIT\_OK();          \(\backslash\)}
+\DoxyCodeLine{    HWCS\_EXIT\_ERROR(\_\_\_\_code); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+\end{DoxyCode}
+
+
+Definition at line 180 of file hwcservice.\+cpp.
+
+\mbox{\Hypertarget{hwcservice_8cpp_aae879797699ce83710af9a299ddbb50c}\label{hwcservice_8cpp_aae879797699ce83710af9a299ddbb50c}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+A\+R\+\_\+\+F\+MT@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+A\+R\+\_\+\+F\+MT}}
+\index{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+A\+R\+\_\+\+F\+MT@{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+A\+R\+\_\+\+F\+MT}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+A\+R\+\_\+\+F\+MT}{HWCS\_EXIT\_VAR\_FMT}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+E\+X\+I\+T\+\_\+\+V\+A\+R\+\_\+\+F\+MT(\begin{DoxyParamCaption}\item[{}]{code,  }\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                                    \(\backslash\)}
+\DoxyCodeLine{    int \_\_\_\_code = code;                  \(\backslash\)}
+\DoxyCodeLine{    if (\_\_\_\_code == OK)                   \(\backslash\)}
+\DoxyCodeLine{      HWCS\_EXIT\_OK\_FMT(fmt, \_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{    HWCS\_EXIT\_ERROR(\_\_\_\_code);            \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+\end{DoxyCode}
+
+
+Definition at line 188 of file hwcservice.\+cpp.
+
+\mbox{\Hypertarget{hwcservice_8cpp_afc170950ab57c77e60c2c40aa7647ca6}\label{hwcservice_8cpp_afc170950ab57c77e60c2c40aa7647ca6}} 
+\index{hwcservice.\+cpp@{hwcservice.\+cpp}!H\+W\+C\+S\+\_\+\+O\+K\+\_\+\+F\+MT@{H\+W\+C\+S\+\_\+\+O\+K\+\_\+\+F\+MT}}
+\index{H\+W\+C\+S\+\_\+\+O\+K\+\_\+\+F\+MT@{H\+W\+C\+S\+\_\+\+O\+K\+\_\+\+F\+MT}!hwcservice.\+cpp@{hwcservice.\+cpp}}
+\subsubsection{\texorpdfstring{H\+W\+C\+S\+\_\+\+O\+K\+\_\+\+F\+MT}{HWCS\_OK\_FMT}}
+{\footnotesize\ttfamily \#define H\+W\+C\+S\+\_\+\+O\+K\+\_\+\+F\+MT(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~Log\+::add(\char`\"{}\%s OK \char`\"{} fmt \char`\"{} $<$-\/-\/\char`\"{}, \+\_\+\+\_\+\+\_\+\+H\+W\+C\+S\+\_\+\+F\+U\+N\+C\+T\+I\+ON, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+);}
+
+
+
+Definition at line 165 of file hwcservice.\+cpp.
+

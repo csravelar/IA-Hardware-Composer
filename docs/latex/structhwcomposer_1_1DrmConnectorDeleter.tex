@@ -1,0 +1,43 @@
+\hypertarget{structhwcomposer_1_1DrmConnectorDeleter}{}\section{hwcomposer\+:\+:Drm\+Connector\+Deleter Struct Reference}
+\label{structhwcomposer_1_1DrmConnectorDeleter}\index{hwcomposer\+::\+Drm\+Connector\+Deleter@{hwcomposer\+::\+Drm\+Connector\+Deleter}}
+
+
+{\ttfamily \#include $<$drmscopedtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1DrmConnectorDeleter_abc3ead91a19b383f40ee06a926a46841}{operator()}} (\mbox{\hyperlink{nativedisplay_8h_a16ea3fc6b16060fd1e1257707006440e}{drm\+Mode\+Connector}} $\ast$connector) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file drmscopedtypes.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrmConnectorDeleter_abc3ead91a19b383f40ee06a926a46841}\label{structhwcomposer_1_1DrmConnectorDeleter_abc3ead91a19b383f40ee06a926a46841}} 
+\index{hwcomposer\+::\+Drm\+Connector\+Deleter@{hwcomposer\+::\+Drm\+Connector\+Deleter}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+Drm\+Connector\+Deleter@{hwcomposer\+::\+Drm\+Connector\+Deleter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Connector\+Deleter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{nativedisplay_8h_a16ea3fc6b16060fd1e1257707006440e}{drm\+Mode\+Connector}} $\ast$}]{connector }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 27 of file drmscopedtypes.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                                                                       \{}
+\DoxyCodeLine{28   drmModeFreeConnector(connector);}
+\DoxyCodeLine{29 \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8h}{drmscopedtypes.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8cpp}{drmscopedtypes.\+cpp}}\end{DoxyCompactItemize}

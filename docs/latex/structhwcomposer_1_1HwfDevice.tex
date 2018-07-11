@@ -1,0 +1,589 @@
+\hypertarget{structhwcomposer_1_1HwfDevice}{}\section{hwcomposer\+:\+:Hwf\+Device Struct Reference}
+\label{structhwcomposer_1_1HwfDevice}\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+
+
+{\ttfamily \#include $<$hwf\+\_\+alioshal.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a027a1b50b40fbab4398e755956cfa416}{$\sim$\+Hwf\+Device}} ()
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwfDisplay}{Hwf\+Display}} $\ast$ \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a1c88092007418ad866571a31cba36675}{Get\+Display}} (int display)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a5bd285f65735f896968db942ca18f22b}{detect}} (struct hwf\+\_\+device\+\_\+t $\ast$device, int disp\+Count, hwf\+\_\+display\+\_\+t $\ast$$\ast$displays)
+\item 
+static int \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a17f2fc575a1c6228cc6f5747fadbe065}{flip}} (struct hwf\+\_\+device\+\_\+t $\ast$device, int disp\+Count, hwf\+\_\+display\+\_\+t $\ast$$\ast$displays)
+\item 
+static int \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_aa1f6362cd358f5a2cc87d7ccfdad5af5}{set\+Event\+State}} (struct hwf\+\_\+device\+\_\+t $\ast$device, int disp, int event, int enabled)
+\item 
+static int \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_adb550a7520ececbd89da42098cd6e461}{set\+Display\+State}} (struct hwf\+\_\+device\+\_\+t $\ast$device, int disp, int state)
+\item 
+static int \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_aa9ceccea3b836aa5abf8fbf2a36ce280}{lookup}} (struct hwf\+\_\+device\+\_\+t $\ast$device, int what, int $\ast$value)
+\item 
+static void \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a3c68e078ccdf371b51b04c095d51eb57}{register\+Callback}} (struct hwf\+\_\+device\+\_\+t $\ast$device, hwf\+\_\+callback\+\_\+t const $\ast$callback)
+\item 
+static int \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_ae706c9f4d8a292f6f3e98a15c9b13cfc}{query\+Disp\+Configs}} (struct hwf\+\_\+device\+\_\+t $\ast$device, int disp, uint32\+\_\+t $\ast$configs, int $\ast$num\+Configs)
+\item 
+static int \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a13d2160d0425e6336c4501e95581de01}{query\+Disp\+Attribs}} (struct hwf\+\_\+device\+\_\+t $\ast$device, int disp, uint32\+\_\+t config, const uint32\+\_\+t $\ast$attributes, int32\+\_\+t $\ast$values)
+\item 
+static void \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a356a08f9f098807ddccd2ea1fd3c71e2}{dump}} (struct hwf\+\_\+device\+\_\+t $\ast$device, char $\ast$buff, int buff\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+hwf\+\_\+device\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a44bf25fa996653bdd769356877474aae}{base}}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GpuDevice}{hwcomposer\+::\+Gpu\+Device}} \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_ac4ffa82a5663159ad68529ab7e09df5c}{device\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwfDisplay}{Hwf\+Display}} $>$ \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a33ce7da50d06832599339852177db522}{extended\+\_\+displays\+\_\+}}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwfDisplay}{Hwf\+Display}} \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_add5f0488c9457a804425aaaada99fbca}{primary\+\_\+display\+\_\+}}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwfDisplay}{Hwf\+Display}} \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_aa60208853a0712082aeda933846564ba}{virtual\+\_\+display\+\_\+}}
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_ad6575f785289998ddeb31a33ec6af76b}{disable\+\_\+explicit\+\_\+sync\+\_\+}} = false
+\item 
+hwf\+\_\+callback $\ast$ \mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a92b0a0567112606aa0a8324cc2c8c7b7}{m\+\_\+phwf\+\_\+callback}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 126 of file hwf\+\_\+alioshal.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a027a1b50b40fbab4398e755956cfa416}\label{structhwcomposer_1_1HwfDevice_a027a1b50b40fbab4398e755956cfa416}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!````~Hwf\+Device@{$\sim$\+Hwf\+Device}}
+\index{````~Hwf\+Device@{$\sim$\+Hwf\+Device}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{$\sim$\+Hwf\+Device()}{~HwfDevice()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Hwf\+Device\+::$\sim$\+Hwf\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 129 of file hwf\+\_\+alioshal.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129                \{}
+\DoxyCodeLine{130   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a5bd285f65735f896968db942ca18f22b}\label{structhwcomposer_1_1HwfDevice_a5bd285f65735f896968db942ca18f22b}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!detect@{detect}}
+\index{detect@{detect}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Hwf\+Device\+::detect (\begin{DoxyParamCaption}\item[{struct hwf\+\_\+device\+\_\+t $\ast$}]{device,  }\item[{int}]{disp\+Count,  }\item[{hwf\+\_\+display\+\_\+t $\ast$$\ast$}]{displays }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 183 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{184                                                 \{}
+\DoxyCodeLine{185   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{186   LOG\_I(\textcolor{stringliteral}{"HwfDevice::detect --> dispCount: \%d\(\backslash\)n"}, dispCount);}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188   HwfDevice *hwf\_device = (HwfDevice *)device;}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190   \textcolor{keywordtype}{int} total\_displays = (int)dispCount;}
+\DoxyCodeLine{191   \textcolor{keywordtype}{bool} disable\_overlays = hwf\_device->disable\_explicit\_sync\_;  \textcolor{comment}{// TODO: review}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < total\_displays; ++i) \{}
+\DoxyCodeLine{194     \textcolor{keywordflow}{if} (!displays[i])}
+\DoxyCodeLine{195       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197     \textcolor{keywordflow}{if} (i == HWF\_DISPLAY\_VIRTUAL) \{}
+\DoxyCodeLine{198       disable\_overlays = \textcolor{keyword}{true};}
+\DoxyCodeLine{199     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{200       disable\_overlays = hwf\_device->disable\_explicit\_sync\_;}
+\DoxyCodeLine{201     \}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203     \textcolor{keywordtype}{int} num\_layers = displays[i]->numLayers;}
+\DoxyCodeLine{204     \mbox{\hyperlink{namespacehwcomposer_a04bc26c3d4bbc34c05959dca8eaea1f4}{HwfDisplay}} *native\_display = hwf\_device->GetDisplay(i);}
+\DoxyCodeLine{205     native\_display->\mbox{\hyperlink{structhwcomposer_1_1HwfDisplay_ab546edf06ccbf05fd6bd299b650e0b40}{gl\_composition\_}} = disable\_overlays;}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < num\_layers; ++j) \{}
+\DoxyCodeLine{208       hwf\_layer\_t *layer = \&displays[i]->hwfLayers[j];}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210       \textcolor{keywordflow}{if} (!disable\_overlays) \{}
+\DoxyCodeLine{211         \textcolor{keywordflow}{switch} (layer->composeMode) \{}
+\DoxyCodeLine{212           \textcolor{comment}{/*}}
+\DoxyCodeLine{213 \textcolor{comment}{        //case HWC\_BACKGROUND:  // TODO:}}
+\DoxyCodeLine{214 \textcolor{comment}{        //case HWC\_SIDEBAND:}}
+\DoxyCodeLine{215 \textcolor{comment}{          layer->composeMode = HWF\_FB;}}
+\DoxyCodeLine{216 \textcolor{comment}{          native\_display->gl\_composition\_ = true;}}
+\DoxyCodeLine{217 \textcolor{comment}{          break;}}
+\DoxyCodeLine{218 \textcolor{comment}{          */}}
+\DoxyCodeLine{219           \textcolor{keywordflow}{case} HWF\_FB\_TARGET:}
+\DoxyCodeLine{220             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{221           \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{222             layer->composeMode = HWF\_OVERLAY;}
+\DoxyCodeLine{223             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{224         \}}
+\DoxyCodeLine{225       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{226         layer->composeMode = HWF\_FB;}
+\DoxyCodeLine{227       \}}
+\DoxyCodeLine{228     \}}
+\DoxyCodeLine{229   \}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231   \mbox{\hyperlink{namespacehwcomposer_ad88999c228f7a7e6b7909139f75d8d21}{DBG\_DumpHwfLayerInfo}}(device, dispCount, displays);}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{234 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a356a08f9f098807ddccd2ea1fd3c71e2}\label{structhwcomposer_1_1HwfDevice_a356a08f9f098807ddccd2ea1fd3c71e2}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!dump@{dump}}
+\index{dump@{dump}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwf\+Device\+::dump (\begin{DoxyParamCaption}\item[{struct hwf\+\_\+device\+\_\+t $\ast$}]{device,  }\item[{char $\ast$}]{buff,  }\item[{int}]{buff\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 524 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{524                                                                           \{}
+\DoxyCodeLine{525   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{526   LOG\_I(\textcolor{stringliteral}{"HwfDevice::dump --> called.\(\backslash\)n"});}
+\DoxyCodeLine{527 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a17f2fc575a1c6228cc6f5747fadbe065}\label{structhwcomposer_1_1HwfDevice_a17f2fc575a1c6228cc6f5747fadbe065}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!flip@{flip}}
+\index{flip@{flip}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{flip()}{flip()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Hwf\+Device\+::flip (\begin{DoxyParamCaption}\item[{struct hwf\+\_\+device\+\_\+t $\ast$}]{device,  }\item[{int}]{disp\+Count,  }\item[{hwf\+\_\+display\+\_\+t $\ast$$\ast$}]{displays }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 236 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{237                                               \{}
+\DoxyCodeLine{238   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{239   LOG\_I(\textcolor{stringliteral}{"HwfDevice::flip --> enter.\(\backslash\)n"});}
+\DoxyCodeLine{240   LOG\_I(\textcolor{stringliteral}{"HwfDevice::flip --> dispCount: \%d\(\backslash\)n"}, dispCount);}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242   HwfDevice *hwf\_device = (HwfDevice *)device;}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < dispCount; ++i) \{}
+\DoxyCodeLine{245     LOG\_I(\textcolor{stringliteral}{"\(\backslash\)tflip --> display[\%d] -- begin.\(\backslash\)n"}, i);}
+\DoxyCodeLine{246     hwf\_display\_t *dc = displays[i];}
+\DoxyCodeLine{247     \textcolor{keywordflow}{if} (!dc || i == HWF\_DISPLAY\_VIRTUAL)}
+\DoxyCodeLine{248       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250     \textcolor{keywordtype}{size\_t} num\_dc\_layers = dc->numLayers;}
+\DoxyCodeLine{251     \mbox{\hyperlink{namespacehwcomposer_a04bc26c3d4bbc34c05959dca8eaea1f4}{HwfDisplay}} *native\_display = hwf\_device->GetDisplay(i);}
+\DoxyCodeLine{252     dc->retireSyncFd = native\_display->\mbox{\hyperlink{structhwcomposer_1_1HwfDisplay_acf9eacafe04e405a33c36eeb5219a02a}{timeline\_}}.\mbox{\hyperlink{classhwcomposer_1_1DisplayTimeLine_ad42e159c9bc63e507dfdae95a157f156}{IncrementTimeLine}}();}
+\DoxyCodeLine{253     \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *display = native\_display->display\_;}
+\DoxyCodeLine{254     std::vector<HwfLayer *> \&old\_layers = native\_display->layers\_;}
+\DoxyCodeLine{255     std::vector<HwfLayer *> new\_layers;}
+\DoxyCodeLine{256     \textcolor{keywordtype}{size\_t} size = old\_layers.size();}
+\DoxyCodeLine{257     std::vector<hwcomposer::HwcLayer *> source\_layers;}
+\DoxyCodeLine{258     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < num\_dc\_layers; ++j) \{}
+\DoxyCodeLine{259       hwf\_layer\_t *sf\_layer = \&dc->hwfLayers[j];}
+\DoxyCodeLine{260       \textcolor{keywordflow}{if} (!sf\_layer || !sf\_layer->target ||}
+\DoxyCodeLine{261           (sf\_layer->flags \& HWF\_LAYER\_IGNORED))}
+\DoxyCodeLine{262         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264       \textcolor{keywordflow}{if} (!native\_display->gl\_composition\_ \&\&}
+\DoxyCodeLine{265           (sf\_layer->composeMode == HWF\_FB\_TARGET)) \{}
+\DoxyCodeLine{266         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{267       \}}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{269       \mbox{\hyperlink{namespacehwcomposer_a153bd861ad56f99f647093306b5d51ed}{HwfLayer}} *new\_layer = \textcolor{keyword}{new} \mbox{\hyperlink{namespacehwcomposer_a153bd861ad56f99f647093306b5d51ed}{HwfLayer}}();}
+\DoxyCodeLine{270       \textcolor{keywordflow}{if} (size > j) \{}
+\DoxyCodeLine{271         \mbox{\hyperlink{namespacehwcomposer_a153bd861ad56f99f647093306b5d51ed}{HwfLayer}} *old\_layer = old\_layers.at(j);}
+\DoxyCodeLine{272         new\_layer->\mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}} = old\_layer->hwc\_layer\_;}
+\DoxyCodeLine{273         old\_layer->hwc\_layer\_ = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{274       \}}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276       new\_layer->InitFromHwcLayer(sf\_layer);}
+\DoxyCodeLine{277       source\_layers.emplace\_back(new\_layer->hwc\_layer\_);}
+\DoxyCodeLine{278       new\_layer->index\_ = j;}
+\DoxyCodeLine{279       new\_layers.emplace\_back(new\_layer);}
+\DoxyCodeLine{280       sf\_layer->acquireSyncFd = -1;}
+\DoxyCodeLine{281       sf\_layer->releaseSyncFd = -1;}
+\DoxyCodeLine{282     \}}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284     \textcolor{keywordflow}{if} (source\_layers.empty()) \{}
+\DoxyCodeLine{285       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{286     \}}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288     int32\_t retire\_fence = -1;}
+\DoxyCodeLine{289     old\_layers.swap(new\_layers);}
+\DoxyCodeLine{290     size = new\_layers.size();}
+\DoxyCodeLine{291     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; i++) \{}
+\DoxyCodeLine{292       \mbox{\hyperlink{namespacehwcomposer_a153bd861ad56f99f647093306b5d51ed}{HwfLayer}} *layer = new\_layers.at(i);}
+\DoxyCodeLine{293       \textcolor{keyword}{delete} layer;}
+\DoxyCodeLine{294     \}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296     std::vector<HwfLayer *>().swap(new\_layers);}
+\DoxyCodeLine{297 }
+\DoxyCodeLine{298     LOG\_I(\textcolor{stringliteral}{"\(\backslash\)tWill to present.\(\backslash\)n"});}
+\DoxyCodeLine{299     \textcolor{keywordtype}{bool} success = display->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4825b8bc4b85e03b396ed6d2cf5bd8c0}{Present}}(source\_layers, \&retire\_fence);}
+\DoxyCodeLine{300     \textcolor{keywordflow}{if} (!success) \{}
+\DoxyCodeLine{301       LOG\_E(\textcolor{stringliteral}{"Failed to set layers in the composition"});}
+\DoxyCodeLine{302       \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{303     \}}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305     \textcolor{keywordflow}{if} (retire\_fence > 0)}
+\DoxyCodeLine{306       close(retire\_fence);}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308     size = old\_layers.size();}
+\DoxyCodeLine{309     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; i++) \{}
+\DoxyCodeLine{310       \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{hwcomposer::HwcLayer}} *layer = old\_layers.at(i)->hwc\_layer\_;}
+\DoxyCodeLine{311       int32\_t release\_fence = layer->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a48545fc3311aa7dd014d697ec461e348}{GetReleaseFence}}();}
+\DoxyCodeLine{312 }
+\DoxyCodeLine{313       \textcolor{keywordflow}{if} (release\_fence <= 0)}
+\DoxyCodeLine{314         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316       hwf\_layer\_t *sf\_layer = \&dc->hwfLayers[old\_layers.at(i)->index\_];}
+\DoxyCodeLine{317       sf\_layer->releaseSyncFd = release\_fence;}
+\DoxyCodeLine{318     \}}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320     std::vector<hwcomposer::HwcLayer *>().swap(source\_layers);}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322     LOG\_I(\textcolor{stringliteral}{"\(\backslash\)tflip --> display[\%d] -- end.\(\backslash\)n"}, i);}
+\DoxyCodeLine{323   \}}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{325   LOG\_I(\textcolor{stringliteral}{"HwfDevice::flip --> exit.\(\backslash\)n"});}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{328 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a1c88092007418ad866571a31cba36675}\label{structhwcomposer_1_1HwfDevice_a1c88092007418ad866571a31cba36675}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!Get\+Display@{Get\+Display}}
+\index{Get\+Display@{Get\+Display}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{Get\+Display()}{GetDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1HwfDisplay}{Hwf\+Display}} $\ast$ hwcomposer\+::\+Hwf\+Device\+::\+Get\+Display (\begin{DoxyParamCaption}\item[{int}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 127 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{127                                              \{}
+\DoxyCodeLine{128   \textcolor{keywordflow}{if} (display == HWF\_DISPLAY\_PRIMARY) \{}
+\DoxyCodeLine{129     \textcolor{keywordflow}{return} \&\mbox{\hyperlink{structhwcomposer_1_1HwfDevice_add5f0488c9457a804425aaaada99fbca}{primary\_display\_}};}
+\DoxyCodeLine{130   \}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132   \textcolor{keywordflow}{if} (display == HWF\_DISPLAY\_VIRTUAL) \{}
+\DoxyCodeLine{133     \textcolor{keywordflow}{return} \&\mbox{\hyperlink{structhwcomposer_1_1HwfDevice_aa60208853a0712082aeda933846564ba}{virtual\_display\_}};}
+\DoxyCodeLine{134   \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   \textcolor{keywordflow}{return} \&\mbox{\hyperlink{structhwcomposer_1_1HwfDevice_a33ce7da50d06832599339852177db522}{extended\_displays\_}}.at(0);}
+\DoxyCodeLine{137 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_aa9ceccea3b836aa5abf8fbf2a36ce280}\label{structhwcomposer_1_1HwfDevice_aa9ceccea3b836aa5abf8fbf2a36ce280}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!lookup@{lookup}}
+\index{lookup@{lookup}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{lookup()}{lookup()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Hwf\+Device\+::lookup (\begin{DoxyParamCaption}\item[{struct hwf\+\_\+device\+\_\+t $\ast$}]{device,  }\item[{int}]{what,  }\item[{int $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 381 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{381                                                                        \{}
+\DoxyCodeLine{382   LOG\_I(\textcolor{stringliteral}{"HwfDevice::setDisplayState --> called.\(\backslash\)n"});}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{385 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a13d2160d0425e6336c4501e95581de01}\label{structhwcomposer_1_1HwfDevice_a13d2160d0425e6336c4501e95581de01}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!query\+Disp\+Attribs@{query\+Disp\+Attribs}}
+\index{query\+Disp\+Attribs@{query\+Disp\+Attribs}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{query\+Disp\+Attribs()}{queryDispAttribs()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Hwf\+Device\+::query\+Disp\+Attribs (\begin{DoxyParamCaption}\item[{struct hwf\+\_\+device\+\_\+t $\ast$}]{device,  }\item[{int}]{disp,  }\item[{uint32\+\_\+t}]{config,  }\item[{const uint32\+\_\+t $\ast$}]{attributes,  }\item[{int32\+\_\+t $\ast$}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 478 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{480                                                  \{}
+\DoxyCodeLine{481   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{482   LOG\_I(\textcolor{stringliteral}{"    HwfDevice::queryDispAttribs --> disp: \%d.\(\backslash\)n"}, disp);}
+\DoxyCodeLine{483   HwfDevice *hwf\_device = (HwfDevice *)device;}
+\DoxyCodeLine{484 }
+\DoxyCodeLine{485   \mbox{\hyperlink{namespacehwcomposer_a04bc26c3d4bbc34c05959dca8eaea1f4}{HwfDisplay}} *native\_display = hwf\_device->GetDisplay(disp);}
+\DoxyCodeLine{486   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *temp = native\_display->display\_;}
+\DoxyCodeLine{487   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; attributes[i] != HWF\_DISPLAY\_NO\_ATTRIBUTE; ++i) \{}
+\DoxyCodeLine{488     \textcolor{keywordflow}{switch} (attributes[i]) \{}
+\DoxyCodeLine{489       \textcolor{keywordflow}{case} HWF\_DISPLAY\_WIDTH:}
+\DoxyCodeLine{490         temp->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{491             config, hwcomposer::HWCDisplayAttribute::kWidth, \&values[i]);}
+\DoxyCodeLine{492         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{493       \textcolor{keywordflow}{case} HWF\_DISPLAY\_HEIGHT:}
+\DoxyCodeLine{494         temp->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{495             config, hwcomposer::HWCDisplayAttribute::kHeight, \&values[i]);}
+\DoxyCodeLine{496         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{497       \textcolor{keywordflow}{case} HWF\_DISPLAY\_VSYNC\_PERIOD:}
+\DoxyCodeLine{498         \textcolor{comment}{// in nanoseconds}}
+\DoxyCodeLine{499         temp->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{500             config, hwcomposer::HWCDisplayAttribute::kRefreshRate, \&values[i]);}
+\DoxyCodeLine{501         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{502       \textcolor{keywordflow}{case} HWF\_DISPLAY\_DPI\_X:}
+\DoxyCodeLine{503         \textcolor{comment}{// Dots per 1000 inches}}
+\DoxyCodeLine{504         temp->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{505             config, hwcomposer::HWCDisplayAttribute::kDpiX, \&values[i]);}
+\DoxyCodeLine{506         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{507       \textcolor{keywordflow}{case} HWF\_DISPLAY\_DPI\_Y:}
+\DoxyCodeLine{508         \textcolor{comment}{// Dots per 1000 inches}}
+\DoxyCodeLine{509         temp->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{510             config, hwcomposer::HWCDisplayAttribute::kDpiY, \&values[i]);}
+\DoxyCodeLine{511         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{512       \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{513         values[i] = -1;}
+\DoxyCodeLine{514         \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{515     \}}
+\DoxyCodeLine{516 }
+\DoxyCodeLine{517     LOG\_I(\textcolor{stringliteral}{"    HwfDevice::queryDispAttribs --> attributes[\%d]: \%d.\(\backslash\)n"}, i,}
+\DoxyCodeLine{518           values[i]);}
+\DoxyCodeLine{519   \}}
+\DoxyCodeLine{520 }
+\DoxyCodeLine{521   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{522 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_ae706c9f4d8a292f6f3e98a15c9b13cfc}\label{structhwcomposer_1_1HwfDevice_ae706c9f4d8a292f6f3e98a15c9b13cfc}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!query\+Disp\+Configs@{query\+Disp\+Configs}}
+\index{query\+Disp\+Configs@{query\+Disp\+Configs}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{query\+Disp\+Configs()}{queryDispConfigs()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Hwf\+Device\+::query\+Disp\+Configs (\begin{DoxyParamCaption}\item[{struct hwf\+\_\+device\+\_\+t $\ast$}]{device,  }\item[{int}]{disp,  }\item[{uint32\+\_\+t $\ast$}]{configs,  }\item[{int $\ast$}]{num\+Configs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 455 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{456                                                                     \{}
+\DoxyCodeLine{457   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{458   HwfDevice *hwf\_device = (HwfDevice *)device;}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{460   uint32\_t size = *numConfigs;}
+\DoxyCodeLine{461   \mbox{\hyperlink{namespacehwcomposer_a04bc26c3d4bbc34c05959dca8eaea1f4}{HwfDisplay}} *native\_display = hwf\_device->GetDisplay(disp);}
+\DoxyCodeLine{462   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *temp = native\_display->display\_;}
+\DoxyCodeLine{463 }
+\DoxyCodeLine{464   \textcolor{keywordflow}{if} (!temp->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}{GetDisplayConfigs}}(\&size, configs)) \{}
+\DoxyCodeLine{465     LOG\_E(\textcolor{stringliteral}{"GetDisplayConfigs failed @ Display: \%d, size: \%d, configs: \%u."},}
+\DoxyCodeLine{466           disp, size, *configs);}
+\DoxyCodeLine{467     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{468   \}}
+\DoxyCodeLine{469 }
+\DoxyCodeLine{470   *numConfigs = size;}
+\DoxyCodeLine{471 }
+\DoxyCodeLine{472   LOG\_I(\textcolor{stringliteral}{"HwfDevice::queryDispConfigs --> disp: \%d, numConfigs: \%d.\(\backslash\)n"}, disp,}
+\DoxyCodeLine{473         *numConfigs);}
+\DoxyCodeLine{474 }
+\DoxyCodeLine{475   \textcolor{keywordflow}{return} *numConfigs == 0 ? -1 : 0;}
+\DoxyCodeLine{476 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a3c68e078ccdf371b51b04c095d51eb57}\label{structhwcomposer_1_1HwfDevice_a3c68e078ccdf371b51b04c095d51eb57}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!register\+Callback@{register\+Callback}}
+\index{register\+Callback@{register\+Callback}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{register\+Callback()}{registerCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Hwf\+Device\+::register\+Callback (\begin{DoxyParamCaption}\item[{struct hwf\+\_\+device\+\_\+t $\ast$}]{device,  }\item[{hwf\+\_\+callback\+\_\+t const $\ast$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 426 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{427                                                                  \{}
+\DoxyCodeLine{428   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{429   LOG\_I(\textcolor{stringliteral}{"HwfDevice::registerCallback --> called.\(\backslash\)n"});}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431   HwfDevice *hwf\_device = (HwfDevice *)device;}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{433   hwf\_device->m\_phwf\_callback = (hwf\_callback *)callback;}
+\DoxyCodeLine{434 }
+\DoxyCodeLine{435   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *display = hwf\_device->primary\_display\_.display\_;}
+\DoxyCodeLine{436 }
+\DoxyCodeLine{437   \textcolor{keyword}{auto} vsync\_callback = std::make\_shared<IAVsyncCallback>(callback);}
+\DoxyCodeLine{438   display->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}{RegisterVsyncCallback}}(std::move(vsync\_callback), 0);}
+\DoxyCodeLine{439 }
+\DoxyCodeLine{440   std::vector<HwfDisplay> \&extended = hwf\_device->extended\_displays\_;}
+\DoxyCodeLine{441   \textcolor{keywordtype}{size\_t} size = extended.size();}
+\DoxyCodeLine{442   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; i++) \{}
+\DoxyCodeLine{443     \textcolor{keyword}{auto} extended\_callback = std::make\_shared<IAVsyncCallback>(callback);}
+\DoxyCodeLine{444     extended.at(i)}
+\DoxyCodeLine{445         .display\_->RegisterVsyncCallback(std::move(extended\_callback), 1);}
+\DoxyCodeLine{446 }
+\DoxyCodeLine{447     \textcolor{keyword}{auto} hotplug\_callback = std::make\_shared<IAHotPlugEventCallback>(callback);}
+\DoxyCodeLine{448     extended.at(i)}
+\DoxyCodeLine{449         .display\_->RegisterHotPlugCallback(std::move(hotplug\_callback), 1);}
+\DoxyCodeLine{450   \}}
+\DoxyCodeLine{451 }
+\DoxyCodeLine{452   \textcolor{keywordflow}{return};}
+\DoxyCodeLine{453 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_adb550a7520ececbd89da42098cd6e461}\label{structhwcomposer_1_1HwfDevice_adb550a7520ececbd89da42098cd6e461}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!set\+Display\+State@{set\+Display\+State}}
+\index{set\+Display\+State@{set\+Display\+State}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{set\+Display\+State()}{setDisplayState()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Hwf\+Device\+::set\+Display\+State (\begin{DoxyParamCaption}\item[{struct hwf\+\_\+device\+\_\+t $\ast$}]{device,  }\item[{int}]{disp,  }\item[{int}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 348 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{349                                           \{}
+\DoxyCodeLine{350   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{351   LOG\_I(\textcolor{stringliteral}{"HwfDevice::setDisplayState --> disp:\%d, state: \%d.\(\backslash\)n"}, disp, state);}
+\DoxyCodeLine{352 }
+\DoxyCodeLine{353   HwfDevice *hwf\_device = (HwfDevice *)device;}
+\DoxyCodeLine{354 }
+\DoxyCodeLine{355   uint32\_t power\_mode = \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{hwcomposer::kOn}};}
+\DoxyCodeLine{356   \textcolor{keywordflow}{switch} (state) \{}
+\DoxyCodeLine{357     \textcolor{keywordflow}{case} HWF\_DISPLAY\_STATE\_OFF:}
+\DoxyCodeLine{358       power\_mode = \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{hwcomposer::kOff}};}
+\DoxyCodeLine{359       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{360     \textcolor{keywordflow}{case} HWF\_DISPLAY\_STATE\_IDLE:}
+\DoxyCodeLine{361       power\_mode = \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea8bccbb926a1dc31f9d9f572fdd95e608}{hwcomposer::kDoze}};}
+\DoxyCodeLine{362       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{363     \textcolor{keywordflow}{case} HWF\_DISPLAY\_STATE\_IDLE\_SUSPEND:}
+\DoxyCodeLine{364       power\_mode = \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea35f99ee0a3c1ecc81db3f51e82f1f103}{hwcomposer::kDozeSuspend}};}
+\DoxyCodeLine{365       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{366     \textcolor{keywordflow}{case} HWF\_DISPLAY\_STATE\_NORMAL:}
+\DoxyCodeLine{367       power\_mode = \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{hwcomposer::kOn}};}
+\DoxyCodeLine{368       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{369     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{370       LOG\_I(\textcolor{stringliteral}{"Power mode \%d is unsupported\(\backslash\)n"}, state);}
+\DoxyCodeLine{371       \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{372   \};}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{374   \mbox{\hyperlink{namespacehwcomposer_a04bc26c3d4bbc34c05959dca8eaea1f4}{HwfDisplay}} *native\_display = hwf\_device->GetDisplay(disp);}
+\DoxyCodeLine{375   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *temp = native\_display->display\_;}
+\DoxyCodeLine{376   temp->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}{SetPowerMode}}(power\_mode);}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{379 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_aa1f6362cd358f5a2cc87d7ccfdad5af5}\label{structhwcomposer_1_1HwfDevice_aa1f6362cd358f5a2cc87d7ccfdad5af5}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!set\+Event\+State@{set\+Event\+State}}
+\index{set\+Event\+State@{set\+Event\+State}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{set\+Event\+State()}{setEventState()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Hwf\+Device\+::set\+Event\+State (\begin{DoxyParamCaption}\item[{struct hwf\+\_\+device\+\_\+t $\ast$}]{device,  }\item[{int}]{disp,  }\item[{int}]{event,  }\item[{int}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 330 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{331                                           \{}
+\DoxyCodeLine{332   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{333   LOG\_I(\textcolor{stringliteral}{"HwfDevice::setEventState --> disp:\%d, event: \%d, enabled: \%d.\(\backslash\)n"}, disp,}
+\DoxyCodeLine{334         event, enabled);}
+\DoxyCodeLine{335 }
+\DoxyCodeLine{336   \textcolor{keywordflow}{if} (event != HWF\_EVENT\_VSYNC || (enabled != 0 \&\& enabled != 1))}
+\DoxyCodeLine{337     \textcolor{keywordflow}{return} -EINVAL;}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{339   HwfDevice *hwf\_device = (HwfDevice *)device;}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341   \mbox{\hyperlink{namespacehwcomposer_a04bc26c3d4bbc34c05959dca8eaea1f4}{HwfDisplay}} *native\_display = hwf\_device->GetDisplay(disp);}
+\DoxyCodeLine{342   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *temp = native\_display->display\_;}
+\DoxyCodeLine{343   temp->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}{VSyncControl}}(enabled);}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{346 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a44bf25fa996653bdd769356877474aae}\label{structhwcomposer_1_1HwfDevice_a44bf25fa996653bdd769356877474aae}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!base@{base}}
+\index{base@{base}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily hwf\+\_\+device\+\_\+t hwcomposer\+::\+Hwf\+Device\+::base}
+
+
+
+Definition at line 127 of file hwf\+\_\+alioshal.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_ac4ffa82a5663159ad68529ab7e09df5c}\label{structhwcomposer_1_1HwfDevice_ac4ffa82a5663159ad68529ab7e09df5c}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1GpuDevice}{hwcomposer\+::\+Gpu\+Device}} hwcomposer\+::\+Hwf\+Device\+::device\+\_\+}
+
+
+
+Definition at line 132 of file hwf\+\_\+alioshal.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_ad6575f785289998ddeb31a33ec6af76b}\label{structhwcomposer_1_1HwfDevice_ad6575f785289998ddeb31a33ec6af76b}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!disable\+\_\+explicit\+\_\+sync\+\_\+@{disable\+\_\+explicit\+\_\+sync\+\_\+}}
+\index{disable\+\_\+explicit\+\_\+sync\+\_\+@{disable\+\_\+explicit\+\_\+sync\+\_\+}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{disable\+\_\+explicit\+\_\+sync\+\_\+}{disable\_explicit\_sync\_}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Hwf\+Device\+::disable\+\_\+explicit\+\_\+sync\+\_\+ = false}
+
+
+
+Definition at line 140 of file hwf\+\_\+alioshal.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a33ce7da50d06832599339852177db522}\label{structhwcomposer_1_1HwfDevice_a33ce7da50d06832599339852177db522}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!extended\+\_\+displays\+\_\+@{extended\+\_\+displays\+\_\+}}
+\index{extended\+\_\+displays\+\_\+@{extended\+\_\+displays\+\_\+}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{extended\+\_\+displays\+\_\+}{extended\_displays\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structhwcomposer_1_1HwfDisplay}{Hwf\+Display}}$>$ hwcomposer\+::\+Hwf\+Device\+::extended\+\_\+displays\+\_\+}
+
+
+
+Definition at line 133 of file hwf\+\_\+alioshal.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_a92b0a0567112606aa0a8324cc2c8c7b7}\label{structhwcomposer_1_1HwfDevice_a92b0a0567112606aa0a8324cc2c8c7b7}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!m\+\_\+phwf\+\_\+callback@{m\+\_\+phwf\+\_\+callback}}
+\index{m\+\_\+phwf\+\_\+callback@{m\+\_\+phwf\+\_\+callback}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{m\+\_\+phwf\+\_\+callback}{m\_phwf\_callback}}
+{\footnotesize\ttfamily hwf\+\_\+callback$\ast$ hwcomposer\+::\+Hwf\+Device\+::m\+\_\+phwf\+\_\+callback}
+
+
+
+Definition at line 142 of file hwf\+\_\+alioshal.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_add5f0488c9457a804425aaaada99fbca}\label{structhwcomposer_1_1HwfDevice_add5f0488c9457a804425aaaada99fbca}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!primary\+\_\+display\+\_\+@{primary\+\_\+display\+\_\+}}
+\index{primary\+\_\+display\+\_\+@{primary\+\_\+display\+\_\+}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{primary\+\_\+display\+\_\+}{primary\_display\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1HwfDisplay}{Hwf\+Display}} hwcomposer\+::\+Hwf\+Device\+::primary\+\_\+display\+\_\+}
+
+
+
+Definition at line 134 of file hwf\+\_\+alioshal.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwfDevice_aa60208853a0712082aeda933846564ba}\label{structhwcomposer_1_1HwfDevice_aa60208853a0712082aeda933846564ba}} 
+\index{hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}!virtual\+\_\+display\+\_\+@{virtual\+\_\+display\+\_\+}}
+\index{virtual\+\_\+display\+\_\+@{virtual\+\_\+display\+\_\+}!hwcomposer\+::\+Hwf\+Device@{hwcomposer\+::\+Hwf\+Device}}
+\subsubsection{\texorpdfstring{virtual\+\_\+display\+\_\+}{virtual\_display\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1HwfDisplay}{Hwf\+Display}} hwcomposer\+::\+Hwf\+Device\+::virtual\+\_\+display\+\_\+}
+
+
+
+Definition at line 135 of file hwf\+\_\+alioshal.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/alios/\mbox{\hyperlink{hwf__alioshal_8h}{hwf\+\_\+alioshal.\+h}}\item 
+os/alios/\mbox{\hyperlink{hwf__alioshal_8cpp}{hwf\+\_\+alioshal.\+cpp}}\end{DoxyCompactItemize}

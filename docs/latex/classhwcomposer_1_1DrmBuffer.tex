@@ -1,0 +1,797 @@
+\hypertarget{classhwcomposer_1_1DrmBuffer}{}\section{hwcomposer\+:\+:Drm\+Buffer Class Reference}
+\label{classhwcomposer_1_1DrmBuffer}\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+
+
+{\ttfamily \#include $<$drmbuffer.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Drm\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1DrmBuffer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a9e23026b53d528ccd9f1a71fbc153ef1}{Drm\+Buffer}} (\mbox{\hyperlink{classhwcomposer_1_1DrmBuffer}{Drm\+Buffer}} \&\&rhs)=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmBuffer}{Drm\+Buffer}} \& \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a6d58dec7ca17507de42f722d1af88baa}{operator=}} (\mbox{\hyperlink{classhwcomposer_1_1DrmBuffer}{Drm\+Buffer}} \&\&other)=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a74144267227d5213648330cd9d9a6bfe}{Drm\+Buffer}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_adc5f481329b7469ae558a3b12474f390}{$\sim$\+Drm\+Buffer}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_afced6df8661c057ca6b7195d16c49a80}{Initialize\+From\+Native\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, \mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$buffer\+\_\+manager, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager) override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_ac4af6516c644cfb6bbf34083bbdc94ae}{Get\+Width}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a42a02adf7559b89d4f9f958242880b61}{Get\+Height}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a35eecd412bab8ea5822ec7a81c2fc34a}{Get\+Format}} () const override
+\item 
+H\+W\+C\+Layer\+Type \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a41cb25d650c188e8be9ffa972776680b}{Get\+Usage}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_accd7dc14e04bd76beca146fc3d265f81}{Get\+Fb}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a5844745322eb108eddb1e41eb1cf4f40}{Get\+Prime\+FD}} () const override
+\item 
+const uint32\+\_\+t $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a6241968d9bcfff9e6e746feb75422f17}{Get\+Pitches}} () const override
+\item 
+const uint32\+\_\+t $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a4545b534f1266e287d351ddb6fc2e2db}{Get\+Offsets}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_ae559626c3e3029ab95906bbc5c9319f7}{Get\+Tiling\+Mode}} () const override
+\item 
+const \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{Resource\+Handle}} \& \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a7a2a0fe73ce6ef5468c1dc6b3b099d88}{Get\+Gpu\+Resource}} (\mbox{\hyperlink{namespacehwcomposer_ace90739a34de8ec5b30559423cdef990}{Gpu\+Display}} egl\+\_\+display, bool external\+\_\+import) override
+\item 
+const \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{Resource\+Handle}} \& \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a1dc65623ff13c470c9d71c4054bc6b36}{Get\+Gpu\+Resource}} () override
+\item 
+const \mbox{\hyperlink{namespacehwcomposer_aa99e35835961ac7d6baa59a04131ff42}{Media\+Resource\+Handle}} \& \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a816ad1d2e1f7698eba57d58096b532dc}{Get\+Media\+Resource}} (\mbox{\hyperlink{namespacehwcomposer_a10d64930907cc775f9cea6b39d8cb404}{Media\+Display}} display, uint32\+\_\+t width, uint32\+\_\+t height) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_af80ec38c8f6728e9448a9593e08ecf4b}{Create\+Frame\+Buffer}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a3055296aa0dc5fb96553c62217d0f08d}{Create\+Frame\+Buffer\+With\+Modifier}} (uint64\+\_\+t modifier) override
+\item 
+\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a66a876cebee293bc84bf0dc6edd35f0c}{Get\+Original\+Handle}} () const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_a2d7dbadddf5cce8260aa224af1b495c1}{Set\+Original\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer_ac4087d8c1084fede3414f6e578de9183}{Dump}} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file drmbuffer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a9e23026b53d528ccd9f1a71fbc153ef1}\label{classhwcomposer_1_1DrmBuffer_a9e23026b53d528ccd9f1a71fbc153ef1}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Drm\+Buffer@{Drm\+Buffer}}
+\index{Drm\+Buffer@{Drm\+Buffer}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Drm\+Buffer()}{DrmBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Drm\+Buffer\+::\+Drm\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DrmBuffer}{Drm\+Buffer}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a74144267227d5213648330cd9d9a6bfe}\label{classhwcomposer_1_1DrmBuffer_a74144267227d5213648330cd9d9a6bfe}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Drm\+Buffer@{Drm\+Buffer}}
+\index{Drm\+Buffer@{Drm\+Buffer}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Drm\+Buffer()}{DrmBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Drm\+Buffer\+::\+Drm\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_adc5f481329b7469ae558a3b12474f390}\label{classhwcomposer_1_1DrmBuffer_adc5f481329b7469ae558a3b12474f390}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!````~Drm\+Buffer@{$\sim$\+Drm\+Buffer}}
+\index{````~Drm\+Buffer@{$\sim$\+Drm\+Buffer}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{$\sim$\+Drm\+Buffer()}{~DrmBuffer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Drm\+Buffer\+::$\sim$\+Drm\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 55 of file drmbuffer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                       \{}
+\DoxyCodeLine{56   \textcolor{keywordtype}{bool} texture\_initialized = \textcolor{keyword}{false};}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#if USE\_GL}}
+\DoxyCodeLine{58   texture\_initialized = image\_.texture\_ > 0;}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#elif USE\_VK}}
+\DoxyCodeLine{60   texture\_initialized = image\_.texture\_ != VK\_NULL\_HANDLE;}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#ifndef DISABLE\_VA}}
+\DoxyCodeLine{64   \textcolor{keywordflow}{if} (media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_af82420941f64a848639e0ac80a7b2861}{surface\_}} == VA\_INVALID\_ID) \{}
+\DoxyCodeLine{65     resource\_manager\_->\mbox{\hyperlink{classhwcomposer_1_1ResourceManager_aed72efa73f3037049b1328ea35f162b3}{MarkResourceForDeletion}}(image\_, texture\_initialized);}
+\DoxyCodeLine{66   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{67     \textcolor{keywordflow}{if} (texture\_initialized) \{}
+\DoxyCodeLine{68       image\_.handle\_ = 0;}
+\DoxyCodeLine{69       image\_.drm\_fd\_ = 0;}
+\DoxyCodeLine{70       resource\_manager\_->\mbox{\hyperlink{classhwcomposer_1_1ResourceManager_aed72efa73f3037049b1328ea35f162b3}{MarkResourceForDeletion}}(image\_, \textcolor{keyword}{true});}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     resource\_manager\_->\mbox{\hyperlink{classhwcomposer_1_1ResourceManager_a0813f1ac50652ca59c3f4b03291dd4b4}{MarkMediaResourceForDeletion}}(media\_image\_);}
+\DoxyCodeLine{74   \}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{76   resource\_manager\_->\mbox{\hyperlink{classhwcomposer_1_1ResourceManager_aed72efa73f3037049b1328ea35f162b3}{MarkResourceForDeletion}}(image\_, texture\_initialized);}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{78 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_af80ec38c8f6728e9448a9593e08ecf4b}\label{classhwcomposer_1_1DrmBuffer_af80ec38c8f6728e9448a9593e08ecf4b}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Create\+Frame\+Buffer@{Create\+Frame\+Buffer}}
+\index{Create\+Frame\+Buffer@{Create\+Frame\+Buffer}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Create\+Frame\+Buffer()}{CreateFrameBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Buffer\+::\+Create\+Frame\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_ac680ba90c1b51512ad7c0b2a6483b39c}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 392 of file drmbuffer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{392                                   \{}
+\DoxyCodeLine{393   \textcolor{keywordflow}{if} (image\_.drm\_fd\_) \{}
+\DoxyCodeLine{394     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{395   \}}
+\DoxyCodeLine{396 }
+\DoxyCodeLine{397   image\_.drm\_fd\_ = 0;}
+\DoxyCodeLine{398   media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_add4939656c584a9b2f25e38eb845602f}{drm\_fd\_}} = 0;}
+\DoxyCodeLine{399 }
+\DoxyCodeLine{400   image\_.drm\_fd\_ = fb\_manager\_->\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager_a05c6f8e84120746c4aa6fede497142e0}{FindFB}}(width\_, height\_, 0, frame\_buffer\_format\_,}
+\DoxyCodeLine{401                                        image\_.handle\_->meta\_data\_.num\_planes\_,}
+\DoxyCodeLine{402                                        gem\_handles\_, pitches\_, offsets\_);}
+\DoxyCodeLine{403   media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_add4939656c584a9b2f25e38eb845602f}{drm\_fd\_}} = image\_.drm\_fd\_;}
+\DoxyCodeLine{404   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{405 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a3055296aa0dc5fb96553c62217d0f08d}\label{classhwcomposer_1_1DrmBuffer_a3055296aa0dc5fb96553c62217d0f08d}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Create\+Frame\+Buffer\+With\+Modifier@{Create\+Frame\+Buffer\+With\+Modifier}}
+\index{Create\+Frame\+Buffer\+With\+Modifier@{Create\+Frame\+Buffer\+With\+Modifier}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Create\+Frame\+Buffer\+With\+Modifier()}{CreateFrameBufferWithModifier()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Buffer\+::\+Create\+Frame\+Buffer\+With\+Modifier (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{modifier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_ab7f56dcd75f7724d8b1b2ca384f91312}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 407 of file drmbuffer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{407                                                                \{}
+\DoxyCodeLine{408   \textcolor{keywordflow}{if} (image\_.drm\_fd\_) \{}
+\DoxyCodeLine{409     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{410   \}}
+\DoxyCodeLine{411 }
+\DoxyCodeLine{412   image\_.drm\_fd\_ = 0;}
+\DoxyCodeLine{413   media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_add4939656c584a9b2f25e38eb845602f}{drm\_fd\_}} = 0;}
+\DoxyCodeLine{414 }
+\DoxyCodeLine{415   image\_.drm\_fd\_ = fb\_manager\_->\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager_a05c6f8e84120746c4aa6fede497142e0}{FindFB}}(}
+\DoxyCodeLine{416       width\_, height\_, modifier, frame\_buffer\_format\_,}
+\DoxyCodeLine{417       image\_.handle\_->meta\_data\_.num\_planes\_, gem\_handles\_, pitches\_, offsets\_);}
+\DoxyCodeLine{418   media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_add4939656c584a9b2f25e38eb845602f}{drm\_fd\_}} = image\_.drm\_fd\_;}
+\DoxyCodeLine{419   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{420 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_ac4087d8c1084fede3414f6e578de9183}\label{classhwcomposer_1_1DrmBuffer_ac4087d8c1084fede3414f6e578de9183}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Dump@{Dump}}
+\index{Dump@{Dump}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Buffer\+::\+Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a0f1c365c9c73e7608d07cf699279ddcb}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 426 of file drmbuffer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{426                      \{}
+\DoxyCodeLine{427   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"DrmBuffer Information Starts. -------------"});}
+\DoxyCodeLine{428   \textcolor{keywordflow}{if} (usage\_ == kLayerNormal)}
+\DoxyCodeLine{429     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"BufferUsage: kLayerNormal."});}
+\DoxyCodeLine{430   \textcolor{keywordflow}{if} (usage\_ == kLayerCursor)}
+\DoxyCodeLine{431     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"BufferUsage: kLayerCursor."});}
+\DoxyCodeLine{432   \textcolor{keywordflow}{if} (usage\_ == kLayerProtected)}
+\DoxyCodeLine{433     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"BufferUsage: kLayerProtected."});}
+\DoxyCodeLine{434   \textcolor{keywordflow}{if} (usage\_ == kLayerVideo)}
+\DoxyCodeLine{435     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"BufferUsage: kLayerVideo."});}
+\DoxyCodeLine{436   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Width: \%d"}, width\_);}
+\DoxyCodeLine{437   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Height: \%d"}, height\_);}
+\DoxyCodeLine{438   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Fb: \%d"}, image\_.drm\_fd\_);}
+\DoxyCodeLine{439   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Prime Handle: \%d"}, image\_.handle\_->meta\_data\_.prime\_fds\_[0]);}
+\DoxyCodeLine{440   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Format: \%4.4s"}, (\textcolor{keywordtype}{char}*)\&format\_);}
+\DoxyCodeLine{441   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < 4; i++) \{}
+\DoxyCodeLine{442     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Pitch:\%d value:\%d"}, i, pitches\_[i]);}
+\DoxyCodeLine{443     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Offset:\%d value:\%d"}, i, offsets\_[i]);}
+\DoxyCodeLine{444     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Gem Handles:\%d value:\%d"}, i, gem\_handles\_[i]);}
+\DoxyCodeLine{445   \}}
+\DoxyCodeLine{446   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"DrmBuffer Information Ends. -------------"});}
+\DoxyCodeLine{447 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_accd7dc14e04bd76beca146fc3d265f81}\label{classhwcomposer_1_1DrmBuffer_accd7dc14e04bd76beca146fc3d265f81}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Fb@{Get\+Fb}}
+\index{Get\+Fb@{Get\+Fb}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Fb()}{GetFb()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Fb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a9860269bb8712eee5c7c4ca1c8846e9a}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 57 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                   \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} image\_.drm\_fd\_;}
+\DoxyCodeLine{59   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a35eecd412bab8ea5822ec7a81c2fc34a}\label{classhwcomposer_1_1DrmBuffer_a35eecd412bab8ea5822ec7a81c2fc34a}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Format@{Get\+Format}}
+\index{Get\+Format@{Get\+Format}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Format()}{GetFormat()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_af12a31161149b0f89e92e5dfc18732c5}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 49 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                       \{}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} format\_;}
+\DoxyCodeLine{51   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a7a2a0fe73ce6ef5468c1dc6b3b099d88}\label{classhwcomposer_1_1DrmBuffer_a7a2a0fe73ce6ef5468c1dc6b3b099d88}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Gpu\+Resource@{Get\+Gpu\+Resource}}
+\index{Get\+Gpu\+Resource@{Get\+Gpu\+Resource}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Gpu\+Resource()}{GetGpuResource()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{Resource\+Handle}} \& hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Gpu\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehwcomposer_ace90739a34de8ec5b30559423cdef990}{Gpu\+Display}}}]{egl\+\_\+display,  }\item[{bool}]{external\+\_\+import }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a121d2b77c40a30725d804cee4d2107a5}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 128 of file drmbuffer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129                                                                       \{}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#if USE\_GL}}
+\DoxyCodeLine{131   \textcolor{keywordflow}{if} (image\_.image\_ == 0) \{}
+\DoxyCodeLine{132     EGLImageKHR image = EGL\_NO\_IMAGE\_KHR;}
+\DoxyCodeLine{133     uint32\_t total\_planes = image\_.handle\_->meta\_data\_.num\_planes\_;}
+\DoxyCodeLine{134     \textcolor{comment}{// Note: If eglCreateImageKHR is successful for a EGL\_LINUX\_DMA\_BUF\_EXT}}
+\DoxyCodeLine{135     \textcolor{comment}{// target, the EGL will take a reference to the dma\_buf.}}
+\DoxyCodeLine{136     \textcolor{keywordflow}{if} ((usage\_ == kLayerVideo) \&\& total\_planes > 1) \{}
+\DoxyCodeLine{137       \textcolor{keywordflow}{if} (total\_planes == 2) \{}
+\DoxyCodeLine{138         \textcolor{keyword}{const} EGLint attr\_list\_nv12[] = \{}
+\DoxyCodeLine{139             EGL\_WIDTH,}
+\DoxyCodeLine{140             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(width\_),}
+\DoxyCodeLine{141             EGL\_HEIGHT,}
+\DoxyCodeLine{142             static\_cast<EGLint>(height\_),}
+\DoxyCodeLine{143             EGL\_LINUX\_DRM\_FOURCC\_EXT,}
+\DoxyCodeLine{144             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(format\_),}
+\DoxyCodeLine{145             EGL\_DMA\_BUF\_PLANE0\_FD\_EXT,}
+\DoxyCodeLine{146             static\_cast<EGLint>(image\_.handle\_->meta\_data\_.prime\_fds\_[0]),}
+\DoxyCodeLine{147             EGL\_DMA\_BUF\_PLANE0\_PITCH\_EXT,}
+\DoxyCodeLine{148             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(pitches\_[0]),}
+\DoxyCodeLine{149             EGL\_DMA\_BUF\_PLANE0\_OFFSET\_EXT,}
+\DoxyCodeLine{150             static\_cast<EGLint>(offsets\_[0]),}
+\DoxyCodeLine{151             EGL\_DMA\_BUF\_PLANE1\_FD\_EXT,}
+\DoxyCodeLine{152             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(image\_.handle\_->meta\_data\_.prime\_fds\_[1]),}
+\DoxyCodeLine{153             EGL\_DMA\_BUF\_PLANE1\_PITCH\_EXT,}
+\DoxyCodeLine{154             static\_cast<EGLint>(pitches\_[1]),}
+\DoxyCodeLine{155             EGL\_DMA\_BUF\_PLANE1\_OFFSET\_EXT,}
+\DoxyCodeLine{156             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(offsets\_[1]),}
+\DoxyCodeLine{157             EGL\_NONE,}
+\DoxyCodeLine{158             0\};}
+\DoxyCodeLine{159         image = \mbox{\hyperlink{namespacehwcomposer_a1b9b71782e10965d5f44995bac78ac92}{eglCreateImageKHR}}(}
+\DoxyCodeLine{160             egl\_display, EGL\_NO\_CONTEXT, EGL\_LINUX\_DMA\_BUF\_EXT,}
+\DoxyCodeLine{161             static\_cast<EGLClientBuffer>(\textcolor{keyword}{nullptr}), attr\_list\_nv12);}
+\DoxyCodeLine{162       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{163         \textcolor{keyword}{const} EGLint attr\_list\_yv12[] = \{}
+\DoxyCodeLine{164             EGL\_WIDTH,}
+\DoxyCodeLine{165             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(width\_),}
+\DoxyCodeLine{166             EGL\_HEIGHT,}
+\DoxyCodeLine{167             static\_cast<EGLint>(height\_),}
+\DoxyCodeLine{168             EGL\_LINUX\_DRM\_FOURCC\_EXT,}
+\DoxyCodeLine{169             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(format\_),}
+\DoxyCodeLine{170             EGL\_DMA\_BUF\_PLANE0\_FD\_EXT,}
+\DoxyCodeLine{171             static\_cast<EGLint>(image\_.handle\_->meta\_data\_.prime\_fds\_[0]),}
+\DoxyCodeLine{172             EGL\_DMA\_BUF\_PLANE0\_PITCH\_EXT,}
+\DoxyCodeLine{173             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(pitches\_[0]),}
+\DoxyCodeLine{174             EGL\_DMA\_BUF\_PLANE0\_OFFSET\_EXT,}
+\DoxyCodeLine{175             static\_cast<EGLint>(offsets\_[0]),}
+\DoxyCodeLine{176             EGL\_DMA\_BUF\_PLANE1\_FD\_EXT,}
+\DoxyCodeLine{177             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(image\_.handle\_->meta\_data\_.prime\_fds\_[1]),}
+\DoxyCodeLine{178             EGL\_DMA\_BUF\_PLANE1\_PITCH\_EXT,}
+\DoxyCodeLine{179             static\_cast<EGLint>(pitches\_[1]),}
+\DoxyCodeLine{180             EGL\_DMA\_BUF\_PLANE1\_OFFSET\_EXT,}
+\DoxyCodeLine{181             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(offsets\_[1]),}
+\DoxyCodeLine{182             EGL\_DMA\_BUF\_PLANE2\_FD\_EXT,}
+\DoxyCodeLine{183             static\_cast<EGLint>(image\_.handle\_->meta\_data\_.prime\_fds\_[2]),}
+\DoxyCodeLine{184             EGL\_DMA\_BUF\_PLANE2\_PITCH\_EXT,}
+\DoxyCodeLine{185             \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(pitches\_[2]),}
+\DoxyCodeLine{186             EGL\_DMA\_BUF\_PLANE2\_OFFSET\_EXT,}
+\DoxyCodeLine{187             static\_cast<EGLint>(offsets\_[2]),}
+\DoxyCodeLine{188             EGL\_NONE,}
+\DoxyCodeLine{189             0\};}
+\DoxyCodeLine{190         image = \mbox{\hyperlink{namespacehwcomposer_a1b9b71782e10965d5f44995bac78ac92}{eglCreateImageKHR}}(}
+\DoxyCodeLine{191             egl\_display, EGL\_NO\_CONTEXT, EGL\_LINUX\_DMA\_BUF\_EXT,}
+\DoxyCodeLine{192             static\_cast<EGLClientBuffer>(\textcolor{keyword}{nullptr}), attr\_list\_yv12);}
+\DoxyCodeLine{193       \}}
+\DoxyCodeLine{194     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (image\_.handle\_->meta\_data\_.fb\_modifiers\_[0] > 0 \&\&}
+\DoxyCodeLine{195                total\_planes == 2) \{}
+\DoxyCodeLine{196       EGLint modifier\_low =}
+\DoxyCodeLine{197           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(image\_.handle\_->meta\_data\_.fb\_modifiers\_[1]);}
+\DoxyCodeLine{198       EGLint modifier\_high =}
+\DoxyCodeLine{199           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(image\_.handle\_->meta\_data\_.fb\_modifiers\_[0]);}
+\DoxyCodeLine{200       \textcolor{keyword}{const} EGLint image\_attrs[] = \{}
+\DoxyCodeLine{201           EGL\_WIDTH,}
+\DoxyCodeLine{202           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(width\_),}
+\DoxyCodeLine{203           EGL\_HEIGHT,}
+\DoxyCodeLine{204           static\_cast<EGLint>(height\_),}
+\DoxyCodeLine{205           EGL\_LINUX\_DRM\_FOURCC\_EXT,}
+\DoxyCodeLine{206           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(format\_),}
+\DoxyCodeLine{207           EGL\_DMA\_BUF\_PLANE0\_FD\_EXT,}
+\DoxyCodeLine{208           static\_cast<EGLint>(image\_.handle\_->meta\_data\_.prime\_fds\_[0]),}
+\DoxyCodeLine{209           EGL\_DMA\_BUF\_PLANE0\_PITCH\_EXT,}
+\DoxyCodeLine{210           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(pitches\_[0]),}
+\DoxyCodeLine{211           EGL\_DMA\_BUF\_PLANE0\_OFFSET\_EXT,}
+\DoxyCodeLine{212           static\_cast<EGLint>(offsets\_[0]),}
+\DoxyCodeLine{213           \mbox{\hyperlink{drmbuffer_8cpp_ae47c847a6b891b8e589177b36901085c}{EGL\_DMA\_BUF\_PLANE0\_MODIFIER\_LO\_EXT}},}
+\DoxyCodeLine{214           modifier\_low,}
+\DoxyCodeLine{215           \mbox{\hyperlink{drmbuffer_8cpp_aaffb6f543f514e8d31b29839fb30c2fd}{EGL\_DMA\_BUF\_PLANE0\_MODIFIER\_HI\_EXT}},}
+\DoxyCodeLine{216           modifier\_high,}
+\DoxyCodeLine{217           EGL\_DMA\_BUF\_PLANE1\_FD\_EXT,}
+\DoxyCodeLine{218           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(image\_.handle\_->meta\_data\_.prime\_fds\_[1]),}
+\DoxyCodeLine{219           EGL\_DMA\_BUF\_PLANE1\_PITCH\_EXT,}
+\DoxyCodeLine{220           static\_cast<EGLint>(pitches\_[1]),}
+\DoxyCodeLine{221           EGL\_DMA\_BUF\_PLANE1\_OFFSET\_EXT,}
+\DoxyCodeLine{222           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(offsets\_[1]),}
+\DoxyCodeLine{223           \mbox{\hyperlink{drmbuffer_8cpp_a72a8ef96c90fd2930cbc9ee5f5049b6d}{EGL\_DMA\_BUF\_PLANE1\_MODIFIER\_LO\_EXT}},}
+\DoxyCodeLine{224           modifier\_low,}
+\DoxyCodeLine{225           \mbox{\hyperlink{drmbuffer_8cpp_a1a2b5bfe379b69767306ca63455788da}{EGL\_DMA\_BUF\_PLANE1\_MODIFIER\_HI\_EXT}},}
+\DoxyCodeLine{226           modifier\_high,}
+\DoxyCodeLine{227           EGL\_NONE,}
+\DoxyCodeLine{228       \};}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230       image =}
+\DoxyCodeLine{231           \mbox{\hyperlink{namespacehwcomposer_a1b9b71782e10965d5f44995bac78ac92}{eglCreateImageKHR}}(egl\_display, EGL\_NO\_CONTEXT, EGL\_LINUX\_DMA\_BUF\_EXT,}
+\DoxyCodeLine{232                             static\_cast<EGLClientBuffer>(\textcolor{keyword}{nullptr}), image\_attrs);}
+\DoxyCodeLine{233     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{234       \textcolor{keyword}{const} EGLint attr\_list[] = \{}
+\DoxyCodeLine{235           EGL\_WIDTH,}
+\DoxyCodeLine{236           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(width\_),}
+\DoxyCodeLine{237           EGL\_HEIGHT,}
+\DoxyCodeLine{238           static\_cast<EGLint>(height\_),}
+\DoxyCodeLine{239           EGL\_LINUX\_DRM\_FOURCC\_EXT,}
+\DoxyCodeLine{240           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(format\_),}
+\DoxyCodeLine{241           EGL\_DMA\_BUF\_PLANE0\_FD\_EXT,}
+\DoxyCodeLine{242           static\_cast<EGLint>(image\_.handle\_->meta\_data\_.prime\_fds\_[0]),}
+\DoxyCodeLine{243           EGL\_DMA\_BUF\_PLANE0\_PITCH\_EXT,}
+\DoxyCodeLine{244           \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(pitches\_[0]),}
+\DoxyCodeLine{245           EGL\_DMA\_BUF\_PLANE0\_OFFSET\_EXT,}
+\DoxyCodeLine{246           0,}
+\DoxyCodeLine{247           EGL\_NONE,}
+\DoxyCodeLine{248           0\};}
+\DoxyCodeLine{249       image =}
+\DoxyCodeLine{250           \mbox{\hyperlink{namespacehwcomposer_a1b9b71782e10965d5f44995bac78ac92}{eglCreateImageKHR}}(egl\_display, EGL\_NO\_CONTEXT, EGL\_LINUX\_DMA\_BUF\_EXT,}
+\DoxyCodeLine{251                             static\_cast<EGLClientBuffer>(\textcolor{keyword}{nullptr}), attr\_list);}
+\DoxyCodeLine{252     \}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254     \textcolor{keywordflow}{if} (image == EGL\_NO\_IMAGE\_KHR) \{}
+\DoxyCodeLine{255       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"eglCreateKHR failed to create image for DrmBuffer"});}
+\DoxyCodeLine{256     \}}
+\DoxyCodeLine{257     image\_.image\_ = image;}
+\DoxyCodeLine{258   \}}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260   GLenum target = GL\_TEXTURE\_EXTERNAL\_OES;}
+\DoxyCodeLine{261   \textcolor{keywordflow}{if} (!external\_import) \{}
+\DoxyCodeLine{262     target = GL\_TEXTURE\_2D;}
+\DoxyCodeLine{263   \}}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265   \textcolor{keywordflow}{if} (!image\_.texture\_) \{}
+\DoxyCodeLine{266     GLuint texture;}
+\DoxyCodeLine{267     glGenTextures(1, \&texture);}
+\DoxyCodeLine{268     image\_.texture\_ = texture;}
+\DoxyCodeLine{269   \}}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{271   glBindTexture(target, image\_.texture\_);}
+\DoxyCodeLine{272   \mbox{\hyperlink{namespacehwcomposer_ae0c1af9f8e55e18591c646640bb289a3}{glEGLImageTargetTexture2DOES}}(target, (GLeglImageOES)image\_.image\_);}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274   glBindTexture(target, 0);}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276   \textcolor{keywordflow}{if} (!external\_import \&\& image\_.fb\_ == 0) \{}
+\DoxyCodeLine{277     glGenFramebuffers(1, \&image\_.fb\_);}
+\DoxyCodeLine{278   \}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#elif USE\_VK}}
+\DoxyCodeLine{280   \textcolor{keywordflow}{if} (image\_.image\_ == VK\_NULL\_HANDLE) \{}
+\DoxyCodeLine{281     VkDevice dev = egl\_display;}
+\DoxyCodeLine{282     VkResult res;}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284     PFN\_vkCreateDmaBufImageINTEL vkCreateDmaBufImageINTEL =}
+\DoxyCodeLine{285         (PFN\_vkCreateDmaBufImageINTEL)vkGetDeviceProcAddr(}
+\DoxyCodeLine{286             dev, \textcolor{stringliteral}{"vkCreateDmaBufImageINTEL"});}
+\DoxyCodeLine{287     \textcolor{keywordflow}{if} (vkCreateDmaBufImageINTEL == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{288       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkGetDeviceProcAddr(\(\backslash\)"vkCreateDmaBufImageINTEL\(\backslash\)") failed\(\backslash\)n"});}
+\DoxyCodeLine{289     \}}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{291     VkFormat vk\_format = NativeToVkFormat(format\_);}
+\DoxyCodeLine{292     \textcolor{keywordflow}{if} (vk\_format == VK\_FORMAT\_UNDEFINED) \{}
+\DoxyCodeLine{293       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed DRM -> Vulkan format conversion\(\backslash\)n"});}
+\DoxyCodeLine{294     \}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296     VkExtent3D image\_extent = \{\};}
+\DoxyCodeLine{297     image\_extent.width = width\_;}
+\DoxyCodeLine{298     image\_extent.height = height\_;}
+\DoxyCodeLine{299     image\_extent.depth = 1;}
+\DoxyCodeLine{300 }
+\DoxyCodeLine{301     VkDmaBufImageCreateInfo image\_create = \{\};}
+\DoxyCodeLine{302     image\_create.sType =}
+\DoxyCodeLine{303         (\textcolor{keyword}{enum} VkStructureType)VK\_STRUCTURE\_TYPE\_DMA\_BUF\_IMAGE\_CREATE\_INFO\_INTEL;}
+\DoxyCodeLine{304     image\_create.fd =}
+\DoxyCodeLine{305         \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(image\_.handle\_->meta\_data\_.prime\_fds\_[0]);}
+\DoxyCodeLine{306     image\_create.format = vk\_format;}
+\DoxyCodeLine{307     image\_create.extent = image\_extent;}
+\DoxyCodeLine{308     image\_create.strideInBytes = pitches\_[0];}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310     res = vkCreateDmaBufImageINTEL(dev, \&image\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&image\_.memory\_,}
+\DoxyCodeLine{311                                    \&image\_.image\_);}
+\DoxyCodeLine{312     \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{313       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateDmaBufImageINTEL failed\(\backslash\)n"});}
+\DoxyCodeLine{314     \}}
+\DoxyCodeLine{315   \}}
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{317   \textcolor{keywordflow}{return} image\_;}
+\DoxyCodeLine{318 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a1dc65623ff13c470c9d71c4054bc6b36}\label{classhwcomposer_1_1DrmBuffer_a1dc65623ff13c470c9d71c4054bc6b36}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Gpu\+Resource@{Get\+Gpu\+Resource}}
+\index{Get\+Gpu\+Resource@{Get\+Gpu\+Resource}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Gpu\+Resource()}{GetGpuResource()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{Resource\+Handle}} \& hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Gpu\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a8cf41eb9f46a27d3ac2c6e5cf4f310b4}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 388 of file drmbuffer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{388                                                 \{}
+\DoxyCodeLine{389   \textcolor{keywordflow}{return} image\_;}
+\DoxyCodeLine{390 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a42a02adf7559b89d4f9f958242880b61}\label{classhwcomposer_1_1DrmBuffer_a42a02adf7559b89d4f9f958242880b61}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Height()}{GetHeight()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a30b6043a9da6a8116d0471d66f836878}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 45 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                       \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} height\_;}
+\DoxyCodeLine{47   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a816ad1d2e1f7698eba57d58096b532dc}\label{classhwcomposer_1_1DrmBuffer_a816ad1d2e1f7698eba57d58096b532dc}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Media\+Resource@{Get\+Media\+Resource}}
+\index{Get\+Media\+Resource@{Get\+Media\+Resource}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Media\+Resource()}{GetMediaResource()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacehwcomposer_aa99e35835961ac7d6baa59a04131ff42}{Media\+Resource\+Handle}} \& hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Media\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehwcomposer_a10d64930907cc775f9cea6b39d8cb404}{Media\+Display}}}]{display,  }\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a947d4a8ef39b9a1a254325e32d4a45c2}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 320 of file drmbuffer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{322                                                                         \{}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#ifndef DISABLE\_VA}}
+\DoxyCodeLine{324   \textcolor{keywordflow}{if} (media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_af82420941f64a848639e0ac80a7b2861}{surface\_}} != VA\_INVALID\_ID) \{}
+\DoxyCodeLine{325     \textcolor{keywordflow}{if} ((previous\_width\_ == width) \&\& (previous\_height\_ == height)) \{}
+\DoxyCodeLine{326       \textcolor{keywordflow}{return} media\_image\_;}
+\DoxyCodeLine{327     \}}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329     \mbox{\hyperlink{namespacehwcomposer_aa99e35835961ac7d6baa59a04131ff42}{MediaResourceHandle}} media\_resource;}
+\DoxyCodeLine{330     media\_resource.\mbox{\hyperlink{structhwcomposer_1_1media__import_af82420941f64a848639e0ac80a7b2861}{surface\_}} = media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_af82420941f64a848639e0ac80a7b2861}{surface\_}};}
+\DoxyCodeLine{331     media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_af82420941f64a848639e0ac80a7b2861}{surface\_}} = VA\_INVALID\_ID;}
+\DoxyCodeLine{332     resource\_manager\_->\mbox{\hyperlink{classhwcomposer_1_1ResourceManager_a0813f1ac50652ca59c3f4b03291dd4b4}{MarkMediaResourceForDeletion}}(media\_resource);}
+\DoxyCodeLine{333   \}}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335   previous\_width\_ = width;}
+\DoxyCodeLine{336   previous\_height\_ = height;}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338   VASurfaceAttribExternalBuffers external;}
+\DoxyCodeLine{339   memset(\&external, 0, \textcolor{keyword}{sizeof}(external));}
+\DoxyCodeLine{340   uint32\_t rt\_format = \mbox{\hyperlink{namespacehwcomposer_a487f8d9f8fe8490d7057be9a1c67b42e}{DrmFormatToRTFormat}}(format\_);}
+\DoxyCodeLine{341   uint32\_t total\_planes = image\_.handle\_->meta\_data\_.num\_planes\_;}
+\DoxyCodeLine{342   external.pixel\_format = \mbox{\hyperlink{namespacehwcomposer_a74da6820276a700b866ddcb92330b81b}{DrmFormatToVAFormat}}(format\_);}
+\DoxyCodeLine{343   external.width = width\_;}
+\DoxyCodeLine{344   external.height = height\_;}
+\DoxyCodeLine{345   external.num\_planes = total\_planes;}
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#if VA\_MAJOR\_VERSION < 1}}
+\DoxyCodeLine{347   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} prime\_fds[total\_planes];}
+\DoxyCodeLine{348 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{349   uintptr\_t prime\_fds[total\_planes];}
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{351   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < total\_planes; i++) \{}
+\DoxyCodeLine{352     external.pitches[i] = pitches\_[i];}
+\DoxyCodeLine{353     external.offsets[i] = offsets\_[i];}
+\DoxyCodeLine{354     prime\_fds[i] = image\_.handle\_->meta\_data\_.prime\_fds\_[i];}
+\DoxyCodeLine{355   \}}
+\DoxyCodeLine{356 }
+\DoxyCodeLine{357   external.num\_buffers = total\_planes;}
+\DoxyCodeLine{358   external.buffers = prime\_fds;}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360   VASurfaceAttrib attribs[2];}
+\DoxyCodeLine{361   attribs[0].flags = VA\_SURFACE\_ATTRIB\_SETTABLE;}
+\DoxyCodeLine{362   attribs[0].type = VASurfaceAttribMemoryType;}
+\DoxyCodeLine{363   attribs[0].value.type = VAGenericValueTypeInteger;}
+\DoxyCodeLine{364   attribs[0].value.value.i = VA\_SURFACE\_ATTRIB\_MEM\_TYPE\_DRM\_PRIME;}
+\DoxyCodeLine{365 }
+\DoxyCodeLine{366   attribs[1].flags = VA\_SURFACE\_ATTRIB\_SETTABLE;}
+\DoxyCodeLine{367   attribs[1].type = VASurfaceAttribExternalBufferDescriptor;}
+\DoxyCodeLine{368   attribs[1].value.type = VAGenericValueTypePointer;}
+\DoxyCodeLine{369   attribs[1].value.value.p = \&external;}
+\DoxyCodeLine{370 }
+\DoxyCodeLine{371   VAStatus ret =}
+\DoxyCodeLine{372       vaCreateSurfaces(display, rt\_format, external.width, external.height,}
+\DoxyCodeLine{373                        \&media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_af82420941f64a848639e0ac80a7b2861}{surface\_}}, 1, attribs, 2);}
+\DoxyCodeLine{374   \textcolor{keywordflow}{if} (ret != VA\_STATUS\_SUCCESS)}
+\DoxyCodeLine{375     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to create VASurface from drmbuffer with ret \%x"}, ret);}
+\DoxyCodeLine{376 }
+\DoxyCodeLine{377   \textcolor{keywordflow}{return} media\_image\_;}
+\DoxyCodeLine{378 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{379 }
+\DoxyCodeLine{380   \textcolor{comment}{// FIXME: when va is disabled, this function should}}
+\DoxyCodeLine{381   \textcolor{comment}{// not been called or left to be defined if other media}}
+\DoxyCodeLine{382   \textcolor{comment}{// backend}}
+\DoxyCodeLine{383   \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"GetMediaResource is not implemented for this Media Backend."});}
+\DoxyCodeLine{384   \textcolor{keywordflow}{return} media\_image\_;}
+\DoxyCodeLine{385 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{386 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a4545b534f1266e287d351ddb6fc2e2db}\label{classhwcomposer_1_1DrmBuffer_a4545b534f1266e287d351ddb6fc2e2db}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Offsets@{Get\+Offsets}}
+\index{Get\+Offsets@{Get\+Offsets}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Offsets()}{GetOffsets()}}
+{\footnotesize\ttfamily const uint32\+\_\+t$\ast$ hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Offsets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_ab2ebf4c92de3d7ad57f108871fa58d24}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 69 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                               \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} offsets\_;}
+\DoxyCodeLine{71   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a66a876cebee293bc84bf0dc6edd35f0c}\label{classhwcomposer_1_1DrmBuffer_a66a876cebee293bc84bf0dc6edd35f0c}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Original\+Handle@{Get\+Original\+Handle}}
+\index{Get\+Original\+Handle@{Get\+Original\+Handle}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Original\+Handle()}{GetOriginalHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Original\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a29ba52c586290b087991e195212c53f2}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 90 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90                                                      \{}
+\DoxyCodeLine{91     \textcolor{keywordflow}{return} original\_handle\_;}
+\DoxyCodeLine{92   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a6241968d9bcfff9e6e746feb75422f17}\label{classhwcomposer_1_1DrmBuffer_a6241968d9bcfff9e6e746feb75422f17}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Pitches@{Get\+Pitches}}
+\index{Get\+Pitches@{Get\+Pitches}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Pitches()}{GetPitches()}}
+{\footnotesize\ttfamily const uint32\+\_\+t$\ast$ hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Pitches (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_aa359c9f8d8c6fbcaf4ee2268e4d377f6}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 65 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                                               \{}
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} pitches\_;}
+\DoxyCodeLine{67   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a5844745322eb108eddb1e41eb1cf4f40}\label{classhwcomposer_1_1DrmBuffer_a5844745322eb108eddb1e41eb1cf4f40}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Prime\+FD@{Get\+Prime\+FD}}
+\index{Get\+Prime\+FD@{Get\+Prime\+FD}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Prime\+F\+D()}{GetPrimeFD()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Prime\+FD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a32b5e1284161f9c129ad79ac11da760e}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 61 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                        \{}
+\DoxyCodeLine{62     \textcolor{keywordflow}{return} image\_.handle\_->meta\_data\_.prime\_fds\_[0];}
+\DoxyCodeLine{63   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_ae559626c3e3029ab95906bbc5c9319f7}\label{classhwcomposer_1_1DrmBuffer_ae559626c3e3029ab95906bbc5c9319f7}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Tiling\+Mode@{Get\+Tiling\+Mode}}
+\index{Get\+Tiling\+Mode@{Get\+Tiling\+Mode}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Tiling\+Mode()}{GetTilingMode()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Tiling\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a031e9b24c6dcbdd8a4ae6d842dac5db0}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 73 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                           \{}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} tiling\_mode\_;}
+\DoxyCodeLine{75   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a41cb25d650c188e8be9ffa972776680b}\label{classhwcomposer_1_1DrmBuffer_a41cb25d650c188e8be9ffa972776680b}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Usage@{Get\+Usage}}
+\index{Get\+Usage@{Get\+Usage}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Usage()}{GetUsage()}}
+{\footnotesize\ttfamily H\+W\+C\+Layer\+Type hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_ab504f33fc91e6e49b1168331ff71b622}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 53 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                          \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} usage\_;}
+\DoxyCodeLine{55   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_ac4af6516c644cfb6bbf34083bbdc94ae}\label{classhwcomposer_1_1DrmBuffer_ac4af6516c644cfb6bbf34083bbdc94ae}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Get\+Width@{Get\+Width}}
+\index{Get\+Width@{Get\+Width}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Width()}{GetWidth()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Buffer\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_aa9d60e96c1b059944dfb952bbaf76f3b}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 41 of file drmbuffer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                      \{}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} width\_;}
+\DoxyCodeLine{43   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_afced6df8661c057ca6b7195d16c49a80}\label{classhwcomposer_1_1DrmBuffer_afced6df8661c057ca6b7195d16c49a80}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Initialize\+From\+Native\+Handle@{Initialize\+From\+Native\+Handle}}
+\index{Initialize\+From\+Native\+Handle@{Initialize\+From\+Native\+Handle}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Initialize\+From\+Native\+Handle()}{InitializeFromNativeHandle()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Buffer\+::\+Initialize\+From\+Native\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{buffer\+\_\+manager,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_afcb712b3cc25aa9d5d4ee719ea660451}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 109 of file drmbuffer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111                                               \{}
+\DoxyCodeLine{112   fb\_manager\_ = frame\_buffer\_manager;}
+\DoxyCodeLine{113   resource\_manager\_ = resource\_manager;}
+\DoxyCodeLine{114   \textcolor{keyword}{const} NativeBufferHandler* handler =}
+\DoxyCodeLine{115       resource\_manager\_->\mbox{\hyperlink{classhwcomposer_1_1ResourceManager_a3835ffcbf6c6ca862ad72744c95d087d}{GetNativeBufferHandler}}();}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117   handler->\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a96581fb8bd36e959c8da6b9f634ecd32}{CopyHandle}}(handle, \&image\_.handle\_);}
+\DoxyCodeLine{118   \textcolor{keywordflow}{if} (!handler->ImportBuffer(image\_.handle\_)) \{}
+\DoxyCodeLine{119     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to Import buffer."});}
+\DoxyCodeLine{120     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{121   \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123   media\_image\_.\mbox{\hyperlink{structhwcomposer_1_1media__import_ab43515fb27f0e91598d906ae81acb6cd}{handle\_}} = image\_.handle\_;}
+\DoxyCodeLine{124   Initialize(image\_.handle\_->meta\_data\_);}
+\DoxyCodeLine{125   original\_handle\_ = handle;}
+\DoxyCodeLine{126 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a6d58dec7ca17507de42f722d1af88baa}\label{classhwcomposer_1_1DrmBuffer_a6d58dec7ca17507de42f722d1af88baa}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1DrmBuffer}{Drm\+Buffer}}\& hwcomposer\+::\+Drm\+Buffer\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DrmBuffer}{Drm\+Buffer}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1DrmBuffer_a2d7dbadddf5cce8260aa224af1b495c1}\label{classhwcomposer_1_1DrmBuffer_a2d7dbadddf5cce8260aa224af1b495c1}} 
+\index{hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}!Set\+Original\+Handle@{Set\+Original\+Handle}}
+\index{Set\+Original\+Handle@{Set\+Original\+Handle}!hwcomposer\+::\+Drm\+Buffer@{hwcomposer\+::\+Drm\+Buffer}}
+\subsubsection{\texorpdfstring{Set\+Original\+Handle()}{SetOriginalHandle()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Buffer\+::\+Set\+Original\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a458dd8327bacb7a6560ac539e76ae408}{hwcomposer\+::\+Overlay\+Buffer}}.
+
+
+
+Definition at line 422 of file drmbuffer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{422                                                         \{}
+\DoxyCodeLine{423   original\_handle\_ = handle;}
+\DoxyCodeLine{424 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmbuffer_8h}{drmbuffer.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmbuffer_8cpp}{drmbuffer.\+cpp}}\end{DoxyCompactItemize}

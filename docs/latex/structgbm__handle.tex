@@ -1,0 +1,142 @@
+\hypertarget{structgbm__handle}{}\section{gbm\+\_\+handle Struct Reference}
+\label{structgbm__handle}\index{gbm\+\_\+handle@{gbm\+\_\+handle}}
+
+
+{\ttfamily \#include $<$platformdefines.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct gbm\_import\_fd\_data \mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}\\
+\>struct gbm\_import\_fd\_modifier\_data \mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}\\
+\} \mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}\\
+
+\end{tabbing}\item 
+struct gbm\+\_\+bo $\ast$ \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+struct gbm\+\_\+bo $\ast$ \mbox{\hyperlink{structgbm__handle_a4b2a575f5ac73f3979610fae70b44ffd}{imported\+\_\+bo}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+\mbox{\hyperlink{structHwcBuffer}{Hwc\+Buffer}} \mbox{\hyperlink{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}{meta\+\_\+data\+\_\+}}
+\item 
+bool \mbox{\hyperlink{structgbm__handle_aa98e98315d3cd7596b980b80e1199649}{hwc\+\_\+buffer\+\_\+}} = false
+\item 
+void $\ast$ \mbox{\hyperlink{structgbm__handle_ade4ce7c6a2df0e1e351af03309098005}{pixel\+\_\+memory\+\_\+}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structgbm__handle_a5deee85dd01fe245644d1971dcdd1f89}{gbm\+\_\+flags}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structgbm__handle_aeaaf0fd4477abfe406de45109d6af33c}{layer\+\_\+type\+\_\+}} = hwcomposer\+::k\+Layer\+Normal
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file platformdefines.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}\label{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!bo@{bo}}
+\index{bo@{bo}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{bo}{bo}}
+{\footnotesize\ttfamily struct gbm\+\_\+bo$\ast$ gbm\+\_\+handle\+::bo = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}}
+
+
+
+Definition at line 42 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}\label{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!fd\+\_\+data@{fd\+\_\+data}}
+\index{fd\+\_\+data@{fd\+\_\+data}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{fd\+\_\+data}{fd\_data}}
+{\footnotesize\ttfamily struct gbm\+\_\+import\+\_\+fd\+\_\+data gbm\+\_\+handle\+::fd\+\_\+data}
+
+
+
+Definition at line 38 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}\label{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!fd\+\_\+modifier\+\_\+data@{fd\+\_\+modifier\+\_\+data}}
+\index{fd\+\_\+modifier\+\_\+data@{fd\+\_\+modifier\+\_\+data}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{fd\+\_\+modifier\+\_\+data}{fd\_modifier\_data}}
+{\footnotesize\ttfamily struct gbm\+\_\+import\+\_\+fd\+\_\+modifier\+\_\+data gbm\+\_\+handle\+::fd\+\_\+modifier\+\_\+data}
+
+
+
+Definition at line 40 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{structgbm__handle_a5deee85dd01fe245644d1971dcdd1f89}\label{structgbm__handle_a5deee85dd01fe245644d1971dcdd1f89}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!gbm\+\_\+flags@{gbm\+\_\+flags}}
+\index{gbm\+\_\+flags@{gbm\+\_\+flags}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{gbm\+\_\+flags}{gbm\_flags}}
+{\footnotesize\ttfamily uint32\+\_\+t gbm\+\_\+handle\+::gbm\+\_\+flags = 0}
+
+
+
+Definition at line 47 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{structgbm__handle_aa98e98315d3cd7596b980b80e1199649}\label{structgbm__handle_aa98e98315d3cd7596b980b80e1199649}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!hwc\+\_\+buffer\+\_\+@{hwc\+\_\+buffer\+\_\+}}
+\index{hwc\+\_\+buffer\+\_\+@{hwc\+\_\+buffer\+\_\+}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{hwc\+\_\+buffer\+\_\+}{hwc\_buffer\_}}
+{\footnotesize\ttfamily bool gbm\+\_\+handle\+::hwc\+\_\+buffer\+\_\+ = false}
+
+
+
+Definition at line 45 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{structgbm__handle_ac2450148a271a449b35ff12966de8518}\label{structgbm__handle_ac2450148a271a449b35ff12966de8518}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!import\+\_\+data@{import\+\_\+data}}
+\index{import\+\_\+data@{import\+\_\+data}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{import\+\_\+data}{import\_data}}
+{\footnotesize\ttfamily union \{ ... \}   gbm\+\_\+handle\+::import\+\_\+data}
+
+\mbox{\Hypertarget{structgbm__handle_a4b2a575f5ac73f3979610fae70b44ffd}\label{structgbm__handle_a4b2a575f5ac73f3979610fae70b44ffd}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!imported\+\_\+bo@{imported\+\_\+bo}}
+\index{imported\+\_\+bo@{imported\+\_\+bo}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{imported\+\_\+bo}{imported\_bo}}
+{\footnotesize\ttfamily struct gbm\+\_\+bo$\ast$ gbm\+\_\+handle\+::imported\+\_\+bo = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}}
+
+
+
+Definition at line 43 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{structgbm__handle_aeaaf0fd4477abfe406de45109d6af33c}\label{structgbm__handle_aeaaf0fd4477abfe406de45109d6af33c}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!layer\+\_\+type\+\_\+@{layer\+\_\+type\+\_\+}}
+\index{layer\+\_\+type\+\_\+@{layer\+\_\+type\+\_\+}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{layer\+\_\+type\+\_\+}{layer\_type\_}}
+{\footnotesize\ttfamily uint32\+\_\+t gbm\+\_\+handle\+::layer\+\_\+type\+\_\+ = hwcomposer\+::k\+Layer\+Normal}
+
+
+
+Definition at line 48 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}\label{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!meta\+\_\+data\+\_\+@{meta\+\_\+data\+\_\+}}
+\index{meta\+\_\+data\+\_\+@{meta\+\_\+data\+\_\+}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{meta\+\_\+data\+\_\+}{meta\_data\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structHwcBuffer}{Hwc\+Buffer}} gbm\+\_\+handle\+::meta\+\_\+data\+\_\+}
+
+
+
+Definition at line 44 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{structgbm__handle_ade4ce7c6a2df0e1e351af03309098005}\label{structgbm__handle_ade4ce7c6a2df0e1e351af03309098005}} 
+\index{gbm\+\_\+handle@{gbm\+\_\+handle}!pixel\+\_\+memory\+\_\+@{pixel\+\_\+memory\+\_\+}}
+\index{pixel\+\_\+memory\+\_\+@{pixel\+\_\+memory\+\_\+}!gbm\+\_\+handle@{gbm\+\_\+handle}}
+\subsubsection{\texorpdfstring{pixel\+\_\+memory\+\_\+}{pixel\_memory\_}}
+{\footnotesize\ttfamily void$\ast$ gbm\+\_\+handle\+::pixel\+\_\+memory\+\_\+ = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}}
+
+
+
+Definition at line 46 of file platformdefines.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/\mbox{\hyperlink{linux_2platformdefines_8h}{platformdefines.\+h}}\end{DoxyCompactItemize}

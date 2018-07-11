@@ -1,0 +1,75 @@
+\hypertarget{structFBKey}{}\section{F\+B\+Key Struct Reference}
+\label{structFBKey}\index{F\+B\+Key@{F\+B\+Key}}
+
+
+{\ttfamily \#include $<$platformcommondefines.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structFBKey_a1b7fd45290caeb682dd7d23bcc567d4d}{F\+B\+Key}} (const uint32\+\_\+t \&num\+\_\+planes, const uint32\+\_\+t(\&igem\+\_\+handles)\mbox{[}4\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\+\_\+handles\+\_\+}} \mbox{[}4\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structFBKey_a3d3bda0ee29a63ca3f9c676d23a472e3}{num\+\_\+planes\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 85 of file platformcommondefines.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structFBKey_a1b7fd45290caeb682dd7d23bcc567d4d}\label{structFBKey_a1b7fd45290caeb682dd7d23bcc567d4d}} 
+\index{F\+B\+Key@{F\+B\+Key}!F\+B\+Key@{F\+B\+Key}}
+\index{F\+B\+Key@{F\+B\+Key}!F\+B\+Key@{F\+B\+Key}}
+\subsubsection{\texorpdfstring{F\+B\+Key()}{FBKey()}}
+{\footnotesize\ttfamily F\+B\+Key\+::\+F\+B\+Key (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{num\+\_\+planes,  }\item[{const uint32\+\_\+t(\&)}]{igem\+\_\+handles\mbox{[}4\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 89 of file platformcommondefines.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                                                        \{}
+\DoxyCodeLine{90     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < 4; i++) \{}
+\DoxyCodeLine{91       \mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[i] = igem\_handles[i];}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93     \mbox{\hyperlink{structFBKey_a3d3bda0ee29a63ca3f9c676d23a472e3}{num\_planes\_}} = num\_planes;}
+\DoxyCodeLine{94   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structFBKey_af9c338051a21174ecb54479cf78116c8}\label{structFBKey_af9c338051a21174ecb54479cf78116c8}} 
+\index{F\+B\+Key@{F\+B\+Key}!gem\+\_\+handles\+\_\+@{gem\+\_\+handles\+\_\+}}
+\index{gem\+\_\+handles\+\_\+@{gem\+\_\+handles\+\_\+}!F\+B\+Key@{F\+B\+Key}}
+\subsubsection{\texorpdfstring{gem\+\_\+handles\+\_\+}{gem\_handles\_}}
+{\footnotesize\ttfamily uint32\+\_\+t F\+B\+Key\+::gem\+\_\+handles\+\_\+\mbox{[}4\mbox{]}}
+
+
+
+Definition at line 86 of file platformcommondefines.\+h.
+
+\mbox{\Hypertarget{structFBKey_a3d3bda0ee29a63ca3f9c676d23a472e3}\label{structFBKey_a3d3bda0ee29a63ca3f9c676d23a472e3}} 
+\index{F\+B\+Key@{F\+B\+Key}!num\+\_\+planes\+\_\+@{num\+\_\+planes\+\_\+}}
+\index{num\+\_\+planes\+\_\+@{num\+\_\+planes\+\_\+}!F\+B\+Key@{F\+B\+Key}}
+\subsubsection{\texorpdfstring{num\+\_\+planes\+\_\+}{num\_planes\_}}
+{\footnotesize\ttfamily uint32\+\_\+t F\+B\+Key\+::num\+\_\+planes\+\_\+}
+
+
+
+Definition at line 87 of file platformcommondefines.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/\mbox{\hyperlink{platformcommondefines_8h}{platformcommondefines.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,1452 @@
+\hypertarget{classhwcomposer_1_1DisplayQueue}{}\section{hwcomposer\+:\+:Display\+Queue Class Reference}
+\label{classhwcomposer_1_1DisplayQueue}\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+
+
+{\ttfamily \#include $<$displayqueue.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_ac02bc414cc8093869e1de9cb5cddb869}{Display\+Queue}} (uint32\+\_\+t gpu\+\_\+fd, bool disable\+\_\+overlay, \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$buffer\+\_\+handler, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay}{Physical\+Display}} $\ast$display)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_ac9eb3ffff04441f086f0a17c795ce5c1}{$\sim$\+Display\+Queue}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a88b95def4d501f85e2a83bef8b1c832d}{Initialize}} (uint32\+\_\+t pipe, uint32\+\_\+t width, uint32\+\_\+t height, \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler}{Display\+Plane\+Handler}} $\ast$plane\+\_\+manager, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_ae3e70e00eba870771703c41b0753216a}{Queue\+Update}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&source\+\_\+layers, int32\+\_\+t $\ast$retire\+\_\+fence, bool $\ast$ignore\+\_\+clone\+\_\+update, \mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$call\+\_\+back, bool handle\+\_\+constraints)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_aa8ae9ab4014c0950196f2687ddc6fbb0}{Set\+Power\+Mode}} (uint32\+\_\+t power\+\_\+mode)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a3b69d049bda17e67403bc782159a6aae}{Check\+Plane\+Format}} (uint32\+\_\+t format)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a04cd89eacae444e6f626bbf0351ce23a}{Set\+Gamma}} (float red, float green, float blue)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a212d623ab62b8b3d57a95dd6eec67869}{Set\+Color\+Transform}} (const float $\ast$matrix, \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}} hint)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a6e8b07f2613ead8eb7c15a3118e386f5}{Set\+Contrast}} (uint32\+\_\+t red, uint32\+\_\+t green, uint32\+\_\+t blue)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_aa7de8c877ac00ff5ab8589535eccbc12}{Set\+Brightness}} (uint32\+\_\+t red, uint32\+\_\+t green, uint32\+\_\+t blue)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_ac20dcfb66475f60f8f45244592be057e}{Set\+Explicit\+Sync\+Support}} (bool disable\+\_\+explicit\+\_\+sync)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_af9685778a5edd676f1cb53384e45f043}{Set\+Video\+Scaling\+Mode}} (uint32\+\_\+t mode)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_af0af87df114aead2719fd8b4169262a2}{Set\+Video\+Color}} (H\+W\+C\+Color\+Control color, float value)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a23e8d5eeba9ca1a1a9c1cbeef4825733}{Get\+Video\+Color}} (H\+W\+C\+Color\+Control color, float $\ast$value, float $\ast$start, float $\ast$end)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a7da63db0845b4c79e3bd856edf4009cb}{Set\+Canvas\+Color}} (uint16\+\_\+t bpc, uint16\+\_\+t red, uint16\+\_\+t green, uint16\+\_\+t blue, uint16\+\_\+t alpha)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a899b71a818bcc2063e8fe8684e90841c}{Restore\+Video\+Default\+Color}} (H\+W\+C\+Color\+Control color)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a5da13b8f765fe2e6816dcd156a363a47}{Set\+Video\+Deinterlace}} (H\+W\+C\+Deinterlace\+Flag flag, H\+W\+C\+Deinterlace\+Control mode)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a36a5b423e28bc63003dd0440dcb55e0b}{Restore\+Video\+Default\+Deinterlace}} ()
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a704b865c6302cfb8fcda1a593544dc92}{Register\+Vsync\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_afde8d6a7c9b823e2300dcb3d9e26765f}{Register\+Refresh\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RefreshCallback}{Refresh\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_ae62d50d722c5cd5fe0161149db137534}{V\+Sync\+Control}} (bool enabled)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_aac8954f6842a697c37ea023687bbcafa}{Handle\+Idle\+Case}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_ae4315f2af3673e1f4065fabe897529de}{Display\+Configuration\+Changed}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_af3ff9ed930230b52624bbb0fea4a753c}{Is\+Ignore\+Updates}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a7aabbaa2b30bef9941b19694f55bc065}{Force\+Refresh}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_af7a7db40de2431b949dc66e757983fea}{Update\+Scaling\+Ratio}} (uint32\+\_\+t primary\+\_\+width, uint32\+\_\+t primary\+\_\+height, uint32\+\_\+t display\+\_\+width, uint32\+\_\+t display\+\_\+height)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a385e83725a9ace5ba2444701f56230fb}{Set\+Clone\+Mode}} (bool cloned)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_aa195d43bfa58dbd7dbb4b64935d3fdc9}{Rotate\+Display}} (H\+W\+C\+Rotation rotation)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a846279cb773b60d9c6408c95e686c479}{Ignore\+Updates}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_aa7bffa150112ffae0780fce86129693f}{Present\+Cloned\+Commit}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayQueue}{Display\+Queue}} $\ast$queue)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_acee236565010db0f1634c0771e251f88}{Notify\+Display\+WA}} (bool enable\+\_\+wa)
+\item 
+const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \& \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a0d2c19cad60b60fd3234aa649656d889}{Get\+Current\+Composition\+Planes}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a352a161dfc0e142d06d1606ffd35863d}{Needs\+Clone\+Validation}} () const
+\item 
+const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_a6efa456f61a20d722b2dc0860dd59296}{Get\+Native\+Buffer\+Handler}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 58 of file displayqueue.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_ac02bc414cc8093869e1de9cb5cddb869}\label{classhwcomposer_1_1DisplayQueue_ac02bc414cc8093869e1de9cb5cddb869}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Display\+Queue@{Display\+Queue}}
+\index{Display\+Queue@{Display\+Queue}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Display\+Queue()}{DisplayQueue()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Display\+Queue\+::\+Display\+Queue (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{bool}]{disable\+\_\+overlay,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$}]{buffer\+\_\+handler,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay}{Physical\+Display}} $\ast$}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40     : gpu\_fd\_(gpu\_fd), display\_(display) \{}
+\DoxyCodeLine{41   \textcolor{keywordflow}{if} (disable\_overlay) \{}
+\DoxyCodeLine{42     state\_ |= kDisableOverlayUsage;}
+\DoxyCodeLine{43   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{44     state\_ \&= ~kDisableOverlayUsage;}
+\DoxyCodeLine{45   \}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47   vblank\_handler\_.reset(\textcolor{keyword}{new} VblankEventHandler(\textcolor{keyword}{this}));}
+\DoxyCodeLine{48   resource\_manager\_.reset(\textcolor{keyword}{new} ResourceManager(buffer\_handler));}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50   \textcolor{comment}{/* use 0x80 as default brightness for all colors */}}
+\DoxyCodeLine{51   brightness\_ = 0x808080;}
+\DoxyCodeLine{52   \textcolor{comment}{/* use HWCColorTransform::kIdentical as default color transform hint */}}
+\DoxyCodeLine{53   color\_transform\_hint\_ = \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88adfd734ecbb8f5b0b82da1f17bfcef923}{HWCColorTransform::kIdentical}};}
+\DoxyCodeLine{54   \textcolor{comment}{/* use 0x80 as default brightness for all colors */}}
+\DoxyCodeLine{55   contrast\_ = 0x808080;}
+\DoxyCodeLine{56   \textcolor{comment}{/* use 1 as default gamma value */}}
+\DoxyCodeLine{57   gamma\_.\mbox{\hyperlink{structhwcomposer_1_1gamma__colors_a02c6848074b1bf52bedf0a97a791fbbd}{red}} = 1;}
+\DoxyCodeLine{58   gamma\_.\mbox{\hyperlink{structhwcomposer_1_1gamma__colors_a920b8cb1cd029474bbbcbfae61d0feb2}{green}} = 1;}
+\DoxyCodeLine{59   gamma\_.\mbox{\hyperlink{structhwcomposer_1_1gamma__colors_a3e2055501bf5bd0be915deb952f26097}{blue}} = 1;}
+\DoxyCodeLine{60   \textcolor{comment}{/* use 0x0 (black) as default canvas/background color for pipe */}}
+\DoxyCodeLine{61   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_acc36ffbe065c257719324261a5132a34}{bpc}} = 8;}
+\DoxyCodeLine{62   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_a1fe32ff54751b722cf22aa5552bbf639}{red}} = 0x0;}
+\DoxyCodeLine{63   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_ac32b9c45f1b36efde1daf1ff611f91a2}{green}} = 0x0;}
+\DoxyCodeLine{64   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_a27ec3e90465f37afc780b4667553c476}{blue}} = 0x0;}
+\DoxyCodeLine{65   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_aa3bc7ed2376661512398ec6be09bde4e}{alpha}} = 0x0;}
+\DoxyCodeLine{66   state\_ |= kNeedsColorCorrection;}
+\DoxyCodeLine{67 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_ac9eb3ffff04441f086f0a17c795ce5c1}\label{classhwcomposer_1_1DisplayQueue_ac9eb3ffff04441f086f0a17c795ce5c1}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!````~Display\+Queue@{$\sim$\+Display\+Queue}}
+\index{````~Display\+Queue@{$\sim$\+Display\+Queue}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{$\sim$\+Display\+Queue()}{~DisplayQueue()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Display\+Queue\+::$\sim$\+Display\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                             \{}
+\DoxyCodeLine{70 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a3b69d049bda17e67403bc782159a6aae}\label{classhwcomposer_1_1DisplayQueue_a3b69d049bda17e67403bc782159a6aae}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Check\+Plane\+Format@{Check\+Plane\+Format}}
+\index{Check\+Plane\+Format@{Check\+Plane\+Format}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Check\+Plane\+Format()}{CheckPlaneFormat()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Queue\+::\+Check\+Plane\+Format (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{format }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1334 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1334                                                    \{}
+\DoxyCodeLine{1335   \textcolor{keywordflow}{return} display\_plane\_manager\_->CheckPlaneFormat(format);}
+\DoxyCodeLine{1336 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_ae4315f2af3673e1f4065fabe897529de}\label{classhwcomposer_1_1DisplayQueue_ae4315f2af3673e1f4065fabe897529de}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Display\+Configuration\+Changed@{Display\+Configuration\+Changed}}
+\index{Display\+Configuration\+Changed@{Display\+Configuration\+Changed}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Display\+Configuration\+Changed()}{DisplayConfigurationChanged()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Display\+Configuration\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1496 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1496                                                \{}
+\DoxyCodeLine{1497   \textcolor{comment}{// Mark it as needs modeset, so that in next queue update we do a modeset}}
+\DoxyCodeLine{1498   state\_ |= kConfigurationChanged;}
+\DoxyCodeLine{1499 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a7aabbaa2b30bef9941b19694f55bc065}\label{classhwcomposer_1_1DisplayQueue_a7aabbaa2b30bef9941b19694f55bc065}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Force\+Refresh@{Force\+Refresh}}
+\index{Force\+Refresh@{Force\+Refresh}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Force\+Refresh()}{ForceRefresh()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Force\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1483 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1483                                 \{}
+\DoxyCodeLine{1484   idle\_tracker\_.idle\_lock\_.lock();}
+\DoxyCodeLine{1485   idle\_tracker\_.state\_ \&= ~FrameStateTracker::kIgnoreUpdates;}
+\DoxyCodeLine{1486   idle\_tracker\_.state\_ |= FrameStateTracker::kRevalidateLayers;}
+\DoxyCodeLine{1487   idle\_tracker\_.idle\_lock\_.unlock();}
+\DoxyCodeLine{1488   power\_mode\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{1489   \textcolor{keywordflow}{if} (!(state\_ \& kIgnoreIdleRefresh) \&\& refresh\_callback\_ \&\&}
+\DoxyCodeLine{1490       (state\_ \& kPoweredOn)) \{}
+\DoxyCodeLine{1491     refresh\_callback\_->Callback(refrsh\_display\_id\_);}
+\DoxyCodeLine{1492   \}}
+\DoxyCodeLine{1493   power\_mode\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{1494 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a0d2c19cad60b60fd3234aa649656d889}\label{classhwcomposer_1_1DisplayQueue_a0d2c19cad60b60fd3234aa649656d889}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Get\+Current\+Composition\+Planes@{Get\+Current\+Composition\+Planes}}
+\index{Get\+Current\+Composition\+Planes@{Get\+Current\+Composition\+Planes}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Get\+Current\+Composition\+Planes()}{GetCurrentCompositionPlanes()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}}\& hwcomposer\+::\+Display\+Queue\+::\+Get\+Current\+Composition\+Planes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 116 of file displayqueue.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116                                                                    \{}
+\DoxyCodeLine{117     \textcolor{keywordflow}{return} previous\_plane\_state\_;}
+\DoxyCodeLine{118   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a6efa456f61a20d722b2dc0860dd59296}\label{classhwcomposer_1_1DisplayQueue_a6efa456f61a20d722b2dc0860dd59296}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Get\+Native\+Buffer\+Handler@{Get\+Native\+Buffer\+Handler}}
+\index{Get\+Native\+Buffer\+Handler@{Get\+Native\+Buffer\+Handler}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Get\+Native\+Buffer\+Handler()}{GetNativeBufferHandler()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}}$\ast$ hwcomposer\+::\+Display\+Queue\+::\+Get\+Native\+Buffer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 124 of file displayqueue.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                                             \{}
+\DoxyCodeLine{125     \textcolor{keywordflow}{if} (resource\_manager\_) \{}
+\DoxyCodeLine{126       \textcolor{keywordflow}{return} resource\_manager\_->GetNativeBufferHandler();}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{130   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a23e8d5eeba9ca1a1a9c1cbeef4825733}\label{classhwcomposer_1_1DisplayQueue_a23e8d5eeba9ca1a1a9c1cbeef4825733}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Get\+Video\+Color@{Get\+Video\+Color}}
+\index{Get\+Video\+Color@{Get\+Video\+Color}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Get\+Video\+Color()}{GetVideoColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Get\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{color,  }\item[{float $\ast$}]{value,  }\item[{float $\ast$}]{start,  }\item[{float $\ast$}]{end }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1394 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1395                                                            \{}
+\DoxyCodeLine{1396   compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a736674112ad74dfb5b6f84a4521623d6}{GetVideoColor}}(color, value, start, end);}
+\DoxyCodeLine{1397 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_aac8954f6842a697c37ea023687bbcafa}\label{classhwcomposer_1_1DisplayQueue_aac8954f6842a697c37ea023687bbcafa}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Handle\+Idle\+Case@{Handle\+Idle\+Case}}
+\index{Handle\+Idle\+Case@{Handle\+Idle\+Case}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Handle\+Idle\+Case()}{HandleIdleCase()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Handle\+Idle\+Case (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1447 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1447                                   \{}
+\DoxyCodeLine{1448   idle\_tracker\_.idle\_lock\_.lock();}
+\DoxyCodeLine{1449   \textcolor{keywordflow}{if} (idle\_tracker\_.state\_ \& FrameStateTracker::kPrepareComposition) \{}
+\DoxyCodeLine{1450     idle\_tracker\_.idle\_lock\_.unlock();}
+\DoxyCodeLine{1451     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1452   \}}
+\DoxyCodeLine{1453 }
+\DoxyCodeLine{1454   \textcolor{keywordflow}{if} (idle\_tracker\_.total\_planes\_ <= 1 ||}
+\DoxyCodeLine{1455       (idle\_tracker\_.state\_ \& FrameStateTracker::kTrackingFrames) ||}
+\DoxyCodeLine{1456       (idle\_tracker\_.state\_ \& FrameStateTracker::kRevalidateLayers) ||}
+\DoxyCodeLine{1457       idle\_tracker\_.has\_cursor\_layer\_) \{}
+\DoxyCodeLine{1458     idle\_tracker\_.idle\_lock\_.unlock();}
+\DoxyCodeLine{1459     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1460   \}}
+\DoxyCodeLine{1461 }
+\DoxyCodeLine{1462   \textcolor{keywordflow}{if} (idle\_tracker\_.idle\_frames\_ > kidleframes) \{}
+\DoxyCodeLine{1463     idle\_tracker\_.idle\_lock\_.unlock();}
+\DoxyCodeLine{1464     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1465   \}}
+\DoxyCodeLine{1466 }
+\DoxyCodeLine{1467   \textcolor{keywordflow}{if} (idle\_tracker\_.idle\_frames\_ < kidleframes) \{}
+\DoxyCodeLine{1468     idle\_tracker\_.idle\_frames\_++;}
+\DoxyCodeLine{1469     idle\_tracker\_.idle\_lock\_.unlock();}
+\DoxyCodeLine{1470     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1471   \}}
+\DoxyCodeLine{1472 }
+\DoxyCodeLine{1473   idle\_tracker\_.idle\_frames\_++;}
+\DoxyCodeLine{1474   power\_mode\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{1475   \textcolor{keywordflow}{if} (!(state\_ \& kIgnoreIdleRefresh) \&\& refresh\_callback\_ \&\&}
+\DoxyCodeLine{1476       (state\_ \& kPoweredOn)) \{}
+\DoxyCodeLine{1477     refresh\_callback\_->Callback(refrsh\_display\_id\_);}
+\DoxyCodeLine{1478     idle\_tracker\_.state\_ |= FrameStateTracker::kPrepareIdleComposition;}
+\DoxyCodeLine{1479   \}}
+\DoxyCodeLine{1480   power\_mode\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{1481   idle\_tracker\_.idle\_lock\_.unlock();}
+\DoxyCodeLine{1482 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a846279cb773b60d9c6408c95e686c479}\label{classhwcomposer_1_1DisplayQueue_a846279cb773b60d9c6408c95e686c479}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Ignore\+Updates@{Ignore\+Updates}}
+\index{Ignore\+Updates@{Ignore\+Updates}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Ignore\+Updates()}{IgnoreUpdates()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Ignore\+Updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1177 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1177                                  \{}
+\DoxyCodeLine{1178   idle\_tracker\_.idle\_frames\_ = 0;}
+\DoxyCodeLine{1179   idle\_tracker\_.state\_ = FrameStateTracker::kIgnoreUpdates;}
+\DoxyCodeLine{1180   idle\_tracker\_.revalidate\_frames\_counter\_ = 0;}
+\DoxyCodeLine{1181 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a88b95def4d501f85e2a83bef8b1c832d}\label{classhwcomposer_1_1DisplayQueue_a88b95def4d501f85e2a83bef8b1c832d}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Queue\+::\+Initialize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{pipe,  }\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler}{Display\+Plane\+Handler}} $\ast$}]{plane\+\_\+manager,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74                                                                         \{}
+\DoxyCodeLine{75   fb\_manager\_ = frame\_buffer\_manager;}
+\DoxyCodeLine{76   \textcolor{keywordflow}{if} (!resource\_manager\_) \{}
+\DoxyCodeLine{77     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to construct hwc layer buffer manager"});}
+\DoxyCodeLine{78     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{79   \}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   display\_plane\_manager\_.reset(}
+\DoxyCodeLine{82       \textcolor{keyword}{new} DisplayPlaneManager(plane\_handler, resource\_manager\_.get()));}
+\DoxyCodeLine{83   \textcolor{keywordflow}{if} (!display\_plane\_manager\_->Initialize(width, height, fb\_manager\_)) \{}
+\DoxyCodeLine{84     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initialize DisplayPlane Manager."});}
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{86   \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88   display\_plane\_manager\_->SetDisplayTransform(plane\_transform\_);}
+\DoxyCodeLine{89   display\_plane\_manager\_->SetLastPlaneUsage(!enable\_wa\_);}
+\DoxyCodeLine{90   ResetQueue();}
+\DoxyCodeLine{91   vblank\_handler\_->SetPowerMode(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}});}
+\DoxyCodeLine{92   vblank\_handler\_->Init(gpu\_fd\_, pipe);}
+\DoxyCodeLine{93   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{94 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_af3ff9ed930230b52624bbb0fea4a753c}\label{classhwcomposer_1_1DisplayQueue_af3ff9ed930230b52624bbb0fea4a753c}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Is\+Ignore\+Updates@{Is\+Ignore\+Updates}}
+\index{Is\+Ignore\+Updates@{Is\+Ignore\+Updates}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Is\+Ignore\+Updates()}{IsIgnoreUpdates()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Queue\+::\+Is\+Ignore\+Updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1183 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1183                                    \{}
+\DoxyCodeLine{1184   \textcolor{keywordflow}{return} idle\_tracker\_.state\_ \& FrameStateTracker::kIgnoreUpdates;}
+\DoxyCodeLine{1185 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a352a161dfc0e142d06d1606ffd35863d}\label{classhwcomposer_1_1DisplayQueue_a352a161dfc0e142d06d1606ffd35863d}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Needs\+Clone\+Validation@{Needs\+Clone\+Validation}}
+\index{Needs\+Clone\+Validation@{Needs\+Clone\+Validation}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Needs\+Clone\+Validation()}{NeedsCloneValidation()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Queue\+::\+Needs\+Clone\+Validation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 120 of file displayqueue.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{120                                     \{}
+\DoxyCodeLine{121     \textcolor{keywordflow}{return} needs\_clone\_validation\_;}
+\DoxyCodeLine{122   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_acee236565010db0f1634c0771e251f88}\label{classhwcomposer_1_1DisplayQueue_acee236565010db0f1634c0771e251f88}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Notify\+Display\+WA@{Notify\+Display\+WA}}
+\index{Notify\+Display\+WA@{Notify\+Display\+WA}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Notify\+Display\+W\+A()}{NotifyDisplayWA()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Notify\+Display\+WA (\begin{DoxyParamCaption}\item[{bool}]{enable\+\_\+wa }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1140 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1140                                                  \{}
+\DoxyCodeLine{1141   \textcolor{keywordflow}{if} (enable\_wa\_ == enable\_wa)}
+\DoxyCodeLine{1142     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1143 }
+\DoxyCodeLine{1144   enable\_wa\_ = enable\_wa;}
+\DoxyCodeLine{1145   \textcolor{keywordflow}{if} (display\_plane\_manager\_)}
+\DoxyCodeLine{1146     display\_plane\_manager\_->SetLastPlaneUsage(!enable\_wa\_);}
+\DoxyCodeLine{1147 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_aa7bffa150112ffae0780fce86129693f}\label{classhwcomposer_1_1DisplayQueue_aa7bffa150112ffae0780fce86129693f}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Present\+Cloned\+Commit@{Present\+Cloned\+Commit}}
+\index{Present\+Cloned\+Commit@{Present\+Cloned\+Commit}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Present\+Cloned\+Commit()}{PresentClonedCommit()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Present\+Cloned\+Commit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayQueue}{Display\+Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 931 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{931                                                           \{}
+\DoxyCodeLine{932   ScopedCloneStateTracker tracker(compositor\_, resource\_manager\_.get(), \textcolor{keyword}{this});}
+\DoxyCodeLine{933   \textcolor{keyword}{const} \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{DisplayPlaneStateList}}\& source\_planes =}
+\DoxyCodeLine{934       queue->GetCurrentCompositionPlanes();}
+\DoxyCodeLine{935   \textcolor{keywordflow}{if} (source\_planes.empty()) \{}
+\DoxyCodeLine{936     \textcolor{comment}{// Mark any surfaces as not in use. These surfaces}}
+\DoxyCodeLine{937     \textcolor{comment}{// where not marked earlier as they where onscreen.}}
+\DoxyCodeLine{938     \textcolor{comment}{// Doing it here also ensures that if this surface}}
+\DoxyCodeLine{939     \textcolor{comment}{// is still in use than it will be marked in use}}
+\DoxyCodeLine{940     \textcolor{comment}{// below.}}
+\DoxyCodeLine{941     \textcolor{keywordflow}{if} (!mark\_not\_inuse\_.empty()) \{}
+\DoxyCodeLine{942       \textcolor{keywordtype}{size\_t} size = mark\_not\_inuse\_.size();}
+\DoxyCodeLine{943       \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{944         mark\_not\_inuse\_.at(i)->SetSurfaceAge(-1);}
+\DoxyCodeLine{945       \}}
+\DoxyCodeLine{946 }
+\DoxyCodeLine{947       std::vector<NativeSurface*>().swap(mark\_not\_inuse\_);}
+\DoxyCodeLine{948       tracker.ForceSurfaceRelease();}
+\DoxyCodeLine{949     \}}
+\DoxyCodeLine{950 }
+\DoxyCodeLine{951     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{952   \}}
+\DoxyCodeLine{953 }
+\DoxyCodeLine{954   std::vector<OverlayLayer> layers;}
+\DoxyCodeLine{955   \textcolor{keywordtype}{int} add\_index = -1;}
+\DoxyCodeLine{956   \textcolor{keywordflow}{for} (\textcolor{keyword}{const} DisplayPlaneState\& previous\_plane : source\_planes) \{}
+\DoxyCodeLine{957     layers.emplace\_back();}
+\DoxyCodeLine{958     OverlayLayer\& layer = layers.back();}
+\DoxyCodeLine{959     HwcRect<int> display\_frame =}
+\DoxyCodeLine{960         previous\_plane.GetOverlayLayer()->GetDisplayFrame();}
+\DoxyCodeLine{961     \textcolor{keywordflow}{if} (scaling\_tracker\_.scaling\_state\_ == ScalingTracker::kNeedsScaling) \{}
+\DoxyCodeLine{962       display\_frame.left =}
+\DoxyCodeLine{963           display\_frame.left +}
+\DoxyCodeLine{964           (display\_frame.left * scaling\_tracker\_.scaling\_width);}
+\DoxyCodeLine{965       display\_frame.top = display\_frame.top +}
+\DoxyCodeLine{966                           (display\_frame.top * scaling\_tracker\_.scaling\_height);}
+\DoxyCodeLine{967       display\_frame.right =}
+\DoxyCodeLine{968           display\_frame.right +}
+\DoxyCodeLine{969           (display\_frame.right * scaling\_tracker\_.scaling\_width);}
+\DoxyCodeLine{970       display\_frame.bottom =}
+\DoxyCodeLine{971           display\_frame.bottom +}
+\DoxyCodeLine{972           (display\_frame.bottom * scaling\_tracker\_.scaling\_height);}
+\DoxyCodeLine{973     \}}
+\DoxyCodeLine{974 }
+\DoxyCodeLine{975     layer.CloneLayer(previous\_plane.GetOverlayLayer(), display\_frame,}
+\DoxyCodeLine{976                      resource\_manager\_.get(), layers.size() - 1, fb\_manager\_);}
+\DoxyCodeLine{977   \}}
+\DoxyCodeLine{978 }
+\DoxyCodeLine{979   \textcolor{keywordtype}{bool} test\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{980   \textcolor{keywordtype}{bool} render\_layers = \textcolor{keyword}{false};}
+\DoxyCodeLine{981   \textcolor{keywordtype}{bool} validate\_layers = last\_commit\_failed\_update\_ ||}
+\DoxyCodeLine{982                          queue->needs\_clone\_validation\_ ||}
+\DoxyCodeLine{983                          previous\_plane\_state\_.empty();}
+\DoxyCodeLine{984   \textcolor{keywordflow}{if} (previous\_plane\_state\_.size() != source\_planes.size())}
+\DoxyCodeLine{985     validate\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{986 }
+\DoxyCodeLine{987   \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{DisplayPlaneStateList}} current\_composition\_planes;}
+\DoxyCodeLine{988   \textcolor{comment}{// Validate Overlays and Layers usage.}}
+\DoxyCodeLine{989   \textcolor{keywordflow}{if} (!validate\_layers) \{}
+\DoxyCodeLine{990     \textcolor{keywordtype}{bool} can\_ignore\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{991     \textcolor{comment}{// Before forcing layer validation, check if content has changed}}
+\DoxyCodeLine{992     \textcolor{comment}{// if not continue showing the current buffer.}}
+\DoxyCodeLine{993     \textcolor{keywordtype}{bool} commit\_checked = \textcolor{keyword}{false};}
+\DoxyCodeLine{994     \textcolor{keywordtype}{bool} needs\_plane\_validation = \textcolor{keyword}{false};}
+\DoxyCodeLine{995     GetCachedLayers(layers, -1, \&current\_composition\_planes, \&render\_layers,}
+\DoxyCodeLine{996                     \&can\_ignore\_commit, \&needs\_plane\_validation,}
+\DoxyCodeLine{997                     \&validate\_layers, \&add\_index);}
+\DoxyCodeLine{998     \textcolor{keywordflow}{if} (add\_index == 0) \{}
+\DoxyCodeLine{999       validate\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{1000     \}}
+\DoxyCodeLine{1001 }
+\DoxyCodeLine{1002     \textcolor{keywordflow}{if} (!validate\_layers \&\& add\_index > 0) \{}
+\DoxyCodeLine{1003       \textcolor{keywordtype}{bool} render\_cursor = display\_plane\_manager\_->ValidateLayers(}
+\DoxyCodeLine{1004           layers, add\_index, \textcolor{keyword}{false}, \&commit\_checked, \&needs\_plane\_validation,}
+\DoxyCodeLine{1005           current\_composition\_planes, previous\_plane\_state\_,}
+\DoxyCodeLine{1006           surfaces\_not\_inuse\_);}
+\DoxyCodeLine{1007 }
+\DoxyCodeLine{1008       \textcolor{keywordflow}{if} (!render\_layers)}
+\DoxyCodeLine{1009         render\_layers = render\_cursor;}
+\DoxyCodeLine{1010       can\_ignore\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{1011     \}}
+\DoxyCodeLine{1012 }
+\DoxyCodeLine{1013     \textcolor{keywordflow}{if} (!validate\_layers \&\& needs\_plane\_validation) \{}
+\DoxyCodeLine{1014       \textcolor{keywordtype}{bool} render = display\_plane\_manager\_->ReValidatePlanes(}
+\DoxyCodeLine{1015           current\_composition\_planes, layers, surfaces\_not\_inuse\_,}
+\DoxyCodeLine{1016           \&validate\_layers, needs\_plane\_validation, \textcolor{keyword}{false});}
+\DoxyCodeLine{1017       can\_ignore\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{1018       \textcolor{keywordflow}{if} (!render\_layers)}
+\DoxyCodeLine{1019         render\_layers = render;}
+\DoxyCodeLine{1020     \}}
+\DoxyCodeLine{1021 }
+\DoxyCodeLine{1022     \textcolor{keywordflow}{if} (!validate\_layers) \{}
+\DoxyCodeLine{1023       \textcolor{keywordflow}{if} (can\_ignore\_commit) \{}
+\DoxyCodeLine{1024         \textcolor{comment}{// Free any surfaces.}}
+\DoxyCodeLine{1025         \textcolor{keywordflow}{if} (!mark\_not\_inuse\_.empty()) \{}
+\DoxyCodeLine{1026           \textcolor{keywordtype}{size\_t} size = mark\_not\_inuse\_.size();}
+\DoxyCodeLine{1027           \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{1028             mark\_not\_inuse\_.at(i)->SetSurfaceAge(-1);}
+\DoxyCodeLine{1029           \}}
+\DoxyCodeLine{1030 }
+\DoxyCodeLine{1031           std::vector<NativeSurface*>().swap(mark\_not\_inuse\_);}
+\DoxyCodeLine{1032           tracker.ForceSurfaceRelease();}
+\DoxyCodeLine{1033         \}}
+\DoxyCodeLine{1034 }
+\DoxyCodeLine{1035         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1036       \}}
+\DoxyCodeLine{1037     \}}
+\DoxyCodeLine{1038   \}}
+\DoxyCodeLine{1039 }
+\DoxyCodeLine{1040   \textcolor{comment}{// Reset last commit failure state.}}
+\DoxyCodeLine{1041   last\_commit\_failed\_update\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{1042 }
+\DoxyCodeLine{1043   \textcolor{keywordflow}{if} (validate\_layers) \{}
+\DoxyCodeLine{1044     render\_layers = display\_plane\_manager\_->ValidateLayers(}
+\DoxyCodeLine{1045         layers, 0, \textcolor{keyword}{false}, \&test\_commit, \&test\_commit,}
+\DoxyCodeLine{1046         current\_composition\_planes, previous\_plane\_state\_, surfaces\_not\_inuse\_);}
+\DoxyCodeLine{1047   \}}
+\DoxyCodeLine{1048 }
+\DoxyCodeLine{1049   \mbox{\hyperlink{hwctrace_8h_a69f77c8158af1ada4ca0299b9232f1d3}{DUMP\_CURRENT\_COMPOSITION\_PLANES}}();}
+\DoxyCodeLine{1050   \mbox{\hyperlink{hwctrace_8h_a23419e5261b9851ad679bcbf01916a5b}{DUMP\_CURRENT\_LAYER\_PLANE\_COMBINATIONS}}();}
+\DoxyCodeLine{1051   \mbox{\hyperlink{hwctrace_8h_a2ceba86ff4c70e833f0ad289202baf22}{DUMP\_CURRENT\_DUPLICATE\_LAYER\_COMBINATIONS}}();}
+\DoxyCodeLine{1052 }
+\DoxyCodeLine{1053   \textcolor{keywordtype}{bool} composition\_passed = \textcolor{keyword}{true};}
+\DoxyCodeLine{1054   clone\_rendered\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{1055   \textcolor{comment}{// Handle any 3D Composition.}}
+\DoxyCodeLine{1056   \textcolor{keywordflow}{if} (render\_layers) \{}
+\DoxyCodeLine{1057     clone\_rendered\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{1058     compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a2a9da9e986a230cb68e322ed18ba4866}{BeginFrame}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{1059 }
+\DoxyCodeLine{1060     std::vector<HwcRect<int>> layers\_rects;}
+\DoxyCodeLine{1061     \textcolor{keywordtype}{size\_t} size = layers.size();}
+\DoxyCodeLine{1062     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} layer\_index = 0; layer\_index < size; layer\_index++) \{}
+\DoxyCodeLine{1063       \textcolor{keyword}{const} OverlayLayer\& layer = layers.at(layer\_index);}
+\DoxyCodeLine{1064       layers\_rects.emplace\_back(layer.GetDisplayFrame());}
+\DoxyCodeLine{1065     \}}
+\DoxyCodeLine{1066 }
+\DoxyCodeLine{1067     \textcolor{comment}{// Prepare for final composition.}}
+\DoxyCodeLine{1068     \textcolor{keywordflow}{if} (!compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_ad1b2b9db52224ab8e5ae906df0c58a28}{Draw}}(current\_composition\_planes, layers, layers\_rects)) \{}
+\DoxyCodeLine{1069       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to prepare for the frame composition. "});}
+\DoxyCodeLine{1070       composition\_passed = \textcolor{keyword}{false};}
+\DoxyCodeLine{1071     \}}
+\DoxyCodeLine{1072   \}}
+\DoxyCodeLine{1073 }
+\DoxyCodeLine{1074   \textcolor{keywordflow}{if} (!composition\_passed) \{}
+\DoxyCodeLine{1075     HandleCommitFailure(current\_composition\_planes);}
+\DoxyCodeLine{1076     last\_commit\_failed\_update\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{1077     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1078   \}}
+\DoxyCodeLine{1079 }
+\DoxyCodeLine{1080   int32\_t fence = 0;}
+\DoxyCodeLine{1081   \textcolor{keywordtype}{bool} fence\_released = \textcolor{keyword}{false};}
+\DoxyCodeLine{1082   composition\_passed =}
+\DoxyCodeLine{1083       display\_->\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1db680248cf31fdf1d2d1e926355916d}{Commit}}(current\_composition\_planes, previous\_plane\_state\_, \textcolor{keyword}{false},}
+\DoxyCodeLine{1084                        kms\_fence\_, \&fence, \&fence\_released);}
+\DoxyCodeLine{1085 }
+\DoxyCodeLine{1086   \textcolor{keywordflow}{if} (fence\_released) \{}
+\DoxyCodeLine{1087     kms\_fence\_ = 0;}
+\DoxyCodeLine{1088   \}}
+\DoxyCodeLine{1089 }
+\DoxyCodeLine{1090   \textcolor{keywordflow}{if} (!composition\_passed) \{}
+\DoxyCodeLine{1091     last\_commit\_failed\_update\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{1092     HandleCommitFailure(current\_composition\_planes);}
+\DoxyCodeLine{1093     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1094   \}}
+\DoxyCodeLine{1095 }
+\DoxyCodeLine{1096   \textcolor{comment}{// Mark any surfaces as not in use. These surfaces}}
+\DoxyCodeLine{1097   \textcolor{comment}{// where not marked earlier as they where onscreen.}}
+\DoxyCodeLine{1098   \textcolor{comment}{// Doing it here also ensures that if this surface}}
+\DoxyCodeLine{1099   \textcolor{comment}{// is still in use than it will be marked in use}}
+\DoxyCodeLine{1100   \textcolor{comment}{// below.}}
+\DoxyCodeLine{1101   \textcolor{keywordflow}{if} (!mark\_not\_inuse\_.empty()) \{}
+\DoxyCodeLine{1102     \textcolor{keywordtype}{size\_t} size = mark\_not\_inuse\_.size();}
+\DoxyCodeLine{1103     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{1104       mark\_not\_inuse\_.at(i)->SetSurfaceAge(-1);}
+\DoxyCodeLine{1105     \}}
+\DoxyCodeLine{1106 }
+\DoxyCodeLine{1107     std::vector<NativeSurface*>().swap(mark\_not\_inuse\_);}
+\DoxyCodeLine{1108   \}}
+\DoxyCodeLine{1109 }
+\DoxyCodeLine{1110   in\_flight\_layers\_.swap(layers);}
+\DoxyCodeLine{1111   current\_composition\_planes.swap(previous\_plane\_state\_);}
+\DoxyCodeLine{1112 }
+\DoxyCodeLine{1113   \textcolor{comment}{// Set Age for all offscreen surfaces.}}
+\DoxyCodeLine{1114   UpdateOnScreenSurfaces();}
+\DoxyCodeLine{1115 }
+\DoxyCodeLine{1116   \textcolor{comment}{// Swap any surfaces which are to be marked as not in}}
+\DoxyCodeLine{1117   \textcolor{comment}{// use next frame.}}
+\DoxyCodeLine{1118   \textcolor{keywordflow}{if} (!surfaces\_not\_inuse\_.empty()) \{}
+\DoxyCodeLine{1119     \textcolor{keywordtype}{size\_t} size = surfaces\_not\_inuse\_.size();}
+\DoxyCodeLine{1120     std::vector<NativeSurface*> temp;}
+\DoxyCodeLine{1121     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{1122       NativeSurface* surface = surfaces\_not\_inuse\_.at(i);}
+\DoxyCodeLine{1123       uint32\_t age = surface->GetSurfaceAge();}
+\DoxyCodeLine{1124       \textcolor{keywordflow}{if} (age > 0) \{}
+\DoxyCodeLine{1125         temp.emplace\_back(surface);}
+\DoxyCodeLine{1126         surface->SetSurfaceAge(surface->GetSurfaceAge() - 1);}
+\DoxyCodeLine{1127       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1128         mark\_not\_inuse\_.emplace\_back(surface);}
+\DoxyCodeLine{1129       \}}
+\DoxyCodeLine{1130     \}}
+\DoxyCodeLine{1131 }
+\DoxyCodeLine{1132     surfaces\_not\_inuse\_.swap(temp);}
+\DoxyCodeLine{1133   \}}
+\DoxyCodeLine{1134 }
+\DoxyCodeLine{1135   \textcolor{keywordflow}{if} (fence > 0) \{}
+\DoxyCodeLine{1136     kms\_fence\_ = fence;}
+\DoxyCodeLine{1137   \}}
+\DoxyCodeLine{1138 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_ae3e70e00eba870771703c41b0753216a}\label{classhwcomposer_1_1DisplayQueue_ae3e70e00eba870771703c41b0753216a}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Queue\+Update@{Queue\+Update}}
+\index{Queue\+Update@{Queue\+Update}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Queue\+Update()}{QueueUpdate()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Queue\+::\+Queue\+Update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&}]{source\+\_\+layers,  }\item[{int32\+\_\+t $\ast$}]{retire\+\_\+fence,  }\item[{bool $\ast$}]{ignore\+\_\+clone\+\_\+update,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$}]{call\+\_\+back,  }\item[{bool}]{handle\+\_\+constraints }\end{DoxyParamCaption})}
+
+
+
+Definition at line 529 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{532                                                         \{}
+\DoxyCodeLine{533   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{534   ScopedIdleStateTracker tracker(idle\_tracker\_, compositor\_,}
+\DoxyCodeLine{535                                  resource\_manager\_.get(), \textcolor{keyword}{this});}
+\DoxyCodeLine{536   \textcolor{keywordflow}{if} (tracker.IgnoreUpdate()) \{}
+\DoxyCodeLine{537     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{538   \}}
+\DoxyCodeLine{539 }
+\DoxyCodeLine{540   \textcolor{keywordtype}{size\_t} size = source\_layers.size();}
+\DoxyCodeLine{541   \textcolor{keywordtype}{size\_t} previous\_size = in\_flight\_layers\_.size();}
+\DoxyCodeLine{542   std::vector<OverlayLayer> layers;}
+\DoxyCodeLine{543   \textcolor{keywordtype}{int} remove\_index = -1;}
+\DoxyCodeLine{544   \textcolor{keywordtype}{int} add\_index = -1;}
+\DoxyCodeLine{545   \textcolor{comment}{// If last commit failed, lets force full validation as}}
+\DoxyCodeLine{546   \textcolor{comment}{// state might be all wrong in our side.}}
+\DoxyCodeLine{547   \textcolor{keywordtype}{bool} idle\_frame = tracker.RenderIdleMode();}
+\DoxyCodeLine{548   \textcolor{keywordtype}{bool} validate\_layers =}
+\DoxyCodeLine{549       last\_commit\_failed\_update\_ || previous\_plane\_state\_.empty();}
+\DoxyCodeLine{550   *retire\_fence = -1;}
+\DoxyCodeLine{551   uint32\_t z\_order = 0;}
+\DoxyCodeLine{552   \textcolor{keywordtype}{bool} has\_video\_layer = \textcolor{keyword}{false};}
+\DoxyCodeLine{553   \textcolor{keywordtype}{bool} re\_validate\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{554   needs\_clone\_validation\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{555 }
+\DoxyCodeLine{556   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} layer\_index = 0; layer\_index < size; layer\_index++) \{}
+\DoxyCodeLine{557     HwcLayer* layer = source\_layers.at(layer\_index);}
+\DoxyCodeLine{558     layer->SetReleaseFence(-1);}
+\DoxyCodeLine{559     \textcolor{keywordflow}{if} (!layer->IsVisible())}
+\DoxyCodeLine{560       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{562     layers.emplace\_back();}
+\DoxyCodeLine{563     OverlayLayer* overlay\_layer = \&(layers.back());}
+\DoxyCodeLine{564     OverlayLayer* previous\_layer = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{565     \textcolor{keywordflow}{if} (previous\_size > z\_order) \{}
+\DoxyCodeLine{566       previous\_layer = \&(in\_flight\_layers\_.at(z\_order));}
+\DoxyCodeLine{567     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (add\_index == -1) \{}
+\DoxyCodeLine{568       add\_index = z\_order;}
+\DoxyCodeLine{569     \}}
+\DoxyCodeLine{570 }
+\DoxyCodeLine{571     \textcolor{keywordflow}{if} (scaling\_tracker\_.scaling\_state\_ == ScalingTracker::kNeedsScaling) \{}
+\DoxyCodeLine{572       HwcRect<int> display\_frame = layer->GetDisplayFrame();}
+\DoxyCodeLine{573       display\_frame.left =}
+\DoxyCodeLine{574           display\_frame.left +}
+\DoxyCodeLine{575           (display\_frame.left * scaling\_tracker\_.scaling\_width);}
+\DoxyCodeLine{576       display\_frame.top = display\_frame.top +}
+\DoxyCodeLine{577                           (display\_frame.top * scaling\_tracker\_.scaling\_height);}
+\DoxyCodeLine{578       display\_frame.right =}
+\DoxyCodeLine{579           display\_frame.right +}
+\DoxyCodeLine{580           (display\_frame.right * scaling\_tracker\_.scaling\_width);}
+\DoxyCodeLine{581       display\_frame.bottom =}
+\DoxyCodeLine{582           display\_frame.bottom +}
+\DoxyCodeLine{583           (display\_frame.bottom * scaling\_tracker\_.scaling\_height);}
+\DoxyCodeLine{584 }
+\DoxyCodeLine{585       overlay\_layer->InitializeFromScaledHwcLayer(}
+\DoxyCodeLine{586           layer, resource\_manager\_.get(), previous\_layer, z\_order, layer\_index,}
+\DoxyCodeLine{587           display\_frame, display\_plane\_manager\_->GetHeight(), plane\_transform\_,}
+\DoxyCodeLine{588           handle\_constraints, fb\_manager\_);}
+\DoxyCodeLine{589     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{590       overlay\_layer->InitializeFromHwcLayer(}
+\DoxyCodeLine{591           layer, resource\_manager\_.get(), previous\_layer, z\_order, layer\_index,}
+\DoxyCodeLine{592           display\_plane\_manager\_->GetHeight(), plane\_transform\_,}
+\DoxyCodeLine{593           handle\_constraints, fb\_manager\_);}
+\DoxyCodeLine{594     \}}
+\DoxyCodeLine{595 }
+\DoxyCodeLine{596     \textcolor{keywordflow}{if} (!overlay\_layer->IsVisible()) \{}
+\DoxyCodeLine{597       layers.pop\_back();}
+\DoxyCodeLine{598       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{599     \}}
+\DoxyCodeLine{600 }
+\DoxyCodeLine{601     \textcolor{keywordflow}{if} (overlay\_layer->IsVideoLayer()) \{}
+\DoxyCodeLine{602       has\_video\_layer = \textcolor{keyword}{true};}
+\DoxyCodeLine{603     \}}
+\DoxyCodeLine{604 }
+\DoxyCodeLine{605     \textcolor{keywordflow}{if} (overlay\_layer->NeedsRevalidation()) \{}
+\DoxyCodeLine{606       re\_validate\_commit = \textcolor{keyword}{true};}
+\DoxyCodeLine{607     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (overlay\_layer->HasLayerContentChanged()) \{}
+\DoxyCodeLine{608       idle\_frame = \textcolor{keyword}{false};}
+\DoxyCodeLine{609     \}}
+\DoxyCodeLine{610 }
+\DoxyCodeLine{611     \textcolor{keywordflow}{if} (overlay\_layer->IsCursorLayer()) \{}
+\DoxyCodeLine{612       tracker.FrameHasCursor();}
+\DoxyCodeLine{613     \}}
+\DoxyCodeLine{614 }
+\DoxyCodeLine{615     z\_order++;}
+\DoxyCodeLine{616 }
+\DoxyCodeLine{617     \textcolor{comment}{// Handle case where Media layer has been destroyed/created or has changed}}
+\DoxyCodeLine{618     \textcolor{comment}{// z-order.}}
+\DoxyCodeLine{619     \textcolor{keywordflow}{if} (add\_index != 0 \&\& overlay\_layer->IsVideoLayer()) \{}
+\DoxyCodeLine{620       \textcolor{keywordflow}{if} ((previous\_layer \&\& !previous\_layer->IsVideoLayer()) ||}
+\DoxyCodeLine{621           !previous\_layer) \{}
+\DoxyCodeLine{622         add\_index = 0;}
+\DoxyCodeLine{623 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{624         \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{625             \textcolor{stringliteral}{"Video layer has changed between frames: remove\_index: \%d "}}
+\DoxyCodeLine{626             \textcolor{stringliteral}{"add\_index: "}}
+\DoxyCodeLine{627             \textcolor{stringliteral}{"\%d \(\backslash\)n"},}
+\DoxyCodeLine{628             remove\_index, add\_index);}
+\DoxyCodeLine{629 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{630         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{631       \}}
+\DoxyCodeLine{632     \}}
+\DoxyCodeLine{633 }
+\DoxyCodeLine{634     \textcolor{keywordflow}{if} (add\_index == 0 || validate\_layers ||}
+\DoxyCodeLine{635         ((add\_index != -1) \&\& (remove\_index != -1))) \{}
+\DoxyCodeLine{636       needs\_clone\_validation\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{637       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{638     \}}
+\DoxyCodeLine{639 }
+\DoxyCodeLine{640     \textcolor{comment}{// Handle case where Cursor layer has been destroyed/created or has changed}}
+\DoxyCodeLine{641     \textcolor{comment}{// z-order.}}
+\DoxyCodeLine{642     \textcolor{keywordflow}{if} (previous\_layer \&\&}
+\DoxyCodeLine{643         previous\_layer->IsCursorLayer() != overlay\_layer->IsCursorLayer()) \{}
+\DoxyCodeLine{644       \textcolor{keywordflow}{if} (remove\_index == -1)}
+\DoxyCodeLine{645         remove\_index = previous\_layer->GetZorder();}
+\DoxyCodeLine{646 }
+\DoxyCodeLine{647       \textcolor{comment}{// Treat this case as if a new layer has been created.}}
+\DoxyCodeLine{648       \textcolor{keywordflow}{if} (add\_index == -1)}
+\DoxyCodeLine{649         add\_index = overlay\_layer->GetZorder();}
+\DoxyCodeLine{650 }
+\DoxyCodeLine{651 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{652       \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{653           \textcolor{stringliteral}{"Cursor layer has changed between frames: remove\_index: \%d "}}
+\DoxyCodeLine{654           \textcolor{stringliteral}{"add\_index: "}}
+\DoxyCodeLine{655           \textcolor{stringliteral}{"\%d \(\backslash\)n"},}
+\DoxyCodeLine{656           remove\_index, add\_index);}
+\DoxyCodeLine{657 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{658     \}}
+\DoxyCodeLine{659   \}}
+\DoxyCodeLine{660 }
+\DoxyCodeLine{661   \textcolor{comment}{// We may have skipped layers which are not visible.}}
+\DoxyCodeLine{662   size = layers.size();}
+\DoxyCodeLine{663   \textcolor{keywordflow}{if} ((add\_index == 0) || validate\_layers) \{}
+\DoxyCodeLine{664     \textcolor{comment}{// If index is zero, no point trying for incremental validation.}}
+\DoxyCodeLine{665     validate\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{666   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (previous\_size > size) \{}
+\DoxyCodeLine{667     \textcolor{keywordflow}{if} (remove\_index == -1) \{}
+\DoxyCodeLine{668       remove\_index = size;}
+\DoxyCodeLine{669     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (add\_index != -1) \{}
+\DoxyCodeLine{670       remove\_index = std::min(add\_index, remove\_index);}
+\DoxyCodeLine{671     \}}
+\DoxyCodeLine{672   \}}
+\DoxyCodeLine{673 }
+\DoxyCodeLine{674   \textcolor{keywordflow}{if} (idle\_frame) \{}
+\DoxyCodeLine{675     \textcolor{keywordflow}{if} ((add\_index != -1) || (remove\_index != -1) || re\_validate\_commit) \{}
+\DoxyCodeLine{676       idle\_frame = \textcolor{keyword}{false};}
+\DoxyCodeLine{677     \}}
+\DoxyCodeLine{678   \}}
+\DoxyCodeLine{679 }
+\DoxyCodeLine{680   \textcolor{keywordflow}{if} (!validate\_layers)}
+\DoxyCodeLine{681     validate\_layers = idle\_frame;}
+\DoxyCodeLine{682 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{683   \textcolor{keywordflow}{if} ((remove\_index != -1) || (add\_index != -1)) \{}
+\DoxyCodeLine{684     \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{685         \textcolor{stringliteral}{"Remove index For this Frame: \%d Add index For this Frame: \%d Total "}}
+\DoxyCodeLine{686         \textcolor{stringliteral}{"Layers: \%d previous\_size \%d size \%d re\_validate\_commit \%d \(\backslash\)n"},}
+\DoxyCodeLine{687         remove\_index, add\_index, layers.size(), previous\_size, size,}
+\DoxyCodeLine{688         re\_validate\_commit);}
+\DoxyCodeLine{689   \}}
+\DoxyCodeLine{690 }
+\DoxyCodeLine{691   \textcolor{keywordflow}{if} (validate\_layers) \{}
+\DoxyCodeLine{692     \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{693         \textcolor{stringliteral}{"Full Validation Forced: add\_index: \%d last\_commit\_failed\_update\_: \%d "}}
+\DoxyCodeLine{694         \textcolor{stringliteral}{"tracker.RevalidateLayers(): \%d  previous\_plane\_state\_.empty(): \%d "}}
+\DoxyCodeLine{695         \textcolor{stringliteral}{"tracker.RenderIdleMode():\%d \(\backslash\)n"},}
+\DoxyCodeLine{696         add\_index, last\_commit\_failed\_update\_, tracker.RevalidateLayers(),}
+\DoxyCodeLine{697         previous\_plane\_state\_.empty(), tracker.RenderIdleMode());}
+\DoxyCodeLine{698   \}}
+\DoxyCodeLine{699 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{700 }
+\DoxyCodeLine{701   \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{DisplayPlaneStateList}} current\_composition\_planes;}
+\DoxyCodeLine{702   \textcolor{keywordtype}{bool} render\_layers;}
+\DoxyCodeLine{703   \textcolor{keywordtype}{bool} force\_media\_composition = \textcolor{keyword}{false};}
+\DoxyCodeLine{704   \textcolor{keywordtype}{bool} requested\_video\_effect = \textcolor{keyword}{false};}
+\DoxyCodeLine{705   \textcolor{keywordflow}{if} (has\_video\_layer) \{}
+\DoxyCodeLine{706     video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{707     \textcolor{keywordflow}{if} (requested\_video\_effect\_ != applied\_video\_effect\_) \{}
+\DoxyCodeLine{708       \textcolor{comment}{// Let's ensure Media planes take this into account.}}
+\DoxyCodeLine{709       force\_media\_composition = \textcolor{keyword}{true};}
+\DoxyCodeLine{710       applied\_video\_effect\_ = requested\_video\_effect\_;}
+\DoxyCodeLine{711       requested\_video\_effect = requested\_video\_effect\_;}
+\DoxyCodeLine{712       idle\_frame = \textcolor{keyword}{false};}
+\DoxyCodeLine{713       validate\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{714     \}}
+\DoxyCodeLine{715     video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{716   \}}
+\DoxyCodeLine{717 }
+\DoxyCodeLine{718   \textcolor{keywordtype}{bool} composition\_passed = \textcolor{keyword}{true};}
+\DoxyCodeLine{719   \textcolor{keywordtype}{bool} disable\_ovelays = state\_ \& kDisableOverlayUsage;}
+\DoxyCodeLine{720   \textcolor{keywordflow}{if} (!validate\_layers \&\& tracker.RevalidateLayers()) \{}
+\DoxyCodeLine{721     validate\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{722   \}}
+\DoxyCodeLine{723 }
+\DoxyCodeLine{724   \textcolor{comment}{// Validate Overlays and Layers usage.}}
+\DoxyCodeLine{725   \textcolor{keywordflow}{if} (!validate\_layers) \{}
+\DoxyCodeLine{726     \textcolor{keywordtype}{bool} can\_ignore\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{727     \textcolor{comment}{// Before forcing layer validation, check if content has changed}}
+\DoxyCodeLine{728     \textcolor{comment}{// if not continue showing the current buffer.}}
+\DoxyCodeLine{729     \textcolor{keywordtype}{bool} commit\_checked = \textcolor{keyword}{false};}
+\DoxyCodeLine{730     \textcolor{keywordtype}{bool} needs\_plane\_validation = \textcolor{keyword}{false};}
+\DoxyCodeLine{731     GetCachedLayers(layers, remove\_index, \&current\_composition\_planes,}
+\DoxyCodeLine{732                     \&render\_layers, \&can\_ignore\_commit, \&needs\_plane\_validation,}
+\DoxyCodeLine{733                     \&validate\_layers, \&add\_index);}
+\DoxyCodeLine{734     \textcolor{keywordflow}{if} (add\_index == 0) \{}
+\DoxyCodeLine{735       validate\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{736     \}}
+\DoxyCodeLine{737 }
+\DoxyCodeLine{738     \textcolor{keywordflow}{if} (!validate\_layers \&\& add\_index > 0) \{}
+\DoxyCodeLine{739       \textcolor{keywordtype}{bool} render\_cursor = display\_plane\_manager\_->ValidateLayers(}
+\DoxyCodeLine{740           layers, add\_index, disable\_ovelays, \&commit\_checked,}
+\DoxyCodeLine{741           \&needs\_plane\_validation, current\_composition\_planes,}
+\DoxyCodeLine{742           previous\_plane\_state\_, surfaces\_not\_inuse\_);}
+\DoxyCodeLine{743 }
+\DoxyCodeLine{744       \textcolor{keywordflow}{if} (!render\_layers)}
+\DoxyCodeLine{745         render\_layers = render\_cursor;}
+\DoxyCodeLine{746       can\_ignore\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{747       \textcolor{keywordflow}{if} (commit\_checked) \{}
+\DoxyCodeLine{748         re\_validate\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{749         needs\_clone\_validation\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{750       \}}
+\DoxyCodeLine{751     \}}
+\DoxyCodeLine{752 }
+\DoxyCodeLine{753     \textcolor{keywordflow}{if} (!validate\_layers \&\& (re\_validate\_commit || needs\_plane\_validation)) \{}
+\DoxyCodeLine{754       \textcolor{keywordtype}{bool} render = display\_plane\_manager\_->ReValidatePlanes(}
+\DoxyCodeLine{755           current\_composition\_planes, layers, surfaces\_not\_inuse\_,}
+\DoxyCodeLine{756           \&validate\_layers, needs\_plane\_validation, re\_validate\_commit);}
+\DoxyCodeLine{757       can\_ignore\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{758       needs\_clone\_validation\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{759       \textcolor{keywordflow}{if} (!render\_layers)}
+\DoxyCodeLine{760         render\_layers = render;}
+\DoxyCodeLine{761     \}}
+\DoxyCodeLine{762 }
+\DoxyCodeLine{763     \textcolor{keywordflow}{if} (!validate\_layers) \{}
+\DoxyCodeLine{764       \textcolor{keywordflow}{if} (force\_media\_composition) \{}
+\DoxyCodeLine{765         SetMediaEffectsState(requested\_video\_effect, layers,}
+\DoxyCodeLine{766                              current\_composition\_planes);}
+\DoxyCodeLine{767         render\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{768         can\_ignore\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{769       \}}
+\DoxyCodeLine{770 }
+\DoxyCodeLine{771       \textcolor{keywordflow}{if} (can\_ignore\_commit) \{}
+\DoxyCodeLine{772         *ignore\_clone\_update = \textcolor{keyword}{true};}
+\DoxyCodeLine{773         \textcolor{comment}{// Free any surfaces.}}
+\DoxyCodeLine{774         \textcolor{keywordflow}{if} (!mark\_not\_inuse\_.empty()) \{}
+\DoxyCodeLine{775           \textcolor{keywordtype}{size\_t} size = mark\_not\_inuse\_.size();}
+\DoxyCodeLine{776           \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{777             mark\_not\_inuse\_.at(i)->SetSurfaceAge(-1);}
+\DoxyCodeLine{778           \}}
+\DoxyCodeLine{779 }
+\DoxyCodeLine{780           std::vector<NativeSurface*>().swap(mark\_not\_inuse\_);}
+\DoxyCodeLine{781           tracker.ForceSurfaceRelease();}
+\DoxyCodeLine{782         \}}
+\DoxyCodeLine{783 }
+\DoxyCodeLine{784         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{785       \}}
+\DoxyCodeLine{786     \}}
+\DoxyCodeLine{787   \}}
+\DoxyCodeLine{788 }
+\DoxyCodeLine{789   \textcolor{comment}{// Reset last commit failure state.}}
+\DoxyCodeLine{790   last\_commit\_failed\_update\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{791 }
+\DoxyCodeLine{792   \textcolor{keywordflow}{if} (validate\_layers) \{}
+\DoxyCodeLine{793     \textcolor{keywordflow}{if} (!idle\_frame)}
+\DoxyCodeLine{794       tracker.ResetTrackerState();}
+\DoxyCodeLine{795 }
+\DoxyCodeLine{796     needs\_clone\_validation\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{797 }
+\DoxyCodeLine{798     \textcolor{comment}{// We are doing a full re-validation.}}
+\DoxyCodeLine{799     add\_index = 0;}
+\DoxyCodeLine{800     \textcolor{keywordtype}{bool} force\_gpu = disable\_ovelays || idle\_frame ||}
+\DoxyCodeLine{801                      ((state\_ \& kConfigurationChanged) \&\& (layers.size() > 1));}
+\DoxyCodeLine{802     \textcolor{keywordtype}{bool} test\_commit = \textcolor{keyword}{false};}
+\DoxyCodeLine{803     render\_layers = display\_plane\_manager\_->ValidateLayers(}
+\DoxyCodeLine{804         layers, add\_index, force\_gpu, \&test\_commit, \&test\_commit,}
+\DoxyCodeLine{805         current\_composition\_planes, previous\_plane\_state\_, surfaces\_not\_inuse\_);}
+\DoxyCodeLine{806     \textcolor{comment}{// If Video effects need to be applied, let's make sure}}
+\DoxyCodeLine{807     \textcolor{comment}{// we go through the composition pass for Video Layers.}}
+\DoxyCodeLine{808     \textcolor{keywordflow}{if} (force\_media\_composition \&\& requested\_video\_effect) \{}
+\DoxyCodeLine{809       SetMediaEffectsState(requested\_video\_effect, layers,}
+\DoxyCodeLine{810                            current\_composition\_planes);}
+\DoxyCodeLine{811       render\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{812     \}}
+\DoxyCodeLine{813     state\_ \&= ~kConfigurationChanged;}
+\DoxyCodeLine{814   \}}
+\DoxyCodeLine{815 }
+\DoxyCodeLine{816   \mbox{\hyperlink{hwctrace_8h_a69f77c8158af1ada4ca0299b9232f1d3}{DUMP\_CURRENT\_COMPOSITION\_PLANES}}();}
+\DoxyCodeLine{817   \mbox{\hyperlink{hwctrace_8h_a23419e5261b9851ad679bcbf01916a5b}{DUMP\_CURRENT\_LAYER\_PLANE\_COMBINATIONS}}();}
+\DoxyCodeLine{818   \mbox{\hyperlink{hwctrace_8h_a2ceba86ff4c70e833f0ad289202baf22}{DUMP\_CURRENT\_DUPLICATE\_LAYER\_COMBINATIONS}}();}
+\DoxyCodeLine{819 }
+\DoxyCodeLine{820   \textcolor{comment}{// Ensure all pixel buffer uploads are done.}}
+\DoxyCodeLine{821   \textcolor{keywordflow}{if} (call\_back) \{}
+\DoxyCodeLine{822     call\_back->Synchronize();}
+\DoxyCodeLine{823   \}}
+\DoxyCodeLine{824   \textcolor{comment}{// Handle any 3D Composition.}}
+\DoxyCodeLine{825   \textcolor{keywordflow}{if} (render\_layers) \{}
+\DoxyCodeLine{826     compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a2a9da9e986a230cb68e322ed18ba4866}{BeginFrame}}(disable\_ovelays);}
+\DoxyCodeLine{827 }
+\DoxyCodeLine{828     std::vector<HwcRect<int>> layers\_rects;}
+\DoxyCodeLine{829     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} layer\_index = 0; layer\_index < size; layer\_index++) \{}
+\DoxyCodeLine{830       \textcolor{keyword}{const} OverlayLayer\& layer = layers.at(layer\_index);}
+\DoxyCodeLine{831       layers\_rects.emplace\_back(layer.GetDisplayFrame());}
+\DoxyCodeLine{832     \}}
+\DoxyCodeLine{833 }
+\DoxyCodeLine{834     \textcolor{comment}{// Prepare for final composition.}}
+\DoxyCodeLine{835     \textcolor{keywordflow}{if} (!compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_ad1b2b9db52224ab8e5ae906df0c58a28}{Draw}}(current\_composition\_planes, layers, layers\_rects)) \{}
+\DoxyCodeLine{836       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to prepare for the frame composition. "});}
+\DoxyCodeLine{837       composition\_passed = \textcolor{keyword}{false};}
+\DoxyCodeLine{838     \}}
+\DoxyCodeLine{839   \}}
+\DoxyCodeLine{840 }
+\DoxyCodeLine{841   \textcolor{keywordflow}{if} (!composition\_passed) \{}
+\DoxyCodeLine{842     HandleCommitFailure(current\_composition\_planes);}
+\DoxyCodeLine{843     last\_commit\_failed\_update\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{844     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{845   \}}
+\DoxyCodeLine{846 }
+\DoxyCodeLine{847   \textcolor{keywordflow}{if} (state\_ \& kNeedsColorCorrection) \{}
+\DoxyCodeLine{848     display\_->\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a81bddc91d8f593a1f1cb2248d7206386}{SetColorCorrection}}(gamma\_, contrast\_, brightness\_);}
+\DoxyCodeLine{849     display\_->\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a89ded7e09902c8c3c707c041412f1c02}{SetColorTransformMatrix}}(color\_transform\_matrix\_,}
+\DoxyCodeLine{850                                       color\_transform\_hint\_);}
+\DoxyCodeLine{851     state\_ \&= ~kNeedsColorCorrection;}
+\DoxyCodeLine{852   \}}
+\DoxyCodeLine{853 }
+\DoxyCodeLine{854   display\_->\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a3aeed39dd1af137ed16d83c4dfdcafad}{SetPipeCanvasColor}}(canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_acc36ffbe065c257719324261a5132a34}{bpc}}, canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_a1fe32ff54751b722cf22aa5552bbf639}{red}}, canvas\_.
+      \mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_ac32b9c45f1b36efde1daf1ff611f91a2}{green}},}
+\DoxyCodeLine{855                                canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_a27ec3e90465f37afc780b4667553c476}{blue}}, canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_aa3bc7ed2376661512398ec6be09bde4e}{alpha}});}
+\DoxyCodeLine{856 }
+\DoxyCodeLine{857   int32\_t fence = 0;}
+\DoxyCodeLine{858   \textcolor{keywordtype}{bool} fence\_released = \textcolor{keyword}{false};}
+\DoxyCodeLine{859   composition\_passed =}
+\DoxyCodeLine{860       display\_->\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1db680248cf31fdf1d2d1e926355916d}{Commit}}(current\_composition\_planes, previous\_plane\_state\_,}
+\DoxyCodeLine{861                        disable\_ovelays, kms\_fence\_, \&fence, \&fence\_released);}
+\DoxyCodeLine{862 }
+\DoxyCodeLine{863   \textcolor{keywordflow}{if} (fence\_released) \{}
+\DoxyCodeLine{864     kms\_fence\_ = 0;}
+\DoxyCodeLine{865   \}}
+\DoxyCodeLine{866 }
+\DoxyCodeLine{867   \textcolor{keywordflow}{if} (!composition\_passed) \{}
+\DoxyCodeLine{868     last\_commit\_failed\_update\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{869     HandleCommitFailure(current\_composition\_planes);}
+\DoxyCodeLine{870     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{871   \}}
+\DoxyCodeLine{872 }
+\DoxyCodeLine{873   \textcolor{comment}{// Mark any surfaces as not in use. These surfaces}}
+\DoxyCodeLine{874   \textcolor{comment}{// where not marked earlier as they where onscreen.}}
+\DoxyCodeLine{875   \textcolor{comment}{// Doing it here also ensures that if this surface}}
+\DoxyCodeLine{876   \textcolor{comment}{// is still in use than it will be marked in use}}
+\DoxyCodeLine{877   \textcolor{comment}{// below.}}
+\DoxyCodeLine{878   \textcolor{keywordflow}{if} (!mark\_not\_inuse\_.empty()) \{}
+\DoxyCodeLine{879     \textcolor{keywordtype}{size\_t} size = mark\_not\_inuse\_.size();}
+\DoxyCodeLine{880     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{881       mark\_not\_inuse\_.at(i)->SetSurfaceAge(-1);}
+\DoxyCodeLine{882     \}}
+\DoxyCodeLine{883 }
+\DoxyCodeLine{884     std::vector<NativeSurface*>().swap(mark\_not\_inuse\_);}
+\DoxyCodeLine{885     tracker.ForceSurfaceRelease();}
+\DoxyCodeLine{886   \}}
+\DoxyCodeLine{887 }
+\DoxyCodeLine{888   in\_flight\_layers\_.swap(layers);}
+\DoxyCodeLine{889 }
+\DoxyCodeLine{890   \textcolor{comment}{// Swap current and previous composition results.}}
+\DoxyCodeLine{891   previous\_plane\_state\_.swap(current\_composition\_planes);}
+\DoxyCodeLine{892 }
+\DoxyCodeLine{893   \textcolor{comment}{// Set Age for all offscreen surfaces.}}
+\DoxyCodeLine{894   UpdateOnScreenSurfaces();}
+\DoxyCodeLine{895 }
+\DoxyCodeLine{896   \textcolor{comment}{// Swap any surfaces which are to be marked as not in}}
+\DoxyCodeLine{897   \textcolor{comment}{// use next frame.}}
+\DoxyCodeLine{898   \textcolor{keywordflow}{if} (!surfaces\_not\_inuse\_.empty()) \{}
+\DoxyCodeLine{899     \textcolor{keywordtype}{size\_t} size = surfaces\_not\_inuse\_.size();}
+\DoxyCodeLine{900     std::vector<NativeSurface*> temp;}
+\DoxyCodeLine{901     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{902       NativeSurface* surface = surfaces\_not\_inuse\_.at(i);}
+\DoxyCodeLine{903       uint32\_t age = surface->GetSurfaceAge();}
+\DoxyCodeLine{904       \textcolor{keywordflow}{if} (age > 0) \{}
+\DoxyCodeLine{905         temp.emplace\_back(surface);}
+\DoxyCodeLine{906         surface->SetSurfaceAge(surface->GetSurfaceAge() - 1);}
+\DoxyCodeLine{907       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{908         mark\_not\_inuse\_.emplace\_back(surface);}
+\DoxyCodeLine{909       \}}
+\DoxyCodeLine{910     \}}
+\DoxyCodeLine{911 }
+\DoxyCodeLine{912     surfaces\_not\_inuse\_.swap(temp);}
+\DoxyCodeLine{913   \}}
+\DoxyCodeLine{914 }
+\DoxyCodeLine{915   \textcolor{keywordflow}{if} (fence > 0) \{}
+\DoxyCodeLine{916     *retire\_fence = dup(fence);}
+\DoxyCodeLine{917     kms\_fence\_ = fence;}
+\DoxyCodeLine{918 }
+\DoxyCodeLine{919     SetReleaseFenceToLayers(fence, source\_layers);}
+\DoxyCodeLine{920   \}}
+\DoxyCodeLine{921 }
+\DoxyCodeLine{922   \textcolor{comment}{// Let Display handle any lazy initalizations.}}
+\DoxyCodeLine{923   \textcolor{keywordflow}{if} (handle\_display\_initializations\_) \{}
+\DoxyCodeLine{924     handle\_display\_initializations\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{925     display\_->\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab8e24e90adf5eaa76da5cb827ad82c65}{HandleLazyInitialization}}();}
+\DoxyCodeLine{926   \}}
+\DoxyCodeLine{927 }
+\DoxyCodeLine{928   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{929 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_afde8d6a7c9b823e2300dcb3d9e26765f}\label{classhwcomposer_1_1DisplayQueue_afde8d6a7c9b823e2300dcb3d9e26765f}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Register\+Refresh\+Callback@{Register\+Refresh\+Callback}}
+\index{Register\+Refresh\+Callback@{Register\+Refresh\+Callback}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Register\+Refresh\+Callback()}{RegisterRefreshCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Register\+Refresh\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RefreshCallback}{Refresh\+Callback}} $>$}]{callback,  }\item[{uint32\+\_\+t}]{display\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1435 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1436                                                                   \{}
+\DoxyCodeLine{1437   idle\_tracker\_.idle\_lock\_.lock();}
+\DoxyCodeLine{1438   refresh\_callback\_ = callback;}
+\DoxyCodeLine{1439   refrsh\_display\_id\_ = display\_id;}
+\DoxyCodeLine{1440   idle\_tracker\_.idle\_lock\_.unlock();}
+\DoxyCodeLine{1441 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a704b865c6302cfb8fcda1a593544dc92}\label{classhwcomposer_1_1DisplayQueue_a704b865c6302cfb8fcda1a593544dc92}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Register\+Vsync\+Callback@{Register\+Vsync\+Callback}}
+\index{Register\+Vsync\+Callback@{Register\+Vsync\+Callback}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Register\+Vsync\+Callback()}{RegisterVsyncCallback()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Display\+Queue\+::\+Register\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$}]{callback,  }\item[{uint32\+\_\+t}]{display\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1430 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1431                                                              \{}
+\DoxyCodeLine{1432   \textcolor{keywordflow}{return} vblank\_handler\_->RegisterCallback(callback, display\_id);}
+\DoxyCodeLine{1433 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a899b71a818bcc2063e8fe8684e90841c}\label{classhwcomposer_1_1DisplayQueue_a899b71a818bcc2063e8fe8684e90841c}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}}
+\index{Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Color()}{RestoreVideoDefaultColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Restore\+Video\+Default\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1399 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1399                                                                  \{}
+\DoxyCodeLine{1400   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{1401   requested\_video\_effect\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{1402   compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a2e970fc6261ed6ea871a16bf28e53cc5}{RestoreVideoDefaultColor}}(color);}
+\DoxyCodeLine{1403   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{1404 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a36a5b423e28bc63003dd0440dcb55e0b}\label{classhwcomposer_1_1DisplayQueue_a36a5b423e28bc63003dd0440dcb55e0b}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}}
+\index{Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Deinterlace()}{RestoreVideoDefaultDeinterlace()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Restore\+Video\+Default\+Deinterlace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1414 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1414                                                   \{}
+\DoxyCodeLine{1415   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{1416   requested\_video\_effect\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{1417   compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a3e6cdd578394ba6611b8efdd3ff9c2e1}{RestoreVideoDefaultDeinterlace}}();}
+\DoxyCodeLine{1418   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{1419 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_aa195d43bfa58dbd7dbb4b64935d3fdc9}\label{classhwcomposer_1_1DisplayQueue_aa195d43bfa58dbd7dbb4b64935d3fdc9}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Rotate\+Display@{Rotate\+Display}}
+\index{Rotate\+Display@{Rotate\+Display}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Rotate\+Display()}{RotateDisplay()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Rotate\+Display (\begin{DoxyParamCaption}\item[{H\+W\+C\+Rotation}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Definition at line 123 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{123                                                      \{}
+\DoxyCodeLine{124   \textcolor{keywordflow}{switch} (rotation) \{}
+\DoxyCodeLine{125     \textcolor{keywordflow}{case} kRotate90:}
+\DoxyCodeLine{126       plane\_transform\_ |= kTransform90;}
+\DoxyCodeLine{127       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{128     \textcolor{keywordflow}{case} kRotate270:}
+\DoxyCodeLine{129       plane\_transform\_ |= kTransform270;}
+\DoxyCodeLine{130       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{131     \textcolor{keywordflow}{case} kRotate180:}
+\DoxyCodeLine{132       plane\_transform\_ |= kTransform180;}
+\DoxyCodeLine{133       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{134     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{135       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{136   \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138   display\_plane\_manager\_->SetDisplayTransform(plane\_transform\_);}
+\DoxyCodeLine{139 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_aa7de8c877ac00ff5ab8589535eccbc12}\label{classhwcomposer_1_1DisplayQueue_aa7de8c877ac00ff5ab8589535eccbc12}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Brightness@{Set\+Brightness}}
+\index{Set\+Brightness@{Set\+Brightness}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Brightness()}{SetBrightness()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Brightness (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{red,  }\item[{uint32\+\_\+t}]{green,  }\item[{uint32\+\_\+t}]{blue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1364 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1364                                                                             \{}
+\DoxyCodeLine{1365   red \&= 0xFF;}
+\DoxyCodeLine{1366   green \&= 0xFF;}
+\DoxyCodeLine{1367   blue \&= 0xFF;}
+\DoxyCodeLine{1368   brightness\_ = (red << 16) | (green << 8) | (blue);}
+\DoxyCodeLine{1369   state\_ |= kNeedsColorCorrection;}
+\DoxyCodeLine{1370 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a7da63db0845b4c79e3bd856edf4009cb}\label{classhwcomposer_1_1DisplayQueue_a7da63db0845b4c79e3bd856edf4009cb}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Canvas\+Color@{Set\+Canvas\+Color}}
+\index{Set\+Canvas\+Color@{Set\+Canvas\+Color}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Canvas\+Color()}{SetCanvasColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Canvas\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{bpc,  }\item[{uint16\+\_\+t}]{red,  }\item[{uint16\+\_\+t}]{green,  }\item[{uint16\+\_\+t}]{blue,  }\item[{uint16\+\_\+t}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1421 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1422                                                                  \{}
+\DoxyCodeLine{1423   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_acc36ffbe065c257719324261a5132a34}{bpc}} = bpc;}
+\DoxyCodeLine{1424   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_a1fe32ff54751b722cf22aa5552bbf639}{red}} = red;}
+\DoxyCodeLine{1425   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_ac32b9c45f1b36efde1daf1ff611f91a2}{green}} = green;}
+\DoxyCodeLine{1426   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_a27ec3e90465f37afc780b4667553c476}{blue}} = blue;}
+\DoxyCodeLine{1427   canvas\_.\mbox{\hyperlink{structhwcomposer_1_1canvas__color__comps_aa3bc7ed2376661512398ec6be09bde4e}{alpha}} = alpha;}
+\DoxyCodeLine{1428 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a385e83725a9ace5ba2444701f56230fb}\label{classhwcomposer_1_1DisplayQueue_a385e83725a9ace5ba2444701f56230fb}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Clone\+Mode@{Set\+Clone\+Mode}}
+\index{Set\+Clone\+Mode@{Set\+Clone\+Mode}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Clone\+Mode()}{SetCloneMode()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Clone\+Mode (\begin{DoxyParamCaption}\item[{bool}]{cloned }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1149 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1149                                            \{}
+\DoxyCodeLine{1150   \textcolor{keywordflow}{if} (clone\_mode\_ == cloned)}
+\DoxyCodeLine{1151     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1152 }
+\DoxyCodeLine{1153   \textcolor{keywordflow}{if} (vblank\_handler\_) \{}
+\DoxyCodeLine{1154     \textcolor{keywordflow}{if} (cloned) \{}
+\DoxyCodeLine{1155       vblank\_handler\_->SetPowerMode(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}});}
+\DoxyCodeLine{1156     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1157       vblank\_handler\_->SetPowerMode(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{kOn}});}
+\DoxyCodeLine{1158     \}}
+\DoxyCodeLine{1159   \}}
+\DoxyCodeLine{1160 }
+\DoxyCodeLine{1161   \textcolor{keywordflow}{if} (display\_plane\_manager\_) \{}
+\DoxyCodeLine{1162     \textcolor{comment}{// Set Age for all offscreen surfaces.}}
+\DoxyCodeLine{1163     UpdateOnScreenSurfaces();}
+\DoxyCodeLine{1164 }
+\DoxyCodeLine{1165     \textcolor{keywordflow}{for} (DisplayPlaneState\& previous\_plane : previous\_plane\_state\_) \{}
+\DoxyCodeLine{1166       display\_plane\_manager\_->MarkSurfacesForRecycling(}
+\DoxyCodeLine{1167           \&previous\_plane, surfaces\_not\_inuse\_, \textcolor{keyword}{true});}
+\DoxyCodeLine{1168     \}}
+\DoxyCodeLine{1169 }
+\DoxyCodeLine{1170     \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{DisplayPlaneStateList}}().swap(previous\_plane\_state\_);}
+\DoxyCodeLine{1171   \}}
+\DoxyCodeLine{1172 }
+\DoxyCodeLine{1173   clone\_mode\_ = cloned;}
+\DoxyCodeLine{1174   clone\_rendered\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{1175 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a212d623ab62b8b3d57a95dd6eec67869}\label{classhwcomposer_1_1DisplayQueue_a212d623ab62b8b3d57a95dd6eec67869}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Color\+Transform@{Set\+Color\+Transform}}
+\index{Set\+Color\+Transform@{Set\+Color\+Transform}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Color\+Transform()}{SetColorTransform()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Color\+Transform (\begin{DoxyParamCaption}\item[{const float $\ast$}]{matrix,  }\item[{\mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}}}]{hint }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1345 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1346                                                              \{}
+\DoxyCodeLine{1347   color\_transform\_hint\_ = hint;}
+\DoxyCodeLine{1348 }
+\DoxyCodeLine{1349   \textcolor{keywordflow}{if} (hint == \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88a009f3b96a52fc5cbf696f781dd55c05e}{HWCColorTransform::kArbitraryMatrix}}) \{}
+\DoxyCodeLine{1350     memcpy(color\_transform\_matrix\_, matrix, \textcolor{keyword}{sizeof}(color\_transform\_matrix\_));}
+\DoxyCodeLine{1351   \}}
+\DoxyCodeLine{1352 }
+\DoxyCodeLine{1353   state\_ |= kNeedsColorCorrection;}
+\DoxyCodeLine{1354 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a6e8b07f2613ead8eb7c15a3118e386f5}\label{classhwcomposer_1_1DisplayQueue_a6e8b07f2613ead8eb7c15a3118e386f5}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Contrast@{Set\+Contrast}}
+\index{Set\+Contrast@{Set\+Contrast}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Contrast()}{SetContrast()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Contrast (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{red,  }\item[{uint32\+\_\+t}]{green,  }\item[{uint32\+\_\+t}]{blue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1356 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1356                                                                           \{}
+\DoxyCodeLine{1357   red \&= 0xFF;}
+\DoxyCodeLine{1358   green \&= 0xFF;}
+\DoxyCodeLine{1359   blue \&= 0xFF;}
+\DoxyCodeLine{1360   contrast\_ = (red << 16) | (green << 8) | (blue);}
+\DoxyCodeLine{1361   state\_ |= kNeedsColorCorrection;}
+\DoxyCodeLine{1362 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_ac20dcfb66475f60f8f45244592be057e}\label{classhwcomposer_1_1DisplayQueue_ac20dcfb66475f60f8f45244592be057e}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}}
+\index{Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Explicit\+Sync\+Support()}{SetExplicitSyncSupport()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Explicit\+Sync\+Support (\begin{DoxyParamCaption}\item[{bool}]{disable\+\_\+explicit\+\_\+sync }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1372 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1372                                                                     \{}
+\DoxyCodeLine{1373   \textcolor{keywordflow}{if} (disable\_explicit\_sync) \{}
+\DoxyCodeLine{1374     state\_ |= kDisableOverlayUsage;}
+\DoxyCodeLine{1375   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1376     state\_ \&= ~kDisableOverlayUsage;}
+\DoxyCodeLine{1377   \}}
+\DoxyCodeLine{1378 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a04cd89eacae444e6f626bbf0351ce23a}\label{classhwcomposer_1_1DisplayQueue_a04cd89eacae444e6f626bbf0351ce23a}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Gamma@{Set\+Gamma}}
+\index{Set\+Gamma@{Set\+Gamma}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Gamma()}{SetGamma()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Gamma (\begin{DoxyParamCaption}\item[{float}]{red,  }\item[{float}]{green,  }\item[{float}]{blue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1338 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1338                                                               \{}
+\DoxyCodeLine{1339   gamma\_.\mbox{\hyperlink{structhwcomposer_1_1gamma__colors_a02c6848074b1bf52bedf0a97a791fbbd}{red}} = red;}
+\DoxyCodeLine{1340   gamma\_.\mbox{\hyperlink{structhwcomposer_1_1gamma__colors_a920b8cb1cd029474bbbcbfae61d0feb2}{green}} = green;}
+\DoxyCodeLine{1341   gamma\_.\mbox{\hyperlink{structhwcomposer_1_1gamma__colors_a3e2055501bf5bd0be915deb952f26097}{blue}} = blue;}
+\DoxyCodeLine{1342   state\_ |= kNeedsColorCorrection;}
+\DoxyCodeLine{1343 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_aa8ae9ab4014c0950196f2687ddc6fbb0}\label{classhwcomposer_1_1DisplayQueue_aa8ae9ab4014c0950196f2687ddc6fbb0}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Power\+Mode@{Set\+Power\+Mode}}
+\index{Set\+Power\+Mode@{Set\+Power\+Mode}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Power\+Mode()}{SetPowerMode()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Queue\+::\+Set\+Power\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{power\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 96 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                                    \{}
+\DoxyCodeLine{97   \textcolor{keywordflow}{switch} (power\_mode) \{}
+\DoxyCodeLine{98     \textcolor{keywordflow}{case} \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}}:}
+\DoxyCodeLine{99       HandleExit();}
+\DoxyCodeLine{100       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{101     \textcolor{keywordflow}{case} \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea8bccbb926a1dc31f9d9f572fdd95e608}{kDoze}}:}
+\DoxyCodeLine{102       HandleExit();}
+\DoxyCodeLine{103       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{104     \textcolor{keywordflow}{case} \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea35f99ee0a3c1ecc81db3f51e82f1f103}{kDozeSuspend}}:}
+\DoxyCodeLine{105       vblank\_handler\_->SetPowerMode(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea35f99ee0a3c1ecc81db3f51e82f1f103}{kDozeSuspend}});}
+\DoxyCodeLine{106       state\_ |= kPoweredOn;}
+\DoxyCodeLine{107       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{108     \textcolor{keywordflow}{case} \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{kOn}}:}
+\DoxyCodeLine{109       state\_ |= kPoweredOn | kConfigurationChanged | kNeedsColorCorrection;}
+\DoxyCodeLine{110       vblank\_handler\_->SetPowerMode(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{kOn}});}
+\DoxyCodeLine{111       power\_mode\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{112       state\_ \&= ~kIgnoreIdleRefresh;}
+\DoxyCodeLine{113       compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a5ad90c739aabb16ec737b9b6f8ceb991}{Init}}(resource\_manager\_.get(), gpu\_fd\_, fb\_manager\_);}
+\DoxyCodeLine{114       power\_mode\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{115       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{116     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{117       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{118   \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{121 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_af0af87df114aead2719fd8b4169262a2}\label{classhwcomposer_1_1DisplayQueue_af0af87df114aead2719fd8b4169262a2}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Video\+Color@{Set\+Video\+Color}}
+\index{Set\+Video\+Color@{Set\+Video\+Color}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Video\+Color()}{SetVideoColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{color,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1387 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1387                                                                    \{}
+\DoxyCodeLine{1388   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{1389   requested\_video\_effect\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{1390   compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a150659a25023edf4aa162e2482959e87}{SetVideoColor}}(color, value);}
+\DoxyCodeLine{1391   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{1392 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_a5da13b8f765fe2e6816dcd156a363a47}\label{classhwcomposer_1_1DisplayQueue_a5da13b8f765fe2e6816dcd156a363a47}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}}
+\index{Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Video\+Deinterlace()}{SetVideoDeinterlace()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Video\+Deinterlace (\begin{DoxyParamCaption}\item[{H\+W\+C\+Deinterlace\+Flag}]{flag,  }\item[{H\+W\+C\+Deinterlace\+Control}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1406 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1407                                                                    \{}
+\DoxyCodeLine{1408   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{1409   requested\_video\_effect\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{1410   compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a9ee296456a843a9f1e9230afbd7576e2}{SetVideoDeinterlace}}(flag, mode);}
+\DoxyCodeLine{1411   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{1412 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_af9685778a5edd676f1cb53384e45f043}\label{classhwcomposer_1_1DisplayQueue_af9685778a5edd676f1cb53384e45f043}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}}
+\index{Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Set\+Video\+Scaling\+Mode()}{SetVideoScalingMode()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Set\+Video\+Scaling\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1380 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1380                                                     \{}
+\DoxyCodeLine{1381   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{1382   \textcolor{comment}{// requested\_video\_effect\_ = true;}}
+\DoxyCodeLine{1383   compositor\_.\mbox{\hyperlink{classhwcomposer_1_1Compositor_a82b92f88271cc0c95555b5ca97620e59}{SetVideoScalingMode}}(mode);}
+\DoxyCodeLine{1384   video\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{1385 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_af7a7db40de2431b949dc66e757983fea}\label{classhwcomposer_1_1DisplayQueue_af7a7db40de2431b949dc66e757983fea}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!Update\+Scaling\+Ratio@{Update\+Scaling\+Ratio}}
+\index{Update\+Scaling\+Ratio@{Update\+Scaling\+Ratio}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{Update\+Scaling\+Ratio()}{UpdateScalingRatio()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+Update\+Scaling\+Ratio (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{primary\+\_\+width,  }\item[{uint32\+\_\+t}]{primary\+\_\+height,  }\item[{uint32\+\_\+t}]{display\+\_\+width,  }\item[{uint32\+\_\+t}]{display\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1501 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1504                                                                \{}
+\DoxyCodeLine{1505   scaling\_tracker\_.scaling\_state\_ = ScalingTracker::kNeeedsNoSclaing;}
+\DoxyCodeLine{1506   uint32\_t primary\_area = primary\_width * primary\_height;}
+\DoxyCodeLine{1507   uint32\_t display\_area = display\_width * display\_height;}
+\DoxyCodeLine{1508   \textcolor{keywordflow}{if} (primary\_area != display\_area) \{}
+\DoxyCodeLine{1509     scaling\_tracker\_.scaling\_state\_ = ScalingTracker::kNeedsScaling;}
+\DoxyCodeLine{1510     scaling\_tracker\_.scaling\_width =}
+\DoxyCodeLine{1511         float(display\_width - primary\_width) / float(primary\_width);}
+\DoxyCodeLine{1512     scaling\_tracker\_.scaling\_height =}
+\DoxyCodeLine{1513         float(display\_height - primary\_height) / float(primary\_height);}
+\DoxyCodeLine{1514   \}}
+\DoxyCodeLine{1515 }
+\DoxyCodeLine{1516   state\_ |= kConfigurationChanged;}
+\DoxyCodeLine{1517 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayQueue_ae62d50d722c5cd5fe0161149db137534}\label{classhwcomposer_1_1DisplayQueue_ae62d50d722c5cd5fe0161149db137534}} 
+\index{hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}!V\+Sync\+Control@{V\+Sync\+Control}}
+\index{V\+Sync\+Control@{V\+Sync\+Control}!hwcomposer\+::\+Display\+Queue@{hwcomposer\+::\+Display\+Queue}}
+\subsubsection{\texorpdfstring{V\+Sync\+Control()}{VSyncControl()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Queue\+::\+V\+Sync\+Control (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1443 of file displayqueue.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1443                                             \{}
+\DoxyCodeLine{1444   vblank\_handler\_->VSyncControl(enabled);}
+\DoxyCodeLine{1445 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/display/\mbox{\hyperlink{displayqueue_8h}{displayqueue.\+h}}\item 
+common/display/\mbox{\hyperlink{displayqueue_8cpp}{displayqueue.\+cpp}}\end{DoxyCompactItemize}

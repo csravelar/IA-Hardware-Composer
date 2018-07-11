@@ -1,0 +1,1103 @@
+\hypertarget{classhwcomposer_1_1DrmDisplay}{}\section{hwcomposer\+:\+:Drm\+Display Class Reference}
+\label{classhwcomposer_1_1DrmDisplay}\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+
+
+{\ttfamily \#include $<$drmdisplay.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Drm\+Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classhwcomposer_1_1DrmDisplay}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_af465e6d3c061a21372fcc2c1da960e79}{Drm\+Display}} (uint32\+\_\+t gpu\+\_\+fd, uint32\+\_\+t pipe\+\_\+id, uint32\+\_\+t crtc\+\_\+id, \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager}{Drm\+Display\+Manager}} $\ast$manager)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a10adc5ea0028976604fa467efcfb1880}{$\sim$\+Drm\+Display}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a7625a0b44daa5be9b7acf1bce235663e}{Get\+Display\+Attribute}} (uint32\+\_\+t config, H\+W\+C\+Display\+Attribute attribute, int32\+\_\+t $\ast$value) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a44114f544fbb9328f385085e30d900f1}{Get\+Display\+Configs}} (uint32\+\_\+t $\ast$num\+\_\+configs, uint32\+\_\+t $\ast$configs) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_ac1feeb5b5c7b1f9dbb0faf1a2bd8befe}{Get\+Display\+Name}} (uint32\+\_\+t $\ast$size, char $\ast$name) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_abf4285912666230bf6172dae5a867ba7}{Set\+Broadcast\+R\+GB}} (const char $\ast$range\+\_\+property) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a8ea456de0530370e0ad5f57ba4c6d20a}{Set\+H\+D\+C\+P\+State}} (H\+W\+C\+Content\+Protection state, H\+W\+C\+Content\+Type content\+\_\+type) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a6dd7060290f6be414485d743d1e7d226}{Initialize\+Display}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a0212cd45757cc2a74dac62094da103ec}{Power\+On}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_aa235de1fc4a01177e1afea36d4554870}{Update\+Display\+Config}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a8da99b54fe8c1261f1bf9a3d00474133}{Set\+Color\+Correction}} (struct \mbox{\hyperlink{structhwcomposer_1_1gamma__colors}{gamma\+\_\+colors}} gamma, uint32\+\_\+t contrast, uint32\+\_\+t brightness) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_aca6b6791dc9c5a4498895509e854bcfa}{Set\+Pipe\+Canvas\+Color}} (uint16\+\_\+t bpc, uint16\+\_\+t red, uint16\+\_\+t green, uint16\+\_\+t blue, uint16\+\_\+t alpha) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a43bbf2421bd4b0b4e7b0612020060e3e}{Set\+Color\+Transform\+Matrix}} (const float $\ast$color\+\_\+transform\+\_\+matrix, \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}} color\+\_\+transform\+\_\+hint) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a4596c2736f70fdd4c87ceb2dccf14848}{Disable}} (const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&composition\+\_\+planes) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a83b00eac01a21d6a5e50b4664df6b279}{Commit}} (const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&composition\+\_\+planes, const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&previous\+\_\+composition\+\_\+planes, bool disable\+\_\+explicit\+\_\+fence, int32\+\_\+t previous\+\_\+fence, int32\+\_\+t $\ast$commit\+\_\+fence, bool $\ast$previous\+\_\+fence\+\_\+released) override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_ac4ec96746c9dba9cce59b4bdce0a87ff}{Crtc\+Id}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_abbf3b8fc423292df5fe6b9df791977c4}{Connect\+Display}} (const \mbox{\hyperlink{nativedisplay_8h_a00e4eec8ca028fd8f4672b5e60fbf2cd}{drm\+Mode\+Mode\+Info}} \&mode\+\_\+info, const \mbox{\hyperlink{nativedisplay_8h_a16ea3fc6b16060fd1e1257707006440e}{drm\+Mode\+Connector}} $\ast$connector, uint32\+\_\+t config)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a922407311e0d418894e4968712f2bf03}{Set\+Drm\+Mode\+Info}} (const std\+::vector$<$ \mbox{\hyperlink{nativedisplay_8h_a00e4eec8ca028fd8f4672b5e60fbf2cd}{drm\+Mode\+Mode\+Info}} $>$ \&mode\+\_\+info)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a1a72c20b148b0cf2c1174a34da8a95dc}{Set\+Display\+Attribute}} (const \mbox{\hyperlink{nativedisplay_8h_a00e4eec8ca028fd8f4672b5e60fbf2cd}{drm\+Mode\+Mode\+Info}} \&mode\+\_\+info)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a7aaa318ce853a36ebcaf837fe1801f88}{Test\+Commit}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayPlane}{Overlay\+Plane}} $>$ \&commit\+\_\+planes) const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_acbf817afffc6ad6f2879d914a0335dd0}{Populate\+Planes}} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $>$$>$ \&overlay\+\_\+planes) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_af4cf9ce1ea43e3520506dfc75c751c1f}{Notify\+Clients\+Of\+Display\+Change\+Status}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a787d5eac9ba60ad9ae6f51cb028e8790}{Force\+Refresh}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a0ac8713e1c6c26d0721295c8c6277540}{Ignore\+Updates}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a7dd459cd835df8ff956350d3b53628e8}{Handle\+Lazy\+Initialization}} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 42 of file drmdisplay.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_af465e6d3c061a21372fcc2c1da960e79}\label{classhwcomposer_1_1DrmDisplay_af465e6d3c061a21372fcc2c1da960e79}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Drm\+Display@{Drm\+Display}}
+\index{Drm\+Display@{Drm\+Display}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Drm\+Display()}{DrmDisplay()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Drm\+Display\+::\+Drm\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{uint32\+\_\+t}]{pipe\+\_\+id,  }\item[{uint32\+\_\+t}]{crtc\+\_\+id,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager}{Drm\+Display\+Manager}} $\ast$}]{manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43     : \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af08453e7ec5a9f8e792063b09b2e9305}{PhysicalDisplay}}(gpu\_fd, pipe\_id),}
+\DoxyCodeLine{44       crtc\_id\_(crtc\_id),}
+\DoxyCodeLine{45       connector\_(0),}
+\DoxyCodeLine{46       manager\_(manager) \{}
+\DoxyCodeLine{47   memset(\&current\_mode\_, 0, \textcolor{keyword}{sizeof}(current\_mode\_));}
+\DoxyCodeLine{48 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a10adc5ea0028976604fa467efcfb1880}\label{classhwcomposer_1_1DrmDisplay_a10adc5ea0028976604fa467efcfb1880}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!````~Drm\+Display@{$\sim$\+Drm\+Display}}
+\index{````~Drm\+Display@{$\sim$\+Drm\+Display}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{$\sim$\+Drm\+Display()}{~DrmDisplay()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Drm\+Display\+::$\sim$\+Drm\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 50 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                         \{}
+\DoxyCodeLine{51   \textcolor{keywordflow}{if} (blob\_id\_)}
+\DoxyCodeLine{52     drmModeDestroyPropertyBlob(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, blob\_id\_);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54   \textcolor{keywordflow}{if} (old\_blob\_id\_)}
+\DoxyCodeLine{55     drmModeDestroyPropertyBlob(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, old\_blob\_id\_);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->SetPowerMode(\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}});}
+\DoxyCodeLine{58 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a83b00eac01a21d6a5e50b4664df6b279}\label{classhwcomposer_1_1DrmDisplay_a83b00eac01a21d6a5e50b4664df6b279}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Commit@{Commit}}
+\index{Commit@{Commit}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Commit()}{Commit()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+::\+Commit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{composition\+\_\+planes,  }\item[{const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{previous\+\_\+composition\+\_\+planes,  }\item[{bool}]{disable\+\_\+explicit\+\_\+fence,  }\item[{int32\+\_\+t}]{previous\+\_\+fence,  }\item[{int32\+\_\+t $\ast$}]{commit\+\_\+fence,  }\item[{bool $\ast$}]{previous\+\_\+fence\+\_\+released }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for showing content on display 
+\begin{DoxyParams}{Parameters}
+{\em composition\+\_\+planes} & contains list of layers which need to displayed. \\
+\hline
+{\em previous\+\_\+composition\+\_\+planes} & contains list of planes enabled last frame. \\
+\hline
+{\em disable\+\_\+explicit\+\_\+fence} & is set to true if we want a hardware fence associated with this commit request set to commit\+\_\+fence. \\
+\hline
+{\em commit\+\_\+fence} & hardware fence associated with this commit request. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1db680248cf31fdf1d2d1e926355916d}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 360 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{364                                    \{}
+\DoxyCodeLine{365   \textcolor{comment}{// Do the actual commit.}}
+\DoxyCodeLine{366   \mbox{\hyperlink{namespacehwcomposer_a1db01e0534b5b990ac7d35376c4b7e03}{ScopedDrmAtomicReqPtr}} pset(drmModeAtomicAlloc());}
+\DoxyCodeLine{367   *previous\_fence\_released = \textcolor{keyword}{false};}
+\DoxyCodeLine{368 }
+\DoxyCodeLine{369   \textcolor{keywordflow}{if} (!pset) \{}
+\DoxyCodeLine{370     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to allocate property set \%d"}, -ENOMEM);}
+\DoxyCodeLine{371     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{372   \}}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{374   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba52e2505c897030e88bcaa6498019cb4e}{kNeedsModeset}}) \{}
+\DoxyCodeLine{375     \textcolor{keywordflow}{if} (!ApplyPendingModeset(pset.get())) \{}
+\DoxyCodeLine{376       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to Modeset."});}
+\DoxyCodeLine{377       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{378     \}}
+\DoxyCodeLine{379   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!disable\_explicit\_fence \&\& out\_fence\_ptr\_prop\_) \{}
+\DoxyCodeLine{380     GetFence(pset.get(), commit\_fence);}
+\DoxyCodeLine{381   \}}
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383   \textcolor{keywordflow}{if} (!CommitFrame(composition\_planes, previous\_composition\_planes, pset.get(),}
+\DoxyCodeLine{384                    flags\_, previous\_fence, previous\_fence\_released)) \{}
+\DoxyCodeLine{385     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to Commit layers."});}
+\DoxyCodeLine{386     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{387   \}}
+\DoxyCodeLine{388 }
+\DoxyCodeLine{389   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba52e2505c897030e88bcaa6498019cb4e}{kNeedsModeset}}) \{}
+\DoxyCodeLine{390     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa0a736c951942f62a8c9514548dbfa0b}{display\_state\_}} \&= ~\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ae390ba5a8a0970767736459801b5d5fba52e2505c897030e88bcaa6498019cb4e}{kNeedsModeset}};}
+\DoxyCodeLine{391     \textcolor{keywordflow}{if} (!disable\_explicit\_fence) \{}
+\DoxyCodeLine{392       flags\_ = 0;}
+\DoxyCodeLine{393       flags\_ |= DRM\_MODE\_ATOMIC\_NONBLOCK;}
+\DoxyCodeLine{394     \}}
+\DoxyCodeLine{395   \}}
+\DoxyCodeLine{396 }
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#ifdef ENABLE\_DOUBLE\_BUFFERING}}
+\DoxyCodeLine{398   int32\_t fence = *commit\_fence;}
+\DoxyCodeLine{399   \textcolor{keywordflow}{if} (fence > 0) \{}
+\DoxyCodeLine{400     \mbox{\hyperlink{namespacehwcomposer_a095356a61c96d5f48d4ada5e8e193549}{HWCPoll}}(fence, -1);}
+\DoxyCodeLine{401     close(fence);}
+\DoxyCodeLine{402     *commit\_fence = 0;}
+\DoxyCodeLine{403   \}}
+\DoxyCodeLine{404 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{405 }
+\DoxyCodeLine{406   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{407 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_abbf3b8fc423292df5fe6b9df791977c4}\label{classhwcomposer_1_1DrmDisplay_abbf3b8fc423292df5fe6b9df791977c4}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Connect\+Display@{Connect\+Display}}
+\index{Connect\+Display@{Connect\+Display}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Connect\+Display()}{ConnectDisplay()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+::\+Connect\+Display (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{nativedisplay_8h_a00e4eec8ca028fd8f4672b5e60fbf2cd}{drm\+Mode\+Mode\+Info}} \&}]{mode\+\_\+info,  }\item[{const \mbox{\hyperlink{nativedisplay_8h_a16ea3fc6b16060fd1e1257707006440e}{drm\+Mode\+Connector}} $\ast$}]{connector,  }\item[{uint32\+\_\+t}]{config }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                  \{}
+\DoxyCodeLine{79   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"DrmDisplay::Connect recieved."});}
+\DoxyCodeLine{80   \textcolor{comment}{// TODO(kalyan): Add support for multi monitor case.}}
+\DoxyCodeLine{81   \textcolor{keywordflow}{if} (connector\_ \&\& connector->connector\_id == connector\_) \{}
+\DoxyCodeLine{82     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{83         \textcolor{stringliteral}{"Display is already connected to this connector. \%d \%d \%p \(\backslash\)n"},}
+\DoxyCodeLine{84         connector->connector\_id, connector\_, \textcolor{keyword}{this});}
+\DoxyCodeLine{85     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a83777a9b17a33aa45295c7c354e802b2}{PhysicalDisplay::Connect}}();}
+\DoxyCodeLine{86     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{87   \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{90       \textcolor{stringliteral}{"Display is being connected to a new connector.\%d \%d \%p \(\backslash\)n"},}
+\DoxyCodeLine{91       connector->connector\_id, connector\_, \textcolor{keyword}{this});}
+\DoxyCodeLine{92   connector\_ = connector->connector\_id;}
+\DoxyCodeLine{93   mmWidth\_ = connector->mmWidth;}
+\DoxyCodeLine{94   mmHeight\_ = connector->mmHeight;}
+\DoxyCodeLine{95   \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a1a72c20b148b0cf2c1174a34da8a95dc}{SetDisplayAttribute}}(mode\_info);}
+\DoxyCodeLine{96   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a75eb0d6243de4021ad8e49141becc4a0}{config\_}} = config;}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98   \mbox{\hyperlink{namespacehwcomposer_ace195c2e057b634efb3013a5a4413799}{ScopedDrmObjectPropertyPtr}} connector\_props(drmModeObjectGetProperties(}
+\DoxyCodeLine{99       \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, connector\_, DRM\_MODE\_OBJECT\_CONNECTOR));}
+\DoxyCodeLine{100   \textcolor{keywordflow}{if} (!connector\_props) \{}
+\DoxyCodeLine{101     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Unable to get connector properties."});}
+\DoxyCodeLine{102     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{103   \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105   \textcolor{keywordtype}{int} value = -1;}
+\DoxyCodeLine{106   GetDrmHDCPObjectProperty(\textcolor{stringliteral}{"Content Protection"}, connector, connector\_props,}
+\DoxyCodeLine{107                            \&hdcp\_id\_prop\_, \&value);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109   \textcolor{keywordflow}{if} (value >= 0) \{}
+\DoxyCodeLine{110     \textcolor{keywordflow}{switch} (value) \{}
+\DoxyCodeLine{111       \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{112         current\_protection\_support\_ = HWCContentProtection::kUnDesired;}
+\DoxyCodeLine{113         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{114       \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{115         current\_protection\_support\_ = HWCContentProtection::kDesired;}
+\DoxyCodeLine{116         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{117       \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{118         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{119     \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{keywordflow}{if} (desired\_protection\_support\_ == HWCContentProtection::kUnSupported) \{}
+\DoxyCodeLine{122       desired\_protection\_support\_ = current\_protection\_support\_;}
+\DoxyCodeLine{123     \}}
+\DoxyCodeLine{124   \}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126   GetDrmObjectProperty(\textcolor{stringliteral}{"CRTC\_ID"}, connector\_props, \&crtc\_prop\_);}
+\DoxyCodeLine{127   GetDrmObjectProperty(\textcolor{stringliteral}{"Broadcast RGB"}, connector\_props, \&broadcastrgb\_id\_);}
+\DoxyCodeLine{128   GetDrmObjectProperty(\textcolor{stringliteral}{"DPMS"}, connector\_props, \&dpms\_prop\_);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a83777a9b17a33aa45295c7c354e802b2}{PhysicalDisplay::Connect}}();}
+\DoxyCodeLine{131   \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a8ea456de0530370e0ad5f57ba4c6d20a}{SetHDCPState}}(desired\_protection\_support\_, content\_type\_);}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133   drmModePropertyPtr broadcastrgb\_props =}
+\DoxyCodeLine{134       drmModeGetProperty(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, broadcastrgb\_id\_);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a4fc0fbe6c307de00cd10a3c998c74b51}{SetPowerMode}}(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ac2f383cc7b186eab567292239c700c50}{power\_mode\_}});}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138   \textcolor{comment}{// This is a valid case on DSI panels.}}
+\DoxyCodeLine{139   \textcolor{keywordflow}{if} (broadcastrgb\_props == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{140     \mbox{\hyperlink{alios_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}{WTRACE}}(\textcolor{stringliteral}{"Unable to get Broadcast RGB properties\(\backslash\)n"});}
+\DoxyCodeLine{141     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{142   \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144   \textcolor{keywordflow}{if} (!(broadcastrgb\_props->flags \& DRM\_MODE\_PROP\_ENUM)) \{}
+\DoxyCodeLine{145     drmModeFreeProperty(broadcastrgb\_props);}
+\DoxyCodeLine{146     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{147   \}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149   \textcolor{keywordflow}{if} (broadcastrgb\_props->enums != \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{150     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < broadcastrgb\_props->count\_enums; i++) \{}
+\DoxyCodeLine{151       \textcolor{keywordflow}{if} (!strcmp(broadcastrgb\_props->enums[i].name, \textcolor{stringliteral}{"Full"})) \{}
+\DoxyCodeLine{152         broadcastrgb\_full\_ = broadcastrgb\_props->enums[i].value;}
+\DoxyCodeLine{153       \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!strcmp(broadcastrgb\_props->enums[i].name, \textcolor{stringliteral}{"Automatic"})) \{}
+\DoxyCodeLine{154         broadcastrgb\_automatic\_ = broadcastrgb\_props->enums[i].value;}
+\DoxyCodeLine{155       \}}
+\DoxyCodeLine{156     \}}
+\DoxyCodeLine{157   \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159   drmModeFreeProperty(broadcastrgb\_props);}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{162 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_ac4ec96746c9dba9cce59b4bdce0a87ff}\label{classhwcomposer_1_1DrmDisplay_ac4ec96746c9dba9cce59b4bdce0a87ff}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Crtc\+Id@{Crtc\+Id}}
+\index{Crtc\+Id@{Crtc\+Id}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Crtc\+Id()}{CrtcId()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Display\+::\+Crtc\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 75 of file drmdisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                           \{}
+\DoxyCodeLine{76     \textcolor{keywordflow}{return} crtc\_id\_;}
+\DoxyCodeLine{77   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a4596c2736f70fdd4c87ceb2dccf14848}\label{classhwcomposer_1_1DrmDisplay_a4596c2736f70fdd4c87ceb2dccf14848}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Disable@{Disable}}
+\index{Disable@{Disable}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Disable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{composition\+\_\+planes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI is called when display needs to be disabled. 
+\begin{DoxyParams}{Parameters}
+{\em composition\+\_\+planes} & contains list of planes enabled last frame. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af309ebed456ecdf3eb935ce693f326d1}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 836 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{836                                                                         \{}
+\DoxyCodeLine{837   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"Disable: Disabling Display: \%p"}, \textcolor{keyword}{this});}
+\DoxyCodeLine{838 }
+\DoxyCodeLine{839   \textcolor{keywordflow}{for} (\textcolor{keyword}{const} DisplayPlaneState \&comp\_plane : composition\_planes) \{}
+\DoxyCodeLine{840     DrmPlane *plane = \textcolor{keyword}{static\_cast<}DrmPlane *\textcolor{keyword}{>}(comp\_plane.GetDisplayPlane());}
+\DoxyCodeLine{841     plane->SetInUse(\textcolor{keyword}{false});}
+\DoxyCodeLine{842     plane->SetNativeFence(-1);}
+\DoxyCodeLine{843   \}}
+\DoxyCodeLine{844 }
+\DoxyCodeLine{845   drmModeConnectorSetProperty(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, connector\_, dpms\_prop\_,}
+\DoxyCodeLine{846                               DRM\_MODE\_DPMS\_OFF);}
+\DoxyCodeLine{847 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a787d5eac9ba60ad9ae6f51cb028e8790}\label{classhwcomposer_1_1DrmDisplay_a787d5eac9ba60ad9ae6f51cb028e8790}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Force\+Refresh@{Force\+Refresh}}
+\index{Force\+Refresh@{Force\+Refresh}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Force\+Refresh()}{ForceRefresh()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Force\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 907 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{907                               \{}
+\DoxyCodeLine{908   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->ForceRefresh();}
+\DoxyCodeLine{909 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a7625a0b44daa5be9b7acf1bce235663e}\label{classhwcomposer_1_1DrmDisplay_a7625a0b44daa5be9b7acf1bce235663e}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Get\+Display\+Attribute@{Get\+Display\+Attribute}}
+\index{Get\+Display\+Attribute@{Get\+Display\+Attribute}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Attribute()}{GetDisplayAttribute()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+::\+Get\+Display\+Attribute (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{config,  }\item[{H\+W\+C\+Display\+Attribute}]{attribute,  }\item[{int32\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 164 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{166                                                      \{}
+\DoxyCodeLine{167   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(display\_lock\_);}
+\DoxyCodeLine{168   \textcolor{keywordflow}{if} (modes\_.empty()) \{}
+\DoxyCodeLine{169     \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(display\_lock\_);}
+\DoxyCodeLine{170     \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a7a76ed244ccea12e69c0fad38be23b84}{PhysicalDisplay::GetDisplayAttribute}}(config, attribute, value);}
+\DoxyCodeLine{171   \}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173   \textcolor{keywordtype}{float} refresh;}
+\DoxyCodeLine{174   \textcolor{keywordtype}{bool} status = \textcolor{keyword}{true};}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176   \textcolor{keywordflow}{switch} (attribute) \{}
+\DoxyCodeLine{177     \textcolor{keywordflow}{case} HWCDisplayAttribute::kWidth:}
+\DoxyCodeLine{178       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}}) \{}
+\DoxyCodeLine{179         *value = modes\_[config].hdisplay;}
+\DoxyCodeLine{180       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{181         *value = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.right - \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.left;}
+\DoxyCodeLine{182       \}}
+\DoxyCodeLine{183       \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"GetDisplayAttribute: width \%d set"}, *value);}
+\DoxyCodeLine{184       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{185     \textcolor{keywordflow}{case} HWCDisplayAttribute::kHeight:}
+\DoxyCodeLine{186       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}}) \{}
+\DoxyCodeLine{187         *value = modes\_[config].vdisplay;}
+\DoxyCodeLine{188       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{189         *value = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.bottom - \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.top;}
+\DoxyCodeLine{190       \}}
+\DoxyCodeLine{191       \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"GetDisplayAttribute: height \%d set"}, *value);}
+\DoxyCodeLine{192       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{193     \textcolor{keywordflow}{case} HWCDisplayAttribute::kRefreshRate:}
+\DoxyCodeLine{194       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}}) \{}
+\DoxyCodeLine{195         refresh = (modes\_[config].clock * 1000.0f) /}
+\DoxyCodeLine{196                   (modes\_[config].htotal * modes\_[config].vtotal);}
+\DoxyCodeLine{197       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{198         refresh = (modes\_[config].clock * 1000.0f) /}
+\DoxyCodeLine{199                   ((\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.right - \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.left) * (\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.bottom - 
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.top));}
+\DoxyCodeLine{200       \}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202       \textcolor{keywordflow}{if} (modes\_[config].flags \& DRM\_MODE\_FLAG\_INTERLACE)}
+\DoxyCodeLine{203         refresh *= 2;}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205       \textcolor{keywordflow}{if} (modes\_[config].flags \& DRM\_MODE\_FLAG\_DBLSCAN)}
+\DoxyCodeLine{206         refresh /= 2;}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208       \textcolor{keywordflow}{if} (modes\_[config].vscan > 1)}
+\DoxyCodeLine{209         refresh /= modes\_[config].vscan;}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211       \textcolor{comment}{// in nanoseconds}}
+\DoxyCodeLine{212       *value = 1e9 / refresh;}
+\DoxyCodeLine{213       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{214     \textcolor{keywordflow}{case} HWCDisplayAttribute::kDpiX:}
+\DoxyCodeLine{215       \textcolor{comment}{// Dots per 1000 inches}}
+\DoxyCodeLine{216       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}}) \{}
+\DoxyCodeLine{217         *value =}
+\DoxyCodeLine{218           mmWidth\_ ? (modes\_[config].hdisplay * kUmPerInch) / mmWidth\_ : -1;}
+\DoxyCodeLine{219       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{220         *value =}
+\DoxyCodeLine{221           mmWidth\_ ? ((\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.right - \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.left) * kUmPerInch) / mmWidth\_ : -1;}
+\DoxyCodeLine{222       \}}
+\DoxyCodeLine{223       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{224     \textcolor{keywordflow}{case} HWCDisplayAttribute::kDpiY:}
+\DoxyCodeLine{225       \textcolor{comment}{// Dots per 1000 inches}}
+\DoxyCodeLine{226       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}}) \{}
+\DoxyCodeLine{227         *value =}
+\DoxyCodeLine{228           mmHeight\_ ? (modes\_[config].vdisplay * kUmPerInch) / mmHeight\_ : -1;}
+\DoxyCodeLine{229       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{230         *value =}
+\DoxyCodeLine{231           mmHeight\_ ? ((\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.bottom - \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.top) * kUmPerInch) /mmHeight\_: -1;}
+\DoxyCodeLine{232       \}}
+\DoxyCodeLine{233       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{234     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{235       *value = -1;}
+\DoxyCodeLine{236       status = \textcolor{keyword}{false};}
+\DoxyCodeLine{237   \}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(display\_lock\_);}
+\DoxyCodeLine{240   \textcolor{keywordflow}{return} status;}
+\DoxyCodeLine{241 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a44114f544fbb9328f385085e30d900f1}\label{classhwcomposer_1_1DrmDisplay_a44114f544fbb9328f385085e30d900f1}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Get\+Display\+Configs@{Get\+Display\+Configs}}
+\index{Get\+Display\+Configs@{Get\+Display\+Configs}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Configs()}{GetDisplayConfigs()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+::\+Get\+Display\+Configs (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{num\+\_\+configs,  }\item[{uint32\+\_\+t $\ast$}]{configs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 243 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{243                                                                            \{}
+\DoxyCodeLine{244   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(display\_lock\_);}
+\DoxyCodeLine{245   \textcolor{keywordtype}{size\_t} modes\_size = modes\_.size();}
+\DoxyCodeLine{246   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(display\_lock\_);}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248   \textcolor{keywordflow}{if} (modes\_size == 0) \{}
+\DoxyCodeLine{249     \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af02d333622a2c80fd79387ce40253e62}{PhysicalDisplay::GetDisplayConfigs}}(num\_configs, configs);}
+\DoxyCodeLine{250   \}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252   \textcolor{keywordflow}{if} (!configs) \{}
+\DoxyCodeLine{253     *num\_configs = modes\_size;}
+\DoxyCodeLine{254     \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{255         \textcolor{stringliteral}{"GetDisplayConfigs: Total Configs: \%d pipe: \%d display: \%p"},}
+\DoxyCodeLine{256         *num\_configs, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{257     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{258   \}}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(}
+\DoxyCodeLine{261       \textcolor{stringliteral}{"GetDisplayConfigs: Populating Configs: \%d pipe: \%d display: \%p"},}
+\DoxyCodeLine{262       *num\_configs, \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264   uint32\_t size = *num\_configs;}
+\DoxyCodeLine{265   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++)}
+\DoxyCodeLine{266     configs[i] = i;}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{269 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_ac1feeb5b5c7b1f9dbb0faf1a2bd8befe}\label{classhwcomposer_1_1DrmDisplay_ac1feeb5b5c7b1f9dbb0faf1a2bd8befe}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Get\+Display\+Name@{Get\+Display\+Name}}
+\index{Get\+Display\+Name@{Get\+Display\+Name}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Name()}{GetDisplayName()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+::\+Get\+Display\+Name (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{size,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a28c095d6d08c84e40b5d5160d038f0b5}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 271 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{271                                                           \{}
+\DoxyCodeLine{272   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(display\_lock\_);}
+\DoxyCodeLine{273   \textcolor{keywordflow}{if} (modes\_.empty()) \{}
+\DoxyCodeLine{274     \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(display\_lock\_);}
+\DoxyCodeLine{275     \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1d0fe5aac11bc35aa95a55289993d9a8}{PhysicalDisplay::GetDisplayName}}(size, name);}
+\DoxyCodeLine{276   \}}
+\DoxyCodeLine{277   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(display\_lock\_)}
+\DoxyCodeLine{278   std::ostringstream stream;}
+\DoxyCodeLine{279   stream << \textcolor{stringliteral}{"Display-"} << connector\_;}
+\DoxyCodeLine{280   std::string \textcolor{keywordtype}{string} = stream.str();}
+\DoxyCodeLine{281   \textcolor{keywordtype}{size\_t} length = \textcolor{keywordtype}{string}.length();}
+\DoxyCodeLine{282   \textcolor{keywordflow}{if} (!name) \{}
+\DoxyCodeLine{283     *size = length;}
+\DoxyCodeLine{284     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{285   \}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287   *size = std::min<uint32\_t>(\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(length + 1), *size);}
+\DoxyCodeLine{288   strncpy(name, \textcolor{keywordtype}{string}.c\_str(), *size);}
+\DoxyCodeLine{289   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{290 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a7dd459cd835df8ff956350d3b53628e8}\label{classhwcomposer_1_1DrmDisplay_a7dd459cd835df8ff956350d3b53628e8}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Handle\+Lazy\+Initialization@{Handle\+Lazy\+Initialization}}
+\index{Handle\+Lazy\+Initialization@{Handle\+Lazy\+Initialization}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Handle\+Lazy\+Initialization()}{HandleLazyInitialization()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Handle\+Lazy\+Initialization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI to handle any lazy initializations which need to be handled during first present call. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab8e24e90adf5eaa76da5cb827ad82c65}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 915 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{915                                           \{}
+\DoxyCodeLine{916   manager\_->\mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a9d52e745e20b0872b57d04ebdd3d12b6}{HandleLazyInitialization}}();}
+\DoxyCodeLine{917 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a0ac8713e1c6c26d0721295c8c6277540}\label{classhwcomposer_1_1DrmDisplay_a0ac8713e1c6c26d0721295c8c6277540}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Ignore\+Updates@{Ignore\+Updates}}
+\index{Ignore\+Updates@{Ignore\+Updates}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Ignore\+Updates()}{IgnoreUpdates()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Ignore\+Updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 911 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{911                                \{}
+\DoxyCodeLine{912   \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a64283661ac59ad590ecbbe828e969b86}{display\_queue\_}}->IgnoreUpdates();}
+\DoxyCodeLine{913 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a6dd7060290f6be414485d743d1e7d226}\label{classhwcomposer_1_1DrmDisplay_a6dd7060290f6be414485d743d1e7d226}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Initialize\+Display@{Initialize\+Display}}
+\index{Initialize\+Display@{Initialize\+Display}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Initialize\+Display()}{InitializeDisplay()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+::\+Initialize\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for initializing display. Implementation needs to handle all things needed to set up the physical display. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a1800b4ee66d4ec790d661106564b6fca}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 60 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                    \{}
+\DoxyCodeLine{61   \mbox{\hyperlink{namespacehwcomposer_ace195c2e057b634efb3013a5a4413799}{ScopedDrmObjectPropertyPtr}} crtc\_props(}
+\DoxyCodeLine{62       drmModeObjectGetProperties(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, crtc\_id\_, DRM\_MODE\_OBJECT\_CRTC));}
+\DoxyCodeLine{63   GetDrmObjectProperty(\textcolor{stringliteral}{"ACTIVE"}, crtc\_props, \&active\_prop\_);}
+\DoxyCodeLine{64   GetDrmObjectProperty(\textcolor{stringliteral}{"MODE\_ID"}, crtc\_props, \&mode\_id\_prop\_);}
+\DoxyCodeLine{65   GetDrmObjectProperty(\textcolor{stringliteral}{"CTM"}, crtc\_props, \&ctm\_id\_prop\_);}
+\DoxyCodeLine{66   GetDrmObjectProperty(\textcolor{stringliteral}{"CTM\_POST\_OFFSET"}, crtc\_props,}
+\DoxyCodeLine{67                        \&ctm\_post\_offset\_id\_prop\_);}
+\DoxyCodeLine{68   GetDrmObjectProperty(\textcolor{stringliteral}{"GAMMA\_LUT"}, crtc\_props, \&lut\_id\_prop\_);}
+\DoxyCodeLine{69   GetDrmObjectPropertyValue(\textcolor{stringliteral}{"GAMMA\_LUT\_SIZE"}, crtc\_props, \&lut\_size\_);}
+\DoxyCodeLine{70   GetDrmObjectProperty(\textcolor{stringliteral}{"OUT\_FENCE\_PTR"}, crtc\_props, \&out\_fence\_ptr\_prop\_);}
+\DoxyCodeLine{71   GetDrmObjectProperty(\textcolor{stringliteral}{"background\_color"}, crtc\_props, \&canvas\_color\_prop\_);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{74 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_af4cf9ce1ea43e3520506dfc75c751c1f}\label{classhwcomposer_1_1DrmDisplay_af4cf9ce1ea43e3520506dfc75c751c1f}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Notify\+Clients\+Of\+Display\+Change\+Status@{Notify\+Clients\+Of\+Display\+Change\+Status}}
+\index{Notify\+Clients\+Of\+Display\+Change\+Status@{Notify\+Clients\+Of\+Display\+Change\+Status}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Notify\+Clients\+Of\+Display\+Change\+Status()}{NotifyClientsOfDisplayChangeStatus()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Notify\+Clients\+Of\+Display\+Change\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aefba7f9543d7ef74d42f9e06dd0f1a58}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 919 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{919                                                     \{}
+\DoxyCodeLine{920   manager\_->\mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a087e35e0b0be34e4ff5efdb37c8a5684}{NotifyClientsOfDisplayChangeStatus}}();}
+\DoxyCodeLine{921 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_acbf817afffc6ad6f2879d914a0335dd0}\label{classhwcomposer_1_1DrmDisplay_acbf817afffc6ad6f2879d914a0335dd0}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Populate\+Planes@{Populate\+Planes}}
+\index{Populate\+Planes@{Populate\+Planes}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Populate\+Planes()}{PopulatePlanes()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+::\+Populate\+Planes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $>$$>$ \&}]{overlay\+\_\+planes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler_aa4d32269c693dbf4a4c91c31ed577784}{hwcomposer\+::\+Display\+Plane\+Handler}}.
+
+
+
+Definition at line 849 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{850                                                             \{}
+\DoxyCodeLine{851   \mbox{\hyperlink{namespacehwcomposer_a0f1486ef5a49e79373fe75dfd767b85f}{ScopedDrmPlaneResPtr}} plane\_resources(drmModeGetPlaneResources(
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}));}
+\DoxyCodeLine{852   \textcolor{keywordflow}{if} (!plane\_resources) \{}
+\DoxyCodeLine{853     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to get plane resources"});}
+\DoxyCodeLine{854     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{855   \}}
+\DoxyCodeLine{856 }
+\DoxyCodeLine{857   uint32\_t num\_planes = plane\_resources->count\_planes;}
+\DoxyCodeLine{858   uint32\_t pipe\_bit = 1 << \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}};}
+\DoxyCodeLine{859   std::set<uint32\_t> plane\_ids;}
+\DoxyCodeLine{860   std::unique\_ptr<DisplayPlane> cursor\_plane;}
+\DoxyCodeLine{861   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < num\_planes; ++i) \{}
+\DoxyCodeLine{862     \mbox{\hyperlink{namespacehwcomposer_a65038450f2af31da16cb0817ad1725c8}{ScopedDrmPlanePtr}} drm\_plane(}
+\DoxyCodeLine{863         drmModeGetPlane(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, plane\_resources->planes[i]));}
+\DoxyCodeLine{864     \textcolor{keywordflow}{if} (!drm\_plane) \{}
+\DoxyCodeLine{865       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to get plane "});}
+\DoxyCodeLine{866       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{867     \}}
+\DoxyCodeLine{868 }
+\DoxyCodeLine{869     \textcolor{keywordflow}{if} (!(pipe\_bit \& drm\_plane->possible\_crtcs))}
+\DoxyCodeLine{870       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{871 }
+\DoxyCodeLine{872     uint32\_t formats\_size = drm\_plane->count\_formats;}
+\DoxyCodeLine{873     plane\_ids.insert(drm\_plane->plane\_id);}
+\DoxyCodeLine{874     std::unique\_ptr<DrmPlane> plane(}
+\DoxyCodeLine{875         CreatePlane(drm\_plane->plane\_id, drm\_plane->possible\_crtcs));}
+\DoxyCodeLine{876     std::vector<uint32\_t> supported\_formats(formats\_size);}
+\DoxyCodeLine{877     \textcolor{keywordflow}{for} (uint32\_t j = 0; j < formats\_size; j++)}
+\DoxyCodeLine{878       supported\_formats[j] = drm\_plane->formats[j];}
+\DoxyCodeLine{879 }
+\DoxyCodeLine{880     if (plane->Initialize(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, supported\_formats)) \{}
+\DoxyCodeLine{881       \textcolor{keywordflow}{if} (plane->type() == DRM\_PLANE\_TYPE\_CURSOR) \{}
+\DoxyCodeLine{882         cursor\_plane.reset(plane.release());}
+\DoxyCodeLine{883       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{884         overlay\_planes.emplace\_back(plane.release());}
+\DoxyCodeLine{885       \}}
+\DoxyCodeLine{886     \}}
+\DoxyCodeLine{887   \}}
+\DoxyCodeLine{888 }
+\DoxyCodeLine{889   \textcolor{keywordflow}{if} (overlay\_planes.empty()) \{}
+\DoxyCodeLine{890     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to get primary plane for display \%d"}, crtc\_id\_);}
+\DoxyCodeLine{891     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{892   \}}
+\DoxyCodeLine{893 }
+\DoxyCodeLine{894   \textcolor{comment}{// We expect layers to be in ascending order.}}
+\DoxyCodeLine{895   std::sort(}
+\DoxyCodeLine{896       overlay\_planes.begin(), overlay\_planes.end(),}
+\DoxyCodeLine{897       [](\textcolor{keyword}{const} std::unique\_ptr<DisplayPlane> \&l,}
+\DoxyCodeLine{898          \textcolor{keyword}{const} std::unique\_ptr<DisplayPlane> \&r) \{ \textcolor{keywordflow}{return} l->id() < r->id(); \});}
+\DoxyCodeLine{899 }
+\DoxyCodeLine{900   \textcolor{keywordflow}{if} (cursor\_plane) \{}
+\DoxyCodeLine{901     overlay\_planes.emplace\_back(cursor\_plane.release());}
+\DoxyCodeLine{902   \}}
+\DoxyCodeLine{903 }
+\DoxyCodeLine{904   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{905 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a0212cd45757cc2a74dac62094da103ec}\label{classhwcomposer_1_1DrmDisplay_a0212cd45757cc2a74dac62094da103ec}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Power\+On@{Power\+On}}
+\index{Power\+On@{Power\+On}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Power\+On()}{PowerOn()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Power\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for powering on the display 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a954fbb8be8c69890094ddacc510f4a85}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 304 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{304                          \{}
+\DoxyCodeLine{305   flags\_ = 0;}
+\DoxyCodeLine{306   flags\_ |= DRM\_MODE\_ATOMIC\_ALLOW\_MODESET;}
+\DoxyCodeLine{307   drmModeConnectorSetProperty(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, connector\_, dpms\_prop\_,}
+\DoxyCodeLine{308                               DRM\_MODE\_DPMS\_ON);}
+\DoxyCodeLine{309   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"PowerOn: Powered on Pipe: \%d display: \%p"}, 
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a6e44cfaecf46642d3c0f0347e26d2d6a}{pipe\_}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{310 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_abf4285912666230bf6172dae5a867ba7}\label{classhwcomposer_1_1DrmDisplay_abf4285912666230bf6172dae5a867ba7}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Set\+Broadcast\+R\+GB@{Set\+Broadcast\+R\+GB}}
+\index{Set\+Broadcast\+R\+GB@{Set\+Broadcast\+R\+GB}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Set\+Broadcast\+R\+G\+B()}{SetBroadcastRGB()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+::\+Set\+Broadcast\+R\+GB (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting display Broadcast R\+GB range property 
+\begin{DoxyParams}{Parameters}
+{\em range\+\_\+property} & supported property string, e.\+g. \char`\"{}\+Full\char`\"{}, \char`\"{}\+Automatic\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae7c13718b2b297caa04479a6782e38ea}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 312 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{312                                                            \{}
+\DoxyCodeLine{313   int64\_t p\_value = -1;}
+\DoxyCodeLine{314 }
+\DoxyCodeLine{315   \textcolor{keywordflow}{if} (!strcmp(range\_property, \textcolor{stringliteral}{"Full"})) \{}
+\DoxyCodeLine{316     p\_value = broadcastrgb\_full\_;}
+\DoxyCodeLine{317   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!strcmp(range\_property, \textcolor{stringliteral}{"Automatic"})) \{}
+\DoxyCodeLine{318     p\_value = broadcastrgb\_automatic\_;}
+\DoxyCodeLine{319   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{320     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Wrong Broadcast RGB value \%s"}, range\_property);}
+\DoxyCodeLine{321     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{322   \}}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324   \textcolor{keywordflow}{if} (p\_value < 0)}
+\DoxyCodeLine{325     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327   \textcolor{keywordflow}{if} (drmModeObjectSetProperty(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, connector\_, DRM\_MODE\_OBJECT\_CONNECTOR,}
+\DoxyCodeLine{328                                broadcastrgb\_id\_, (uint64\_t)p\_value) != 0)}
+\DoxyCodeLine{329     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{331   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{332 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a8da99b54fe8c1261f1bf9a3d00474133}\label{classhwcomposer_1_1DrmDisplay_a8da99b54fe8c1261f1bf9a3d00474133}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Set\+Color\+Correction@{Set\+Color\+Correction}}
+\index{Set\+Color\+Correction@{Set\+Color\+Correction}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Set\+Color\+Correction()}{SetColorCorrection()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Set\+Color\+Correction (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structhwcomposer_1_1gamma__colors}{gamma\+\_\+colors}}}]{gamma,  }\item[{uint32\+\_\+t}]{contrast,  }\item[{uint32\+\_\+t}]{brightness }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting color correction for display. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a81bddc91d8f593a1f1cb2248d7206386}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 724 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{726                                                                  \{}
+\DoxyCodeLine{727   \textcolor{keyword}{struct }drm\_color\_lut *lut;}
+\DoxyCodeLine{728   \textcolor{keywordtype}{float} brightness[3];}
+\DoxyCodeLine{729   \textcolor{keywordtype}{float} contrast[3];}
+\DoxyCodeLine{730   uint8\_t temp[3];}
+\DoxyCodeLine{731 }
+\DoxyCodeLine{732   \textcolor{comment}{/* reset lut when contrast and brightness are all 0 */}}
+\DoxyCodeLine{733   \textcolor{keywordflow}{if} (contrast\_c == 0 \&\& brightness\_c == 0) \{}
+\DoxyCodeLine{734     lut = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{735     ApplyPendingLUT(lut);}
+\DoxyCodeLine{736     free(lut);}
+\DoxyCodeLine{737     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{738   \}}
+\DoxyCodeLine{739 }
+\DoxyCodeLine{740   lut =}
+\DoxyCodeLine{741       (\textcolor{keyword}{struct }drm\_color\_lut *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} drm\_color\_lut) * lut\_size\_);}
+\DoxyCodeLine{742   \textcolor{keywordflow}{if} (!lut) \{}
+\DoxyCodeLine{743     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Cannot allocate LUT memory"});}
+\DoxyCodeLine{744     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{745   \}}
+\DoxyCodeLine{746 }
+\DoxyCodeLine{747   \textcolor{comment}{/* Unpack brightness values for each channel */}}
+\DoxyCodeLine{748   temp[0] = (brightness\_c >> 16) \& 0xFF;}
+\DoxyCodeLine{749   temp[1] = (brightness\_c >> 8) \& 0xFF;}
+\DoxyCodeLine{750   temp[2] = (brightness\_c)\&0xFF;}
+\DoxyCodeLine{751 }
+\DoxyCodeLine{752   \textcolor{comment}{/* Map brightness from -128 - 127 range into -0.5 - 0.5 range */}}
+\DoxyCodeLine{753   brightness[0] = (float)(temp[0]) / 255 - 0.5;}
+\DoxyCodeLine{754   brightness[1] = (float)(temp[1]) / 255 - 0.5;}
+\DoxyCodeLine{755   brightness[2] = (float)(temp[2]) / 255 - 0.5;}
+\DoxyCodeLine{756 }
+\DoxyCodeLine{757   \textcolor{comment}{/* Unpack contrast values for each channel */}}
+\DoxyCodeLine{758   temp[0] = (contrast\_c >> 16) \& 0xFF;}
+\DoxyCodeLine{759   temp[1] = (contrast\_c >> 8) \& 0xFF;}
+\DoxyCodeLine{760   temp[2] = (contrast\_c)\&0xFF;}
+\DoxyCodeLine{761 }
+\DoxyCodeLine{762   \textcolor{comment}{/* Map contrast from 0 - 255 range into 0.0 - 2.0 range */}}
+\DoxyCodeLine{763   contrast[0] = (float)(temp[0]) / 128;}
+\DoxyCodeLine{764   contrast[1] = (float)(temp[1]) / 128;}
+\DoxyCodeLine{765   contrast[2] = (float)(temp[2]) / 128;}
+\DoxyCodeLine{766 }
+\DoxyCodeLine{767   \textcolor{keywordflow}{for} (uint64\_t i = 0; i < lut\_size\_; i++) \{}
+\DoxyCodeLine{768     \textcolor{comment}{/* Set lut[0] as 0 always as the darkest color should has brightness 0 */}}
+\DoxyCodeLine{769     \textcolor{keywordflow}{if} (i == 0) \{}
+\DoxyCodeLine{770       lut[i].red = 0;}
+\DoxyCodeLine{771       lut[i].green = 0;}
+\DoxyCodeLine{772       lut[i].blue = 0;}
+\DoxyCodeLine{773       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{774     \}}
+\DoxyCodeLine{775 }
+\DoxyCodeLine{776     lut[i].red = 0xFFFF * TransformGamma(TransformContrastBrightness(}
+\DoxyCodeLine{777                                              (\textcolor{keywordtype}{float})(i) / lut\_size\_,}
+\DoxyCodeLine{778                                              brightness[0], contrast[0]),}
+\DoxyCodeLine{779                                          gamma.red);}
+\DoxyCodeLine{780     lut[i].green = 0xFFFF * TransformGamma(TransformContrastBrightness(}
+\DoxyCodeLine{781                                                (\textcolor{keywordtype}{float})(i) / lut\_size\_,}
+\DoxyCodeLine{782                                                brightness[1], contrast[1]),}
+\DoxyCodeLine{783                                            gamma.green);}
+\DoxyCodeLine{784     lut[i].blue = 0xFFFF * TransformGamma(TransformContrastBrightness(}
+\DoxyCodeLine{785                                               (\textcolor{keywordtype}{float})(i) / lut\_size\_,}
+\DoxyCodeLine{786                                               brightness[2], contrast[2]),}
+\DoxyCodeLine{787                                           gamma.blue);}
+\DoxyCodeLine{788   \}}
+\DoxyCodeLine{789 }
+\DoxyCodeLine{790   ApplyPendingLUT(lut);}
+\DoxyCodeLine{791   free(lut);}
+\DoxyCodeLine{792 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a43bbf2421bd4b0b4e7b0612020060e3e}\label{classhwcomposer_1_1DrmDisplay_a43bbf2421bd4b0b4e7b0612020060e3e}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Set\+Color\+Transform\+Matrix@{Set\+Color\+Transform\+Matrix}}
+\index{Set\+Color\+Transform\+Matrix@{Set\+Color\+Transform\+Matrix}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Set\+Color\+Transform\+Matrix()}{SetColorTransformMatrix()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Set\+Color\+Transform\+Matrix (\begin{DoxyParamCaption}\item[{const float $\ast$}]{color\+\_\+transform\+\_\+matrix,  }\item[{\mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}}}]{color\+\_\+transform\+\_\+hint }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting color transform matrix. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a89ded7e09902c8c3c707c041412f1c02}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 677 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{679                                                   \{}
+\DoxyCodeLine{680   \textcolor{keyword}{struct }drm\_color\_ctm *ctm =}
+\DoxyCodeLine{681       (\textcolor{keyword}{struct }drm\_color\_ctm *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} drm\_color\_ctm));}
+\DoxyCodeLine{682   \textcolor{keywordflow}{if} (!ctm) \{}
+\DoxyCodeLine{683     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Cannot allocate CTM memory"});}
+\DoxyCodeLine{684     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{685   \}}
+\DoxyCodeLine{686 }
+\DoxyCodeLine{687   \textcolor{keyword}{struct }\mbox{\hyperlink{structdrm__color__ctm__post__offset}{drm\_color\_ctm\_post\_offset}} *ctm\_post\_offset =}
+\DoxyCodeLine{688       (\textcolor{keyword}{struct }\mbox{\hyperlink{structdrm__color__ctm__post__offset}{drm\_color\_ctm\_post\_offset}} *)malloc(}
+\DoxyCodeLine{689           \textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structdrm__color__ctm__post__offset}{drm\_color\_ctm\_post\_offset}}));}
+\DoxyCodeLine{690   \textcolor{keywordflow}{if} (!ctm\_post\_offset) \{}
+\DoxyCodeLine{691     free(ctm);}
+\DoxyCodeLine{692     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Cannot allocate ctm\_post\_offset memory"});}
+\DoxyCodeLine{693     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{694   \}}
+\DoxyCodeLine{695 }
+\DoxyCodeLine{696   \textcolor{keywordflow}{switch} (color\_transform\_hint) \{}
+\DoxyCodeLine{697     \textcolor{keywordflow}{case} \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88adfd734ecbb8f5b0b82da1f17bfcef923}{HWCColorTransform::kIdentical}}: \{}
+\DoxyCodeLine{698       memset(ctm->matrix, 0, \textcolor{keyword}{sizeof}(ctm->matrix));}
+\DoxyCodeLine{699       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; i++) \{}
+\DoxyCodeLine{700         ctm->matrix[i * 3 + i] = (1ll << 32);}
+\DoxyCodeLine{701       \}}
+\DoxyCodeLine{702       ctm\_post\_offset->\mbox{\hyperlink{structdrm__color__ctm__post__offset_a5b7b2feda04ca2d62ba2c569d2458dc3}{red}} = 0;}
+\DoxyCodeLine{703       ctm\_post\_offset->\mbox{\hyperlink{structdrm__color__ctm__post__offset_a1deb06f90eac8e9e1f21e6d2728af1b4}{green}} = 0;}
+\DoxyCodeLine{704       ctm\_post\_offset->\mbox{\hyperlink{structdrm__color__ctm__post__offset_a0e188b6d4e15dca3cb42acfc17a63a6b}{blue}} = 0;}
+\DoxyCodeLine{705       ApplyPendingCTM(ctm, ctm\_post\_offset);}
+\DoxyCodeLine{706       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{707     \}}
+\DoxyCodeLine{708     \textcolor{keywordflow}{case} \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88a009f3b96a52fc5cbf696f781dd55c05e}{HWCColorTransform::kArbitraryMatrix}}: \{}
+\DoxyCodeLine{709       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; i++) \{}
+\DoxyCodeLine{710         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 3; j++) \{}
+\DoxyCodeLine{711           ctm->matrix[i * 3 + j] =}
+\DoxyCodeLine{712               FloatToFixedPoint(color\_transform\_matrix[j * 4 + i]);}
+\DoxyCodeLine{713         \}}
+\DoxyCodeLine{714       \}}
+\DoxyCodeLine{715       ctm\_post\_offset->\mbox{\hyperlink{structdrm__color__ctm__post__offset_a5b7b2feda04ca2d62ba2c569d2458dc3}{red}} = color\_transform\_matrix[12] * 0xffff;}
+\DoxyCodeLine{716       ctm\_post\_offset->\mbox{\hyperlink{structdrm__color__ctm__post__offset_a1deb06f90eac8e9e1f21e6d2728af1b4}{green}} = color\_transform\_matrix[13] * 0xffff;}
+\DoxyCodeLine{717       ctm\_post\_offset->\mbox{\hyperlink{structdrm__color__ctm__post__offset_a0e188b6d4e15dca3cb42acfc17a63a6b}{blue}} = color\_transform\_matrix[14] * 0xffff;}
+\DoxyCodeLine{718       ApplyPendingCTM(ctm, ctm\_post\_offset);}
+\DoxyCodeLine{719       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{720     \}}
+\DoxyCodeLine{721   \}}
+\DoxyCodeLine{722   free(ctm);}
+\DoxyCodeLine{723 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a1a72c20b148b0cf2c1174a34da8a95dc}\label{classhwcomposer_1_1DrmDisplay_a1a72c20b148b0cf2c1174a34da8a95dc}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Set\+Display\+Attribute@{Set\+Display\+Attribute}}
+\index{Set\+Display\+Attribute@{Set\+Display\+Attribute}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Set\+Display\+Attribute()}{SetDisplayAttribute()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Set\+Display\+Attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{nativedisplay_8h_a00e4eec8ca028fd8f4672b5e60fbf2cd}{drm\+Mode\+Mode\+Info}} \&}]{mode\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Definition at line 478 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{478                                                                      \{}
+\DoxyCodeLine{479   \textcolor{comment}{// Default resolution of the display}}
+\DoxyCodeLine{480   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_adac42ad60327a0ad4ebbaef554a4fafa}{custom\_resolution\_}}) \{}
+\DoxyCodeLine{481     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a87ad7236b44be5af4e29233fab50408c}{width\_}} = mode\_info.hdisplay;}
+\DoxyCodeLine{482     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af7c7ae74664eee51055985f0035aac8c}{height\_}} = mode\_info.vdisplay;}
+\DoxyCodeLine{483   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{484     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a87ad7236b44be5af4e29233fab50408c}{width\_}} = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.right - \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.left;}
+\DoxyCodeLine{485     \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af7c7ae74664eee51055985f0035aac8c}{height\_}} = \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.bottom - \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa50206430baa8d901e604787a73fe9b8}{rect\_}}.top;}
+\DoxyCodeLine{486   \}}
+\DoxyCodeLine{487   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"SetDisplayAttribute: width \%d, height \%d"}, 
+      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a87ad7236b44be5af4e29233fab50408c}{width\_}},}
+\DoxyCodeLine{488                      \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af7c7ae74664eee51055985f0035aac8c}{height\_}});}
+\DoxyCodeLine{489 }
+\DoxyCodeLine{490   current\_mode\_ = mode\_info;}
+\DoxyCodeLine{491 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a922407311e0d418894e4968712f2bf03}\label{classhwcomposer_1_1DrmDisplay_a922407311e0d418894e4968712f2bf03}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Set\+Drm\+Mode\+Info@{Set\+Drm\+Mode\+Info}}
+\index{Set\+Drm\+Mode\+Info@{Set\+Drm\+Mode\+Info}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Set\+Drm\+Mode\+Info()}{SetDrmModeInfo()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Set\+Drm\+Mode\+Info (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{nativedisplay_8h_a00e4eec8ca028fd8f4672b5e60fbf2cd}{drm\+Mode\+Mode\+Info}} $>$ \&}]{mode\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Definition at line 462 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{462                                                                            \{}
+\DoxyCodeLine{463   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(display\_lock\_);}
+\DoxyCodeLine{464   uint32\_t size = mode\_info.size();}
+\DoxyCodeLine{465   std::vector<drmModeModeInfo>().swap(modes\_);}
+\DoxyCodeLine{466   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; ++i) \{}
+\DoxyCodeLine{467 \textcolor{preprocessor}{\#ifdef ENABLE\_ANDROID\_WA}}
+\DoxyCodeLine{468     \textcolor{comment}{//FIXME: SurfaceFlinger can't distinguish interlace mode config.}}
+\DoxyCodeLine{469     \textcolor{comment}{//interlace mode is not requirement for android, ignore them.}}
+\DoxyCodeLine{470     \textcolor{keywordflow}{if} (!(mode\_info[i].flags \& DRM\_MODE\_FLAG\_INTERLACE))}
+\DoxyCodeLine{471 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{472       modes\_.emplace\_back(mode\_info[i]);}
+\DoxyCodeLine{473   \}}
+\DoxyCodeLine{474 }
+\DoxyCodeLine{475   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(display\_lock\_);}
+\DoxyCodeLine{476 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a8ea456de0530370e0ad5f57ba4c6d20a}\label{classhwcomposer_1_1DrmDisplay_a8ea456de0530370e0ad5f57ba4c6d20a}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Set\+H\+D\+C\+P\+State@{Set\+H\+D\+C\+P\+State}}
+\index{Set\+H\+D\+C\+P\+State@{Set\+H\+D\+C\+P\+State}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Set\+H\+D\+C\+P\+State()}{SetHDCPState()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Set\+H\+D\+C\+P\+State (\begin{DoxyParamCaption}\item[{H\+W\+C\+Content\+Protection}]{,  }\item[{H\+W\+C\+Content\+Type}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Call this to set H\+D\+CP state for this display. This function tries to take advantage of any H\+D\+CP support advertised by the Kernel. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ac65fa12ceb6737a2971cd2faa1a7785d}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 334 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{335                                                            \{}
+\DoxyCodeLine{336   desired\_protection\_support\_ = state;}
+\DoxyCodeLine{337   content\_type\_ = content\_type;}
+\DoxyCodeLine{338   \textcolor{keywordflow}{if} (desired\_protection\_support\_ == current\_protection\_support\_)}
+\DoxyCodeLine{339     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341   \textcolor{keywordflow}{if} (hdcp\_id\_prop\_ <= 0) \{}
+\DoxyCodeLine{342     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Cannot set HDCP state as Connector property is not supported \(\backslash\)n"});}
+\DoxyCodeLine{343     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{344   \}}
+\DoxyCodeLine{345 }
+\DoxyCodeLine{346   \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_ab51d20d93d47856931757c5cf5b6bf5d}{connection\_state\_}} \& \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a40c6d87f2869356fbeba00d353da2b5ea3658f44ac4c87db6afc1679584a59d94}{kConnected}})) \{}
+\DoxyCodeLine{347     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{348   \}}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{350   current\_protection\_support\_ = desired\_protection\_support\_;}
+\DoxyCodeLine{351   uint32\_t value = 0;}
+\DoxyCodeLine{352   \textcolor{keywordflow}{if} (current\_protection\_support\_ == kDesired) \{}
+\DoxyCodeLine{353     value = 1;}
+\DoxyCodeLine{354   \}}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356   drmModeConnectorSetProperty(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, connector\_, hdcp\_id\_prop\_, value);}
+\DoxyCodeLine{357   \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Ignored Content type. \(\backslash\)n"});}
+\DoxyCodeLine{358 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_aca6b6791dc9c5a4498895509e854bcfa}\label{classhwcomposer_1_1DrmDisplay_aca6b6791dc9c5a4498895509e854bcfa}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Set\+Pipe\+Canvas\+Color@{Set\+Pipe\+Canvas\+Color}}
+\index{Set\+Pipe\+Canvas\+Color@{Set\+Pipe\+Canvas\+Color}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Set\+Pipe\+Canvas\+Color()}{SetPipeCanvasColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Set\+Pipe\+Canvas\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{bpc,  }\item[{uint16\+\_\+t}]{red,  }\item[{uint16\+\_\+t}]{green,  }\item[{uint16\+\_\+t}]{blue,  }\item[{uint16\+\_\+t}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting the color of the pipe canvas. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a3aeed39dd1af137ed16d83c4dfdcafad}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 638 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{639                                                                          \{}
+\DoxyCodeLine{640   \textcolor{keywordflow}{if} (canvas\_color\_prop\_ == 0)}
+\DoxyCodeLine{641     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{642 }
+\DoxyCodeLine{643   uint64\_t canvas\_color = 0;}
+\DoxyCodeLine{644   \textcolor{keywordflow}{if} (bpc == 8)}
+\DoxyCodeLine{645     canvas\_color = \mbox{\hyperlink{drmdisplay_8h_abaded99a59931bc7c0137cf1d481961c}{DRM\_RGBA8888}}(\mbox{\hyperlink{structdrm__color__ctm__post__offset_a5b7b2feda04ca2d62ba2c569d2458dc3}{red}}, \mbox{\hyperlink{structdrm__color__ctm__post__offset_a1deb06f90eac8e9e1f21e6d2728af1b4}{green}}, \mbox{\hyperlink{structdrm__color__ctm__post__offset_a0e188b6d4e15dca3cb42acfc17a63a6b}{blue}}, alpha);}
+\DoxyCodeLine{646   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (bpc == 16)}
+\DoxyCodeLine{647     canvas\_color = \mbox{\hyperlink{drmdisplay_8h_a4d48a43b8798d7c544ee4427aabb55ab}{DRM\_RGBA16161616}}(\mbox{\hyperlink{structdrm__color__ctm__post__offset_a5b7b2feda04ca2d62ba2c569d2458dc3}{red}}, \mbox{\hyperlink{structdrm__color__ctm__post__offset_a1deb06f90eac8e9e1f21e6d2728af1b4}{green}}, \mbox{\hyperlink{structdrm__color__ctm__post__offset_a0e188b6d4e15dca3cb42acfc17a63a6b}{blue}}, alpha);}
+\DoxyCodeLine{648 }
+\DoxyCodeLine{649   drmModeObjectSetProperty(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, crtc\_id\_, DRM\_MODE\_OBJECT\_CRTC,}
+\DoxyCodeLine{650                            canvas\_color\_prop\_, canvas\_color);}
+\DoxyCodeLine{651 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_a7aaa318ce853a36ebcaf837fe1801f88}\label{classhwcomposer_1_1DrmDisplay_a7aaa318ce853a36ebcaf837fe1801f88}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Test\+Commit@{Test\+Commit}}
+\index{Test\+Commit@{Test\+Commit}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Test\+Commit()}{TestCommit()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Display\+::\+Test\+Commit (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayPlane}{Overlay\+Plane}} $>$ \&}]{commit\+\_\+planes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler_a1135b134010e6736aa49304100c9d3b9}{hwcomposer\+::\+Display\+Plane\+Handler}}.
+
+
+
+Definition at line 923 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{924                                                         \{}
+\DoxyCodeLine{925   \mbox{\hyperlink{namespacehwcomposer_a1db01e0534b5b990ac7d35376c4b7e03}{ScopedDrmAtomicReqPtr}} pset(drmModeAtomicAlloc());}
+\DoxyCodeLine{926   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = commit\_planes.begin(); i != commit\_planes.end(); i++) \{}
+\DoxyCodeLine{927     DrmPlane *plane = \textcolor{keyword}{static\_cast<}DrmPlane *\textcolor{keyword}{>}(i->plane);}
+\DoxyCodeLine{928     \textcolor{keywordflow}{if} (!(plane->UpdateProperties(pset.get(), crtc\_id\_, i->layer, \textcolor{keyword}{true}))) \{}
+\DoxyCodeLine{929       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{930     \}}
+\DoxyCodeLine{931   \}}
+\DoxyCodeLine{932 }
+\DoxyCodeLine{933   \textcolor{keywordflow}{if} (drmModeAtomicCommit(\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_af0c3283a588887be1f8871ae2abd44f1}{gpu\_fd\_}}, pset.get(), DRM\_MODE\_ATOMIC\_TEST\_ONLY,}
+\DoxyCodeLine{934                           \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})) \{}
+\DoxyCodeLine{935     \mbox{\hyperlink{hwctrace_8h_a6dea43d052a49723fcc708e2f2c84148}{IDISPLAYMANAGERTRACE}}(\textcolor{stringliteral}{"Test Commit Failed. \%s "}, 
+      \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{936     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{937   \}}
+\DoxyCodeLine{938 }
+\DoxyCodeLine{939   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{940 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmDisplay_aa235de1fc4a01177e1afea36d4554870}\label{classhwcomposer_1_1DrmDisplay_aa235de1fc4a01177e1afea36d4554870}} 
+\index{hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}!Update\+Display\+Config@{Update\+Display\+Config}}
+\index{Update\+Display\+Config@{Update\+Display\+Config}!hwcomposer\+::\+Drm\+Display@{hwcomposer\+::\+Drm\+Display}}
+\subsubsection{\texorpdfstring{Update\+Display\+Config()}{UpdateDisplayConfig()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Display\+::\+Update\+Display\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI is called if current active display configuration has changed. Implementations need to reset any state in this case. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_aa3cb8537967c34dce7e8ba7762cbd48c}{hwcomposer\+::\+Physical\+Display}}.
+
+
+
+Definition at line 292 of file drmdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{292                                      \{}
+\DoxyCodeLine{293   \textcolor{comment}{// update the activeConfig}}
+\DoxyCodeLine{294   \mbox{\hyperlink{wsi__utils_8h_ab309378939794fdebc2f4e5ea2dd730b}{SPIN\_LOCK}}(display\_lock\_);}
+\DoxyCodeLine{295   \textcolor{keywordflow}{if} (modes\_.empty()) \{}
+\DoxyCodeLine{296     \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(display\_lock\_);}
+\DoxyCodeLine{297     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{298   \}}
+\DoxyCodeLine{299   flags\_ |= DRM\_MODE\_ATOMIC\_ALLOW\_MODESET;}
+\DoxyCodeLine{300   \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a1a72c20b148b0cf2c1174a34da8a95dc}{SetDisplayAttribute}}(modes\_[\mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a75eb0d6243de4021ad8e49141becc4a0}{config\_}}]);}
+\DoxyCodeLine{301   \mbox{\hyperlink{wsi__utils_8h_a7dc41490a7065ff852ccc0faa466d815}{SPIN\_UNLOCK}}(display\_lock\_);}
+\DoxyCodeLine{302 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmdisplay_8h}{drmdisplay.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmdisplay_8cpp}{drmdisplay.\+cpp}}\end{DoxyCompactItemize}

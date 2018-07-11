@@ -1,0 +1,266 @@
+\hypertarget{classhwcomposer_1_1BpService}{}\section{hwcomposer\+:\+:Bp\+Service Class Reference}
+\label{classhwcomposer_1_1BpService}\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}
+Inheritance diagram for hwcomposer\+:\+:Bp\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1BpService}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319ac29d8afa3ded86d47e7879f814b61f0d}{G\+E\+T\+\_\+\+H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+ON}} = I\+Binder\+:\+:F\+I\+R\+S\+T\+\_\+\+C\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+ON, 
+\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a117fba2a971fa7318d8ef74f7a84105c}{D\+U\+M\+P\+\_\+\+O\+P\+T\+I\+O\+NS}}, 
+\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8f322cc1308b770e9cd5056d9dfefaf3}{S\+E\+T\+\_\+\+O\+P\+T\+I\+ON}}, 
+\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aa6f70e3efcf110f66a046bf4d49ee999}{D\+I\+S\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT}} = 98, 
+\newline
+\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8ec23523cde1ace78656435c40d75ca6}{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT}} = 99, 
+\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aba1101f98d0ae4dba7ae06b05fa7ecf6}{T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+D\+I\+A\+G\+N\+O\+S\+T\+IC}} = 100, 
+\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a88c048d451c725f7549727f0eb25bd11}{T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+LS}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1BpService_a62e17be4899fc0e9af815cefa9956971}{Bp\+Service}} (const sp$<$ I\+Binder $>$ \&impl)
+\item 
+String8 \mbox{\hyperlink{classhwcomposer_1_1BpService_a17ce9341ddf723a5e0a565f3dcf0495b}{Get\+Hwc\+Version}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1BpService_a9685bc5b64d6666e6ad3607b6c127bda}{Dump\+Options}} (void) override
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1BpService_a9293da08063a0cbea2906f80470ba383}{Set\+Option}} (String8 option, String8 option\+Value) override
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1BpService_a1c58bedc3a6f9bed36b4daff0ba9048d}{Enable\+Logview\+To\+Logcat}} (bool enable=true) override
+\item 
+sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$ \mbox{\hyperlink{classhwcomposer_1_1BpService_a03db6523ced5f83e89bc1c48c7ee442d}{Get\+Diagnostic}} () override
+\item 
+sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IControls}{I\+Controls}} $>$ \mbox{\hyperlink{classhwcomposer_1_1BpService_a1d18a82c9d0693cfec5f57781431e335}{Get\+Controls}} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file iservice.\+cpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319}\label{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+T\+\_\+\+H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+ON@{G\+E\+T\+\_\+\+H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+ON}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!G\+E\+T\+\_\+\+H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+ON@{G\+E\+T\+\_\+\+H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+ON}}}\mbox{\Hypertarget{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319ac29d8afa3ded86d47e7879f814b61f0d}\label{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319ac29d8afa3ded86d47e7879f814b61f0d}} 
+G\+E\+T\+\_\+\+H\+W\+C\+\_\+\+V\+E\+R\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+U\+M\+P\+\_\+\+O\+P\+T\+I\+O\+NS@{D\+U\+M\+P\+\_\+\+O\+P\+T\+I\+O\+NS}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!D\+U\+M\+P\+\_\+\+O\+P\+T\+I\+O\+NS@{D\+U\+M\+P\+\_\+\+O\+P\+T\+I\+O\+NS}}}\mbox{\Hypertarget{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a117fba2a971fa7318d8ef74f7a84105c}\label{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a117fba2a971fa7318d8ef74f7a84105c}} 
+D\+U\+M\+P\+\_\+\+O\+P\+T\+I\+O\+NS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+T\+\_\+\+O\+P\+T\+I\+ON@{S\+E\+T\+\_\+\+O\+P\+T\+I\+ON}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!S\+E\+T\+\_\+\+O\+P\+T\+I\+ON@{S\+E\+T\+\_\+\+O\+P\+T\+I\+ON}}}\mbox{\Hypertarget{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8f322cc1308b770e9cd5056d9dfefaf3}\label{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8f322cc1308b770e9cd5056d9dfefaf3}} 
+S\+E\+T\+\_\+\+O\+P\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT@{D\+I\+S\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!D\+I\+S\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT@{D\+I\+S\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT}}}\mbox{\Hypertarget{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aa6f70e3efcf110f66a046bf4d49ee999}\label{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aa6f70e3efcf110f66a046bf4d49ee999}} 
+D\+I\+S\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT@{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT@{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT}}}\mbox{\Hypertarget{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8ec23523cde1ace78656435c40d75ca6}\label{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8ec23523cde1ace78656435c40d75ca6}} 
+E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+G\+\_\+\+T\+O\+\_\+\+L\+O\+G\+C\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+D\+I\+A\+G\+N\+O\+S\+T\+IC@{T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+D\+I\+A\+G\+N\+O\+S\+T\+IC}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+D\+I\+A\+G\+N\+O\+S\+T\+IC@{T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+D\+I\+A\+G\+N\+O\+S\+T\+IC}}}\mbox{\Hypertarget{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aba1101f98d0ae4dba7ae06b05fa7ecf6}\label{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aba1101f98d0ae4dba7ae06b05fa7ecf6}} 
+T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+D\+I\+A\+G\+N\+O\+S\+T\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+LS@{T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+LS}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+LS@{T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+LS}}}\mbox{\Hypertarget{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a88c048d451c725f7549727f0eb25bd11}\label{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a88c048d451c725f7549727f0eb25bd11}} 
+T\+R\+A\+N\+S\+A\+C\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+LS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 34 of file iservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34        \{}
+\DoxyCodeLine{35     \textcolor{comment}{// ==============================================}}
+\DoxyCodeLine{36     \textcolor{comment}{// Public APIs - try not to reorder these}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319ac29d8afa3ded86d47e7879f814b61f0d}{GET\_HWC\_VERSION}} = IBinder::FIRST\_CALL\_TRANSACTION,}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{comment}{// Dump options and current settings to logcat.}}
+\DoxyCodeLine{41     \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a117fba2a971fa7318d8ef74f7a84105c}{DUMP\_OPTIONS}},}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{comment}{// Override an option.}}
+\DoxyCodeLine{44     \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8f322cc1308b770e9cd5056d9dfefaf3}{SET\_OPTION}},}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{comment}{// Disable hwc logviewer output to logcat}}
+\DoxyCodeLine{47     \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aa6f70e3efcf110f66a046bf4d49ee999}{DISABLE\_LOG\_TO\_LOGCAT}} = 98,}
+\DoxyCodeLine{48     \textcolor{comment}{// Enable hwclogviewer output to logcat}}
+\DoxyCodeLine{49     \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8ec23523cde1ace78656435c40d75ca6}{ENABLE\_LOG\_TO\_LOGCAT}} = 99,}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{comment}{// accessor for IBinder interface functions}}
+\DoxyCodeLine{52     \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aba1101f98d0ae4dba7ae06b05fa7ecf6}{TRANSACT\_GET\_DIAGNOSTIC}} = 100,}
+\DoxyCodeLine{53     \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a88c048d451c725f7549727f0eb25bd11}{TRANSACT\_GET\_CONTROLS}},}
+\DoxyCodeLine{54   \};}
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1BpService_a62e17be4899fc0e9af815cefa9956971}\label{classhwcomposer_1_1BpService_a62e17be4899fc0e9af815cefa9956971}} 
+\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!Bp\+Service@{Bp\+Service}}
+\index{Bp\+Service@{Bp\+Service}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}
+\subsubsection{\texorpdfstring{Bp\+Service()}{BpService()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Bp\+Service\+::\+Bp\+Service (\begin{DoxyParamCaption}\item[{const sp$<$ I\+Binder $>$ \&}]{impl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file iservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                      : BpInterface<IService>(impl) \{}
+\DoxyCodeLine{32   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1BpService_a9685bc5b64d6666e6ad3607b6c127bda}\label{classhwcomposer_1_1BpService_a9685bc5b64d6666e6ad3607b6c127bda}} 
+\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!Dump\+Options@{Dump\+Options}}
+\index{Dump\+Options@{Dump\+Options}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}
+\subsubsection{\texorpdfstring{Dump\+Options()}{DumpOptions()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Bp\+Service\+::\+Dump\+Options (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+Definition at line 64 of file iservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                   \{}
+\DoxyCodeLine{65     Parcel data, reply;}
+\DoxyCodeLine{66     remote()->transact(\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a117fba2a971fa7318d8ef74f7a84105c}{DUMP\_OPTIONS}}, data, \&reply);}
+\DoxyCodeLine{67   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1BpService_a1c58bedc3a6f9bed36b4daff0ba9048d}\label{classhwcomposer_1_1BpService_a1c58bedc3a6f9bed36b4daff0ba9048d}} 
+\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!Enable\+Logview\+To\+Logcat@{Enable\+Logview\+To\+Logcat}}
+\index{Enable\+Logview\+To\+Logcat@{Enable\+Logview\+To\+Logcat}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}
+\subsubsection{\texorpdfstring{Enable\+Logview\+To\+Logcat()}{EnableLogviewToLogcat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+Bp\+Service\+::\+Enable\+Logview\+To\+Logcat (\begin{DoxyParamCaption}\item[{bool}]{enable = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+Definition at line 79 of file iservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                                                               \{}
+\DoxyCodeLine{80     Parcel data, reply;}
+\DoxyCodeLine{81     data.writeInterfaceToken(IService::getInterfaceDescriptor());}
+\DoxyCodeLine{82     \textcolor{keywordflow}{if} (enable) \{}
+\DoxyCodeLine{83       remote()->transact(\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8ec23523cde1ace78656435c40d75ca6}{ENABLE\_LOG\_TO\_LOGCAT}}, data, \&reply);}
+\DoxyCodeLine{84     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{85       remote()->transact(\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aa6f70e3efcf110f66a046bf4d49ee999}{DISABLE\_LOG\_TO\_LOGCAT}}, data, \&reply);}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87     \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = reply.readInt32();}
+\DoxyCodeLine{88     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{89   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1BpService_a1d18a82c9d0693cfec5f57781431e335}\label{classhwcomposer_1_1BpService_a1d18a82c9d0693cfec5f57781431e335}} 
+\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!Get\+Controls@{Get\+Controls}}
+\index{Get\+Controls@{Get\+Controls}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}
+\subsubsection{\texorpdfstring{Get\+Controls()}{GetControls()}}
+{\footnotesize\ttfamily sp$<$\mbox{\hyperlink{classhwcomposer_1_1IControls}{I\+Controls}}$>$ hwcomposer\+::\+Bp\+Service\+::\+Get\+Controls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+Definition at line 102 of file iservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                        \{}
+\DoxyCodeLine{103     Parcel data;}
+\DoxyCodeLine{104     Parcel reply;}
+\DoxyCodeLine{105     data.writeInterfaceToken(getInterfaceDescriptor());}
+\DoxyCodeLine{106     \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = remote()->transact(\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a88c048d451c725f7549727f0eb25bd11}{TRANSACT\_GET\_CONTROLS}}, data, \&reply);}
+\DoxyCodeLine{107     \textcolor{keywordflow}{if} (ret != NO\_ERROR) \{}
+\DoxyCodeLine{108       ALOGW(\textcolor{stringliteral}{"\%s() transact failed: \%d"}, \_\_FUNCTION\_\_, ret);}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110     \textcolor{keywordflow}{return} interface\_cast<IControls>(reply.readStrongBinder());}
+\DoxyCodeLine{111   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1BpService_a03db6523ced5f83e89bc1c48c7ee442d}\label{classhwcomposer_1_1BpService_a03db6523ced5f83e89bc1c48c7ee442d}} 
+\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!Get\+Diagnostic@{Get\+Diagnostic}}
+\index{Get\+Diagnostic@{Get\+Diagnostic}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}
+\subsubsection{\texorpdfstring{Get\+Diagnostic()}{GetDiagnostic()}}
+{\footnotesize\ttfamily sp$<$\mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}}$>$ hwcomposer\+::\+Bp\+Service\+::\+Get\+Diagnostic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+Definition at line 91 of file iservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                            \{}
+\DoxyCodeLine{92     Parcel data;}
+\DoxyCodeLine{93     Parcel reply;}
+\DoxyCodeLine{94     data.writeInterfaceToken(getInterfaceDescriptor());}
+\DoxyCodeLine{95     \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = remote()->transact(\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aba1101f98d0ae4dba7ae06b05fa7ecf6}{TRANSACT\_GET\_DIAGNOSTIC}}, data, \&reply);}
+\DoxyCodeLine{96     \textcolor{keywordflow}{if} (ret != NO\_ERROR) \{}
+\DoxyCodeLine{97       ALOGW(\textcolor{stringliteral}{"\%s() transact failed: \%d"}, \_\_FUNCTION\_\_, ret);}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99     \textcolor{keywordflow}{return} interface\_cast<IDiagnostic>(reply.readStrongBinder());}
+\DoxyCodeLine{100   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1BpService_a17ce9341ddf723a5e0a565f3dcf0495b}\label{classhwcomposer_1_1BpService_a17ce9341ddf723a5e0a565f3dcf0495b}} 
+\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!Get\+Hwc\+Version@{Get\+Hwc\+Version}}
+\index{Get\+Hwc\+Version@{Get\+Hwc\+Version}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}
+\subsubsection{\texorpdfstring{Get\+Hwc\+Version()}{GetHwcVersion()}}
+{\footnotesize\ttfamily String8 hwcomposer\+::\+Bp\+Service\+::\+Get\+Hwc\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+Definition at line 56 of file iservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                    \{}
+\DoxyCodeLine{57     Parcel data, reply;}
+\DoxyCodeLine{58     data.writeInterfaceToken(IService::getInterfaceDescriptor());}
+\DoxyCodeLine{59     remote()->transact(\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319ac29d8afa3ded86d47e7879f814b61f0d}{GET\_HWC\_VERSION}}, data, \&reply);}
+\DoxyCodeLine{60     String8 ret = reply.readString8();}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{62   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1BpService_a9293da08063a0cbea2906f80470ba383}\label{classhwcomposer_1_1BpService_a9293da08063a0cbea2906f80470ba383}} 
+\index{hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}!Set\+Option@{Set\+Option}}
+\index{Set\+Option@{Set\+Option}!hwcomposer\+::\+Bp\+Service@{hwcomposer\+::\+Bp\+Service}}
+\subsubsection{\texorpdfstring{Set\+Option()}{SetOption()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+Bp\+Service\+::\+Set\+Option (\begin{DoxyParamCaption}\item[{String8}]{option,  }\item[{String8}]{option\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+Definition at line 69 of file iservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                                                    \{}
+\DoxyCodeLine{70     Parcel data, reply;}
+\DoxyCodeLine{71     data.writeInterfaceToken(IService::getInterfaceDescriptor());}
+\DoxyCodeLine{72     data.writeString16(String16(option));}
+\DoxyCodeLine{73     data.writeString16(String16(optionValue));}
+\DoxyCodeLine{74     remote()->transact(\mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8f322cc1308b770e9cd5056d9dfefaf3}{SET\_OPTION}}, data, \&reply);}
+\DoxyCodeLine{75     \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = reply.readInt32();}
+\DoxyCodeLine{76     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{77   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/android/libhwcservice/\mbox{\hyperlink{iservice_8cpp}{iservice.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,287 @@
+\hypertarget{structhwcomposer_1_1RenderState}{}\section{hwcomposer\+:\+:Render\+State Struct Reference}
+\label{structhwcomposer_1_1RenderState}\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+
+
+{\ttfamily \#include $<$renderstate.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1RenderState_1_1LayerState}{Layer\+State}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1RenderState_a52c9a4e17e61f8805f462a815bbe614e}{Construct\+State}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers, const \mbox{\hyperlink{structhwcomposer_1_1CompositionRegion}{Composition\+Region}} \&region, uint32\+\_\+t downscaling\+\_\+factor, bool uses\+\_\+display\+\_\+up\+\_\+scaling, bool use\+\_\+plane\+\_\+transform)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1RenderState_ac7277dd3c8238665f4fd1095576c335a}{x\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1RenderState_a6076ef9b49604c76ae1597ec760fa78a}{y\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1RenderState_a950c10fc0b91f4ec42d700cf118ef716}{width\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1RenderState_a864271759ea3e5f3e4f83a66b61226b9}{height\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1RenderState_a9bca68d0755f69549395efb12ba3dbf1}{scissor\+\_\+x\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1RenderState_a5910819755f80229de1ede18d4cddb6a}{scissor\+\_\+y\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1RenderState_a709cadb231e2d5241f3d1693275612a2}{scissor\+\_\+width\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1RenderState_a0fdd83e35b919db37b1a8f0a004b3d5b}{scissor\+\_\+height\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1RenderState_1_1LayerState}{Layer\+State}} $>$ \mbox{\hyperlink{structhwcomposer_1_1RenderState_a68b934a6461758eb46e0bf5b4532212d}{layer\+\_\+state\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 36 of file renderstate.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_a52c9a4e17e61f8805f462a815bbe614e}\label{structhwcomposer_1_1RenderState_a52c9a4e17e61f8805f462a815bbe614e}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!Construct\+State@{Construct\+State}}
+\index{Construct\+State@{Construct\+State}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{Construct\+State()}{ConstructState()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Render\+State\+::\+Construct\+State (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers,  }\item[{const \mbox{\hyperlink{structhwcomposer_1_1CompositionRegion}{Composition\+Region}} \&}]{region,  }\item[{uint32\+\_\+t}]{downscaling\+\_\+factor,  }\item[{bool}]{uses\+\_\+display\+\_\+up\+\_\+scaling,  }\item[{bool}]{use\+\_\+plane\+\_\+transform }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file renderstate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                            \{}
+\DoxyCodeLine{34   \textcolor{keywordtype}{float} bounds[4];}
+\DoxyCodeLine{35   std::copy\_n(region.frame.bounds, 4, bounds);}
+\DoxyCodeLine{36   \mbox{\hyperlink{structhwcomposer_1_1RenderState_ac7277dd3c8238665f4fd1095576c335a}{x\_}} = bounds[0];}
+\DoxyCodeLine{37   \mbox{\hyperlink{structhwcomposer_1_1RenderState_a6076ef9b49604c76ae1597ec760fa78a}{y\_}} = bounds[1];}
+\DoxyCodeLine{38   \mbox{\hyperlink{structhwcomposer_1_1RenderState_a950c10fc0b91f4ec42d700cf118ef716}{width\_}} = bounds[2] - bounds[0];}
+\DoxyCodeLine{39   \mbox{\hyperlink{structhwcomposer_1_1RenderState_a864271759ea3e5f3e4f83a66b61226b9}{height\_}} = bounds[3] - bounds[1];}
+\DoxyCodeLine{40   \mbox{\hyperlink{structhwcomposer_1_1RenderState_a9bca68d0755f69549395efb12ba3dbf1}{scissor\_x\_}} = \mbox{\hyperlink{structhwcomposer_1_1RenderState_ac7277dd3c8238665f4fd1095576c335a}{x\_}};}
+\DoxyCodeLine{41   \mbox{\hyperlink{structhwcomposer_1_1RenderState_a5910819755f80229de1ede18d4cddb6a}{scissor\_y\_}} = \mbox{\hyperlink{structhwcomposer_1_1RenderState_a6076ef9b49604c76ae1597ec760fa78a}{y\_}};}
+\DoxyCodeLine{42   \mbox{\hyperlink{structhwcomposer_1_1RenderState_a709cadb231e2d5241f3d1693275612a2}{scissor\_width\_}} = \mbox{\hyperlink{structhwcomposer_1_1RenderState_a950c10fc0b91f4ec42d700cf118ef716}{width\_}};}
+\DoxyCodeLine{43   \mbox{\hyperlink{structhwcomposer_1_1RenderState_a0fdd83e35b919db37b1a8f0a004b3d5b}{scissor\_height\_}} = \mbox{\hyperlink{structhwcomposer_1_1RenderState_a864271759ea3e5f3e4f83a66b61226b9}{height\_}};}
+\DoxyCodeLine{44   \textcolor{keyword}{const} std::vector<size\_t> \&source = region.source\_layers;}
+\DoxyCodeLine{45   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} texture\_index : source) \{}
+\DoxyCodeLine{46     OverlayLayer \&layer = layers.at(texture\_index);}
+\DoxyCodeLine{47     \mbox{\hyperlink{structhwcomposer_1_1RenderState_a68b934a6461758eb46e0bf5b4532212d}{layer\_state\_}}.emplace\_back();}
+\DoxyCodeLine{48     RenderState::LayerState \&src = \mbox{\hyperlink{structhwcomposer_1_1RenderState_a68b934a6461758eb46e0bf5b4532212d}{layer\_state\_}}.back();}
+\DoxyCodeLine{49     src.layer\_index\_ = texture\_index;}
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} swap\_xy = \textcolor{keyword}{false};}
+\DoxyCodeLine{51     \textcolor{keywordtype}{bool} flip\_xy[2] = \{\textcolor{keyword}{false}, \textcolor{keyword}{false}\};}
+\DoxyCodeLine{52     uint32\_t transform = layer.GetTransform();}
+\DoxyCodeLine{53     \textcolor{keywordflow}{if} (use\_plane\_transform) \{}
+\DoxyCodeLine{54       transform = layer.GetPlaneTransform();}
+\DoxyCodeLine{55     \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keywordflow}{switch} (transform) \{}
+\DoxyCodeLine{58       \textcolor{keywordflow}{case} HWCTransform::kTransform180: \{}
+\DoxyCodeLine{59         swap\_xy = \textcolor{keyword}{false};}
+\DoxyCodeLine{60         flip\_xy[0] = \textcolor{keyword}{true};}
+\DoxyCodeLine{61         flip\_xy[1] = \textcolor{keyword}{true};}
+\DoxyCodeLine{62         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{63       \}}
+\DoxyCodeLine{64       \textcolor{keywordflow}{case} HWCTransform::kTransform270: \{}
+\DoxyCodeLine{65         swap\_xy = \textcolor{keyword}{true};}
+\DoxyCodeLine{66         flip\_xy[0] = \textcolor{keyword}{true};}
+\DoxyCodeLine{67         flip\_xy[1] = \textcolor{keyword}{false};}
+\DoxyCodeLine{68         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{69       \}}
+\DoxyCodeLine{70       \textcolor{keywordflow}{case} HWCTransform::kTransform90: \{}
+\DoxyCodeLine{71         swap\_xy = \textcolor{keyword}{true};}
+\DoxyCodeLine{72         flip\_xy[0] = \textcolor{keyword}{false};}
+\DoxyCodeLine{73         flip\_xy[1] = \textcolor{keyword}{true};}
+\DoxyCodeLine{74         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{75       \}}
+\DoxyCodeLine{76       \textcolor{keywordflow}{case} HWCTransform::kTransform90 | HWCTransform::kReflectX: \{}
+\DoxyCodeLine{77         swap\_xy = \textcolor{keyword}{true};}
+\DoxyCodeLine{78         flip\_xy[0] = \textcolor{keyword}{true};}
+\DoxyCodeLine{79         flip\_xy[1] = \textcolor{keyword}{true};}
+\DoxyCodeLine{80         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{81       \}}
+\DoxyCodeLine{82       \textcolor{keywordflow}{case} HWCTransform::kTransform90 | HWCTransform::kReflectY: \{}
+\DoxyCodeLine{83         swap\_xy = \textcolor{keyword}{true};}
+\DoxyCodeLine{84         flip\_xy[0] = \textcolor{keyword}{false};}
+\DoxyCodeLine{85         flip\_xy[1] = \textcolor{keyword}{false};}
+\DoxyCodeLine{86         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{87       \}}
+\DoxyCodeLine{88       \textcolor{keywordflow}{default}: \{}
+\DoxyCodeLine{89         \textcolor{keywordflow}{if} (layer.GetTransform() \& HWCTransform::kReflectX)}
+\DoxyCodeLine{90           flip\_xy[0] = \textcolor{keyword}{true};}
+\DoxyCodeLine{91         \textcolor{keywordflow}{if} (layer.GetTransform() \& HWCTransform::kReflectY)}
+\DoxyCodeLine{92           flip\_xy[1] = \textcolor{keyword}{true};}
+\DoxyCodeLine{93       \}}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     \textcolor{keywordflow}{if} (swap\_xy)}
+\DoxyCodeLine{97       std::copy\_n(\&TransformMatrices[4], 4, src.texture\_matrix\_);}
+\DoxyCodeLine{98     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{99       std::copy\_n(\&TransformMatrices[0], 4, src.texture\_matrix\_);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     HwcRect<float> display\_rect;}
+\DoxyCodeLine{102     \textcolor{keywordtype}{float} display\_size[2];}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \textcolor{keywordflow}{if} (uses\_display\_up\_scaling) \{}
+\DoxyCodeLine{105       display\_rect = layer.GetSourceCrop();}
+\DoxyCodeLine{106       display\_size[0] = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(layer.GetSourceCropWidth());}
+\DoxyCodeLine{107       display\_size[1] = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(layer.GetSourceCropHeight());}
+\DoxyCodeLine{108     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{109       \textcolor{keyword}{const} HwcRect<int> \&display\_Rect = layer.GetDisplayFrame();}
+\DoxyCodeLine{110       display\_rect.left = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(display\_Rect.left);}
+\DoxyCodeLine{111       display\_rect.right = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(display\_Rect.right);}
+\DoxyCodeLine{112       display\_rect.top = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(display\_Rect.top);}
+\DoxyCodeLine{113       display\_rect.bottom = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(display\_Rect.bottom);}
+\DoxyCodeLine{114       \textcolor{keywordflow}{if} (downscaling\_factor > 1) \{}
+\DoxyCodeLine{115         display\_rect.right =}
+\DoxyCodeLine{116             display\_rect.right -}
+\DoxyCodeLine{117             ((display\_rect.right - display\_rect.left) / downscaling\_factor);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119         display\_size[0] = display\_rect.right - display\_rect.left;}
+\DoxyCodeLine{120         display\_size[1] = display\_rect.bottom - display\_rect.top;}
+\DoxyCodeLine{121       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{122         display\_size[0] = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(layer.GetDisplayFrameWidth());}
+\DoxyCodeLine{123         display\_size[1] = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(layer.GetDisplayFrameHeight());}
+\DoxyCodeLine{124       \}}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{keywordtype}{float} tex\_width = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(layer.GetBuffer()->GetWidth());}
+\DoxyCodeLine{128     \textcolor{keywordtype}{float} tex\_height = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(layer.GetBuffer()->GetHeight());}
+\DoxyCodeLine{129     \textcolor{keyword}{const} HwcRect<float> \&source\_crop = layer.GetSourceCrop();}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     HwcRect<float> crop\_rect(}
+\DoxyCodeLine{132         source\_crop.left / tex\_width, source\_crop.top / tex\_height,}
+\DoxyCodeLine{133         source\_crop.right / tex\_width, source\_crop.bottom / tex\_height);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     \textcolor{keywordtype}{float} crop\_size[2] = \{crop\_rect.bounds[2] - crop\_rect.bounds[0],}
+\DoxyCodeLine{136                           crop\_rect.bounds[3] - crop\_rect.bounds[1]\};}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 4; j++) \{}
+\DoxyCodeLine{139       \textcolor{keywordtype}{int} b = j \string^ (swap\_xy ? 1 : 0);}
+\DoxyCodeLine{140       \textcolor{keywordtype}{float} bound\_percent =}
+\DoxyCodeLine{141           (bounds[b] - display\_rect.bounds[b \% 2]) / display\_size[b \% 2];}
+\DoxyCodeLine{142       \textcolor{keywordflow}{if} (flip\_xy[j \% 2]) \{}
+\DoxyCodeLine{143         src.crop\_bounds\_[j] =}
+\DoxyCodeLine{144             crop\_rect.bounds[j \% 2 + 2] - bound\_percent * crop\_size[j \% 2];}
+\DoxyCodeLine{145       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{146         src.crop\_bounds\_[j] =}
+\DoxyCodeLine{147             crop\_rect.bounds[j \% 2] + bound\_percent * crop\_size[j \% 2];}
+\DoxyCodeLine{148       \}}
+\DoxyCodeLine{149     \}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \textcolor{keywordflow}{if} (layer.GetBlending() == HWCBlending::kBlendingNone) \{}
+\DoxyCodeLine{152       src.alpha\_ = src.premult\_ = 1.0f;}
+\DoxyCodeLine{153       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{154     \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156     src.alpha\_ = layer.GetAlpha() / 255.0f;}
+\DoxyCodeLine{157     src.premult\_ =}
+\DoxyCodeLine{158         (layer.GetBlending() == HWCBlending::kBlendingPremult) ? 1.0f : 0.0f;}
+\DoxyCodeLine{159   \}}
+\DoxyCodeLine{160 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_a864271759ea3e5f3e4f83a66b61226b9}\label{structhwcomposer_1_1RenderState_a864271759ea3e5f3e4f83a66b61226b9}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!height\+\_\+@{height\+\_\+}}
+\index{height\+\_\+@{height\+\_\+}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{height\+\_\+}{height\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Render\+State\+::height\+\_\+}
+
+
+
+Definition at line 54 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_a68b934a6461758eb46e0bf5b4532212d}\label{structhwcomposer_1_1RenderState_a68b934a6461758eb46e0bf5b4532212d}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!layer\+\_\+state\+\_\+@{layer\+\_\+state\+\_\+}}
+\index{layer\+\_\+state\+\_\+@{layer\+\_\+state\+\_\+}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{layer\+\_\+state\+\_\+}{layer\_state\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structhwcomposer_1_1RenderState_1_1LayerState}{Layer\+State}}$>$ hwcomposer\+::\+Render\+State\+::layer\+\_\+state\+\_\+}
+
+
+
+Definition at line 59 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_a0fdd83e35b919db37b1a8f0a004b3d5b}\label{structhwcomposer_1_1RenderState_a0fdd83e35b919db37b1a8f0a004b3d5b}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!scissor\+\_\+height\+\_\+@{scissor\+\_\+height\+\_\+}}
+\index{scissor\+\_\+height\+\_\+@{scissor\+\_\+height\+\_\+}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{scissor\+\_\+height\+\_\+}{scissor\_height\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Render\+State\+::scissor\+\_\+height\+\_\+}
+
+
+
+Definition at line 58 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_a709cadb231e2d5241f3d1693275612a2}\label{structhwcomposer_1_1RenderState_a709cadb231e2d5241f3d1693275612a2}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!scissor\+\_\+width\+\_\+@{scissor\+\_\+width\+\_\+}}
+\index{scissor\+\_\+width\+\_\+@{scissor\+\_\+width\+\_\+}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{scissor\+\_\+width\+\_\+}{scissor\_width\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Render\+State\+::scissor\+\_\+width\+\_\+}
+
+
+
+Definition at line 57 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_a9bca68d0755f69549395efb12ba3dbf1}\label{structhwcomposer_1_1RenderState_a9bca68d0755f69549395efb12ba3dbf1}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!scissor\+\_\+x\+\_\+@{scissor\+\_\+x\+\_\+}}
+\index{scissor\+\_\+x\+\_\+@{scissor\+\_\+x\+\_\+}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{scissor\+\_\+x\+\_\+}{scissor\_x\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Render\+State\+::scissor\+\_\+x\+\_\+}
+
+
+
+Definition at line 55 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_a5910819755f80229de1ede18d4cddb6a}\label{structhwcomposer_1_1RenderState_a5910819755f80229de1ede18d4cddb6a}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!scissor\+\_\+y\+\_\+@{scissor\+\_\+y\+\_\+}}
+\index{scissor\+\_\+y\+\_\+@{scissor\+\_\+y\+\_\+}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{scissor\+\_\+y\+\_\+}{scissor\_y\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Render\+State\+::scissor\+\_\+y\+\_\+}
+
+
+
+Definition at line 56 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_a950c10fc0b91f4ec42d700cf118ef716}\label{structhwcomposer_1_1RenderState_a950c10fc0b91f4ec42d700cf118ef716}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!width\+\_\+@{width\+\_\+}}
+\index{width\+\_\+@{width\+\_\+}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{width\+\_\+}{width\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Render\+State\+::width\+\_\+}
+
+
+
+Definition at line 53 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_ac7277dd3c8238665f4fd1095576c335a}\label{structhwcomposer_1_1RenderState_ac7277dd3c8238665f4fd1095576c335a}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!x\+\_\+@{x\+\_\+}}
+\index{x\+\_\+@{x\+\_\+}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{x\+\_\+}{x\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Render\+State\+::x\+\_\+}
+
+
+
+Definition at line 51 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1RenderState_a6076ef9b49604c76ae1597ec760fa78a}\label{structhwcomposer_1_1RenderState_a6076ef9b49604c76ae1597ec760fa78a}} 
+\index{hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}!y\+\_\+@{y\+\_\+}}
+\index{y\+\_\+@{y\+\_\+}!hwcomposer\+::\+Render\+State@{hwcomposer\+::\+Render\+State}}
+\subsubsection{\texorpdfstring{y\+\_\+}{y\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Render\+State\+::y\+\_\+}
+
+
+
+Definition at line 52 of file renderstate.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/\mbox{\hyperlink{renderstate_8h}{renderstate.\+h}}\item 
+common/compositor/\mbox{\hyperlink{renderstate_8cpp}{renderstate.\+cpp}}\end{DoxyCompactItemize}

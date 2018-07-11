@@ -1,0 +1,288 @@
+\hypertarget{classhwcomposer_1_1BnControls}{}\section{hwcomposer\+:\+:Bn\+Controls Class Reference}
+\label{classhwcomposer_1_1BnControls}\index{hwcomposer\+::\+Bn\+Controls@{hwcomposer\+::\+Bn\+Controls}}
+
+
+{\ttfamily \#include $<$icontrols.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Bn\+Controls\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classhwcomposer_1_1BnControls}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1BnControls_a335d9026455cc400f6a83e7529fd7cea}{on\+Transact}} (uint32\+\_\+t, const android\+::\+Parcel \&, android\+::\+Parcel $\ast$, uint32\+\_\+t) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 85 of file icontrols.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1BnControls_a335d9026455cc400f6a83e7529fd7cea}\label{classhwcomposer_1_1BnControls_a335d9026455cc400f6a83e7529fd7cea}} 
+\index{hwcomposer\+::\+Bn\+Controls@{hwcomposer\+::\+Bn\+Controls}!on\+Transact@{on\+Transact}}
+\index{on\+Transact@{on\+Transact}!hwcomposer\+::\+Bn\+Controls@{hwcomposer\+::\+Bn\+Controls}}
+\subsubsection{\texorpdfstring{on\+Transact()}{onTransact()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+Bn\+Controls\+::on\+Transact (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{const android\+::\+Parcel \&}]{,  }\item[{android\+::\+Parcel $\ast$}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 516 of file icontrols.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{517                                                                \{}
+\DoxyCodeLine{518   \textcolor{keywordflow}{switch} (code) \{}
+\DoxyCodeLine{519     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a985ef11557835be6b215a6b481cc8975}{BpControls::TRANSACT\_DISPLAY\_SET\_OVERSCAN}}: \{}
+\DoxyCodeLine{520       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{521       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{522       int32\_t xoverscan = data.readInt32();}
+\DoxyCodeLine{523       int32\_t yoverscan = data.readInt32();}
+\DoxyCodeLine{524       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplaySetOverscan(display, xoverscan, yoverscan);}
+\DoxyCodeLine{525       reply->writeInt32(ret);}
+\DoxyCodeLine{526       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{527     \}}
+\DoxyCodeLine{528     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446acfb53ecdb379884e8843788c2a312e8c}{BpControls::TRANSACT\_DISPLAY\_GET\_OVERSCAN}}: \{}
+\DoxyCodeLine{529       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{530       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{531       int32\_t xoverscan;}
+\DoxyCodeLine{532       int32\_t yoverscan;}
+\DoxyCodeLine{533       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplayGetOverscan(display, \&xoverscan, \&yoverscan);}
+\DoxyCodeLine{534       reply->writeInt32(ret);}
+\DoxyCodeLine{535       reply->writeInt32(xoverscan);}
+\DoxyCodeLine{536       reply->writeInt32(yoverscan);}
+\DoxyCodeLine{537       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{538     \}}
+\DoxyCodeLine{539     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446acd6fb8651f02533f7f7a92d0642d9a0d}{BpControls::TRANSACT\_DISPLAY\_SET\_SCALING}}: \{}
+\DoxyCodeLine{540       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{541       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{542       \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{EHwcsScalingMode}} scaling = (\mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{EHwcsScalingMode}})data.readInt32();}
+\DoxyCodeLine{543       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplaySetScaling(display, scaling);}
+\DoxyCodeLine{544       reply->writeInt32(ret);}
+\DoxyCodeLine{545       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{546     \}}
+\DoxyCodeLine{547     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446ad8d27d03f7cca04781cb7c481a1a91d6}{BpControls::TRANSACT\_DISPLAY\_GET\_SCALING}}: \{}
+\DoxyCodeLine{548       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{549       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{550       \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{EHwcsScalingMode}} scaling;}
+\DoxyCodeLine{551       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplayGetScaling(display, \&scaling);}
+\DoxyCodeLine{552       reply->writeInt32(ret);}
+\DoxyCodeLine{553       reply->writeInt32((int32\_t)scaling);}
+\DoxyCodeLine{554       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{555     \}}
+\DoxyCodeLine{556     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a6623581a2b88fb17369dd632a20106d4}{BpControls::TRANSACT\_DISPLAY\_ENABLE\_BLANK}}: \{}
+\DoxyCodeLine{557       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{558       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{559       \textcolor{keywordtype}{bool} blank = (bool)data.readInt32();}
+\DoxyCodeLine{560       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplayEnableBlank(display, blank);}
+\DoxyCodeLine{561       reply->writeInt32(ret);}
+\DoxyCodeLine{562       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{563     \}}
+\DoxyCodeLine{564     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a15a087c4d488f967b1293b18951a6c02}{BpControls::TRANSACT\_DISPLAY\_RESTORE\_DEFAULT\_COLOR\_PARAM}}: \{}
+\DoxyCodeLine{565       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{566       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{567       \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{EHwcsColorControl}} color = (\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{EHwcsColorControl}})data.readInt32();}
+\DoxyCodeLine{568       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplayRestoreDefaultColorParam(display, color);}
+\DoxyCodeLine{569       reply->writeInt32(ret);}
+\DoxyCodeLine{570       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{571     \}}
+\DoxyCodeLine{572     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a481d6c71408ba43adf692d5e11aa7fd7}{BpControls::TRANSACT\_DISPLAY\_RESTORE\_DEFAULT\_DEINTERLACE\_PARAM}}: \{}
+\DoxyCodeLine{573       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{574       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{575       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplayRestoreDefaultDeinterlaceParam(display);}
+\DoxyCodeLine{576       reply->writeInt32(ret);}
+\DoxyCodeLine{577       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{578     \}}
+\DoxyCodeLine{579 }
+\DoxyCodeLine{580     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a218cf0d49257af27d4916bbcf7974e42}{BpControls::TRANSACT\_DISPLAY\_GET\_COLOR\_PARAM}}: \{}
+\DoxyCodeLine{581       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{582       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{583       \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{EHwcsColorControl}} color = (\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{EHwcsColorControl}})data.readInt32();}
+\DoxyCodeLine{584       \textcolor{keywordtype}{float} value;}
+\DoxyCodeLine{585       \textcolor{keywordtype}{float} startvalue;}
+\DoxyCodeLine{586       \textcolor{keywordtype}{float} endvalue;}
+\DoxyCodeLine{587       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplayGetColorParam(display, color, \&value,}
+\DoxyCodeLine{588                                                 \&startvalue, \&endvalue);}
+\DoxyCodeLine{589       reply->writeFloat(value);}
+\DoxyCodeLine{590       reply->writeFloat(startvalue);}
+\DoxyCodeLine{591       reply->writeFloat(endvalue);}
+\DoxyCodeLine{592       reply->writeInt32(ret);}
+\DoxyCodeLine{593       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{594     \}}
+\DoxyCodeLine{595     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a02754bed54f3e948595d365863e6ff6c}{BpControls::TRANSACT\_DISPLAY\_SET\_COLOR\_PARAM}}: \{}
+\DoxyCodeLine{596       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{597       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{598       \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{EHwcsColorControl}} color = (\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{EHwcsColorControl}})data.readInt32();}
+\DoxyCodeLine{599       \textcolor{keywordtype}{float} value = data.readFloat();}
+\DoxyCodeLine{600       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplaySetColorParam(display, color, value);}
+\DoxyCodeLine{601       reply->writeInt32(ret);}
+\DoxyCodeLine{602       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{603     \}}
+\DoxyCodeLine{604     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a32c72f6f1679760b231c841184d5420d}{BpControls::TRANSACT\_DISPLAY\_SET\_DEINTERLACE\_PARAM}}: \{}
+\DoxyCodeLine{605       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{606       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{607       \mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{EHwcsDeinterlaceControl}} mode = (
+      \mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{EHwcsDeinterlaceControl}})data.readInt32();}
+\DoxyCodeLine{608       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplaySetDeinterlaceParam(display, mode);}
+\DoxyCodeLine{609       reply->writeInt32(ret);}
+\DoxyCodeLine{610       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{611     \}}
+\DoxyCodeLine{612 }
+\DoxyCodeLine{613     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a23ea2de5ee0482714e828cdfe3b78eb6}{BpControls::TRANSACT\_DISPLAYMODE\_GET\_AVAILABLE\_MODES}}: \{}
+\DoxyCodeLine{614       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{615       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{616 }
+\DoxyCodeLine{617       std::vector<HwcsDisplayModeInfo> vector =}
+\DoxyCodeLine{618           this->DisplayModeGetAvailableModes(display);}
+\DoxyCodeLine{619       reply->writeInt32(vector.size());}
+\DoxyCodeLine{620       \textcolor{keywordflow}{for} (uint32\_t i = 0; i < vector.size(); i++) \{}
+\DoxyCodeLine{621         reply->writeInt32(vector[i].width);}
+\DoxyCodeLine{622         reply->writeInt32(vector[i].height);}
+\DoxyCodeLine{623         reply->writeInt32(vector[i].refresh);}
+\DoxyCodeLine{624         reply->writeInt32(vector[i].xdpi);}
+\DoxyCodeLine{625         reply->writeInt32(vector[i].ydpi);}
+\DoxyCodeLine{626       \}}
+\DoxyCodeLine{627       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{628     \}}
+\DoxyCodeLine{629     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446afd0d6093faf175dc1c13e25789063f3e}{BpControls::TRANSACT\_DISPLAYMODE\_GET\_MODE}}: \{}
+\DoxyCodeLine{630       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{631       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{632       \mbox{\hyperlink{struct__HwcsDisplayModeInfo}{HwcsDisplayModeInfo}} info;}
+\DoxyCodeLine{633       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplayModeGetMode(display, \&info);}
+\DoxyCodeLine{634       reply->writeInt32(info.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a50ed795465b52cda71e38e0c5eae2804}{width}});}
+\DoxyCodeLine{635       reply->writeInt32(info.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a89f5474962a13b045ce25b84929c6be3}{height}});}
+\DoxyCodeLine{636       reply->writeInt32(info.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_afbc17f7325634fd5b86eeb0a2023c635}{refresh}});}
+\DoxyCodeLine{637       reply->writeInt32(info.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_ad8d33821439c3aeb8b125296cb62dbbb}{xdpi}});}
+\DoxyCodeLine{638       reply->writeInt32(info.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a53ef1f5ece0baea9b74b76dbf9c0fc19}{ydpi}});}
+\DoxyCodeLine{639       reply->writeInt32(ret);}
+\DoxyCodeLine{640       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{641     \}}
+\DoxyCodeLine{642     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a62999b5eadacd5213c222e8efe03dda4}{BpControls::TRANSACT\_DISPLAYMODE\_SET\_MODE}}: \{}
+\DoxyCodeLine{643       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{644       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{645       uint32\_t config = data.readInt32();}
+\DoxyCodeLine{646       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisplayModeSetMode(display, config);}
+\DoxyCodeLine{647       reply->writeInt32(ret);}
+\DoxyCodeLine{648       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{649     \}}
+\DoxyCodeLine{650     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a6482e9c31b42e7a8a101b55e059a260a}{BpControls::TRANSACT\_VIDEO\_ENABLE\_HDCP\_SESSION\_FOR\_DISPLAY}}: \{}
+\DoxyCodeLine{651       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{652       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{653       \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{EHwcsContentType}} content\_type = (\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{EHwcsContentType}})data.readInt32();}
+\DoxyCodeLine{654       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->EnableHDCPSessionForDisplay(display, content\_type);}
+\DoxyCodeLine{655       reply->writeInt32(ret);}
+\DoxyCodeLine{656       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{657     \}}
+\DoxyCodeLine{658     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446acaf7406d1c2bbedb4253ce81685ca811}{BpControls::TRANSACT\_VIDEO\_ENABLE\_HDCP\_SESSION\_FOR\_ALL\_DISPLAYS}}: \{}
+\DoxyCodeLine{659       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{660       \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{EHwcsContentType}} content\_type = (\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{EHwcsContentType}})data.readInt32();}
+\DoxyCodeLine{661       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->EnableHDCPSessionForAllDisplays(content\_type);}
+\DoxyCodeLine{662       reply->writeInt32(ret);}
+\DoxyCodeLine{663       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{664     \}}
+\DoxyCodeLine{665     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a3772d2ac2fc50e3b393733c14f95e536}{BpControls::TRANSACT\_VIDEO\_DISABLE\_HDCP\_SESSION\_FOR\_DISPLAY}}: \{}
+\DoxyCodeLine{666       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{667       uint32\_t display = data.readInt32();}
+\DoxyCodeLine{668       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisableHDCPSessionForDisplay(display);}
+\DoxyCodeLine{669       reply->writeInt32(ret);}
+\DoxyCodeLine{670       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{671     \}}
+\DoxyCodeLine{672     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a7afcde053a8bef100088bae91dbb2620}{BpControls::TRANSACT\_VIDEO\_DISABLE\_HDCP\_SESSION\_FOR\_ALL\_DISPLAYS}}: \{}
+\DoxyCodeLine{673       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{674       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->DisableHDCPSessionForAllDisplays();}
+\DoxyCodeLine{675       reply->writeInt32(ret);}
+\DoxyCodeLine{676       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{677     \}}
+\DoxyCodeLine{678     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446ac6559374237fdc63c299a2964bdbe9d7}{BpControls::TRANSACT\_VIDEO\_ENABLE\_ENCRYPTED\_SESSION}}: \{}
+\DoxyCodeLine{679       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{680       uint32\_t sessionID = data.readInt32();}
+\DoxyCodeLine{681       uint32\_t instanceID = data.readInt32();}
+\DoxyCodeLine{682       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->VideoEnableEncryptedSession(sessionID, instanceID);}
+\DoxyCodeLine{683       reply->writeInt32(ret);}
+\DoxyCodeLine{684       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{685     \}}
+\DoxyCodeLine{686     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446aaa215b4cc5192668f648d2f90962f582}{BpControls::TRANSACT\_VIDEO\_DISABLE\_ENCRYPTED\_SESSION}}: \{}
+\DoxyCodeLine{687       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{688       int32\_t sessionID = data.readInt32();}
+\DoxyCodeLine{689       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->VideoDisableAllEncryptedSessions(sessionID);}
+\DoxyCodeLine{690       reply->writeInt32(ret);}
+\DoxyCodeLine{691       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{692     \}}
+\DoxyCodeLine{693     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a5ef49fd58989fb5029472668414f9140}{BpControls::TRANSACT\_VIDEO\_DISABLE\_ALL\_ENCRYPTED\_SESSIONS}}: \{}
+\DoxyCodeLine{694       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{695       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->VideoDisableAllEncryptedSessions();}
+\DoxyCodeLine{696       reply->writeInt32(ret);}
+\DoxyCodeLine{697       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{698     \}}
+\DoxyCodeLine{699     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a83e8e51e9f0eaa3b99c1fbe7486875ec}{BpControls::TRANSACT\_VIDEO\_IS\_ENCRYPTED\_SESSION\_ENABLED}}: \{}
+\DoxyCodeLine{700       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{701       uint32\_t sessionID = data.readInt32();}
+\DoxyCodeLine{702       uint32\_t instanceID = data.readInt32();}
+\DoxyCodeLine{703       \textcolor{keywordtype}{bool} bEnabled =}
+\DoxyCodeLine{704           this->VideoIsEncryptedSessionEnabled(sessionID, instanceID);}
+\DoxyCodeLine{705       reply->writeInt32(bEnabled);}
+\DoxyCodeLine{706       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{707     \}}
+\DoxyCodeLine{708     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a2dc60d5ba78113e4cad0c7d70be98a8e}{BpControls::TRANSACT\_VIDEO\_SET\_OPTIMIZATION\_MODE}}: \{}
+\DoxyCodeLine{709       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{710       \mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{EHwcsOptimizationMode}} mode = (\mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{EHwcsOptimizationMode}})data.readInt32();}
+\DoxyCodeLine{711       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->VideoSetOptimizationMode(mode);}
+\DoxyCodeLine{712       reply->writeInt32(ret);}
+\DoxyCodeLine{713       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{714     \}}
+\DoxyCodeLine{715     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446ae58d81883fb4d1137f4f8b9222b93f95}{BpControls::TRANSACT\_MDS\_UPDATE\_VIDEO\_STATE}}: \{}
+\DoxyCodeLine{716       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{717       int64\_t videoSessionID = data.readInt64();}
+\DoxyCodeLine{718       \textcolor{keywordtype}{bool} isPrepared = data.readInt32();}
+\DoxyCodeLine{719       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->MdsUpdateVideoState(videoSessionID, isPrepared);}
+\DoxyCodeLine{720       reply->writeInt32(ret);}
+\DoxyCodeLine{721       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{722     \}}
+\DoxyCodeLine{723     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446aed219d26b586c56400fb6ff87d4b7b12}{BpControls::TRANSACT\_MDS\_UPDATE\_VIDEO\_FPS}}: \{}
+\DoxyCodeLine{724       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{725       int64\_t videoSessionID = data.readInt64();}
+\DoxyCodeLine{726       int32\_t fps = data.readInt32();}
+\DoxyCodeLine{727       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->MdsUpdateVideoFPS(videoSessionID, fps);}
+\DoxyCodeLine{728       reply->writeInt32(ret);}
+\DoxyCodeLine{729       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{730     \}}
+\DoxyCodeLine{731     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446a9c89c90c56c8ad69f11b9131ac2e8b00}{BpControls::TRANSACT\_MDS\_UPDATE\_INPUT\_STATE}}: \{}
+\DoxyCodeLine{732       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{733       \textcolor{keywordtype}{bool} state = data.readInt32();}
+\DoxyCodeLine{734       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->MdsUpdateInputState(state);}
+\DoxyCodeLine{735       reply->writeInt32(ret);}
+\DoxyCodeLine{736       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{737     \}}
+\DoxyCodeLine{738     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446ac0896efafd9de075b9d33ae5ea916ae9}{BpControls::TRANSACT\_WIDI\_GET\_SINGLE\_DISPLAY}}: \{}
+\DoxyCodeLine{739       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{740       \textcolor{keywordtype}{bool} enable = \textcolor{keyword}{false};}
+\DoxyCodeLine{741       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->WidiGetSingleDisplay(\&enable);}
+\DoxyCodeLine{742       reply->writeInt32(enable);}
+\DoxyCodeLine{743       reply->writeInt32(ret);}
+\DoxyCodeLine{744       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{745     \}}
+\DoxyCodeLine{746     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpControls_a057cb6d771c68da065640c49e3742446aba0ea7b08d69c3018e5dc0017a14390a}{BpControls::TRANSACT\_WIDI\_SET\_SINGLE\_DISPLAY}}: \{}
+\DoxyCodeLine{747       CHECK\_INTERFACE(IControls, data, reply);}
+\DoxyCodeLine{748       \textcolor{keywordtype}{bool} enable = data.readInt32();}
+\DoxyCodeLine{749       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = this->WidiSetSingleDisplay(enable);}
+\DoxyCodeLine{750       reply->writeInt32(ret);}
+\DoxyCodeLine{751       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{752     \}}
+\DoxyCodeLine{753 }
+\DoxyCodeLine{754     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{755       \textcolor{keywordflow}{return} BBinder::onTransact(code, data, reply, flags);}
+\DoxyCodeLine{756   \}}
+\DoxyCodeLine{757 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/android/libhwcservice/\mbox{\hyperlink{icontrols_8h}{icontrols.\+h}}\item 
+os/android/libhwcservice/\mbox{\hyperlink{icontrols_8cpp}{icontrols.\+cpp}}\end{DoxyCompactItemize}

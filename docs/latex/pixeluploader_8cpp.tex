@@ -1,0 +1,114 @@
+\hypertarget{pixeluploader_8cpp}{}\section{os/linux/pixeluploader.cpp File Reference}
+\label{pixeluploader_8cpp}\index{os/linux/pixeluploader.\+cpp@{os/linux/pixeluploader.\+cpp}}
+{\ttfamily \#include \char`\"{}pixeluploader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}displayplanemanager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}framebuffermanager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hwctrace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hwcutils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nativegpuresource.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nativesurface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}overlaylayer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}renderer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}resourcemanager.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$nativebufferhandler.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1dma__buf__sync}{hwcomposer\+::dma\+\_\+buf\+\_\+sync}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehwcomposer}{hwcomposer}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pixeluploader_8cpp_a25d4b8644d44bca64ad644a34d4ab6b7}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+R\+E\+AD}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{pixeluploader_8cpp_a1df894b028366e96719a24e57831ded1}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+R\+I\+TE}}~(2 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{pixeluploader_8cpp_acb8a0590a7ca71ec071cc9f97e408ef0}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+RW}}~(\mbox{\hyperlink{pixeluploader_8cpp_a25d4b8644d44bca64ad644a34d4ab6b7}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+R\+E\+AD}} $\vert$ \mbox{\hyperlink{pixeluploader_8cpp_a1df894b028366e96719a24e57831ded1}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+R\+I\+TE}})
+\item 
+\#define \mbox{\hyperlink{pixeluploader_8cpp_a333d42571e491c19961a39f7a96ff049}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+T\+A\+RT}}~(0 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{pixeluploader_8cpp_a9765328769f7b2d0cb20dafa547d364e}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+ND}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{pixeluploader_8cpp_a9f913281891eb58bd03774752291003c}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+B\+A\+SE}}~\textquotesingle{}b\textquotesingle{}
+\item 
+\#define \mbox{\hyperlink{pixeluploader_8cpp_a17d91782619e6846aa04fe6e827e6138}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+I\+O\+C\+T\+L\+\_\+\+S\+Y\+NC}}~\+\_\+\+I\+OW(\mbox{\hyperlink{pixeluploader_8cpp_a9f913281891eb58bd03774752291003c}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+B\+A\+SE}}, 0, struct dma\+\_\+buf\+\_\+sync)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pixeluploader_8cpp_a9f913281891eb58bd03774752291003c}\label{pixeluploader_8cpp_a9f913281891eb58bd03774752291003c}} 
+\index{pixeluploader.\+cpp@{pixeluploader.\+cpp}!D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+B\+A\+SE@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+B\+A\+SE}}
+\index{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+B\+A\+SE@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+B\+A\+SE}!pixeluploader.\+cpp@{pixeluploader.\+cpp}}
+\subsubsection{\texorpdfstring{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+B\+A\+SE}{DMA\_BUF\_BASE}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+B\+A\+SE~\textquotesingle{}b\textquotesingle{}}
+
+
+
+Definition at line 40 of file pixeluploader.\+cpp.
+
+\mbox{\Hypertarget{pixeluploader_8cpp_a17d91782619e6846aa04fe6e827e6138}\label{pixeluploader_8cpp_a17d91782619e6846aa04fe6e827e6138}} 
+\index{pixeluploader.\+cpp@{pixeluploader.\+cpp}!D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+I\+O\+C\+T\+L\+\_\+\+S\+Y\+NC@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+I\+O\+C\+T\+L\+\_\+\+S\+Y\+NC}}
+\index{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+I\+O\+C\+T\+L\+\_\+\+S\+Y\+NC@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+I\+O\+C\+T\+L\+\_\+\+S\+Y\+NC}!pixeluploader.\+cpp@{pixeluploader.\+cpp}}
+\subsubsection{\texorpdfstring{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+I\+O\+C\+T\+L\+\_\+\+S\+Y\+NC}{DMA\_BUF\_IOCTL\_SYNC}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+I\+O\+C\+T\+L\+\_\+\+S\+Y\+NC~\+\_\+\+I\+OW(\mbox{\hyperlink{pixeluploader_8cpp_a9f913281891eb58bd03774752291003c}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+B\+A\+SE}}, 0, struct dma\+\_\+buf\+\_\+sync)}
+
+
+
+Definition at line 41 of file pixeluploader.\+cpp.
+
+\mbox{\Hypertarget{pixeluploader_8cpp_a9765328769f7b2d0cb20dafa547d364e}\label{pixeluploader_8cpp_a9765328769f7b2d0cb20dafa547d364e}} 
+\index{pixeluploader.\+cpp@{pixeluploader.\+cpp}!D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+ND@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+ND}}
+\index{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+ND@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+ND}!pixeluploader.\+cpp@{pixeluploader.\+cpp}}
+\subsubsection{\texorpdfstring{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+ND}{DMA\_BUF\_SYNC\_END}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+ND~(1 $<$$<$ 2)}
+
+
+
+Definition at line 39 of file pixeluploader.\+cpp.
+
+\mbox{\Hypertarget{pixeluploader_8cpp_a25d4b8644d44bca64ad644a34d4ab6b7}\label{pixeluploader_8cpp_a25d4b8644d44bca64ad644a34d4ab6b7}} 
+\index{pixeluploader.\+cpp@{pixeluploader.\+cpp}!D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+R\+E\+AD@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+R\+E\+AD}}
+\index{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+R\+E\+AD@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+R\+E\+AD}!pixeluploader.\+cpp@{pixeluploader.\+cpp}}
+\subsubsection{\texorpdfstring{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+R\+E\+AD}{DMA\_BUF\_SYNC\_READ}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+R\+E\+AD~(1 $<$$<$ 0)}
+
+
+
+Definition at line 35 of file pixeluploader.\+cpp.
+
+\mbox{\Hypertarget{pixeluploader_8cpp_acb8a0590a7ca71ec071cc9f97e408ef0}\label{pixeluploader_8cpp_acb8a0590a7ca71ec071cc9f97e408ef0}} 
+\index{pixeluploader.\+cpp@{pixeluploader.\+cpp}!D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+RW@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+RW}}
+\index{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+RW@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+RW}!pixeluploader.\+cpp@{pixeluploader.\+cpp}}
+\subsubsection{\texorpdfstring{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+RW}{DMA\_BUF\_SYNC\_RW}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+RW~(\mbox{\hyperlink{pixeluploader_8cpp_a25d4b8644d44bca64ad644a34d4ab6b7}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+R\+E\+AD}} $\vert$ \mbox{\hyperlink{pixeluploader_8cpp_a1df894b028366e96719a24e57831ded1}{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+R\+I\+TE}})}
+
+
+
+Definition at line 37 of file pixeluploader.\+cpp.
+
+\mbox{\Hypertarget{pixeluploader_8cpp_a333d42571e491c19961a39f7a96ff049}\label{pixeluploader_8cpp_a333d42571e491c19961a39f7a96ff049}} 
+\index{pixeluploader.\+cpp@{pixeluploader.\+cpp}!D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+T\+A\+RT@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+T\+A\+RT}}
+\index{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+T\+A\+RT@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+T\+A\+RT}!pixeluploader.\+cpp@{pixeluploader.\+cpp}}
+\subsubsection{\texorpdfstring{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+T\+A\+RT}{DMA\_BUF\_SYNC\_START}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+T\+A\+RT~(0 $<$$<$ 2)}
+
+
+
+Definition at line 38 of file pixeluploader.\+cpp.
+
+\mbox{\Hypertarget{pixeluploader_8cpp_a1df894b028366e96719a24e57831ded1}\label{pixeluploader_8cpp_a1df894b028366e96719a24e57831ded1}} 
+\index{pixeluploader.\+cpp@{pixeluploader.\+cpp}!D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+R\+I\+TE@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+R\+I\+TE}}
+\index{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+R\+I\+TE@{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+R\+I\+TE}!pixeluploader.\+cpp@{pixeluploader.\+cpp}}
+\subsubsection{\texorpdfstring{D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+R\+I\+TE}{DMA\_BUF\_SYNC\_WRITE}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+R\+I\+TE~(2 $<$$<$ 0)}
+
+
+
+Definition at line 36 of file pixeluploader.\+cpp.
+

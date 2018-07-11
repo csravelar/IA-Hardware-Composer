@@ -1,0 +1,342 @@
+\hypertarget{alios_2platformdefines_8h}{}\section{os/alios/platformdefines.h File Reference}
+\label{alios_2platformdefines_8h}\index{os/alios/platformdefines.\+h@{os/alios/platformdefines.\+h}}
+{\ttfamily \#include $<$hwcbuffer.\+h$>$}\newline
+{\ttfamily \#include $<$log/\+Log.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cutils/native\+\_\+target.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}platformcommondefines.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structyalloc__handle}{yalloc\+\_\+handle}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a7ce0df38eb467e59f209470c8f5ac4e6}{L\+O\+G\+\_\+\+T\+AG}}~\char`\"{}I\+A\+H\+WF\char`\"{}
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}~0
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}~1
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}}~0
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}{fourcc\+\_\+code}}(a,  b,  c,  d)~((\+\_\+\+\_\+u32)(a) $\vert$ ((\+\_\+\+\_\+u32)(b) $<$$<$ 8) $\vert$ ((\+\_\+\+\_\+u32)(c) $<$$<$ 16) $\vert$ ((\+\_\+\+\_\+u32)(d) $<$$<$ 24))
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a96d182dc172ba22ccac394fa56d1b318}{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P010}}~\mbox{\hyperlink{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}{fourcc\+\_\+code}}(\textquotesingle{}P\textquotesingle{}, \textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}0\textquotesingle{})
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_aa472bb45b57d6ef99a501e6dd9b805e9}{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P012}}~\mbox{\hyperlink{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}{fourcc\+\_\+code}}(\textquotesingle{}P\textquotesingle{}, \textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}2\textquotesingle{})
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a2354a6ff35b57af305afc195bb482fbf}{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P016}}~\mbox{\hyperlink{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}{fourcc\+\_\+code}}(\textquotesingle{}P\textquotesingle{}, \textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}6\textquotesingle{})
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a1f1e0254e71347fe36dca3a2c713d456}{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+R16}}~\mbox{\hyperlink{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}{fourcc\+\_\+code}}(\textquotesingle{}R\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}6\textquotesingle{}, \textquotesingle{} \textquotesingle{})
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_ac7f4f38deaf02263903d4391e529bfb4}{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+0}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a954a6976fc4d6ef96dac7e27cce71952}{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+90}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a019c4f0d3d2d5a68b42619f75086faad}{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+180}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_abcad06812f0613349db81e97b2c2ddc4}{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+270}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a3b51e7a82789b666caa9102d18a8b976}{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+X}}~(1 $<$$<$ 4)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a68aa23551c218c80b4a593d81a2fa403}{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+Y}}~(1 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a0d54abbb093584a6262f263db28d1cdf}{G\+E\+T\+N\+A\+T\+I\+V\+E\+B\+U\+F\+F\+ER}}(handle)~($\ast$(native\+\_\+target\+\_\+t$\ast$)(handle-\/$>$target\+\_\+))
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_ae69eb3ae60a4b88fdfcf918d2171efca}{V\+T\+R\+A\+CE}}(fmt, ...)~L\+O\+G\+\_\+V(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_adacf8735c8504b8cc864a299145acc52}{D\+T\+R\+A\+CE}}(fmt, ...)~L\+O\+G\+\_\+D(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{E\+T\+R\+A\+CE}}(fmt, ...)~L\+O\+G\+\_\+E(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}{W\+T\+R\+A\+CE}}(fmt, ...)~L\+O\+G\+\_\+W(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}{I\+T\+R\+A\+CE}}(fmt, ...)~L\+O\+G\+\_\+I(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{alios_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}{S\+T\+R\+A\+CE}}()
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structyalloc__handle}{yalloc\+\_\+handle}} $\ast$ \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}
+\item 
+typedef struct native\+\_\+target \mbox{\hyperlink{alios_2platformdefines_8h_aaca8140c553e46965fd5fdd3e6a9e5d0}{H\+W\+C\+Native\+Buffer}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{alios_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}{Get\+Native\+Buffer}} (uint32\+\_\+t gpu\+\_\+fd, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{alios_2platformdefines_8h_a96d182dc172ba22ccac394fa56d1b318}\label{alios_2platformdefines_8h_a96d182dc172ba22ccac394fa56d1b318}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P010@{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P010}}
+\index{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P010@{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P010}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P010}{DRM\_FORMAT\_P010}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P010~\mbox{\hyperlink{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}{fourcc\+\_\+code}}(\textquotesingle{}P\textquotesingle{}, \textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}0\textquotesingle{})}
+
+
+
+Definition at line 41 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_aa472bb45b57d6ef99a501e6dd9b805e9}\label{alios_2platformdefines_8h_aa472bb45b57d6ef99a501e6dd9b805e9}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P012@{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P012}}
+\index{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P012@{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P012}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P012}{DRM\_FORMAT\_P012}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P012~\mbox{\hyperlink{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}{fourcc\+\_\+code}}(\textquotesingle{}P\textquotesingle{}, \textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}2\textquotesingle{})}
+
+
+
+Definition at line 49 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a2354a6ff35b57af305afc195bb482fbf}\label{alios_2platformdefines_8h_a2354a6ff35b57af305afc195bb482fbf}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P016@{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P016}}
+\index{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P016@{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P016}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P016}{DRM\_FORMAT\_P016}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+P016~\mbox{\hyperlink{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}{fourcc\+\_\+code}}(\textquotesingle{}P\textquotesingle{}, \textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}6\textquotesingle{})}
+
+
+
+Definition at line 57 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a1f1e0254e71347fe36dca3a2c713d456}\label{alios_2platformdefines_8h_a1f1e0254e71347fe36dca3a2c713d456}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+R16@{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+R16}}
+\index{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+R16@{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+R16}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+R16}{DRM\_FORMAT\_R16}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+R16~\mbox{\hyperlink{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}{fourcc\+\_\+code}}(\textquotesingle{}R\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}6\textquotesingle{}, \textquotesingle{} \textquotesingle{})}
+
+
+
+Definition at line 61 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a3b51e7a82789b666caa9102d18a8b976}\label{alios_2platformdefines_8h_a3b51e7a82789b666caa9102d18a8b976}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+X@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+X}}
+\index{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+X@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+X}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+X}{DRM\_MODE\_REFLECT\_X}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+X~(1 $<$$<$ 4)}
+
+
+
+Definition at line 68 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a68aa23551c218c80b4a593d81a2fa403}\label{alios_2platformdefines_8h_a68aa23551c218c80b4a593d81a2fa403}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+Y@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+Y}}
+\index{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+Y@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+Y}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+Y}{DRM\_MODE\_REFLECT\_Y}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+Y~(1 $<$$<$ 5)}
+
+
+
+Definition at line 69 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_ac7f4f38deaf02263903d4391e529bfb4}\label{alios_2platformdefines_8h_ac7f4f38deaf02263903d4391e529bfb4}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+0@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+0}}
+\index{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+0@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+0}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+0}{DRM\_MODE\_ROTATE\_0}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+0~(1 $<$$<$ 0)}
+
+
+
+Definition at line 63 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a019c4f0d3d2d5a68b42619f75086faad}\label{alios_2platformdefines_8h_a019c4f0d3d2d5a68b42619f75086faad}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+180@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+180}}
+\index{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+180@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+180}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+180}{DRM\_MODE\_ROTATE\_180}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+180~(1 $<$$<$ 2)}
+
+
+
+Definition at line 65 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_abcad06812f0613349db81e97b2c2ddc4}\label{alios_2platformdefines_8h_abcad06812f0613349db81e97b2c2ddc4}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+270@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+270}}
+\index{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+270@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+270}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+270}{DRM\_MODE\_ROTATE\_270}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+270~(1 $<$$<$ 3)}
+
+
+
+Definition at line 66 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a954a6976fc4d6ef96dac7e27cce71952}\label{alios_2platformdefines_8h_a954a6976fc4d6ef96dac7e27cce71952}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+90@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+90}}
+\index{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+90@{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+90}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+90}{DRM\_MODE\_ROTATE\_90}}
+{\footnotesize\ttfamily \#define D\+R\+M\+\_\+\+M\+O\+D\+E\+\_\+\+R\+O\+T\+A\+T\+E\+\_\+90~(1 $<$$<$ 1)}
+
+
+
+Definition at line 64 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_adacf8735c8504b8cc864a299145acc52}\label{alios_2platformdefines_8h_adacf8735c8504b8cc864a299145acc52}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!D\+T\+R\+A\+CE@{D\+T\+R\+A\+CE}}
+\index{D\+T\+R\+A\+CE@{D\+T\+R\+A\+CE}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+R\+A\+CE}{DTRACE}}
+{\footnotesize\ttfamily \#define D\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~L\+O\+G\+\_\+D(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 89 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}\label{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!E\+T\+R\+A\+CE@{E\+T\+R\+A\+CE}}
+\index{E\+T\+R\+A\+CE@{E\+T\+R\+A\+CE}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{E\+T\+R\+A\+CE}{ETRACE}}
+{\footnotesize\ttfamily \#define E\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~L\+O\+G\+\_\+E(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 91 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{alios_2platformdefines_8h_aa93f0eb578d23995850d61f7d61c55c1}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!F\+A\+L\+SE@{F\+A\+L\+SE}}
+\index{F\+A\+L\+SE@{F\+A\+L\+SE}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{F\+A\+L\+SE}{FALSE}}
+{\footnotesize\ttfamily \#define F\+A\+L\+SE~0}
+
+
+
+Definition at line 23 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}\label{alios_2platformdefines_8h_aa22aaae0f0619113f80ec577f4cf7944}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!fourcc\+\_\+code@{fourcc\+\_\+code}}
+\index{fourcc\+\_\+code@{fourcc\+\_\+code}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{fourcc\+\_\+code}{fourcc\_code}}
+{\footnotesize\ttfamily \#define fourcc\+\_\+code(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{d }\end{DoxyParamCaption})~((\+\_\+\+\_\+u32)(a) $\vert$ ((\+\_\+\+\_\+u32)(b) $<$$<$ 8) $\vert$ ((\+\_\+\+\_\+u32)(c) $<$$<$ 16) $\vert$ ((\+\_\+\+\_\+u32)(d) $<$$<$ 24))}
+
+
+
+Definition at line 32 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a0d54abbb093584a6262f263db28d1cdf}\label{alios_2platformdefines_8h_a0d54abbb093584a6262f263db28d1cdf}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!G\+E\+T\+N\+A\+T\+I\+V\+E\+B\+U\+F\+F\+ER@{G\+E\+T\+N\+A\+T\+I\+V\+E\+B\+U\+F\+F\+ER}}
+\index{G\+E\+T\+N\+A\+T\+I\+V\+E\+B\+U\+F\+F\+ER@{G\+E\+T\+N\+A\+T\+I\+V\+E\+B\+U\+F\+F\+ER}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{G\+E\+T\+N\+A\+T\+I\+V\+E\+B\+U\+F\+F\+ER}{GETNATIVEBUFFER}}
+{\footnotesize\ttfamily \#define G\+E\+T\+N\+A\+T\+I\+V\+E\+B\+U\+F\+F\+ER(\begin{DoxyParamCaption}\item[{}]{handle }\end{DoxyParamCaption})~($\ast$(native\+\_\+target\+\_\+t$\ast$)(handle-\/$>$target\+\_\+))}
+
+
+
+Definition at line 84 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}\label{alios_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!I\+T\+R\+A\+CE@{I\+T\+R\+A\+CE}}
+\index{I\+T\+R\+A\+CE@{I\+T\+R\+A\+CE}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{I\+T\+R\+A\+CE}{ITRACE}}
+{\footnotesize\ttfamily \#define I\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~L\+O\+G\+\_\+I(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 95 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a7ce0df38eb467e59f209470c8f5ac4e6}\label{alios_2platformdefines_8h_a7ce0df38eb467e59f209470c8f5ac4e6}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!L\+O\+G\+\_\+\+T\+AG@{L\+O\+G\+\_\+\+T\+AG}}
+\index{L\+O\+G\+\_\+\+T\+AG@{L\+O\+G\+\_\+\+T\+AG}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+T\+AG}{LOG\_TAG}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+AG~\char`\"{}I\+A\+H\+WF\char`\"{}}
+
+
+
+Definition at line 12 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}\label{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!N\+U\+LL@{N\+U\+LL}}
+\index{N\+U\+LL@{N\+U\+LL}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{N\+U\+LL}{NULL}}
+{\footnotesize\ttfamily \#define N\+U\+LL~0}
+
+
+
+Definition at line 15 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}\label{alios_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!S\+T\+R\+A\+CE@{S\+T\+R\+A\+CE}}
+\index{S\+T\+R\+A\+CE@{S\+T\+R\+A\+CE}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+R\+A\+CE}{STRACE}}
+{\footnotesize\ttfamily \#define S\+T\+R\+A\+CE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 98 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_aa8cecfc5c5c054d2875c03e77b7be15d}\label{alios_2platformdefines_8h_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!T\+R\+UE@{T\+R\+UE}}
+\index{T\+R\+UE@{T\+R\+UE}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{T\+R\+UE}{TRUE}}
+{\footnotesize\ttfamily \#define T\+R\+UE~1}
+
+
+
+Definition at line 19 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_ae69eb3ae60a4b88fdfcf918d2171efca}\label{alios_2platformdefines_8h_ae69eb3ae60a4b88fdfcf918d2171efca}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!V\+T\+R\+A\+CE@{V\+T\+R\+A\+CE}}
+\index{V\+T\+R\+A\+CE@{V\+T\+R\+A\+CE}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{V\+T\+R\+A\+CE}{VTRACE}}
+{\footnotesize\ttfamily \#define V\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~L\+O\+G\+\_\+V(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 87 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}\label{alios_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!W\+T\+R\+A\+CE@{W\+T\+R\+A\+CE}}
+\index{W\+T\+R\+A\+CE@{W\+T\+R\+A\+CE}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{W\+T\+R\+A\+CE}{WTRACE}}
+{\footnotesize\ttfamily \#define W\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~L\+O\+G\+\_\+W(\char`\"{}\%s\+:\%d\+: \%s \char`\"{} fmt, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 93 of file platformdefines.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{alios_2platformdefines_8h_aaca8140c553e46965fd5fdd3e6a9e5d0}\label{alios_2platformdefines_8h_aaca8140c553e46965fd5fdd3e6a9e5d0}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!H\+W\+C\+Native\+Buffer@{H\+W\+C\+Native\+Buffer}}
+\index{H\+W\+C\+Native\+Buffer@{H\+W\+C\+Native\+Buffer}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{H\+W\+C\+Native\+Buffer}{HWCNativeBuffer}}
+{\footnotesize\ttfamily typedef struct native\+\_\+target \mbox{\hyperlink{alios_2platformdefines_8h_aaca8140c553e46965fd5fdd3e6a9e5d0}{H\+W\+C\+Native\+Buffer}}}
+
+
+
+Definition at line 82 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}\label{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!H\+W\+C\+Native\+Handle@{H\+W\+C\+Native\+Handle}}
+\index{H\+W\+C\+Native\+Handle@{H\+W\+C\+Native\+Handle}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{H\+W\+C\+Native\+Handle}{HWCNativeHandle}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structyalloc__handle}{yalloc\+\_\+handle}}$\ast$ \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}
+
+
+
+Definition at line 81 of file platformdefines.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{alios_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}\label{alios_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}} 
+\index{alios/platformdefines.\+h@{alios/platformdefines.\+h}!Get\+Native\+Buffer@{Get\+Native\+Buffer}}
+\index{Get\+Native\+Buffer@{Get\+Native\+Buffer}!alios/platformdefines.\+h@{alios/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{Get\+Native\+Buffer()}{GetNativeBuffer()}}
+{\footnotesize\ttfamily uint32\+\_\+t Get\+Native\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 100 of file platformdefines.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100                                                                          \{}
+\DoxyCodeLine{101   uint32\_t \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{102   uint32\_t prime\_fd = handle->\mbox{\hyperlink{structyalloc__handle_a36250e79fcdc6f1e58020a9d2b891a48}{target\_}}->fds.data[0];}
+\DoxyCodeLine{103   \textcolor{keywordflow}{if} (drmPrimeFDToHandle(gpu\_fd, prime\_fd, \&\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{104     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Error generate handle from prime fd \%d"}, prime\_fd);}
+\DoxyCodeLine{105   \}}
+\DoxyCodeLine{106   \textcolor{keywordflow}{return} id;}
+\DoxyCodeLine{107 \}}
+\end{DoxyCode}

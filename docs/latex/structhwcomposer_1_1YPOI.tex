@@ -1,0 +1,83 @@
+\hypertarget{structhwcomposer_1_1YPOI}{}\section{hwcomposer\+:\+:Y\+P\+OI Struct Reference}
+\label{structhwcomposer_1_1YPOI}\index{hwcomposer\+::\+Y\+P\+OI@{hwcomposer\+::\+Y\+P\+OI}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1YPOI_a0ff02abf045ae63e8189aa929124da87}{operator$<$}} (const \mbox{\hyperlink{structhwcomposer_1_1YPOI}{Y\+P\+OI}} \&rhs) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacehwcomposer_a4600de8fd807f9d693b865758557d612}{Event\+Type}} \mbox{\hyperlink{structhwcomposer_1_1YPOI_a2bfd8b89315b003525573218bc070126}{type}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1YPOI_a0a1025b2b6f048c7d8c6ff1571de8ad2}{y}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1YPOI_a7013c2713330905fb2fe5027f43fc645}{rect\+\_\+id}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file disjoint\+\_\+layers.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1YPOI_a0ff02abf045ae63e8189aa929124da87}\label{structhwcomposer_1_1YPOI_a0ff02abf045ae63e8189aa929124da87}} 
+\index{hwcomposer\+::\+Y\+P\+OI@{hwcomposer\+::\+Y\+P\+OI}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!hwcomposer\+::\+Y\+P\+OI@{hwcomposer\+::\+Y\+P\+OI}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Y\+P\+O\+I\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1YPOI}{Y\+P\+OI}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file disjoint\+\_\+layers.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                         \{}
+\DoxyCodeLine{40     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structhwcomposer_1_1YPOI_a0a1025b2b6f048c7d8c6ff1571de8ad2}{y}} == rhs.y)}
+\DoxyCodeLine{41       \textcolor{keywordflow}{return} \mbox{\hyperlink{structhwcomposer_1_1YPOI_a7013c2713330905fb2fe5027f43fc645}{rect\_id}} < rhs.rect\_id;}
+\DoxyCodeLine{42     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{43       \textcolor{keywordflow}{return} (\mbox{\hyperlink{structhwcomposer_1_1YPOI_a0a1025b2b6f048c7d8c6ff1571de8ad2}{y}} < rhs.y);}
+\DoxyCodeLine{44   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1YPOI_a7013c2713330905fb2fe5027f43fc645}\label{structhwcomposer_1_1YPOI_a7013c2713330905fb2fe5027f43fc645}} 
+\index{hwcomposer\+::\+Y\+P\+OI@{hwcomposer\+::\+Y\+P\+OI}!rect\+\_\+id@{rect\+\_\+id}}
+\index{rect\+\_\+id@{rect\+\_\+id}!hwcomposer\+::\+Y\+P\+OI@{hwcomposer\+::\+Y\+P\+OI}}
+\subsubsection{\texorpdfstring{rect\+\_\+id}{rect\_id}}
+{\footnotesize\ttfamily uint64\+\_\+t hwcomposer\+::\+Y\+P\+O\+I\+::rect\+\_\+id}
+
+
+
+Definition at line 37 of file disjoint\+\_\+layers.\+cpp.
+
+\mbox{\Hypertarget{structhwcomposer_1_1YPOI_a2bfd8b89315b003525573218bc070126}\label{structhwcomposer_1_1YPOI_a2bfd8b89315b003525573218bc070126}} 
+\index{hwcomposer\+::\+Y\+P\+OI@{hwcomposer\+::\+Y\+P\+OI}!type@{type}}
+\index{type@{type}!hwcomposer\+::\+Y\+P\+OI@{hwcomposer\+::\+Y\+P\+OI}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacehwcomposer_a4600de8fd807f9d693b865758557d612}{Event\+Type}} hwcomposer\+::\+Y\+P\+O\+I\+::type}
+
+
+
+Definition at line 35 of file disjoint\+\_\+layers.\+cpp.
+
+\mbox{\Hypertarget{structhwcomposer_1_1YPOI_a0a1025b2b6f048c7d8c6ff1571de8ad2}\label{structhwcomposer_1_1YPOI_a0a1025b2b6f048c7d8c6ff1571de8ad2}} 
+\index{hwcomposer\+::\+Y\+P\+OI@{hwcomposer\+::\+Y\+P\+OI}!y@{y}}
+\index{y@{y}!hwcomposer\+::\+Y\+P\+OI@{hwcomposer\+::\+Y\+P\+OI}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily uint64\+\_\+t hwcomposer\+::\+Y\+P\+O\+I\+::y}
+
+
+
+Definition at line 36 of file disjoint\+\_\+layers.\+cpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/utils/\mbox{\hyperlink{disjoint__layers_8cpp}{disjoint\+\_\+layers.\+cpp}}\end{DoxyCompactItemize}

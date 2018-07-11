@@ -1,0 +1,122 @@
+\hypertarget{structhwcomposer_1_1DrawState}{}\section{hwcomposer\+:\+:Draw\+State Struct Reference}
+\label{structhwcomposer_1_1DrawState}\index{hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}}
+
+
+{\ttfamily \#include $<$renderstate.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1DrawState_a26084dd9adbf3d49e554a2f332da65a4}{$\sim$\+Draw\+State}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} $>$ \mbox{\hyperlink{structhwcomposer_1_1DrawState_ae756fae051e787e29f88e99817e47d9e}{states\+\_\+}}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1MediaState}{Media\+State}} \mbox{\hyperlink{structhwcomposer_1_1DrawState_a6eb63ee2e16ae80dd4fec5bc8338b95a}{media\+\_\+state\+\_\+}}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$ \mbox{\hyperlink{structhwcomposer_1_1DrawState_a4d54482d23b17eb7da0dab3be1fa2e52}{surface\+\_\+}}
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1DrawState_a68f9831f1f9dcfc09ec71fe1ddd50ce4}{destroy\+\_\+surface\+\_\+}} = false
+\item 
+int32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1DrawState_ab8ef923f9bdefc5965a143656b3fe188}{retire\+\_\+fence\+\_\+}} = -\/1
+\item 
+std\+::vector$<$ int32\+\_\+t $>$ \mbox{\hyperlink{structhwcomposer_1_1DrawState_aa711cbfc5683b64a5d9dec5e0d997427}{acquire\+\_\+fences\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 69 of file renderstate.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrawState_a26084dd9adbf3d49e554a2f332da65a4}\label{structhwcomposer_1_1DrawState_a26084dd9adbf3d49e554a2f332da65a4}} 
+\index{hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}!````~Draw\+State@{$\sim$\+Draw\+State}}
+\index{````~Draw\+State@{$\sim$\+Draw\+State}!hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}}
+\subsubsection{\texorpdfstring{$\sim$\+Draw\+State()}{~DrawState()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Draw\+State\+::$\sim$\+Draw\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 70 of file renderstate.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70                \{}
+\DoxyCodeLine{71     \textcolor{keywordflow}{for} (int32\_t fence : \mbox{\hyperlink{structhwcomposer_1_1DrawState_aa711cbfc5683b64a5d9dec5e0d997427}{acquire\_fences\_}}) \{}
+\DoxyCodeLine{72       close(fence);}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrawState_aa711cbfc5683b64a5d9dec5e0d997427}\label{structhwcomposer_1_1DrawState_aa711cbfc5683b64a5d9dec5e0d997427}} 
+\index{hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}!acquire\+\_\+fences\+\_\+@{acquire\+\_\+fences\+\_\+}}
+\index{acquire\+\_\+fences\+\_\+@{acquire\+\_\+fences\+\_\+}!hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}}
+\subsubsection{\texorpdfstring{acquire\+\_\+fences\+\_\+}{acquire\_fences\_}}
+{\footnotesize\ttfamily std\+::vector$<$int32\+\_\+t$>$ hwcomposer\+::\+Draw\+State\+::acquire\+\_\+fences\+\_\+}
+
+
+
+Definition at line 81 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1DrawState_a68f9831f1f9dcfc09ec71fe1ddd50ce4}\label{structhwcomposer_1_1DrawState_a68f9831f1f9dcfc09ec71fe1ddd50ce4}} 
+\index{hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}!destroy\+\_\+surface\+\_\+@{destroy\+\_\+surface\+\_\+}}
+\index{destroy\+\_\+surface\+\_\+@{destroy\+\_\+surface\+\_\+}!hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}}
+\subsubsection{\texorpdfstring{destroy\+\_\+surface\+\_\+}{destroy\_surface\_}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Draw\+State\+::destroy\+\_\+surface\+\_\+ = false}
+
+
+
+Definition at line 79 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1DrawState_a6eb63ee2e16ae80dd4fec5bc8338b95a}\label{structhwcomposer_1_1DrawState_a6eb63ee2e16ae80dd4fec5bc8338b95a}} 
+\index{hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}!media\+\_\+state\+\_\+@{media\+\_\+state\+\_\+}}
+\index{media\+\_\+state\+\_\+@{media\+\_\+state\+\_\+}!hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}}
+\subsubsection{\texorpdfstring{media\+\_\+state\+\_\+}{media\_state\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1MediaState}{Media\+State}} hwcomposer\+::\+Draw\+State\+::media\+\_\+state\+\_\+}
+
+
+
+Definition at line 77 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1DrawState_ab8ef923f9bdefc5965a143656b3fe188}\label{structhwcomposer_1_1DrawState_ab8ef923f9bdefc5965a143656b3fe188}} 
+\index{hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}!retire\+\_\+fence\+\_\+@{retire\+\_\+fence\+\_\+}}
+\index{retire\+\_\+fence\+\_\+@{retire\+\_\+fence\+\_\+}!hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}}
+\subsubsection{\texorpdfstring{retire\+\_\+fence\+\_\+}{retire\_fence\_}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Draw\+State\+::retire\+\_\+fence\+\_\+ = -\/1}
+
+
+
+Definition at line 80 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1DrawState_ae756fae051e787e29f88e99817e47d9e}\label{structhwcomposer_1_1DrawState_ae756fae051e787e29f88e99817e47d9e}} 
+\index{hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}!states\+\_\+@{states\+\_\+}}
+\index{states\+\_\+@{states\+\_\+}!hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}}
+\subsubsection{\texorpdfstring{states\+\_\+}{states\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}}$>$ hwcomposer\+::\+Draw\+State\+::states\+\_\+}
+
+
+
+Definition at line 76 of file renderstate.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1DrawState_a4d54482d23b17eb7da0dab3be1fa2e52}\label{structhwcomposer_1_1DrawState_a4d54482d23b17eb7da0dab3be1fa2e52}} 
+\index{hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}!surface\+\_\+@{surface\+\_\+}}
+\index{surface\+\_\+@{surface\+\_\+}!hwcomposer\+::\+Draw\+State@{hwcomposer\+::\+Draw\+State}}
+\subsubsection{\texorpdfstring{surface\+\_\+}{surface\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}}$\ast$ hwcomposer\+::\+Draw\+State\+::surface\+\_\+}
+
+
+
+Definition at line 78 of file renderstate.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/\mbox{\hyperlink{renderstate_8h}{renderstate.\+h}}\end{DoxyCompactItemize}

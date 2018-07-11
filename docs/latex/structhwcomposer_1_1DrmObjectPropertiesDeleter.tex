@@ -1,0 +1,43 @@
+\hypertarget{structhwcomposer_1_1DrmObjectPropertiesDeleter}{}\section{hwcomposer\+:\+:Drm\+Object\+Properties\+Deleter Struct Reference}
+\label{structhwcomposer_1_1DrmObjectPropertiesDeleter}\index{hwcomposer\+::\+Drm\+Object\+Properties\+Deleter@{hwcomposer\+::\+Drm\+Object\+Properties\+Deleter}}
+
+
+{\ttfamily \#include $<$drmscopedtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1DrmObjectPropertiesDeleter_a422077ad73073131fc20ebf884d9587e}{operator()}} (\mbox{\hyperlink{drmscopedtypes_8h_a5b9e41a0b21c1a9017be96cfdf9f049c}{drm\+Mode\+Object\+Properties}} $\ast$properties) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 47 of file drmscopedtypes.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrmObjectPropertiesDeleter_a422077ad73073131fc20ebf884d9587e}\label{structhwcomposer_1_1DrmObjectPropertiesDeleter_a422077ad73073131fc20ebf884d9587e}} 
+\index{hwcomposer\+::\+Drm\+Object\+Properties\+Deleter@{hwcomposer\+::\+Drm\+Object\+Properties\+Deleter}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+Drm\+Object\+Properties\+Deleter@{hwcomposer\+::\+Drm\+Object\+Properties\+Deleter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Object\+Properties\+Deleter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drmscopedtypes_8h_a5b9e41a0b21c1a9017be96cfdf9f049c}{drm\+Mode\+Object\+Properties}} $\ast$}]{properties }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 39 of file drmscopedtypes.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                                \{}
+\DoxyCodeLine{41   drmModeFreeObjectProperties(properties);}
+\DoxyCodeLine{42 \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8h}{drmscopedtypes.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8cpp}{drmscopedtypes.\+cpp}}\end{DoxyCompactItemize}

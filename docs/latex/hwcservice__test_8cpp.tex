@@ -1,0 +1,233 @@
+\hypertarget{hwcservice__test_8cpp}{}\section{os/android/libhwcservice/test/hwcservice\+\_\+test.cpp File Reference}
+\label{hwcservice__test_8cpp}\index{os/android/libhwcservice/test/hwcservice\+\_\+test.\+cpp@{os/android/libhwcservice/test/hwcservice\+\_\+test.\+cpp}}
+{\ttfamily \#include $<$binder/\+I\+Service\+Manager.\+h$>$}\newline
+{\ttfamily \#include $<$binder/\+Process\+State.\+h$>$}\newline
+{\ttfamily \#include $<$binder/\+Text\+Output.\+h$>$}\newline
+{\ttfamily \#include $<$utils/\+String8.\+h$>$}\newline
+{\ttfamily \#include $<$cinttypes$>$}\newline
+{\ttfamily \#include \char`\"{}hwcserviceapi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}iservice.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{hwcservice__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{hwcservice__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{hwcservice__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{hwcservice\+\_\+test.\+cpp@{hwcservice\+\_\+test.\+cpp}!main@{main}}
+\index{main@{main}!hwcservice\+\_\+test.\+cpp@{hwcservice\+\_\+test.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file hwcservice\+\_\+test.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                 \{}
+\DoxyCodeLine{48   uint32\_t display = 0;}
+\DoxyCodeLine{49   uint32\_t display\_mode\_index = 0;}
+\DoxyCodeLine{50   \textcolor{keywordtype}{bool} print\_mode = \textcolor{keyword}{false};}
+\DoxyCodeLine{51   \textcolor{keywordtype}{bool} get\_mode = \textcolor{keyword}{false};}
+\DoxyCodeLine{52   \textcolor{keywordtype}{bool} set\_mode = \textcolor{keyword}{false};}
+\DoxyCodeLine{53   \textcolor{keywordtype}{bool} set\_hue = \textcolor{keyword}{false};}
+\DoxyCodeLine{54   \textcolor{keywordtype}{bool} set\_saturation = \textcolor{keyword}{false};}
+\DoxyCodeLine{55   \textcolor{keywordtype}{bool} set\_brightness = \textcolor{keyword}{false};}
+\DoxyCodeLine{56   \textcolor{keywordtype}{bool} set\_contrast = \textcolor{keyword}{false};}
+\DoxyCodeLine{57   \textcolor{keywordtype}{bool} set\_deinterlace = \textcolor{keyword}{false};}
+\DoxyCodeLine{58   \textcolor{keywordtype}{bool} set\_sharpness = \textcolor{keyword}{false};}
+\DoxyCodeLine{59   \textcolor{keywordtype}{bool} set\_hdcp\_for\_display = \textcolor{keyword}{false};}
+\DoxyCodeLine{60   \textcolor{keywordtype}{bool} set\_hdcp\_for\_all\_display = \textcolor{keyword}{false};}
+\DoxyCodeLine{61   \textcolor{keywordtype}{bool} disable\_hdcp\_for\_display = \textcolor{keyword}{false};}
+\DoxyCodeLine{62   \textcolor{keywordtype}{bool} disable\_hdcp\_for\_all\_display = \textcolor{keyword}{false};}
+\DoxyCodeLine{63   \textcolor{keywordtype}{bool} restore = \textcolor{keyword}{false};}
+\DoxyCodeLine{64   \textcolor{keywordtype}{int} ch;}
+\DoxyCodeLine{65   \textcolor{keywordflow}{while} ((ch = getopt(argc, argv, \textcolor{stringliteral}{"gsphijkurabcde"})) != -1) \{}
+\DoxyCodeLine{66     \textcolor{keywordflow}{switch} (ch) \{}
+\DoxyCodeLine{67       \textcolor{keywordflow}{case} \textcolor{charliteral}{'g'}:}
+\DoxyCodeLine{68         get\_mode = \textcolor{keyword}{true};}
+\DoxyCodeLine{69         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{70       \textcolor{keywordflow}{case} \textcolor{charliteral}{'s'}:}
+\DoxyCodeLine{71         set\_mode = \textcolor{keyword}{true};}
+\DoxyCodeLine{72         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{73       \textcolor{keywordflow}{case} \textcolor{charliteral}{'p'}:}
+\DoxyCodeLine{74         print\_mode = \textcolor{keyword}{true};}
+\DoxyCodeLine{75         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{76       \textcolor{keywordflow}{case} \textcolor{charliteral}{'u'}:}
+\DoxyCodeLine{77         set\_hue = \textcolor{keyword}{true};}
+\DoxyCodeLine{78         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{79       \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'}:}
+\DoxyCodeLine{80         restore = \textcolor{keyword}{true};}
+\DoxyCodeLine{81         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{82       \textcolor{keywordflow}{case} \textcolor{charliteral}{'a'}:}
+\DoxyCodeLine{83         set\_saturation = \textcolor{keyword}{true};}
+\DoxyCodeLine{84         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{85       \textcolor{keywordflow}{case} \textcolor{charliteral}{'b'}:}
+\DoxyCodeLine{86         set\_brightness = \textcolor{keyword}{true};}
+\DoxyCodeLine{87         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{88       \textcolor{keywordflow}{case} \textcolor{charliteral}{'c'}:}
+\DoxyCodeLine{89         set\_contrast = \textcolor{keyword}{true};}
+\DoxyCodeLine{90         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{91       \textcolor{keywordflow}{case} \textcolor{charliteral}{'e'}:}
+\DoxyCodeLine{92         set\_sharpness = \textcolor{keyword}{true};}
+\DoxyCodeLine{93         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95       \textcolor{keywordflow}{case} \textcolor{charliteral}{'d'}:}
+\DoxyCodeLine{96         set\_deinterlace = \textcolor{keyword}{true};}
+\DoxyCodeLine{97         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{98       \textcolor{keywordflow}{case} \textcolor{charliteral}{'h'}:}
+\DoxyCodeLine{99         set\_hdcp\_for\_display = \textcolor{keyword}{true};}
+\DoxyCodeLine{100         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{101       \textcolor{keywordflow}{case} \textcolor{charliteral}{'i'}:}
+\DoxyCodeLine{102         disable\_hdcp\_for\_display = \textcolor{keyword}{true};}
+\DoxyCodeLine{103         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{104       \textcolor{keywordflow}{case} \textcolor{charliteral}{'j'}:}
+\DoxyCodeLine{105         set\_hdcp\_for\_all\_display = \textcolor{keyword}{true};}
+\DoxyCodeLine{106         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{107       \textcolor{keywordflow}{case} \textcolor{charliteral}{'k'}:}
+\DoxyCodeLine{108         disable\_hdcp\_for\_all\_display = \textcolor{keyword}{true};}
+\DoxyCodeLine{109         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{110       \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{111         usage();}
+\DoxyCodeLine{112     \}}
+\DoxyCodeLine{113   \}}
+\DoxyCodeLine{114   argc -= optind;}
+\DoxyCodeLine{115   argv += optind;}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#ifdef USE\_PROCESS\_STATE}}
+\DoxyCodeLine{118   \textcolor{comment}{// Initialize ProcessState with /dev/vndbinder as HwcService is}}
+\DoxyCodeLine{119   \textcolor{comment}{// in the vndbinder context}}
+\DoxyCodeLine{120   android::ProcessState::initWithDriver(\textcolor{stringliteral}{"/dev/vndbinder"});}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123   \textcolor{comment}{// Connect to HWC service}}
+\DoxyCodeLine{124   \mbox{\hyperlink{hwcserviceapi_8h_a3ec109e7ba1aa264179712b04876b1e3}{HWCSHANDLE}} hwcs = \mbox{\hyperlink{hwcserviceapi_8cpp_aef64c719bf0fd204b2ac846cdf1785b0}{HwcService\_Connect}}();}
+\DoxyCodeLine{125   \textcolor{keywordflow}{if} (hwcs == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{126     aout << \textcolor{stringliteral}{"Could not connect to service\(\backslash\)n"};}
+\DoxyCodeLine{127     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{128   \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130   std::vector<HwcsDisplayModeInfo> modes;}
+\DoxyCodeLine{131   \mbox{\hyperlink{hwcserviceapi_8cpp_afc11e204a9a1e90c9a741ebe4ad67de2}{HwcService\_DisplayMode\_GetAvailableModes}}(hwcs, display, modes);}
+\DoxyCodeLine{132   \textcolor{keywordflow}{if} (print\_mode) \{}
+\DoxyCodeLine{133     aout << \textcolor{stringliteral}{"Mode Width x Height\(\backslash\)tRefreshRate\(\backslash\)tXDpi\(\backslash\)tYDpi\(\backslash\)n"};}
+\DoxyCodeLine{134     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < modes.size(); i++) \{}
+\DoxyCodeLine{135       aout << i << \textcolor{stringliteral}{"\(\backslash\)t"} << modes[i].width << \textcolor{stringliteral}{"\(\backslash\)t"} << modes[i].height << \textcolor{stringliteral}{"\(\backslash\)t"}}
+\DoxyCodeLine{136            << modes[i].refresh << \textcolor{stringliteral}{"\(\backslash\)t"} << modes[i].xdpi << \textcolor{stringliteral}{"\(\backslash\)t"} << modes[i].ydpi}
+\DoxyCodeLine{137            << endl;}
+\DoxyCodeLine{138     \}}
+\DoxyCodeLine{139   \}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141   \textcolor{keywordflow}{if} (get\_mode) \{}
+\DoxyCodeLine{142     \mbox{\hyperlink{struct__HwcsDisplayModeInfo}{HwcsDisplayModeInfo}} mode;}
+\DoxyCodeLine{143     \mbox{\hyperlink{hwcserviceapi_8cpp_ade48267d8ce8cfe56de4344d99e67fc4}{HwcService\_DisplayMode\_GetMode}}(hwcs, display, \&mode);}
+\DoxyCodeLine{144     aout << \textcolor{stringliteral}{"Width x Height\(\backslash\)tRefreshRate\(\backslash\)tXDpi\(\backslash\)tYDpi\(\backslash\)n"};}
+\DoxyCodeLine{145     aout << mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a50ed795465b52cda71e38e0c5eae2804}{width}} << \textcolor{stringliteral}{"\(\backslash\)t"} << mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a89f5474962a13b045ce25b84929c6be3}{height}} << \textcolor{stringliteral}{"\(\backslash\)t"} << mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_afbc17f7325634fd5b86eeb0a2023c635}{refresh}} << \textcolor{stringliteral}{"\(\backslash\)t"}}
+\DoxyCodeLine{146          << mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_ad8d33821439c3aeb8b125296cb62dbbb}{xdpi}} << \textcolor{stringliteral}{"\(\backslash\)t"} << mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a53ef1f5ece0baea9b74b76dbf9c0fc19}{ydpi}} << endl;}
+\DoxyCodeLine{147   \}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149   \textcolor{keywordflow}{if} (set\_mode) \{}
+\DoxyCodeLine{150     \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret =}
+\DoxyCodeLine{151         \mbox{\hyperlink{hwcserviceapi_8cpp_a895e5f54f3fcaadc37dcf34bbfc87d15}{HwcService\_DisplayMode\_SetMode}}(hwcs, display, display\_mode\_index);}
+\DoxyCodeLine{152     \textcolor{keywordflow}{if} (ret != OK) \{}
+\DoxyCodeLine{153       aout << \textcolor{stringliteral}{"Mode set failed\(\backslash\)n"};}
+\DoxyCodeLine{154       \mbox{\hyperlink{hwcserviceapi_8cpp_a2d3ca18881c7bba975cf9897ed520061}{HwcService\_Disconnect}}(hwcs);}
+\DoxyCodeLine{155       \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{156     \}}
+\DoxyCodeLine{157   \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159   \textcolor{keywordflow}{if} (set\_hue) \{}
+\DoxyCodeLine{160     aout << \textcolor{stringliteral}{"Set Hue to: "} << atoi(argv[0]) << endl;}
+\DoxyCodeLine{161     \mbox{\hyperlink{hwcserviceapi_8cpp_a8adcae611e4dacfccc64e026a18c96b4}{HwcService\_Display\_SetColorParam}}(hwcs, display, 
+      \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a8592c707e8c00c92623cd8d497658dbf}{HWCS\_COLOR\_HUE}},}
+\DoxyCodeLine{162                                      atoi(argv[0]));}
+\DoxyCodeLine{163   \}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165   \textcolor{keywordflow}{if} (set\_brightness) \{}
+\DoxyCodeLine{166     aout << \textcolor{stringliteral}{"Set Brightness to: "} << atoi(argv[0]) << endl;}
+\DoxyCodeLine{167     \mbox{\hyperlink{hwcserviceapi_8cpp_a8adcae611e4dacfccc64e026a18c96b4}{HwcService\_Display\_SetColorParam}}(hwcs, display, 
+      \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9af9eaa70566b84b6163af36f48ccb2743}{HWCS\_COLOR\_BRIGHTNESS}},}
+\DoxyCodeLine{168                                      atoi(argv[0]));}
+\DoxyCodeLine{169   \}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171   \textcolor{keywordflow}{if} (set\_saturation) \{}
+\DoxyCodeLine{172     aout << \textcolor{stringliteral}{"Set Saturation to: "} << atoi(argv[0]) << endl;}
+\DoxyCodeLine{173     \mbox{\hyperlink{hwcserviceapi_8cpp_a8adcae611e4dacfccc64e026a18c96b4}{HwcService\_Display\_SetColorParam}}(hwcs, display, 
+      \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a1ba29b6ff917e1f37f94bba04857def4}{HWCS\_COLOR\_SATURATION}},}
+\DoxyCodeLine{174                                      atoi(argv[0]));}
+\DoxyCodeLine{175   \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177   \textcolor{keywordflow}{if} (set\_contrast) \{}
+\DoxyCodeLine{178     aout << \textcolor{stringliteral}{"Set Contrast to: "} << atoi(argv[0]) << endl;}
+\DoxyCodeLine{179     \mbox{\hyperlink{hwcserviceapi_8cpp_a8adcae611e4dacfccc64e026a18c96b4}{HwcService\_Display\_SetColorParam}}(hwcs, display, 
+      \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a57e070e45176356d2bfc62d1d59f1012}{HWCS\_COLOR\_CONTRAST}},}
+\DoxyCodeLine{180                                      atoi(argv[0]));}
+\DoxyCodeLine{181   \}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183   \textcolor{keywordflow}{if} (set\_sharpness) \{}
+\DoxyCodeLine{184     aout << \textcolor{stringliteral}{"Set Sharpness to: "} << atoi(argv[0]) << endl;}
+\DoxyCodeLine{185     \mbox{\hyperlink{hwcserviceapi_8cpp_a8adcae611e4dacfccc64e026a18c96b4}{HwcService\_Display\_SetColorParam}}(hwcs, display, 
+      \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a75eddedd091233f7cb4ee969ebedbac5}{HWCS\_COLOR\_SHARP}},}
+\DoxyCodeLine{186                                      atoi(argv[0]));}
+\DoxyCodeLine{187   \}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189   \textcolor{keywordflow}{if} (set\_deinterlace) \{}
+\DoxyCodeLine{190     aout << \textcolor{stringliteral}{"Set Deinterlace to: "} << atoi(argv[0]) << endl;}
+\DoxyCodeLine{191     \mbox{\hyperlink{hwcserviceapi_8cpp_a8950096d4a65678114099d067c9aa881}{HwcService\_Display\_SetDeinterlaceParam}}(hwcs, display, atoi(argv[0]));}
+\DoxyCodeLine{192   \}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194   \textcolor{keywordflow}{if} (restore) \{}
+\DoxyCodeLine{195     aout << \textcolor{stringliteral}{"Restore default colors\(\backslash\)n"};}
+\DoxyCodeLine{196     \mbox{\hyperlink{hwcserviceapi_8cpp_affdbd5dfd8c5520751ff39a5e82c42ee}{HwcService\_Display\_RestoreDefaultColorParam}}(hwcs, display, 
+      \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a8592c707e8c00c92623cd8d497658dbf}{HWCS\_COLOR\_HUE}});}
+\DoxyCodeLine{197     \mbox{\hyperlink{hwcserviceapi_8cpp_affdbd5dfd8c5520751ff39a5e82c42ee}{HwcService\_Display\_RestoreDefaultColorParam}}(hwcs, display,}
+\DoxyCodeLine{198                                                 \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a1ba29b6ff917e1f37f94bba04857def4}{HWCS\_COLOR\_SATURATION}});}
+\DoxyCodeLine{199     \mbox{\hyperlink{hwcserviceapi_8cpp_affdbd5dfd8c5520751ff39a5e82c42ee}{HwcService\_Display\_RestoreDefaultColorParam}}(hwcs, display,}
+\DoxyCodeLine{200                                                 \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9af9eaa70566b84b6163af36f48ccb2743}{HWCS\_COLOR\_BRIGHTNESS}});}
+\DoxyCodeLine{201     \mbox{\hyperlink{hwcserviceapi_8cpp_affdbd5dfd8c5520751ff39a5e82c42ee}{HwcService\_Display\_RestoreDefaultColorParam}}(hwcs, display,}
+\DoxyCodeLine{202                                                 \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a57e070e45176356d2bfc62d1d59f1012}{HWCS\_COLOR\_CONTRAST}});}
+\DoxyCodeLine{203     \mbox{\hyperlink{hwcserviceapi_8cpp_affdbd5dfd8c5520751ff39a5e82c42ee}{HwcService\_Display\_RestoreDefaultColorParam}}(hwcs, display,}
+\DoxyCodeLine{204                                                 \mbox{\hyperlink{hwcserviceapi_8h_a5112cf21574f2be4aa526f5f67fb67b9a75eddedd091233f7cb4ee969ebedbac5}{HWCS\_COLOR\_SHARP}});}
+\DoxyCodeLine{205     \mbox{\hyperlink{hwcserviceapi_8cpp_abea8e630b6e3b7341eea68bbb18f9380}{HwcService\_Display\_RestoreDefaultDeinterlaceParam}}(hwcs, display);}
+\DoxyCodeLine{206   \}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208   \textcolor{keywordflow}{if} (set\_hdcp\_for\_display) \{}
+\DoxyCodeLine{209     aout << \textcolor{stringliteral}{"Set HDCP For Display: "} << atoi(argv[0]) << endl;}
+\DoxyCodeLine{210     \textcolor{keywordflow}{if} (atoi(argv[0]) == 0) \{}
+\DoxyCodeLine{211       \mbox{\hyperlink{hwcserviceapi_8cpp_a39c762642428ed1b8f2488f8641e10ad}{HwcService\_Video\_EnableHDCPSession\_ForDisplay}}(hwcs, atoi(argv[0]),}
+\DoxyCodeLine{212                                                     \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142abb45aa3fb0c853d7d55d84e149c05145}{HWCS\_CP\_CONTENT\_TYPE0}});}
+\DoxyCodeLine{213     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{214       \mbox{\hyperlink{hwcserviceapi_8cpp_a39c762642428ed1b8f2488f8641e10ad}{HwcService\_Video\_EnableHDCPSession\_ForDisplay}}(hwcs, atoi(argv[0]),}
+\DoxyCodeLine{215                                                     \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142af0fc741639c5bd530c1d21db89198688}{HWCS\_CP\_CONTENT\_TYPE1}});}
+\DoxyCodeLine{216     \}}
+\DoxyCodeLine{217   \}}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219   \textcolor{keywordflow}{if} (disable\_hdcp\_for\_display) \{}
+\DoxyCodeLine{220     aout << \textcolor{stringliteral}{"Disabling HDCP For Display: "} << atoi(argv[0]) << endl;}
+\DoxyCodeLine{221     \mbox{\hyperlink{hwcserviceapi_8cpp_a1f9c29347152f491d89f11da67e82ffc}{HwcService\_Video\_DisableHDCPSession\_ForDisplay}}(hwcs, atoi(argv[0]));}
+\DoxyCodeLine{222   \}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224   \textcolor{keywordflow}{if} (set\_hdcp\_for\_all\_display) \{}
+\DoxyCodeLine{225     aout << \textcolor{stringliteral}{"Set HDCP For All Displays Using Fallback: "} << atoi(argv[0])}
+\DoxyCodeLine{226          << endl;}
+\DoxyCodeLine{227     \textcolor{keywordflow}{if} (atoi(argv[0]) == 0) \{}
+\DoxyCodeLine{228       \mbox{\hyperlink{hwcserviceapi_8cpp_a2f92ba97618729b4c1de0eec71037f39}{HwcService\_Video\_EnableHDCPSession\_AllDisplays}}(hwcs,}
+\DoxyCodeLine{229                                                      \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142abb45aa3fb0c853d7d55d84e149c05145}{HWCS\_CP\_CONTENT\_TYPE0}});}
+\DoxyCodeLine{230     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{231       \mbox{\hyperlink{hwcserviceapi_8cpp_a2f92ba97618729b4c1de0eec71037f39}{HwcService\_Video\_EnableHDCPSession\_AllDisplays}}(hwcs,}
+\DoxyCodeLine{232                                                      \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142af0fc741639c5bd530c1d21db89198688}{HWCS\_CP\_CONTENT\_TYPE1}});}
+\DoxyCodeLine{233     \}}
+\DoxyCodeLine{234   \}}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236   \textcolor{keywordflow}{if} (disable\_hdcp\_for\_all\_display) \{}
+\DoxyCodeLine{237     aout << \textcolor{stringliteral}{"Disabling HDCP For All Displays. "} << endl;}
+\DoxyCodeLine{238     \mbox{\hyperlink{hwcserviceapi_8cpp_a7867ed6ec60cda914d3b52a4e026fb48}{HwcService\_Video\_DisableHDCPSession\_AllDisplays}}(hwcs);}
+\DoxyCodeLine{239   \}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241   \mbox{\hyperlink{hwcserviceapi_8cpp_a2d3ca18881c7bba975cf9897ed520061}{HwcService\_Disconnect}}(hwcs);}
+\DoxyCodeLine{242   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{243 \}}
+\end{DoxyCode}

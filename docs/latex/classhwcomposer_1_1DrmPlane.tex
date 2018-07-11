@@ -1,0 +1,928 @@
+\hypertarget{classhwcomposer_1_1DrmPlane}{}\section{hwcomposer\+:\+:Drm\+Plane Class Reference}
+\label{classhwcomposer_1_1DrmPlane}\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+
+
+{\ttfamily \#include $<$drmplane.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Drm\+Plane\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1DrmPlane}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmPlane_ae2208912c8f4a58e3fc769ed98bb2b58}{Drm\+Plane}} (uint32\+\_\+t plane\+\_\+id, uint32\+\_\+t possible\+\_\+crtcs)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a5830385ee2e49d18c8dc7abf7b1da8ab}{$\sim$\+Drm\+Plane}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_ae6062735cfb8f43881b9f25ad4e8e1a7}{Initialize}} (uint32\+\_\+t gpu\+\_\+fd, const std\+::vector$<$ uint32\+\_\+t $>$ \&formats)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a50a1d74a0acdd8c4b213733f387fa695}{Update\+Properties}} (drm\+Mode\+Atomic\+Req\+Ptr property\+\_\+set, uint32\+\_\+t crtc\+\_\+id, const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$layer, bool test\+\_\+commit=false) const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a8f904c14af7bfc4265640be4788d2096}{Set\+Native\+Fence}} (int32\+\_\+t fd)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a17dbc59adab79a264b50e8727a6ad281}{Set\+Buffer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer}{Overlay\+Buffer}} $>$ \&buffer)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a0efdb0b47954f95bb0ef0e99c2a3b697}{Disable}} (drm\+Mode\+Atomic\+Req\+Ptr property\+\_\+set)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a98c439ae5a59e4699183ad2ffed4e278}{Get\+Crtc\+Supported}} (uint32\+\_\+t pipe\+\_\+id) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_aeedfc2e6824d27a9dd754bf4ee27b274}{type}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_ae84fc513bfb1f3ee35715ff9a808f447}{id}} () const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_ad07df42def289d2dbbf9be4ad6748db8}{Validate\+Layer}} (const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$layer) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a50940fd94a65453bd22d20011581796e}{Is\+Supported\+Format}} (uint32\+\_\+t format) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_ac3feae2eaa4adfb5678a47c835c2c2af}{Is\+Supported\+Transform}} (uint32\+\_\+t transform) const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a061caae8c703189ae6d05dbe8b303f12}{Get\+Preferred\+Video\+Format}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a3bca39231ec7b099980474b279c58ce8}{Get\+Preferred\+Format}} () const override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a185538f3aca7f84830f75f23efe551d6}{Get\+Preferred\+Format\+Modifier}} () const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a6159712388e26258e14fcb3139d7cd19}{Black\+List\+Preferred\+Format\+Modifier}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a476d9d42a81eddb775bb285cc1c68cfb}{Preferred\+Format\+Modifier\+Validated}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_abc9ca4823dfd433aa45747b8596cc673}{Dump}} () const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_aed0ac04d949d6457dd638e121c3618d5}{Set\+In\+Use}} (bool in\+\_\+use) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_aeb8c1aecd933645e7e2743b149b06302}{In\+Use}} () const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a25b4218371d1c5984777b74553b554a4}{Is\+Universal}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a82a0274af9e3e94889e8df8dedbe3eea}{Is\+Supported\+Modifier}} (uint64\+\_\+t modifier, uint32\+\_\+t format)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 37 of file drmplane.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_ae2208912c8f4a58e3fc769ed98bb2b58}\label{classhwcomposer_1_1DrmPlane_ae2208912c8f4a58e3fc769ed98bb2b58}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Drm\+Plane@{Drm\+Plane}}
+\index{Drm\+Plane@{Drm\+Plane}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Drm\+Plane()}{DrmPlane()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Drm\+Plane\+::\+Drm\+Plane (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{plane\+\_\+id,  }\item[{uint32\+\_\+t}]{possible\+\_\+crtcs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77     : id\_(plane\_id),}
+\DoxyCodeLine{78       possible\_crtc\_mask\_(possible\_crtcs),}
+\DoxyCodeLine{79       type\_(0),}
+\DoxyCodeLine{80       last\_valid\_format\_(0),}
+\DoxyCodeLine{81       in\_use\_(\textcolor{keyword}{false}) \{}
+\DoxyCodeLine{82 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a5830385ee2e49d18c8dc7abf7b1da8ab}\label{classhwcomposer_1_1DrmPlane_a5830385ee2e49d18c8dc7abf7b1da8ab}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!````~Drm\+Plane@{$\sim$\+Drm\+Plane}}
+\index{````~Drm\+Plane@{$\sim$\+Drm\+Plane}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{$\sim$\+Drm\+Plane()}{~DrmPlane()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Drm\+Plane\+::$\sim$\+Drm\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                     \{}
+\DoxyCodeLine{85   \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a8f904c14af7bfc4265640be4788d2096}{SetNativeFence}}(-1);}
+\DoxyCodeLine{86 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a6159712388e26258e14fcb3139d7cd19}\label{classhwcomposer_1_1DrmPlane_a6159712388e26258e14fcb3139d7cd19}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Black\+List\+Preferred\+Format\+Modifier@{Black\+List\+Preferred\+Format\+Modifier}}
+\index{Black\+List\+Preferred\+Format\+Modifier@{Black\+List\+Preferred\+Format\+Modifier}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Black\+List\+Preferred\+Format\+Modifier()}{BlackListPreferredFormatModifier()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Plane\+::\+Black\+List\+Preferred\+Format\+Modifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for blacklisting preferred format modifier. This happens in case we failed to create FB for the buffer. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a397270389f37f6c706a639be5225e62e}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 370 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{370                                                 \{}
+\DoxyCodeLine{371   \textcolor{keywordflow}{if} (!prefered\_modifier\_succeeded\_)}
+\DoxyCodeLine{372     prefered\_modifier\_ = 0;}
+\DoxyCodeLine{373 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a0efdb0b47954f95bb0ef0e99c2a3b697}\label{classhwcomposer_1_1DrmPlane_a0efdb0b47954f95bb0ef0e99c2a3b697}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Disable@{Disable}}
+\index{Disable@{Disable}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+Disable (\begin{DoxyParamCaption}\item[{drm\+Mode\+Atomic\+Req\+Ptr}]{property\+\_\+set }\end{DoxyParamCaption})}
+
+
+
+Definition at line 379 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{379                                                        \{}
+\DoxyCodeLine{380   in\_use\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{381   \textcolor{keywordtype}{int} success =}
+\DoxyCodeLine{382       drmModeAtomicAddProperty(property\_set, id\_, crtc\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{383   success |= drmModeAtomicAddProperty(property\_set, id\_, fb\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{384   success |=}
+\DoxyCodeLine{385       drmModeAtomicAddProperty(property\_set, id\_, crtc\_x\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{386   success |=}
+\DoxyCodeLine{387       drmModeAtomicAddProperty(property\_set, id\_, crtc\_y\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{388   success |=}
+\DoxyCodeLine{389       drmModeAtomicAddProperty(property\_set, id\_, crtc\_w\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{390   success |=}
+\DoxyCodeLine{391       drmModeAtomicAddProperty(property\_set, id\_, crtc\_h\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{392   success |= drmModeAtomicAddProperty(property\_set, id\_, src\_x\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{393   success |= drmModeAtomicAddProperty(property\_set, id\_, src\_y\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{394   success |= drmModeAtomicAddProperty(property\_set, id\_, src\_w\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{395   success |= drmModeAtomicAddProperty(property\_set, id\_, src\_h\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{396 }
+\DoxyCodeLine{397   \textcolor{keywordflow}{if} (success) \{}
+\DoxyCodeLine{398     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Could not update properties for plane with id: \%d"}, id\_);}
+\DoxyCodeLine{399     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{400   \}}
+\DoxyCodeLine{401 }
+\DoxyCodeLine{402   \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a8f904c14af7bfc4265640be4788d2096}{SetNativeFence}}(-1);}
+\DoxyCodeLine{403   buffer\_.reset();}
+\DoxyCodeLine{404 }
+\DoxyCodeLine{405   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{406 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_abc9ca4823dfd433aa45747b8596cc673}\label{classhwcomposer_1_1DrmPlane_abc9ca4823dfd433aa45747b8596cc673}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Dump@{Dump}}
+\index{Dump@{Dump}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Plane\+::\+Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a3754165ab1101fba4229b842c7f14556}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 522 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{522                           \{}
+\DoxyCodeLine{523   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Plane Information Starts. -------------"});}
+\DoxyCodeLine{524   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Plane ID: \%d"}, id\_);}
+\DoxyCodeLine{525   \textcolor{keywordflow}{switch} (type\_) \{}
+\DoxyCodeLine{526     \textcolor{keywordflow}{case} DRM\_PLANE\_TYPE\_OVERLAY:}
+\DoxyCodeLine{527       \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Type: Overlay."});}
+\DoxyCodeLine{528       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{529     \textcolor{keywordflow}{case} DRM\_PLANE\_TYPE\_PRIMARY:}
+\DoxyCodeLine{530       \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Type: Primary."});}
+\DoxyCodeLine{531       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{532     \textcolor{keywordflow}{case} DRM\_PLANE\_TYPE\_CURSOR:}
+\DoxyCodeLine{533       \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Type: Cursor."});}
+\DoxyCodeLine{534       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{535     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{536       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Invalid plane type \%d"}, type\_);}
+\DoxyCodeLine{537   \}}
+\DoxyCodeLine{538 }
+\DoxyCodeLine{539   \textcolor{keywordflow}{for} (uint32\_t j = 0; j < supported\_formats\_.size(); j++)}
+\DoxyCodeLine{540     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Format: \%4.4s"}, (\textcolor{keywordtype}{char}*)\&supported\_formats\_[j]);}
+\DoxyCodeLine{541 }
+\DoxyCodeLine{542   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Enabled: \%d"}, in\_use\_);}
+\DoxyCodeLine{543 }
+\DoxyCodeLine{544   \textcolor{keywordflow}{if} (alpha\_prop\_.id != 0)}
+\DoxyCodeLine{545     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Alpha property is supported."});}
+\DoxyCodeLine{546 }
+\DoxyCodeLine{547   \textcolor{keywordflow}{if} (rotation\_prop\_.id != 0)}
+\DoxyCodeLine{548     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Rotation property is supported."});}
+\DoxyCodeLine{549 }
+\DoxyCodeLine{550   \textcolor{keywordflow}{if} (crtc\_prop\_.id != 0)}
+\DoxyCodeLine{551     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"CRTC\_ID property is supported."});}
+\DoxyCodeLine{552 }
+\DoxyCodeLine{553   \textcolor{keywordflow}{if} (fb\_prop\_.id != 0)}
+\DoxyCodeLine{554     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"FB\_ID property is supported."});}
+\DoxyCodeLine{555 }
+\DoxyCodeLine{556   \textcolor{keywordflow}{if} (crtc\_x\_prop\_.id != 0)}
+\DoxyCodeLine{557     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"CRTC\_X property is supported."});}
+\DoxyCodeLine{558 }
+\DoxyCodeLine{559   \textcolor{keywordflow}{if} (crtc\_y\_prop\_.id != 0)}
+\DoxyCodeLine{560     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"CRTC\_Y property is supported."});}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{562   \textcolor{keywordflow}{if} (crtc\_w\_prop\_.id != 0)}
+\DoxyCodeLine{563     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"CRTC\_W property is supported."});}
+\DoxyCodeLine{564 }
+\DoxyCodeLine{565   \textcolor{keywordflow}{if} (crtc\_h\_prop\_.id != 0)}
+\DoxyCodeLine{566     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"CRTC\_H property is supported."});}
+\DoxyCodeLine{567 }
+\DoxyCodeLine{568   \textcolor{keywordflow}{if} (src\_x\_prop\_.id != 0)}
+\DoxyCodeLine{569     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"SRC\_X property is supported."});}
+\DoxyCodeLine{570 }
+\DoxyCodeLine{571   \textcolor{keywordflow}{if} (src\_y\_prop\_.id != 0)}
+\DoxyCodeLine{572     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"SRC\_Y property is supported."});}
+\DoxyCodeLine{573 }
+\DoxyCodeLine{574   \textcolor{keywordflow}{if} (src\_w\_prop\_.id != 0)}
+\DoxyCodeLine{575     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"SRC\_W property is supported."});}
+\DoxyCodeLine{576 }
+\DoxyCodeLine{577   \textcolor{keywordflow}{if} (src\_h\_prop\_.id != 0)}
+\DoxyCodeLine{578     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"SRC\_H property is supported."});}
+\DoxyCodeLine{579 }
+\DoxyCodeLine{580   \textcolor{keywordflow}{if} (in\_fence\_fd\_prop\_.id != 0)}
+\DoxyCodeLine{581     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"IN\_FENCE\_FD is supported."});}
+\DoxyCodeLine{582 }
+\DoxyCodeLine{583   \textcolor{keywordflow}{if} (in\_formats\_prop\_.id != 0)}
+\DoxyCodeLine{584     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"IN\_FORMATS property is supported."});}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{586   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Preferred Video Format: \%4.4s"}, (\textcolor{keywordtype}{char}*)\&(prefered\_video\_format\_));}
+\DoxyCodeLine{587   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Preferred Video Format: \%4.4s"}, (\textcolor{keywordtype}{char}*)\&(prefered\_format\_));}
+\DoxyCodeLine{588 }
+\DoxyCodeLine{589   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Plane Information Ends. -------------"});}
+\DoxyCodeLine{590 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a98c439ae5a59e4699183ad2ffed4e278}\label{classhwcomposer_1_1DrmPlane_a98c439ae5a59e4699183ad2ffed4e278}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Get\+Crtc\+Supported@{Get\+Crtc\+Supported}}
+\index{Get\+Crtc\+Supported@{Get\+Crtc\+Supported}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Get\+Crtc\+Supported()}{GetCrtcSupported()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+Get\+Crtc\+Supported (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{pipe\+\_\+id }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 412 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{412                                                       \{}
+\DoxyCodeLine{413   \textcolor{keywordflow}{return} !!((1 << pipe\_id) \& possible\_crtc\_mask\_);}
+\DoxyCodeLine{414 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a3bca39231ec7b099980474b279c58ce8}\label{classhwcomposer_1_1DrmPlane_a3bca39231ec7b099980474b279c58ce8}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Get\+Preferred\+Format@{Get\+Preferred\+Format}}
+\index{Get\+Preferred\+Format@{Get\+Preferred\+Format}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Get\+Preferred\+Format()}{GetPreferredFormat()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Plane\+::\+Get\+Preferred\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for querying preferred format supported by this plane for non-\/media content. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a963d17ec10be62d13f35a0b4ced4e8e1}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 495 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{495                                             \{}
+\DoxyCodeLine{496   \textcolor{keywordflow}{return} prefered\_format\_;}
+\DoxyCodeLine{497 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a185538f3aca7f84830f75f23efe551d6}\label{classhwcomposer_1_1DrmPlane_a185538f3aca7f84830f75f23efe551d6}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Get\+Preferred\+Format\+Modifier@{Get\+Preferred\+Format\+Modifier}}
+\index{Get\+Preferred\+Format\+Modifier@{Get\+Preferred\+Format\+Modifier}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Get\+Preferred\+Format\+Modifier()}{GetPreferredFormatModifier()}}
+{\footnotesize\ttfamily uint64\+\_\+t hwcomposer\+::\+Drm\+Plane\+::\+Get\+Preferred\+Format\+Modifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for querying preferred modifier supported by this plane\textquotesingle{}s preferred format for non-\/media content. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_ad95d2bd823ccf74fe3deccad7352f672}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 499 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{499                                                     \{}
+\DoxyCodeLine{500   \textcolor{keywordflow}{return} prefered\_modifier\_;}
+\DoxyCodeLine{501 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a061caae8c703189ae6d05dbe8b303f12}\label{classhwcomposer_1_1DrmPlane_a061caae8c703189ae6d05dbe8b303f12}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Get\+Preferred\+Video\+Format@{Get\+Preferred\+Video\+Format}}
+\index{Get\+Preferred\+Video\+Format@{Get\+Preferred\+Video\+Format}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Get\+Preferred\+Video\+Format()}{GetPreferredVideoFormat()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Plane\+::\+Get\+Preferred\+Video\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for querying preferred Video format supported by this plane. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_aab8aae5944b1107e4efc9d0d79c43c40}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 491 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{491                                                  \{}
+\DoxyCodeLine{492   \textcolor{keywordflow}{return} prefered\_video\_format\_;}
+\DoxyCodeLine{493 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_ae84fc513bfb1f3ee35715ff9a808f447}\label{classhwcomposer_1_1DrmPlane_ae84fc513bfb1f3ee35715ff9a808f447}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!id@{id}}
+\index{id@{id}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Plane\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a0af461a6ac4beccb8ed21aec933b6eed}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 408 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{408                             \{}
+\DoxyCodeLine{409   \textcolor{keywordflow}{return} id\_;}
+\DoxyCodeLine{410 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_ae6062735cfb8f43881b9f25ad4e8e1a7}\label{classhwcomposer_1_1DrmPlane_ae6062735cfb8f43881b9f25ad4e8e1a7}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+Initialize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{formats }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                                               \{}
+\DoxyCodeLine{90   supported\_formats\_ = formats;}
+\DoxyCodeLine{91   uint32\_t total\_size = supported\_formats\_.size();}
+\DoxyCodeLine{92   \textcolor{keywordflow}{for} (uint32\_t j = 0; j < total\_size; j++) \{}
+\DoxyCodeLine{93     uint32\_t format = supported\_formats\_.at(j);}
+\DoxyCodeLine{94     \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacehwcomposer_a96195339fc55ee57f41cc4597a56746c}{IsSupportedMediaFormat}}(format)) \{}
+\DoxyCodeLine{95       prefered\_video\_format\_ = format;}
+\DoxyCodeLine{96       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98   \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100   \textcolor{keywordflow}{for} (uint32\_t j = 0; j < total\_size; j++) \{}
+\DoxyCodeLine{101     uint32\_t format = supported\_formats\_.at(j);}
+\DoxyCodeLine{102     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{103       \textcolor{keywordflow}{case} DRM\_FORMAT\_BGRA8888:}
+\DoxyCodeLine{104       \textcolor{keywordflow}{case} DRM\_FORMAT\_RGBA8888:}
+\DoxyCodeLine{105       \textcolor{keywordflow}{case} DRM\_FORMAT\_ABGR8888:}
+\DoxyCodeLine{106       \textcolor{keywordflow}{case} DRM\_FORMAT\_ARGB8888:}
+\DoxyCodeLine{107       \textcolor{keywordflow}{case} DRM\_FORMAT\_RGB888:}
+\DoxyCodeLine{108       \textcolor{keywordflow}{case} DRM\_FORMAT\_XRGB8888:}
+\DoxyCodeLine{109       \textcolor{keywordflow}{case} DRM\_FORMAT\_XBGR8888:}
+\DoxyCodeLine{110       \textcolor{keywordflow}{case} DRM\_FORMAT\_RGBX8888:}
+\DoxyCodeLine{111         prefered\_format\_ = format;}
+\DoxyCodeLine{112         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{114   \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116   \textcolor{keywordflow}{if} (type\_ == DRM\_PLANE\_TYPE\_PRIMARY) \{}
+\DoxyCodeLine{117     \textcolor{keywordflow}{if} (prefered\_format\_ != DRM\_FORMAT\_XBGR8888 \&\&}
+\DoxyCodeLine{118         \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a50940fd94a65453bd22d20011581796e}{IsSupportedFormat}}(DRM\_FORMAT\_XBGR8888)) \{}
+\DoxyCodeLine{119       prefered\_format\_ = DRM\_FORMAT\_XBGR8888;}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121   \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123   \textcolor{keywordflow}{if} (prefered\_video\_format\_ == 0) \{}
+\DoxyCodeLine{124     prefered\_video\_format\_ = prefered\_format\_;}
+\DoxyCodeLine{125   \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127   \mbox{\hyperlink{namespacehwcomposer_ace195c2e057b634efb3013a5a4413799}{ScopedDrmObjectPropertyPtr}} plane\_props(}
+\DoxyCodeLine{128       drmModeObjectGetProperties(gpu\_fd, id\_, DRM\_MODE\_OBJECT\_PLANE));}
+\DoxyCodeLine{129   \textcolor{keywordflow}{if} (!plane\_props) \{}
+\DoxyCodeLine{130     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Unable to get plane properties."});}
+\DoxyCodeLine{131     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{132   \}}
+\DoxyCodeLine{133   uint32\_t count\_props = plane\_props->count\_props;}
+\DoxyCodeLine{134   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < count\_props; i++) \{}
+\DoxyCodeLine{135     \mbox{\hyperlink{namespacehwcomposer_ae4038d517ff95af940c1f9cdf40e3834}{ScopedDrmPropertyPtr}} property(}
+\DoxyCodeLine{136         drmModeGetProperty(gpu\_fd, plane\_props->props[i]));}
+\DoxyCodeLine{137     \textcolor{keywordflow}{if} (property \&\& !strcmp(property->name, \textcolor{stringliteral}{"type"})) \{}
+\DoxyCodeLine{138       type\_ = plane\_props->prop\_values[i];}
+\DoxyCodeLine{139       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{140     \}}
+\DoxyCodeLine{141   \}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143   \textcolor{keywordtype}{bool} ret = crtc\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"CRTC\_ID"}, plane\_props);}
+\DoxyCodeLine{144   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{145     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147   ret = fb\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"FB\_ID"}, plane\_props);}
+\DoxyCodeLine{148   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{149     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151   ret = crtc\_x\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"CRTC\_X"}, plane\_props);}
+\DoxyCodeLine{152   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{153     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155   ret = crtc\_y\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"CRTC\_Y"}, plane\_props);}
+\DoxyCodeLine{156   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{157     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159   ret = crtc\_w\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"CRTC\_W"}, plane\_props);}
+\DoxyCodeLine{160   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{161     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163   ret = crtc\_h\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"CRTC\_H"}, plane\_props);}
+\DoxyCodeLine{164   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{165     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167   ret = src\_x\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"SRC\_X"}, plane\_props);}
+\DoxyCodeLine{168   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{169     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171   ret = src\_y\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"SRC\_Y"}, plane\_props);}
+\DoxyCodeLine{172   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{173     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175   ret = src\_w\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"SRC\_W"}, plane\_props);}
+\DoxyCodeLine{176   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{177     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179   ret = src\_h\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"SRC\_H"}, plane\_props);}
+\DoxyCodeLine{180   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{181     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183   ret = rotation\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"rotation"}, plane\_props, \&rotation\_);}
+\DoxyCodeLine{184   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{185     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Could not get rotation property"});}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187   ret = alpha\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"alpha"}, plane\_props);}
+\DoxyCodeLine{188   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{189     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Could not get alpha property"});}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191   ret = in\_fence\_fd\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"IN\_FENCE\_FD"}, plane\_props);}
+\DoxyCodeLine{192   \textcolor{keywordflow}{if} (!ret) \{}
+\DoxyCodeLine{193     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Could not get IN\_FENCE\_FD property"});}
+\DoxyCodeLine{194     in\_fence\_fd\_prop\_.id = 0;}
+\DoxyCodeLine{195   \}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197   \textcolor{comment}{// query and store supported modifiers for format, from in\_formats}}
+\DoxyCodeLine{198   \textcolor{comment}{// property}}
+\DoxyCodeLine{199   uint64\_t in\_formats\_prop\_value = 0;}
+\DoxyCodeLine{200   ret = in\_formats\_prop\_.Initialize(gpu\_fd, \textcolor{stringliteral}{"IN\_FORMATS"}, plane\_props, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},}
+\DoxyCodeLine{201                                     \&in\_formats\_prop\_value);}
+\DoxyCodeLine{202   \textcolor{keywordflow}{if} (!ret) \{}
+\DoxyCodeLine{203     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Could not get IN\_FORMATS property"});}
+\DoxyCodeLine{204   \}}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206   \textcolor{keywordflow}{if} (in\_formats\_prop\_value != 0) \{}
+\DoxyCodeLine{207     drmModePropertyBlobPtr blob =}
+\DoxyCodeLine{208         drmModeGetPropertyBlob(gpu\_fd, in\_formats\_prop\_value);}
+\DoxyCodeLine{209     \textcolor{keywordflow}{if} (blob == \textcolor{keyword}{nullptr} || blob->data == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{210       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Unable to get property data\(\backslash\)n"});}
+\DoxyCodeLine{211       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{212     \}}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214     \textcolor{keyword}{struct }drm\_format\_modifier\_blob* m =}
+\DoxyCodeLine{215         (\textcolor{keyword}{struct }drm\_format\_modifier\_blob*)(blob->data);}
+\DoxyCodeLine{216     \textcolor{keyword}{struct }drm\_format\_modifier* mod\_o =}
+\DoxyCodeLine{217         (\textcolor{keyword}{struct }drm\_format\_modifier*)(\textcolor{keywordtype}{void}*)(((\textcolor{keywordtype}{char}*)m) + m->modifiers\_offset);}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219     \textcolor{keywordtype}{bool} y\_tiled\_ccs\_supported = \textcolor{keyword}{false};}
+\DoxyCodeLine{220     \textcolor{keywordtype}{bool} y\_tiled\_yf\_ccs\_supported = \textcolor{keyword}{false};}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222     \textcolor{keywordflow}{for} (uint32\_t j = 0; j < total\_size; j++) \{}
+\DoxyCodeLine{223       uint32\_t format = supported\_formats\_.at(j);}
+\DoxyCodeLine{224       format\_mods modifiers\_obj;}
+\DoxyCodeLine{225       modifiers\_obj.format = format;}
+\DoxyCodeLine{226       uint32\_t format\_index = j;}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228       \textcolor{keyword}{struct }drm\_format\_modifier* mod = mod\_o;}
+\DoxyCodeLine{229       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (int)m->count\_modifiers; i++, mod++) \{}
+\DoxyCodeLine{230         \textcolor{keywordflow}{if} (mod->formats \& (1ULL << format\_index)) \{}
+\DoxyCodeLine{231           modifiers\_obj.mods.emplace\_back(mod->modifier);}
+\DoxyCodeLine{232           \textcolor{keywordflow}{if} (mod->modifier == I915\_FORMAT\_MOD\_Y\_TILED\_CCS) \{}
+\DoxyCodeLine{233             y\_tiled\_ccs\_supported = \textcolor{keyword}{true};}
+\DoxyCodeLine{234           \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (mod->modifier == I915\_FORMAT\_MOD\_Yf\_TILED\_CCS) \{}
+\DoxyCodeLine{235             y\_tiled\_yf\_ccs\_supported = \textcolor{keyword}{true};}
+\DoxyCodeLine{236           \}}
+\DoxyCodeLine{237         \}}
+\DoxyCodeLine{238       \}}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{240       \textcolor{keywordflow}{if} (modifiers\_obj.mods.size() == 0) \{}
+\DoxyCodeLine{241         modifiers\_obj.mods.emplace\_back(DRM\_FORMAT\_MOD\_NONE);}
+\DoxyCodeLine{242         prefered\_modifier\_ = DRM\_FORMAT\_MOD\_NONE;}
+\DoxyCodeLine{243       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{244         \textcolor{keywordflow}{if} (y\_tiled\_ccs\_supported) \{}
+\DoxyCodeLine{245           prefered\_modifier\_ = I915\_FORMAT\_MOD\_Y\_TILED\_CCS;}
+\DoxyCodeLine{246         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (y\_tiled\_yf\_ccs\_supported) \{}
+\DoxyCodeLine{247           prefered\_modifier\_ = I915\_FORMAT\_MOD\_Yf\_TILED\_CCS;}
+\DoxyCodeLine{248         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{249           prefered\_modifier\_ = modifiers\_obj.mods.at(0);}
+\DoxyCodeLine{250         \}}
+\DoxyCodeLine{251       \}}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253       formats\_modifiers\_.emplace\_back(modifiers\_obj);}
+\DoxyCodeLine{254     \}}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256     drmModeFreePropertyBlob(blob);}
+\DoxyCodeLine{257   \}}
+\DoxyCodeLine{258   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{259 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_aeb8c1aecd933645e7e2743b149b06302}\label{classhwcomposer_1_1DrmPlane_aeb8c1aecd933645e7e2743b149b06302}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!In\+Use@{In\+Use}}
+\index{In\+Use@{In\+Use}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{In\+Use()}{InUse()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+In\+Use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a8461ec31b18379cc371cd0656ca0e615}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 79 of file drmplane.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                               \{}
+\DoxyCodeLine{80     \textcolor{keywordflow}{return} in\_use\_;}
+\DoxyCodeLine{81   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a50940fd94a65453bd22d20011581796e}\label{classhwcomposer_1_1DrmPlane_a50940fd94a65453bd22d20011581796e}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Is\+Supported\+Format@{Is\+Supported\+Format}}
+\index{Is\+Supported\+Format@{Is\+Supported\+Format}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Is\+Supported\+Format()}{IsSupportedFormat()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+Is\+Supported\+Format (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a057c78a4a3657a04c5117ee0f1dba8be}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 455 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{455                                                 \{}
+\DoxyCodeLine{456   \textcolor{keywordflow}{if} (last\_valid\_format\_ == format)}
+\DoxyCodeLine{457     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{458 }
+\DoxyCodeLine{459   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& element : supported\_formats\_) \{}
+\DoxyCodeLine{460     \textcolor{keywordflow}{if} (element == format) \{}
+\DoxyCodeLine{461       last\_valid\_format\_ = format;}
+\DoxyCodeLine{462       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{463     \}}
+\DoxyCodeLine{464   \}}
+\DoxyCodeLine{465 }
+\DoxyCodeLine{466   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{467 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a82a0274af9e3e94889e8df8dedbe3eea}\label{classhwcomposer_1_1DrmPlane_a82a0274af9e3e94889e8df8dedbe3eea}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Is\+Supported\+Modifier@{Is\+Supported\+Modifier}}
+\index{Is\+Supported\+Modifier@{Is\+Supported\+Modifier}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Is\+Supported\+Modifier()}{IsSupportedModifier()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+Is\+Supported\+Modifier (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{modifier,  }\item[{uint32\+\_\+t}]{format }\end{DoxyParamCaption})}
+
+
+
+Definition at line 507 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{507                                                                      \{}
+\DoxyCodeLine{508   uint32\_t count = formats\_modifiers\_.size();}
+\DoxyCodeLine{509   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < count; i++) \{}
+\DoxyCodeLine{510     \textcolor{keyword}{const} format\_mods\& obj = formats\_modifiers\_.at(i);}
+\DoxyCodeLine{511     \textcolor{keywordflow}{if} (obj.format == format) \{}
+\DoxyCodeLine{512       std::vector<uint64\_t>::const\_iterator it;}
+\DoxyCodeLine{513       it = std::find(obj.mods.begin(), obj.mods.end(), modifier);}
+\DoxyCodeLine{514       \textcolor{keywordflow}{if} (it != obj.mods.end()) \{}
+\DoxyCodeLine{515         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{516       \}}
+\DoxyCodeLine{517     \}}
+\DoxyCodeLine{518   \}}
+\DoxyCodeLine{519   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{520 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_ac3feae2eaa4adfb5678a47c835c2c2af}\label{classhwcomposer_1_1DrmPlane_ac3feae2eaa4adfb5678a47c835c2c2af}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Is\+Supported\+Transform@{Is\+Supported\+Transform}}
+\index{Is\+Supported\+Transform@{Is\+Supported\+Transform}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Is\+Supported\+Transform()}{IsSupportedTransform()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+Is\+Supported\+Transform (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{transform }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for querying if transform is supported by this plane. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_ade9032b0c8991b0e79d321e946c8f625}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 469 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{469                                                             \{}
+\DoxyCodeLine{470   \textcolor{keywordflow}{if} (transform \& kTransform90) \{}
+\DoxyCodeLine{471     \textcolor{keywordflow}{if} (!(rotation\_ \& \mbox{\hyperlink{alios_2platformdefines_8h_a954a6976fc4d6ef96dac7e27cce71952}{DRM\_MODE\_ROTATE\_90}})) \{}
+\DoxyCodeLine{472       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{473     \}}
+\DoxyCodeLine{474   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform \& kTransform180) \{}
+\DoxyCodeLine{475     \textcolor{keywordflow}{if} (!(rotation\_ \& \mbox{\hyperlink{alios_2platformdefines_8h_a019c4f0d3d2d5a68b42619f75086faad}{DRM\_MODE\_ROTATE\_180}})) \{}
+\DoxyCodeLine{476       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{477     \}}
+\DoxyCodeLine{478   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform \& kTransform270) \{}
+\DoxyCodeLine{479     \textcolor{keywordflow}{if} (!(rotation\_ \& \mbox{\hyperlink{alios_2platformdefines_8h_abcad06812f0613349db81e97b2c2ddc4}{DRM\_MODE\_ROTATE\_270}})) \{}
+\DoxyCodeLine{480       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{481     \}}
+\DoxyCodeLine{482   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{483     \textcolor{keywordflow}{if} (!(rotation\_ \& \mbox{\hyperlink{alios_2platformdefines_8h_ac7f4f38deaf02263903d4391e529bfb4}{DRM\_MODE\_ROTATE\_0}})) \{}
+\DoxyCodeLine{484       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{485     \}}
+\DoxyCodeLine{486   \}}
+\DoxyCodeLine{487 }
+\DoxyCodeLine{488   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{489 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a25b4218371d1c5984777b74553b554a4}\label{classhwcomposer_1_1DrmPlane_a25b4218371d1c5984777b74553b554a4}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Is\+Universal@{Is\+Universal}}
+\index{Is\+Universal@{Is\+Universal}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Is\+Universal()}{IsUniversal()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+Is\+Universal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for querying if this plane can support content other than cursor or can be used only for cursor. Should return false if this plane cannot be used for anything else than cursor. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a7b374ba9e799f7d0b53afbd939961c51}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 83 of file drmplane.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                               \{}
+\DoxyCodeLine{84     \textcolor{keywordflow}{return} !(type\_ == DRM\_PLANE\_TYPE\_CURSOR);}
+\DoxyCodeLine{85   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a476d9d42a81eddb775bb285cc1c68cfb}\label{classhwcomposer_1_1DrmPlane_a476d9d42a81eddb775bb285cc1c68cfb}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Preferred\+Format\+Modifier\+Validated@{Preferred\+Format\+Modifier\+Validated}}
+\index{Preferred\+Format\+Modifier\+Validated@{Preferred\+Format\+Modifier\+Validated}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Preferred\+Format\+Modifier\+Validated()}{PreferredFormatModifierValidated()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Plane\+::\+Preferred\+Format\+Modifier\+Validated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for informing Display Plane that preferred format modifier has been validated to work by \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager}{Display\+Plane\+Manager}}. If this is not called before Black\+List\+Preferred\+Format\+Modifier than Preferred\+Format\+Modifier should be set to 0. 
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a8d2d4175bec7646f1f4216d3488bb2f6}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 375 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{375                                                 \{}
+\DoxyCodeLine{376   prefered\_modifier\_succeeded\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{377 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a17dbc59adab79a264b50e8727a6ad281}\label{classhwcomposer_1_1DrmPlane_a17dbc59adab79a264b50e8727a6ad281}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Set\+Buffer@{Set\+Buffer}}
+\index{Set\+Buffer@{Set\+Buffer}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Set\+Buffer()}{SetBuffer()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Plane\+::\+Set\+Buffer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer}{Overlay\+Buffer}} $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 366 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{366                                                              \{}
+\DoxyCodeLine{367   buffer\_ = buffer;}
+\DoxyCodeLine{368 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_aed0ac04d949d6457dd638e121c3618d5}\label{classhwcomposer_1_1DrmPlane_aed0ac04d949d6457dd638e121c3618d5}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Set\+In\+Use@{Set\+In\+Use}}
+\index{Set\+In\+Use@{Set\+In\+Use}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Set\+In\+Use()}{SetInUse()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Plane\+::\+Set\+In\+Use (\begin{DoxyParamCaption}\item[{bool}]{in\+\_\+use }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a6f74f9f29977ae00d534f2488505d7d7}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 503 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{503                                    \{}
+\DoxyCodeLine{504   in\_use\_ = in\_use;}
+\DoxyCodeLine{505 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a8f904c14af7bfc4265640be4788d2096}\label{classhwcomposer_1_1DrmPlane_a8f904c14af7bfc4265640be4788d2096}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Set\+Native\+Fence@{Set\+Native\+Fence}}
+\index{Set\+Native\+Fence@{Set\+Native\+Fence}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Set\+Native\+Fence()}{SetNativeFence()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Plane\+::\+Set\+Native\+Fence (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 357 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{357                                         \{}
+\DoxyCodeLine{358   \textcolor{comment}{// Release any existing fence.}}
+\DoxyCodeLine{359   \textcolor{keywordflow}{if} (kms\_fence\_ > 0) \{}
+\DoxyCodeLine{360     close(kms\_fence\_);}
+\DoxyCodeLine{361   \}}
+\DoxyCodeLine{362 }
+\DoxyCodeLine{363   kms\_fence\_ = fd;}
+\DoxyCodeLine{364 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_aeedfc2e6824d27a9dd754bf4ee27b274}\label{classhwcomposer_1_1DrmPlane_aeedfc2e6824d27a9dd754bf4ee27b274}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!type@{type}}
+\index{type@{type}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Drm\+Plane\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 416 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{416                               \{}
+\DoxyCodeLine{417   \textcolor{keywordflow}{return} type\_;}
+\DoxyCodeLine{418 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_a50a1d74a0acdd8c4b213733f387fa695}\label{classhwcomposer_1_1DrmPlane_a50a1d74a0acdd8c4b213733f387fa695}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Update\+Properties@{Update\+Properties}}
+\index{Update\+Properties@{Update\+Properties}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Update\+Properties()}{UpdateProperties()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+Update\+Properties (\begin{DoxyParamCaption}\item[{drm\+Mode\+Atomic\+Req\+Ptr}]{property\+\_\+set,  }\item[{uint32\+\_\+t}]{crtc\+\_\+id,  }\item[{const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{layer,  }\item[{bool}]{test\+\_\+commit = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 261 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{263                                                         \{}
+\DoxyCodeLine{264   uint64\_t alpha = 0xFF;}
+\DoxyCodeLine{265   OverlayBuffer* buffer = layer->GetBuffer();}
+\DoxyCodeLine{266   \textcolor{keyword}{const} HwcRect<int>\& display\_frame = layer->GetDisplayFrame();}
+\DoxyCodeLine{267   \textcolor{keyword}{const} HwcRect<float>\& source\_crop = layer->GetSourceCrop();}
+\DoxyCodeLine{268   \textcolor{keywordtype}{int} fence = kms\_fence\_;}
+\DoxyCodeLine{269   \textcolor{keywordflow}{if} (test\_commit) \{}
+\DoxyCodeLine{270     fence = layer->GetAcquireFence();}
+\DoxyCodeLine{271   \}}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273   \textcolor{keywordflow}{if} (layer->GetBlending() == HWCBlending::kBlendingPremult)}
+\DoxyCodeLine{274     alpha = layer->GetAlpha();}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276   \mbox{\hyperlink{hwctrace_8h_a6dea43d052a49723fcc708e2f2c84148}{IDISPLAYMANAGERTRACE}}(\textcolor{stringliteral}{"buffer->GetFb() ---------------------- STARTS \%d"},}
+\DoxyCodeLine{277                        buffer->GetFb());}
+\DoxyCodeLine{278   \textcolor{keywordtype}{int} success =}
+\DoxyCodeLine{279       drmModeAtomicAddProperty(property\_set, id\_, crtc\_prop\_.id, crtc\_id) < 0;}
+\DoxyCodeLine{280   success |= drmModeAtomicAddProperty(property\_set, id\_, fb\_prop\_.id,}
+\DoxyCodeLine{281                                       buffer->GetFb()) < 0;}
+\DoxyCodeLine{282   success |= drmModeAtomicAddProperty(property\_set, id\_, crtc\_x\_prop\_.id,}
+\DoxyCodeLine{283                                       display\_frame.left) < 0;}
+\DoxyCodeLine{284   success |= drmModeAtomicAddProperty(property\_set, id\_, crtc\_y\_prop\_.id,}
+\DoxyCodeLine{285                                       display\_frame.top) < 0;}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287   \textcolor{keywordflow}{if} (layer->IsCursorLayer()) \{}
+\DoxyCodeLine{288     success |= drmModeAtomicAddProperty(property\_set, id\_, crtc\_w\_prop\_.id,}
+\DoxyCodeLine{289                                         buffer->GetWidth()) < 0;}
+\DoxyCodeLine{290     success |= drmModeAtomicAddProperty(property\_set, id\_, crtc\_h\_prop\_.id,}
+\DoxyCodeLine{291                                         buffer->GetHeight()) < 0;}
+\DoxyCodeLine{292     success |=}
+\DoxyCodeLine{293         drmModeAtomicAddProperty(property\_set, id\_, src\_x\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{294     success |=}
+\DoxyCodeLine{295         drmModeAtomicAddProperty(property\_set, id\_, src\_y\_prop\_.id, 0) < 0;}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297     success |= drmModeAtomicAddProperty(property\_set, id\_, src\_w\_prop\_.id,}
+\DoxyCodeLine{298                                         buffer->GetWidth() << 16) < 0;}
+\DoxyCodeLine{299     success |= drmModeAtomicAddProperty(property\_set, id\_, src\_h\_prop\_.id,}
+\DoxyCodeLine{300                                         buffer->GetHeight() << 16) < 0;}
+\DoxyCodeLine{301   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{302     success |= drmModeAtomicAddProperty(property\_set, id\_, crtc\_w\_prop\_.id,}
+\DoxyCodeLine{303                                         layer->GetDisplayFrameWidth()) < 0;}
+\DoxyCodeLine{304     success |= drmModeAtomicAddProperty(property\_set, id\_, crtc\_h\_prop\_.id,}
+\DoxyCodeLine{305                                         layer->GetDisplayFrameHeight()) < 0;}
+\DoxyCodeLine{306     success |= drmModeAtomicAddProperty(}
+\DoxyCodeLine{307                    property\_set, id\_, src\_x\_prop\_.id,}
+\DoxyCodeLine{308                    static\_cast<int>(ceilf(source\_crop.left)) << 16) < 0;}
+\DoxyCodeLine{309     success |= drmModeAtomicAddProperty(}
+\DoxyCodeLine{310                    property\_set, id\_, src\_y\_prop\_.id,}
+\DoxyCodeLine{311                    static\_cast<int>(ceilf((source\_crop.top))) << 16) < 0;}
+\DoxyCodeLine{312     success |= drmModeAtomicAddProperty(property\_set, id\_, src\_w\_prop\_.id,}
+\DoxyCodeLine{313                                         layer->GetSourceCropWidth() << 16) < 0;}
+\DoxyCodeLine{314     success |= drmModeAtomicAddProperty(property\_set, id\_, src\_h\_prop\_.id,}
+\DoxyCodeLine{315                                         layer->GetSourceCropHeight() << 16) < 0;}
+\DoxyCodeLine{316   \}}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{318   \textcolor{keywordflow}{if} (rotation\_prop\_.id) \{}
+\DoxyCodeLine{319     uint32\_t rotation = 0;}
+\DoxyCodeLine{320     uint32\_t transform = layer->GetPlaneTransform();}
+\DoxyCodeLine{321     \textcolor{keywordflow}{if} (transform \& kTransform90) \{}
+\DoxyCodeLine{322       rotation |= \mbox{\hyperlink{alios_2platformdefines_8h_a954a6976fc4d6ef96dac7e27cce71952}{DRM\_MODE\_ROTATE\_90}};}
+\DoxyCodeLine{323       \textcolor{keywordflow}{if} (transform \& kReflectX)}
+\DoxyCodeLine{324         rotation |= \mbox{\hyperlink{alios_2platformdefines_8h_a3b51e7a82789b666caa9102d18a8b976}{DRM\_MODE\_REFLECT\_X}};}
+\DoxyCodeLine{325       \textcolor{keywordflow}{if} (transform \& kReflectY)}
+\DoxyCodeLine{326         rotation |= \mbox{\hyperlink{alios_2platformdefines_8h_a68aa23551c218c80b4a593d81a2fa403}{DRM\_MODE\_REFLECT\_Y}};}
+\DoxyCodeLine{327     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform \& kTransform180)}
+\DoxyCodeLine{328       rotation |= \mbox{\hyperlink{alios_2platformdefines_8h_a019c4f0d3d2d5a68b42619f75086faad}{DRM\_MODE\_ROTATE\_180}};}
+\DoxyCodeLine{329     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform \& kTransform270)}
+\DoxyCodeLine{330       rotation |= \mbox{\hyperlink{alios_2platformdefines_8h_abcad06812f0613349db81e97b2c2ddc4}{DRM\_MODE\_ROTATE\_270}};}
+\DoxyCodeLine{331     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{332       rotation |= \mbox{\hyperlink{alios_2platformdefines_8h_ac7f4f38deaf02263903d4391e529bfb4}{DRM\_MODE\_ROTATE\_0}};}
+\DoxyCodeLine{333 }
+\DoxyCodeLine{334     success = drmModeAtomicAddProperty(property\_set, id\_, rotation\_prop\_.id,}
+\DoxyCodeLine{335                                        rotation) < 0;}
+\DoxyCodeLine{336   \}}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338   \textcolor{keywordflow}{if} (alpha\_prop\_.id) \{}
+\DoxyCodeLine{339     success =}
+\DoxyCodeLine{340         drmModeAtomicAddProperty(property\_set, id\_, alpha\_prop\_.id, alpha) < 0;}
+\DoxyCodeLine{341   \}}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343   \textcolor{keywordflow}{if} (fence > 0 \&\& in\_fence\_fd\_prop\_.id) \{}
+\DoxyCodeLine{344     success = drmModeAtomicAddProperty(property\_set, id\_, in\_fence\_fd\_prop\_.id,}
+\DoxyCodeLine{345                                        fence) < 0;}
+\DoxyCodeLine{346   \}}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348   \textcolor{keywordflow}{if} (success) \{}
+\DoxyCodeLine{349     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Could not update properties for plane with id: \%d"}, id\_);}
+\DoxyCodeLine{350     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{351   \}}
+\DoxyCodeLine{352   \mbox{\hyperlink{hwctrace_8h_a6dea43d052a49723fcc708e2f2c84148}{IDISPLAYMANAGERTRACE}}(\textcolor{stringliteral}{"buffer->GetFb() ---------------------- ENDS\%d"},}
+\DoxyCodeLine{353                        buffer->GetFb());}
+\DoxyCodeLine{354   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{355 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DrmPlane_ad07df42def289d2dbbf9be4ad6748db8}\label{classhwcomposer_1_1DrmPlane_ad07df42def289d2dbbf9be4ad6748db8}} 
+\index{hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}!Validate\+Layer@{Validate\+Layer}}
+\index{Validate\+Layer@{Validate\+Layer}!hwcomposer\+::\+Drm\+Plane@{hwcomposer\+::\+Drm\+Plane}}
+\subsubsection{\texorpdfstring{Validate\+Layer()}{ValidateLayer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Drm\+Plane\+::\+Validate\+Layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{layer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a138f43531c6320ad6622ea48ab86df13}{hwcomposer\+::\+Display\+Plane}}.
+
+
+
+Definition at line 420 of file drmplane.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{420                                                       \{}
+\DoxyCodeLine{421   uint64\_t alpha = 0xFF;}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{423   \textcolor{keywordflow}{if} (layer->GetBlending() == HWCBlending::kBlendingPremult)}
+\DoxyCodeLine{424     alpha = layer->GetAlpha();}
+\DoxyCodeLine{425 }
+\DoxyCodeLine{426   \textcolor{keywordflow}{if} (type\_ == DRM\_PLANE\_TYPE\_OVERLAY \&\& (alpha != 0 \&\& alpha != 0xFF) \&\&}
+\DoxyCodeLine{427       alpha\_prop\_.id == 0) \{}
+\DoxyCodeLine{428     \mbox{\hyperlink{hwctrace_8h_a6dea43d052a49723fcc708e2f2c84148}{IDISPLAYMANAGERTRACE}}(}
+\DoxyCodeLine{429         \textcolor{stringliteral}{"Alpha property not supported, Cannot composite layer using Overlay."});}
+\DoxyCodeLine{430     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{431   \}}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{433   \textcolor{keywordtype}{bool} zero\_rotation = \textcolor{keyword}{false};}
+\DoxyCodeLine{434   uint32\_t transform = layer->GetPlaneTransform();}
+\DoxyCodeLine{435   \textcolor{keywordflow}{if} (transform == kIdentity) \{}
+\DoxyCodeLine{436     zero\_rotation = \textcolor{keyword}{true};}
+\DoxyCodeLine{437   \}}
+\DoxyCodeLine{438 }
+\DoxyCodeLine{439   \textcolor{keywordflow}{if} (!zero\_rotation \&\& rotation\_prop\_.id == 0) \{}
+\DoxyCodeLine{440     \mbox{\hyperlink{hwctrace_8h_a6dea43d052a49723fcc708e2f2c84148}{IDISPLAYMANAGERTRACE}}(}
+\DoxyCodeLine{441         \textcolor{stringliteral}{"Rotation property not supported, Cannot composite layer using "}}
+\DoxyCodeLine{442         \textcolor{stringliteral}{"Overlay."});}
+\DoxyCodeLine{443     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{444   \}}
+\DoxyCodeLine{445 }
+\DoxyCodeLine{446   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a50940fd94a65453bd22d20011581796e}{IsSupportedFormat}}(layer->GetBuffer()->GetFormat())) \{}
+\DoxyCodeLine{447     \mbox{\hyperlink{hwctrace_8h_a6dea43d052a49723fcc708e2f2c84148}{IDISPLAYMANAGERTRACE}}(}
+\DoxyCodeLine{448         \textcolor{stringliteral}{"Layer cannot be supported as format is not supported."});}
+\DoxyCodeLine{449     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{450   \}}
+\DoxyCodeLine{451 }
+\DoxyCodeLine{452   \textcolor{keywordflow}{return} \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_ac3feae2eaa4adfb5678a47c835c2c2af}{IsSupportedTransform}}(transform);}
+\DoxyCodeLine{453 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmplane_8h}{drmplane.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmplane_8cpp}{drmplane.\+cpp}}\end{DoxyCompactItemize}

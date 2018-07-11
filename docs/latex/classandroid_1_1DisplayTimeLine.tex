@@ -1,0 +1,99 @@
+\hypertarget{classandroid_1_1DisplayTimeLine}{}\section{android\+:\+:Display\+Time\+Line Class Reference}
+\label{classandroid_1_1DisplayTimeLine}\index{android\+::\+Display\+Time\+Line@{android\+::\+Display\+Time\+Line}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classandroid_1_1DisplayTimeLine_a71a4ce575620d5535dd336add3e1acdc}{Init}} ()
+\item 
+\mbox{\hyperlink{classandroid_1_1DisplayTimeLine_aee213d6965ebb6dd13f9c3765ba43aae}{$\sim$\+Display\+Time\+Line}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{classandroid_1_1DisplayTimeLine_a536fff91c0116195b9ee7d1e58538d52}{Increment\+Time\+Line}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 39 of file iahwc1.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classandroid_1_1DisplayTimeLine_aee213d6965ebb6dd13f9c3765ba43aae}\label{classandroid_1_1DisplayTimeLine_aee213d6965ebb6dd13f9c3765ba43aae}} 
+\index{android\+::\+Display\+Time\+Line@{android\+::\+Display\+Time\+Line}!````~Display\+Time\+Line@{$\sim$\+Display\+Time\+Line}}
+\index{````~Display\+Time\+Line@{$\sim$\+Display\+Time\+Line}!android\+::\+Display\+Time\+Line@{android\+::\+Display\+Time\+Line}}
+\subsubsection{\texorpdfstring{$\sim$\+Display\+Time\+Line()}{~DisplayTimeLine()}}
+{\footnotesize\ttfamily android\+::\+Display\+Time\+Line\+::$\sim$\+Display\+Time\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 49 of file iahwc1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                      \{}
+\DoxyCodeLine{50     \textcolor{keywordflow}{if} (timeline\_fd\_ > 0) \{}
+\DoxyCodeLine{51       close(timeline\_fd\_);}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classandroid_1_1DisplayTimeLine_a536fff91c0116195b9ee7d1e58538d52}\label{classandroid_1_1DisplayTimeLine_a536fff91c0116195b9ee7d1e58538d52}} 
+\index{android\+::\+Display\+Time\+Line@{android\+::\+Display\+Time\+Line}!Increment\+Time\+Line@{Increment\+Time\+Line}}
+\index{Increment\+Time\+Line@{Increment\+Time\+Line}!android\+::\+Display\+Time\+Line@{android\+::\+Display\+Time\+Line}}
+\subsubsection{\texorpdfstring{Increment\+Time\+Line()}{IncrementTimeLine()}}
+{\footnotesize\ttfamily int32\+\_\+t android\+::\+Display\+Time\+Line\+::\+Increment\+Time\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 55 of file iahwc1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                               \{}
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} ret =}
+\DoxyCodeLine{57         sw\_sync\_fence\_create(timeline\_fd\_, \textcolor{stringliteral}{"display fence"}, timeline\_pt\_ + 1);}
+\DoxyCodeLine{58     \textcolor{keywordflow}{if} (ret < 0) \{}
+\DoxyCodeLine{59       ALOGE(\textcolor{stringliteral}{"Failed to create display fence \%d \%d"}, ret, timeline\_fd\_);}
+\DoxyCodeLine{60       \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     int32\_t ret\_fd(ret);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     ret = sw\_sync\_timeline\_inc(timeline\_fd\_, 1);}
+\DoxyCodeLine{66     \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{67       ALOGE(\textcolor{stringliteral}{"Failed to increment display sync timeline \%d"}, ret);}
+\DoxyCodeLine{68       \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     ++timeline\_pt\_;}
+\DoxyCodeLine{72     \textcolor{keywordflow}{return} ret\_fd;}
+\DoxyCodeLine{73   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1DisplayTimeLine_a71a4ce575620d5535dd336add3e1acdc}\label{classandroid_1_1DisplayTimeLine_a71a4ce575620d5535dd336add3e1acdc}} 
+\index{android\+::\+Display\+Time\+Line@{android\+::\+Display\+Time\+Line}!Init@{Init}}
+\index{Init@{Init}!android\+::\+Display\+Time\+Line@{android\+::\+Display\+Time\+Line}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily int android\+::\+Display\+Time\+Line\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 41 of file iahwc1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41              \{}
+\DoxyCodeLine{42     timeline\_fd\_ = open(\textcolor{stringliteral}{"/dev/sw\_sync"}, O\_RDWR);}
+\DoxyCodeLine{43     \textcolor{keywordflow}{if} (timeline\_fd\_ < 0)}
+\DoxyCodeLine{44       \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{47   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/android/\mbox{\hyperlink{iahwc1_8cpp}{iahwc1.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,101 @@
+\hypertarget{classhwcomposer_1_1BnService}{}\section{hwcomposer\+:\+:Bn\+Service Class Reference}
+\label{classhwcomposer_1_1BnService}\index{hwcomposer\+::\+Bn\+Service@{hwcomposer\+::\+Bn\+Service}}
+
+
+{\ttfamily \#include $<$iservice.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Bn\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classhwcomposer_1_1BnService}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1BnService_a75485c6ee8427b5128ebe08d42240e14}{on\+Transact}} (uint32\+\_\+t, const Parcel \&, Parcel $\ast$, uint32\+\_\+t) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 49 of file iservice.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1BnService_a75485c6ee8427b5128ebe08d42240e14}\label{classhwcomposer_1_1BnService_a75485c6ee8427b5128ebe08d42240e14}} 
+\index{hwcomposer\+::\+Bn\+Service@{hwcomposer\+::\+Bn\+Service}!on\+Transact@{on\+Transact}}
+\index{on\+Transact@{on\+Transact}!hwcomposer\+::\+Bn\+Service@{hwcomposer\+::\+Bn\+Service}}
+\subsubsection{\texorpdfstring{on\+Transact()}{onTransact()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+Bn\+Service\+::on\+Transact (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{code,  }\item[{const Parcel \&}]{data,  }\item[{Parcel $\ast$}]{reply,  }\item[{uint32\+\_\+t}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 116 of file iservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                                                \{}
+\DoxyCodeLine{118   \textcolor{keywordflow}{switch} (code) \{}
+\DoxyCodeLine{119     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319ac29d8afa3ded86d47e7879f814b61f0d}{BpService::GET\_HWC\_VERSION}}: \{}
+\DoxyCodeLine{120       CHECK\_INTERFACE(IService, data, reply);}
+\DoxyCodeLine{121       reply->writeString8(GetHwcVersion());}
+\DoxyCodeLine{122       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{123     \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8f322cc1308b770e9cd5056d9dfefaf3}{BpService::SET\_OPTION}}: \{}
+\DoxyCodeLine{126       CHECK\_INTERFACE(IService, data, reply);}
+\DoxyCodeLine{127       String16 option = data.readString16();}
+\DoxyCodeLine{128       String16 optionValue = data.readString16();}
+\DoxyCodeLine{129       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = SetOption(String8(option), String8(optionValue));}
+\DoxyCodeLine{130       reply->writeInt32(ret);}
+\DoxyCodeLine{131       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{132     \}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a117fba2a971fa7318d8ef74f7a84105c}{BpService::DUMP\_OPTIONS}}: \{}
+\DoxyCodeLine{135       CHECK\_INTERFACE(IService, data, reply);}
+\DoxyCodeLine{136       DumpOptions();}
+\DoxyCodeLine{137       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{138     \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aa6f70e3efcf110f66a046bf4d49ee999}{BpService::DISABLE\_LOG\_TO\_LOGCAT}}: \{}
+\DoxyCodeLine{141       CHECK\_INTERFACE(IService, data, reply);}
+\DoxyCodeLine{142       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = EnableLogviewToLogcat(\textcolor{keyword}{false});}
+\DoxyCodeLine{143       reply->writeInt32(ret);}
+\DoxyCodeLine{144       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{145     \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a8ec23523cde1ace78656435c40d75ca6}{BpService::ENABLE\_LOG\_TO\_LOGCAT}}: \{}
+\DoxyCodeLine{148       CHECK\_INTERFACE(IService, data, reply);}
+\DoxyCodeLine{149       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = EnableLogviewToLogcat();}
+\DoxyCodeLine{150       reply->writeInt32(ret);}
+\DoxyCodeLine{151       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{152     \}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319aba1101f98d0ae4dba7ae06b05fa7ecf6}{BpService::TRANSACT\_GET\_DIAGNOSTIC}}: \{}
+\DoxyCodeLine{155       CHECK\_INTERFACE(IService, data, reply);}
+\DoxyCodeLine{156       sp<IBinder> b = IInterface::asBinder(this->GetDiagnostic());}
+\DoxyCodeLine{157       reply->writeStrongBinder(b);}
+\DoxyCodeLine{158       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{159     \}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpService_a688b4b1338923222d225a99d16e22319a88c048d451c725f7549727f0eb25bd11}{BpService::TRANSACT\_GET\_CONTROLS}}: \{}
+\DoxyCodeLine{162       CHECK\_INTERFACE(IService, data, reply);}
+\DoxyCodeLine{163       sp<IBinder> b = IInterface::asBinder(this->GetControls());}
+\DoxyCodeLine{164       reply->writeStrongBinder(b);}
+\DoxyCodeLine{165       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{166     \}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{169       \textcolor{keywordflow}{return} BBinder::onTransact(code, data, reply, flags);}
+\DoxyCodeLine{170   \}}
+\DoxyCodeLine{171 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/android/libhwcservice/\mbox{\hyperlink{iservice_8h}{iservice.\+h}}\item 
+os/android/libhwcservice/\mbox{\hyperlink{iservice_8cpp}{iservice.\+cpp}}\end{DoxyCompactItemize}

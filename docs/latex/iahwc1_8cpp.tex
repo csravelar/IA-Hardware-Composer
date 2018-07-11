@@ -1,0 +1,93 @@
+\hypertarget{iahwc1_8cpp}{}\section{os/android/iahwc1.cpp File Reference}
+\label{iahwc1_8cpp}\index{os/android/iahwc1.\+cpp@{os/android/iahwc1.\+cpp}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$android/log.\+h$>$}\newline
+{\ttfamily \#include $<$cutils/properties.\+h$>$}\newline
+{\ttfamily \#include $<$sw\+\_\+sync.\+h$>$}\newline
+{\ttfamily \#include $<$sync/sync.\+h$>$}\newline
+{\ttfamily \#include $<$gpudevice.\+h$>$}\newline
+{\ttfamily \#include $<$hwcdefs.\+h$>$}\newline
+{\ttfamily \#include $<$hwclayer.\+h$>$}\newline
+{\ttfamily \#include $<$nativedisplay.\+h$>$}\newline
+{\ttfamily \#include $<$platformdefines.\+h$>$}\newline
+{\ttfamily \#include $<$hardware/hardware.\+h$>$}\newline
+{\ttfamily \#include $<$hardware/hwcomposer.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}utils\+\_\+android.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classandroid_1_1DisplayTimeLine}{android\+::\+Display\+Time\+Line}}
+\item 
+struct \mbox{\hyperlink{structandroid_1_1IAHwc1Layer}{android\+::\+I\+A\+Hwc1\+Layer}}
+\item 
+struct \mbox{\hyperlink{structandroid_1_1HwcDisplay}{android\+::\+Hwc\+Display}}
+\item 
+struct \mbox{\hyperlink{structandroid_1_1hwc__context__t}{android\+::hwc\+\_\+context\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classandroid_1_1IAVsyncCallback}{android\+::\+I\+A\+Vsync\+Callback}}
+\item 
+class \mbox{\hyperlink{classandroid_1_1IAHotPlugEventCallback}{android\+::\+I\+A\+Hot\+Plug\+Event\+Callback}}
+\item 
+class \mbox{\hyperlink{classandroid_1_1IARefreshCallback}{android\+::\+I\+A\+Refresh\+Callback}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceandroid}{android}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{iahwc1_8cpp_a50cf05a58707f5a1b08dd2ee4a86e1a4}{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}}~A\+T\+R\+A\+C\+E\+\_\+\+T\+A\+G\+\_\+\+G\+R\+A\+P\+H\+I\+CS
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structandroid_1_1HwcDisplay}{android\+::\+Hwc\+Display}} \mbox{\hyperlink{namespaceandroid_aee90acab9a30a307eb5d543e7f967247}{android\+::hwc\+\_\+drm\+\_\+display\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+hwc\+\_\+module\+\_\+t \mbox{\hyperlink{iahwc1_8cpp_ac739f715780f01b431f01b6a04a46855}{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{iahwc1_8cpp_a50cf05a58707f5a1b08dd2ee4a86e1a4}\label{iahwc1_8cpp_a50cf05a58707f5a1b08dd2ee4a86e1a4}} 
+\index{iahwc1.\+cpp@{iahwc1.\+cpp}!A\+T\+R\+A\+C\+E\+\_\+\+T\+AG@{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}}
+\index{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG@{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}!iahwc1.\+cpp@{iahwc1.\+cpp}}
+\subsubsection{\texorpdfstring{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}{ATRACE\_TAG}}
+{\footnotesize\ttfamily \#define A\+T\+R\+A\+C\+E\+\_\+\+T\+AG~A\+T\+R\+A\+C\+E\+\_\+\+T\+A\+G\+\_\+\+G\+R\+A\+P\+H\+I\+CS}
+
+
+
+Definition at line 17 of file iahwc1.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{iahwc1_8cpp_ac739f715780f01b431f01b6a04a46855}\label{iahwc1_8cpp_ac739f715780f01b431f01b6a04a46855}} 
+\index{iahwc1.\+cpp@{iahwc1.\+cpp}!H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM@{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}}
+\index{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM@{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}!iahwc1.\+cpp@{iahwc1.\+cpp}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}{HAL\_MODULE\_INFO\_SYM}}
+{\footnotesize\ttfamily hwc\+\_\+module\+\_\+t H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    .common = \{}
+\DoxyCodeLine{        .tag = HARDWARE\_MODULE\_TAG,}
+\DoxyCodeLine{        .version\_major = 1,}
+\DoxyCodeLine{        .version\_minor = 0,}
+\DoxyCodeLine{        .id = HWC\_HARDWARE\_MODULE\_ID,}
+\DoxyCodeLine{        .name = \textcolor{stringliteral}{"IA-Hardware-Composer"},}
+\DoxyCodeLine{        .author = \textcolor{stringliteral}{"The Android Open Source Project"},}
+\DoxyCodeLine{        .methods = \&hwc1\_module\_methods,}
+\DoxyCodeLine{        .dso = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},}
+\DoxyCodeLine{        .reserved = \{0\},}
+\DoxyCodeLine{    \}\}}
+\end{DoxyCode}
+
+
+Definition at line 670 of file iahwc1.\+cpp.
+

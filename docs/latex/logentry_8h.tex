@@ -1,0 +1,56 @@
+\hypertarget{logentry_8h}{}\section{common/utils/logentry.h File Reference}
+\label{logentry_8h}\index{common/utils/logentry.\+h@{common/utils/logentry.\+h}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$utils/\+Timers.\+h$>$}\newline
+{\ttfamily \#include $<$utils/\+String8.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLogEntry}{Log\+Entry}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logentry_8h_aacbb9e1f38be71e22df1584a37c56693}{\+\_\+\+\_\+\+S\+T\+D\+C\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+C\+R\+OS}}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{logentry_8h_a5684e7020dd011489e425f87e9d6be92}{unflatten\+From\+Buffer}} (const char $\ast$\&p\+Buffer, const char $\ast$p\+Buffer\+End, T \&value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logentry_8h_aacbb9e1f38be71e22df1584a37c56693}\label{logentry_8h_aacbb9e1f38be71e22df1584a37c56693}} 
+\index{logentry.\+h@{logentry.\+h}!\+\_\+\+\_\+\+S\+T\+D\+C\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+C\+R\+OS@{\+\_\+\+\_\+\+S\+T\+D\+C\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+C\+R\+OS}}
+\index{\+\_\+\+\_\+\+S\+T\+D\+C\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+C\+R\+OS@{\+\_\+\+\_\+\+S\+T\+D\+C\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+C\+R\+OS}!logentry.\+h@{logentry.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+S\+T\+D\+C\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+C\+R\+OS}{\_\_STDC\_FORMAT\_MACROS}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+S\+T\+D\+C\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+C\+R\+OS~1}
+
+
+
+Definition at line 21 of file logentry.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{logentry_8h_a5684e7020dd011489e425f87e9d6be92}\label{logentry_8h_a5684e7020dd011489e425f87e9d6be92}} 
+\index{logentry.\+h@{logentry.\+h}!unflatten\+From\+Buffer@{unflatten\+From\+Buffer}}
+\index{unflatten\+From\+Buffer@{unflatten\+From\+Buffer}!logentry.\+h@{logentry.\+h}}
+\subsubsection{\texorpdfstring{unflatten\+From\+Buffer()}{unflattenFromBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void unflatten\+From\+Buffer (\begin{DoxyParamCaption}\item[{const char $\ast$\&}]{p\+Buffer,  }\item[{const char $\ast$}]{p\+Buffer\+End,  }\item[{T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 78 of file logentry.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                                    \{}
+\DoxyCodeLine{80   \textcolor{keywordflow}{if} ((pBufferEnd - pBuffer) >= (\textcolor{keywordtype}{int})\textcolor{keyword}{sizeof}(T)) \{}
+\DoxyCodeLine{81     value = *(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }T*\textcolor{keyword}{>}(pBuffer));}
+\DoxyCodeLine{82     pBuffer += \textcolor{keyword}{sizeof}(T);}
+\DoxyCodeLine{83   \}}
+\DoxyCodeLine{84 \}}
+\end{DoxyCode}

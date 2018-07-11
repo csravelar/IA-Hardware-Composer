@@ -1,0 +1,259 @@
+\hypertarget{classhwcomposer_1_1VblankEventHandler}{}\section{hwcomposer\+:\+:Vblank\+Event\+Handler Class Reference}
+\label{classhwcomposer_1_1VblankEventHandler}\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+
+
+{\ttfamily \#include $<$vblankeventhandler.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Vblank\+Event\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1VblankEventHandler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_ae031bcb80ff6c29fa63ec7725e94016c}{Vblank\+Event\+Handler}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayQueue}{Display\+Queue}} $\ast$queue)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_a91f3c1d49fc5ac2466443644ea1665de}{$\sim$\+Vblank\+Event\+Handler}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_ae186f138dd2b0c6592a21cddcc03b93c}{Init}} (int fd, int pipe)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_a2769f0e90686719ecbe4b83b5e9adc47}{Set\+Power\+Mode}} (uint32\+\_\+t power\+\_\+mode)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_adbea6da7e9e140aa0dd152961bddf833}{Handle\+Page\+Flip\+Event}} (unsigned int sec, unsigned int usec)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_acf3baa44d30a2b6ab5661924c6723497}{Register\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id)
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_a7d583d082a627dd7ae79daa8b9a2f230}{V\+Sync\+Control}} (bool enabled)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_a229ed2c06dc41d88000fdebcc3dd81f9}{Handle\+Routine}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_a567c783bd9baa74b99fdf4ae98fe25b1}{Handle\+Wait}} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file vblankeventhandler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VblankEventHandler_ae031bcb80ff6c29fa63ec7725e94016c}\label{classhwcomposer_1_1VblankEventHandler_ae031bcb80ff6c29fa63ec7725e94016c}} 
+\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}!Vblank\+Event\+Handler@{Vblank\+Event\+Handler}}
+\index{Vblank\+Event\+Handler@{Vblank\+Event\+Handler}!hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Vblank\+Event\+Handler()}{VblankEventHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Vblank\+Event\+Handler\+::\+Vblank\+Event\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayQueue}{Display\+Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file vblankeventhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30     : \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a8780175b1679005955a94aa89fa62be1}{HWCThread}}(-8, \textcolor{stringliteral}{"VblankEventHandler"}),}
+\DoxyCodeLine{31       display\_(0),}
+\DoxyCodeLine{32       enabled\_(\textcolor{keyword}{false}),}
+\DoxyCodeLine{33       fd\_(-1),}
+\DoxyCodeLine{34       last\_timestamp\_(-1),}
+\DoxyCodeLine{35       queue\_(queue) \{}
+\DoxyCodeLine{36   memset(\&type\_, 0, \textcolor{keyword}{sizeof}(type\_));}
+\DoxyCodeLine{37 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VblankEventHandler_a91f3c1d49fc5ac2466443644ea1665de}\label{classhwcomposer_1_1VblankEventHandler_a91f3c1d49fc5ac2466443644ea1665de}} 
+\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}!````~Vblank\+Event\+Handler@{$\sim$\+Vblank\+Event\+Handler}}
+\index{````~Vblank\+Event\+Handler@{$\sim$\+Vblank\+Event\+Handler}!hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Vblank\+Event\+Handler()}{~VblankEventHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Vblank\+Event\+Handler\+::$\sim$\+Vblank\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 39 of file vblankeventhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                         \{}
+\DoxyCodeLine{40 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VblankEventHandler_adbea6da7e9e140aa0dd152961bddf833}\label{classhwcomposer_1_1VblankEventHandler_adbea6da7e9e140aa0dd152961bddf833}} 
+\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}!Handle\+Page\+Flip\+Event@{Handle\+Page\+Flip\+Event}}
+\index{Handle\+Page\+Flip\+Event@{Handle\+Page\+Flip\+Event}!hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Handle\+Page\+Flip\+Event()}{HandlePageFlipEvent()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Vblank\+Event\+Handler\+::\+Handle\+Page\+Flip\+Event (\begin{DoxyParamCaption}\item[{unsigned int}]{sec,  }\item[{unsigned int}]{usec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file vblankeventhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                                                 \{}
+\DoxyCodeLine{87   int64\_t timestamp = ((int64\_t)sec * kOneSecondNs) + ((int64\_t)usec * 1000);}
+\DoxyCodeLine{88   \mbox{\hyperlink{hwctrace_8h_ad78fc1a201a9edad01061dd29c60faf4}{IPAGEFLIPEVENTTRACE}}(\textcolor{stringliteral}{"HandleVblankCallBack Frame Time \%f"},}
+\DoxyCodeLine{89                       static\_cast<float>(timestamp - last\_timestamp\_) / (1000));}
+\DoxyCodeLine{90   last\_timestamp\_ = timestamp;}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92   \mbox{\hyperlink{hwctrace_8h_ad78fc1a201a9edad01061dd29c60faf4}{IPAGEFLIPEVENTTRACE}}(\textcolor{stringliteral}{"Callback called from HandlePageFlipEvent. \%lu"},}
+\DoxyCodeLine{93                       timestamp);}
+\DoxyCodeLine{94   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{95   \textcolor{keywordflow}{if} (enabled\_ \&\& callback\_) \{}
+\DoxyCodeLine{96     callback\_->Callback(display\_, timestamp);}
+\DoxyCodeLine{97   \}}
+\DoxyCodeLine{98   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{99 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VblankEventHandler_a229ed2c06dc41d88000fdebcc3dd81f9}\label{classhwcomposer_1_1VblankEventHandler_a229ed2c06dc41d88000fdebcc3dd81f9}} 
+\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}!Handle\+Routine@{Handle\+Routine}}
+\index{Handle\+Routine@{Handle\+Routine}!hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Handle\+Routine()}{HandleRoutine()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Vblank\+Event\+Handler\+::\+Handle\+Routine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a539ea080e6bf0e6cffe08e2341be1ee4}{hwcomposer\+::\+H\+W\+C\+Thread}}.
+
+
+
+Definition at line 104 of file vblankeventhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104                                        \{}
+\DoxyCodeLine{105   queue\_->\mbox{\hyperlink{classhwcomposer_1_1DisplayQueue_aac8954f6842a697c37ea023687bbcafa}{HandleIdleCase}}();}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107   drmVBlank vblank;}
+\DoxyCodeLine{108   memset(\&vblank, 0, \textcolor{keyword}{sizeof}(vblank));}
+\DoxyCodeLine{109   vblank.request.sequence = 1;}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111   \textcolor{keywordtype}{int} fd = fd\_;}
+\DoxyCodeLine{112   vblank.request.type = type\_;}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114   \textcolor{keywordtype}{int} ret = drmWaitVBlank(fd, \&vblank);}
+\DoxyCodeLine{115   \textcolor{keywordflow}{if} (!ret)}
+\DoxyCodeLine{116     \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_adbea6da7e9e140aa0dd152961bddf833}{HandlePageFlipEvent}}(vblank.reply.tval\_sec, (int64\_t)vblank.reply.tval\_usec);}
+\DoxyCodeLine{117 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VblankEventHandler_a567c783bd9baa74b99fdf4ae98fe25b1}\label{classhwcomposer_1_1VblankEventHandler_a567c783bd9baa74b99fdf4ae98fe25b1}} 
+\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}!Handle\+Wait@{Handle\+Wait}}
+\index{Handle\+Wait@{Handle\+Wait}!hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Handle\+Wait()}{HandleWait()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Vblank\+Event\+Handler\+::\+Handle\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1HWCThread_ab5acded48bbd1bf4d7c3a54dadb91ef9}{hwcomposer\+::\+H\+W\+C\+Thread}}.
+
+
+
+Definition at line 101 of file vblankeventhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101                                     \{}
+\DoxyCodeLine{102 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VblankEventHandler_ae186f138dd2b0c6592a21cddcc03b93c}\label{classhwcomposer_1_1VblankEventHandler_ae186f138dd2b0c6592a21cddcc03b93c}} 
+\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Vblank\+Event\+Handler\+::\+Init (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{int}]{pipe }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file vblankeventhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                                               \{}
+\DoxyCodeLine{43   fd\_ = fd;}
+\DoxyCodeLine{44   uint32\_t high\_crtc = (pipe << DRM\_VBLANK\_HIGH\_CRTC\_SHIFT);}
+\DoxyCodeLine{45   type\_ = (drmVBlankSeqType)(DRM\_VBLANK\_RELATIVE |}
+\DoxyCodeLine{46                              (high\_crtc \& DRM\_VBLANK\_HIGH\_CRTC\_MASK));}
+\DoxyCodeLine{47 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VblankEventHandler_acf3baa44d30a2b6ab5661924c6723497}\label{classhwcomposer_1_1VblankEventHandler_acf3baa44d30a2b6ab5661924c6723497}} 
+\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}!Register\+Callback@{Register\+Callback}}
+\index{Register\+Callback@{Register\+Callback}!hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Register\+Callback()}{RegisterCallback()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Vblank\+Event\+Handler\+::\+Register\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$}]{callback,  }\item[{uint32\+\_\+t}]{display\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file vblankeventhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                                              \{}
+\DoxyCodeLine{64   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{65   callback\_ = callback;}
+\DoxyCodeLine{66   display\_ = display;}
+\DoxyCodeLine{67   last\_timestamp\_ = -1;}
+\DoxyCodeLine{68   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{69   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{70 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VblankEventHandler_a2769f0e90686719ecbe4b83b5e9adc47}\label{classhwcomposer_1_1VblankEventHandler_a2769f0e90686719ecbe4b83b5e9adc47}} 
+\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}!Set\+Power\+Mode@{Set\+Power\+Mode}}
+\index{Set\+Power\+Mode@{Set\+Power\+Mode}!hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Power\+Mode()}{SetPowerMode()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Vblank\+Event\+Handler\+::\+Set\+Power\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{power\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file vblankeventhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                                          \{}
+\DoxyCodeLine{50   \textcolor{keywordflow}{if} (power\_mode != \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{kOn}}) \{}
+\DoxyCodeLine{51     \mbox{\hyperlink{classhwcomposer_1_1HWCThread_aa360360e4c27cbc7fed745f79990a190}{Exit}}();}
+\DoxyCodeLine{52   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7162d49a6b4026673f77ac048eb4d07b}{InitWorker}}()) \{}
+\DoxyCodeLine{54       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initalize thread for VblankEventHandler. \%s"},}
+\DoxyCodeLine{55              \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57   \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{60 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VblankEventHandler_a7d583d082a627dd7ae79daa8b9a2f230}\label{classhwcomposer_1_1VblankEventHandler_a7d583d082a627dd7ae79daa8b9a2f230}} 
+\index{hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}!V\+Sync\+Control@{V\+Sync\+Control}}
+\index{V\+Sync\+Control@{V\+Sync\+Control}!hwcomposer\+::\+Vblank\+Event\+Handler@{hwcomposer\+::\+Vblank\+Event\+Handler}}
+\subsubsection{\texorpdfstring{V\+Sync\+Control()}{VSyncControl()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Vblank\+Event\+Handler\+::\+V\+Sync\+Control (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file vblankeventhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                                  \{}
+\DoxyCodeLine{73   \mbox{\hyperlink{hwctrace_8h_ad78fc1a201a9edad01061dd29c60faf4}{IPAGEFLIPEVENTTRACE}}(\textcolor{stringliteral}{"VblankEventHandler VSyncControl enabled \%d"}, enabled);}
+\DoxyCodeLine{74   \textcolor{keywordflow}{if} (enabled\_ == enabled)}
+\DoxyCodeLine{75     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{78   enabled\_ = enabled;}
+\DoxyCodeLine{79   last\_timestamp\_ = -1;}
+\DoxyCodeLine{80   spin\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{83 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/display/\mbox{\hyperlink{vblankeventhandler_8h}{vblankeventhandler.\+h}}\item 
+common/display/\mbox{\hyperlink{vblankeventhandler_8cpp}{vblankeventhandler.\+cpp}}\end{DoxyCompactItemize}

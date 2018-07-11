@@ -1,0 +1,621 @@
+\hypertarget{classhwcomposer_1_1VKRenderer}{}\section{hwcomposer\+:\+:V\+K\+Renderer Class Reference}
+\label{classhwcomposer_1_1VKRenderer}\index{hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}}
+
+
+{\ttfamily \#include $<$vkrenderer.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:V\+K\+Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1VKRenderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VKRenderer_acd726cc3da3bbabca0319084b8fb3adb}{V\+K\+Renderer}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VKRenderer_aa9c49647acea66ac3dce97db89573e3a}{$\sim$\+V\+K\+Renderer}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VKRenderer_aa5ec08a716d38af3c59827b05045e56f}{Init}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VKRenderer_a05f1c449173cc2b4f479bf5be404ebb3}{Draw}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} $>$ \&commands, \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$surface) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VKRenderer_abbaf31607e1572de1e74de4d2ea50a03}{Insert\+Fence}} (int32\+\_\+t kms\+\_\+fence) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VKRenderer_ad0a97c5d88ce71c265a6bd5ee139ffe7}{Set\+Explicit\+Sync\+Support}} (bool disable\+\_\+explicit\+\_\+sync) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 26 of file vkrenderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VKRenderer_acd726cc3da3bbabca0319084b8fb3adb}\label{classhwcomposer_1_1VKRenderer_acd726cc3da3bbabca0319084b8fb3adb}} 
+\index{hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}!V\+K\+Renderer@{V\+K\+Renderer}}
+\index{V\+K\+Renderer@{V\+K\+Renderer}!hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}}
+\subsubsection{\texorpdfstring{V\+K\+Renderer()}{VKRenderer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+K\+Renderer\+::\+V\+K\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1VKRenderer_aa9c49647acea66ac3dce97db89573e3a}\label{classhwcomposer_1_1VKRenderer_aa9c49647acea66ac3dce97db89573e3a}} 
+\index{hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}!````~V\+K\+Renderer@{$\sim$\+V\+K\+Renderer}}
+\index{````~V\+K\+Renderer@{$\sim$\+V\+K\+Renderer}!hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}}
+\subsubsection{\texorpdfstring{$\sim$\+V\+K\+Renderer()}{~VKRenderer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+K\+Renderer\+::$\sim$\+V\+K\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file vkrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                         \{}
+\DoxyCodeLine{25 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VKRenderer_a05f1c449173cc2b4f479bf5be404ebb3}\label{classhwcomposer_1_1VKRenderer_a05f1c449173cc2b4f479bf5be404ebb3}} 
+\index{hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}!Draw@{Draw}}
+\index{Draw@{Draw}!hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+V\+K\+Renderer\+::\+Draw (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} $>$ \&}]{commands,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1Renderer_ab147e6d44d429c0ada5a3212ef7100f1}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 468 of file vkrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{469                                               \{}
+\DoxyCodeLine{470   VkResult res;}
+\DoxyCodeLine{471   uint32\_t frame\_width = surface->GetWidth();}
+\DoxyCodeLine{472   uint32\_t frame\_height = surface->GetHeight();}
+\DoxyCodeLine{473   surface->MakeCurrent();}
+\DoxyCodeLine{474 }
+\DoxyCodeLine{475   \mbox{\hyperlink{namespacehwcomposer_a7eca0feeff5b3292a308fc67388f1497}{src\_image\_infos\_}}.clear();}
+\DoxyCodeLine{476   \mbox{\hyperlink{namespacehwcomposer_a60b6b92596cbf14268f77d148d32c042}{ub\_allocs\_}}.clear();}
+\DoxyCodeLine{477   std::vector<VkDescriptorSetLayout> desc\_layouts;}
+\DoxyCodeLine{478   std::vector<VkDescriptorSet> desc\_sets(render\_states.size());}
+\DoxyCodeLine{479   std::vector<VkDescriptorBufferInfo> ub\_infos;}
+\DoxyCodeLine{480   \textcolor{keywordflow}{for} (\textcolor{keyword}{const} RenderState \&state : render\_states) \{}
+\DoxyCodeLine{481     \textcolor{keywordtype}{unsigned} size = state.layer\_state\_.size();}
+\DoxyCodeLine{482     \textcolor{keywordflow}{if} (size == 0)}
+\DoxyCodeLine{483       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{484 }
+\DoxyCodeLine{485     VKProgram *program = GetProgram(size);}
+\DoxyCodeLine{486     \textcolor{keywordflow}{if} (!program)}
+\DoxyCodeLine{487       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{488 }
+\DoxyCodeLine{489     desc\_layouts.emplace\_back(program->getDescLayout());}
+\DoxyCodeLine{490 }
+\DoxyCodeLine{491     program->UseProgram(state, frame\_width, frame\_height);}
+\DoxyCodeLine{492 }
+\DoxyCodeLine{493     ub\_infos.emplace\_back(program->getVertUBInfo());}
+\DoxyCodeLine{494     ub\_infos.emplace\_back(program->getFragUBInfo());}
+\DoxyCodeLine{495   \}}
+\DoxyCodeLine{496 }
+\DoxyCodeLine{497   VkDescriptorSetAllocateInfo alloc\_desc\_set = \{\};}
+\DoxyCodeLine{498   alloc\_desc\_set.sType = VK\_STRUCTURE\_TYPE\_DESCRIPTOR\_SET\_ALLOCATE\_INFO;}
+\DoxyCodeLine{499   alloc\_desc\_set.descriptorPool = desc\_pool\_;}
+\DoxyCodeLine{500   alloc\_desc\_set.descriptorSetCount = (uint32\_t)desc\_layouts.size();}
+\DoxyCodeLine{501   alloc\_desc\_set.pSetLayouts = desc\_layouts.data();}
+\DoxyCodeLine{502 }
+\DoxyCodeLine{503   res = vkAllocateDescriptorSets(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&alloc\_desc\_set, desc\_sets.data());}
+\DoxyCodeLine{504   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{505     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkAllocateDescriptorSets failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{506     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{507   \}}
+\DoxyCodeLine{508 }
+\DoxyCodeLine{509   std::vector<VkWriteDescriptorSet> write\_desc\_sets;}
+\DoxyCodeLine{510   \textcolor{keywordtype}{size\_t} src\_image\_infos\_offset = 0;}
+\DoxyCodeLine{511   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} cmd\_index = 0; cmd\_index < render\_states.size(); cmd\_index++) \{}
+\DoxyCodeLine{512     \textcolor{keyword}{const} RenderState \&state = render\_states[cmd\_index];}
+\DoxyCodeLine{513     \textcolor{keywordtype}{size\_t} layer\_count = state.layer\_state\_.size();}
+\DoxyCodeLine{514     VkDescriptorSet desc\_set = desc\_sets[cmd\_index];}
+\DoxyCodeLine{515 }
+\DoxyCodeLine{516     VkWriteDescriptorSet write\_desc\_set = \{\};}
+\DoxyCodeLine{517     write\_desc\_set.sType = VK\_STRUCTURE\_TYPE\_WRITE\_DESCRIPTOR\_SET;}
+\DoxyCodeLine{518     write\_desc\_set.dstSet = desc\_set;}
+\DoxyCodeLine{519     write\_desc\_set.dstBinding = 0;}
+\DoxyCodeLine{520     write\_desc\_set.descriptorCount = 1;}
+\DoxyCodeLine{521     write\_desc\_set.descriptorType = VK\_DESCRIPTOR\_TYPE\_UNIFORM\_BUFFER;}
+\DoxyCodeLine{522     write\_desc\_set.pBufferInfo = \&ub\_infos[cmd\_index * 2 + 0];}
+\DoxyCodeLine{523     write\_desc\_sets.emplace\_back(write\_desc\_set);}
+\DoxyCodeLine{524 }
+\DoxyCodeLine{525     write\_desc\_set = \{\};}
+\DoxyCodeLine{526     write\_desc\_set.sType = VK\_STRUCTURE\_TYPE\_WRITE\_DESCRIPTOR\_SET;}
+\DoxyCodeLine{527     write\_desc\_set.dstSet = desc\_set;}
+\DoxyCodeLine{528     write\_desc\_set.dstBinding = 1;}
+\DoxyCodeLine{529     write\_desc\_set.descriptorCount = 1;}
+\DoxyCodeLine{530     write\_desc\_set.descriptorType = VK\_DESCRIPTOR\_TYPE\_UNIFORM\_BUFFER;}
+\DoxyCodeLine{531     write\_desc\_set.pBufferInfo = \&ub\_infos[cmd\_index * 2 + 1];}
+\DoxyCodeLine{532     write\_desc\_sets.emplace\_back(write\_desc\_set);}
+\DoxyCodeLine{533 }
+\DoxyCodeLine{534     write\_desc\_set = \{\};}
+\DoxyCodeLine{535     write\_desc\_set.sType = VK\_STRUCTURE\_TYPE\_WRITE\_DESCRIPTOR\_SET;}
+\DoxyCodeLine{536     write\_desc\_set.dstSet = desc\_set;}
+\DoxyCodeLine{537     write\_desc\_set.dstBinding = 2;}
+\DoxyCodeLine{538     write\_desc\_set.descriptorCount = (uint32\_t)layer\_count;}
+\DoxyCodeLine{539     write\_desc\_set.descriptorType = VK\_DESCRIPTOR\_TYPE\_COMBINED\_IMAGE\_SAMPLER;}
+\DoxyCodeLine{540     write\_desc\_set.pImageInfo = \&\mbox{\hyperlink{namespacehwcomposer_a7eca0feeff5b3292a308fc67388f1497}{src\_image\_infos\_}}[src\_image\_infos\_offset];}
+\DoxyCodeLine{541     write\_desc\_sets.emplace\_back(write\_desc\_set);}
+\DoxyCodeLine{542 }
+\DoxyCodeLine{543     src\_image\_infos\_offset += layer\_count;}
+\DoxyCodeLine{544   \}}
+\DoxyCodeLine{545 }
+\DoxyCodeLine{546   vkUpdateDescriptorSets(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, write\_desc\_sets.size(), write\_desc\_sets.data(),}
+\DoxyCodeLine{547                          0, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{548 }
+\DoxyCodeLine{549   VkCommandBufferAllocateInfo cmd\_buffer\_alloc = \{\};}
+\DoxyCodeLine{550   cmd\_buffer\_alloc.sType = VK\_STRUCTURE\_TYPE\_COMMAND\_BUFFER\_ALLOCATE\_INFO;}
+\DoxyCodeLine{551   cmd\_buffer\_alloc.commandPool = cmd\_pool\_;}
+\DoxyCodeLine{552   cmd\_buffer\_alloc.commandBufferCount = 1;}
+\DoxyCodeLine{553 }
+\DoxyCodeLine{554   VkCommandBuffer cmd\_buffer;}
+\DoxyCodeLine{555   res = vkAllocateCommandBuffers(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&cmd\_buffer\_alloc, \&cmd\_buffer);}
+\DoxyCodeLine{556   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{557     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkAllocateCommandBuffer failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{558     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{559   \}}
+\DoxyCodeLine{560 }
+\DoxyCodeLine{561   VkCommandBufferBeginInfo begin\_info = \{\};}
+\DoxyCodeLine{562   begin\_info.sType = VK\_STRUCTURE\_TYPE\_COMMAND\_BUFFER\_BEGIN\_INFO;}
+\DoxyCodeLine{563   begin\_info.flags = VK\_COMMAND\_BUFFER\_USAGE\_ONE\_TIME\_SUBMIT\_BIT;}
+\DoxyCodeLine{564 }
+\DoxyCodeLine{565   res = vkBeginCommandBuffer(cmd\_buffer, \&begin\_info);}
+\DoxyCodeLine{566   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{567     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkAllocateCommandBuffer failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{568     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{569   \}}
+\DoxyCodeLine{570 }
+\DoxyCodeLine{571   std::vector<VkImageMemoryBarrier> barrier\_before\_clear;}
+\DoxyCodeLine{572   barrier\_before\_clear.emplace\_back(\mbox{\hyperlink{namespacehwcomposer_aa28a44748c7fc9613da282bc580cb005}{dst\_barrier\_before\_clear\_}});}
+\DoxyCodeLine{573   barrier\_before\_clear.insert(barrier\_before\_clear.end(),}
+\DoxyCodeLine{574                               \mbox{\hyperlink{namespacehwcomposer_af73e429b9c07e50ab625f7f54205af77}{src\_barrier\_before\_clear\_}}.begin(),}
+\DoxyCodeLine{575                               \mbox{\hyperlink{namespacehwcomposer_af73e429b9c07e50ab625f7f54205af77}{src\_barrier\_before\_clear\_}}.end());}
+\DoxyCodeLine{576 }
+\DoxyCodeLine{577   vkCmdPipelineBarrier(cmd\_buffer, VK\_PIPELINE\_STAGE\_TOP\_OF\_PIPE\_BIT,}
+\DoxyCodeLine{578                        VK\_PIPELINE\_STAGE\_TOP\_OF\_PIPE\_BIT, 0, 0, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, 0, 
+      \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},}
+\DoxyCodeLine{579                        barrier\_before\_clear.size(),}
+\DoxyCodeLine{580                        barrier\_before\_clear.data());}
+\DoxyCodeLine{581 }
+\DoxyCodeLine{582   VkClearValue clear\_value[1];}
+\DoxyCodeLine{583   clear\_value[0] = \{\};}
+\DoxyCodeLine{584   clear\_value[0].color.float32[0] = 0.0f;}
+\DoxyCodeLine{585   clear\_value[0].color.float32[1] = 0.0f;}
+\DoxyCodeLine{586   clear\_value[0].color.float32[2] = 0.0f;}
+\DoxyCodeLine{587   clear\_value[0].color.float32[3] = 0.0f;}
+\DoxyCodeLine{588 }
+\DoxyCodeLine{589   VkExtent2D extent = \{\};}
+\DoxyCodeLine{590   extent.width = frame\_width;}
+\DoxyCodeLine{591   extent.height = frame\_height;}
+\DoxyCodeLine{592 }
+\DoxyCodeLine{593   VkRect2D rect = \{\};}
+\DoxyCodeLine{594   rect.extent = extent;}
+\DoxyCodeLine{595 }
+\DoxyCodeLine{596   VkRenderPassBeginInfo pass\_begin = \{\};}
+\DoxyCodeLine{597   pass\_begin.sType = VK\_STRUCTURE\_TYPE\_RENDER\_PASS\_BEGIN\_INFO;}
+\DoxyCodeLine{598   pass\_begin.renderPass = \mbox{\hyperlink{namespacehwcomposer_a4d9a582f332eed1a524e91fce91d09c2}{render\_pass\_}};}
+\DoxyCodeLine{599   pass\_begin.framebuffer = \mbox{\hyperlink{namespacehwcomposer_a9761a93547da000b91c035dbfeef55df}{framebuffer\_}};}
+\DoxyCodeLine{600   pass\_begin.renderArea = rect;}
+\DoxyCodeLine{601   pass\_begin.clearValueCount = 1;}
+\DoxyCodeLine{602   pass\_begin.pClearValues = \&clear\_value[0];}
+\DoxyCodeLine{603 }
+\DoxyCodeLine{604   vkCmdBeginRenderPass(cmd\_buffer, \&pass\_begin, VK\_SUBPASS\_CONTENTS\_INLINE);}
+\DoxyCodeLine{605 }
+\DoxyCodeLine{606   VkViewport viewport = \{\};}
+\DoxyCodeLine{607   viewport.width = (float)frame\_width;}
+\DoxyCodeLine{608   viewport.height = (float)frame\_height;}
+\DoxyCodeLine{609   viewport.minDepth = 0.0f;}
+\DoxyCodeLine{610   viewport.maxDepth = 1.0f;}
+\DoxyCodeLine{611 }
+\DoxyCodeLine{612   vkCmdSetViewport(cmd\_buffer, 0, 1, \&viewport);}
+\DoxyCodeLine{613 }
+\DoxyCodeLine{614   VkDeviceSize zero\_offset = 0;}
+\DoxyCodeLine{615   vkCmdBindVertexBuffers(cmd\_buffer, 0, 1, \&vert\_buffer\_, \&zero\_offset);}
+\DoxyCodeLine{616 }
+\DoxyCodeLine{617   \textcolor{keywordtype}{size\_t} last\_layer\_count = 0;}
+\DoxyCodeLine{618   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} cmd\_index = 0; cmd\_index < render\_states.size(); cmd\_index++) \{}
+\DoxyCodeLine{619     \textcolor{keyword}{const} RenderState \&state = render\_states[cmd\_index];}
+\DoxyCodeLine{620     \textcolor{keywordtype}{size\_t} layer\_count = state.layer\_state\_.size();}
+\DoxyCodeLine{621     VkDescriptorSet desc\_set = desc\_sets[cmd\_index];}
+\DoxyCodeLine{622 }
+\DoxyCodeLine{623     VkRect2D scissor = \{\};}
+\DoxyCodeLine{624     scissor.offset = \{}
+\DoxyCodeLine{625         .x = (int32\_t)state.x\_, .y = (int32\_t)state.y\_,}
+\DoxyCodeLine{626     \};}
+\DoxyCodeLine{627     scissor.extent = \{}
+\DoxyCodeLine{628         .width = (uint32\_t)state.width\_, .height = (uint32\_t)state.height\_,}
+\DoxyCodeLine{629     \};}
+\DoxyCodeLine{630 }
+\DoxyCodeLine{631     VKProgram *program = GetProgram(layer\_count);}
+\DoxyCodeLine{632     VkPipeline pipeline = program->getPipeline();}
+\DoxyCodeLine{633     VkPipelineLayout pipeline\_layout = program->getPipeLayout();}
+\DoxyCodeLine{634 }
+\DoxyCodeLine{635     \textcolor{keywordflow}{if} (last\_layer\_count != layer\_count) \{}
+\DoxyCodeLine{636       vkCmdBindPipeline(cmd\_buffer, VK\_PIPELINE\_BIND\_POINT\_GRAPHICS, pipeline);}
+\DoxyCodeLine{637       last\_layer\_count = layer\_count;}
+\DoxyCodeLine{638     \}}
+\DoxyCodeLine{639 }
+\DoxyCodeLine{640     vkCmdSetScissor(cmd\_buffer, 0, 1, \&scissor);}
+\DoxyCodeLine{641     vkCmdBindDescriptorSets(cmd\_buffer, VK\_PIPELINE\_BIND\_POINT\_GRAPHICS,}
+\DoxyCodeLine{642                             pipeline\_layout, 0, 1, \&desc\_set, 0, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{643 }
+\DoxyCodeLine{644     vkCmdDraw(cmd\_buffer, 3, 1, 0, 0);}
+\DoxyCodeLine{645   \}}
+\DoxyCodeLine{646 }
+\DoxyCodeLine{647   vkCmdEndRenderPass(cmd\_buffer);}
+\DoxyCodeLine{648 }
+\DoxyCodeLine{649   res = vkEndCommandBuffer(cmd\_buffer);}
+\DoxyCodeLine{650   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{651     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkEndCommandBuffer failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{652     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{653   \}}
+\DoxyCodeLine{654 }
+\DoxyCodeLine{655   VkSubmitInfo submit = \{\};}
+\DoxyCodeLine{656   submit.sType = VK\_STRUCTURE\_TYPE\_SUBMIT\_INFO;}
+\DoxyCodeLine{657   submit.commandBufferCount = 1;}
+\DoxyCodeLine{658   submit.pCommandBuffers = \&cmd\_buffer;}
+\DoxyCodeLine{659 }
+\DoxyCodeLine{660   res = vkQueueSubmit(queue\_, 1, \&submit, VK\_NULL\_HANDLE);}
+\DoxyCodeLine{661   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{662     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"\%d: vkQueueSubmit failed (\%d)\(\backslash\)n"}, \_\_LINE\_\_, res);}
+\DoxyCodeLine{663     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{664   \}}
+\DoxyCodeLine{665 }
+\DoxyCodeLine{666   res = vkQueueWaitIdle(queue\_);}
+\DoxyCodeLine{667   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{668     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkQueueWaitIdle failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{669     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{670   \}}
+\DoxyCodeLine{671 }
+\DoxyCodeLine{672   vkFreeCommandBuffers(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, cmd\_pool\_, 1, \&cmd\_buffer);}
+\DoxyCodeLine{673 }
+\DoxyCodeLine{674   res = vkFreeDescriptorSets(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, desc\_pool\_, desc\_sets.size(),}
+\DoxyCodeLine{675                              desc\_sets.data());}
+\DoxyCodeLine{676   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{677     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkFreeDescriptorSets failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{678     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{679   \}}
+\DoxyCodeLine{680 }
+\DoxyCodeLine{681   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{682 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKRenderer_aa5ec08a716d38af3c59827b05045e56f}\label{classhwcomposer_1_1VKRenderer_aa5ec08a716d38af3c59827b05045e56f}} 
+\index{hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+V\+K\+Renderer\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1Renderer_aa7f5e7d36857fb67093b9f0cc3a7e606}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 200 of file vkrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{200                       \{}
+\DoxyCodeLine{201   VkResult res;}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203   \textcolor{keyword}{const} \textcolor{keywordtype}{char} *enabled\_layers[] = \{\};}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205   \textcolor{keyword}{const} \textcolor{keywordtype}{char} *instance\_extensions[] = \{}
+\DoxyCodeLine{206       VK\_KHR\_SURFACE\_EXTENSION\_NAME, VK\_EXT\_DEBUG\_REPORT\_EXTENSION\_NAME,}
+\DoxyCodeLine{207   \};}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209   VkApplicationInfo app\_info = \{\};}
+\DoxyCodeLine{210   app\_info.sType = VK\_STRUCTURE\_TYPE\_APPLICATION\_INFO;}
+\DoxyCodeLine{211   app\_info.apiVersion = VK\_MAKE\_VERSION(1, 0, 0);}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213   VkInstanceCreateInfo instance\_create = \{\};}
+\DoxyCodeLine{214   instance\_create.sType = VK\_STRUCTURE\_TYPE\_INSTANCE\_CREATE\_INFO;}
+\DoxyCodeLine{215   instance\_create.pApplicationInfo = \&app\_info;}
+\DoxyCodeLine{216   instance\_create.enabledLayerCount = \mbox{\hyperlink{vkshim_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\_SIZE}}(enabled\_layers);}
+\DoxyCodeLine{217   instance\_create.ppEnabledLayerNames = \&enabled\_layers[0];}
+\DoxyCodeLine{218   instance\_create.enabledExtensionCount = \mbox{\hyperlink{vkshim_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\_SIZE}}(instance\_extensions);}
+\DoxyCodeLine{219   instance\_create.ppEnabledExtensionNames = \&instance\_extensions[0];}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221   res = vkCreateInstance(\&instance\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{namespacehwcomposer_a4ca6f785a435fe182d864903004ba79c}{inst\_}});}
+\DoxyCodeLine{222   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{223     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateInstance failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{224     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{225   \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227   VkDebugReportCallbackCreateInfoEXT debug\_create = \{\};}
+\DoxyCodeLine{228   debug\_create.sType = VK\_STRUCTURE\_TYPE\_DEBUG\_REPORT\_CREATE\_INFO\_EXT;}
+\DoxyCodeLine{229   debug\_create.flags = VK\_DEBUG\_REPORT\_WARNING\_BIT\_EXT |}
+\DoxyCodeLine{230                        VK\_DEBUG\_REPORT\_PERFORMANCE\_WARNING\_BIT\_EXT |}
+\DoxyCodeLine{231                        VK\_DEBUG\_REPORT\_ERROR\_BIT\_EXT |}
+\DoxyCodeLine{232                        VK\_DEBUG\_REPORT\_DEBUG\_BIT\_EXT;}
+\DoxyCodeLine{233   debug\_create.pfnCallback = \&\mbox{\hyperlink{namespacehwcomposer_ab5ff410afa97573ec31178666d2d00bb}{VulkanDebugReportCallback}};}
+\DoxyCodeLine{234   VkDebugReportCallbackEXT callback;}
+\DoxyCodeLine{235   PFN\_vkCreateDebugReportCallbackEXT vkCreateDebugReportCallbackEXT =}
+\DoxyCodeLine{236       (PFN\_vkCreateDebugReportCallbackEXT)vkGetInstanceProcAddr(}
+\DoxyCodeLine{237           \mbox{\hyperlink{namespacehwcomposer_a4ca6f785a435fe182d864903004ba79c}{inst\_}}, \textcolor{stringliteral}{"vkCreateDebugReportCallbackEXT"});}
+\DoxyCodeLine{238   \textcolor{keywordflow}{if} (vkCreateDebugReportCallbackEXT) \{}
+\DoxyCodeLine{239     vkCreateDebugReportCallbackEXT(\mbox{\hyperlink{namespacehwcomposer_a4ca6f785a435fe182d864903004ba79c}{inst\_}}, \&debug\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&callback);}
+\DoxyCodeLine{240   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{241     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to create vulkan debug callback\(\backslash\)n"});}
+\DoxyCodeLine{242   \}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244   uint32\_t count;}
+\DoxyCodeLine{245   res = vkEnumeratePhysicalDevices(\mbox{\hyperlink{namespacehwcomposer_a4ca6f785a435fe182d864903004ba79c}{inst\_}}, \&count, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{246   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{247     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkEnumeratePhysicalDevices failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{248     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{249   \}}
+\DoxyCodeLine{250   \textcolor{keywordflow}{if} (count == 0) \{}
+\DoxyCodeLine{251     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"No physical devices\(\backslash\)n"});}
+\DoxyCodeLine{252     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{253   \}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255   VkPhysicalDevice phys\_devs[count];}
+\DoxyCodeLine{256   res = vkEnumeratePhysicalDevices(\mbox{\hyperlink{namespacehwcomposer_a4ca6f785a435fe182d864903004ba79c}{inst\_}}, \&count, phys\_devs);}
+\DoxyCodeLine{257   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{258     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkEnumeratePhysicalDevices failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{259     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{260   \}}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262   VkPhysicalDevice phys\_dev = phys\_devs[0];}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264   vkGetPhysicalDeviceQueueFamilyProperties(phys\_dev, \&count, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{265   \textcolor{keywordflow}{if} (count == 0) \{}
+\DoxyCodeLine{266     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"No device queue family properties\(\backslash\)n"});}
+\DoxyCodeLine{267     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{268   \}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270   VkQueueFamilyProperties props[count];}
+\DoxyCodeLine{271   vkGetPhysicalDeviceQueueFamilyProperties(phys\_dev, \&count, props);}
+\DoxyCodeLine{272   \textcolor{keywordflow}{if} (!(props[0].queueFlags \& VK\_QUEUE\_GRAPHICS\_BIT)) \{}
+\DoxyCodeLine{273     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Not a graphics queue\(\backslash\)n"});}
+\DoxyCodeLine{274     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{275   \}}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{277   \textcolor{keywordtype}{float} queue\_priority = 1.0f;}
+\DoxyCodeLine{278   VkDeviceQueueCreateInfo queue\_create = \{\};}
+\DoxyCodeLine{279   queue\_create.sType = VK\_STRUCTURE\_TYPE\_DEVICE\_QUEUE\_CREATE\_INFO;}
+\DoxyCodeLine{280   queue\_create.queueCount = 1;}
+\DoxyCodeLine{281   queue\_create.pQueuePriorities = \&queue\_priority;}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283   \textcolor{keyword}{const} \textcolor{keywordtype}{char} *device\_extensions[] = \{\};}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285   VkDeviceCreateInfo device\_create = \{\};}
+\DoxyCodeLine{286   device\_create.sType = VK\_STRUCTURE\_TYPE\_DEVICE\_CREATE\_INFO;}
+\DoxyCodeLine{287   device\_create.queueCreateInfoCount = 1;}
+\DoxyCodeLine{288   device\_create.pQueueCreateInfos = \&queue\_create;}
+\DoxyCodeLine{289   device\_create.enabledLayerCount = \mbox{\hyperlink{vkshim_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\_SIZE}}(enabled\_layers);}
+\DoxyCodeLine{290   device\_create.ppEnabledLayerNames = \&enabled\_layers[0];}
+\DoxyCodeLine{291   device\_create.enabledExtensionCount = \mbox{\hyperlink{vkshim_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\_SIZE}}(device\_extensions);}
+\DoxyCodeLine{292   device\_create.ppEnabledExtensionNames = \&device\_extensions[0];}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294   res = vkCreateDevice(phys\_dev, \&device\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}});}
+\DoxyCodeLine{295   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{296     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateDevice failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{297     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{298   \}}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300   vkGetPhysicalDeviceProperties(phys\_dev, \&device\_props\_);}
+\DoxyCodeLine{301   vkGetPhysicalDeviceMemoryProperties(phys\_dev, \&device\_mem\_props\_);}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{303   \mbox{\hyperlink{namespacehwcomposer_a9833bb55d7e347e3d50e2f0f24ad3121}{ub\_offset\_align\_}} = device\_props\_.limits.minUniformBufferOffsetAlignment;}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305   vkGetDeviceQueue(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, 0, 0, \&queue\_);}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307   VkCommandPoolCreateInfo pool\_create = \{\};}
+\DoxyCodeLine{308   pool\_create.sType = VK\_STRUCTURE\_TYPE\_COMMAND\_POOL\_CREATE\_INFO;}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310   res = vkCreateCommandPool(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&pool\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&cmd\_pool\_);}
+\DoxyCodeLine{311   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{312     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateCommandPool failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{313     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{314   \}}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316   \textcolor{comment}{// clang-format off}}
+\DoxyCodeLine{317   \textcolor{keyword}{const} \textcolor{keywordtype}{float} verts[] = \{0.0f, 0.0f, 0.0f, 0.0f,}
+\DoxyCodeLine{318                          0.0f, 2.0f, 0.0f, 2.0f,}
+\DoxyCodeLine{319                          2.0f, 0.0f, 2.0f, 0.0f\};}
+\DoxyCodeLine{320   \textcolor{comment}{// clang-format on}}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322   vert\_buffer\_ = UploadBuffer(\textcolor{keyword}{sizeof}(verts), (\textcolor{keyword}{const} uint8\_t *)verts,}
+\DoxyCodeLine{323                               VK\_BUFFER\_USAGE\_VERTEX\_BUFFER\_BIT);}
+\DoxyCodeLine{324   \textcolor{keywordflow}{if} (vert\_buffer\_ == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{325     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"UploadBuffer failed\(\backslash\)n"});}
+\DoxyCodeLine{326     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{327   \}}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329   VkBufferCreateInfo buffer\_create = \{\};}
+\DoxyCodeLine{330   buffer\_create.sType = VK\_STRUCTURE\_TYPE\_BUFFER\_CREATE\_INFO;}
+\DoxyCodeLine{331   buffer\_create.size = 0x100 * 256;}
+\DoxyCodeLine{332   buffer\_create.usage = VK\_BUFFER\_USAGE\_UNIFORM\_BUFFER\_BIT;}
+\DoxyCodeLine{333 }
+\DoxyCodeLine{334   res = vkCreateBuffer(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&buffer\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{namespacehwcomposer_a7f1b6f91ef21a2ba46ffc976c81d70ff}{uniform\_buffer\_}});}
+\DoxyCodeLine{335   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{336     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateBuffer failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{337     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{338   \}}
+\DoxyCodeLine{339 }
+\DoxyCodeLine{340   VkMemoryRequirements mem\_requirements;}
+\DoxyCodeLine{341   vkGetBufferMemoryRequirements(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \mbox{\hyperlink{namespacehwcomposer_a7f1b6f91ef21a2ba46ffc976c81d70ff}{uniform\_buffer\_}}, \&mem\_requirements);}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343   VkMemoryAllocateInfo mem\_allocate = \{\};}
+\DoxyCodeLine{344   mem\_allocate.sType = VK\_STRUCTURE\_TYPE\_MEMORY\_ALLOCATE\_INFO;}
+\DoxyCodeLine{345   mem\_allocate.allocationSize = mem\_requirements.size;}
+\DoxyCodeLine{346   mem\_allocate.memoryTypeIndex = GetMemoryTypeIndex(}
+\DoxyCodeLine{347       mem\_requirements.memoryTypeBits, VK\_MEMORY\_PROPERTY\_HOST\_COHERENT\_BIT |}
+\DoxyCodeLine{348                                            VK\_MEMORY\_PROPERTY\_HOST\_VISIBLE\_BIT);}
+\DoxyCodeLine{349   \textcolor{keywordflow}{if} (mem\_allocate.memoryTypeIndex >= 32) \{}
+\DoxyCodeLine{350     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to find suitable uniform buffer device memory\(\backslash\)n"});}
+\DoxyCodeLine{351     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{352   \}}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354   res = vkAllocateMemory(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&mem\_allocate, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&uniform\_buffer\_mem\_);}
+\DoxyCodeLine{355   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{356     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkAllocateMemory failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{357     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{358   \}}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360   res = vkBindBufferMemory(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \mbox{\hyperlink{namespacehwcomposer_a7f1b6f91ef21a2ba46ffc976c81d70ff}{uniform\_buffer\_}}, uniform\_buffer\_mem\_, 0);}
+\DoxyCodeLine{361   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{362     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkBindBufferMemory failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{363     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{364   \}}
+\DoxyCodeLine{365 }
+\DoxyCodeLine{366   uint8\_t *uniform\_buffer\_ptr;}
+\DoxyCodeLine{367   res = vkMapMemory(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, uniform\_buffer\_mem\_, 0, mem\_allocate.allocationSize,}
+\DoxyCodeLine{368                     0, (\textcolor{keywordtype}{void} **)\&uniform\_buffer\_ptr);}
+\DoxyCodeLine{369   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{370     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkMapMemory failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{371     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{372   \}}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{374   \mbox{\hyperlink{namespacehwcomposer_a2fbb38712cfea2b605d1beeac8e33990}{ring\_buffer\_}} = RingBuffer(uniform\_buffer\_ptr, buffer\_create.size);}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{376   VkDescriptorPoolSize pool\_sizes[2];}
+\DoxyCodeLine{377   pool\_sizes[0] = \{\};}
+\DoxyCodeLine{378   pool\_sizes[0].type = VK\_DESCRIPTOR\_TYPE\_UNIFORM\_BUFFER;}
+\DoxyCodeLine{379   pool\_sizes[0].descriptorCount = 256;}
+\DoxyCodeLine{380   pool\_sizes[1] = \{\};}
+\DoxyCodeLine{381   pool\_sizes[1].type = VK\_DESCRIPTOR\_TYPE\_COMBINED\_IMAGE\_SAMPLER;}
+\DoxyCodeLine{382   pool\_sizes[1].descriptorCount = 256;}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384   VkDescriptorPoolCreateInfo desc\_pool\_create = \{\};}
+\DoxyCodeLine{385   desc\_pool\_create.sType = VK\_STRUCTURE\_TYPE\_DESCRIPTOR\_POOL\_CREATE\_INFO;}
+\DoxyCodeLine{386   desc\_pool\_create.flags = VK\_DESCRIPTOR\_POOL\_CREATE\_FREE\_DESCRIPTOR\_SET\_BIT;}
+\DoxyCodeLine{387   desc\_pool\_create.maxSets = 256;}
+\DoxyCodeLine{388   desc\_pool\_create.poolSizeCount = \mbox{\hyperlink{vkshim_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\_SIZE}}(pool\_sizes);}
+\DoxyCodeLine{389   desc\_pool\_create.pPoolSizes = \&pool\_sizes[0];}
+\DoxyCodeLine{390 }
+\DoxyCodeLine{391   res = vkCreateDescriptorPool(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&desc\_pool\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&desc\_pool\_);}
+\DoxyCodeLine{392   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{393     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateDescriptorPool failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{394     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{395   \}}
+\DoxyCodeLine{396 }
+\DoxyCodeLine{397   VkSamplerCreateInfo sampler\_create = \{\};}
+\DoxyCodeLine{398   sampler\_create.sType = VK\_STRUCTURE\_TYPE\_SAMPLER\_CREATE\_INFO;}
+\DoxyCodeLine{399   sampler\_create.magFilter = VK\_FILTER\_LINEAR;}
+\DoxyCodeLine{400   sampler\_create.minFilter = VK\_FILTER\_LINEAR;}
+\DoxyCodeLine{401   sampler\_create.addressModeU = VK\_SAMPLER\_ADDRESS\_MODE\_REPEAT;}
+\DoxyCodeLine{402   sampler\_create.addressModeV = VK\_SAMPLER\_ADDRESS\_MODE\_REPEAT;}
+\DoxyCodeLine{403   sampler\_create.addressModeW = VK\_SAMPLER\_ADDRESS\_MODE\_REPEAT;}
+\DoxyCodeLine{404   sampler\_create.borderColor = VK\_BORDER\_COLOR\_FLOAT\_TRANSPARENT\_BLACK;}
+\DoxyCodeLine{405 }
+\DoxyCodeLine{406   res = vkCreateSampler(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&sampler\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{namespacehwcomposer_a35eda7e12c33bc7d611bdc19b4eee4bb}{sampler\_}});}
+\DoxyCodeLine{407   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{408     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateSampler failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{409     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{410   \}}
+\DoxyCodeLine{411 }
+\DoxyCodeLine{412   VkAttachmentDescription attach\_desc = \{\};}
+\DoxyCodeLine{413   attach\_desc.format = VK\_FORMAT\_R8G8B8A8\_UNORM;}
+\DoxyCodeLine{414   attach\_desc.samples = VK\_SAMPLE\_COUNT\_1\_BIT;}
+\DoxyCodeLine{415   attach\_desc.loadOp = VK\_ATTACHMENT\_LOAD\_OP\_CLEAR;}
+\DoxyCodeLine{416   attach\_desc.storeOp = VK\_ATTACHMENT\_STORE\_OP\_STORE;}
+\DoxyCodeLine{417   attach\_desc.stencilLoadOp = VK\_ATTACHMENT\_LOAD\_OP\_DONT\_CARE;}
+\DoxyCodeLine{418   attach\_desc.stencilStoreOp = VK\_ATTACHMENT\_STORE\_OP\_DONT\_CARE;}
+\DoxyCodeLine{419   attach\_desc.initialLayout = VK\_IMAGE\_LAYOUT\_COLOR\_ATTACHMENT\_OPTIMAL;}
+\DoxyCodeLine{420   attach\_desc.finalLayout = VK\_IMAGE\_LAYOUT\_PRESENT\_SRC\_KHR;}
+\DoxyCodeLine{421 }
+\DoxyCodeLine{422   VkAttachmentReference color\_attach = \{\};}
+\DoxyCodeLine{423   color\_attach.attachment = 0;}
+\DoxyCodeLine{424   color\_attach.layout = VK\_IMAGE\_LAYOUT\_COLOR\_ATTACHMENT\_OPTIMAL;}
+\DoxyCodeLine{425 }
+\DoxyCodeLine{426   VkSubpassDescription subpass\_desc = \{\};}
+\DoxyCodeLine{427   subpass\_desc.pipelineBindPoint = VK\_PIPELINE\_BIND\_POINT\_GRAPHICS;}
+\DoxyCodeLine{428   subpass\_desc.colorAttachmentCount = 1;}
+\DoxyCodeLine{429   subpass\_desc.pColorAttachments = \&color\_attach;}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431   VkSubpassDependency subpass\_deps = \{\};}
+\DoxyCodeLine{432   subpass\_deps.srcSubpass = 0;}
+\DoxyCodeLine{433   subpass\_deps.dstSubpass = VK\_SUBPASS\_EXTERNAL;}
+\DoxyCodeLine{434   subpass\_deps.srcStageMask = VK\_PIPELINE\_STAGE\_COLOR\_ATTACHMENT\_OUTPUT\_BIT;}
+\DoxyCodeLine{435   subpass\_deps.dstStageMask = VK\_PIPELINE\_STAGE\_BOTTOM\_OF\_PIPE\_BIT;}
+\DoxyCodeLine{436   subpass\_deps.srcAccessMask = VK\_ACCESS\_COLOR\_ATTACHMENT\_WRITE\_BIT;}
+\DoxyCodeLine{437   subpass\_deps.dstAccessMask = VK\_ACCESS\_MEMORY\_READ\_BIT;}
+\DoxyCodeLine{438   subpass\_deps.dependencyFlags = VK\_DEPENDENCY\_BY\_REGION\_BIT;}
+\DoxyCodeLine{439 }
+\DoxyCodeLine{440   VkRenderPassCreateInfo pass\_create = \{\};}
+\DoxyCodeLine{441   pass\_create.sType = VK\_STRUCTURE\_TYPE\_RENDER\_PASS\_CREATE\_INFO;}
+\DoxyCodeLine{442   pass\_create.attachmentCount = 1;}
+\DoxyCodeLine{443   pass\_create.pAttachments = \&attach\_desc;}
+\DoxyCodeLine{444   pass\_create.subpassCount = 1;}
+\DoxyCodeLine{445   pass\_create.pSubpasses = \&subpass\_desc;}
+\DoxyCodeLine{446   pass\_create.dependencyCount = 1;}
+\DoxyCodeLine{447   pass\_create.pDependencies = \&subpass\_deps;}
+\DoxyCodeLine{448 }
+\DoxyCodeLine{449   res = vkCreateRenderPass(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&pass\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&\mbox{\hyperlink{namespacehwcomposer_a4d9a582f332eed1a524e91fce91d09c2}{render\_pass\_}});}
+\DoxyCodeLine{450   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{451     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateRenderPass failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{452     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{453   \}}
+\DoxyCodeLine{454 }
+\DoxyCodeLine{455   VkPipelineCacheCreateInfo pipeline\_cache\_create = \{\};}
+\DoxyCodeLine{456   pipeline\_cache\_create.sType = VK\_STRUCTURE\_TYPE\_PIPELINE\_CACHE\_CREATE\_INFO;}
+\DoxyCodeLine{457 }
+\DoxyCodeLine{458   res = vkCreatePipelineCache(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&pipeline\_cache\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},}
+\DoxyCodeLine{459                               \&\mbox{\hyperlink{namespacehwcomposer_af9df829b7f8d0582f51a2b9c77c477c3}{pipeline\_cache\_}});}
+\DoxyCodeLine{460   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{461     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreatePipelineCache failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{462     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{463   \}}
+\DoxyCodeLine{464 }
+\DoxyCodeLine{465   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{466 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKRenderer_abbaf31607e1572de1e74de4d2ea50a03}\label{classhwcomposer_1_1VKRenderer_abbaf31607e1572de1e74de4d2ea50a03}} 
+\index{hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}!Insert\+Fence@{Insert\+Fence}}
+\index{Insert\+Fence@{Insert\+Fence}!hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}}
+\subsubsection{\texorpdfstring{Insert\+Fence()}{InsertFence()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+V\+K\+Renderer\+::\+Insert\+Fence (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{kms\+\_\+fence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1Renderer_a0b7be67ed8f89c994cf3bcfd418ef0a4}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 684 of file vkrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{684                                               \{}
+\DoxyCodeLine{685 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKRenderer_ad0a97c5d88ce71c265a6bd5ee139ffe7}\label{classhwcomposer_1_1VKRenderer_ad0a97c5d88ce71c265a6bd5ee139ffe7}} 
+\index{hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}!Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}}
+\index{Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}!hwcomposer\+::\+V\+K\+Renderer@{hwcomposer\+::\+V\+K\+Renderer}}
+\subsubsection{\texorpdfstring{Set\+Explicit\+Sync\+Support()}{SetExplicitSyncSupport()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+V\+K\+Renderer\+::\+Set\+Explicit\+Sync\+Support (\begin{DoxyParamCaption}\item[{bool}]{disable\+\_\+explicit\+\_\+sync }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1Renderer_a8f889bf7b26aa7d1436e9ecf6d15e629}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 687 of file vkrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{687                                                                   \{}
+\DoxyCodeLine{688 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/vk/\mbox{\hyperlink{vkrenderer_8h}{vkrenderer.\+h}}\item 
+common/compositor/vk/\mbox{\hyperlink{vkrenderer_8cpp}{vkrenderer.\+cpp}}\end{DoxyCompactItemize}

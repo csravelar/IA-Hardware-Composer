@@ -1,0 +1,43 @@
+\hypertarget{structhwcomposer_1_1DrmPlaneResDeleter}{}\section{hwcomposer\+:\+:Drm\+Plane\+Res\+Deleter Struct Reference}
+\label{structhwcomposer_1_1DrmPlaneResDeleter}\index{hwcomposer\+::\+Drm\+Plane\+Res\+Deleter@{hwcomposer\+::\+Drm\+Plane\+Res\+Deleter}}
+
+
+{\ttfamily \#include $<$drmscopedtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1DrmPlaneResDeleter_a51c95387d3216d64570acb8d543d0f41}{operator()}} (\mbox{\hyperlink{drmscopedtypes_8h_abc090a2f00ebaea9426f9a5636f40994}{drm\+Mode\+Plane\+Res}} $\ast$plane\+\_\+res) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 53 of file drmscopedtypes.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrmPlaneResDeleter_a51c95387d3216d64570acb8d543d0f41}\label{structhwcomposer_1_1DrmPlaneResDeleter_a51c95387d3216d64570acb8d543d0f41}} 
+\index{hwcomposer\+::\+Drm\+Plane\+Res\+Deleter@{hwcomposer\+::\+Drm\+Plane\+Res\+Deleter}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+Drm\+Plane\+Res\+Deleter@{hwcomposer\+::\+Drm\+Plane\+Res\+Deleter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Plane\+Res\+Deleter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drmscopedtypes_8h_abc090a2f00ebaea9426f9a5636f40994}{drm\+Mode\+Plane\+Res}} $\ast$}]{plane\+\_\+res }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 48 of file drmscopedtypes.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                                 \{}
+\DoxyCodeLine{49   drmModeFreePlaneResources(plane);}
+\DoxyCodeLine{50 \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8h}{drmscopedtypes.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8cpp}{drmscopedtypes.\+cpp}}\end{DoxyCompactItemize}

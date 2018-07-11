@@ -1,0 +1,940 @@
+\hypertarget{classandroid_1_1IAHWC2}{}\section{android\+:\+:I\+A\+H\+WC2 Class Reference}
+\label{classandroid_1_1IAHWC2}\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+
+
+{\ttfamily \#include $<$iahwc2.\+h$>$}
+
+Inheritance diagram for android\+:\+:I\+A\+H\+WC2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classandroid_1_1IAHWC2}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer}{Hwc2\+Layer}}
+\item 
+class \mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay}{Hwc\+Display}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classandroid_1_1IAHWC2_ae360eef66e03be710114293b9988c8a4}{I\+A\+H\+W\+C2}} ()
+\item 
+H\+W\+C2\+::\+Error \mbox{\hyperlink{classandroid_1_1IAHWC2_a3661dacf6f3f03be404f9dfcfdeb00a9}{Init}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer\+::\+Native\+Display}} $\ast$ \mbox{\hyperlink{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}{Get\+Primary\+Display}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer\+::\+Native\+Display}} $\ast$ \mbox{\hyperlink{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}{Get\+Extended\+Display}} (uint32\+\_\+t)
+\item 
+void \mbox{\hyperlink{classandroid_1_1IAHWC2_a473d60e8aa343e77381a6e0b04d18a23}{Enable\+H\+D\+C\+P\+Session\+For\+Display}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}} content\+\_\+type)
+\item 
+void \mbox{\hyperlink{classandroid_1_1IAHWC2_aafac4b9c0d47342441cb104b9df8b52c}{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}} (\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}} content\+\_\+type)
+\item 
+void \mbox{\hyperlink{classandroid_1_1IAHWC2_aaf25b167aeb33efb991f4872f421061f}{Disable\+H\+D\+C\+P\+Session\+For\+Display}} (uint32\+\_\+t display)
+\item 
+void \mbox{\hyperlink{classandroid_1_1IAHWC2_aab6e5e72a11dea3b84889e7df3ca76ee}{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}} ()
+\item 
+H\+W\+C2\+::\+Error \mbox{\hyperlink{classandroid_1_1IAHWC2_a54263b4dff8e34603246c9ddb5b4f8a1}{Create\+Virtual\+Display}} (uint32\+\_\+t width, uint32\+\_\+t height, int32\+\_\+t $\ast$format, hwc2\+\_\+display\+\_\+t $\ast$display)
+\item 
+H\+W\+C2\+::\+Error \mbox{\hyperlink{classandroid_1_1IAHWC2_a25898776b812d1d34e309aa4348b191e}{Destroy\+Virtual\+Display}} (hwc2\+\_\+display\+\_\+t display)
+\item 
+void \mbox{\hyperlink{classandroid_1_1IAHWC2_a09a0fe32d95d6d75613458a906b8e4c5}{Dump}} (uint32\+\_\+t $\ast$size, char $\ast$buffer)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classandroid_1_1IAHWC2_a0be35c4807be335ebe48af20f66b9bdd}{Get\+Max\+Virtual\+Display\+Count}} ()
+\item 
+H\+W\+C2\+::\+Error \mbox{\hyperlink{classandroid_1_1IAHWC2_aa31f7c1a1085b8f3e65efc7dcdac957e}{Register\+Callback}} (int32\+\_\+t descriptor, hwc2\+\_\+callback\+\_\+data\+\_\+t data, hwc2\+\_\+function\+\_\+pointer\+\_\+t function)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classandroid_1_1IAHWC2_a9a000bc25e85fbc053408f3885688e33}{Hook\+Dev\+Open}} (const struct hw\+\_\+module\+\_\+t $\ast$module, const char $\ast$name, struct hw\+\_\+device\+\_\+t $\ast$$\ast$dev)
+\item 
+static \mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}} $\ast$ \mbox{\hyperlink{classandroid_1_1IAHWC2_a8a800faee2b34f1362effb240bedd921}{to\+I\+A\+H\+W\+C2}} (hwc2\+\_\+device\+\_\+t $\ast$dev)
+\item 
+{\footnotesize template$<$typename P\+FN , typename T $>$ }\\static hwc2\+\_\+function\+\_\+pointer\+\_\+t \mbox{\hyperlink{classandroid_1_1IAHWC2_a456dbb88757cb56b49e90d543984c1a9}{To\+Hook}} (T function)
+\item 
+{\footnotesize template$<$typename T , typename Hook\+Type , Hook\+Type func, typename... Args$>$ }\\static T \mbox{\hyperlink{classandroid_1_1IAHWC2_a994749ea99efb163360648e408a00e4e}{Device\+Hook}} (hwc2\+\_\+device\+\_\+t $\ast$dev, Args... args)
+\item 
+{\footnotesize template$<$typename Hook\+Type , Hook\+Type func, typename... Args$>$ }\\static int32\+\_\+t \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{Display\+Hook}} (hwc2\+\_\+device\+\_\+t $\ast$dev, hwc2\+\_\+display\+\_\+t display\+\_\+handle, Args... args)
+\item 
+{\footnotesize template$<$typename Hook\+Type , Hook\+Type func, typename... Args$>$ }\\static int32\+\_\+t \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{Layer\+Hook}} (hwc2\+\_\+device\+\_\+t $\ast$dev, hwc2\+\_\+display\+\_\+t display\+\_\+handle, hwc2\+\_\+layer\+\_\+t layer\+\_\+handle, Args... args)
+\item 
+static int \mbox{\hyperlink{classandroid_1_1IAHWC2_ac3298b89f4ebcb2cdd242699e1f75e89}{Hook\+Dev\+Close}} (hw\+\_\+device\+\_\+t $\ast$dev)
+\item 
+static void \mbox{\hyperlink{classandroid_1_1IAHWC2_af72ba2d7fbae030b39b208e34f458f5a}{Hook\+Dev\+Get\+Capabilities}} (hwc2\+\_\+device\+\_\+t $\ast$dev, uint32\+\_\+t $\ast$out\+\_\+count, int32\+\_\+t $\ast$out\+\_\+capabilities)
+\item 
+static hwc2\+\_\+function\+\_\+pointer\+\_\+t \mbox{\hyperlink{classandroid_1_1IAHWC2_a71d1f51b751729750a04a18f11d5fd64}{Hook\+Dev\+Get\+Function}} (struct hwc2\+\_\+device $\ast$device, int32\+\_\+t descriptor)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GpuDevice}{hwcomposer\+::\+Gpu\+Device}} \mbox{\hyperlink{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}{device\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay}{Hwc\+Display}} $>$ $>$ \mbox{\hyperlink{classandroid_1_1IAHWC2_a898debffb7438ad1174b7424ba99972c}{extended\+\_\+displays\+\_\+}}
+\item 
+\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay}{Hwc\+Display}} \mbox{\hyperlink{classandroid_1_1IAHWC2_ab6fc4580e0296ab10ecae375ced67e4c}{primary\+\_\+display\+\_\+}}
+\item 
+\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay}{Hwc\+Display}} \mbox{\hyperlink{classandroid_1_1IAHWC2_a37e11529251134e7fcb74d72330f1d43}{virtual\+\_\+display\+\_\+}}
+\item 
+\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay}{Hwc\+Display}} \mbox{\hyperlink{classandroid_1_1IAHWC2_a63c04984ca69519a5c094f9a8f66841c}{nested\+\_\+display\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classandroid_1_1IAHWC2_adc8645c0a2315d4884f26f886002096e}{disable\+\_\+explicit\+\_\+sync\+\_\+}} = false
+\item 
+\mbox{\hyperlink{classandroid_1_1HwcService}{android\+::\+Hwc\+Service}} \mbox{\hyperlink{classandroid_1_1IAHWC2_aeacec4376e02e5c5da31fa7ed3986ce2}{hwc\+Service\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classandroid_1_1IAHWC2_a7bcc5119aa74196920162eb37790fafc}{scaling\+\_\+mode\+\_\+}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file iahwc2.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_ae360eef66e03be710114293b9988c8a4}\label{classandroid_1_1IAHWC2_ae360eef66e03be710114293b9988c8a4}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!I\+A\+H\+W\+C2@{I\+A\+H\+W\+C2}}
+\index{I\+A\+H\+W\+C2@{I\+A\+H\+W\+C2}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{I\+A\+H\+W\+C2()}{IAHWC2()}}
+{\footnotesize\ttfamily android\+::\+I\+A\+H\+W\+C2\+::\+I\+A\+H\+W\+C2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 126 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126                \{}
+\DoxyCodeLine{127   common.tag = HARDWARE\_DEVICE\_TAG;}
+\DoxyCodeLine{128   common.version = HWC\_DEVICE\_API\_VERSION\_2\_0;}
+\DoxyCodeLine{129   common.close = \mbox{\hyperlink{classandroid_1_1IAHWC2_ac3298b89f4ebcb2cdd242699e1f75e89}{HookDevClose}};}
+\DoxyCodeLine{130   getCapabilities = \mbox{\hyperlink{classandroid_1_1IAHWC2_af72ba2d7fbae030b39b208e34f458f5a}{HookDevGetCapabilities}};}
+\DoxyCodeLine{131   getFunction = \mbox{\hyperlink{classandroid_1_1IAHWC2_a71d1f51b751729750a04a18f11d5fd64}{HookDevGetFunction}};}
+\DoxyCodeLine{132 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a54263b4dff8e34603246c9ddb5b4f8a1}\label{classandroid_1_1IAHWC2_a54263b4dff8e34603246c9ddb5b4f8a1}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Create\+Virtual\+Display@{Create\+Virtual\+Display}}
+\index{Create\+Virtual\+Display@{Create\+Virtual\+Display}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Create\+Virtual\+Display()}{CreateVirtualDisplay()}}
+{\footnotesize\ttfamily H\+W\+C2\+::\+Error android\+::\+I\+A\+H\+W\+C2\+::\+Create\+Virtual\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{int32\+\_\+t $\ast$}]{format,  }\item[{hwc2\+\_\+display\+\_\+t $\ast$}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 207 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{209                                                                   \{}
+\DoxyCodeLine{210   *display = (hwc2\_display\_t)HWC\_DISPLAY\_VIRTUAL;}
+\DoxyCodeLine{211   \mbox{\hyperlink{classandroid_1_1IAHWC2_a37e11529251134e7fcb74d72330f1d43}{virtual\_display\_}}.\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_aca926207d2bfcbd4599519c6bef5ce76}{InitVirtualDisplay}}(\mbox{\hyperlink{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}{device\_}}.
+      \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_adfec63ead3453ee2cd80b5183d4961d8}{GetVirtualDisplay}}(), width,}
+\DoxyCodeLine{212                                       height, \mbox{\hyperlink{classandroid_1_1IAHWC2_adc8645c0a2315d4884f26f886002096e}{disable\_explicit\_sync\_}});}
+\DoxyCodeLine{213   \textcolor{keywordflow}{if} (*format == HAL\_PIXEL\_FORMAT\_IMPLEMENTATION\_DEFINED) \{}
+\DoxyCodeLine{214     \textcolor{comment}{// fallback to RGBA\_8888, align with framework requirement}}
+\DoxyCodeLine{215     *format = HAL\_PIXEL\_FORMAT\_RGBA\_8888;}
+\DoxyCodeLine{216   \}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218   \textcolor{keywordflow}{return} HWC2::Error::None;}
+\DoxyCodeLine{219 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a25898776b812d1d34e309aa4348b191e}\label{classandroid_1_1IAHWC2_a25898776b812d1d34e309aa4348b191e}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Destroy\+Virtual\+Display@{Destroy\+Virtual\+Display}}
+\index{Destroy\+Virtual\+Display@{Destroy\+Virtual\+Display}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Destroy\+Virtual\+Display()}{DestroyVirtualDisplay()}}
+{\footnotesize\ttfamily H\+W\+C2\+::\+Error android\+::\+I\+A\+H\+W\+C2\+::\+Destroy\+Virtual\+Display (\begin{DoxyParamCaption}\item[{hwc2\+\_\+display\+\_\+t}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 221 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{221                                                               \{}
+\DoxyCodeLine{222   \textcolor{keywordflow}{if} (display != (hwc2\_display\_t)HWC\_DISPLAY\_VIRTUAL) \{}
+\DoxyCodeLine{223     ALOGE(\textcolor{stringliteral}{"Not Virtual Display Type in DestroyVirtualDisplay"});}
+\DoxyCodeLine{224     \textcolor{keywordflow}{return} HWC2::Error::BadDisplay;}
+\DoxyCodeLine{225   \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227   \textcolor{keywordflow}{return} HWC2::Error::None;}
+\DoxyCodeLine{228 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a994749ea99efb163360648e408a00e4e}\label{classandroid_1_1IAHWC2_a994749ea99efb163360648e408a00e4e}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Device\+Hook@{Device\+Hook}}
+\index{Device\+Hook@{Device\+Hook}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Device\+Hook()}{DeviceHook()}}
+{\footnotesize\ttfamily template$<$typename T , typename Hook\+Type , Hook\+Type func, typename... Args$>$ \\
+static T android\+::\+I\+A\+H\+W\+C2\+::\+Device\+Hook (\begin{DoxyParamCaption}\item[{hwc2\+\_\+device\+\_\+t $\ast$}]{dev,  }\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 227 of file iahwc2.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{227                                                         \{}
+\DoxyCodeLine{228     \mbox{\hyperlink{classandroid_1_1IAHWC2_ae360eef66e03be710114293b9988c8a4}{IAHWC2}} *hwc = \mbox{\hyperlink{classandroid_1_1IAHWC2_a8a800faee2b34f1362effb240bedd921}{toIAHWC2}}(dev);}
+\DoxyCodeLine{229     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(((*hwc).*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{230   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_aab6e5e72a11dea3b84889e7df3ca76ee}\label{classandroid_1_1IAHWC2_aab6e5e72a11dea3b84889e7df3ca76ee}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}}
+\index{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays()}{DisableHDCPSessionForAllDisplays()}}
+{\footnotesize\ttfamily void android\+::\+I\+A\+H\+W\+C2\+::\+Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1279 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1279                                               \{}
+\DoxyCodeLine{1280   \mbox{\hyperlink{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}{device\_}}.\mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a7038e1dc3d4a2be7206e6a35717521e2}{DisableHDCPSessionForAllDisplays}}();}
+\DoxyCodeLine{1281 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_aaf25b167aeb33efb991f4872f421061f}\label{classandroid_1_1IAHWC2_aaf25b167aeb33efb991f4872f421061f}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Disable\+H\+D\+C\+P\+Session\+For\+Display@{Disable\+H\+D\+C\+P\+Session\+For\+Display}}
+\index{Disable\+H\+D\+C\+P\+Session\+For\+Display@{Disable\+H\+D\+C\+P\+Session\+For\+Display}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Disable\+H\+D\+C\+P\+Session\+For\+Display()}{DisableHDCPSessionForDisplay()}}
+{\footnotesize\ttfamily void android\+::\+I\+A\+H\+W\+C2\+::\+Disable\+H\+D\+C\+P\+Session\+For\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1275 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1275                                                           \{}
+\DoxyCodeLine{1276   \mbox{\hyperlink{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}{device\_}}.\mbox{\hyperlink{classhwcomposer_1_1GpuDevice_ae61aa61ee1591464e7e5a703b2c6c848}{DisableHDCPSessionForDisplay}}(display);}
+\DoxyCodeLine{1277 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}\label{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Display\+Hook@{Display\+Hook}}
+\index{Display\+Hook@{Display\+Hook}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Display\+Hook()}{DisplayHook()}}
+{\footnotesize\ttfamily template$<$typename Hook\+Type , Hook\+Type func, typename... Args$>$ \\
+static int32\+\_\+t android\+::\+I\+A\+H\+W\+C2\+::\+Display\+Hook (\begin{DoxyParamCaption}\item[{hwc2\+\_\+device\+\_\+t $\ast$}]{dev,  }\item[{hwc2\+\_\+display\+\_\+t}]{display\+\_\+handle,  }\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 233 of file iahwc2.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{234                                            \{}
+\DoxyCodeLine{235     \mbox{\hyperlink{classandroid_1_1IAHWC2_ae360eef66e03be710114293b9988c8a4}{IAHWC2}} *hwc = \mbox{\hyperlink{classandroid_1_1IAHWC2_a8a800faee2b34f1362effb240bedd921}{toIAHWC2}}(dev);}
+\DoxyCodeLine{236     \textcolor{keywordflow}{if} (display\_handle == HWC\_DISPLAY\_PRIMARY) \{}
+\DoxyCodeLine{237       HwcDisplay \&display = hwc->primary\_display\_;}
+\DoxyCodeLine{238       \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}((display.*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{239     \}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241     \textcolor{keywordflow}{if} (display\_handle == HWC\_DISPLAY\_VIRTUAL) \{}
+\DoxyCodeLine{242       \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(}
+\DoxyCodeLine{243           (hwc->virtual\_display\_.*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{244     \}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#ifdef NESTED\_DISPLAY\_SUPPORT}}
+\DoxyCodeLine{246     \textcolor{keywordflow}{if} (display\_handle == HWC\_DISPLAY\_NESTED) \{}
+\DoxyCodeLine{247       \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(}
+\DoxyCodeLine{248           (hwc->nested\_display\_.*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{249     \}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{251     \textcolor{keywordflow}{if} (display\_handle == HWC\_DISPLAY\_EXTERNAL) \{}
+\DoxyCodeLine{252       HwcDisplay *display = hwc->extended\_displays\_.at(0).get();}
+\DoxyCodeLine{253       \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(}
+\DoxyCodeLine{254           (display->*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{255     \}}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257     HwcDisplay *display = hwc->extended\_displays\_.at(1).get();}
+\DoxyCodeLine{258     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}((display->*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{259   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a09a0fe32d95d6d75613458a906b8e4c5}\label{classandroid_1_1IAHWC2_a09a0fe32d95d6d75613458a906b8e4c5}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Dump@{Dump}}
+\index{Dump@{Dump}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily void android\+::\+I\+A\+H\+W\+C2\+::\+Dump (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{size,  }\item[{char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 230 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{230                                               \{}
+\DoxyCodeLine{231   \textcolor{comment}{// TODO: Implement dump}}
+\DoxyCodeLine{232   unsupported(\_\_func\_\_, size, buffer);}
+\DoxyCodeLine{233 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_aafac4b9c0d47342441cb104b9df8b52c}\label{classandroid_1_1IAHWC2_aafac4b9c0d47342441cb104b9df8b52c}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}}
+\index{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays()}{EnableHDCPSessionForAllDisplays()}}
+{\footnotesize\ttfamily void android\+::\+I\+A\+H\+W\+C2\+::\+Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1267 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1267                                                                           \{}
+\DoxyCodeLine{1268   HWCContentType type = kCONTENT\_TYPE0;}
+\DoxyCodeLine{1269   \textcolor{keywordflow}{if} (content\_type == \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142af0fc741639c5bd530c1d21db89198688}{HWCS\_CP\_CONTENT\_TYPE1}}) \{}
+\DoxyCodeLine{1270     type = kCONTENT\_TYPE1;}
+\DoxyCodeLine{1271   \}}
+\DoxyCodeLine{1272   \mbox{\hyperlink{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}{device\_}}.\mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a5a42e70ab1648c6e7741b2322f898691}{EnableHDCPSessionForAllDisplays}}(type);}
+\DoxyCodeLine{1273 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a473d60e8aa343e77381a6e0b04d18a23}\label{classandroid_1_1IAHWC2_a473d60e8aa343e77381a6e0b04d18a23}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Enable\+H\+D\+C\+P\+Session\+For\+Display@{Enable\+H\+D\+C\+P\+Session\+For\+Display}}
+\index{Enable\+H\+D\+C\+P\+Session\+For\+Display@{Enable\+H\+D\+C\+P\+Session\+For\+Display}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Enable\+H\+D\+C\+P\+Session\+For\+Display()}{EnableHDCPSessionForDisplay()}}
+{\footnotesize\ttfamily void android\+::\+I\+A\+H\+W\+C2\+::\+Enable\+H\+D\+C\+P\+Session\+For\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1257 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1258                                                                         \{}
+\DoxyCodeLine{1259   HWCContentType type = kCONTENT\_TYPE0;}
+\DoxyCodeLine{1260   \textcolor{keywordflow}{if} (content\_type == \mbox{\hyperlink{hwcserviceapi_8h_ad7fa0f48e8d945fd273ba9984a6d9142af0fc741639c5bd530c1d21db89198688}{HWCS\_CP\_CONTENT\_TYPE1}}) \{}
+\DoxyCodeLine{1261     type = kCONTENT\_TYPE1;}
+\DoxyCodeLine{1262   \}}
+\DoxyCodeLine{1263 }
+\DoxyCodeLine{1264   \mbox{\hyperlink{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}{device\_}}.\mbox{\hyperlink{classhwcomposer_1_1GpuDevice_aa558c97ab2f80eac47ede0a788a59a28}{EnableHDCPSessionForDisplay}}(display, type);}
+\DoxyCodeLine{1265 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}\label{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Get\+Extended\+Display@{Get\+Extended\+Display}}
+\index{Get\+Extended\+Display@{Get\+Extended\+Display}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Get\+Extended\+Display()}{GetExtendedDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer\+::\+Native\+Display}} $\ast$ android\+::\+I\+A\+H\+W\+C2\+::\+Get\+Extended\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{disp\+Index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1245 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1245                                                                       \{}
+\DoxyCodeLine{1246   \textcolor{keywordflow}{return} \mbox{\hyperlink{classandroid_1_1IAHWC2_a898debffb7438ad1174b7424ba99972c}{extended\_displays\_}}.at(dispIndex)->GetDisplay();}
+\DoxyCodeLine{1247 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a0be35c4807be335ebe48af20f66b9bdd}\label{classandroid_1_1IAHWC2_a0be35c4807be335ebe48af20f66b9bdd}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Get\+Max\+Virtual\+Display\+Count@{Get\+Max\+Virtual\+Display\+Count}}
+\index{Get\+Max\+Virtual\+Display\+Count@{Get\+Max\+Virtual\+Display\+Count}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Get\+Max\+Virtual\+Display\+Count()}{GetMaxVirtualDisplayCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t android\+::\+I\+A\+H\+W\+C2\+::\+Get\+Max\+Virtual\+Display\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 235 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{235                                            \{}
+\DoxyCodeLine{236   \textcolor{keywordflow}{return} 2;}
+\DoxyCodeLine{237 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}\label{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Get\+Primary\+Display@{Get\+Primary\+Display}}
+\index{Get\+Primary\+Display@{Get\+Primary\+Display}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Get\+Primary\+Display()}{GetPrimaryDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer\+::\+Native\+Display}} $\ast$ android\+::\+I\+A\+H\+W\+C2\+::\+Get\+Primary\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1249 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1249                                                    \{}
+\DoxyCodeLine{1250   \textcolor{keywordflow}{return} \mbox{\hyperlink{classandroid_1_1IAHWC2_ab6fc4580e0296ab10ecae375ced67e4c}{primary\_display\_}}.\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a78b8d9cfdd2a0831798b705a16612271}{GetDisplay}}();}
+\DoxyCodeLine{1251 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_ac3298b89f4ebcb2cdd242699e1f75e89}\label{classandroid_1_1IAHWC2_ac3298b89f4ebcb2cdd242699e1f75e89}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Hook\+Dev\+Close@{Hook\+Dev\+Close}}
+\index{Hook\+Dev\+Close@{Hook\+Dev\+Close}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Hook\+Dev\+Close()}{HookDevClose()}}
+{\footnotesize\ttfamily int android\+::\+I\+A\+H\+W\+C2\+::\+Hook\+Dev\+Close (\begin{DoxyParamCaption}\item[{hw\+\_\+device\+\_\+t $\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1010 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1010                                         \{}
+\DoxyCodeLine{1011   unsupported(\_\_func\_\_);}
+\DoxyCodeLine{1012   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{1013 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_af72ba2d7fbae030b39b208e34f458f5a}\label{classandroid_1_1IAHWC2_af72ba2d7fbae030b39b208e34f458f5a}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Hook\+Dev\+Get\+Capabilities@{Hook\+Dev\+Get\+Capabilities}}
+\index{Hook\+Dev\+Get\+Capabilities@{Hook\+Dev\+Get\+Capabilities}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Hook\+Dev\+Get\+Capabilities()}{HookDevGetCapabilities()}}
+{\footnotesize\ttfamily void android\+::\+I\+A\+H\+W\+C2\+::\+Hook\+Dev\+Get\+Capabilities (\begin{DoxyParamCaption}\item[{hwc2\+\_\+device\+\_\+t $\ast$}]{dev,  }\item[{uint32\+\_\+t $\ast$}]{out\+\_\+count,  }\item[{int32\+\_\+t $\ast$}]{out\+\_\+capabilities }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1016 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1018                                                  \{}
+\DoxyCodeLine{1019   supported(\_\_func\_\_);}
+\DoxyCodeLine{1020   *out\_count = 0;}
+\DoxyCodeLine{1021 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a71d1f51b751729750a04a18f11d5fd64}\label{classandroid_1_1IAHWC2_a71d1f51b751729750a04a18f11d5fd64}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Hook\+Dev\+Get\+Function@{Hook\+Dev\+Get\+Function}}
+\index{Hook\+Dev\+Get\+Function@{Hook\+Dev\+Get\+Function}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Hook\+Dev\+Get\+Function()}{HookDevGetFunction()}}
+{\footnotesize\ttfamily hwc2\+\_\+function\+\_\+pointer\+\_\+t android\+::\+I\+A\+H\+W\+C2\+::\+Hook\+Dev\+Get\+Function (\begin{DoxyParamCaption}\item[{struct hwc2\+\_\+device $\ast$}]{device,  }\item[{int32\+\_\+t}]{descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1024 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1025                                                                        \{}
+\DoxyCodeLine{1026   supported(\_\_func\_\_);}
+\DoxyCodeLine{1027   \textcolor{keyword}{auto} func = \textcolor{keyword}{static\_cast<}HWC2::FunctionDescriptor\textcolor{keyword}{>}(descriptor);}
+\DoxyCodeLine{1028   \textcolor{keywordflow}{switch} (func) \{}
+\DoxyCodeLine{1029     \textcolor{comment}{// Device functions}}
+\DoxyCodeLine{1030     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::CreateVirtualDisplay:}
+\DoxyCodeLine{1031       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_CREATE\_VIRTUAL\_DISPLAY>(}
+\DoxyCodeLine{1032           \mbox{\hyperlink{classandroid_1_1IAHWC2_a994749ea99efb163360648e408a00e4e}{DeviceHook}}<int32\_t, decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_a54263b4dff8e34603246c9ddb5b4f8a1}{IAHWC2::CreateVirtualDisplay}}),}
+\DoxyCodeLine{1033                      \&\mbox{\hyperlink{classandroid_1_1IAHWC2_a54263b4dff8e34603246c9ddb5b4f8a1}{IAHWC2::CreateVirtualDisplay}}, uint32\_t, uint32\_t,}
+\DoxyCodeLine{1034                      int32\_t *, hwc2\_display\_t *>);}
+\DoxyCodeLine{1035     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::DestroyVirtualDisplay:}
+\DoxyCodeLine{1036       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_DESTROY\_VIRTUAL\_DISPLAY>(}
+\DoxyCodeLine{1037           \mbox{\hyperlink{classandroid_1_1IAHWC2_a994749ea99efb163360648e408a00e4e}{DeviceHook}}<int32\_t, decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_a25898776b812d1d34e309aa4348b191e}{IAHWC2::DestroyVirtualDisplay}}),}
+\DoxyCodeLine{1038                      \&\mbox{\hyperlink{classandroid_1_1IAHWC2_a25898776b812d1d34e309aa4348b191e}{IAHWC2::DestroyVirtualDisplay}}, hwc2\_display\_t>);}
+\DoxyCodeLine{1039     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::Dump:}
+\DoxyCodeLine{1040       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_DUMP>(\mbox{\hyperlink{classandroid_1_1IAHWC2_a994749ea99efb163360648e408a00e4e}{DeviceHook}}<}
+\DoxyCodeLine{1041           void, decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_a09a0fe32d95d6d75613458a906b8e4c5}{IAHWC2::Dump}}), \&\mbox{\hyperlink{classandroid_1_1IAHWC2_a09a0fe32d95d6d75613458a906b8e4c5}{IAHWC2::Dump}}, uint32\_t *, \textcolor{keywordtype}{char} *>);}
+\DoxyCodeLine{1042     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetMaxVirtualDisplayCount:}
+\DoxyCodeLine{1043       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_MAX\_VIRTUAL\_DISPLAY\_COUNT>(}
+\DoxyCodeLine{1044           \mbox{\hyperlink{classandroid_1_1IAHWC2_a994749ea99efb163360648e408a00e4e}{DeviceHook}}<uint32\_t, decltype(\&
+      \mbox{\hyperlink{classandroid_1_1IAHWC2_a0be35c4807be335ebe48af20f66b9bdd}{IAHWC2::GetMaxVirtualDisplayCount}}),}
+\DoxyCodeLine{1045                      \&\mbox{\hyperlink{classandroid_1_1IAHWC2_a0be35c4807be335ebe48af20f66b9bdd}{IAHWC2::GetMaxVirtualDisplayCount}}>);}
+\DoxyCodeLine{1046     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::RegisterCallback:}
+\DoxyCodeLine{1047       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_REGISTER\_CALLBACK>(}
+\DoxyCodeLine{1048           \mbox{\hyperlink{classandroid_1_1IAHWC2_a994749ea99efb163360648e408a00e4e}{DeviceHook}}<int32\_t, decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_aa31f7c1a1085b8f3e65efc7dcdac957e}{IAHWC2::RegisterCallback}}),}
+\DoxyCodeLine{1049                      \&\mbox{\hyperlink{classandroid_1_1IAHWC2_aa31f7c1a1085b8f3e65efc7dcdac957e}{IAHWC2::RegisterCallback}}, int32\_t, hwc2\_callback\_data\_t,}
+\DoxyCodeLine{1050                      hwc2\_function\_pointer\_t>);}
+\DoxyCodeLine{1051 }
+\DoxyCodeLine{1052     \textcolor{comment}{// Display functions}}
+\DoxyCodeLine{1053     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::AcceptDisplayChanges:}
+\DoxyCodeLine{1054       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_ACCEPT\_DISPLAY\_CHANGES>(}
+\DoxyCodeLine{1055           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a497e8468963a8f99091b0adf26e88d22}{HwcDisplay::AcceptDisplayChanges}}),}
+\DoxyCodeLine{1056                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a497e8468963a8f99091b0adf26e88d22}{HwcDisplay::AcceptDisplayChanges}}>);}
+\DoxyCodeLine{1057     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::CreateLayer:}
+\DoxyCodeLine{1058       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_CREATE\_LAYER>(}
+\DoxyCodeLine{1059           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ada75fdd0198f4af8c9d788e40ae3c2cf}{HwcDisplay::CreateLayer}}),}
+\DoxyCodeLine{1060                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ada75fdd0198f4af8c9d788e40ae3c2cf}{HwcDisplay::CreateLayer}}, hwc2\_layer\_t *>);}
+\DoxyCodeLine{1061     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::DestroyLayer:}
+\DoxyCodeLine{1062       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_DESTROY\_LAYER>(}
+\DoxyCodeLine{1063           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a91b01f1cfa215f977198b586f9166a12}{HwcDisplay::DestroyLayer}}),}
+\DoxyCodeLine{1064                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a91b01f1cfa215f977198b586f9166a12}{HwcDisplay::DestroyLayer}}, hwc2\_layer\_t>);}
+\DoxyCodeLine{1065     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetActiveConfig:}
+\DoxyCodeLine{1066       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_ACTIVE\_CONFIG>(}
+\DoxyCodeLine{1067           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_af4afd09113abd2aeb5ad4f589f2e2925}{HwcDisplay::GetActiveConfig}}),}
+\DoxyCodeLine{1068                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_af4afd09113abd2aeb5ad4f589f2e2925}{HwcDisplay::GetActiveConfig}}, hwc2\_config\_t *>);}
+\DoxyCodeLine{1069     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetChangedCompositionTypes:}
+\DoxyCodeLine{1070       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_CHANGED\_COMPOSITION\_TYPES>(}
+\DoxyCodeLine{1071           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&
+      \mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a189cf471b80eb0d791d18489410e4e9e}{HwcDisplay::GetChangedCompositionTypes}}),}
+\DoxyCodeLine{1072                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a189cf471b80eb0d791d18489410e4e9e}{HwcDisplay::GetChangedCompositionTypes}}, uint32\_t *,}
+\DoxyCodeLine{1073                       hwc2\_layer\_t *, int32\_t *>);}
+\DoxyCodeLine{1074     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetClientTargetSupport:}
+\DoxyCodeLine{1075       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_CLIENT\_TARGET\_SUPPORT>(}
+\DoxyCodeLine{1076           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_aed9220827da7c1223bdd057936dfdda9}{HwcDisplay::GetClientTargetSupport}}),}
+\DoxyCodeLine{1077                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_aed9220827da7c1223bdd057936dfdda9}{HwcDisplay::GetClientTargetSupport}}, uint32\_t, uint32\_t,}
+\DoxyCodeLine{1078                       int32\_t, int32\_t>);}
+\DoxyCodeLine{1079     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetColorModes:}
+\DoxyCodeLine{1080       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_COLOR\_MODES>(}
+\DoxyCodeLine{1081           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ae327c73dee0e2a29a0552ecbabb787c6}{HwcDisplay::GetColorModes}}),}
+\DoxyCodeLine{1082                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ae327c73dee0e2a29a0552ecbabb787c6}{HwcDisplay::GetColorModes}}, uint32\_t *, int32\_t *>);}
+\DoxyCodeLine{1083     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetDisplayAttribute:}
+\DoxyCodeLine{1084       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_DISPLAY\_ATTRIBUTE>(\mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<}
+\DoxyCodeLine{1085           decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a221b06873ece677e034281d6d6ba4a7d}{HwcDisplay::GetDisplayAttribute}}),}
+\DoxyCodeLine{1086           \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a221b06873ece677e034281d6d6ba4a7d}{HwcDisplay::GetDisplayAttribute}}, hwc2\_config\_t, int32\_t, int32\_t *>);}
+\DoxyCodeLine{1087     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetDisplayConfigs:}
+\DoxyCodeLine{1088       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_DISPLAY\_CONFIGS>(\mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<}
+\DoxyCodeLine{1089           decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a2585af6362380b84bb7a0371168a619a}{HwcDisplay::GetDisplayConfigs}}),}
+\DoxyCodeLine{1090           \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a2585af6362380b84bb7a0371168a619a}{HwcDisplay::GetDisplayConfigs}}, uint32\_t *, hwc2\_config\_t *>);}
+\DoxyCodeLine{1091     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetDisplayName:}
+\DoxyCodeLine{1092       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_DISPLAY\_NAME>(}
+\DoxyCodeLine{1093           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a85c2cf183556e94c5c7cda586c92065f}{HwcDisplay::GetDisplayName}}),}
+\DoxyCodeLine{1094                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a85c2cf183556e94c5c7cda586c92065f}{HwcDisplay::GetDisplayName}}, uint32\_t *, \textcolor{keywordtype}{char} *>);}
+\DoxyCodeLine{1095     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetDisplayRequests:}
+\DoxyCodeLine{1096       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_DISPLAY\_REQUESTS>(}
+\DoxyCodeLine{1097           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_adb14a11cab4edf27c0dbe32ac345fadc}{HwcDisplay::GetDisplayRequests}}),}
+\DoxyCodeLine{1098                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_adb14a11cab4edf27c0dbe32ac345fadc}{HwcDisplay::GetDisplayRequests}}, int32\_t *, uint32\_t *,}
+\DoxyCodeLine{1099                       hwc2\_layer\_t *, int32\_t *>);}
+\DoxyCodeLine{1100     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetDisplayType:}
+\DoxyCodeLine{1101       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_DISPLAY\_TYPE>(}
+\DoxyCodeLine{1102           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a21303b0cf590a97e2e20ea0270ba77df}{HwcDisplay::GetDisplayType}}),}
+\DoxyCodeLine{1103                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a21303b0cf590a97e2e20ea0270ba77df}{HwcDisplay::GetDisplayType}}, int32\_t *>);}
+\DoxyCodeLine{1104     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetDozeSupport:}
+\DoxyCodeLine{1105       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_DOZE\_SUPPORT>(}
+\DoxyCodeLine{1106           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a19ec46021d167d9cb0b0e57b7a9378d2}{HwcDisplay::GetDozeSupport}}),}
+\DoxyCodeLine{1107                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a19ec46021d167d9cb0b0e57b7a9378d2}{HwcDisplay::GetDozeSupport}}, int32\_t *>);}
+\DoxyCodeLine{1108     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetHdrCapabilities:}
+\DoxyCodeLine{1109       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_HDR\_CAPABILITIES>(}
+\DoxyCodeLine{1110           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ab94580c5495c24067ecd159c4bce2853}{HwcDisplay::GetHdrCapabilities}}),}
+\DoxyCodeLine{1111                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ab94580c5495c24067ecd159c4bce2853}{HwcDisplay::GetHdrCapabilities}}, uint32\_t *, int32\_t *,}
+\DoxyCodeLine{1112                       \textcolor{keywordtype}{float} *, \textcolor{keywordtype}{float} *, \textcolor{keywordtype}{float} *>);}
+\DoxyCodeLine{1113     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::GetReleaseFences:}
+\DoxyCodeLine{1114       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_GET\_RELEASE\_FENCES>(}
+\DoxyCodeLine{1115           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a66f3567d548e8b875dd39697fe3f0015}{HwcDisplay::GetReleaseFences}}),}
+\DoxyCodeLine{1116                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a66f3567d548e8b875dd39697fe3f0015}{HwcDisplay::GetReleaseFences}}, uint32\_t *, hwc2\_layer\_t *,}
+\DoxyCodeLine{1117                       int32\_t *>);}
+\DoxyCodeLine{1118     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::PresentDisplay:}
+\DoxyCodeLine{1119       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_PRESENT\_DISPLAY>(}
+\DoxyCodeLine{1120           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a03669d74faa9a067891fb601a8ae6d40}{HwcDisplay::PresentDisplay}}),}
+\DoxyCodeLine{1121                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a03669d74faa9a067891fb601a8ae6d40}{HwcDisplay::PresentDisplay}}, int32\_t *>);}
+\DoxyCodeLine{1122     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetActiveConfig:}
+\DoxyCodeLine{1123       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_ACTIVE\_CONFIG>(}
+\DoxyCodeLine{1124           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ab5538a77eb9b7d95fed27394d60a9c86}{HwcDisplay::SetActiveConfig}}),}
+\DoxyCodeLine{1125                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ab5538a77eb9b7d95fed27394d60a9c86}{HwcDisplay::SetActiveConfig}}, hwc2\_config\_t>);}
+\DoxyCodeLine{1126     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetClientTarget:}
+\DoxyCodeLine{1127       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_CLIENT\_TARGET>(\mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<}
+\DoxyCodeLine{1128           decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a7fbc348863a5e2d392895f51d338125b}{HwcDisplay::SetClientTarget}}), \&
+      \mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a7fbc348863a5e2d392895f51d338125b}{HwcDisplay::SetClientTarget}},}
+\DoxyCodeLine{1129           buffer\_handle\_t, int32\_t, int32\_t, hwc\_region\_t>);}
+\DoxyCodeLine{1130     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetColorMode:}
+\DoxyCodeLine{1131       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_COLOR\_MODE>(}
+\DoxyCodeLine{1132           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a991fb4d388962047ffacf245632dcff6}{HwcDisplay::SetColorMode}}),}
+\DoxyCodeLine{1133                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a991fb4d388962047ffacf245632dcff6}{HwcDisplay::SetColorMode}}, int32\_t>);}
+\DoxyCodeLine{1134     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetColorTransform:}
+\DoxyCodeLine{1135       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_COLOR\_TRANSFORM>(}
+\DoxyCodeLine{1136           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a4656f7766ace6c2b088f95baf9890e78}{HwcDisplay::SetColorTransform}}),}
+\DoxyCodeLine{1137                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a4656f7766ace6c2b088f95baf9890e78}{HwcDisplay::SetColorTransform}}, \textcolor{keyword}{const} \textcolor{keywordtype}{float} *, int32\_t>);}
+\DoxyCodeLine{1138     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetOutputBuffer:}
+\DoxyCodeLine{1139       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_OUTPUT\_BUFFER>(}
+\DoxyCodeLine{1140           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a6c583df41684be8b95a614f93cbf32f3}{HwcDisplay::SetOutputBuffer}}),}
+\DoxyCodeLine{1141                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a6c583df41684be8b95a614f93cbf32f3}{HwcDisplay::SetOutputBuffer}}, buffer\_handle\_t, int32\_t>);}
+\DoxyCodeLine{1142     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetPowerMode:}
+\DoxyCodeLine{1143       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_POWER\_MODE>(}
+\DoxyCodeLine{1144           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a21001029de1f371883f15e0c6cca0737}{HwcDisplay::SetPowerMode}}),}
+\DoxyCodeLine{1145                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a21001029de1f371883f15e0c6cca0737}{HwcDisplay::SetPowerMode}}, int32\_t>);}
+\DoxyCodeLine{1146     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetVsyncEnabled:}
+\DoxyCodeLine{1147       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_VSYNC\_ENABLED>(}
+\DoxyCodeLine{1148           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ab8d230817aae3252a868cf626080b331}{HwcDisplay::SetVsyncEnabled}}),}
+\DoxyCodeLine{1149                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ab8d230817aae3252a868cf626080b331}{HwcDisplay::SetVsyncEnabled}}, int32\_t>);}
+\DoxyCodeLine{1150     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::ValidateDisplay:}
+\DoxyCodeLine{1151       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_VALIDATE\_DISPLAY>(}
+\DoxyCodeLine{1152           \mbox{\hyperlink{classandroid_1_1IAHWC2_ac200f209fed5da229b857a6be2a417d3}{DisplayHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ac1db2f4e2030edf976a113401d46d42a}{HwcDisplay::ValidateDisplay}}),}
+\DoxyCodeLine{1153                       \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ac1db2f4e2030edf976a113401d46d42a}{HwcDisplay::ValidateDisplay}}, uint32\_t *, uint32\_t *>);}
+\DoxyCodeLine{1154 }
+\DoxyCodeLine{1155     \textcolor{comment}{// Layer functions}}
+\DoxyCodeLine{1156     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetCursorPosition:}
+\DoxyCodeLine{1157       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_CURSOR\_POSITION>(}
+\DoxyCodeLine{1158           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_ae0e07b5f0856ec0358cb1c3e5101a9d8}{Hwc2Layer::SetCursorPosition}}),}
+\DoxyCodeLine{1159                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_ae0e07b5f0856ec0358cb1c3e5101a9d8}{Hwc2Layer::SetCursorPosition}}, int32\_t, int32\_t>);}
+\DoxyCodeLine{1160     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerBlendMode:}
+\DoxyCodeLine{1161       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_BLEND\_MODE>(}
+\DoxyCodeLine{1162           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_aeebdea172047373bebe04aacd0c12984}{Hwc2Layer::SetLayerBlendMode}}),}
+\DoxyCodeLine{1163                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_aeebdea172047373bebe04aacd0c12984}{Hwc2Layer::SetLayerBlendMode}}, int32\_t>);}
+\DoxyCodeLine{1164     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerBuffer:}
+\DoxyCodeLine{1165       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_BUFFER>(}
+\DoxyCodeLine{1166           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a748f182bf70067e273088e19bc55c4de}{Hwc2Layer::SetLayerBuffer}}),}
+\DoxyCodeLine{1167                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a748f182bf70067e273088e19bc55c4de}{Hwc2Layer::SetLayerBuffer}}, buffer\_handle\_t, int32\_t>);}
+\DoxyCodeLine{1168     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerColor:}
+\DoxyCodeLine{1169       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_COLOR>(}
+\DoxyCodeLine{1170           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a13c6379bb7319dcb0fc8ae6b6df3ae85}{Hwc2Layer::SetLayerColor}}),}
+\DoxyCodeLine{1171                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a13c6379bb7319dcb0fc8ae6b6df3ae85}{Hwc2Layer::SetLayerColor}}, hwc\_color\_t>);}
+\DoxyCodeLine{1172     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerCompositionType:}
+\DoxyCodeLine{1173       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_COMPOSITION\_TYPE>(}
+\DoxyCodeLine{1174           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a04088743426ddc86a6cbf0e989a7c583}{Hwc2Layer::SetLayerCompositionType}}),}
+\DoxyCodeLine{1175                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a04088743426ddc86a6cbf0e989a7c583}{Hwc2Layer::SetLayerCompositionType}}, int32\_t>);}
+\DoxyCodeLine{1176     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerDataspace:}
+\DoxyCodeLine{1177       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_DATASPACE>(}
+\DoxyCodeLine{1178           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a8623df440e40f374a16bcc0880f0a8d0}{Hwc2Layer::SetLayerDataspace}}),}
+\DoxyCodeLine{1179                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a8623df440e40f374a16bcc0880f0a8d0}{Hwc2Layer::SetLayerDataspace}}, int32\_t>);}
+\DoxyCodeLine{1180     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerDisplayFrame:}
+\DoxyCodeLine{1181       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_DISPLAY\_FRAME>(}
+\DoxyCodeLine{1182           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a224e34e2bfd8844cc884b940a43440d4}{Hwc2Layer::SetLayerDisplayFrame}}),}
+\DoxyCodeLine{1183                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a224e34e2bfd8844cc884b940a43440d4}{Hwc2Layer::SetLayerDisplayFrame}}, hwc\_rect\_t>);}
+\DoxyCodeLine{1184     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerPlaneAlpha:}
+\DoxyCodeLine{1185       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_PLANE\_ALPHA>(}
+\DoxyCodeLine{1186           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a5e24e6a5a3cea60c8988b707893e0b6f}{Hwc2Layer::SetLayerPlaneAlpha}}),}
+\DoxyCodeLine{1187                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a5e24e6a5a3cea60c8988b707893e0b6f}{Hwc2Layer::SetLayerPlaneAlpha}}, \textcolor{keywordtype}{float}>);}
+\DoxyCodeLine{1188     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerSidebandStream:}
+\DoxyCodeLine{1189       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_SIDEBAND\_STREAM>(\mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<}
+\DoxyCodeLine{1190           decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_af54a365509e49e3229e21ce63dc1475d}{Hwc2Layer::SetLayerSidebandStream}}),}
+\DoxyCodeLine{1191           \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_af54a365509e49e3229e21ce63dc1475d}{Hwc2Layer::SetLayerSidebandStream}}, \textcolor{keyword}{const} native\_handle\_t *>);}
+\DoxyCodeLine{1192     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerSourceCrop:}
+\DoxyCodeLine{1193       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_SOURCE\_CROP>(}
+\DoxyCodeLine{1194           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_ac093db321158cb01dfcdd646ddd037fe}{Hwc2Layer::SetLayerSourceCrop}}),}
+\DoxyCodeLine{1195                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_ac093db321158cb01dfcdd646ddd037fe}{Hwc2Layer::SetLayerSourceCrop}}, hwc\_frect\_t>);}
+\DoxyCodeLine{1196     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerSurfaceDamage:}
+\DoxyCodeLine{1197       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_SURFACE\_DAMAGE>(}
+\DoxyCodeLine{1198           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a7d67bc2cbcef22cf7d4bdd603d56ddd6}{Hwc2Layer::SetLayerSurfaceDamage}}),}
+\DoxyCodeLine{1199                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a7d67bc2cbcef22cf7d4bdd603d56ddd6}{Hwc2Layer::SetLayerSurfaceDamage}}, hwc\_region\_t>);}
+\DoxyCodeLine{1200     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerTransform:}
+\DoxyCodeLine{1201       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_TRANSFORM>(}
+\DoxyCodeLine{1202           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_af8f8b97ad63f413d0c16d8e95662c054}{Hwc2Layer::SetLayerTransform}}),}
+\DoxyCodeLine{1203                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_af8f8b97ad63f413d0c16d8e95662c054}{Hwc2Layer::SetLayerTransform}}, int32\_t>);}
+\DoxyCodeLine{1204     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerVisibleRegion:}
+\DoxyCodeLine{1205       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_VISIBLE\_REGION>(}
+\DoxyCodeLine{1206           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_af1a6d7d40ce690e300ff37b933ac44eb}{Hwc2Layer::SetLayerVisibleRegion}}),}
+\DoxyCodeLine{1207                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_af1a6d7d40ce690e300ff37b933ac44eb}{Hwc2Layer::SetLayerVisibleRegion}}, hwc\_region\_t>);}
+\DoxyCodeLine{1208     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::SetLayerZOrder:}
+\DoxyCodeLine{1209       \textcolor{keywordflow}{return} ToHook<HWC2\_PFN\_SET\_LAYER\_Z\_ORDER>(}
+\DoxyCodeLine{1210           \mbox{\hyperlink{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}{LayerHook}}<decltype(\&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a73c282c185dbd4c86d86f666eaf241ad}{Hwc2Layer::SetLayerZOrder}}),}
+\DoxyCodeLine{1211                     \&\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1Hwc2Layer_a73c282c185dbd4c86d86f666eaf241ad}{Hwc2Layer::SetLayerZOrder}}, uint32\_t>);}
+\DoxyCodeLine{1212     \textcolor{keywordflow}{case} HWC2::FunctionDescriptor::Invalid:}
+\DoxyCodeLine{1213     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{1214       \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{1215   \}}
+\DoxyCodeLine{1216 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a9a000bc25e85fbc053408f3885688e33}\label{classandroid_1_1IAHWC2_a9a000bc25e85fbc053408f3885688e33}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Hook\+Dev\+Open@{Hook\+Dev\+Open}}
+\index{Hook\+Dev\+Open@{Hook\+Dev\+Open}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Hook\+Dev\+Open()}{HookDevOpen()}}
+{\footnotesize\ttfamily int android\+::\+I\+A\+H\+W\+C2\+::\+Hook\+Dev\+Open (\begin{DoxyParamCaption}\item[{const struct hw\+\_\+module\+\_\+t $\ast$}]{module,  }\item[{const char $\ast$}]{name,  }\item[{struct hw\+\_\+device\+\_\+t $\ast$$\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1219 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1220                                                   \{}
+\DoxyCodeLine{1221   supported(\_\_func\_\_);}
+\DoxyCodeLine{1222   \textcolor{keywordflow}{if} (strcmp(name, HWC\_HARDWARE\_COMPOSER)) \{}
+\DoxyCodeLine{1223     ALOGE(\textcolor{stringliteral}{"Invalid module name- \%s"}, name);}
+\DoxyCodeLine{1224     \textcolor{keywordflow}{return} -EINVAL;}
+\DoxyCodeLine{1225   \}}
+\DoxyCodeLine{1226 }
+\DoxyCodeLine{1227   std::unique\_ptr<IAHWC2> ctx(\textcolor{keyword}{new} \mbox{\hyperlink{classandroid_1_1IAHWC2_ae360eef66e03be710114293b9988c8a4}{IAHWC2}}());}
+\DoxyCodeLine{1228   \textcolor{keywordflow}{if} (!ctx) \{}
+\DoxyCodeLine{1229     ALOGE(\textcolor{stringliteral}{"Failed to allocate IAHWC2"});}
+\DoxyCodeLine{1230     \textcolor{keywordflow}{return} -ENOMEM;}
+\DoxyCodeLine{1231   \}}
+\DoxyCodeLine{1232 }
+\DoxyCodeLine{1233   HWC2::Error err = ctx->Init();}
+\DoxyCodeLine{1234   \textcolor{keywordflow}{if} (err != HWC2::Error::None) \{}
+\DoxyCodeLine{1235     ALOGE(\textcolor{stringliteral}{"Failed to initialize IAHWC2 err=\%d\(\backslash\)n"}, err);}
+\DoxyCodeLine{1236     \textcolor{keywordflow}{return} -EINVAL;}
+\DoxyCodeLine{1237   \}}
+\DoxyCodeLine{1238 }
+\DoxyCodeLine{1239   ctx->common.module = \textcolor{keyword}{const\_cast<}hw\_module\_t *\textcolor{keyword}{>}(module);}
+\DoxyCodeLine{1240   *dev = \&ctx->common;}
+\DoxyCodeLine{1241   ctx.release();}
+\DoxyCodeLine{1242   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{1243 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a3661dacf6f3f03be404f9dfcfdeb00a9}\label{classandroid_1_1IAHWC2_a3661dacf6f3f03be404f9dfcfdeb00a9}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Init@{Init}}
+\index{Init@{Init}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily H\+W\+C2\+::\+Error android\+::\+I\+A\+H\+W\+C2\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134                        \{}
+\DoxyCodeLine{135   \textcolor{keywordtype}{char} value[PROPERTY\_VALUE\_MAX];}
+\DoxyCodeLine{136   property\_get(\textcolor{stringliteral}{"board.disable.explicit.sync"}, value, \textcolor{stringliteral}{"0"});}
+\DoxyCodeLine{137   \mbox{\hyperlink{classandroid_1_1IAHWC2_adc8645c0a2315d4884f26f886002096e}{disable\_explicit\_sync\_}} = atoi(value);}
+\DoxyCodeLine{138   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classandroid_1_1IAHWC2_adc8645c0a2315d4884f26f886002096e}{disable\_explicit\_sync\_}})}
+\DoxyCodeLine{139     ALOGI(\textcolor{stringliteral}{"EXPLICIT SYNC support is disabled"});}
+\DoxyCodeLine{140   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{141     ALOGI(\textcolor{stringliteral}{"EXPLICIT SYNC support is enabled"});}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143   property\_get(\textcolor{stringliteral}{"board.hwc.scaling.mode"}, value, \textcolor{stringliteral}{"2"});}
+\DoxyCodeLine{144   \mbox{\hyperlink{classandroid_1_1IAHWC2_a7bcc5119aa74196920162eb37790fafc}{scaling\_mode\_}} = atoi(value);}
+\DoxyCodeLine{145   \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classandroid_1_1IAHWC2_a7bcc5119aa74196920162eb37790fafc}{scaling\_mode\_}}) \{}
+\DoxyCodeLine{146     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{147       ALOGI(\textcolor{stringliteral}{"HWC Scaling Mode Fast"});}
+\DoxyCodeLine{148       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{149     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{150       ALOGI(\textcolor{stringliteral}{"HWC Scaling Mode High Quality"});}
+\DoxyCodeLine{151       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{152     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{153       ALOGI(\textcolor{stringliteral}{"Unsupport HWC Scaling Mode"});}
+\DoxyCodeLine{154       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{155   \}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}{device\_}}.\mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a794b3bd7590853c44f59e32252d2b3d7}{Initialize}}()) \{}
+\DoxyCodeLine{158     ALOGE(\textcolor{stringliteral}{"Can't initialize drm object."});}
+\DoxyCodeLine{159     \textcolor{keywordflow}{return} HWC2::Error::NoResources;}
+\DoxyCodeLine{160   \}}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162   \textcolor{keyword}{const} std::vector<NativeDisplay *> \&displays = \mbox{\hyperlink{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}{device\_}}.\mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a36bad6a205218da9546f18e282af05a5}{GetAllDisplays}}();}
+\DoxyCodeLine{163   NativeDisplay *primary\_display = displays.at(0);}
+\DoxyCodeLine{164   uint32\_t external\_display\_id = 1;}
+\DoxyCodeLine{165   \mbox{\hyperlink{classandroid_1_1IAHWC2_ab6fc4580e0296ab10ecae375ced67e4c}{primary\_display\_}}.\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_abbc9a0659cb5229f3b8741e9823190e2}{Init}}(primary\_display, 0, 
+      \mbox{\hyperlink{classandroid_1_1IAHWC2_adc8645c0a2315d4884f26f886002096e}{disable\_explicit\_sync\_}},}
+\DoxyCodeLine{166                         \mbox{\hyperlink{classandroid_1_1IAHWC2_a7bcc5119aa74196920162eb37790fafc}{scaling\_mode\_}});}
+\DoxyCodeLine{167   \textcolor{keywordtype}{size\_t} size = displays.size();}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169   \textcolor{comment}{// Add nested display which is expected to use the output of this display and}}
+\DoxyCodeLine{170   \textcolor{comment}{// show it himself. Nested display can be implemented with real HW display.}}
+\DoxyCodeLine{171   \textcolor{comment}{// It's different from virtual display.}}
+\DoxyCodeLine{172   \mbox{\hyperlink{classandroid_1_1IAHWC2_a63c04984ca69519a5c094f9a8f66841c}{nested\_display\_}}.\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a87a9694e43f5d0aed5735efccbde0a7e}{InitNestedDisplay}}(\mbox{\hyperlink{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}{device\_}}.
+      \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_aa5ea5011fbcb67cddb67faca689c97d1}{GetNestedDisplay}}(),}
+\DoxyCodeLine{173                                     \mbox{\hyperlink{classandroid_1_1IAHWC2_adc8645c0a2315d4884f26f886002096e}{disable\_explicit\_sync\_}});}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{176     \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *display = displays.at(i);}
+\DoxyCodeLine{177     \textcolor{keywordflow}{if} (display == primary\_display)}
+\DoxyCodeLine{178       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180     std::unique\_ptr<HwcDisplay> temp(\textcolor{keyword}{new} HwcDisplay());}
+\DoxyCodeLine{181     temp->Init(display, external\_display\_id, \mbox{\hyperlink{classandroid_1_1IAHWC2_adc8645c0a2315d4884f26f886002096e}{disable\_explicit\_sync\_}},}
+\DoxyCodeLine{182                \mbox{\hyperlink{classandroid_1_1IAHWC2_a7bcc5119aa74196920162eb37790fafc}{scaling\_mode\_}});}
+\DoxyCodeLine{183     \mbox{\hyperlink{classandroid_1_1IAHWC2_a898debffb7438ad1174b7424ba99972c}{extended\_displays\_}}.emplace\_back(std::move(temp));}
+\DoxyCodeLine{184     external\_display\_id++;}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186     \textcolor{comment}{// Let's not confuse things with Virtual Display.}}
+\DoxyCodeLine{187     \textcolor{keywordflow}{if} (external\_display\_id == HWC\_DISPLAY\_VIRTUAL)}
+\DoxyCodeLine{188       external\_display\_id = HWC\_DISPLAY\_VIRTUAL + 1;}
+\DoxyCodeLine{189   \}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191   \textcolor{comment}{// Start the hwc service}}
+\DoxyCodeLine{192   \mbox{\hyperlink{classandroid_1_1IAHWC2_aeacec4376e02e5c5da31fa7ed3986ce2}{hwcService\_}}.\mbox{\hyperlink{classandroid_1_1HwcService_a696bd30240b25fb0ec210fbaa943b3e9}{Start}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194   \textcolor{keywordflow}{return} HWC2::Error::None;}
+\DoxyCodeLine{195 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}\label{classandroid_1_1IAHWC2_a8e25d258ac3a7c539c0fca11623773dd}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Layer\+Hook@{Layer\+Hook}}
+\index{Layer\+Hook@{Layer\+Hook}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Layer\+Hook()}{LayerHook()}}
+{\footnotesize\ttfamily template$<$typename Hook\+Type , Hook\+Type func, typename... Args$>$ \\
+static int32\+\_\+t android\+::\+I\+A\+H\+W\+C2\+::\+Layer\+Hook (\begin{DoxyParamCaption}\item[{hwc2\+\_\+device\+\_\+t $\ast$}]{dev,  }\item[{hwc2\+\_\+display\+\_\+t}]{display\+\_\+handle,  }\item[{hwc2\+\_\+layer\+\_\+t}]{layer\+\_\+handle,  }\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 262 of file iahwc2.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{263                                                                     \{}
+\DoxyCodeLine{264     \mbox{\hyperlink{classandroid_1_1IAHWC2_ae360eef66e03be710114293b9988c8a4}{IAHWC2}} *hwc = \mbox{\hyperlink{classandroid_1_1IAHWC2_a8a800faee2b34f1362effb240bedd921}{toIAHWC2}}(dev);}
+\DoxyCodeLine{265     \textcolor{keywordflow}{if} (display\_handle == HWC\_DISPLAY\_PRIMARY) \{}
+\DoxyCodeLine{266       HwcDisplay \&display = hwc->primary\_display\_;}
+\DoxyCodeLine{267       Hwc2Layer \&layer = display.get\_layer(layer\_handle);}
+\DoxyCodeLine{268       \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}((layer.*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{269     \}}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{271     \textcolor{keywordflow}{if} (display\_handle == HWC\_DISPLAY\_VIRTUAL) \{}
+\DoxyCodeLine{272       Hwc2Layer \&layer = hwc->virtual\_display\_.get\_layer(layer\_handle);}
+\DoxyCodeLine{273       \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}((layer.*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{274     \}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#ifdef NESTED\_DISPLAY\_SUPPORT}}
+\DoxyCodeLine{276     \textcolor{keywordflow}{if} (display\_handle == HWC\_DISPLAY\_NESTED) \{}
+\DoxyCodeLine{277       Hwc2Layer \&layer = hwc->nested\_display\_.get\_layer(layer\_handle);}
+\DoxyCodeLine{278       \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}((layer.*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{279     \}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{281     \textcolor{keywordflow}{if} (display\_handle == HWC\_DISPLAY\_EXTERNAL) \{}
+\DoxyCodeLine{282       HwcDisplay *display = hwc->extended\_displays\_.at(0).get();}
+\DoxyCodeLine{283       Hwc2Layer \&layer = display->get\_layer(layer\_handle);}
+\DoxyCodeLine{284       \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}((layer.*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{285     \}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287     HwcDisplay *display = hwc->extended\_displays\_.at(1).get();}
+\DoxyCodeLine{288     Hwc2Layer \&layer = display->get\_layer(layer\_handle);}
+\DoxyCodeLine{289     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}((layer.*func)(std::forward<Args>(args)...));}
+\DoxyCodeLine{290   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_aa31f7c1a1085b8f3e65efc7dcdac957e}\label{classandroid_1_1IAHWC2_aa31f7c1a1085b8f3e65efc7dcdac957e}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!Register\+Callback@{Register\+Callback}}
+\index{Register\+Callback@{Register\+Callback}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{Register\+Callback()}{RegisterCallback()}}
+{\footnotesize\ttfamily H\+W\+C2\+::\+Error android\+::\+I\+A\+H\+W\+C2\+::\+Register\+Callback (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{descriptor,  }\item[{hwc2\+\_\+callback\+\_\+data\+\_\+t}]{data,  }\item[{hwc2\+\_\+function\+\_\+pointer\+\_\+t}]{function }\end{DoxyParamCaption})}
+
+
+
+Definition at line 239 of file iahwc2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{241                                                                        \{}
+\DoxyCodeLine{242   supported(\_\_func\_\_);}
+\DoxyCodeLine{243   \textcolor{keyword}{auto} callback = \textcolor{keyword}{static\_cast<}HWC2::Callback\textcolor{keyword}{>}(descriptor);}
+\DoxyCodeLine{244   \textcolor{keywordtype}{size\_t} size = \mbox{\hyperlink{classandroid_1_1IAHWC2_a898debffb7438ad1174b7424ba99972c}{extended\_displays\_}}.size();}
+\DoxyCodeLine{245   HWC2::Error error = HWC2::Error::None;}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247   \textcolor{keywordflow}{switch} (callback) \{}
+\DoxyCodeLine{248     \textcolor{keywordflow}{case} HWC2::Callback::Hotplug: \{}
+\DoxyCodeLine{249       \mbox{\hyperlink{classandroid_1_1IAHWC2_ab6fc4580e0296ab10ecae375ced67e4c}{primary\_display\_}}.\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a433d61b77535463d4d2a0cefd4b45349}{RegisterHotPlugCallback}}(data, \textcolor{keyword}{function});}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#ifdef NESTED\_DISPLAY\_SUPPORT}}
+\DoxyCodeLine{251       \mbox{\hyperlink{classandroid_1_1IAHWC2_a63c04984ca69519a5c094f9a8f66841c}{nested\_display\_}}.\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_a433d61b77535463d4d2a0cefd4b45349}{RegisterHotPlugCallback}}(data, \textcolor{keyword}{function});}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{253       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{254         IAHWC2::HwcDisplay *display = \mbox{\hyperlink{classandroid_1_1IAHWC2_a898debffb7438ad1174b7424ba99972c}{extended\_displays\_}}.at(i).get();}
+\DoxyCodeLine{255         display->RegisterHotPlugCallback(data, \textcolor{keyword}{function});}
+\DoxyCodeLine{256       \}}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{259     \}}
+\DoxyCodeLine{260     \textcolor{keywordflow}{case} HWC2::Callback::Vsync: \{}
+\DoxyCodeLine{261       \mbox{\hyperlink{classandroid_1_1IAHWC2_ab6fc4580e0296ab10ecae375ced67e4c}{primary\_display\_}}.\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_af8985b36e15ec94773805aca9f7df96e}{RegisterVsyncCallback}}(data, \textcolor{keyword}{function});}
+\DoxyCodeLine{262       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{263         IAHWC2::HwcDisplay *display = \mbox{\hyperlink{classandroid_1_1IAHWC2_a898debffb7438ad1174b7424ba99972c}{extended\_displays\_}}.at(i).get();}
+\DoxyCodeLine{264         display->RegisterVsyncCallback(data, \textcolor{keyword}{function});}
+\DoxyCodeLine{265       \}}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{268     \}}
+\DoxyCodeLine{269     \textcolor{keywordflow}{case} HWC2::Callback::Refresh: \{}
+\DoxyCodeLine{270       \mbox{\hyperlink{classandroid_1_1IAHWC2_ab6fc4580e0296ab10ecae375ced67e4c}{primary\_display\_}}.\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay_ab165973e4324d38db10f9584e59eacfc}{RegisterRefreshCallback}}(data, \textcolor{keyword}{function});}
+\DoxyCodeLine{271       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{272         IAHWC2::HwcDisplay *display = \mbox{\hyperlink{classandroid_1_1IAHWC2_a898debffb7438ad1174b7424ba99972c}{extended\_displays\_}}.at(i).get();}
+\DoxyCodeLine{273         display->RegisterRefreshCallback(data, \textcolor{keyword}{function});}
+\DoxyCodeLine{274       \}}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{277     \}}
+\DoxyCodeLine{278     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{279       error = HWC2::Error::BadParameter;}
+\DoxyCodeLine{280       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{281   \}}
+\DoxyCodeLine{282   \textcolor{keywordflow}{return} error;}
+\DoxyCodeLine{283 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a456dbb88757cb56b49e90d543984c1a9}\label{classandroid_1_1IAHWC2_a456dbb88757cb56b49e90d543984c1a9}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!To\+Hook@{To\+Hook}}
+\index{To\+Hook@{To\+Hook}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{To\+Hook()}{ToHook()}}
+{\footnotesize\ttfamily template$<$typename P\+FN , typename T $>$ \\
+static hwc2\+\_\+function\+\_\+pointer\+\_\+t android\+::\+I\+A\+H\+W\+C2\+::\+To\+Hook (\begin{DoxyParamCaption}\item[{T}]{function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 221 of file iahwc2.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{221                                                     \{}
+\DoxyCodeLine{222     static\_assert(std::is\_same<PFN, T>::value, \textcolor{stringliteral}{"Incompatible fn pointer"});}
+\DoxyCodeLine{223     \textcolor{keywordflow}{return} \textcolor{keyword}{reinterpret\_cast<}hwc2\_function\_pointer\_t\textcolor{keyword}{>}(\textcolor{keyword}{function});}
+\DoxyCodeLine{224   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a8a800faee2b34f1362effb240bedd921}\label{classandroid_1_1IAHWC2_a8a800faee2b34f1362effb240bedd921}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!to\+I\+A\+H\+W\+C2@{to\+I\+A\+H\+W\+C2}}
+\index{to\+I\+A\+H\+W\+C2@{to\+I\+A\+H\+W\+C2}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{to\+I\+A\+H\+W\+C2()}{toIAHWC2()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}}$\ast$ android\+::\+I\+A\+H\+W\+C2\+::to\+I\+A\+H\+W\+C2 (\begin{DoxyParamCaption}\item[{hwc2\+\_\+device\+\_\+t $\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 216 of file iahwc2.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{216                                               \{}
+\DoxyCodeLine{217     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classandroid_1_1IAHWC2_ae360eef66e03be710114293b9988c8a4}{IAHWC2}} *\textcolor{keyword}{>}(dev);}
+\DoxyCodeLine{218   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}\label{classandroid_1_1IAHWC2_ac20faf581346c9dace9127e3681a0666}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1GpuDevice}{hwcomposer\+::\+Gpu\+Device}} android\+::\+I\+A\+H\+W\+C2\+::device\+\_\+}
+
+
+
+Definition at line 308 of file iahwc2.\+h.
+
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_adc8645c0a2315d4884f26f886002096e}\label{classandroid_1_1IAHWC2_adc8645c0a2315d4884f26f886002096e}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!disable\+\_\+explicit\+\_\+sync\+\_\+@{disable\+\_\+explicit\+\_\+sync\+\_\+}}
+\index{disable\+\_\+explicit\+\_\+sync\+\_\+@{disable\+\_\+explicit\+\_\+sync\+\_\+}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{disable\+\_\+explicit\+\_\+sync\+\_\+}{disable\_explicit\_sync\_}}
+{\footnotesize\ttfamily bool android\+::\+I\+A\+H\+W\+C2\+::disable\+\_\+explicit\+\_\+sync\+\_\+ = false}
+
+
+
+Definition at line 314 of file iahwc2.\+h.
+
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a898debffb7438ad1174b7424ba99972c}\label{classandroid_1_1IAHWC2_a898debffb7438ad1174b7424ba99972c}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!extended\+\_\+displays\+\_\+@{extended\+\_\+displays\+\_\+}}
+\index{extended\+\_\+displays\+\_\+@{extended\+\_\+displays\+\_\+}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{extended\+\_\+displays\+\_\+}{extended\_displays\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay}{Hwc\+Display}}$>$ $>$ android\+::\+I\+A\+H\+W\+C2\+::extended\+\_\+displays\+\_\+}
+
+
+
+Definition at line 309 of file iahwc2.\+h.
+
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_aeacec4376e02e5c5da31fa7ed3986ce2}\label{classandroid_1_1IAHWC2_aeacec4376e02e5c5da31fa7ed3986ce2}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!hwc\+Service\+\_\+@{hwc\+Service\+\_\+}}
+\index{hwc\+Service\+\_\+@{hwc\+Service\+\_\+}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{hwc\+Service\+\_\+}{hwcService\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classandroid_1_1HwcService}{android\+::\+Hwc\+Service}} android\+::\+I\+A\+H\+W\+C2\+::hwc\+Service\+\_\+}
+
+
+
+Definition at line 315 of file iahwc2.\+h.
+
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a63c04984ca69519a5c094f9a8f66841c}\label{classandroid_1_1IAHWC2_a63c04984ca69519a5c094f9a8f66841c}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!nested\+\_\+display\+\_\+@{nested\+\_\+display\+\_\+}}
+\index{nested\+\_\+display\+\_\+@{nested\+\_\+display\+\_\+}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{nested\+\_\+display\+\_\+}{nested\_display\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay}{Hwc\+Display}} android\+::\+I\+A\+H\+W\+C2\+::nested\+\_\+display\+\_\+}
+
+
+
+Definition at line 312 of file iahwc2.\+h.
+
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_ab6fc4580e0296ab10ecae375ced67e4c}\label{classandroid_1_1IAHWC2_ab6fc4580e0296ab10ecae375ced67e4c}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!primary\+\_\+display\+\_\+@{primary\+\_\+display\+\_\+}}
+\index{primary\+\_\+display\+\_\+@{primary\+\_\+display\+\_\+}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{primary\+\_\+display\+\_\+}{primary\_display\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay}{Hwc\+Display}} android\+::\+I\+A\+H\+W\+C2\+::primary\+\_\+display\+\_\+}
+
+
+
+Definition at line 310 of file iahwc2.\+h.
+
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a7bcc5119aa74196920162eb37790fafc}\label{classandroid_1_1IAHWC2_a7bcc5119aa74196920162eb37790fafc}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!scaling\+\_\+mode\+\_\+@{scaling\+\_\+mode\+\_\+}}
+\index{scaling\+\_\+mode\+\_\+@{scaling\+\_\+mode\+\_\+}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{scaling\+\_\+mode\+\_\+}{scaling\_mode\_}}
+{\footnotesize\ttfamily uint32\+\_\+t android\+::\+I\+A\+H\+W\+C2\+::scaling\+\_\+mode\+\_\+ = 0}
+
+
+
+Definition at line 316 of file iahwc2.\+h.
+
+\mbox{\Hypertarget{classandroid_1_1IAHWC2_a37e11529251134e7fcb74d72330f1d43}\label{classandroid_1_1IAHWC2_a37e11529251134e7fcb74d72330f1d43}} 
+\index{android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}!virtual\+\_\+display\+\_\+@{virtual\+\_\+display\+\_\+}}
+\index{virtual\+\_\+display\+\_\+@{virtual\+\_\+display\+\_\+}!android\+::\+I\+A\+H\+W\+C2@{android\+::\+I\+A\+H\+W\+C2}}
+\subsubsection{\texorpdfstring{virtual\+\_\+display\+\_\+}{virtual\_display\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classandroid_1_1IAHWC2_1_1HwcDisplay}{Hwc\+Display}} android\+::\+I\+A\+H\+W\+C2\+::virtual\+\_\+display\+\_\+}
+
+
+
+Definition at line 311 of file iahwc2.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/android/\mbox{\hyperlink{iahwc2_8h}{iahwc2.\+h}}\item 
+os/android/\mbox{\hyperlink{iahwc2_8cpp}{iahwc2.\+cpp}}\end{DoxyCompactItemize}

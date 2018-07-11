@@ -1,0 +1,43 @@
+\hypertarget{structhwcomposer_1_1DrmPropertyDeleter}{}\section{hwcomposer\+:\+:Drm\+Property\+Deleter Struct Reference}
+\label{structhwcomposer_1_1DrmPropertyDeleter}\index{hwcomposer\+::\+Drm\+Property\+Deleter@{hwcomposer\+::\+Drm\+Property\+Deleter}}
+
+
+{\ttfamily \#include $<$drmscopedtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1DrmPropertyDeleter_a81b69451ae6918bb92a1fe4cdcb083ba}{operator()}} (\mbox{\hyperlink{drmscopedtypes_8h_a4fb7f6f576c5cfbc7ee86d566c5c8673}{drm\+Mode\+Property\+Res}} $\ast$property) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 56 of file drmscopedtypes.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrmPropertyDeleter_a81b69451ae6918bb92a1fe4cdcb083ba}\label{structhwcomposer_1_1DrmPropertyDeleter_a81b69451ae6918bb92a1fe4cdcb083ba}} 
+\index{hwcomposer\+::\+Drm\+Property\+Deleter@{hwcomposer\+::\+Drm\+Property\+Deleter}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+Drm\+Property\+Deleter@{hwcomposer\+::\+Drm\+Property\+Deleter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Property\+Deleter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drmscopedtypes_8h_a4fb7f6f576c5cfbc7ee86d566c5c8673}{drm\+Mode\+Property\+Res}} $\ast$}]{property }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 52 of file drmscopedtypes.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                                                       \{}
+\DoxyCodeLine{53   drmModeFreeProperty(property);}
+\DoxyCodeLine{54 \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8h}{drmscopedtypes.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8cpp}{drmscopedtypes.\+cpp}}\end{DoxyCompactItemize}

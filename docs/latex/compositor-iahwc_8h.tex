@@ -1,0 +1,84 @@
+\hypertarget{compositor-iahwc_8h}{}\section{os/linux/weston/plugin/compositor-\/iahwc.\+h File Reference}
+\label{compositor-iahwc_8h}\index{os/linux/weston/plugin/compositor-\/iahwc.\+h@{os/linux/weston/plugin/compositor-\/iahwc.\+h}}
+{\ttfamily \#include \char`\"{}compositor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}plugin-\/registry.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structweston__iahwc__output__api}{weston\+\_\+iahwc\+\_\+output\+\_\+api}}
+\item 
+struct \mbox{\hyperlink{structweston__iahwc__backend__config}{weston\+\_\+iahwc\+\_\+backend\+\_\+config}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{compositor-iahwc_8h_a2134e720a3d8bfd4599d8eb817766d32}{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+V\+E\+R\+S\+I\+ON}}~1
+\item 
+\#define \mbox{\hyperlink{compositor-iahwc_8h_a793453a6749225ff3efcf6c616bde15a}{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+P\+I\+\_\+\+N\+A\+ME}}~\char`\"{}weston\+\_\+iahwc\+\_\+output\+\_\+api\+\_\+v1\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1}{weston\+\_\+iahwc\+\_\+backend\+\_\+output\+\_\+mode}} \{ \mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1aeda3129e5f8207686be76ebd7c03fb93}{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+O\+FF}}, 
+\mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1a65d4805102cbcb6aed1572189d192034}{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+U\+R\+R\+E\+NT}}, 
+\mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1a119203de423230e93c55e7325fd238b9}{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{compositor-iahwc_8h_a2134e720a3d8bfd4599d8eb817766d32}\label{compositor-iahwc_8h_a2134e720a3d8bfd4599d8eb817766d32}} 
+\index{compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}!W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+V\+E\+R\+S\+I\+ON@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+V\+E\+R\+S\+I\+ON@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+V\+E\+R\+S\+I\+ON}!compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}}
+\subsubsection{\texorpdfstring{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+V\+E\+R\+S\+I\+ON}{WESTON\_IAHWC\_BACKEND\_CONFIG\_VERSION}}
+{\footnotesize\ttfamily \#define W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+V\+E\+R\+S\+I\+ON~1}
+
+
+
+Definition at line 27 of file compositor-\/iahwc.\+h.
+
+\mbox{\Hypertarget{compositor-iahwc_8h_a793453a6749225ff3efcf6c616bde15a}\label{compositor-iahwc_8h_a793453a6749225ff3efcf6c616bde15a}} 
+\index{compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}!W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+P\+I\+\_\+\+N\+A\+ME@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+P\+I\+\_\+\+N\+A\+ME}}
+\index{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+P\+I\+\_\+\+N\+A\+ME@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+P\+I\+\_\+\+N\+A\+ME}!compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}}
+\subsubsection{\texorpdfstring{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+P\+I\+\_\+\+N\+A\+ME}{WESTON\_IAHWC\_OUTPUT\_API\_NAME}}
+{\footnotesize\ttfamily \#define W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+P\+I\+\_\+\+N\+A\+ME~\char`\"{}weston\+\_\+iahwc\+\_\+output\+\_\+api\+\_\+v1\char`\"{}}
+
+
+
+Definition at line 44 of file compositor-\/iahwc.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1}\label{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1}} 
+\index{compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}!weston\+\_\+iahwc\+\_\+backend\+\_\+output\+\_\+mode@{weston\+\_\+iahwc\+\_\+backend\+\_\+output\+\_\+mode}}
+\index{weston\+\_\+iahwc\+\_\+backend\+\_\+output\+\_\+mode@{weston\+\_\+iahwc\+\_\+backend\+\_\+output\+\_\+mode}!compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}}
+\subsubsection{\texorpdfstring{weston\+\_\+iahwc\+\_\+backend\+\_\+output\+\_\+mode}{weston\_iahwc\_backend\_output\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1}{weston\+\_\+iahwc\+\_\+backend\+\_\+output\+\_\+mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+O\+FF@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+O\+FF}!compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}}\index{compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}!W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+O\+FF@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+O\+FF}}}\mbox{\Hypertarget{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1aeda3129e5f8207686be76ebd7c03fb93}\label{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1aeda3129e5f8207686be76ebd7c03fb93}} 
+W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+O\+FF&The output is disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+U\+R\+R\+E\+NT@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+U\+R\+R\+E\+NT}!compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}}\index{compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}!W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+U\+R\+R\+E\+NT@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+U\+R\+R\+E\+NT}}}\mbox{\Hypertarget{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1a65d4805102cbcb6aed1572189d192034}\label{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1a65d4805102cbcb6aed1572189d192034}} 
+W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+U\+R\+R\+E\+NT&The output will use the current active mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED}!compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}}\index{compositor-\/iahwc.\+h@{compositor-\/iahwc.\+h}!W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED@{W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED}}}\mbox{\Hypertarget{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1a119203de423230e93c55e7325fd238b9}\label{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1a119203de423230e93c55e7325fd238b9}} 
+W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED&The output will use the preferred mode. A modeline can be provided by setting weston\+\_\+backend\+\_\+output\+\_\+config\+::modeline in the form of \char`\"{}\+W\+I\+D\+T\+Hx\+H\+E\+I\+G\+H\+T\char`\"{} or in the form of an explicit modeline calculated using e.\+g. the cvt tool. If a valid modeline is supplied it will be used, if invalid or N\+U\+LL the preferred available mode will be used. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 31 of file compositor-\/iahwc.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                       \{}
+\DoxyCodeLine{33   \mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1aeda3129e5f8207686be76ebd7c03fb93}{WESTON\_IAHWC\_BACKEND\_OUTPUT\_OFF}},}
+\DoxyCodeLine{35   \mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1a65d4805102cbcb6aed1572189d192034}{WESTON\_IAHWC\_BACKEND\_OUTPUT\_CURRENT}},}
+\DoxyCodeLine{41   \mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1a119203de423230e93c55e7325fd238b9}{WESTON\_IAHWC\_BACKEND\_OUTPUT\_PREFERRED}},}
+\DoxyCodeLine{42 \};}
+\end{DoxyCode}

@@ -1,0 +1,986 @@
+\hypertarget{classhwcomposer_1_1DisplayPlaneManager}{}\section{hwcomposer\+:\+:Display\+Plane\+Manager Class Reference}
+\label{classhwcomposer_1_1DisplayPlaneManager}\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+
+
+{\ttfamily \#include $<$displayplanemanager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_ad14eef5182a0ca73ed585de5db43b9f7}{Display\+Plane\+Manager}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler}{Display\+Plane\+Handler}} $\ast$plane\+\_\+handler, \mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$resource\+\_\+manager)
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_a897ab790611539e024ecdd1497b7d579}{$\sim$\+Display\+Plane\+Manager}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_ab1d0c1f3132a46d2ab2ba323a418eebf}{Initialize}} (uint32\+\_\+t width, uint32\+\_\+t height, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_ab619680feec679f90c733f104bab43d4}{Validate\+Layers}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers, int add\+\_\+index, bool disable\+\_\+overlay, bool $\ast$commit\+\_\+checked, bool $\ast$re\+\_\+validation\+\_\+needed, \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&composition, \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&previous\+\_\+composition, std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$$>$ \&mark\+\_\+later)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_adafd342e7e70017f40491d6ba3e70360}{Mark\+Surfaces\+For\+Recycling}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} $\ast$plane, std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$$>$ \&mark\+\_\+later, bool recycle\+\_\+resources, bool reset\+\_\+plane\+\_\+surfaces=true)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_a027bc17f4b4b7f61056ba93616e5787f}{Released\+Surfaces}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_a2d428d923d493cfca4b14e9a0ea5b952}{Re\+Validate\+Planes}} (\mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&list, std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers, std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$$>$ \&mark\+\_\+later, bool $\ast$request\+\_\+full\+\_\+validation, bool needs\+\_\+revalidation\+\_\+checks, bool re\+\_\+validate\+\_\+commit)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_ac5fa79927587781837c103df3aa8fb3d}{Check\+Plane\+Format}} (uint32\+\_\+t format)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_af76e9e632a76792f65bcde3a9e025169}{Set\+Off\+Screen\+Plane\+Target}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&plane)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_a953f9760e8a6a692213c32e66928d527}{Release\+Free\+Off\+Screen\+Targets}} (bool forced=false)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_aaafa069e84d1ae52f0f7dd8c973e5620}{Release\+All\+Off\+Screen\+Targets}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_a5d6b465f2867254778f611f2afddb0af}{Has\+Surfaces}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_abfa5fe391e308c60cea394a131d87d35}{Get\+Height}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_a8a2bbba4ec1dea9578e8f6103a636e24}{Get\+Total\+Overlays}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_ac9eeb5875537f8ca624760e04bead0fd}{Set\+Last\+Plane\+Usage}} (bool enable)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_a80527bbdb1b4f5c9fe8a58241e27f559}{Set\+Display\+Transform}} (uint32\+\_\+t transform)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_ada91a47d462537740543db7c70d07f8e}{Squash\+Planes\+As\+Needed}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers, \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&composition, std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayPlane}{Overlay\+Plane}} $>$ \&commit\+\_\+planes, std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$$>$ \&mark\+\_\+later, bool $\ast$validate\+\_\+final\+\_\+layers)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_afd4d9af275a937a7afa49a1d37ab0063}{Force\+Separate\+Plane}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers, const \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&last\+\_\+plane, const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$target\+\_\+layer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 37 of file displayplanemanager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_ad14eef5182a0ca73ed585de5db43b9f7}\label{classhwcomposer_1_1DisplayPlaneManager_ad14eef5182a0ca73ed585de5db43b9f7}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Display\+Plane\+Manager@{Display\+Plane\+Manager}}
+\index{Display\+Plane\+Manager@{Display\+Plane\+Manager}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Display\+Plane\+Manager()}{DisplayPlaneManager()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Display\+Plane\+Manager\+::\+Display\+Plane\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler}{Display\+Plane\+Handler}} $\ast$}]{plane\+\_\+handler,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{resource\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31     : plane\_handler\_(plane\_handler),}
+\DoxyCodeLine{32       resource\_manager\_(resource\_manager),}
+\DoxyCodeLine{33       cursor\_plane\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{34       width\_(0),}
+\DoxyCodeLine{35       height\_(0),}
+\DoxyCodeLine{36       total\_overlays\_(0),}
+\DoxyCodeLine{37       display\_transform\_(kIdentity),}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifdef DISABLE\_CURSOR\_PLANE}}
+\DoxyCodeLine{39       release\_surfaces\_(\textcolor{keyword}{false}),}
+\DoxyCodeLine{40       enable\_last\_plane\_(\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{42       release\_surfaces\_(\textcolor{keyword}{false}) \{}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{44 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_a897ab790611539e024ecdd1497b7d579}\label{classhwcomposer_1_1DisplayPlaneManager_a897ab790611539e024ecdd1497b7d579}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!````~Display\+Plane\+Manager@{$\sim$\+Display\+Plane\+Manager}}
+\index{````~Display\+Plane\+Manager@{$\sim$\+Display\+Plane\+Manager}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Display\+Plane\+Manager()}{~DisplayPlaneManager()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Display\+Plane\+Manager\+::$\sim$\+Display\+Plane\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 46 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                           \{}
+\DoxyCodeLine{47 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_ac5fa79927587781837c103df3aa8fb3d}\label{classhwcomposer_1_1DisplayPlaneManager_ac5fa79927587781837c103df3aa8fb3d}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Check\+Plane\+Format@{Check\+Plane\+Format}}
+\index{Check\+Plane\+Format@{Check\+Plane\+Format}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Check\+Plane\+Format()}{CheckPlaneFormat()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+Manager\+::\+Check\+Plane\+Format (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{format }\end{DoxyParamCaption})}
+
+
+
+Definition at line 813 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{813                                                           \{}
+\DoxyCodeLine{814   \textcolor{keywordflow}{return} overlay\_planes\_.at(0)->IsSupportedFormat(format);}
+\DoxyCodeLine{815 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_afd4d9af275a937a7afa49a1d37ab0063}\label{classhwcomposer_1_1DisplayPlaneManager_afd4d9af275a937a7afa49a1d37ab0063}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Force\+Separate\+Plane@{Force\+Separate\+Plane}}
+\index{Force\+Separate\+Plane@{Force\+Separate\+Plane}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Force\+Separate\+Plane()}{ForceSeparatePlane()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+Manager\+::\+Force\+Separate\+Plane (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers,  }\item[{const \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&}]{last\+\_\+plane,  }\item[{const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{target\+\_\+layer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1176 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1178                                                                            \{}
+\DoxyCodeLine{1179   \textcolor{keyword}{const} std::vector<size\_t> \&new\_layers = last\_plane.GetSourceLayers();}
+\DoxyCodeLine{1180   \textcolor{keyword}{const} HwcRect<int> \&display\_frame = last\_plane.GetDisplayFrame();}
+\DoxyCodeLine{1181   HwcRect<int> target\_display\_frame = display\_frame;}
+\DoxyCodeLine{1182   uint32\_t total\_width = 0;}
+\DoxyCodeLine{1183   uint32\_t total\_height = 0;}
+\DoxyCodeLine{1184   \textcolor{keywordflow}{if} (target\_layer) \{}
+\DoxyCodeLine{1185     total\_width = target\_layer->GetDisplayFrameWidth();}
+\DoxyCodeLine{1186     total\_height = target\_layer->GetDisplayFrameHeight();}
+\DoxyCodeLine{1187     target\_display\_frame = target\_layer->GetDisplayFrame();}
+\DoxyCodeLine{1188     \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(display\_frame, target\_display\_frame);}
+\DoxyCodeLine{1189   \}}
+\DoxyCodeLine{1190 }
+\DoxyCodeLine{1191   \textcolor{keywordtype}{bool} force\_separate = \textcolor{keyword}{false};}
+\DoxyCodeLine{1192   \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \&index : new\_layers) \{}
+\DoxyCodeLine{1193     \textcolor{keyword}{const} OverlayLayer \&layer = layers.at(index);}
+\DoxyCodeLine{1194     total\_width = std::max(total\_width, layer.GetDisplayFrameWidth());}
+\DoxyCodeLine{1195     total\_height = std::max(total\_height, layer.GetDisplayFrameHeight());}
+\DoxyCodeLine{1196   \}}
+\DoxyCodeLine{1197 }
+\DoxyCodeLine{1198   uint32\_t target\_width =}
+\DoxyCodeLine{1199       target\_display\_frame.right - target\_display\_frame.left;}
+\DoxyCodeLine{1200   uint32\_t target\_height =}
+\DoxyCodeLine{1201       target\_display\_frame.bottom - target\_display\_frame.top;}
+\DoxyCodeLine{1202   \textcolor{keywordflow}{if} ((total\_width != target\_width) || (total\_height != target\_height)) \{}
+\DoxyCodeLine{1203     force\_separate = \textcolor{keyword}{true};}
+\DoxyCodeLine{1204   \}}
+\DoxyCodeLine{1205 }
+\DoxyCodeLine{1206   \textcolor{keywordflow}{return} force\_separate;}
+\DoxyCodeLine{1207 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_abfa5fe391e308c60cea394a131d87d35}\label{classhwcomposer_1_1DisplayPlaneManager_abfa5fe391e308c60cea394a131d87d35}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Height()}{GetHeight()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Display\+Plane\+Manager\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 84 of file displayplanemanager.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                              \{}
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} height\_;}
+\DoxyCodeLine{86   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_a8a2bbba4ec1dea9578e8f6103a636e24}\label{classhwcomposer_1_1DisplayPlaneManager_a8a2bbba4ec1dea9578e8f6103a636e24}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Get\+Total\+Overlays@{Get\+Total\+Overlays}}
+\index{Get\+Total\+Overlays@{Get\+Total\+Overlays}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Total\+Overlays()}{GetTotalOverlays()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Display\+Plane\+Manager\+::\+Get\+Total\+Overlays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 88 of file displayplanemanager.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                                     \{}
+\DoxyCodeLine{89     \textcolor{keywordflow}{return} total\_overlays\_;}
+\DoxyCodeLine{90   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_a5d6b465f2867254778f611f2afddb0af}\label{classhwcomposer_1_1DisplayPlaneManager_a5d6b465f2867254778f611f2afddb0af}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Has\+Surfaces@{Has\+Surfaces}}
+\index{Has\+Surfaces@{Has\+Surfaces}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Has\+Surfaces()}{HasSurfaces()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+Manager\+::\+Has\+Surfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 80 of file displayplanemanager.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                            \{}
+\DoxyCodeLine{81     \textcolor{keywordflow}{return} !surfaces\_.empty();}
+\DoxyCodeLine{82   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_ab1d0c1f3132a46d2ab2ba323a418eebf}\label{classhwcomposer_1_1DisplayPlaneManager_ab1d0c1f3132a46d2ab2ba323a418eebf}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+Manager\+::\+Initialize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                                                                \{}
+\DoxyCodeLine{51   fb\_manager\_ = frame\_buffer\_manager;}
+\DoxyCodeLine{52   width\_ = width;}
+\DoxyCodeLine{53   height\_ = height;}
+\DoxyCodeLine{54   \textcolor{keywordtype}{bool} status = plane\_handler\_->\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler_aa4d32269c693dbf4a4c91c31ed577784}{PopulatePlanes}}(overlay\_planes\_);}
+\DoxyCodeLine{55   \textcolor{keywordflow}{if} (!overlay\_planes\_.empty()) \{}
+\DoxyCodeLine{56     total\_overlays\_ = overlay\_planes\_.size();}
+\DoxyCodeLine{57     \textcolor{keywordflow}{if} (total\_overlays\_ > 1) \{}
+\DoxyCodeLine{58       cursor\_plane\_ = overlay\_planes\_.back().get();}
+\DoxyCodeLine{59       \textcolor{comment}{// If this is a universal plane, let's not restrict it to}}
+\DoxyCodeLine{60       \textcolor{comment}{// cursor usage only.}}
+\DoxyCodeLine{61       \textcolor{keywordflow}{if} (cursor\_plane\_->\mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a7b374ba9e799f7d0b53afbd939961c51}{IsUniversal}}()) \{}
+\DoxyCodeLine{62         cursor\_plane\_ = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{63       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{64         total\_overlays\_--;}
+\DoxyCodeLine{65       \}}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67   \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69   \textcolor{keywordflow}{return} status;}
+\DoxyCodeLine{70 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_adafd342e7e70017f40491d6ba3e70360}\label{classhwcomposer_1_1DisplayPlaneManager_adafd342e7e70017f40491d6ba3e70360}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Mark\+Surfaces\+For\+Recycling@{Mark\+Surfaces\+For\+Recycling}}
+\index{Mark\+Surfaces\+For\+Recycling@{Mark\+Surfaces\+For\+Recycling}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Mark\+Surfaces\+For\+Recycling()}{MarkSurfacesForRecycling()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+Manager\+::\+Mark\+Surfaces\+For\+Recycling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} $\ast$}]{plane,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$$>$ \&}]{mark\+\_\+later,  }\item[{bool}]{recycle\+\_\+resources,  }\item[{bool}]{reset\+\_\+plane\+\_\+surfaces = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 876 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{878                                                        \{}
+\DoxyCodeLine{879   \textcolor{keyword}{const} std::vector<NativeSurface *> \&surfaces = plane->GetSurfaces();}
+\DoxyCodeLine{880   \textcolor{keywordflow}{if} (!surfaces.empty()) \{}
+\DoxyCodeLine{881     release\_surfaces\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{882     \textcolor{keywordtype}{size\_t} size = surfaces.size();}
+\DoxyCodeLine{883     \textcolor{keywordflow}{if} (recycle\_resources) \{}
+\DoxyCodeLine{884       \textcolor{comment}{// Make sure we don't mark current on-screen surface or}}
+\DoxyCodeLine{885       \textcolor{comment}{// one in flight. These surfaces will be added as part of}}
+\DoxyCodeLine{886       \textcolor{comment}{// mark\_later to be recycled later.}}
+\DoxyCodeLine{887       \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{888         NativeSurface *surface = surfaces.at(i);}
+\DoxyCodeLine{889         \textcolor{keywordflow}{if} (surface->GetSurfaceAge() >= 0 \&\& surface->IsOnScreen()) \{}
+\DoxyCodeLine{890           mark\_later.emplace\_back(surface);}
+\DoxyCodeLine{891         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{892           surface->SetSurfaceAge(-1);}
+\DoxyCodeLine{893         \}}
+\DoxyCodeLine{894       \}}
+\DoxyCodeLine{895     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{896       \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{897         NativeSurface *surface = surfaces.at(i);}
+\DoxyCodeLine{898         surface->SetSurfaceAge(-1);}
+\DoxyCodeLine{899       \}}
+\DoxyCodeLine{900     \}}
+\DoxyCodeLine{901 }
+\DoxyCodeLine{902     \textcolor{keywordflow}{if} (reset\_plane\_surfaces)}
+\DoxyCodeLine{903       plane->ReleaseSurfaces();}
+\DoxyCodeLine{904   \}}
+\DoxyCodeLine{905 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_aaafa069e84d1ae52f0f7dd8c973e5620}\label{classhwcomposer_1_1DisplayPlaneManager_aaafa069e84d1ae52f0f7dd8c973e5620}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Release\+All\+Off\+Screen\+Targets@{Release\+All\+Off\+Screen\+Targets}}
+\index{Release\+All\+Off\+Screen\+Targets@{Release\+All\+Off\+Screen\+Targets}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Release\+All\+Off\+Screen\+Targets()}{ReleaseAllOffScreenTargets()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+Manager\+::\+Release\+All\+Off\+Screen\+Targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 660 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{660                                                      \{}
+\DoxyCodeLine{661   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{662   std::vector<std::unique\_ptr<NativeSurface>>().swap(surfaces\_);}
+\DoxyCodeLine{663 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_a027bc17f4b4b7f61056ba93616e5787f}\label{classhwcomposer_1_1DisplayPlaneManager_a027bc17f4b4b7f61056ba93616e5787f}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Released\+Surfaces@{Released\+Surfaces}}
+\index{Released\+Surfaces@{Released\+Surfaces}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Released\+Surfaces()}{ReleasedSurfaces()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+Manager\+::\+Released\+Surfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 872 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{872                                            \{}
+\DoxyCodeLine{873   release\_surfaces\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{874 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_a953f9760e8a6a692213c32e66928d527}\label{classhwcomposer_1_1DisplayPlaneManager_a953f9760e8a6a692213c32e66928d527}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Release\+Free\+Off\+Screen\+Targets@{Release\+Free\+Off\+Screen\+Targets}}
+\index{Release\+Free\+Off\+Screen\+Targets@{Release\+Free\+Off\+Screen\+Targets}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Free\+Off\+Screen\+Targets()}{ReleaseFreeOffScreenTargets()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+Manager\+::\+Release\+Free\+Off\+Screen\+Targets (\begin{DoxyParamCaption}\item[{bool}]{forced = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 665 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{665                                                                  \{}
+\DoxyCodeLine{666   \textcolor{keywordflow}{if} (!release\_surfaces\_ \&\& !forced)}
+\DoxyCodeLine{667     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{668 }
+\DoxyCodeLine{669   std::vector<std::unique\_ptr<NativeSurface>> surfaces;}
+\DoxyCodeLine{670   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&fb : surfaces\_) \{}
+\DoxyCodeLine{671     \textcolor{keywordflow}{if} (fb->IsOnScreen()) \{}
+\DoxyCodeLine{672       surfaces.emplace\_back(fb.release());}
+\DoxyCodeLine{673     \}}
+\DoxyCodeLine{674   \}}
+\DoxyCodeLine{675 }
+\DoxyCodeLine{676   surfaces.swap(surfaces\_);}
+\DoxyCodeLine{677   release\_surfaces\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{678 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_a2d428d923d493cfca4b14e9a0ea5b952}\label{classhwcomposer_1_1DisplayPlaneManager_a2d428d923d493cfca4b14e9a0ea5b952}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Re\+Validate\+Planes@{Re\+Validate\+Planes}}
+\index{Re\+Validate\+Planes@{Re\+Validate\+Planes}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Re\+Validate\+Planes()}{ReValidatePlanes()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+Manager\+::\+Re\+Validate\+Planes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{list,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$$>$ \&}]{mark\+\_\+later,  }\item[{bool $\ast$}]{request\+\_\+full\+\_\+validation,  }\item[{bool}]{needs\+\_\+revalidation\+\_\+checks,  }\item[{bool}]{re\+\_\+validate\+\_\+commit }\end{DoxyParamCaption})}
+
+
+
+Definition at line 907 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{910                                                              \{}
+\DoxyCodeLine{911 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{912   \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{913       \textcolor{stringliteral}{"ReValidatePlanes called needs\_revalidation\_checks \%d re\_validate\_commit "}}
+\DoxyCodeLine{914       \textcolor{stringliteral}{"\%d  \(\backslash\)n"},}
+\DoxyCodeLine{915       needs\_revalidation\_checks, re\_validate\_commit);}
+\DoxyCodeLine{916 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{917   \textcolor{comment}{// Let's first check the current combination works.}}
+\DoxyCodeLine{918   *request\_full\_validation = \textcolor{keyword}{false};}
+\DoxyCodeLine{919   \textcolor{keywordtype}{bool} render = \textcolor{keyword}{false};}
+\DoxyCodeLine{920   \textcolor{keywordtype}{bool} reset\_composition\_region = \textcolor{keyword}{false};}
+\DoxyCodeLine{921   std::vector<OverlayPlane> commit\_planes;}
+\DoxyCodeLine{922   \textcolor{keywordflow}{for} (DisplayPlaneState \&temp : composition) \{}
+\DoxyCodeLine{923     commit\_planes.emplace\_back(}
+\DoxyCodeLine{924         OverlayPlane(temp.GetDisplayPlane(), temp.GetOverlayLayer()));}
+\DoxyCodeLine{925 }
+\DoxyCodeLine{926     \textcolor{keywordflow}{if} (temp.Scanout()) \{}
+\DoxyCodeLine{927       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{928     \}}
+\DoxyCodeLine{929 }
+\DoxyCodeLine{930     render = \textcolor{keyword}{true};}
+\DoxyCodeLine{931   \}}
+\DoxyCodeLine{932 }
+\DoxyCodeLine{933   \textcolor{keywordflow}{if} (re\_validate\_commit) \{}
+\DoxyCodeLine{934     \textcolor{comment}{// If this combination fails just fall back to full validation.}}
+\DoxyCodeLine{935     \textcolor{keywordflow}{if} (!plane\_handler\_->\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler_a1135b134010e6736aa49304100c9d3b9}{TestCommit}}(commit\_planes)) \{}
+\DoxyCodeLine{936 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{937       \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{938           \textcolor{stringliteral}{"ReValidatePlanes Test commit failed. Forcing full validation. \(\backslash\)n"});}
+\DoxyCodeLine{939 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{940       *request\_full\_validation = \textcolor{keyword}{true};}
+\DoxyCodeLine{941       \textcolor{keywordflow}{return} render;}
+\DoxyCodeLine{942     \}}
+\DoxyCodeLine{943   \}}
+\DoxyCodeLine{944 }
+\DoxyCodeLine{945   \textcolor{keywordflow}{if} (!needs\_revalidation\_checks) \{}
+\DoxyCodeLine{946     \textcolor{keywordflow}{return} render;}
+\DoxyCodeLine{947   \}}
+\DoxyCodeLine{948 }
+\DoxyCodeLine{949   uint32\_t index = 0;}
+\DoxyCodeLine{950 }
+\DoxyCodeLine{951   \textcolor{keywordflow}{for} (DisplayPlaneState \&last\_plane : composition) \{}
+\DoxyCodeLine{952     \textcolor{keywordflow}{if} (!last\_plane.NeedsOffScreenComposition()) \{}
+\DoxyCodeLine{953       index++;}
+\DoxyCodeLine{954       reset\_composition\_region = \textcolor{keyword}{false};}
+\DoxyCodeLine{955       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{956     \}}
+\DoxyCodeLine{957 }
+\DoxyCodeLine{958     \textcolor{keywordflow}{if} (reset\_composition\_region) \{}
+\DoxyCodeLine{959       last\_plane.RefreshSurfaces(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{NativeSurface::kFullClear}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{960     \}}
+\DoxyCodeLine{961 }
+\DoxyCodeLine{962     reset\_composition\_region = \textcolor{keyword}{false};}
+\DoxyCodeLine{963     uint32\_t revalidation\_type = last\_plane.RevalidationType();}
+\DoxyCodeLine{964 }
+\DoxyCodeLine{965     \textcolor{keywordflow}{if} (!revalidation\_type) \{}
+\DoxyCodeLine{966       render = \textcolor{keyword}{true};}
+\DoxyCodeLine{967       index++;}
+\DoxyCodeLine{968       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{969     \}}
+\DoxyCodeLine{970 }
+\DoxyCodeLine{971     uint32\_t validation\_done = DisplayPlaneState::ReValidationType::kScanout;}
+\DoxyCodeLine{972     \textcolor{keywordflow}{if} (revalidation\_type \& DisplayPlaneState::ReValidationType::kScanout) \{}
+\DoxyCodeLine{973       \textcolor{keyword}{const} std::vector<size\_t> \&source\_layers = last\_plane.GetSourceLayers();}
+\DoxyCodeLine{974       \textcolor{keywordtype}{bool} uses\_scalar = last\_plane.IsUsingPlaneScalar();}
+\DoxyCodeLine{975       \textcolor{comment}{// Store current layer to re-set in case commit fails.}}
+\DoxyCodeLine{976       \textcolor{keyword}{const} OverlayLayer *current\_layer = last\_plane.GetOverlayLayer();}
+\DoxyCodeLine{977       OverlayLayer *layer = \&(layers.at(source\_layers.at(0)));}
+\DoxyCodeLine{978       last\_plane.SetOverlayLayer(layer);}
+\DoxyCodeLine{979       \textcolor{comment}{// Disable GPU Rendering.}}
+\DoxyCodeLine{980       last\_plane.DisableGPURendering();}
+\DoxyCodeLine{981       \textcolor{keywordflow}{if} (uses\_scalar)}
+\DoxyCodeLine{982         last\_plane.UsePlaneScalar(\textcolor{keyword}{false}, \textcolor{keyword}{false});}
+\DoxyCodeLine{983 }
+\DoxyCodeLine{984       layer->SetLayerComposition(\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1af648548e814dc8e01fbe35d1679861c9}{OverlayLayer::kDisplay}});}
+\DoxyCodeLine{985 }
+\DoxyCodeLine{986       commit\_planes.at(index).layer = last\_plane.GetOverlayLayer();}
+\DoxyCodeLine{987 }
+\DoxyCodeLine{988       \textcolor{comment}{// If this combination fails just fall back to original state.}}
+\DoxyCodeLine{989       \textcolor{keywordflow}{if} (FallbacktoGPU(last\_plane.GetDisplayPlane(), layer, commit\_planes)) \{}
+\DoxyCodeLine{990         \textcolor{comment}{// Reset to old state.}}
+\DoxyCodeLine{991         last\_plane.ForceGPURendering();}
+\DoxyCodeLine{992         layer->SetLayerComposition(\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1a6ee064d87ae6078bfc5c2de8cc4cd29b}{OverlayLayer::kGpu}});}
+\DoxyCodeLine{993         last\_plane.SetOverlayLayer(current\_layer);}
+\DoxyCodeLine{994         commit\_planes.at(index).layer = last\_plane.GetOverlayLayer();}
+\DoxyCodeLine{995         \textcolor{keywordflow}{if} (uses\_scalar)}
+\DoxyCodeLine{996           last\_plane.UsePlaneScalar(\textcolor{keyword}{true}, \textcolor{keyword}{false});}
+\DoxyCodeLine{997       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{998 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{999         \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"ReValidatePlanes called: moving to scan \(\backslash\)n"});}
+\DoxyCodeLine{1000 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1001         \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_adafd342e7e70017f40491d6ba3e70360}{MarkSurfacesForRecycling}}(\&last\_plane, mark\_later, \textcolor{keyword}{true});}
+\DoxyCodeLine{1002         last\_plane.SetOverlayLayer(layer);}
+\DoxyCodeLine{1003         reset\_composition\_region = \textcolor{keyword}{true};}
+\DoxyCodeLine{1004       \}}
+\DoxyCodeLine{1005     \}}
+\DoxyCodeLine{1006 }
+\DoxyCodeLine{1007     render = \textcolor{keyword}{true};}
+\DoxyCodeLine{1008     index++;}
+\DoxyCodeLine{1009     \textcolor{keywordflow}{if} (revalidation\_type \& DisplayPlaneState::ReValidationType::kUpScalar) \{}
+\DoxyCodeLine{1010       ValidateForDisplayScaling(last\_plane, commit\_planes);}
+\DoxyCodeLine{1011       validation\_done |= DisplayPlaneState::ReValidationType::kUpScalar;}
+\DoxyCodeLine{1012     \}}
+\DoxyCodeLine{1013 }
+\DoxyCodeLine{1014     \textcolor{keywordflow}{if} (revalidation\_type \& DisplayPlaneState::ReValidationType::kRotation) \{}
+\DoxyCodeLine{1015       validation\_done |= DisplayPlaneState::ReValidationType::kRotation;}
+\DoxyCodeLine{1016       \textcolor{comment}{// Save old rotation type.}}
+\DoxyCodeLine{1017       \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}{DisplayPlaneState::RotationType}} old\_type = last\_plane.GetRotationType();}
+\DoxyCodeLine{1018       \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}{DisplayPlaneState::RotationType}} new\_type = old\_type;}
+\DoxyCodeLine{1019       \textcolor{keywordflow}{if} (old\_type == \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a5b98db46be3ebb427a634f7a07033357}{DisplayPlaneState::RotationType::kGPURotation}}) \{}
+\DoxyCodeLine{1020         last\_plane.SetRotationType(}
+\DoxyCodeLine{1021             \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a91c319c8bcf2c5686169929c170c8d2e}{DisplayPlaneState::RotationType::kDisplayRotation}}, \textcolor{keyword}{false});}
+\DoxyCodeLine{1022       \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (re\_validate\_commit) \{}
+\DoxyCodeLine{1023         \textcolor{comment}{// We should have already done a full commit check above.}}
+\DoxyCodeLine{1024         \textcolor{comment}{// As their is no state change we can avoid another test}}
+\DoxyCodeLine{1025         \textcolor{comment}{// commit here.}}
+\DoxyCodeLine{1026         last\_plane.RevalidationDone(validation\_done);}
+\DoxyCodeLine{1027         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{1028       \}}
+\DoxyCodeLine{1029 }
+\DoxyCodeLine{1030       \textcolor{comment}{// Check if we can rotate using Display plane.}}
+\DoxyCodeLine{1031       \textcolor{keywordflow}{if} (FallbacktoGPU(last\_plane.GetDisplayPlane(),}
+\DoxyCodeLine{1032                         last\_plane.GetOffScreenTarget()->GetLayer(),}
+\DoxyCodeLine{1033                         commit\_planes)) \{}
+\DoxyCodeLine{1034         new\_type = \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a5b98db46be3ebb427a634f7a07033357}{DisplayPlaneState::RotationType::kGPURotation}};}
+\DoxyCodeLine{1035       \}}
+\DoxyCodeLine{1036 }
+\DoxyCodeLine{1037       \textcolor{keywordflow}{if} (old\_type != new\_type) \{}
+\DoxyCodeLine{1038         \textcolor{comment}{// Set new rotation type. Clear surfaces in case type has changed.}}
+\DoxyCodeLine{1039         last\_plane.SetRotationType(new\_type, \textcolor{keyword}{true});}
+\DoxyCodeLine{1040       \}}
+\DoxyCodeLine{1041     \}}
+\DoxyCodeLine{1042 }
+\DoxyCodeLine{1043     \textcolor{keywordflow}{if} (revalidation\_type \& DisplayPlaneState::ReValidationType::kDownScaling) \{}
+\DoxyCodeLine{1044       validation\_done |= DisplayPlaneState::ReValidationType::kDownScaling;}
+\DoxyCodeLine{1045       \textcolor{comment}{// Make sure we are not handling upscaling.}}
+\DoxyCodeLine{1046       \textcolor{keywordflow}{if} (last\_plane.IsUsingPlaneScalar()) \{}
+\DoxyCodeLine{1047         \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(}
+\DoxyCodeLine{1048             \textcolor{stringliteral}{"We are using upscaling and also trying to validate for "}}
+\DoxyCodeLine{1049             \textcolor{stringliteral}{"downscaling \(\backslash\)n"});}
+\DoxyCodeLine{1050         \textcolor{keywordflow}{if} (last\_plane.GetDownScalingFactor() > 1)}
+\DoxyCodeLine{1051           last\_plane.SetDisplayDownScalingFactor(1, \textcolor{keyword}{true});}
+\DoxyCodeLine{1052       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1053         \textcolor{comment}{// Check for Downscaling.}}
+\DoxyCodeLine{1054         ValidateForDownScaling(last\_plane, commit\_planes);}
+\DoxyCodeLine{1055       \}}
+\DoxyCodeLine{1056     \}}
+\DoxyCodeLine{1057 }
+\DoxyCodeLine{1058     last\_plane.RevalidationDone(validation\_done);}
+\DoxyCodeLine{1059   \}}
+\DoxyCodeLine{1060 }
+\DoxyCodeLine{1061   \textcolor{keywordflow}{return} render;}
+\DoxyCodeLine{1062 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_a80527bbdb1b4f5c9fe8a58241e27f559}\label{classhwcomposer_1_1DisplayPlaneManager_a80527bbdb1b4f5c9fe8a58241e27f559}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Set\+Display\+Transform@{Set\+Display\+Transform}}
+\index{Set\+Display\+Transform@{Set\+Display\+Transform}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Set\+Display\+Transform()}{SetDisplayTransform()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+Manager\+::\+Set\+Display\+Transform (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{transform }\end{DoxyParamCaption})}
+
+
+
+Definition at line 713 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{713                                                                 \{}
+\DoxyCodeLine{714   display\_transform\_ = transform;}
+\DoxyCodeLine{715 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_ac9eeb5875537f8ca624760e04bead0fd}\label{classhwcomposer_1_1DisplayPlaneManager_ac9eeb5875537f8ca624760e04bead0fd}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Set\+Last\+Plane\+Usage@{Set\+Last\+Plane\+Usage}}
+\index{Set\+Last\+Plane\+Usage@{Set\+Last\+Plane\+Usage}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Set\+Last\+Plane\+Usage()}{SetLastPlaneUsage()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+Manager\+::\+Set\+Last\+Plane\+Usage (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 680 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{680                                                        \{}
+\DoxyCodeLine{681 \textcolor{preprocessor}{\#ifdef DISABLE\_CURSOR\_PLANE}}
+\DoxyCodeLine{682   \textcolor{keywordflow}{if} (total\_overlays\_ < 3 \&\& enable\_last\_plane\_) \{}
+\DoxyCodeLine{683     \textcolor{comment}{// If planes are less than 3, we don't need to enable any W/A.}}
+\DoxyCodeLine{684     \textcolor{comment}{// enable\_last\_plane\_ needs to be checked to handle case where}}
+\DoxyCodeLine{685     \textcolor{comment}{// we manually decremented total\_overlays\_ in any previous}}
+\DoxyCodeLine{686     \textcolor{comment}{// calls.}}
+\DoxyCodeLine{687     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{688   \}}
+\DoxyCodeLine{689 }
+\DoxyCodeLine{690   \textcolor{keywordflow}{if} (enable\_last\_plane\_ != enable) \{}
+\DoxyCodeLine{691     enable\_last\_plane\_ = enable;}
+\DoxyCodeLine{692     \textcolor{comment}{// If we have cursor plane, we can use all overlays and just}}
+\DoxyCodeLine{693     \textcolor{comment}{// ignore cursor plane in case  W/A need's to be enabled.}}
+\DoxyCodeLine{694     \textcolor{keywordflow}{if} (cursor\_plane\_) \{}
+\DoxyCodeLine{695       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{696     \}}
+\DoxyCodeLine{697 }
+\DoxyCodeLine{698     \textcolor{comment}{// We are running on a hypervisor. We could}}
+\DoxyCodeLine{699     \textcolor{comment}{// be sharing plane with others.}}
+\DoxyCodeLine{700     \textcolor{keywordflow}{if} (enable) \{}
+\DoxyCodeLine{701       total\_overlays\_++;}
+\DoxyCodeLine{702       enable\_last\_plane\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{703     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{704       total\_overlays\_--;}
+\DoxyCodeLine{705       enable\_last\_plane\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{706     \}}
+\DoxyCodeLine{707   \}}
+\DoxyCodeLine{708 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{709   \mbox{\hyperlink{platformcommondefines_8h_a55010dd9f045ede43b1c4fa3d249b1eb}{HWC\_UNUSED}}(enable);}
+\DoxyCodeLine{710 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{711 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_af76e9e632a76792f65bcde3a9e025169}\label{classhwcomposer_1_1DisplayPlaneManager_af76e9e632a76792f65bcde3a9e025169}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Set\+Off\+Screen\+Plane\+Target@{Set\+Off\+Screen\+Plane\+Target}}
+\index{Set\+Off\+Screen\+Plane\+Target@{Set\+Off\+Screen\+Plane\+Target}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Set\+Off\+Screen\+Plane\+Target()}{SetOffScreenPlaneTarget()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+Manager\+::\+Set\+Off\+Screen\+Plane\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&}]{plane }\end{DoxyParamCaption})}
+
+
+
+Definition at line 650 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{650                                                                           \{}
+\DoxyCodeLine{651   \textcolor{keywordflow}{if} (plane.NeedsSurfaceAllocation()) \{}
+\DoxyCodeLine{652     EnsureOffScreenTarget(plane);}
+\DoxyCodeLine{653   \}}
+\DoxyCodeLine{654 }
+\DoxyCodeLine{655   \textcolor{comment}{// Case where we have just one layer which needs to be composited using}}
+\DoxyCodeLine{656   \textcolor{comment}{// GPU.}}
+\DoxyCodeLine{657   plane.ForceGPURendering();}
+\DoxyCodeLine{658 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_ada91a47d462537740543db7c70d07f8e}\label{classhwcomposer_1_1DisplayPlaneManager_ada91a47d462537740543db7c70d07f8e}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Squash\+Planes\+As\+Needed@{Squash\+Planes\+As\+Needed}}
+\index{Squash\+Planes\+As\+Needed@{Squash\+Planes\+As\+Needed}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Squash\+Planes\+As\+Needed()}{SquashPlanesAsNeeded()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+Manager\+::\+Squash\+Planes\+As\+Needed (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers,  }\item[{\mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{composition,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayPlane}{Overlay\+Plane}} $>$ \&}]{commit\+\_\+planes,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$$>$ \&}]{mark\+\_\+later,  }\item[{bool $\ast$}]{validate\+\_\+final\+\_\+layers }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1098 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1101                                                                          \{}
+\DoxyCodeLine{1102   \textcolor{keywordtype}{bool} status = \textcolor{keyword}{false};}
+\DoxyCodeLine{1103   \textcolor{keywordflow}{if} (composition.size() > 1) \{}
+\DoxyCodeLine{1104     DisplayPlaneState \&last\_plane = composition.back();}
+\DoxyCodeLine{1105     DisplayPlaneState \&scanout\_plane = composition.at(composition.size() - 2);}
+\DoxyCodeLine{1106 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{1107     \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{1108         \textcolor{stringliteral}{"ANALAYZE scanout\_plane: scanout\_plane.NeedsOffScreenComposition() \%d "}}
+\DoxyCodeLine{1109         \textcolor{stringliteral}{"scanout\_plane.IsCursorPlane() \%d scanout\_plane.IsVideoPlane() \%d  \(\backslash\)n"},}
+\DoxyCodeLine{1110         scanout\_plane.NeedsOffScreenComposition(),}
+\DoxyCodeLine{1111         scanout\_plane.IsCursorPlane(), scanout\_plane.IsVideoPlane());}
+\DoxyCodeLine{1112 }
+\DoxyCodeLine{1113     \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{1114         \textcolor{stringliteral}{"ANALAYZE last\_plane: scanout\_plane.NeedsOffScreenComposition() \%d "}}
+\DoxyCodeLine{1115         \textcolor{stringliteral}{"scanout\_plane.IsCursorPlane() \%d scanout\_plane.IsVideoPlane() \%d  \(\backslash\)n"},}
+\DoxyCodeLine{1116         scanout\_plane.NeedsOffScreenComposition(),}
+\DoxyCodeLine{1117         scanout\_plane.IsCursorPlane(), scanout\_plane.IsVideoPlane());}
+\DoxyCodeLine{1118 }
+\DoxyCodeLine{1119     \textcolor{keywordflow}{if} (!scanout\_plane.IsCursorPlane() \&\& !scanout\_plane.IsVideoPlane()) \{}
+\DoxyCodeLine{1120       \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"ANALAYZE AnalyseOverlap: \%d \(\backslash\)n"},}
+\DoxyCodeLine{1121                     \mbox{\hyperlink{namespacehwcomposer_a2775b56090a031398e48a7b77b1dee05}{AnalyseOverlap}}(scanout\_plane.GetDisplayFrame(),}
+\DoxyCodeLine{1122                                    last\_plane.GetDisplayFrame()));}
+\DoxyCodeLine{1123       \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"ANALAYZE Scanout Display Rect \%d \%d \%d \%d \(\backslash\)n"},}
+\DoxyCodeLine{1124                     scanout\_plane.GetDisplayFrame().left,}
+\DoxyCodeLine{1125                     scanout\_plane.GetDisplayFrame().top,}
+\DoxyCodeLine{1126                     scanout\_plane.GetDisplayFrame().right,}
+\DoxyCodeLine{1127                     scanout\_plane.GetDisplayFrame().bottom);}
+\DoxyCodeLine{1128       \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"ANALAYZE Last offscreen plane rect \%d \%d \%d \%d \(\backslash\)n"},}
+\DoxyCodeLine{1129                     last\_plane.GetDisplayFrame().left,}
+\DoxyCodeLine{1130                     last\_plane.GetDisplayFrame().top,}
+\DoxyCodeLine{1131                     last\_plane.GetDisplayFrame().right,}
+\DoxyCodeLine{1132                     last\_plane.GetDisplayFrame().bottom);}
+\DoxyCodeLine{1133     \}}
+\DoxyCodeLine{1134 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1135     \textcolor{keyword}{const} HwcRect<int> \&display\_frame = scanout\_plane.GetDisplayFrame();}
+\DoxyCodeLine{1136     \textcolor{keyword}{const} HwcRect<int> \&target\_frame = last\_plane.GetDisplayFrame();}
+\DoxyCodeLine{1137     \textcolor{keywordflow}{if} (!scanout\_plane.IsCursorPlane() \&\& !scanout\_plane.IsVideoPlane() \&\&}
+\DoxyCodeLine{1138         (\mbox{\hyperlink{namespacehwcomposer_a2775b56090a031398e48a7b77b1dee05}{AnalyseOverlap}}(display\_frame, target\_frame) != \mbox{\hyperlink{namespacehwcomposer_a343d36a60de234fac01fc5982b8d0e38a7ab351e5e1da3b8232419a34e1dd9559}{kOutside}})) \{}
+\DoxyCodeLine{1139       \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_afd4d9af275a937a7afa49a1d37ab0063}{ForceSeparatePlane}}(layers, last\_plane, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})) \{}
+\DoxyCodeLine{1140 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{1141         \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"Squasing planes. \(\backslash\)n"});}
+\DoxyCodeLine{1142 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1143         \textcolor{keyword}{const} std::vector<size\_t> \&new\_layers = last\_plane.GetSourceLayers();}
+\DoxyCodeLine{1144         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \&index : new\_layers) \{}
+\DoxyCodeLine{1145           scanout\_plane.AddLayer(\&(layers.at(index)));}
+\DoxyCodeLine{1146         \}}
+\DoxyCodeLine{1147 }
+\DoxyCodeLine{1148         scanout\_plane.RefreshSurfaces(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{NativeSurface::kFullClear}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{1149 }
+\DoxyCodeLine{1150         last\_plane.GetDisplayPlane()->SetInUse(\textcolor{keyword}{false});}
+\DoxyCodeLine{1151         \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_adafd342e7e70017f40491d6ba3e70360}{MarkSurfacesForRecycling}}(\&last\_plane, mark\_later, \textcolor{keyword}{true});}
+\DoxyCodeLine{1152         composition.pop\_back();}
+\DoxyCodeLine{1153         status = \textcolor{keyword}{true};}
+\DoxyCodeLine{1154 }
+\DoxyCodeLine{1155         DisplayPlaneState \&squashed\_plane = composition.back();}
+\DoxyCodeLine{1156         \textcolor{keywordflow}{if} (squashed\_plane.NeedsSurfaceAllocation()) \{}
+\DoxyCodeLine{1157           \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_af76e9e632a76792f65bcde3a9e025169}{SetOffScreenPlaneTarget}}(squashed\_plane);}
+\DoxyCodeLine{1158           *validate\_final\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{1159         \}}
+\DoxyCodeLine{1160 }
+\DoxyCodeLine{1161         \textcolor{keywordflow}{if} (!commit\_planes.empty()) \{}
+\DoxyCodeLine{1162           \textcolor{comment}{// Layer for the plane should have changed, reset commit planes.}}
+\DoxyCodeLine{1163           std::vector<OverlayPlane>().swap(commit\_planes);}
+\DoxyCodeLine{1164           \textcolor{keywordflow}{for} (DisplayPlaneState \&temp : composition) \{}
+\DoxyCodeLine{1165             commit\_planes.emplace\_back(}
+\DoxyCodeLine{1166                 OverlayPlane(temp.GetDisplayPlane(), temp.GetOverlayLayer()));}
+\DoxyCodeLine{1167           \}}
+\DoxyCodeLine{1168         \}}
+\DoxyCodeLine{1169       \}}
+\DoxyCodeLine{1170     \}}
+\DoxyCodeLine{1171   \}}
+\DoxyCodeLine{1172 }
+\DoxyCodeLine{1173   \textcolor{keywordflow}{return} status;}
+\DoxyCodeLine{1174 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneManager_ab619680feec679f90c733f104bab43d4}\label{classhwcomposer_1_1DisplayPlaneManager_ab619680feec679f90c733f104bab43d4}} 
+\index{hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}!Validate\+Layers@{Validate\+Layers}}
+\index{Validate\+Layers@{Validate\+Layers}!hwcomposer\+::\+Display\+Plane\+Manager@{hwcomposer\+::\+Display\+Plane\+Manager}}
+\subsubsection{\texorpdfstring{Validate\+Layers()}{ValidateLayers()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+Manager\+::\+Validate\+Layers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers,  }\item[{int}]{add\+\_\+index,  }\item[{bool}]{disable\+\_\+overlay,  }\item[{bool $\ast$}]{commit\+\_\+checked,  }\item[{bool $\ast$}]{re\+\_\+validation\+\_\+needed,  }\item[{\mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{composition,  }\item[{\mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{Display\+Plane\+State\+List}} \&}]{previous\+\_\+composition,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$$>$ \&}]{mark\+\_\+later }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file displayplanemanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                             \{}
+\DoxyCodeLine{78   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80   \textcolor{keywordflow}{if} (add\_index <= 0) \{}
+\DoxyCodeLine{81     \textcolor{keywordflow}{if} (!previous\_composition.empty()) \{}
+\DoxyCodeLine{82       \textcolor{keywordflow}{for} (DisplayPlaneState \&plane : previous\_composition) \{}
+\DoxyCodeLine{83         \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_adafd342e7e70017f40491d6ba3e70360}{MarkSurfacesForRecycling}}(\&plane, mark\_later, \textcolor{keyword}{true});}
+\DoxyCodeLine{84       \}}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{keywordflow}{if} (!composition.empty()) \{}
+\DoxyCodeLine{88       \textcolor{keywordflow}{for} (DisplayPlaneState \&plane : previous\_composition) \{}
+\DoxyCodeLine{89         \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_adafd342e7e70017f40491d6ba3e70360}{MarkSurfacesForRecycling}}(\&plane, mark\_later, \textcolor{keyword}{true});}
+\DoxyCodeLine{90       \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92       \mbox{\hyperlink{namespacehwcomposer_adf383ae435d39a5631a8ad82e7fa18a4}{DisplayPlaneStateList}}().swap(composition);}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{96     \textcolor{keywordflow}{if} (add\_index <= 0) \{}
+\DoxyCodeLine{97       \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"Full validation being performed. \(\backslash\)n"});}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{100   \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102   std::vector<OverlayPlane> commit\_planes;}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104   \textcolor{keywordflow}{for} (DisplayPlaneState \&temp : composition) \{}
+\DoxyCodeLine{105     commit\_planes.emplace\_back(}
+\DoxyCodeLine{106         OverlayPlane(temp.GetDisplayPlane(), temp.GetOverlayLayer()));}
+\DoxyCodeLine{107   \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109   \textcolor{comment}{// In case we are forcing GPU composition for all layers and using a single}}
+\DoxyCodeLine{110   \textcolor{comment}{// plane.}}
+\DoxyCodeLine{111   \textcolor{keywordflow}{if} (disable\_overlay) \{}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{113     \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"Forcing GPU For all layers \%d \%d \%d \%d \(\backslash\)n"}, disable\_overlay,}
+\DoxyCodeLine{114                   composition.empty(), add\_index <= 0, layers.size());}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{116     ForceGpuForAllLayers(commit\_planes, composition, layers, mark\_later, \textcolor{keyword}{false});}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     *re\_validation\_needed = \textcolor{keyword}{false};}
+\DoxyCodeLine{119     *commit\_checked = \textcolor{keyword}{true};}
+\DoxyCodeLine{120     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{121   \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123   \textcolor{keyword}{auto} overlay\_begin = overlay\_planes\_.begin();}
+\DoxyCodeLine{124   \textcolor{keywordflow}{if} (!composition.empty()) \{}
+\DoxyCodeLine{125     overlay\_begin = overlay\_planes\_.begin() + composition.size();}
+\DoxyCodeLine{126   \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128   \textcolor{comment}{// Let's mark all planes as free to be used.}}
+\DoxyCodeLine{129   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} j = overlay\_begin; j != overlay\_planes\_.end(); ++j) \{}
+\DoxyCodeLine{130     j->get()->SetInUse(\textcolor{keyword}{false});}
+\DoxyCodeLine{131   \}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133   std::vector<OverlayLayer *> cursor\_layers;}
+\DoxyCodeLine{134   \textcolor{keyword}{auto} layer\_begin = layers.begin();}
+\DoxyCodeLine{135   \textcolor{keyword}{auto} layer\_end = layers.end();}
+\DoxyCodeLine{136   \textcolor{keywordtype}{bool} validate\_final\_layers = \textcolor{keyword}{false};}
+\DoxyCodeLine{137   \textcolor{keywordtype}{bool} test\_commit\_done = \textcolor{keyword}{false};}
+\DoxyCodeLine{138   OverlayLayer *previous\_layer = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140   \textcolor{keywordflow}{if} (add\_index > 0) \{}
+\DoxyCodeLine{141     layer\_begin = layers.begin() + add\_index;}
+\DoxyCodeLine{142   \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144   \textcolor{keywordflow}{if} (layer\_begin != layer\_end) \{}
+\DoxyCodeLine{145     \textcolor{keyword}{auto} overlay\_end = overlay\_planes\_.end();}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#ifdef DISABLE\_CURSOR\_PLANE}}
+\DoxyCodeLine{147     \textcolor{keywordflow}{if} (!enable\_last\_plane\_ || cursor\_plane\_) \{}
+\DoxyCodeLine{148       overlay\_end = overlay\_planes\_.end() - 1;}
+\DoxyCodeLine{149     \}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{151     \textcolor{keywordflow}{if} (cursor\_plane\_) \{}
+\DoxyCodeLine{152       overlay\_end = overlay\_planes\_.end() - 1;}
+\DoxyCodeLine{153     \}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156     \textcolor{comment}{// Handle layers for overlays.}}
+\DoxyCodeLine{157     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} j = overlay\_begin; j < overlay\_end; ++j) \{}
+\DoxyCodeLine{158       DisplayPlane *plane = j->get();}
+\DoxyCodeLine{159       \textcolor{keywordflow}{if} (previous\_layer \&\& !composition.empty()) \{}
+\DoxyCodeLine{160         DisplayPlaneState \&last\_plane = composition.back();}
+\DoxyCodeLine{161         \textcolor{keywordflow}{if} (last\_plane.NeedsOffScreenComposition()) \{}
+\DoxyCodeLine{162           ValidateForDisplayScaling(composition.back(), commit\_planes);}
+\DoxyCodeLine{163         \}}
+\DoxyCodeLine{164       \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166       \textcolor{comment}{// Let's break in case we have already mapped all our}}
+\DoxyCodeLine{167       \textcolor{comment}{// layers.}}
+\DoxyCodeLine{168       \textcolor{keywordflow}{if} (layer\_begin == layer\_end)}
+\DoxyCodeLine{169         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171       \textcolor{comment}{// Handle remaining overlay planes.}}
+\DoxyCodeLine{172       \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = layer\_begin; i != layer\_end; ++i) \{}
+\DoxyCodeLine{173         OverlayLayer *layer = \&(*(i));}
+\DoxyCodeLine{174         ++layer\_begin;}
+\DoxyCodeLine{175         \textcolor{comment}{// Ignore cursor layer as it will handled separately.}}
+\DoxyCodeLine{176         \textcolor{keywordflow}{if} (layer->IsCursorLayer()) \{}
+\DoxyCodeLine{177           cursor\_layers.emplace\_back(layer);}
+\DoxyCodeLine{178           \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{179         \}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181         \textcolor{keywordtype}{bool} prefer\_seperate\_plane = layer->PreferSeparatePlane();}
+\DoxyCodeLine{182         \textcolor{keywordflow}{if} (!prefer\_seperate\_plane \&\& previous\_layer) \{}
+\DoxyCodeLine{183           prefer\_seperate\_plane = previous\_layer->PreferSeparatePlane();}
+\DoxyCodeLine{184         \}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186         \textcolor{comment}{// Previous layer should not be used anywhere below, so can be}}
+\DoxyCodeLine{187         \textcolor{comment}{// safely reset to current layer.}}
+\DoxyCodeLine{188         previous\_layer = layer;}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190         commit\_planes.emplace\_back(OverlayPlane(plane, layer));}
+\DoxyCodeLine{191         \textcolor{comment}{// If we are able to composite buffer with the given plane, lets use}}
+\DoxyCodeLine{192         \textcolor{comment}{// it.}}
+\DoxyCodeLine{193         \textcolor{keywordtype}{bool} fall\_back = FallbacktoGPU(plane, layer, commit\_planes);}
+\DoxyCodeLine{194         test\_commit\_done = \textcolor{keyword}{true};}
+\DoxyCodeLine{195         \textcolor{keywordtype}{bool} force\_separate = \textcolor{keyword}{false};}
+\DoxyCodeLine{196         \textcolor{keywordflow}{if} (fall\_back \&\& !prefer\_seperate\_plane \&\& !composition.empty()) \{}
+\DoxyCodeLine{197           force\_separate =}
+\DoxyCodeLine{198               \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_afd4d9af275a937a7afa49a1d37ab0063}{ForceSeparatePlane}}(layers, composition.back(), layer);}
+\DoxyCodeLine{199         \}}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201         \textcolor{keywordflow}{if} (!fall\_back || prefer\_seperate\_plane || force\_separate) \{}
+\DoxyCodeLine{202           \textcolor{keywordflow}{if} (validate\_final\_layers)}
+\DoxyCodeLine{203             validate\_final\_layers = fall\_back;}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205           composition.emplace\_back(plane, layer, \textcolor{keyword}{this}, layer->GetZorder(),}
+\DoxyCodeLine{206                                    display\_transform\_);}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{208           \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{209               \textcolor{stringliteral}{"Added Layer for direct Scanout: layer index: \%d "}}
+\DoxyCodeLine{210               \textcolor{stringliteral}{"validate\_final\_layers: \%d force\_separate: \%d fall\_back: \%d \(\backslash\)n"},}
+\DoxyCodeLine{211               layer->GetZorder(), validate\_final\_layers, force\_separate,}
+\DoxyCodeLine{212               fall\_back);}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{214           plane->SetInUse(\textcolor{keyword}{true});}
+\DoxyCodeLine{215           DisplayPlaneState \&last\_plane = composition.back();}
+\DoxyCodeLine{216           \textcolor{keywordflow}{if} (layer->IsVideoLayer()) \{}
+\DoxyCodeLine{217             last\_plane.SetVideoPlane(\textcolor{keyword}{true});}
+\DoxyCodeLine{218           \}}
+\DoxyCodeLine{219           \textcolor{keywordflow}{if} (fall\_back) \{}
+\DoxyCodeLine{220             \textcolor{keywordflow}{if} (!validate\_final\_layers)}
+\DoxyCodeLine{221               validate\_final\_layers = !(last\_plane.GetOffScreenTarget());}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223             ResetPlaneTarget(last\_plane, commit\_planes.back());}
+\DoxyCodeLine{224           \}}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{227         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{228           \textcolor{keywordflow}{if} (composition.empty()) \{}
+\DoxyCodeLine{229             composition.emplace\_back(plane, layer, \textcolor{keyword}{this}, layer->GetZorder(),}
+\DoxyCodeLine{230                                      display\_transform\_);}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{232             \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"Added Layer: \%d \%d validate\_final\_layers: \%d  \(\backslash\)n"},}
+\DoxyCodeLine{233                           layer->GetZorder(), composition.size(),}
+\DoxyCodeLine{234                           validate\_final\_layers);}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{236             DisplayPlaneState \&last\_plane = composition.back();}
+\DoxyCodeLine{237             ResetPlaneTarget(last\_plane, commit\_planes.back());}
+\DoxyCodeLine{238             validate\_final\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{239             \textcolor{keywordflow}{if} (display\_transform\_ != kIdentity) \{}
+\DoxyCodeLine{240               \textcolor{comment}{// If DisplayTransform is not supported, let's check if}}
+\DoxyCodeLine{241               \textcolor{comment}{// we can fallback to GPU rotation for this plane.}}
+\DoxyCodeLine{242               \textcolor{keywordflow}{if} (last\_plane.GetRotationType() ==}
+\DoxyCodeLine{243                   \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a91c319c8bcf2c5686169929c170c8d2e}{DisplayPlaneState::RotationType::kDisplayRotation}}) \{}
+\DoxyCodeLine{244                 last\_plane.SetRotationType(}
+\DoxyCodeLine{245                     \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a5b98db46be3ebb427a634f7a07033357}{DisplayPlaneState::RotationType::kGPURotation}}, \textcolor{keyword}{false});}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247                 \textcolor{comment}{// Check if we can rotate using Display plane.}}
+\DoxyCodeLine{248                 \textcolor{keywordflow}{if} (FallbacktoGPU(last\_plane.GetDisplayPlane(),}
+\DoxyCodeLine{249                                   last\_plane.GetOffScreenTarget()->GetLayer(),}
+\DoxyCodeLine{250                                   commit\_planes)) \{}
+\DoxyCodeLine{251                   last\_plane.SetRotationType(}
+\DoxyCodeLine{252                       \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a5b98db46be3ebb427a634f7a07033357}{DisplayPlaneState::RotationType::kGPURotation}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{253                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{254                   validate\_final\_layers = \textcolor{keyword}{false};}
+\DoxyCodeLine{255                 \}}
+\DoxyCodeLine{256               \}}
+\DoxyCodeLine{257             \}}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{260           \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{261             commit\_planes.pop\_back();}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{263             \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"Added Layer: \%d \%d validate\_final\_layers: \%d  \(\backslash\)n"},}
+\DoxyCodeLine{264                           layer->GetZorder(), composition.size(),}
+\DoxyCodeLine{265                           validate\_final\_layers);}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{267             composition.back().AddLayer(layer);}
+\DoxyCodeLine{268             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_ada91a47d462537740543db7c70d07f8e}{SquashPlanesAsNeeded}}(layers, composition, commit\_planes,}
+\DoxyCodeLine{269                                         mark\_later, \&validate\_final\_layers)) \{}
+\DoxyCodeLine{270               j--;}
+\DoxyCodeLine{271               plane = j->get();}
+\DoxyCodeLine{272             \}}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274             DisplayPlaneState \&last\_plane = composition.back();}
+\DoxyCodeLine{275             \textcolor{keywordflow}{if} (!validate\_final\_layers)}
+\DoxyCodeLine{276               validate\_final\_layers = !(last\_plane.GetOffScreenTarget());}
+\DoxyCodeLine{277             ResetPlaneTarget(last\_plane, commit\_planes.back());}
+\DoxyCodeLine{278           \}}
+\DoxyCodeLine{279         \}}
+\DoxyCodeLine{280       \}}
+\DoxyCodeLine{281     \}}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283     \textcolor{keywordflow}{if} ((layer\_begin != layer\_end) \&\& (!composition.empty())) \{}
+\DoxyCodeLine{284       \textcolor{keywordtype}{bool} is\_video = composition.back().IsVideoPlane();}
+\DoxyCodeLine{285       previous\_layer = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{286       DisplayPlaneState \&last\_plane = composition.back();}
+\DoxyCodeLine{287       \textcolor{comment}{// We dont have any additional planes. Pre composite remaining layers}}
+\DoxyCodeLine{288       \textcolor{comment}{// to the last overlay plane.}}
+\DoxyCodeLine{289       \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = layer\_begin; i != layer\_end; ++i) \{}
+\DoxyCodeLine{290         previous\_layer = \&(*(i));}
+\DoxyCodeLine{291         \textcolor{comment}{// Ignore cursor layer as it will handled separately.}}
+\DoxyCodeLine{292         \textcolor{keywordflow}{if} (previous\_layer->IsCursorLayer()) \{}
+\DoxyCodeLine{293           cursor\_layers.emplace\_back(previous\_layer);}
+\DoxyCodeLine{294           previous\_layer = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{295           \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{296         \}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{298         \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"Added Layer: \%d \(\backslash\)n"}, previous\_layer->GetZorder());}
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{300         last\_plane.AddLayer(previous\_layer);}
+\DoxyCodeLine{301       \}}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{303       \textcolor{keywordflow}{if} (composition.back().NeedsOffScreenComposition()) \{}
+\DoxyCodeLine{304         \textcolor{keywordflow}{while} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_ada91a47d462537740543db7c70d07f8e}{SquashPlanesAsNeeded}}(layers, composition, commit\_planes,}
+\DoxyCodeLine{305                                     mark\_later, \&validate\_final\_layers)) \{}
+\DoxyCodeLine{306           \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{307         \}}
+\DoxyCodeLine{308         DisplayPlaneState \&squashed\_plane = composition.back();}
+\DoxyCodeLine{309         \textcolor{comment}{// In this case we need to fallback to 3Dcomposition till Media}}
+\DoxyCodeLine{310         \textcolor{comment}{// backend adds support for multiple layers.}}
+\DoxyCodeLine{311         \textcolor{keywordtype}{bool} force\_buffer = \textcolor{keyword}{false};}
+\DoxyCodeLine{312         \textcolor{keywordflow}{if} (is\_video \&\& squashed\_plane.GetSourceLayers().size() > 1 \&\&}
+\DoxyCodeLine{313             squashed\_plane.GetOffScreenTarget()) \{}
+\DoxyCodeLine{314           \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager_adafd342e7e70017f40491d6ba3e70360}{MarkSurfacesForRecycling}}(\&squashed\_plane, mark\_later, \textcolor{keyword}{true});}
+\DoxyCodeLine{315           force\_buffer = \textcolor{keyword}{true};}
+\DoxyCodeLine{316         \}}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{318         \textcolor{keywordflow}{if} (force\_buffer || squashed\_plane.NeedsSurfaceAllocation()) \{}
+\DoxyCodeLine{319           ResetPlaneTarget(squashed\_plane, commit\_planes.back());}
+\DoxyCodeLine{320           validate\_final\_layers = \textcolor{keyword}{true};}
+\DoxyCodeLine{321         \}}
+\DoxyCodeLine{322 }
+\DoxyCodeLine{323         \textcolor{keywordflow}{if} (previous\_layer) \{}
+\DoxyCodeLine{324           squashed\_plane.UsePlaneScalar(\textcolor{keyword}{false});}
+\DoxyCodeLine{325         \}}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327         commit\_planes.back().layer = squashed\_plane.GetOverlayLayer();}
+\DoxyCodeLine{328       \}}
+\DoxyCodeLine{329     \}}
+\DoxyCodeLine{330   \}}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{332   \textcolor{keywordflow}{if} (!cursor\_layers.empty()) \{}
+\DoxyCodeLine{333     ValidateCursorLayer(layers, commit\_planes, cursor\_layers, mark\_later,}
+\DoxyCodeLine{334                         composition, \&validate\_final\_layers, \&test\_commit\_done,}
+\DoxyCodeLine{335                         \textcolor{keyword}{false});}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337     \textcolor{keywordflow}{if} (validate\_final\_layers \&\& add\_index > 0 \&\&}
+\DoxyCodeLine{338         (composition.size() == (overlay\_planes\_.size() - 1))) \{}
+\DoxyCodeLine{339       \textcolor{comment}{// If commit failed here and we are doing incremental validation,}}
+\DoxyCodeLine{340       \textcolor{comment}{// something might be wrong with other layer+plane combinations.}}
+\DoxyCodeLine{341       \textcolor{comment}{// Let's ensure DisplayQueue, checks final combination again and}}
+\DoxyCodeLine{342       \textcolor{comment}{// request full validation if needed.}}
+\DoxyCodeLine{343       *commit\_checked = \textcolor{keyword}{false};}
+\DoxyCodeLine{344       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{345     \}}
+\DoxyCodeLine{346   \}}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348   \textcolor{keywordflow}{if} (composition.empty()) \{}
+\DoxyCodeLine{349     *re\_validation\_needed = \textcolor{keyword}{false};}
+\DoxyCodeLine{350     *commit\_checked = \textcolor{keyword}{true};}
+\DoxyCodeLine{351     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{352   \}}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354   \textcolor{keywordflow}{if} (validate\_final\_layers) \{}
+\DoxyCodeLine{355     ValidateFinalLayers(commit\_planes, composition, layers, mark\_later, \textcolor{keyword}{false});}
+\DoxyCodeLine{356     test\_commit\_done = \textcolor{keyword}{true};}
+\DoxyCodeLine{357   \}}
+\DoxyCodeLine{358 }
+\DoxyCodeLine{359   \textcolor{keywordtype}{bool} render\_layers = \textcolor{keyword}{false};}
+\DoxyCodeLine{360   FinalizeValidation(composition, commit\_planes, \&render\_layers,}
+\DoxyCodeLine{361                      re\_validation\_needed);}
+\DoxyCodeLine{362 }
+\DoxyCodeLine{363   *commit\_checked = test\_commit\_done;}
+\DoxyCodeLine{364   \textcolor{keywordflow}{return} render\_layers;}
+\DoxyCodeLine{365 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/display/\mbox{\hyperlink{displayplanemanager_8h}{displayplanemanager.\+h}}\item 
+common/display/\mbox{\hyperlink{displayplanemanager_8cpp}{displayplanemanager.\+cpp}}\end{DoxyCompactItemize}

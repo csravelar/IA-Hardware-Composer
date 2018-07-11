@@ -1,0 +1,75 @@
+\hypertarget{classhwcomposer_1_1IAHotPlugEventCallback}{}\section{hwcomposer\+:\+:I\+A\+Hot\+Plug\+Event\+Callback Class Reference}
+\label{classhwcomposer_1_1IAHotPlugEventCallback}\index{hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback@{hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback}}
+Inheritance diagram for hwcomposer\+:\+:I\+A\+Hot\+Plug\+Event\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1IAHotPlugEventCallback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IAHotPlugEventCallback_a1d6052a2e63656b115589f9daeca04c4}{I\+A\+Hot\+Plug\+Event\+Callback}} (hwf\+\_\+callback const $\ast$procs)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1IAHotPlugEventCallback_a77b86b9fb88073abf1cab0b5aed4be1d}{Callback}} (uint32\+\_\+t, bool connected)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 403 of file hwf\+\_\+alioshal.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHotPlugEventCallback_a1d6052a2e63656b115589f9daeca04c4}\label{classhwcomposer_1_1IAHotPlugEventCallback_a1d6052a2e63656b115589f9daeca04c4}} 
+\index{hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback@{hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback}!I\+A\+Hot\+Plug\+Event\+Callback@{I\+A\+Hot\+Plug\+Event\+Callback}}
+\index{I\+A\+Hot\+Plug\+Event\+Callback@{I\+A\+Hot\+Plug\+Event\+Callback}!hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback@{hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback}}
+\subsubsection{\texorpdfstring{I\+A\+Hot\+Plug\+Event\+Callback()}{IAHotPlugEventCallback()}}
+{\footnotesize\ttfamily hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback\+::\+I\+A\+Hot\+Plug\+Event\+Callback (\begin{DoxyParamCaption}\item[{hwf\+\_\+callback const $\ast$}]{procs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 405 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{405                                                     : m\_pCB(procs) \{}
+\DoxyCodeLine{406   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHotPlugEventCallback_a77b86b9fb88073abf1cab0b5aed4be1d}\label{classhwcomposer_1_1IAHotPlugEventCallback_a77b86b9fb88073abf1cab0b5aed4be1d}} 
+\index{hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback@{hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback@{hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback}}
+\subsubsection{\texorpdfstring{Callback()}{Callback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+I\+A\+Hot\+Plug\+Event\+Callback\+::\+Callback (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{bool}]{connected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1HotPlugCallback_a455c8913e1da9b165134a05c9cb441ba}{hwcomposer\+::\+Hot\+Plug\+Callback}}.
+
+
+
+Definition at line 408 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{408                                             \{}
+\DoxyCodeLine{409     \textcolor{keywordflow}{if} (ignore\_) \{}
+\DoxyCodeLine{410       ignore\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{411       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{412     \}}
+\DoxyCodeLine{413 }
+\DoxyCodeLine{414     LOG\_I(\textcolor{stringliteral}{"IAHotPlugEventCallback --> called.\(\backslash\)n"});}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416     m\_pCB->hotplugEvent(m\_pCB, HWF\_DISPLAY\_EXTERNAL, connected);}
+\DoxyCodeLine{417   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/alios/\mbox{\hyperlink{hwf__alioshal_8cpp}{hwf\+\_\+alioshal.\+cpp}}\end{DoxyCompactItemize}

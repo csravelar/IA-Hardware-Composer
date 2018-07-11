@@ -1,0 +1,30 @@
+\hypertarget{hwcutils_8cpp}{}\section{common/utils/hwcutils.cpp File Reference}
+\label{hwcutils_8cpp}\index{common/utils/hwcutils.\+cpp@{common/utils/hwcutils.\+cpp}}
+{\ttfamily \#include \char`\"{}hwcutils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$poll.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hwctrace.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$drm\+\_\+fourcc.\+h$>$}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehwcomposer}{hwcomposer}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacehwcomposer_a095356a61c96d5f48d4ada5e8e193549}{hwcomposer\+::\+H\+W\+C\+Poll}} (int fd, int timeout)
+\item 
+void \mbox{\hyperlink{namespacehwcomposer_a691c500dd8ba703991673286e1920bd9}{hwcomposer\+::\+Reset\+Rect\+To\+Region}} (const Hwc\+Region \&hwc\+\_\+region, Hwc\+Rect$<$ int $>$ \&rect)
+\item 
+void \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{hwcomposer\+::\+Calculate\+Rect}} (const Hwc\+Rect$<$ int $>$ \&target\+\_\+rect, Hwc\+Rect$<$ int $>$ \&new\+\_\+rect)
+\item 
+void \mbox{\hyperlink{namespacehwcomposer_a8b391b601cac0f823b0378aecc48062e}{hwcomposer\+::\+Calculate\+Source\+Rect}} (const Hwc\+Rect$<$ float $>$ \&target\+\_\+rect, Hwc\+Rect$<$ float $>$ \&new\+\_\+rect)
+\item 
+bool \mbox{\hyperlink{namespacehwcomposer_a96195339fc55ee57f41cc4597a56746c}{hwcomposer\+::\+Is\+Supported\+Media\+Format}} (uint32\+\_\+t format)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacehwcomposer_a515188a123256557aa25b5f879b3e641}{hwcomposer\+::\+Get\+Total\+Planes\+For\+Format}} (uint32\+\_\+t format)
+\item 
+std\+::string \mbox{\hyperlink{namespacehwcomposer_ae744afa47f47d3d45eb091546a72ab32}{hwcomposer\+::\+Stringify\+Rect}} (Hwc\+Rect$<$ int $>$ rect)
+\item 
+std\+::string \mbox{\hyperlink{namespacehwcomposer_a21671215b0bb9596fa5890531b532b9e}{hwcomposer\+::\+Stringify\+Region}} (Hwc\+Region region)
+\end{DoxyCompactItemize}

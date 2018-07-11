@@ -1,0 +1,1236 @@
+\hypertarget{classhwcomposer_1_1MosaicDisplay}{}\section{hwcomposer\+:\+:Mosaic\+Display Class Reference}
+\label{classhwcomposer_1_1MosaicDisplay}\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+
+
+{\ttfamily \#include $<$mosaicdisplay.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Mosaic\+Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1MosaicDisplay}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a55b36338b1f718942c94d309b3ee7138}{Mosaic\+Display}} (const std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$$>$ \&displays)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ab5d5f4afacab634238ec516723e6238a}{$\sim$\+Mosaic\+Display}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a31b15aba0948d8e1c65f12f2d79f1ecf}{Initialize}} (\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$buffer\+\_\+handler, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$) override
+\item 
+Display\+Type \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a7c5288febea28948c2689d7f6feee183}{Type}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a5123a951bd40adef34cbe1e11d0a8e69}{Width}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_af15fda20d779888c521095542b505f9d}{Height}} () const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a41e94410e4e73ee057ef672bb51aba65}{Power\+Mode}} () const override
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_aab767066611a255bc84d50c4b53b3d5d}{Get\+Display\+Pipe}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_aaff4528ff2c22a7ec8ce8ab1bc8cbe07}{Set\+Active\+Config}} (uint32\+\_\+t config) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a6283bdb8c3f0ababbb224d71726f4d2c}{Get\+Active\+Config}} (uint32\+\_\+t $\ast$config) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a001b4f2775a2a50d380ff6eb33ba3683}{Set\+Power\+Mode}} (uint32\+\_\+t power\+\_\+mode) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a84e8ddade543bca6659a1eb7bfe72bcd}{Present}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&source\+\_\+layers, int32\+\_\+t $\ast$retire\+\_\+fence, \mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$call\+\_\+back=\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}, bool handle\+\_\+constraints=false) override
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ab95984da914029b9dd2c5fb728926dbc}{Register\+Vsync\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a1deecbf2ba9b007fa7529b31da47d575}{Register\+Refresh\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RefreshCallback}{Refresh\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a1d4f419cda4d1729dfb085f385a76afb}{Register\+Hot\+Plug\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1HotPlugCallback}{Hot\+Plug\+Callback}} $>$ callback, uint32\+\_\+t display\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a3843cd0fcbd50cfed44d7a0ebdf5539b}{V\+Sync\+Control}} (bool enabled) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a8978685de8d614113e49b3b774c9b723}{Check\+Plane\+Format}} (uint32\+\_\+t format) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a99609427012ce9c2e3b4e16ed13211a3}{Set\+Gamma}} (float red, float green, float blue) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a6942a0aa562c459a89b014aa15fdcccd}{Set\+Contrast}} (uint32\+\_\+t red, uint32\+\_\+t green, uint32\+\_\+t blue) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a113c244569faf509d03062f794216981}{Set\+Brightness}} (uint32\+\_\+t red, uint32\+\_\+t green, uint32\+\_\+t blue) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_af9053256b801c0334bd89ed7b5e97912}{Set\+Explicit\+Sync\+Support}} (bool disable\+\_\+explicit\+\_\+sync) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ac634db4100aa1707f28ff2bbb77b8460}{Set\+Video\+Scaling\+Mode}} (uint32\+\_\+t mode) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_adba98086d56d0ccc2df7a57a87ddd4b0}{Set\+Video\+Color}} (H\+W\+C\+Color\+Control color, float value) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ab4b88eb3a5d9a811dada73b0f8d33c4d}{Get\+Video\+Color}} (H\+W\+C\+Color\+Control color, float $\ast$value, float $\ast$start, float $\ast$end) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_aaf2a3e4f69753b92366c23434db3d133}{Restore\+Video\+Default\+Color}} (H\+W\+C\+Color\+Control color) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a28167d8f866c8b2c6ea01b42b442eb0f}{Set\+Video\+Deinterlace}} (H\+W\+C\+Deinterlace\+Flag flag, H\+W\+C\+Deinterlace\+Control mode) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a907f7b2e5c59a27e5335f8cfadba87f5}{Restore\+Video\+Default\+Deinterlace}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a837d28f710438d462fd88b85721528b0}{Is\+Connected}} () const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_aa0d5befb882537555f4476130863c27c}{Update\+Scaling\+Ratio}} (uint32\+\_\+t primary\+\_\+width, uint32\+\_\+t primary\+\_\+height, uint32\+\_\+t display\+\_\+width, uint32\+\_\+t display\+\_\+height) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a7944dd71d1efa68e0f94f68cc1bd30b2}{Clone\+Display}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$source\+\_\+display) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a989d240e0d3287ec2b9e6cfbe1041bda}{Present\+Clone}} (\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a7a03738eb7862a1b2e1585fbd80e710c}{Get\+Display\+Attribute}} (uint32\+\_\+t, H\+W\+C\+Display\+Attribute attribute, int32\+\_\+t $\ast$value) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a18bc1bc98ff2814c710ee1202f868217}{Get\+Display\+Configs}} (uint32\+\_\+t $\ast$num\+\_\+configs, uint32\+\_\+t $\ast$configs) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ac76216611bf8bebcf182a1c18b3d0c04}{Get\+Display\+Name}} (uint32\+\_\+t $\ast$size, char $\ast$name) override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a8f006e53e5d0e8c6caf8ac50f25ab407}{Get\+X\+Translation}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a9a53f36574c2ed39f589413721b0fafa}{Enable\+V\+Sync}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_ab2d47bd2c1eac196990bb8d7c2f1ecd7}{V\+Sync\+Update}} (int64\+\_\+t timestamp)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_aeb0d37462e1584fa329deaea3d7788e3}{Refresh\+Update}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_af529c96ce14e717b11759fa45648ea68}{Hot\+Plug\+Update}} (bool connected)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1MosaicDisplay_a406e652e251f8f88ef628704a1e57b1f}{Set\+H\+D\+C\+P\+State}} (H\+W\+C\+Content\+Protection state, H\+W\+C\+Content\+Type content\+\_\+type) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file mosaicdisplay.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a55b36338b1f718942c94d309b3ee7138}\label{classhwcomposer_1_1MosaicDisplay_a55b36338b1f718942c94d309b3ee7138}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Mosaic\+Display@{Mosaic\+Display}}
+\index{Mosaic\+Display@{Mosaic\+Display}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Mosaic\+Display()}{MosaicDisplay()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Mosaic\+Display\+::\+Mosaic\+Display (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$$>$ \&}]{displays }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68     : dpix\_(0), dpiy\_(0) \{}
+\DoxyCodeLine{69   uint32\_t size = displays.size();}
+\DoxyCodeLine{70   physical\_displays\_.reserve(size);}
+\DoxyCodeLine{71   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{72     physical\_displays\_.emplace\_back(displays.at(i));}
+\DoxyCodeLine{73   \}}
+\DoxyCodeLine{74 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_ab5d5f4afacab634238ec516723e6238a}\label{classhwcomposer_1_1MosaicDisplay_ab5d5f4afacab634238ec516723e6238a}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!````~Mosaic\+Display@{$\sim$\+Mosaic\+Display}}
+\index{````~Mosaic\+Display@{$\sim$\+Mosaic\+Display}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{$\sim$\+Mosaic\+Display()}{~MosaicDisplay()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Mosaic\+Display\+::$\sim$\+Mosaic\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 76 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                               \{}
+\DoxyCodeLine{77 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a8978685de8d614113e49b3b774c9b723}\label{classhwcomposer_1_1MosaicDisplay_a8978685de8d614113e49b3b774c9b723}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Check\+Plane\+Format@{Check\+Plane\+Format}}
+\index{Check\+Plane\+Format@{Check\+Plane\+Format}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Check\+Plane\+Format()}{CheckPlaneFormat()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Check\+Plane\+Format (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI to check the format support on the device 
+\begin{DoxyParams}{Parameters}
+{\em format} & valid D\+RM formats found in drm\+\_\+fourcc.\+h. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4e856b5754054bdf77467e6663cb5b50}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 373 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{373                                                     \{}
+\DoxyCodeLine{374   \textcolor{keywordflow}{return} physical\_displays\_.at(0)->CheckPlaneFormat(format);}
+\DoxyCodeLine{375 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a7944dd71d1efa68e0f94f68cc1bd30b2}\label{classhwcomposer_1_1MosaicDisplay_a7944dd71d1efa68e0f94f68cc1bd30b2}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Clone\+Display@{Clone\+Display}}
+\index{Clone\+Display@{Clone\+Display}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Clone\+Display()}{CloneDisplay()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Clone\+Display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This display needs to clone source\+\_\+display. We cannot have a display in cloned mode and extended mode at same time or clone more than one source\+\_\+display at same time. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ad244fa57c9c6380fb04bfd57da3cb28b}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 452 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{452                                                   \{}
+\DoxyCodeLine{453 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a9a53f36574c2ed39f589413721b0fafa}\label{classhwcomposer_1_1MosaicDisplay_a9a53f36574c2ed39f589413721b0fafa}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Enable\+V\+Sync@{Enable\+V\+Sync}}
+\index{Enable\+V\+Sync@{Enable\+V\+Sync}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Enable\+V\+Sync()}{EnableVSync()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Enable\+V\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 102 of file mosaicdisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                            \{}
+\DoxyCodeLine{103     \textcolor{keywordflow}{return} enable\_vsync\_;}
+\DoxyCodeLine{104   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a6283bdb8c3f0ababbb224d71726f4d2c}\label{classhwcomposer_1_1MosaicDisplay_a6283bdb8c3f0ababbb224d71726f4d2c}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Get\+Active\+Config@{Get\+Active\+Config}}
+\index{Get\+Active\+Config@{Get\+Active\+Config}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Get\+Active\+Config()}{GetActiveConfig()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Get\+Active\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9d4d9d2f6633fe37025210cac6e8cc6c}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 154 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{154                                                     \{}
+\DoxyCodeLine{155   \textcolor{keywordflow}{if} (!config)}
+\DoxyCodeLine{156     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158   *config = config\_;}
+\DoxyCodeLine{159   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{160 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a7a03738eb7862a1b2e1585fbd80e710c}\label{classhwcomposer_1_1MosaicDisplay_a7a03738eb7862a1b2e1585fbd80e710c}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Get\+Display\+Attribute@{Get\+Display\+Attribute}}
+\index{Get\+Display\+Attribute@{Get\+Display\+Attribute}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Attribute()}{GetDisplayAttribute()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Get\+Display\+Attribute (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{H\+W\+C\+Display\+Attribute}]{attribute,  }\item[{int32\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 455 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{457                                                         \{}
+\DoxyCodeLine{458   \textcolor{keywordtype}{bool} status = \textcolor{keyword}{true};}
+\DoxyCodeLine{459   \textcolor{keywordflow}{switch} (attribute) \{}
+\DoxyCodeLine{460     \textcolor{keywordflow}{case} HWCDisplayAttribute::kWidth:}
+\DoxyCodeLine{461       *value = width\_;}
+\DoxyCodeLine{462       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{463     \textcolor{keywordflow}{case} HWCDisplayAttribute::kHeight:}
+\DoxyCodeLine{464       *value = height\_;}
+\DoxyCodeLine{465       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{466     \textcolor{keywordflow}{case} HWCDisplayAttribute::kRefreshRate:}
+\DoxyCodeLine{467       *value = refresh\_;}
+\DoxyCodeLine{468       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{469     \textcolor{keywordflow}{case} HWCDisplayAttribute::kDpiX:}
+\DoxyCodeLine{470       *value = dpix\_;}
+\DoxyCodeLine{471       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{472     \textcolor{keywordflow}{case} HWCDisplayAttribute::kDpiY:}
+\DoxyCodeLine{473       *value = dpiy\_;}
+\DoxyCodeLine{474       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{475     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{476       *value = -1;}
+\DoxyCodeLine{477       status = \textcolor{keyword}{false};}
+\DoxyCodeLine{478   \}}
+\DoxyCodeLine{479 }
+\DoxyCodeLine{480   \textcolor{keywordflow}{return} status;}
+\DoxyCodeLine{481 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a18bc1bc98ff2814c710ee1202f868217}\label{classhwcomposer_1_1MosaicDisplay_a18bc1bc98ff2814c710ee1202f868217}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Get\+Display\+Configs@{Get\+Display\+Configs}}
+\index{Get\+Display\+Configs@{Get\+Display\+Configs}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Configs()}{GetDisplayConfigs()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Get\+Display\+Configs (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{num\+\_\+configs,  }\item[{uint32\+\_\+t $\ast$}]{configs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 483 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{484                                                          \{}
+\DoxyCodeLine{485   *num\_configs = 1;}
+\DoxyCodeLine{486   \textcolor{keywordflow}{if} (configs) \{}
+\DoxyCodeLine{487     configs[0] = 0;}
+\DoxyCodeLine{488   \}}
+\DoxyCodeLine{489   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{490 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_ac76216611bf8bebcf182a1c18b3d0c04}\label{classhwcomposer_1_1MosaicDisplay_ac76216611bf8bebcf182a1c18b3d0c04}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Get\+Display\+Name@{Get\+Display\+Name}}
+\index{Get\+Display\+Name@{Get\+Display\+Name}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Name()}{GetDisplayName()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Get\+Display\+Name (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{size,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a28c095d6d08c84e40b5d5160d038f0b5}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 492 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{492                                                              \{}
+\DoxyCodeLine{493   std::ostringstream stream;}
+\DoxyCodeLine{494   stream << \textcolor{stringliteral}{"Mosaic"};}
+\DoxyCodeLine{495   std::string \textcolor{keywordtype}{string} = stream.str();}
+\DoxyCodeLine{496   \textcolor{keywordtype}{size\_t} length = \textcolor{keywordtype}{string}.length();}
+\DoxyCodeLine{497   \textcolor{keywordflow}{if} (!name) \{}
+\DoxyCodeLine{498     *size = length;}
+\DoxyCodeLine{499     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{500   \}}
+\DoxyCodeLine{501 }
+\DoxyCodeLine{502   *size = std::min<uint32\_t>(\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(length - 1), *size);}
+\DoxyCodeLine{503   strncpy(name, \textcolor{keywordtype}{string}.c\_str(), *size);}
+\DoxyCodeLine{504   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{505 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_aab767066611a255bc84d50c4b53b3d5d}\label{classhwcomposer_1_1MosaicDisplay_aab767066611a255bc84d50c4b53b3d5d}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Get\+Display\+Pipe@{Get\+Display\+Pipe}}
+\index{Get\+Display\+Pipe@{Get\+Display\+Pipe}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Get\+Display\+Pipe()}{GetDisplayPipe()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Mosaic\+Display\+::\+Get\+Display\+Pipe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for getting connected display\textquotesingle{}s pipe id. \begin{DoxyReturn}{Returns}
+\char`\"{}-\/1\char`\"{} for unconnected display, valid values are 0 $\sim$ 2. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aaf80095ae6aed35c64dd633a6a2f101a}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 109 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109                                   \{}
+\DoxyCodeLine{110   \textcolor{keywordflow}{return} physical\_displays\_.at(0)->GetDisplayPipe();}
+\DoxyCodeLine{111 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_ab4b88eb3a5d9a811dada73b0f8d33c4d}\label{classhwcomposer_1_1MosaicDisplay_ab4b88eb3a5d9a811dada73b0f8d33c4d}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Get\+Video\+Color@{Get\+Video\+Color}}
+\index{Get\+Video\+Color@{Get\+Video\+Color}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Get\+Video\+Color()}{GetVideoColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Get\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{,  }\item[{float $\ast$}]{,  }\item[{float $\ast$}]{,  }\item[{float $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for getting video color in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a2db52a8a234064113a0e250a059663ac}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 419 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{420                                                             \{}
+\DoxyCodeLine{421   physical\_displays\_.at(0)->GetVideoColor(color, value, start, end);}
+\DoxyCodeLine{422 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a8f006e53e5d0e8c6caf8ac50f25ab407}\label{classhwcomposer_1_1MosaicDisplay_a8f006e53e5d0e8c6caf8ac50f25ab407}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Get\+X\+Translation@{Get\+X\+Translation}}
+\index{Get\+X\+Translation@{Get\+X\+Translation}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Get\+X\+Translation()}{GetXTranslation()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Mosaic\+Display\+::\+Get\+X\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a1f934e9ab6149fb35bd2868605c215dd}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 98 of file mosaicdisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98                                       \{}
+\DoxyCodeLine{99     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{100   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_af15fda20d779888c521095542b505f9d}\label{classhwcomposer_1_1MosaicDisplay_af15fda20d779888c521095542b505f9d}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Height@{Height}}
+\index{Height@{Height}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Height()}{Height()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Mosaic\+Display\+::\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a09a19377e64e1fed90ae8315a8e71864}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 101 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101                                      \{}
+\DoxyCodeLine{102   \textcolor{keywordflow}{return} height\_;}
+\DoxyCodeLine{103 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_af529c96ce14e717b11759fa45648ea68}\label{classhwcomposer_1_1MosaicDisplay_af529c96ce14e717b11759fa45648ea68}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Hot\+Plug\+Update@{Hot\+Plug\+Update}}
+\index{Hot\+Plug\+Update@{Hot\+Plug\+Update}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Hot\+Plug\+Update()}{HotPlugUpdate()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Hot\+Plug\+Update (\begin{DoxyParamCaption}\item[{bool}]{connected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a30e5c044e3a84ed23d2b3a5cec3f9037}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 333 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{333                                                 \{}
+\DoxyCodeLine{334   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{335   update\_connected\_displays\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{336   uint32\_t total\_connected\_displays = 0;}
+\DoxyCodeLine{337   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{338   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{339     \textcolor{keywordflow}{if} (physical\_displays\_.at(i)->IsConnected()) \{}
+\DoxyCodeLine{340       total\_connected\_displays++;}
+\DoxyCodeLine{341     \}}
+\DoxyCodeLine{342   \}}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344   \textcolor{keywordflow}{if} (vsync\_callback\_ \&\& enable\_vsync\_ \&\& pending\_vsync\_ \&\&}
+\DoxyCodeLine{345       (total\_connected\_displays > 0)) \{}
+\DoxyCodeLine{346     \textcolor{keywordflow}{if} (vsync\_counter\_ == total\_connected\_displays) \{}
+\DoxyCodeLine{347       vsync\_timestamp\_ /= total\_connected\_displays;}
+\DoxyCodeLine{348       vsync\_callback\_->Callback(display\_id\_, vsync\_timestamp\_);}
+\DoxyCodeLine{349       pending\_vsync\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{350     \}}
+\DoxyCodeLine{351   \}}
+\DoxyCodeLine{352 }
+\DoxyCodeLine{353   vsync\_counter\_ = total\_connected\_displays;}
+\DoxyCodeLine{354   vsync\_divisor\_ = vsync\_counter\_;}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356   \textcolor{keywordflow}{if} (connected\_ == connected) \{}
+\DoxyCodeLine{357     lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{358     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{359   \}}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{361   \textcolor{keywordflow}{if} (hotplug\_callback\_) \{}
+\DoxyCodeLine{362     \textcolor{keywordflow}{if} (!connected \&\& connected\_ \&\& total\_connected\_displays) \{}
+\DoxyCodeLine{363       lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{364       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{365     \}}
+\DoxyCodeLine{366 }
+\DoxyCodeLine{367     connected\_ = connected;}
+\DoxyCodeLine{368     hotplug\_callback\_->Callback(display\_id\_, connected);}
+\DoxyCodeLine{369   \}}
+\DoxyCodeLine{370   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{371 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a31b15aba0948d8e1c65f12f2d79f1ecf}\label{classhwcomposer_1_1MosaicDisplay_a31b15aba0948d8e1c65f12f2d79f1ecf}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler}{Native\+Buffer\+Handler}} $\ast$}]{buffer\+\_\+handler,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a008eb015dda9b4ead93186b4897c2e3c}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 79 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                                        \{}
+\DoxyCodeLine{81   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{82 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a837d28f710438d462fd88b85721528b0}\label{classhwcomposer_1_1MosaicDisplay_a837d28f710438d462fd88b85721528b0}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Is\+Connected@{Is\+Connected}}
+\index{Is\+Connected@{Is\+Connected}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Is\+Connected()}{IsConnected()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI to check if display is connected. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_af22694b3396866fd4f003755f4951b18}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 84 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                       \{}
+\DoxyCodeLine{85   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{86   \textcolor{keywordtype}{bool} connected = \textcolor{keyword}{false};}
+\DoxyCodeLine{87   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{88     \textcolor{keywordflow}{if} (physical\_displays\_.at(i)->IsConnected()) \{}
+\DoxyCodeLine{89       connected = \textcolor{keyword}{true};}
+\DoxyCodeLine{90       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92   \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94   \textcolor{keywordflow}{return} connected;}
+\DoxyCodeLine{95 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a41e94410e4e73ee057ef672bb51aba65}\label{classhwcomposer_1_1MosaicDisplay_a41e94410e4e73ee057ef672bb51aba65}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Power\+Mode@{Power\+Mode}}
+\index{Power\+Mode@{Power\+Mode}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Power\+Mode()}{PowerMode()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Mosaic\+Display\+::\+Power\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_af03b22112e421559c5f59837a2209716}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 105 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{105                                         \{}
+\DoxyCodeLine{106   \textcolor{keywordflow}{return} power\_mode\_;}
+\DoxyCodeLine{107 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a84e8ddade543bca6659a1eb7bfe72bcd}\label{classhwcomposer_1_1MosaicDisplay_a84e8ddade543bca6659a1eb7bfe72bcd}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Present@{Present}}
+\index{Present@{Present}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Present()}{Present()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Present (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$$>$ \&}]{source\+\_\+layers,  }\item[{int32\+\_\+t $\ast$}]{retire\+\_\+fence,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1PixelUploaderCallback}{Pixel\+Uploader\+Callback}} $\ast$}]{call\+\_\+back = {\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}},  }\item[{bool}]{handle\+\_\+constraints = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for showing content on screen. 
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+layers,are} & the layers to be shown on screen for this frame. \\
+\hline
+{\em retire\+\_\+fence} & will be populated with Native Fence object provided we are able to display source\+\_\+layers. When retire\+\_\+fence is signalled source\+\_\+layers are shown on the output and any previous frame composition results can be invalidated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4825b8bc4b85e03b396ed6d2cf5bd8c0}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 172 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{175                                     \{}
+\DoxyCodeLine{176   \textcolor{keywordflow}{if} (power\_mode\_ != \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{kOn}})}
+\DoxyCodeLine{177     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{180   \textcolor{keywordflow}{if} (update\_connected\_displays\_) \{}
+\DoxyCodeLine{181     std::vector<NativeDisplay *>().swap(connected\_displays\_);}
+\DoxyCodeLine{182     uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{183     int32\_t previous\_refresh = 0;}
+\DoxyCodeLine{184     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{185       \textcolor{keywordflow}{if} (physical\_displays\_.at(i)->IsConnected()) \{}
+\DoxyCodeLine{186         connected\_displays\_.emplace\_back(physical\_displays\_.at(i));}
+\DoxyCodeLine{187         \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{188           int32\_t refresh = 0;}
+\DoxyCodeLine{189           physical\_displays\_.at(i)->GetDisplayAttribute(}
+\DoxyCodeLine{190               config\_, HWCDisplayAttribute::kRefreshRate, \&refresh);}
+\DoxyCodeLine{191           \textcolor{keywordflow}{if} (previous\_refresh < refresh)}
+\DoxyCodeLine{192             preferred\_display\_index\_ = i;}
+\DoxyCodeLine{193         \}}
+\DoxyCodeLine{194       \}}
+\DoxyCodeLine{195     \}}
+\DoxyCodeLine{196     update\_connected\_displays\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{197   \}}
+\DoxyCodeLine{198   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{199   uint32\_t size = connected\_displays\_.size();}
+\DoxyCodeLine{200   int32\_t left\_constraint = 0;}
+\DoxyCodeLine{201   \textcolor{keywordtype}{size\_t} total\_layers = source\_layers.size();}
+\DoxyCodeLine{202   int32\_t fence = -1;}
+\DoxyCodeLine{203   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{204     \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ab1dc6bceb8fe62a576a99c75c7ae732b}{NativeDisplay}} *display = connected\_displays\_.at(i);}
+\DoxyCodeLine{205     int32\_t right\_constraint = left\_constraint + display->Width();}
+\DoxyCodeLine{206     std::vector<HwcLayer *> layers;}
+\DoxyCodeLine{207     uint32\_t dlconstraint = display->GetLogicalIndex() * display->Width();}
+\DoxyCodeLine{208     uint32\_t drconstraint = dlconstraint + display->Width();}
+\DoxyCodeLine{209     \mbox{\hyperlink{hwctrace_8h_a111568ee06382eb3cb6912168a5a57a4}{IMOSAICDISPLAYTRACE}}(\textcolor{stringliteral}{"Display index \%d \(\backslash\)n"}, i);}
+\DoxyCodeLine{210     \mbox{\hyperlink{hwctrace_8h_a111568ee06382eb3cb6912168a5a57a4}{IMOSAICDISPLAYTRACE}}(\textcolor{stringliteral}{"dlconstraint \%d \(\backslash\)n"}, dlconstraint);}
+\DoxyCodeLine{211     \mbox{\hyperlink{hwctrace_8h_a111568ee06382eb3cb6912168a5a57a4}{IMOSAICDISPLAYTRACE}}(\textcolor{stringliteral}{"drconstraint \%d \(\backslash\)n"}, drconstraint);}
+\DoxyCodeLine{212     \mbox{\hyperlink{hwctrace_8h_a111568ee06382eb3cb6912168a5a57a4}{IMOSAICDISPLAYTRACE}}(\textcolor{stringliteral}{"right\_constraint \%d \(\backslash\)n"}, right\_constraint);}
+\DoxyCodeLine{213     \mbox{\hyperlink{hwctrace_8h_a111568ee06382eb3cb6912168a5a57a4}{IMOSAICDISPLAYTRACE}}(\textcolor{stringliteral}{"left\_constraint \%d \(\backslash\)n"}, left\_constraint);}
+\DoxyCodeLine{214     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < total\_layers; j++) \{}
+\DoxyCodeLine{215       HwcLayer *layer = source\_layers.at(j);}
+\DoxyCodeLine{216       \textcolor{keyword}{const} HwcRect<int> \&frame\_Rect = layer->GetDisplayFrame();}
+\DoxyCodeLine{217       \textcolor{keywordflow}{if} ((frame\_Rect.right < left\_constraint) ||}
+\DoxyCodeLine{218           (frame\_Rect.left > right\_constraint)) \{}
+\DoxyCodeLine{219         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{220       \}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222       layer->SetLeftConstraint(dlconstraint);}
+\DoxyCodeLine{223       layer->SetRightConstraint(drconstraint);}
+\DoxyCodeLine{224       layer->SetLeftSourceConstraint(left\_constraint);}
+\DoxyCodeLine{225       layer->SetRightSourceConstraint(right\_constraint);}
+\DoxyCodeLine{226       layer->SetTotalDisplays(size - i);}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228       layers.emplace\_back(layer);}
+\DoxyCodeLine{229     \}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231     \textcolor{keywordflow}{if} (layers.empty()) \{}
+\DoxyCodeLine{232       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{233     \}}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235     display->Present(layers, \&fence, call\_back, \textcolor{keyword}{true});}
+\DoxyCodeLine{236     \mbox{\hyperlink{hwctrace_8h_a111568ee06382eb3cb6912168a5a57a4}{IMOSAICDISPLAYTRACE}}(\textcolor{stringliteral}{"Present called for Display index \%d \(\backslash\)n"}, i);}
+\DoxyCodeLine{237     \textcolor{keywordflow}{if} (fence > 0 \&\& (i != preferred\_display\_index\_)) \{}
+\DoxyCodeLine{238       close(fence);}
+\DoxyCodeLine{239     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{240       *retire\_fence = fence;}
+\DoxyCodeLine{241     \}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243     left\_constraint = right\_constraint;}
+\DoxyCodeLine{244   \}}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{247 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a989d240e0d3287ec2b9e6cfbe1041bda}\label{classhwcomposer_1_1MosaicDisplay_a989d240e0d3287ec2b9e6cfbe1041bda}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Present\+Clone@{Present\+Clone}}
+\index{Present\+Clone@{Present\+Clone}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Present\+Clone()}{PresentClone()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Present\+Clone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae031f7f90f8a4ab3fba24a31c4cc6b74}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 249 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{249                                                   \{}
+\DoxyCodeLine{250   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{251 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_aeb0d37462e1584fa329deaea3d7788e3}\label{classhwcomposer_1_1MosaicDisplay_aeb0d37462e1584fa329deaea3d7788e3}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Refresh\+Update@{Refresh\+Update}}
+\index{Refresh\+Update@{Refresh\+Update}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Refresh\+Update()}{RefreshUpdate()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Refresh\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 327 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{327                                   \{}
+\DoxyCodeLine{328   \textcolor{keywordflow}{if} (connected\_ \&\& refresh\_callback\_ \&\& power\_mode\_ == \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{kOn}}) \{}
+\DoxyCodeLine{329     refresh\_callback\_->Callback(display\_id\_);}
+\DoxyCodeLine{330   \}}
+\DoxyCodeLine{331 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a1d4f419cda4d1729dfb085f385a76afb}\label{classhwcomposer_1_1MosaicDisplay_a1d4f419cda4d1729dfb085f385a76afb}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Register\+Hot\+Plug\+Callback@{Register\+Hot\+Plug\+Callback}}
+\index{Register\+Hot\+Plug\+Callback@{Register\+Hot\+Plug\+Callback}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Register\+Hot\+Plug\+Callback()}{RegisterHotPlugCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Register\+Hot\+Plug\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1HotPlugCallback}{Hot\+Plug\+Callback}} $>$}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for registering for hotplug callback requests. 
+\begin{DoxyParams}{Parameters}
+{\em callback,function} & which will be used by H\+WC to notify client of a hot plug event. \\
+\hline
+{\em display\+\_\+id} & will be populated with id of the display. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a4080879c203571d6404ba3b3aff53631}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 281 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{282                                                                   \{}
+\DoxyCodeLine{283   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{284   display\_id\_ = display\_id;}
+\DoxyCodeLine{285   hotplug\_callback\_ = callback;}
+\DoxyCodeLine{286   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{289   \textcolor{keyword}{auto} h\_callback = std::make\_shared<MDHotPlugCallback>(\textcolor{keyword}{this});}
+\DoxyCodeLine{290   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{291     physical\_displays\_.at(i)->RegisterHotPlugCallback(}
+\DoxyCodeLine{292         h\_callback, physical\_displays\_.at(i)->GetDisplayPipe());}
+\DoxyCodeLine{293   \}}
+\DoxyCodeLine{294 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a1deecbf2ba9b007fa7529b31da47d575}\label{classhwcomposer_1_1MosaicDisplay_a1deecbf2ba9b007fa7529b31da47d575}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Register\+Refresh\+Callback@{Register\+Refresh\+Callback}}
+\index{Register\+Refresh\+Callback@{Register\+Refresh\+Callback}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Register\+Refresh\+Callback()}{RegisterRefreshCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Register\+Refresh\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1RefreshCallback}{Refresh\+Callback}} $>$}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for registering for refresh callback requests. 
+\begin{DoxyParams}{Parameters}
+{\em callback,function} & which will be used by H\+WC to request client to trigger a screen refresh. This will be used to optimize scenarios like idle mode. \\
+\hline
+{\em display\+\_\+id} & will be populated with id of the display. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a237627e6cacf9246813bc7f48c5817cd}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 268 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{269                                                                   \{}
+\DoxyCodeLine{270   display\_id\_ = display\_id;}
+\DoxyCodeLine{271   refresh\_callback\_ = callback;}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{274   \textcolor{keyword}{auto} r\_callback = std::make\_shared<MDRefreshCallback>(\textcolor{keyword}{this});}
+\DoxyCodeLine{275   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{276     physical\_displays\_.at(i)->RegisterRefreshCallback(}
+\DoxyCodeLine{277         r\_callback, physical\_displays\_.at(i)->GetDisplayPipe());}
+\DoxyCodeLine{278   \}}
+\DoxyCodeLine{279 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_ab95984da914029b9dd2c5fb728926dbc}\label{classhwcomposer_1_1MosaicDisplay_ab95984da914029b9dd2c5fb728926dbc}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Register\+Vsync\+Callback@{Register\+Vsync\+Callback}}
+\index{Register\+Vsync\+Callback@{Register\+Vsync\+Callback}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Register\+Vsync\+Callback()}{RegisterVsyncCallback()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Mosaic\+Display\+::\+Register\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback}{Vsync\+Callback}} $>$}]{callback,  }\item[{uint32\+\_\+t}]{display\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a0732e4b24a348aaf1e0b801b9a5f3c39}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 253 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{254                                                                 \{}
+\DoxyCodeLine{255   display\_id\_ = display\_id;}
+\DoxyCodeLine{256   vsync\_callback\_ = callback;}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{259   \textcolor{keyword}{auto} v\_callback = std::make\_shared<MDVsyncCallback>(\textcolor{keyword}{this});}
+\DoxyCodeLine{260   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{261     physical\_displays\_.at(i)->RegisterVsyncCallback(}
+\DoxyCodeLine{262         v\_callback, physical\_displays\_.at(i)->GetDisplayPipe());}
+\DoxyCodeLine{263   \}}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{266 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_aaf2a3e4f69753b92366c23434db3d133}\label{classhwcomposer_1_1MosaicDisplay_aaf2a3e4f69753b92366c23434db3d133}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}}
+\index{Restore\+Video\+Default\+Color@{Restore\+Video\+Default\+Color}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Color()}{RestoreVideoDefaultColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Restore\+Video\+Default\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for restoring video default color in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a06390d47f61b776338a03bee737634b3}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 424 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{424                                                                   \{}
+\DoxyCodeLine{425   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{426   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{427     physical\_displays\_.at(i)->RestoreVideoDefaultColor(color);}
+\DoxyCodeLine{428   \}}
+\DoxyCodeLine{429 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a907f7b2e5c59a27e5335f8cfadba87f5}\label{classhwcomposer_1_1MosaicDisplay_a907f7b2e5c59a27e5335f8cfadba87f5}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}}
+\index{Restore\+Video\+Default\+Deinterlace@{Restore\+Video\+Default\+Deinterlace}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Restore\+Video\+Default\+Deinterlace()}{RestoreVideoDefaultDeinterlace()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Restore\+Video\+Default\+Deinterlace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for restoring video default deinterlace in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a686a2906dbe6543523a9f5fb5b4ae3f7}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 439 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{439                                                    \{}
+\DoxyCodeLine{440   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{441   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{442     physical\_displays\_.at(i)->RestoreVideoDefaultDeinterlace();}
+\DoxyCodeLine{443   \}}
+\DoxyCodeLine{444 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_aaff4528ff2c22a7ec8ce8ab1bc8cbe07}\label{classhwcomposer_1_1MosaicDisplay_aaff4528ff2c22a7ec8ce8ab1bc8cbe07}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+Active\+Config@{Set\+Active\+Config}}
+\index{Set\+Active\+Config@{Set\+Active\+Config}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+Active\+Config()}{SetActiveConfig()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Set\+Active\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a63c51853e0d82baf9d6445cf831a5ad1}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 113 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{113                                                    \{}
+\DoxyCodeLine{114   config\_ = config;}
+\DoxyCodeLine{115   width\_ = 0;}
+\DoxyCodeLine{116   height\_ = 0;}
+\DoxyCodeLine{117   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{118   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{119     physical\_displays\_.at(i)->SetActiveConfig(config\_);}
+\DoxyCodeLine{120   \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122   uint32\_t avg = 0;}
+\DoxyCodeLine{123   int32\_t previous\_refresh = 0;}
+\DoxyCodeLine{124   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{125     int32\_t dpix = 0;}
+\DoxyCodeLine{126     int32\_t dpiy = 0;}
+\DoxyCodeLine{127     int32\_t refresh = 0;}
+\DoxyCodeLine{128     height\_ = std::max(height\_, physical\_displays\_.at(i)->Height());}
+\DoxyCodeLine{129     width\_ += physical\_displays\_.at(i)->Width();}
+\DoxyCodeLine{130     physical\_displays\_.at(i)->GetDisplayAttribute(}
+\DoxyCodeLine{131         config\_, HWCDisplayAttribute::kDpiX, \&dpix);}
+\DoxyCodeLine{132     physical\_displays\_.at(i)->GetDisplayAttribute(}
+\DoxyCodeLine{133         config\_, HWCDisplayAttribute::kDpiY, \&dpiy);}
+\DoxyCodeLine{134     physical\_displays\_.at(i)->GetDisplayAttribute(}
+\DoxyCodeLine{135         config\_, HWCDisplayAttribute::kRefreshRate, \&refresh);}
+\DoxyCodeLine{136     dpix\_ += dpix;}
+\DoxyCodeLine{137     dpiy\_ += dpiy;}
+\DoxyCodeLine{138     refresh\_ += refresh;}
+\DoxyCodeLine{139     \textcolor{keywordflow}{if} (previous\_refresh < refresh)}
+\DoxyCodeLine{140       preferred\_display\_index\_ = i;}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     avg++;}
+\DoxyCodeLine{143   \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145   \textcolor{keywordflow}{if} (avg > 0) \{}
+\DoxyCodeLine{146     refresh\_ /= avg;}
+\DoxyCodeLine{147     dpix\_ /= avg;}
+\DoxyCodeLine{148     dpiy\_ /= avg;}
+\DoxyCodeLine{149   \}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{152 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a113c244569faf509d03062f794216981}\label{classhwcomposer_1_1MosaicDisplay_a113c244569faf509d03062f794216981}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+Brightness@{Set\+Brightness}}
+\index{Set\+Brightness@{Set\+Brightness}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+Brightness()}{SetBrightness()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Set\+Brightness (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting display color brightness in H\+WC 
+\begin{DoxyParams}{Parameters}
+{\em red} & valid value is 0 $\sim$ 255, bigger value with stronger brightness \\
+\hline
+{\em green} & valid value is 0 $\sim$ 255, bigger value with stronger brightness \\
+\hline
+{\em blue} & valid value is 0 $\sim$ 255, bigger value with stronger brightness \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6ebf02e96a0c6e674cf091dda937ebb2}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 391 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{391                                                                              \{}
+\DoxyCodeLine{392   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{393   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{394     physical\_displays\_.at(i)->SetBrightness(red, green, blue);}
+\DoxyCodeLine{395   \}}
+\DoxyCodeLine{396 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a6942a0aa562c459a89b014aa15fdcccd}\label{classhwcomposer_1_1MosaicDisplay_a6942a0aa562c459a89b014aa15fdcccd}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+Contrast@{Set\+Contrast}}
+\index{Set\+Contrast@{Set\+Contrast}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+Contrast()}{SetContrast()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Set\+Contrast (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting display color contrast in H\+WC 
+\begin{DoxyParams}{Parameters}
+{\em red} & valid value is 0 $\sim$ 255, bigger value with stronger contrast \\
+\hline
+{\em green} & valid value is 0 $\sim$ 255, bigger value with stronger contrast \\
+\hline
+{\em blue} & valid value is 0 $\sim$ 255, bigger value with stronger contrast \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ac12f3a73bcf169c4cca38f994431ddfb}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 384 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{384                                                                            \{}
+\DoxyCodeLine{385   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{386   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{387     physical\_displays\_.at(i)->SetContrast(red, green, blue);}
+\DoxyCodeLine{388   \}}
+\DoxyCodeLine{389 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_af9053256b801c0334bd89ed7b5e97912}\label{classhwcomposer_1_1MosaicDisplay_af9053256b801c0334bd89ed7b5e97912}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}}
+\index{Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+Explicit\+Sync\+Support()}{SetExplicitSyncSupport()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Set\+Explicit\+Sync\+Support (\begin{DoxyParamCaption}\item[{bool}]{disable\+\_\+explicit\+\_\+sync }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a986975322078e900da95f78be42ad88b}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 398 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{398                                                                      \{}
+\DoxyCodeLine{399   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{400   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{401     physical\_displays\_.at(i)->SetExplicitSyncSupport(disable\_explicit\_sync);}
+\DoxyCodeLine{402   \}}
+\DoxyCodeLine{403 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a99609427012ce9c2e3b4e16ed13211a3}\label{classhwcomposer_1_1MosaicDisplay_a99609427012ce9c2e3b4e16ed13211a3}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+Gamma@{Set\+Gamma}}
+\index{Set\+Gamma@{Set\+Gamma}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+Gamma()}{SetGamma()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Set\+Gamma (\begin{DoxyParamCaption}\item[{float}]{,  }\item[{float}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting color gamma value of display in H\+WC, which be used to remap original color brightness to new one by gamma color correction. H\+WC uses default gamma value 2.\+2 which popular display is using, and allow users to change gamma value for R\+GB colors by this A\+PI, e.\+g. 0 will remap all gradient brightness of the color to brightest value (solid color).
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & red color gamma value \\
+\hline
+{\em green} & blue color gamma value \\
+\hline
+{\em blue} & blue color gamma value \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a2956fb8a26ec77521a613ae1c0eaaf49}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 377 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{377                                                                \{}
+\DoxyCodeLine{378   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{379   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{380     physical\_displays\_.at(i)->SetGamma(red, green, blue);}
+\DoxyCodeLine{381   \}}
+\DoxyCodeLine{382 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a406e652e251f8f88ef628704a1e57b1f}\label{classhwcomposer_1_1MosaicDisplay_a406e652e251f8f88ef628704a1e57b1f}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+H\+D\+C\+P\+State@{Set\+H\+D\+C\+P\+State}}
+\index{Set\+H\+D\+C\+P\+State@{Set\+H\+D\+C\+P\+State}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+H\+D\+C\+P\+State()}{SetHDCPState()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Set\+H\+D\+C\+P\+State (\begin{DoxyParamCaption}\item[{H\+W\+C\+Content\+Protection}]{,  }\item[{H\+W\+C\+Content\+Type}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Call this to set H\+D\+CP state for this display. This function tries to take advantage of any H\+D\+CP support advertised by the Kernel. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ac65fa12ceb6737a2971cd2faa1a7785d}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 507 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{508                                                               \{}
+\DoxyCodeLine{509   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{510   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{511     physical\_displays\_.at(i)->SetHDCPState(state, content\_type);}
+\DoxyCodeLine{512   \}}
+\DoxyCodeLine{513 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a001b4f2775a2a50d380ff6eb33ba3683}\label{classhwcomposer_1_1MosaicDisplay_a001b4f2775a2a50d380ff6eb33ba3683}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+Power\+Mode@{Set\+Power\+Mode}}
+\index{Set\+Power\+Mode@{Set\+Power\+Mode}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+Power\+Mode()}{SetPowerMode()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Mosaic\+Display\+::\+Set\+Power\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{power\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9ea847cb1e75677fca7dabbcfb59a26a}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 162 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{162                                                     \{}
+\DoxyCodeLine{163   power\_mode\_ = power\_mode;}
+\DoxyCodeLine{164   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{165   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{166     physical\_displays\_.at(i)->SetPowerMode(power\_mode);}
+\DoxyCodeLine{167   \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{170 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_adba98086d56d0ccc2df7a57a87ddd4b0}\label{classhwcomposer_1_1MosaicDisplay_adba98086d56d0ccc2df7a57a87ddd4b0}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+Video\+Color@{Set\+Video\+Color}}
+\index{Set\+Video\+Color@{Set\+Video\+Color}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+Video\+Color()}{SetVideoColor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Set\+Video\+Color (\begin{DoxyParamCaption}\item[{H\+W\+C\+Color\+Control}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting video color in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a373e7c998f9d2767bafedc918c4001bc}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 412 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{412                                                                     \{}
+\DoxyCodeLine{413   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{414   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{415     physical\_displays\_.at(i)->SetVideoColor(color, value);}
+\DoxyCodeLine{416   \}}
+\DoxyCodeLine{417 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a28167d8f866c8b2c6ea01b42b442eb0f}\label{classhwcomposer_1_1MosaicDisplay_a28167d8f866c8b2c6ea01b42b442eb0f}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}}
+\index{Set\+Video\+Deinterlace@{Set\+Video\+Deinterlace}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+Video\+Deinterlace()}{SetVideoDeinterlace()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Set\+Video\+Deinterlace (\begin{DoxyParamCaption}\item[{H\+W\+C\+Deinterlace\+Flag}]{,  }\item[{H\+W\+C\+Deinterlace\+Control}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting video deinterlace in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae0c6d8eebaae9cdacd1e4bfba84585bf}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 431 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{432                                                                     \{}
+\DoxyCodeLine{433   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{434   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{435     physical\_displays\_.at(i)->SetVideoDeinterlace(flag, mode);}
+\DoxyCodeLine{436   \}}
+\DoxyCodeLine{437 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_ac634db4100aa1707f28ff2bbb77b8460}\label{classhwcomposer_1_1MosaicDisplay_ac634db4100aa1707f28ff2bbb77b8460}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}}
+\index{Set\+Video\+Scaling\+Mode@{Set\+Video\+Scaling\+Mode}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Set\+Video\+Scaling\+Mode()}{SetVideoScalingMode()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Set\+Video\+Scaling\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A\+PI for setting video scaling mode in H\+WC 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ad35507d4c266627b1b20a0ebd116f907}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 405 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{405                                                      \{}
+\DoxyCodeLine{406   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{407   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{408     physical\_displays\_.at(i)->SetVideoScalingMode(mode);}
+\DoxyCodeLine{409   \}}
+\DoxyCodeLine{410 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a7c5288febea28948c2689d7f6feee183}\label{classhwcomposer_1_1MosaicDisplay_a7c5288febea28948c2689d7f6feee183}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Type@{Type}}
+\index{Type@{Type}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Type()}{Type()}}
+{\footnotesize\ttfamily Display\+Type hwcomposer\+::\+Mosaic\+Display\+::\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a67018275066174f9e5d4b801cd6fea31}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 38 of file mosaicdisplay.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                     \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} DisplayType::kMosaic;}
+\DoxyCodeLine{40   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_aa0d5befb882537555f4476130863c27c}\label{classhwcomposer_1_1MosaicDisplay_aa0d5befb882537555f4476130863c27c}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Update\+Scaling\+Ratio@{Update\+Scaling\+Ratio}}
+\index{Update\+Scaling\+Ratio@{Update\+Scaling\+Ratio}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Update\+Scaling\+Ratio()}{UpdateScalingRatio()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+Update\+Scaling\+Ratio (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{uint32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Scales layers of display to match it\textquotesingle{}s resolutions in case this display is in cloned mode and resolution doesn\textquotesingle{}t match with Source Display. 
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_abfad592c2a5e956760c194fa7831171c}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 446 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{449                                                    \{}
+\DoxyCodeLine{450 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a3843cd0fcbd50cfed44d7a0ebdf5539b}\label{classhwcomposer_1_1MosaicDisplay_a3843cd0fcbd50cfed44d7a0ebdf5539b}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!V\+Sync\+Control@{V\+Sync\+Control}}
+\index{V\+Sync\+Control@{V\+Sync\+Control}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{V\+Sync\+Control()}{VSyncControl()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+V\+Sync\+Control (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a6817e88bc9def8ae1ae8088922803dc1}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 296 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{296                                              \{}
+\DoxyCodeLine{297   \textcolor{keywordflow}{if} (enable\_vsync\_ == enabled)}
+\DoxyCodeLine{298     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300   enable\_vsync\_ = enabled;}
+\DoxyCodeLine{301   vsync\_timestamp\_ = 0;}
+\DoxyCodeLine{302   uint32\_t size = physical\_displays\_.size();}
+\DoxyCodeLine{303   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{304     physical\_displays\_.at(i)->VSyncControl(enabled);}
+\DoxyCodeLine{305   \}}
+\DoxyCodeLine{306 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_ab2d47bd2c1eac196990bb8d7c2f1ecd7}\label{classhwcomposer_1_1MosaicDisplay_ab2d47bd2c1eac196990bb8d7c2f1ecd7}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!V\+Sync\+Update@{V\+Sync\+Update}}
+\index{V\+Sync\+Update@{V\+Sync\+Update}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{V\+Sync\+Update()}{VSyncUpdate()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Mosaic\+Display\+::\+V\+Sync\+Update (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{timestamp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 308 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{308                                                  \{}
+\DoxyCodeLine{309   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{310   \textcolor{keywordflow}{if} (vsync\_callback\_ \&\& enable\_vsync\_ \&\& vsync\_divisor\_ > 0) \{}
+\DoxyCodeLine{311     vsync\_counter\_--;}
+\DoxyCodeLine{312     vsync\_timestamp\_ += timestamp;}
+\DoxyCodeLine{313     \textcolor{keywordflow}{if} (vsync\_counter\_ == 0) \{}
+\DoxyCodeLine{314       vsync\_timestamp\_ /= vsync\_divisor\_;}
+\DoxyCodeLine{315       vsync\_callback\_->Callback(display\_id\_, vsync\_timestamp\_);}
+\DoxyCodeLine{316       vsync\_counter\_ = vsync\_divisor\_;}
+\DoxyCodeLine{317       vsync\_timestamp\_ = 0;}
+\DoxyCodeLine{318       pending\_vsync\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{319     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{320       pending\_vsync\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{321     \}}
+\DoxyCodeLine{322   \}}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{325 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1MosaicDisplay_a5123a951bd40adef34cbe1e11d0a8e69}\label{classhwcomposer_1_1MosaicDisplay_a5123a951bd40adef34cbe1e11d0a8e69}} 
+\index{hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}!Width@{Width}}
+\index{Width@{Width}!hwcomposer\+::\+Mosaic\+Display@{hwcomposer\+::\+Mosaic\+Display}}
+\subsubsection{\texorpdfstring{Width()}{Width()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Mosaic\+Display\+::\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9a18c3dfba567c86c088b06febda4019}{hwcomposer\+::\+Native\+Display}}.
+
+
+
+Definition at line 97 of file mosaicdisplay.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97                                     \{}
+\DoxyCodeLine{98   \textcolor{keywordflow}{return} width\_;}
+\DoxyCodeLine{99 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/core/\mbox{\hyperlink{mosaicdisplay_8h}{mosaicdisplay.\+h}}\item 
+common/core/\mbox{\hyperlink{mosaicdisplay_8cpp}{mosaicdisplay.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,48 @@
+\hypertarget{android_2platformdefines_8cpp}{}\section{os/android/platformdefines.cpp File Reference}
+\label{android_2platformdefines_8cpp}\index{os/android/platformdefines.\+cpp@{os/android/platformdefines.\+cpp}}
+{\ttfamily \#include \char`\"{}platformdefines.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$va/va\+\_\+android.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8cpp_a725cc5910f25003f1fb5c427fd23563d}{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+H\+A\+N\+D\+LE}}~0x18\+C34078
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{android_2platformdefines_8cpp_a776db37da150468eb39fc6fad0d7c9c1}{Get\+V\+A\+Display}} (uint32\+\_\+t gpu\+\_\+fd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{android_2platformdefines_8cpp_a725cc5910f25003f1fb5c427fd23563d}\label{android_2platformdefines_8cpp_a725cc5910f25003f1fb5c427fd23563d}} 
+\index{android/platformdefines.\+cpp@{android/platformdefines.\+cpp}!A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+H\+A\+N\+D\+LE@{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+H\+A\+N\+D\+LE}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+H\+A\+N\+D\+LE@{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+H\+A\+N\+D\+LE}!android/platformdefines.\+cpp@{android/platformdefines.\+cpp}}
+\subsubsection{\texorpdfstring{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+H\+A\+N\+D\+LE}{ANDROID\_DISPLAY\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+H\+A\+N\+D\+LE~0x18\+C34078}
+
+
+
+Definition at line 23 of file platformdefines.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{android_2platformdefines_8cpp_a776db37da150468eb39fc6fad0d7c9c1}\label{android_2platformdefines_8cpp_a776db37da150468eb39fc6fad0d7c9c1}} 
+\index{android/platformdefines.\+cpp@{android/platformdefines.\+cpp}!Get\+V\+A\+Display@{Get\+V\+A\+Display}}
+\index{Get\+V\+A\+Display@{Get\+V\+A\+Display}!android/platformdefines.\+cpp@{android/platformdefines.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+V\+A\+Display()}{GetVADisplay()}}
+{\footnotesize\ttfamily void$\ast$ Get\+V\+A\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file platformdefines.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                     \{}
+\DoxyCodeLine{78   \mbox{\hyperlink{platformcommondefines_8h_a55010dd9f045ede43b1c4fa3d249b1eb}{HWC\_UNUSED}}(gpu\_fd);}
+\DoxyCodeLine{79   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} native\_display = \mbox{\hyperlink{android_2platformdefines_8cpp_a725cc5910f25003f1fb5c427fd23563d}{ANDROID\_DISPLAY\_HANDLE}};}
+\DoxyCodeLine{80   \textcolor{keywordflow}{return} vaGetDisplay(\&native\_display);}
+\DoxyCodeLine{81 \}}
+\end{DoxyCode}

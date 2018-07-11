@@ -1,0 +1,904 @@
+\hypertarget{structhwcomposer_1_1OverlayLayer}{}\section{hwcomposer\+:\+:Overlay\+Layer Struct Reference}
+\label{structhwcomposer_1_1OverlayLayer}\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+
+
+{\ttfamily \#include $<$overlaylayer.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1}{Layer\+Composition}} \{ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1a6ee064d87ae6078bfc5c2de8cc4cd29b}{k\+Gpu}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1af648548e814dc8e01fbe35d1679861c9}{k\+Display}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1ab3528b5e808213bdd5961276986e9f5d}{k\+All}} = k\+Gpu $\vert$ k\+Display
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a80f13ea2a0d871dfd0dd568cfd0e8319}{Overlay\+Layer}} ()=default
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ab6058186fdd91bd43be0abfd37e8ee97}{Set\+Acquire\+Fence}} (int32\+\_\+t acquire\+\_\+fence)
+\item 
+int32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a19ca69df451baec46beb353455ef8a3c}{Get\+Acquire\+Fence}} () const
+\item 
+int32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a674ab0a44edfb514789eecbee56740e1}{Release\+Acquire\+Fence}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a22fbb88a9bbb316dbf2ca2195025a1fa}{Initialize\+From\+Hwc\+Layer}} (\mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$layer, \mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$buffer\+\_\+manager, \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$previous\+\_\+layer, uint32\+\_\+t z\+\_\+order, uint32\+\_\+t layer\+\_\+index, uint32\+\_\+t max\+\_\+height, uint32\+\_\+t rotation, bool handle\+\_\+constraints, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a2b42eb88747d7d48e7e35c10f157cc79}{Initialize\+From\+Scaled\+Hwc\+Layer}} (\mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$layer, \mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$buffer\+\_\+manager, \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$previous\+\_\+layer, uint32\+\_\+t z\+\_\+order, uint32\+\_\+t layer\+\_\+index, const Hwc\+Rect$<$ int $>$ \&display\+\_\+frame, uint32\+\_\+t max\+\_\+height, uint32\+\_\+t rotation, bool handle\+\_\+constraints, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_af0be53d937271403f4d883efced4a22f}{Get\+Zorder}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a304dc3db03f830a42cca4fd9163333a1}{Get\+Layer\+Index}} () const
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ac6a5eac7bd702ec0bafbfab46f96242c}{Get\+Alpha}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a15cf340482b76b2b15c75fc0184e5f00}{Set\+Blending}} (H\+W\+C\+Blending blending)
+\item 
+H\+W\+C\+Blending \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ad6248ab09bcb8be3747806bfe18f3822}{Get\+Blending}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a4561204c8e092b5e37d8222c431c296c}{Get\+Transform}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ada71243f601d3f5c1c7a762334392d0d}{Get\+Plane\+Transform}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a531c1e127f6f5d5ea7df1eb438f116fc}{Set\+Transform}} (uint32\+\_\+t transform)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer}{Overlay\+Buffer}} $\ast$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a92e6edaec1053b6a2c015fe3f7c400c0}{Get\+Buffer}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a48fe87ac79da0d09f4bc6de5057de445}{Set\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, int32\+\_\+t acquire\+\_\+fence, \mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$buffer\+\_\+manager, bool register\+\_\+buffer, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer}{Overlay\+Buffer}} $>$ \& \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_af2fa448d9a9d1f43eafa8765d27cab9b}{Get\+Shared\+Buffer}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ab72c90d71d1cf45d90cd176c68b0a2e7}{Set\+Source\+Crop}} (const Hwc\+Rect$<$ float $>$ \&source\+\_\+crop)
+\item 
+const Hwc\+Rect$<$ float $>$ \& \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a91d909615d951f362553303650e5d237}{Get\+Source\+Crop}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_adea7a64df0a33bc0139c3773eff82ef5}{Set\+Display\+Frame}} (const Hwc\+Rect$<$ int $>$ \&display\+\_\+frame)
+\item 
+const Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a03a621f753c088c1bd25973adc039def}{Get\+Display\+Frame}} () const
+\item 
+const Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ac2065d8c195e568d7f9db77854762a7e}{Get\+Surface\+Damage}} () const
+\item 
+Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_aff7c48d849492d2057e8badbf586104a}{Get\+Surface\+Damage}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_aa2b5ebe5d682703e3a038f46de8aab3c}{Get\+Source\+Crop\+Width}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a8c9e307b0c311016242bff146959a7de}{Get\+Source\+Crop\+Height}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_aa1a59827249a79db3168887c892a106e}{Get\+Display\+Frame\+Width}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_afb99d092d3ab9597859913df69966b79}{Get\+Display\+Frame\+Height}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_abf44324e238abcec12ffc034f5a320bd}{Has\+Layer\+Content\+Changed}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a48b4860962e70b714c9dff40428c7b99}{Is\+Visible}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a1a318a432e36d7d01427f7c168645d23}{Set\+Layer\+Composition}} (\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1}{Overlay\+Layer\+::\+Layer\+Composition}} value)
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a32802fdf7351d051a64ae330c2fa6ec5}{Supported\+Display\+Composition}} (\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1}{Overlay\+Layer\+::\+Layer\+Composition}} value)
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_aa5b45087580b88632ed9ee0cc9a7d665}{Can\+Scan\+Out}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_afe4cd078f602d747f16a8099d1446904}{Is\+Cursor\+Layer}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ab6db6f0cd90e6d8bf3bda617e352848a}{Is\+Video\+Layer}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a93c05fdd136f9252a2a691adc71b5103}{Prefer\+Separate\+Plane}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_aadef695001b19b87a0fbbea59145ec15}{Has\+Dimensions\+Changed}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a47f16228fcd6fec35b2724c60507c788}{Has\+Source\+Rect\+Changed}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_adaf5a9e22bce479ad33036f810216412}{Needs\+Revalidation}} () const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a04b86665a72d403550fe916276559695}{Needs\+Partial\+Clear}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a223dac50fd143c675ae0a85e8e4c1ad7}{Clone\+Layer}} (const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$layer, const Hwc\+Rect$<$ int $>$ \&display\+\_\+frame, \mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$resource\+\_\+manager, uint32\+\_\+t z\+\_\+order, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a2ea53c727c5fd17bd1b9a90a66cb4069}{Dump}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file overlaylayer.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1}\label{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Layer\+Composition@{Layer\+Composition}}
+\index{Layer\+Composition@{Layer\+Composition}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Composition}{LayerComposition}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1}{hwcomposer\+::\+Overlay\+Layer\+::\+Layer\+Composition}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Gpu@{k\+Gpu}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!k\+Gpu@{k\+Gpu}}}\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1a6ee064d87ae6078bfc5c2de8cc4cd29b}\label{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1a6ee064d87ae6078bfc5c2de8cc4cd29b}} 
+k\+Gpu&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Display@{k\+Display}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!k\+Display@{k\+Display}}}\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1af648548e814dc8e01fbe35d1679861c9}\label{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1af648548e814dc8e01fbe35d1679861c9}} 
+k\+Display&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+All@{k\+All}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!k\+All@{k\+All}}}\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1ab3528b5e808213bdd5961276986e9f5d}\label{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1ab3528b5e808213bdd5961276986e9f5d}} 
+k\+All&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 35 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                         \{}
+\DoxyCodeLine{36     \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1a6ee064d87ae6078bfc5c2de8cc4cd29b}{kGpu}} = 1 << 0,      \textcolor{comment}{// Needs GPU Composition.}}
+\DoxyCodeLine{37     \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1af648548e814dc8e01fbe35d1679861c9}{kDisplay}} = 1 << 1,  \textcolor{comment}{// Display Can scanout the layer directly.}}
+\DoxyCodeLine{38     \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1ab3528b5e808213bdd5961276986e9f5d}{kAll}} = \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1a6ee064d87ae6078bfc5c2de8cc4cd29b}{kGpu}} | \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1af648548e814dc8e01fbe35d1679861c9}{kDisplay}}}
+\DoxyCodeLine{39   \};}
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a80f13ea2a0d871dfd0dd568cfd0e8319}\label{structhwcomposer_1_1OverlayLayer_a80f13ea2a0d871dfd0dd568cfd0e8319}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Overlay\+Layer@{Overlay\+Layer}}
+\index{Overlay\+Layer@{Overlay\+Layer}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Overlay\+Layer()}{OverlayLayer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Overlay\+Layer\+::\+Overlay\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_aa5b45087580b88632ed9ee0cc9a7d665}\label{structhwcomposer_1_1OverlayLayer_aa5b45087580b88632ed9ee0cc9a7d665}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Can\+Scan\+Out@{Can\+Scan\+Out}}
+\index{Can\+Scan\+Out@{Can\+Scan\+Out}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Can\+Scan\+Out()}{CanScanOut()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Can\+Scan\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 167 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{167                           \{}
+\DoxyCodeLine{168     \textcolor{keywordflow}{return} supported\_composition\_ \& \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1af648548e814dc8e01fbe35d1679861c9}{kDisplay}};}
+\DoxyCodeLine{169   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a223dac50fd143c675ae0a85e8e4c1ad7}\label{structhwcomposer_1_1OverlayLayer_a223dac50fd143c675ae0a85e8e4c1ad7}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Clone\+Layer@{Clone\+Layer}}
+\index{Clone\+Layer@{Clone\+Layer}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Clone\+Layer()}{CloneLayer()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Clone\+Layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{layer,  }\item[{const Hwc\+Rect$<$ int $>$ \&}]{display\+\_\+frame,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{resource\+\_\+manager,  }\item[{uint32\+\_\+t}]{z\+\_\+order,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 428 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{432                                                                         \{}
+\DoxyCodeLine{433   int32\_t fence = layer->GetAcquireFence();}
+\DoxyCodeLine{434   int32\_t aquire\_fence = 0;}
+\DoxyCodeLine{435   \textcolor{keywordflow}{if} (fence > 0) \{}
+\DoxyCodeLine{436     aquire\_fence = dup(fence);}
+\DoxyCodeLine{437   \}}
+\DoxyCodeLine{438   \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_adea7a64df0a33bc0139c3773eff82ef5}{SetDisplayFrame}}(display\_frame);}
+\DoxyCodeLine{439   \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_ab72c90d71d1cf45d90cd176c68b0a2e7}{SetSourceCrop}}(layer->GetSourceCrop());}
+\DoxyCodeLine{440   \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a48fe87ac79da0d09f4bc6de5057de445}{SetBuffer}}(layer->GetBuffer()->GetOriginalHandle(), aquire\_fence,}
+\DoxyCodeLine{441             resource\_manager, \textcolor{keyword}{true}, frame\_buffer\_manager);}
+\DoxyCodeLine{442   ValidateForOverlayUsage();}
+\DoxyCodeLine{443   surface\_damage\_ = layer->GetSurfaceDamage();}
+\DoxyCodeLine{444   transform\_ = layer->transform\_;}
+\DoxyCodeLine{445   plane\_transform\_ = layer->plane\_transform\_;}
+\DoxyCodeLine{446   alpha\_ = layer->alpha\_;}
+\DoxyCodeLine{447   layer\_index\_ = z\_order;}
+\DoxyCodeLine{448   z\_order\_ = z\_order;}
+\DoxyCodeLine{449   blending\_ = layer->blending\_;}
+\DoxyCodeLine{450 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a2ea53c727c5fd17bd1b9a90a66cb4069}\label{structhwcomposer_1_1OverlayLayer_a2ea53c727c5fd17bd1b9a90a66cb4069}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Dump@{Dump}}
+\index{Dump@{Dump}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 452 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{452                         \{}
+\DoxyCodeLine{453   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"OverlayLayer Information Starts. -------------"});}
+\DoxyCodeLine{454   \textcolor{keywordflow}{switch} (blending\_) \{}
+\DoxyCodeLine{455     \textcolor{keywordflow}{case} HWCBlending::kBlendingNone:}
+\DoxyCodeLine{456       \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Blending: kBlendingNone."});}
+\DoxyCodeLine{457       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{458     \textcolor{keywordflow}{case} HWCBlending::kBlendingPremult:}
+\DoxyCodeLine{459       \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Blending: kBlendingPremult."});}
+\DoxyCodeLine{460       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{461     \textcolor{keywordflow}{case} HWCBlending::kBlendingCoverage:}
+\DoxyCodeLine{462       \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Blending: kBlendingCoverage."});}
+\DoxyCodeLine{463       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{464     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{465       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{466   \}}
+\DoxyCodeLine{467 }
+\DoxyCodeLine{468   \textcolor{keywordflow}{if} (transform\_ \& kReflectX)}
+\DoxyCodeLine{469     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Transform: kReflectX."});}
+\DoxyCodeLine{470   \textcolor{keywordflow}{if} (transform\_ \& kReflectY)}
+\DoxyCodeLine{471     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Transform: kReflectY."});}
+\DoxyCodeLine{472   \textcolor{keywordflow}{if} (transform\_ \& kTransform90)}
+\DoxyCodeLine{473     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Transform: kTransform90."});}
+\DoxyCodeLine{474   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform\_ \& kTransform180)}
+\DoxyCodeLine{475     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Transform: kTransform180."});}
+\DoxyCodeLine{476   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (transform\_ \& kTransform270)}
+\DoxyCodeLine{477     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Transform: kTransform270."});}
+\DoxyCodeLine{478   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{479     \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Transform: kTransform0."});}
+\DoxyCodeLine{480 }
+\DoxyCodeLine{481   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Alpha: \%u"}, alpha\_);}
+\DoxyCodeLine{482 }
+\DoxyCodeLine{483   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"SourceWidth: \%d"}, source\_crop\_width\_);}
+\DoxyCodeLine{484   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"SourceHeight: \%d"}, source\_crop\_height\_);}
+\DoxyCodeLine{485   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"DstWidth: \%d"}, display\_frame\_width\_);}
+\DoxyCodeLine{486   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"DstHeight: \%d"}, display\_frame\_height\_);}
+\DoxyCodeLine{487   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Source crop \%s"}, \mbox{\hyperlink{namespacehwcomposer_ae744afa47f47d3d45eb091546a72ab32}{StringifyRect}}(source\_crop\_).c\_str());}
+\DoxyCodeLine{488   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Display frame \%s"}, \mbox{\hyperlink{namespacehwcomposer_ae744afa47f47d3d45eb091546a72ab32}{StringifyRect}}(display\_frame\_).c\_str());}
+\DoxyCodeLine{489   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Surface Damage \%s"}, \mbox{\hyperlink{namespacehwcomposer_ae744afa47f47d3d45eb091546a72ab32}{StringifyRect}}(surface\_damage\_).c\_str());}
+\DoxyCodeLine{490   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"AquireFence: \%d"}, imported\_buffer\_->acquire\_fence\_);}
+\DoxyCodeLine{491 }
+\DoxyCodeLine{492   imported\_buffer\_->buffer\_->Dump();}
+\DoxyCodeLine{493 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a19ca69df451baec46beb353455ef8a3c}\label{structhwcomposer_1_1OverlayLayer_a19ca69df451baec46beb353455ef8a3c}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Acquire\+Fence@{Get\+Acquire\+Fence}}
+\index{Get\+Acquire\+Fence@{Get\+Acquire\+Fence}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Acquire\+Fence()}{GetAcquireFence()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Acquire\+Fence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 54 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                             \{}
+\DoxyCodeLine{55   \textcolor{keywordflow}{return} imported\_buffer\_->acquire\_fence\_;}
+\DoxyCodeLine{56 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_ac6a5eac7bd702ec0bafbfab46f96242c}\label{structhwcomposer_1_1OverlayLayer_ac6a5eac7bd702ec0bafbfab46f96242c}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Alpha@{Get\+Alpha}}
+\index{Get\+Alpha@{Get\+Alpha}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Alpha()}{GetAlpha()}}
+{\footnotesize\ttfamily uint8\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Alpha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 71 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71                            \{}
+\DoxyCodeLine{72     \textcolor{keywordflow}{return} alpha\_;}
+\DoxyCodeLine{73   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_ad6248ab09bcb8be3747806bfe18f3822}\label{structhwcomposer_1_1OverlayLayer_ad6248ab09bcb8be3747806bfe18f3822}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Blending@{Get\+Blending}}
+\index{Get\+Blending@{Get\+Blending}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Blending()}{GetBlending()}}
+{\footnotesize\ttfamily H\+W\+C\+Blending hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Blending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 77 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                   \{}
+\DoxyCodeLine{78     \textcolor{keywordflow}{return} blending\_;}
+\DoxyCodeLine{79   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a92e6edaec1053b6a2c015fe3f7c400c0}\label{structhwcomposer_1_1OverlayLayer_a92e6edaec1053b6a2c015fe3f7c400c0}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Buffer@{Get\+Buffer}}
+\index{Get\+Buffer@{Get\+Buffer}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Buffer()}{GetBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer}{Overlay\+Buffer}} $\ast$ hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 64 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                              \{}
+\DoxyCodeLine{65   \textcolor{keywordflow}{if} (imported\_buffer\_->buffer\_.get() == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})}
+\DoxyCodeLine{66     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"hwc layer get NullBuffer"});}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   \textcolor{keywordflow}{return} imported\_buffer\_->buffer\_.get();}
+\DoxyCodeLine{69 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a03a621f753c088c1bd25973adc039def}\label{structhwcomposer_1_1OverlayLayer_a03a621f753c088c1bd25973adc039def}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Display\+Frame@{Get\+Display\+Frame}}
+\index{Get\+Display\+Frame@{Get\+Display\+Frame}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Display\+Frame()}{GetDisplayFrame()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$int$>$\& hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Display\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 114 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{114                                               \{}
+\DoxyCodeLine{115     \textcolor{keywordflow}{return} display\_frame\_;}
+\DoxyCodeLine{116   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_afb99d092d3ab9597859913df69966b79}\label{structhwcomposer_1_1OverlayLayer_afb99d092d3ab9597859913df69966b79}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Display\+Frame\+Height@{Get\+Display\+Frame\+Height}}
+\index{Get\+Display\+Frame\+Height@{Get\+Display\+Frame\+Height}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Display\+Frame\+Height()}{GetDisplayFrameHeight()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Display\+Frame\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 138 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138                                          \{}
+\DoxyCodeLine{139     \textcolor{keywordflow}{return} display\_frame\_height\_;}
+\DoxyCodeLine{140   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_aa1a59827249a79db3168887c892a106e}\label{structhwcomposer_1_1OverlayLayer_aa1a59827249a79db3168887c892a106e}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Display\+Frame\+Width@{Get\+Display\+Frame\+Width}}
+\index{Get\+Display\+Frame\+Width@{Get\+Display\+Frame\+Width}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Display\+Frame\+Width()}{GetDisplayFrameWidth()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Display\+Frame\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 134 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134                                         \{}
+\DoxyCodeLine{135     \textcolor{keywordflow}{return} display\_frame\_width\_;}
+\DoxyCodeLine{136   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a304dc3db03f830a42cca4fd9163333a1}\label{structhwcomposer_1_1OverlayLayer_a304dc3db03f830a42cca4fd9163333a1}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Layer\+Index@{Get\+Layer\+Index}}
+\index{Get\+Layer\+Index@{Get\+Layer\+Index}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Layer\+Index()}{GetLayerIndex()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Layer\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 67 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                  \{}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} layer\_index\_;}
+\DoxyCodeLine{69   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_ada71243f601d3f5c1c7a762334392d0d}\label{structhwcomposer_1_1OverlayLayer_ada71243f601d3f5c1c7a762334392d0d}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Plane\+Transform@{Get\+Plane\+Transform}}
+\index{Get\+Plane\+Transform@{Get\+Plane\+Transform}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Plane\+Transform()}{GetPlaneTransform()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Plane\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 93 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                                      \{}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} plane\_transform\_;}
+\DoxyCodeLine{95   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_af2fa448d9a9d1f43eafa8765d27cab9b}\label{structhwcomposer_1_1OverlayLayer_af2fa448d9a9d1f43eafa8765d27cab9b}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Shared\+Buffer@{Get\+Shared\+Buffer}}
+\index{Get\+Shared\+Buffer@{Get\+Shared\+Buffer}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Shared\+Buffer()}{GetSharedBuffer()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer}{Overlay\+Buffer}} $>$ \& hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Shared\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 71 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71                                                                   \{}
+\DoxyCodeLine{72   \textcolor{keywordflow}{return} imported\_buffer\_->buffer\_;}
+\DoxyCodeLine{73 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a91d909615d951f362553303650e5d237}\label{structhwcomposer_1_1OverlayLayer_a91d909615d951f362553303650e5d237}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Source\+Crop@{Get\+Source\+Crop}}
+\index{Get\+Source\+Crop@{Get\+Source\+Crop}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Source\+Crop()}{GetSourceCrop()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$float$>$\& hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Source\+Crop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 109 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109                                               \{}
+\DoxyCodeLine{110     \textcolor{keywordflow}{return} source\_crop\_;}
+\DoxyCodeLine{111   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a8c9e307b0c311016242bff146959a7de}\label{structhwcomposer_1_1OverlayLayer_a8c9e307b0c311016242bff146959a7de}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Source\+Crop\+Height@{Get\+Source\+Crop\+Height}}
+\index{Get\+Source\+Crop\+Height@{Get\+Source\+Crop\+Height}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Source\+Crop\+Height()}{GetSourceCropHeight()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Source\+Crop\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 130 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130                                        \{}
+\DoxyCodeLine{131     \textcolor{keywordflow}{return} source\_crop\_height\_;}
+\DoxyCodeLine{132   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_aa2b5ebe5d682703e3a038f46de8aab3c}\label{structhwcomposer_1_1OverlayLayer_aa2b5ebe5d682703e3a038f46de8aab3c}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Source\+Crop\+Width@{Get\+Source\+Crop\+Width}}
+\index{Get\+Source\+Crop\+Width@{Get\+Source\+Crop\+Width}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Source\+Crop\+Width()}{GetSourceCropWidth()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Source\+Crop\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 126 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126                                       \{}
+\DoxyCodeLine{127     \textcolor{keywordflow}{return} source\_crop\_width\_;}
+\DoxyCodeLine{128   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_ac2065d8c195e568d7f9db77854762a7e}\label{structhwcomposer_1_1OverlayLayer_ac2065d8c195e568d7f9db77854762a7e}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Surface\+Damage@{Get\+Surface\+Damage}}
+\index{Get\+Surface\+Damage@{Get\+Surface\+Damage}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Surface\+Damage()}{GetSurfaceDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$int$>$\& hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Surface\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 118 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{118                                                \{}
+\DoxyCodeLine{119     \textcolor{keywordflow}{return} surface\_damage\_;}
+\DoxyCodeLine{120   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_aff7c48d849492d2057e8badbf586104a}\label{structhwcomposer_1_1OverlayLayer_aff7c48d849492d2057e8badbf586104a}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Surface\+Damage@{Get\+Surface\+Damage}}
+\index{Get\+Surface\+Damage@{Get\+Surface\+Damage}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Surface\+Damage()}{GetSurfaceDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Hwc\+Rect$<$int$>$\& hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Surface\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 122 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122                                    \{}
+\DoxyCodeLine{123     \textcolor{keywordflow}{return} surface\_damage\_;}
+\DoxyCodeLine{124   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a4561204c8e092b5e37d8222c431c296c}\label{structhwcomposer_1_1OverlayLayer_a4561204c8e092b5e37d8222c431c296c}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Transform@{Get\+Transform}}
+\index{Get\+Transform@{Get\+Transform}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Transform()}{GetTransform()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 85 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                                 \{}
+\DoxyCodeLine{86     \textcolor{keywordflow}{return} transform\_;}
+\DoxyCodeLine{87   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_af0be53d937271403f4d883efced4a22f}\label{structhwcomposer_1_1OverlayLayer_af0be53d937271403f4d883efced4a22f}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Get\+Zorder@{Get\+Zorder}}
+\index{Get\+Zorder@{Get\+Zorder}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Zorder()}{GetZorder()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Get\+Zorder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 61 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                              \{}
+\DoxyCodeLine{62     \textcolor{keywordflow}{return} z\_order\_;}
+\DoxyCodeLine{63   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_aadef695001b19b87a0fbbea59145ec15}\label{structhwcomposer_1_1OverlayLayer_aadef695001b19b87a0fbbea59145ec15}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Has\+Dimensions\+Changed@{Has\+Dimensions\+Changed}}
+\index{Has\+Dimensions\+Changed@{Has\+Dimensions\+Changed}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Dimensions\+Changed()}{HasDimensionsChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Has\+Dimensions\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 190 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{190                                     \{}
+\DoxyCodeLine{191     \textcolor{keywordflow}{return} state\_ \& kDimensionsChanged;}
+\DoxyCodeLine{192   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_abf44324e238abcec12ffc034f5a320bd}\label{structhwcomposer_1_1OverlayLayer_abf44324e238abcec12ffc034f5a320bd}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Has\+Layer\+Content\+Changed@{Has\+Layer\+Content\+Changed}}
+\index{Has\+Layer\+Content\+Changed@{Has\+Layer\+Content\+Changed}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Layer\+Content\+Changed()}{HasLayerContentChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Has\+Layer\+Content\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 144 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{144                                       \{}
+\DoxyCodeLine{145     \textcolor{keywordflow}{return} state\_ \& kLayerContentChanged;}
+\DoxyCodeLine{146   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a47f16228fcd6fec35b2724c60507c788}\label{structhwcomposer_1_1OverlayLayer_a47f16228fcd6fec35b2724c60507c788}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Has\+Source\+Rect\+Changed@{Has\+Source\+Rect\+Changed}}
+\index{Has\+Source\+Rect\+Changed@{Has\+Source\+Rect\+Changed}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Has\+Source\+Rect\+Changed()}{HasSourceRectChanged()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Has\+Source\+Rect\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 196 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{196                                     \{}
+\DoxyCodeLine{197     \textcolor{keywordflow}{return} state\_ \& kSourceRectChanged;}
+\DoxyCodeLine{198   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a22fbb88a9bbb316dbf2ca2195025a1fa}\label{structhwcomposer_1_1OverlayLayer_a22fbb88a9bbb316dbf2ca2195025a1fa}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Initialize\+From\+Hwc\+Layer@{Initialize\+From\+Hwc\+Layer}}
+\index{Initialize\+From\+Hwc\+Layer@{Initialize\+From\+Hwc\+Layer}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Initialize\+From\+Hwc\+Layer()}{InitializeFromHwcLayer()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Initialize\+From\+Hwc\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$}]{layer,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{buffer\+\_\+manager,  }\item[{\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{previous\+\_\+layer,  }\item[{uint32\+\_\+t}]{z\+\_\+order,  }\item[{uint32\+\_\+t}]{layer\+\_\+index,  }\item[{uint32\+\_\+t}]{max\+\_\+height,  }\item[{uint32\+\_\+t}]{rotation,  }\item[{bool}]{handle\+\_\+constraints,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 315 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{319                                               \{}
+\DoxyCodeLine{320   display\_frame\_width\_ = layer->GetDisplayFrameWidth();}
+\DoxyCodeLine{321   display\_frame\_height\_ = layer->GetDisplayFrameHeight();}
+\DoxyCodeLine{322   display\_frame\_ = layer->GetDisplayFrame();}
+\DoxyCodeLine{323   InitializeState(layer, resource\_manager, previous\_layer, z\_order, layer\_index,}
+\DoxyCodeLine{324                   max\_height, rotation, handle\_constraints,}
+\DoxyCodeLine{325                   frame\_buffer\_manager);}
+\DoxyCodeLine{326 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a2b42eb88747d7d48e7e35c10f157cc79}\label{structhwcomposer_1_1OverlayLayer_a2b42eb88747d7d48e7e35c10f157cc79}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Initialize\+From\+Scaled\+Hwc\+Layer@{Initialize\+From\+Scaled\+Hwc\+Layer}}
+\index{Initialize\+From\+Scaled\+Hwc\+Layer@{Initialize\+From\+Scaled\+Hwc\+Layer}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Initialize\+From\+Scaled\+Hwc\+Layer()}{InitializeFromScaledHwcLayer()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Initialize\+From\+Scaled\+Hwc\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{Hwc\+Layer}} $\ast$}]{layer,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{buffer\+\_\+manager,  }\item[{\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{previous\+\_\+layer,  }\item[{uint32\+\_\+t}]{z\+\_\+order,  }\item[{uint32\+\_\+t}]{layer\+\_\+index,  }\item[{const Hwc\+Rect$<$ int $>$ \&}]{display\+\_\+frame,  }\item[{uint32\+\_\+t}]{max\+\_\+height,  }\item[{uint32\+\_\+t}]{rotation,  }\item[{bool}]{handle\+\_\+constraints,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 328 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{332                                                                        \{}
+\DoxyCodeLine{333   \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_adea7a64df0a33bc0139c3773eff82ef5}{SetDisplayFrame}}(display\_frame);}
+\DoxyCodeLine{334   InitializeState(layer, resource\_manager, previous\_layer, z\_order, layer\_index,}
+\DoxyCodeLine{335                   max\_height, rotation, handle\_constraints,}
+\DoxyCodeLine{336                   frame\_buffer\_manager);}
+\DoxyCodeLine{337 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_afe4cd078f602d747f16a8099d1446904}\label{structhwcomposer_1_1OverlayLayer_afe4cd078f602d747f16a8099d1446904}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Is\+Cursor\+Layer@{Is\+Cursor\+Layer}}
+\index{Is\+Cursor\+Layer@{Is\+Cursor\+Layer}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Is\+Cursor\+Layer()}{IsCursorLayer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Is\+Cursor\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 171 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{171                              \{}
+\DoxyCodeLine{172     \textcolor{keywordflow}{return} type\_ == kLayerCursor;}
+\DoxyCodeLine{173   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_ab6db6f0cd90e6d8bf3bda617e352848a}\label{structhwcomposer_1_1OverlayLayer_ab6db6f0cd90e6d8bf3bda617e352848a}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Is\+Video\+Layer@{Is\+Video\+Layer}}
+\index{Is\+Video\+Layer@{Is\+Video\+Layer}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Is\+Video\+Layer()}{IsVideoLayer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Is\+Video\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 175 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{175                             \{}
+\DoxyCodeLine{176     \textcolor{keywordflow}{return} type\_ == kLayerVideo;}
+\DoxyCodeLine{177   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a48b4860962e70b714c9dff40428c7b99}\label{structhwcomposer_1_1OverlayLayer_a48b4860962e70b714c9dff40428c7b99}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Is\+Visible@{Is\+Visible}}
+\index{Is\+Visible@{Is\+Visible}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Is\+Visible()}{IsVisible()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Is\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 149 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{149                          \{}
+\DoxyCodeLine{150     \textcolor{keywordflow}{return} !(state\_ \& kInvisible);}
+\DoxyCodeLine{151   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a04b86665a72d403550fe916276559695}\label{structhwcomposer_1_1OverlayLayer_a04b86665a72d403550fe916276559695}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Needs\+Partial\+Clear@{Needs\+Partial\+Clear}}
+\index{Needs\+Partial\+Clear@{Needs\+Partial\+Clear}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Needs\+Partial\+Clear()}{NeedsPartialClear()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Needs\+Partial\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 209 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{209                                  \{}
+\DoxyCodeLine{210     \textcolor{keywordflow}{return} state\_ \& kForcePartialClear;}
+\DoxyCodeLine{211   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_adaf5a9e22bce479ad33036f810216412}\label{structhwcomposer_1_1OverlayLayer_adaf5a9e22bce479ad33036f810216412}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Needs\+Revalidation@{Needs\+Revalidation}}
+\index{Needs\+Revalidation@{Needs\+Revalidation}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Needs\+Revalidation()}{NeedsRevalidation()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Needs\+Revalidation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 205 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{205                                  \{}
+\DoxyCodeLine{206     \textcolor{keywordflow}{return} state\_ \& kNeedsReValidation;}
+\DoxyCodeLine{207   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a93c05fdd136f9252a2a691adc71b5103}\label{structhwcomposer_1_1OverlayLayer_a93c05fdd136f9252a2a691adc71b5103}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Prefer\+Separate\+Plane@{Prefer\+Separate\+Plane}}
+\index{Prefer\+Separate\+Plane@{Prefer\+Separate\+Plane}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Prefer\+Separate\+Plane()}{PreferSeparatePlane()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Overlay\+Layer\+::\+Prefer\+Separate\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 183 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{183                                    \{}
+\DoxyCodeLine{184     \textcolor{comment}{// We set this to true only in case}}
+\DoxyCodeLine{185     \textcolor{comment}{// of Media buffer. If this changes}}
+\DoxyCodeLine{186     \textcolor{comment}{// in future, use appropriate checks.}}
+\DoxyCodeLine{187     \textcolor{keywordflow}{return} type\_ == kLayerVideo;}
+\DoxyCodeLine{188   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a674ab0a44edfb514789eecbee56740e1}\label{structhwcomposer_1_1OverlayLayer_a674ab0a44edfb514789eecbee56740e1}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Release\+Acquire\+Fence@{Release\+Acquire\+Fence}}
+\index{Release\+Acquire\+Fence@{Release\+Acquire\+Fence}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Release\+Acquire\+Fence()}{ReleaseAcquireFence()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Overlay\+Layer\+::\+Release\+Acquire\+Fence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 58 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                                                 \{}
+\DoxyCodeLine{59   int32\_t fence = imported\_buffer\_->acquire\_fence\_;}
+\DoxyCodeLine{60   imported\_buffer\_->acquire\_fence\_ = -1;}
+\DoxyCodeLine{61   \textcolor{keywordflow}{return} fence;}
+\DoxyCodeLine{62 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_ab6058186fdd91bd43be0abfd37e8ee97}\label{structhwcomposer_1_1OverlayLayer_ab6058186fdd91bd43be0abfd37e8ee97}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Set\+Acquire\+Fence@{Set\+Acquire\+Fence}}
+\index{Set\+Acquire\+Fence@{Set\+Acquire\+Fence}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Acquire\+Fence()}{SetAcquireFence()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Set\+Acquire\+Fence (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{acquire\+\_\+fence }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                                         \{}
+\DoxyCodeLine{46   \textcolor{comment}{// Release any existing fence.}}
+\DoxyCodeLine{47   \textcolor{keywordflow}{if} (imported\_buffer\_->acquire\_fence\_ > 0) \{}
+\DoxyCodeLine{48     close(imported\_buffer\_->acquire\_fence\_);}
+\DoxyCodeLine{49   \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   imported\_buffer\_->acquire\_fence\_ = acquire\_fence;}
+\DoxyCodeLine{52 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a15cf340482b76b2b15c75fc0184e5f00}\label{structhwcomposer_1_1OverlayLayer_a15cf340482b76b2b15c75fc0184e5f00}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Set\+Blending@{Set\+Blending}}
+\index{Set\+Blending@{Set\+Blending}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Blending()}{SetBlending()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Set\+Blending (\begin{DoxyParamCaption}\item[{H\+W\+C\+Blending}]{blending }\end{DoxyParamCaption})}
+
+
+
+Definition at line 104 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104                                                    \{}
+\DoxyCodeLine{105   blending\_ = blending;}
+\DoxyCodeLine{106 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a48fe87ac79da0d09f4bc6de5057de445}\label{structhwcomposer_1_1OverlayLayer_a48fe87ac79da0d09f4bc6de5057de445}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Set\+Buffer@{Set\+Buffer}}
+\index{Set\+Buffer@{Set\+Buffer}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Buffer()}{SetBuffer()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Set\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{int32\+\_\+t}]{acquire\+\_\+fence,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{buffer\+\_\+manager,  }\item[{bool}]{register\+\_\+buffer,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 75 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                                        \{}
+\DoxyCodeLine{79   std::shared\_ptr<OverlayBuffer> buffer(\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   uint32\_t id;}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83   \textcolor{keywordflow}{if} (resource\_manager \&\& register\_buffer) \{}
+\DoxyCodeLine{84     uint32\_t gpu\_fd = resource\_manager->GetNativeBufferHandler()->GetFd();}
+\DoxyCodeLine{85     \textcolor{keywordtype}{id} = \mbox{\hyperlink{alios_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}{GetNativeBuffer}}(gpu\_fd, handle);}
+\DoxyCodeLine{86     buffer = resource\_manager->FindCachedBuffer(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{87   \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   \textcolor{keywordflow}{if} (buffer == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{90     buffer = \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer_a65693ce2be4d207ae036175a89fb66dc}{OverlayBuffer::CreateOverlayBuffer}}();}
+\DoxyCodeLine{91     buffer->InitializeFromNativeHandle(handle, resource\_manager,}
+\DoxyCodeLine{92                                        frame\_buffer\_manager);}
+\DoxyCodeLine{93     \textcolor{keywordflow}{if} (resource\_manager \&\& register\_buffer) \{}
+\DoxyCodeLine{94       resource\_manager->RegisterBuffer(\textcolor{keywordtype}{id}, buffer);}
+\DoxyCodeLine{95     \}}
+\DoxyCodeLine{96   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{97     buffer->SetOriginalHandle(handle);}
+\DoxyCodeLine{98   \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100   imported\_buffer\_.reset(\textcolor{keyword}{new} ImportedBuffer(buffer, acquire\_fence));}
+\DoxyCodeLine{101   ValidateForOverlayUsage();}
+\DoxyCodeLine{102 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_adea7a64df0a33bc0139c3773eff82ef5}\label{structhwcomposer_1_1OverlayLayer_adea7a64df0a33bc0139c3773eff82ef5}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Set\+Display\+Frame@{Set\+Display\+Frame}}
+\index{Set\+Display\+Frame@{Set\+Display\+Frame}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Display\+Frame()}{SetDisplayFrame()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Set\+Display\+Frame (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ int $>$ \&}]{display\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Definition at line 116 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116                                                                     \{}
+\DoxyCodeLine{117   display\_frame\_width\_ = display\_frame.right - display\_frame.left;}
+\DoxyCodeLine{118   display\_frame\_height\_ = display\_frame.bottom - display\_frame.top;}
+\DoxyCodeLine{119   display\_frame\_ = display\_frame;}
+\DoxyCodeLine{120 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a1a318a432e36d7d01427f7c168645d23}\label{structhwcomposer_1_1OverlayLayer_a1a318a432e36d7d01427f7c168645d23}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Set\+Layer\+Composition@{Set\+Layer\+Composition}}
+\index{Set\+Layer\+Composition@{Set\+Layer\+Composition}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Layer\+Composition()}{SetLayerComposition()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Set\+Layer\+Composition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1}{Overlay\+Layer\+::\+Layer\+Composition}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 156 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{156                                                                \{}
+\DoxyCodeLine{157     actual\_composition\_ = value;}
+\DoxyCodeLine{158   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_ab72c90d71d1cf45d90cd176c68b0a2e7}\label{structhwcomposer_1_1OverlayLayer_ab72c90d71d1cf45d90cd176c68b0a2e7}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Set\+Source\+Crop@{Set\+Source\+Crop}}
+\index{Set\+Source\+Crop@{Set\+Source\+Crop}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Source\+Crop()}{SetSourceCrop()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Set\+Source\+Crop (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ float $>$ \&}]{source\+\_\+crop }\end{DoxyParamCaption})}
+
+
+
+Definition at line 108 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{108                                                                   \{}
+\DoxyCodeLine{109   source\_crop\_width\_ = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(ceilf(source\_crop.right) -}
+\DoxyCodeLine{110                                         \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(source\_crop.left));}
+\DoxyCodeLine{111   source\_crop\_height\_ = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(ceilf(source\_crop.bottom) -}
+\DoxyCodeLine{112                                          \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(source\_crop.top));}
+\DoxyCodeLine{113   source\_crop\_ = source\_crop;}
+\DoxyCodeLine{114 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a531c1e127f6f5d5ea7df1eb438f116fc}\label{structhwcomposer_1_1OverlayLayer_a531c1e127f6f5d5ea7df1eb438f116fc}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Set\+Transform@{Set\+Transform}}
+\index{Set\+Transform@{Set\+Transform}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Transform()}{SetTransform()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Set\+Transform (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{transform }\end{DoxyParamCaption})}
+
+
+
+Definition at line 122 of file overlaylayer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122                                                   \{}
+\DoxyCodeLine{123   plane\_transform\_ = transform;}
+\DoxyCodeLine{124   transform\_ = transform;}
+\DoxyCodeLine{125 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1OverlayLayer_a32802fdf7351d051a64ae330c2fa6ec5}\label{structhwcomposer_1_1OverlayLayer_a32802fdf7351d051a64ae330c2fa6ec5}} 
+\index{hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}!Supported\+Display\+Composition@{Supported\+Display\+Composition}}
+\index{Supported\+Display\+Composition@{Supported\+Display\+Composition}!hwcomposer\+::\+Overlay\+Layer@{hwcomposer\+::\+Overlay\+Layer}}
+\subsubsection{\texorpdfstring{Supported\+Display\+Composition()}{SupportedDisplayComposition()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Overlay\+Layer\+::\+Supported\+Display\+Composition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer_a937ae4fd43f1005ad8c0c89a9673f1e1}{Overlay\+Layer\+::\+Layer\+Composition}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 163 of file overlaylayer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                                                                        \{}
+\DoxyCodeLine{164     supported\_composition\_ = value;}
+\DoxyCodeLine{165   \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/core/\mbox{\hyperlink{overlaylayer_8h}{overlaylayer.\+h}}\item 
+common/core/\mbox{\hyperlink{overlaylayer_8cpp}{overlaylayer.\+cpp}}\end{DoxyCompactItemize}

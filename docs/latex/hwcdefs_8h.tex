@@ -1,0 +1,87 @@
+\hypertarget{hwcdefs_8h}{}\section{public/hwcdefs.h File Reference}
+\label{hwcdefs_8h}\index{public/hwcdefs.\+h@{public/hwcdefs.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97be}{Display\+Power\+Mode}} \{ \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{k\+Off}} = 0, 
+\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea8bccbb926a1dc31f9d9f572fdd95e608}{k\+Doze}} = 1, 
+\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{k\+On}} = 2, 
+\mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea35f99ee0a3c1ecc81db3f51e82f1f103}{k\+Doze\+Suspend}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}} \{ \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88adfd734ecbb8f5b0b82da1f17bfcef923}{k\+Identical}} = 0, 
+\mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88a009f3b96a52fc5cbf696f781dd55c05e}{k\+Arbitrary\+Matrix}} = 1
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97be}\label{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97be}} 
+\index{hwcdefs.\+h@{hwcdefs.\+h}!Display\+Power\+Mode@{Display\+Power\+Mode}}
+\index{Display\+Power\+Mode@{Display\+Power\+Mode}!hwcdefs.\+h@{hwcdefs.\+h}}
+\subsubsection{\texorpdfstring{Display\+Power\+Mode}{DisplayPowerMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97be}{Display\+Power\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Off@{k\+Off}!hwcdefs.\+h@{hwcdefs.\+h}}\index{hwcdefs.\+h@{hwcdefs.\+h}!k\+Off@{k\+Off}}}\mbox{\Hypertarget{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}\label{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}} 
+k\+Off&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Doze@{k\+Doze}!hwcdefs.\+h@{hwcdefs.\+h}}\index{hwcdefs.\+h@{hwcdefs.\+h}!k\+Doze@{k\+Doze}}}\mbox{\Hypertarget{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea8bccbb926a1dc31f9d9f572fdd95e608}\label{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea8bccbb926a1dc31f9d9f572fdd95e608}} 
+k\+Doze&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+On@{k\+On}!hwcdefs.\+h@{hwcdefs.\+h}}\index{hwcdefs.\+h@{hwcdefs.\+h}!k\+On@{k\+On}}}\mbox{\Hypertarget{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}\label{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}} 
+k\+On&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Doze\+Suspend@{k\+Doze\+Suspend}!hwcdefs.\+h@{hwcdefs.\+h}}\index{hwcdefs.\+h@{hwcdefs.\+h}!k\+Doze\+Suspend@{k\+Doze\+Suspend}}}\mbox{\Hypertarget{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea35f99ee0a3c1ecc81db3f51e82f1f103}\label{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea35f99ee0a3c1ecc81db3f51e82f1f103}} 
+k\+Doze\+Suspend&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 99 of file hwcdefs.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                       \{}
+\DoxyCodeLine{100   \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea24f95f47dddd4bbea91b334f1d6711cc}{kOff}} = 0,         \textcolor{comment}{// Display is off}}
+\DoxyCodeLine{101   \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea8bccbb926a1dc31f9d9f572fdd95e608}{kDoze}} = 1,        \textcolor{comment}{// Display is off and used by the app during any inactivity}}
+\DoxyCodeLine{102                     \textcolor{comment}{// when the device is on battery}}
+\DoxyCodeLine{103   \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea67b46c19ded71fc8128a6c1f5aa361df}{kOn}} = 2,          \textcolor{comment}{// Display is on}}
+\DoxyCodeLine{104   \mbox{\hyperlink{hwcdefs_8h_afeed7d73a1340d1260c45cbe952c97bea35f99ee0a3c1ecc81db3f51e82f1f103}{kDozeSuspend}} = 3  \textcolor{comment}{// Dispaly in low power mode and stop applying}}
+\DoxyCodeLine{105                     \textcolor{comment}{// updates from the client}}
+\DoxyCodeLine{106 \};}
+\end{DoxyCode}
+\mbox{\Hypertarget{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}\label{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}} 
+\index{hwcdefs.\+h@{hwcdefs.\+h}!H\+W\+C\+Color\+Transform@{H\+W\+C\+Color\+Transform}}
+\index{H\+W\+C\+Color\+Transform@{H\+W\+C\+Color\+Transform}!hwcdefs.\+h@{hwcdefs.\+h}}
+\subsubsection{\texorpdfstring{H\+W\+C\+Color\+Transform}{HWCColorTransform}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88}{H\+W\+C\+Color\+Transform}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Identical@{k\+Identical}!hwcdefs.\+h@{hwcdefs.\+h}}\index{hwcdefs.\+h@{hwcdefs.\+h}!k\+Identical@{k\+Identical}}}\mbox{\Hypertarget{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88adfd734ecbb8f5b0b82da1f17bfcef923}\label{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88adfd734ecbb8f5b0b82da1f17bfcef923}} 
+k\+Identical&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Arbitrary\+Matrix@{k\+Arbitrary\+Matrix}!hwcdefs.\+h@{hwcdefs.\+h}}\index{hwcdefs.\+h@{hwcdefs.\+h}!k\+Arbitrary\+Matrix@{k\+Arbitrary\+Matrix}}}\mbox{\Hypertarget{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88a009f3b96a52fc5cbf696f781dd55c05e}\label{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88a009f3b96a52fc5cbf696f781dd55c05e}} 
+k\+Arbitrary\+Matrix&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 108 of file hwcdefs.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{108                        \{}
+\DoxyCodeLine{109   \textcolor{comment}{// Applies no transform to the output color}}
+\DoxyCodeLine{110   \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88adfd734ecbb8f5b0b82da1f17bfcef923}{kIdentical}} = 0,}
+\DoxyCodeLine{111   \textcolor{comment}{// Applies an arbitrary transform defined by a 4x4 affine matrix}}
+\DoxyCodeLine{112   \mbox{\hyperlink{hwcdefs_8h_a1a2c55aec4fbd12a1e323f2bdb3e9b88a009f3b96a52fc5cbf696f781dd55c05e}{kArbitraryMatrix}} = 1}
+\DoxyCodeLine{113 \};}
+\end{DoxyCode}

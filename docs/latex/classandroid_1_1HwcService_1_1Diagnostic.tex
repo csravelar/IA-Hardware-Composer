@@ -1,0 +1,139 @@
+\hypertarget{classandroid_1_1HwcService_1_1Diagnostic}{}\section{android\+:\+:Hwc\+Service\+:\+:Diagnostic Class Reference}
+\label{classandroid_1_1HwcService_1_1Diagnostic}\index{android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}}
+
+
+{\ttfamily \#include $<$hwcservice.\+h$>$}
+
+Inheritance diagram for android\+:\+:Hwc\+Service\+:\+:Diagnostic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classandroid_1_1HwcService_1_1Diagnostic}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classandroid_1_1HwcService_1_1Diagnostic_a415e65935b1c00ddcdc68c3fbac876cd}{Diagnostic}} (\mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}} \&\mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}})
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Diagnostic_a201369c6711b3b26f64fbf8262ad2618}{Read\+Log\+Parcel}} (Parcel $\ast$parcel) override
+\item 
+void \mbox{\hyperlink{classandroid_1_1HwcService_1_1Diagnostic_a405d3f313ca6b1a8848a802a3e56a0a5}{Enable\+Display}} (uint32\+\_\+t d) override
+\item 
+void \mbox{\hyperlink{classandroid_1_1HwcService_1_1Diagnostic_ac9cd5bafbc4f622450327c63cb3b7746}{Disable\+Display}} (uint32\+\_\+t d, bool b\+Blank) override
+\item 
+void \mbox{\hyperlink{classandroid_1_1HwcService_1_1Diagnostic_afe11cd5e9e11147eebb0f2c57e693395}{Mask\+Layer}} (uint32\+\_\+t d, uint32\+\_\+t layer, bool b\+Hide) override
+\item 
+void \mbox{\hyperlink{classandroid_1_1HwcService_1_1Diagnostic_a6a44a6c97a8e4afc4d8940b7df671ef6}{Dump\+Frames}} (uint32\+\_\+t d, int32\+\_\+t frames, bool b\+Sync) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file hwcservice.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Diagnostic_a415e65935b1c00ddcdc68c3fbac876cd}\label{classandroid_1_1HwcService_1_1Diagnostic_a415e65935b1c00ddcdc68c3fbac876cd}} 
+\index{android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}!Diagnostic@{Diagnostic}}
+\index{Diagnostic@{Diagnostic}!android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}}
+\subsubsection{\texorpdfstring{Diagnostic()}{Diagnostic()}}
+{\footnotesize\ttfamily android\+::\+Hwc\+Service\+::\+Diagnostic\+::\+Diagnostic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}} \&}]{I\+A\+H\+W\+C2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file hwcservice.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                : mHwc(\mbox{\hyperlink{classandroid_1_1IAHWC2}{IAHWC2}}) \{}
+\DoxyCodeLine{38       \mbox{\hyperlink{platformcommondefines_8h_a55010dd9f045ede43b1c4fa3d249b1eb}{HWC\_UNUSED}}(mHwc);}
+\DoxyCodeLine{39     \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Diagnostic_ac9cd5bafbc4f622450327c63cb3b7746}\label{classandroid_1_1HwcService_1_1Diagnostic_ac9cd5bafbc4f622450327c63cb3b7746}} 
+\index{android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}!Disable\+Display@{Disable\+Display}}
+\index{Disable\+Display@{Disable\+Display}!android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}}
+\subsubsection{\texorpdfstring{Disable\+Display()}{DisableDisplay()}}
+{\footnotesize\ttfamily void android\+::\+Hwc\+Service\+::\+Diagnostic\+::\+Disable\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{bool}]{b\+Blank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 131 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                                                         \{ \textcolor{comment}{/* nothing */}}
+\DoxyCodeLine{132 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Diagnostic_a6a44a6c97a8e4afc4d8940b7df671ef6}\label{classandroid_1_1HwcService_1_1Diagnostic_a6a44a6c97a8e4afc4d8940b7df671ef6}} 
+\index{android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}!Dump\+Frames@{Dump\+Frames}}
+\index{Dump\+Frames@{Dump\+Frames}!android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}}
+\subsubsection{\texorpdfstring{Dump\+Frames()}{DumpFrames()}}
+{\footnotesize\ttfamily void android\+::\+Hwc\+Service\+::\+Diagnostic\+::\+Dump\+Frames (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{int32\+\_\+t}]{frames,  }\item[{bool}]{b\+Sync }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 135 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{135                                                              \{ \textcolor{comment}{/* nothing */}}
+\DoxyCodeLine{136 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Diagnostic_a405d3f313ca6b1a8848a802a3e56a0a5}\label{classandroid_1_1HwcService_1_1Diagnostic_a405d3f313ca6b1a8848a802a3e56a0a5}} 
+\index{android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}!Enable\+Display@{Enable\+Display}}
+\index{Enable\+Display@{Enable\+Display}!android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}}
+\subsubsection{\texorpdfstring{Enable\+Display()}{EnableDisplay()}}
+{\footnotesize\ttfamily void android\+::\+Hwc\+Service\+::\+Diagnostic\+::\+Enable\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 129 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129                                                  \{ \textcolor{comment}{/* nothing */}}
+\DoxyCodeLine{130 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Diagnostic_afe11cd5e9e11147eebb0f2c57e693395}\label{classandroid_1_1HwcService_1_1Diagnostic_afe11cd5e9e11147eebb0f2c57e693395}} 
+\index{android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}!Mask\+Layer@{Mask\+Layer}}
+\index{Mask\+Layer@{Mask\+Layer}!android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}}
+\subsubsection{\texorpdfstring{Mask\+Layer()}{MaskLayer()}}
+{\footnotesize\ttfamily void android\+::\+Hwc\+Service\+::\+Diagnostic\+::\+Mask\+Layer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{uint32\+\_\+t}]{layer,  }\item[{bool}]{b\+Hide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 133 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133                                                              \{ \textcolor{comment}{/* nothing */}}
+\DoxyCodeLine{134 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Diagnostic_a201369c6711b3b26f64fbf8262ad2618}\label{classandroid_1_1HwcService_1_1Diagnostic_a201369c6711b3b26f64fbf8262ad2618}} 
+\index{android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}!Read\+Log\+Parcel@{Read\+Log\+Parcel}}
+\index{Read\+Log\+Parcel@{Read\+Log\+Parcel}!android\+::\+Hwc\+Service\+::\+Diagnostic@{android\+::\+Hwc\+Service\+::\+Diagnostic}}
+\subsubsection{\texorpdfstring{Read\+Log\+Parcel()}{ReadLogParcel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Diagnostic\+::\+Read\+Log\+Parcel (\begin{DoxyParamCaption}\item[{Parcel $\ast$}]{parcel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 124 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                                            \{}
+\DoxyCodeLine{125   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{126   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{127 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/android/\mbox{\hyperlink{hwcservice_8h}{hwcservice.\+h}}\item 
+os/android/\mbox{\hyperlink{hwcservice_8cpp}{hwcservice.\+cpp}}\end{DoxyCompactItemize}

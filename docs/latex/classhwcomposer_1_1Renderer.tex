@@ -1,0 +1,208 @@
+\hypertarget{classhwcomposer_1_1Renderer}{}\section{hwcomposer\+:\+:Renderer Class Reference}
+\label{classhwcomposer_1_1Renderer}\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+
+
+{\ttfamily \#include $<$renderer.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1Renderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1Renderer_ae8ad61f25e0091ff5fe70ba4a82a8f25}{Renderer}} ()=default
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1Renderer_a19b3d949bff31dc2cc1f43b8be9b2d66}{$\sim$\+Renderer}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1Renderer_a8ac9dbcdaeaf5f70a47cab428965ca6a}{Renderer}} (const \mbox{\hyperlink{classhwcomposer_1_1Renderer}{Renderer}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1Renderer}{Renderer}} \& \mbox{\hyperlink{classhwcomposer_1_1Renderer_ad3d7968f66d493cf0277a904781bb0f8}{operator=}} (const \mbox{\hyperlink{classhwcomposer_1_1Renderer}{Renderer}} \&rhs)=delete
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1Renderer_aa7f5e7d36857fb67093b9f0cc3a7e606}{Init}} ()
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1Renderer_ab147e6d44d429c0ada5a3212ef7100f1}{Draw}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} $>$ \&, \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$)
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1Renderer_a23d289f318b33cdcf998475c2a36aeb2}{Init}} (int)
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1Renderer_a81d8de129d86d71d99366ae59a6fe7f7}{Destroy\+Media\+Resources}} (std\+::vector$<$ struct \mbox{\hyperlink{structhwcomposer_1_1media__import}{media\+\_\+import}} $>$ \&)
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1Renderer_a3811bf639ba6fd9b9891daf0b051b98b}{Draw}} (const \mbox{\hyperlink{structhwcomposer_1_1MediaState}{Media\+State}} \&, \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$)
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1Renderer_a0b7be67ed8f89c994cf3bcfd418ef0a4}{Insert\+Fence}} (int32\+\_\+t kms\+\_\+fence)=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1Renderer_a8f889bf7b26aa7d1436e9ecf6d15e629}{Set\+Explicit\+Sync\+Support}} (bool disable\+\_\+explicit\+\_\+sync)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 32 of file renderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_ae8ad61f25e0091ff5fe70ba4a82a8f25}\label{classhwcomposer_1_1Renderer_ae8ad61f25e0091ff5fe70ba4a82a8f25}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_a19b3d949bff31dc2cc1f43b8be9b2d66}\label{classhwcomposer_1_1Renderer_a19b3d949bff31dc2cc1f43b8be9b2d66}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!````~Renderer@{$\sim$\+Renderer}}
+\index{````~Renderer@{$\sim$\+Renderer}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{$\sim$\+Renderer()}{~Renderer()}}
+{\footnotesize\ttfamily virtual hwcomposer\+::\+Renderer\+::$\sim$\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 35 of file renderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                       \{}
+\DoxyCodeLine{36   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_a8ac9dbcdaeaf5f70a47cab428965ca6a}\label{classhwcomposer_1_1Renderer_a8ac9dbcdaeaf5f70a47cab428965ca6a}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1Renderer}{Renderer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_a81d8de129d86d71d99366ae59a6fe7f7}\label{classhwcomposer_1_1Renderer_a81d8de129d86d71d99366ae59a6fe7f7}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!Destroy\+Media\+Resources@{Destroy\+Media\+Resources}}
+\index{Destroy\+Media\+Resources@{Destroy\+Media\+Resources}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{Destroy\+Media\+Resources()}{DestroyMediaResources()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Renderer\+::\+Destroy\+Media\+Resources (\begin{DoxyParamCaption}\item[{std\+::vector$<$ struct \mbox{\hyperlink{structhwcomposer_1_1media__import}{media\+\_\+import}} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1VARenderer_a0db23648105f69ce00fea498f28f87ec}{hwcomposer\+::\+V\+A\+Renderer}}.
+
+
+
+Definition at line 55 of file renderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                          \{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{58   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_ab147e6d44d429c0ada5a3212ef7100f1}\label{classhwcomposer_1_1Renderer_ab147e6d44d429c0ada5a3212ef7100f1}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!Draw@{Draw}}
+\index{Draw@{Draw}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Renderer\+::\+Draw (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} $>$ \&}]{,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1GLRenderer_a961208b3640ffb78a15438ca4504fe1a}{hwcomposer\+::\+G\+L\+Renderer}}, and \mbox{\hyperlink{classhwcomposer_1_1VKRenderer_a05f1c449173cc2b4f479bf5be404ebb3}{hwcomposer\+::\+V\+K\+Renderer}}.
+
+
+
+Definition at line 45 of file renderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                       \{}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{48   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_a3811bf639ba6fd9b9891daf0b051b98b}\label{classhwcomposer_1_1Renderer_a3811bf639ba6fd9b9891daf0b051b98b}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!Draw@{Draw}}
+\index{Draw@{Draw}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Renderer\+::\+Draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1MediaState}{Media\+State}} \&}]{,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1VARenderer_a5fdcb230093416433e8cf394137b9cc1}{hwcomposer\+::\+V\+A\+Renderer}}.
+
+
+
+Definition at line 60 of file renderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                                            \{}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{62   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_aa7f5e7d36857fb67093b9f0cc3a7e606}\label{classhwcomposer_1_1Renderer_aa7f5e7d36857fb67093b9f0cc3a7e606}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Renderer\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1GLRenderer_a13460f969b8fd85b74ae1fecadff744e}{hwcomposer\+::\+G\+L\+Renderer}}, and \mbox{\hyperlink{classhwcomposer_1_1VKRenderer_aa5ec08a716d38af3c59827b05045e56f}{hwcomposer\+::\+V\+K\+Renderer}}.
+
+
+
+Definition at line 41 of file renderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                       \{}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{43   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_a23d289f318b33cdcf998475c2a36aeb2}\label{classhwcomposer_1_1Renderer_a23d289f318b33cdcf998475c2a36aeb2}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Renderer\+::\+Init (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1VARenderer_a93d5e911647cee44c892222c822df619}{hwcomposer\+::\+V\+A\+Renderer}}.
+
+
+
+Definition at line 51 of file renderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                            \{}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{53   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_a0b7be67ed8f89c994cf3bcfd418ef0a4}\label{classhwcomposer_1_1Renderer_a0b7be67ed8f89c994cf3bcfd418ef0a4}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!Insert\+Fence@{Insert\+Fence}}
+\index{Insert\+Fence@{Insert\+Fence}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{Insert\+Fence()}{InsertFence()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Renderer\+::\+Insert\+Fence (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{kms\+\_\+fence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1VARenderer_aece2e9617febe0b91087342ce84812e2}{hwcomposer\+::\+V\+A\+Renderer}}, \mbox{\hyperlink{classhwcomposer_1_1GLRenderer_af9eecc3a31c3acadaae84d2b31cf4807}{hwcomposer\+::\+G\+L\+Renderer}}, and \mbox{\hyperlink{classhwcomposer_1_1VKRenderer_abbaf31607e1572de1e74de4d2ea50a03}{hwcomposer\+::\+V\+K\+Renderer}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_ad3d7968f66d493cf0277a904781bb0f8}\label{classhwcomposer_1_1Renderer_ad3d7968f66d493cf0277a904781bb0f8}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1Renderer}{Renderer}}\& hwcomposer\+::\+Renderer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1Renderer}{Renderer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1Renderer_a8f889bf7b26aa7d1436e9ecf6d15e629}\label{classhwcomposer_1_1Renderer_a8f889bf7b26aa7d1436e9ecf6d15e629}} 
+\index{hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}!Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}}
+\index{Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}!hwcomposer\+::\+Renderer@{hwcomposer\+::\+Renderer}}
+\subsubsection{\texorpdfstring{Set\+Explicit\+Sync\+Support()}{SetExplicitSyncSupport()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Renderer\+::\+Set\+Explicit\+Sync\+Support (\begin{DoxyParamCaption}\item[{bool}]{disable\+\_\+explicit\+\_\+sync }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1VARenderer_a863e73b1d84e194300aac6f6c30fd037}{hwcomposer\+::\+V\+A\+Renderer}}, \mbox{\hyperlink{classhwcomposer_1_1GLRenderer_a8bd09dabfc0bd223f783454609b48a82}{hwcomposer\+::\+G\+L\+Renderer}}, and \mbox{\hyperlink{classhwcomposer_1_1VKRenderer_ad0a97c5d88ce71c265a6bd5ee139ffe7}{hwcomposer\+::\+V\+K\+Renderer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/\mbox{\hyperlink{renderer_8h}{renderer.\+h}}\end{DoxyCompactItemize}

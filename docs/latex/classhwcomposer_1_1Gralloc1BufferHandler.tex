@@ -1,0 +1,485 @@
+\hypertarget{classhwcomposer_1_1Gralloc1BufferHandler}{}\section{hwcomposer\+:\+:Gralloc1Buffer\+Handler Class Reference}
+\label{classhwcomposer_1_1Gralloc1BufferHandler}\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+
+
+{\ttfamily \#include $<$gralloc1bufferhandler.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Gralloc1Buffer\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1Gralloc1BufferHandler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a07552c435b9ccdd99c898a81d805cdd2}{Gralloc1\+Buffer\+Handler}} (uint32\+\_\+t fd)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a4802221a9b764fcb8c319a162d004be7}{$\sim$\+Gralloc1\+Buffer\+Handler}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a1d70874f4b535fe0763be57f3d9b2efd}{Init}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a980ee5c0aa77d99861a89bdf6294d2db}{Create\+Buffer}} (uint32\+\_\+t w, uint32\+\_\+t h, int format, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$handle, uint32\+\_\+t layer\+\_\+type=k\+Layer\+Normal, bool $\ast$modifier\+\_\+used=\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}, int64\+\_\+t modifier=-\/1, bool raw\+\_\+pixel\+\_\+buffer=false) const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a21b27b52da92605736b164e8088b93fe}{Release\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_aac10a3d48f5dab43e3057ef9783bd6ea}{Destroy\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a0341cd413ba6e7d422edf30a161cd2b9}{Import\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a87adf9132b6567a3b167741beebcd9d3}{Copy\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} source, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$target) const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_ad86921fa69dbb60b82581bd6f893decc}{Get\+Total\+Planes}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+void $\ast$ \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a55e32dbd6cc8c32cb3fd3cac11d3f9f8}{Map}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, uint32\+\_\+t x, uint32\+\_\+t y, uint32\+\_\+t width, uint32\+\_\+t height, uint32\+\_\+t $\ast$stride, void $\ast$$\ast$map\+\_\+data, size\+\_\+t plane) const override
+\item 
+int32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_a147ec425ec0fda400f1d4dd5c60764d9}{Un\+Map}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, void $\ast$map\+\_\+data) const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1Gralloc1BufferHandler_aee03106dfff3a4b68b2a29a0d0350d07}{Get\+Fd}} () const override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file gralloc1bufferhandler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_a07552c435b9ccdd99c898a81d805cdd2}\label{classhwcomposer_1_1Gralloc1BufferHandler_a07552c435b9ccdd99c898a81d805cdd2}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Gralloc1\+Buffer\+Handler@{Gralloc1\+Buffer\+Handler}}
+\index{Gralloc1\+Buffer\+Handler@{Gralloc1\+Buffer\+Handler}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Gralloc1\+Buffer\+Handler()}{Gralloc1BufferHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Gralloc1\+Buffer\+Handler (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 47 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48     : fd\_(fd),}
+\DoxyCodeLine{49       gralloc\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{50       device\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{51       register\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{52       release\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{53       dimensions\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{54       lock\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{55       unlock\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{56       create\_descriptor\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{57       destroy\_descriptor\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{58       set\_consumer\_usage\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{59       set\_dimensions\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{60       set\_format\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{61       set\_producer\_usage\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{62       allocate\_(\textcolor{keyword}{nullptr}),}
+\DoxyCodeLine{63       set\_modifier\_(\textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{64 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_a4802221a9b764fcb8c319a162d004be7}\label{classhwcomposer_1_1Gralloc1BufferHandler_a4802221a9b764fcb8c319a162d004be7}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!````~Gralloc1\+Buffer\+Handler@{$\sim$\+Gralloc1\+Buffer\+Handler}}
+\index{````~Gralloc1\+Buffer\+Handler@{$\sim$\+Gralloc1\+Buffer\+Handler}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Gralloc1\+Buffer\+Handler()}{~Gralloc1BufferHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::$\sim$\+Gralloc1\+Buffer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 66 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                                               \{}
+\DoxyCodeLine{67   gralloc1\_device\_t *gralloc1\_dvc =}
+\DoxyCodeLine{68       \textcolor{keyword}{reinterpret\_cast<}gralloc1\_device\_t *\textcolor{keyword}{>}(device\_);}
+\DoxyCodeLine{69   gralloc1\_dvc->common.close(device\_);}
+\DoxyCodeLine{70 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_a87adf9132b6567a3b167741beebcd9d3}\label{classhwcomposer_1_1Gralloc1BufferHandler_a87adf9132b6567a3b167741beebcd9d3}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Copy\+Handle@{Copy\+Handle}}
+\index{Copy\+Handle@{Copy\+Handle}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Copy\+Handle()}{CopyHandle()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Copy\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{source,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a96581fb8bd36e959c8da6b9f634ecd32}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 255 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{256                                                                       \{}
+\DoxyCodeLine{257   CopyBufferHandle(source, target);}
+\DoxyCodeLine{258 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_a980ee5c0aa77d99861a89bdf6294d2db}\label{classhwcomposer_1_1Gralloc1BufferHandler_a980ee5c0aa77d99861a89bdf6294d2db}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Create\+Buffer@{Create\+Buffer}}
+\index{Create\+Buffer@{Create\+Buffer}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Create\+Buffer()}{CreateBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Create\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{w,  }\item[{uint32\+\_\+t}]{h,  }\item[{int}]{format,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$}]{handle,  }\item[{uint32\+\_\+t}]{layer\+\_\+type = {\ttfamily kLayerNormal},  }\item[{bool $\ast$}]{modifier\+\_\+used = {\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}},  }\item[{int64\+\_\+t}]{modifier = {\ttfamily -\/1},  }\item[{bool}]{raw\+\_\+pixel\+\_\+buffer = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a7e58e3d81d3f56cbee34c963b4999fde}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 128 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133                                                        \{}
+\DoxyCodeLine{134   \textcolor{keyword}{struct }\mbox{\hyperlink{structgralloc__handle}{gralloc\_handle}} *temp = \textcolor{keyword}{new} \textcolor{keyword}{struct }\mbox{\hyperlink{structgralloc__handle}{gralloc\_handle}}();}
+\DoxyCodeLine{135   gralloc1\_device\_t *gralloc1\_dvc =}
+\DoxyCodeLine{136       \textcolor{keyword}{reinterpret\_cast<}gralloc1\_device\_t *\textcolor{keyword}{>}(device\_);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138   create\_descriptor\_(gralloc1\_dvc, \&temp->\mbox{\hyperlink{structgralloc__handle_a3b9885580cfaa575a8e159512e247d9f}{gralloc1\_buffer\_descriptor\_t\_}});}
+\DoxyCodeLine{139   uint32\_t usage = 0;}
+\DoxyCodeLine{140   uint32\_t pixel\_format = 0;}
+\DoxyCodeLine{141   \textcolor{keywordtype}{bool} force\_normal\_usage = \textcolor{keyword}{false};}
+\DoxyCodeLine{142   \textcolor{keywordflow}{if} (format != 0) \{}
+\DoxyCodeLine{143     pixel\_format = DrmFormatToHALFormat(format);}
+\DoxyCodeLine{144   \}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146   \textcolor{keywordflow}{if} (pixel\_format == 0) \{}
+\DoxyCodeLine{147     pixel\_format = HAL\_PIXEL\_FORMAT\_RGBA\_8888;}
+\DoxyCodeLine{148   \}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150   set\_format\_(gralloc1\_dvc, temp->\mbox{\hyperlink{structgralloc__handle_a3b9885580cfaa575a8e159512e247d9f}{gralloc1\_buffer\_descriptor\_t\_}}, pixel\_format);}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#ifdef ENABLE\_RBC}}
+\DoxyCodeLine{152   \textcolor{keywordflow}{if} (set\_modifier\_) \{}
+\DoxyCodeLine{153     uint64\_t modifier = 0;}
+\DoxyCodeLine{154     \textcolor{keywordflow}{if} (preferred\_modifier != -1) \{}
+\DoxyCodeLine{155       modifier = preferred\_modifier;}
+\DoxyCodeLine{156     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{157       modifier = choose\_drm\_modifier(format);}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     set\_modifier\_(gralloc1\_dvc, temp->\mbox{\hyperlink{structgralloc__handle_a3b9885580cfaa575a8e159512e247d9f}{gralloc1\_buffer\_descriptor\_t\_}}, modifier);}
+\DoxyCodeLine{161   \}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163   \textcolor{keywordflow}{if} (modifier\_used) \{}
+\DoxyCodeLine{164     *modifier\_used = \textcolor{keyword}{true};}
+\DoxyCodeLine{165   \}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{167   \textcolor{keywordflow}{if} (modifier\_used) \{}
+\DoxyCodeLine{168     *modifier\_used = \textcolor{keyword}{false};}
+\DoxyCodeLine{169   \}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172   \textcolor{keywordflow}{if} ((layer\_type == hwcomposer::kLayerVideo) \&\&}
+\DoxyCodeLine{173       !\mbox{\hyperlink{namespacehwcomposer_a96195339fc55ee57f41cc4597a56746c}{IsSupportedMediaFormat}}(format)) \{}
+\DoxyCodeLine{174     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Forcing normal usage for Video Layer. \(\backslash\)n"});}
+\DoxyCodeLine{175     force\_normal\_usage = \textcolor{keyword}{true};}
+\DoxyCodeLine{176   \}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178   \textcolor{keywordflow}{if} ((layer\_type == hwcomposer::kLayerNormal) || force\_normal\_usage) \{}
+\DoxyCodeLine{179     usage |= GRALLOC1\_CONSUMER\_USAGE\_HWCOMPOSER |}
+\DoxyCodeLine{180              GRALLOC1\_PRODUCER\_USAGE\_GPU\_RENDER\_TARGET |}
+\DoxyCodeLine{181              GRALLOC1\_CONSUMER\_USAGE\_GPU\_TEXTURE;}
+\DoxyCodeLine{182   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (layer\_type == hwcomposer::kLayerVideo) \{}
+\DoxyCodeLine{183     \textcolor{keywordflow}{switch} (pixel\_format) \{}
+\DoxyCodeLine{184       \textcolor{keywordflow}{case} HAL\_PIXEL\_FORMAT\_YCbCr\_422\_I:}
+\DoxyCodeLine{185       \textcolor{keywordflow}{case} HAL\_PIXEL\_FORMAT\_Y8:}
+\DoxyCodeLine{186         usage |= GRALLOC1\_CONSUMER\_USAGE\_GPU\_TEXTURE |}
+\DoxyCodeLine{187                  GRALLOC1\_PRODUCER\_USAGE\_VIDEO\_DECODER;}
+\DoxyCodeLine{188         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{189       \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{190         usage |= GRALLOC1\_PRODUCER\_USAGE\_CAMERA |}
+\DoxyCodeLine{191                  GRALLOC1\_CONSUMER\_USAGE\_CAMERA |}
+\DoxyCodeLine{192                  GRALLOC1\_PRODUCER\_USAGE\_VIDEO\_DECODER |}
+\DoxyCodeLine{193                  GRALLOC1\_CONSUMER\_USAGE\_GPU\_TEXTURE;}
+\DoxyCodeLine{194     \}}
+\DoxyCodeLine{195   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (layer\_type == hwcomposer::kLayerCursor) \{}
+\DoxyCodeLine{196     usage |= GRALLOC1\_CONSUMER\_USAGE\_CURSOR;}
+\DoxyCodeLine{197   \}}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199   set\_consumer\_usage\_(gralloc1\_dvc, temp->\mbox{\hyperlink{structgralloc__handle_a3b9885580cfaa575a8e159512e247d9f}{gralloc1\_buffer\_descriptor\_t\_}}, usage);}
+\DoxyCodeLine{200   set\_producer\_usage\_(gralloc1\_dvc, temp->\mbox{\hyperlink{structgralloc__handle_a3b9885580cfaa575a8e159512e247d9f}{gralloc1\_buffer\_descriptor\_t\_}}, usage);}
+\DoxyCodeLine{201   set\_dimensions\_(gralloc1\_dvc, temp->\mbox{\hyperlink{structgralloc__handle_a3b9885580cfaa575a8e159512e247d9f}{gralloc1\_buffer\_descriptor\_t\_}}, w, h);}
+\DoxyCodeLine{202   allocate\_(gralloc1\_dvc, 1, \&temp->\mbox{\hyperlink{structgralloc__handle_a3b9885580cfaa575a8e159512e247d9f}{gralloc1\_buffer\_descriptor\_t\_}},}
+\DoxyCodeLine{203             \&temp->\mbox{\hyperlink{structgralloc__handle_a7ab2601be21b021ab2a14d6549c6a537}{handle\_}});}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205   \textcolor{keywordflow}{if} (!temp->\mbox{\hyperlink{structgralloc__handle_a7ab2601be21b021ab2a14d6549c6a537}{handle\_}}) \{}
+\DoxyCodeLine{206     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to allocate buffer \(\backslash\)n"});}
+\DoxyCodeLine{207   \}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209   temp->\mbox{\hyperlink{structgralloc__handle_a3ed360c5ac62fea5f6e171371ba6bb2a}{hwc\_buffer\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{210   *handle = temp;}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{213 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_aac10a3d48f5dab43e3057ef9783bd6ea}\label{classhwcomposer_1_1Gralloc1BufferHandler_aac10a3d48f5dab43e3057ef9783bd6ea}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Destroy\+Handle@{Destroy\+Handle}}
+\index{Destroy\+Handle@{Destroy\+Handle}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Destroy\+Handle()}{DestroyHandle()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Destroy\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_ab1e22d9737ca9f6c3e75d1b550e34ce9}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 231 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{231                                                                       \{}
+\DoxyCodeLine{232   DestroyBufferHandle(handle);}
+\DoxyCodeLine{233 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_aee03106dfff3a4b68b2a29a0d0350d07}\label{classhwcomposer_1_1Gralloc1BufferHandler_aee03106dfff3a4b68b2a29a0d0350d07}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Get\+Fd@{Get\+Fd}}
+\index{Get\+Fd@{Get\+Fd}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Fd()}{GetFd()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Get\+Fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_adb5a4c6d14c012f8a5c71fbb2c984438}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 52 of file gralloc1bufferhandler.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                   \{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} fd\_;}
+\DoxyCodeLine{54   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_ad86921fa69dbb60b82581bd6f893decc}\label{classhwcomposer_1_1Gralloc1BufferHandler_ad86921fa69dbb60b82581bd6f893decc}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Get\+Total\+Planes@{Get\+Total\+Planes}}
+\index{Get\+Total\+Planes@{Get\+Total\+Planes}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Total\+Planes()}{GetTotalPlanes()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Get\+Total\+Planes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a3b4115de8c13c53b6cd233f755f46dc9}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 251 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{251                                                                            \{}
+\DoxyCodeLine{252   \textcolor{keywordflow}{return} handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ab48df5577e8ecd60f18b4b5e6ec6544d}{num\_planes\_}};}
+\DoxyCodeLine{253 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_a0341cd413ba6e7d422edf30a161cd2b9}\label{classhwcomposer_1_1Gralloc1BufferHandler_a0341cd413ba6e7d422edf30a161cd2b9}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Import\+Buffer@{Import\+Buffer}}
+\index{Import\+Buffer@{Import\+Buffer}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Import\+Buffer()}{ImportBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Import\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a5841be467d2aa11e8c4d7233596fda3c}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 235 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{235                                                                      \{}
+\DoxyCodeLine{236   \textcolor{keywordflow}{if} (!handle->imported\_handle\_) \{}
+\DoxyCodeLine{237     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"could not find gralloc drm handle"});}
+\DoxyCodeLine{238     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{239   \}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241   gralloc1\_device\_t *gralloc1\_dvc =}
+\DoxyCodeLine{242       \textcolor{keyword}{reinterpret\_cast<}gralloc1\_device\_t *\textcolor{keyword}{>}(device\_);}
+\DoxyCodeLine{243   register\_(gralloc1\_dvc, handle->imported\_handle\_);}
+\DoxyCodeLine{244   \textcolor{keywordflow}{if} (!ImportGraphicsBuffer(handle, fd\_)) \{}
+\DoxyCodeLine{245     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{246   \}}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{249 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_a1d70874f4b535fe0763be57f3d9b2efd}\label{classhwcomposer_1_1Gralloc1BufferHandler_a1d70874f4b535fe0763be57f3d9b2efd}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                  \{}
+\DoxyCodeLine{73   \textcolor{keywordtype}{int} ret = hw\_get\_module(GRALLOC\_HARDWARE\_MODULE\_ID,}
+\DoxyCodeLine{74                           (\textcolor{keyword}{const} hw\_module\_t **)\&gralloc\_);}
+\DoxyCodeLine{75   \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{76     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to get gralloc module"});}
+\DoxyCodeLine{77     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{78   \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80   ret = gralloc\_->methods->open(gralloc\_, GRALLOC\_HARDWARE\_MODULE\_ID, \&device\_);}
+\DoxyCodeLine{81   \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{82     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to open gralloc module"});}
+\DoxyCodeLine{83     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{84   \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86   gralloc1\_device\_t *gralloc1\_dvc =}
+\DoxyCodeLine{87       \textcolor{keyword}{reinterpret\_cast<}gralloc1\_device\_t *\textcolor{keyword}{>}(device\_);}
+\DoxyCodeLine{88   register\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_RETAIN\textcolor{keyword}{>}(}
+\DoxyCodeLine{89       gralloc1\_dvc->getFunction(gralloc1\_dvc, GRALLOC1\_FUNCTION\_RETAIN));}
+\DoxyCodeLine{90   release\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_RELEASE\textcolor{keyword}{>}(}
+\DoxyCodeLine{91       gralloc1\_dvc->getFunction(gralloc1\_dvc, GRALLOC1\_FUNCTION\_RELEASE));}
+\DoxyCodeLine{92   lock\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_LOCK\textcolor{keyword}{>}(}
+\DoxyCodeLine{93       gralloc1\_dvc->getFunction(gralloc1\_dvc, GRALLOC1\_FUNCTION\_LOCK));}
+\DoxyCodeLine{94   unlock\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_UNLOCK\textcolor{keyword}{>}(}
+\DoxyCodeLine{95       gralloc1\_dvc->getFunction(gralloc1\_dvc, GRALLOC1\_FUNCTION\_UNLOCK));}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97   dimensions\_ =}
+\DoxyCodeLine{98       \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_GET\_DIMENSIONS\textcolor{keyword}{>}(gralloc1\_dvc->getFunction(}
+\DoxyCodeLine{99           gralloc1\_dvc, GRALLOC1\_FUNCTION\_GET\_DIMENSIONS));}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101   create\_descriptor\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_CREATE\_DESCRIPTOR\textcolor{keyword}{>}(}
+\DoxyCodeLine{102       gralloc1\_dvc->getFunction(gralloc1\_dvc,}
+\DoxyCodeLine{103                                 GRALLOC1\_FUNCTION\_CREATE\_DESCRIPTOR));}
+\DoxyCodeLine{104   destroy\_descriptor\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_DESTROY\_DESCRIPTOR\textcolor{keyword}{>}(}
+\DoxyCodeLine{105       gralloc1\_dvc->getFunction(gralloc1\_dvc,}
+\DoxyCodeLine{106                                 GRALLOC1\_FUNCTION\_DESTROY\_DESCRIPTOR));}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108   set\_consumer\_usage\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_SET\_CONSUMER\_USAGE\textcolor{keyword}{>}(}
+\DoxyCodeLine{109       gralloc1\_dvc->getFunction(gralloc1\_dvc,}
+\DoxyCodeLine{110                                 GRALLOC1\_FUNCTION\_SET\_CONSUMER\_USAGE));}
+\DoxyCodeLine{111   set\_dimensions\_ =}
+\DoxyCodeLine{112       \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_SET\_DIMENSIONS\textcolor{keyword}{>}(gralloc1\_dvc->getFunction(}
+\DoxyCodeLine{113           gralloc1\_dvc, GRALLOC1\_FUNCTION\_SET\_DIMENSIONS));}
+\DoxyCodeLine{114   set\_format\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_SET\_FORMAT\textcolor{keyword}{>}(}
+\DoxyCodeLine{115       gralloc1\_dvc->getFunction(gralloc1\_dvc, GRALLOC1\_FUNCTION\_SET\_FORMAT));}
+\DoxyCodeLine{116   set\_producer\_usage\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_SET\_PRODUCER\_USAGE\textcolor{keyword}{>}(}
+\DoxyCodeLine{117       gralloc1\_dvc->getFunction(gralloc1\_dvc,}
+\DoxyCodeLine{118                                 GRALLOC1\_FUNCTION\_SET\_PRODUCER\_USAGE));}
+\DoxyCodeLine{119   allocate\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_ALLOCATE\textcolor{keyword}{>}(}
+\DoxyCodeLine{120       gralloc1\_dvc->getFunction(gralloc1\_dvc, GRALLOC1\_FUNCTION\_ALLOCATE));}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#ifdef USE\_GRALLOC1}}
+\DoxyCodeLine{122   set\_modifier\_ = \textcolor{keyword}{reinterpret\_cast<}GRALLOC1\_PFN\_SET\_MODIFIER\textcolor{keyword}{>}(}
+\DoxyCodeLine{123       gralloc1\_dvc->getFunction(gralloc1\_dvc, GRALLOC1\_FUNCTION\_SET\_MODIFIER));}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{125   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{126 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_a55e32dbd6cc8c32cb3fd3cac11d3f9f8}\label{classhwcomposer_1_1Gralloc1BufferHandler_a55e32dbd6cc8c32cb3fd3cac11d3f9f8}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Map@{Map}}
+\index{Map@{Map}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily void $\ast$ hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{uint32\+\_\+t}]{x,  }\item[{uint32\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{uint32\+\_\+t $\ast$}]{stride,  }\item[{void $\ast$$\ast$}]{map\+\_\+data,  }\item[{size\+\_\+t}]{plane }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a4ef1e64030d28540265fac46d503e9b8}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 260 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{263                                                  \{}
+\DoxyCodeLine{264   \textcolor{keyword}{auto} gr\_handle = (\textcolor{keyword}{struct }cros\_gralloc\_handle *)handle->imported\_handle\_;}
+\DoxyCodeLine{265   if (!gr\_handle) \{}
+\DoxyCodeLine{266     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"could not find gralloc drm handle"});}
+\DoxyCodeLine{267     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{268   \}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270   \textcolor{keywordtype}{int} acquireFence = -1;}
+\DoxyCodeLine{271   gralloc1\_rect\_t rect\{\};}
+\DoxyCodeLine{272   rect.left = x;}
+\DoxyCodeLine{273   rect.top = y;}
+\DoxyCodeLine{274   rect.width = width;}
+\DoxyCodeLine{275   rect.height = height;}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{277   gralloc1\_device\_t *gralloc1\_dvc =}
+\DoxyCodeLine{278       \textcolor{keyword}{reinterpret\_cast<}gralloc1\_device\_t *\textcolor{keyword}{>}(device\_);}
+\DoxyCodeLine{279   uint32\_t status = lock\_(gralloc1\_dvc, handle->imported\_handle\_,}
+\DoxyCodeLine{280                           GRALLOC1\_PRODUCER\_USAGE\_CPU\_WRITE\_OFTEN,}
+\DoxyCodeLine{281                           GRALLOC1\_CONSUMER\_USAGE\_CPU\_READ\_OFTEN, \&rect,}
+\DoxyCodeLine{282                           map\_data, acquireFence);}
+\DoxyCodeLine{283   \textcolor{keywordflow}{return} (GRALLOC1\_ERROR\_NONE == status) ? *map\_data : \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{284 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_a21b27b52da92605736b164e8088b93fe}\label{classhwcomposer_1_1Gralloc1BufferHandler_a21b27b52da92605736b164e8088b93fe}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Release\+Buffer@{Release\+Buffer}}
+\index{Release\+Buffer@{Release\+Buffer}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Release\+Buffer()}{ReleaseBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Release\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_abff911db92343545a36a0cc44a8d2eb8}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 215 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{215                                                                       \{}
+\DoxyCodeLine{216   gralloc1\_device\_t *gralloc1\_dvc =}
+\DoxyCodeLine{217       \textcolor{keyword}{reinterpret\_cast<}gralloc1\_device\_t *\textcolor{keyword}{>}(device\_);}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219   \textcolor{keywordflow}{if} (handle->\mbox{\hyperlink{structyalloc__handle_ad1b5a7934204f6636871eb6270329654}{hwc\_buffer\_}}) \{}
+\DoxyCodeLine{220     release\_(gralloc1\_dvc, handle->handle\_);}
+\DoxyCodeLine{221   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (handle->imported\_handle\_) \{}
+\DoxyCodeLine{222     release\_(gralloc1\_dvc, handle->imported\_handle\_);}
+\DoxyCodeLine{223   \}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225   \textcolor{keywordflow}{if} (handle->gralloc1\_buffer\_descriptor\_t\_ > 0)}
+\DoxyCodeLine{226     destroy\_descriptor\_(gralloc1\_dvc, handle->gralloc1\_buffer\_descriptor\_t\_);}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{229 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1Gralloc1BufferHandler_a147ec425ec0fda400f1d4dd5c60764d9}\label{classhwcomposer_1_1Gralloc1BufferHandler_a147ec425ec0fda400f1d4dd5c60764d9}} 
+\index{hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}!Un\+Map@{Un\+Map}}
+\index{Un\+Map@{Un\+Map}!hwcomposer\+::\+Gralloc1\+Buffer\+Handler@{hwcomposer\+::\+Gralloc1\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Un\+Map()}{UnMap()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Gralloc1\+Buffer\+Handler\+::\+Un\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{void $\ast$}]{map\+\_\+data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_ae0da63bfef3f8342460fa1a958f8359c}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 286 of file gralloc1bufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{287                                                      \{}
+\DoxyCodeLine{288   \textcolor{keyword}{auto} gr\_handle = (\textcolor{keyword}{struct }cros\_gralloc\_handle *)handle->imported\_handle\_;}
+\DoxyCodeLine{289   if (!gr\_handle) \{}
+\DoxyCodeLine{290     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"could not find gralloc drm handle"});}
+\DoxyCodeLine{291     \textcolor{keywordflow}{return} GRALLOC1\_ERROR\_BAD\_HANDLE;}
+\DoxyCodeLine{292   \}}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294   \textcolor{keywordtype}{int} releaseFence = 0;}
+\DoxyCodeLine{295   gralloc1\_device\_t *gralloc1\_dvc =}
+\DoxyCodeLine{296       \textcolor{keyword}{reinterpret\_cast<}gralloc1\_device\_t *\textcolor{keyword}{>}(device\_);}
+\DoxyCodeLine{297   \textcolor{keywordflow}{return} unlock\_(gralloc1\_dvc, handle->imported\_handle\_, \&releaseFence);}
+\DoxyCodeLine{298 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/android/\mbox{\hyperlink{gralloc1bufferhandler_8h}{gralloc1bufferhandler.\+h}}\item 
+os/android/\mbox{\hyperlink{gralloc1bufferhandler_8cpp}{gralloc1bufferhandler.\+cpp}}\end{DoxyCompactItemize}

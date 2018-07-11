@@ -1,0 +1,188 @@
+\hypertarget{classhwcomposer_1_1NativeVKResource}{}\section{hwcomposer\+:\+:Native\+V\+K\+Resource Class Reference}
+\label{classhwcomposer_1_1NativeVKResource}\index{hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}}
+
+
+{\ttfamily \#include $<$nativevkresource.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Native\+V\+K\+Resource\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1NativeVKResource}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeVKResource_a4b76979a95e1793c1d27438b888f90bb}{Native\+V\+K\+Resource}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeVKResource_a6efaba2eae08e44208dd3828b79dc7b6}{$\sim$\+Native\+V\+K\+Resource}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1NativeVKResource_a0ec0dd54f25a32da5645d8e40e1ecf4f}{Prepare\+Resources}} (const std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer}{Overlay\+Buffer}} $\ast$$>$ \&buffers) override
+\item 
+\mbox{\hyperlink{namespacehwcomposer_a3da411c7c0213da2ce847c654bdc180d}{Gpu\+Resource\+Handle}} \mbox{\hyperlink{classhwcomposer_1_1NativeVKResource_a3402b7cdd51d36e65d5ccfa123e7224b}{Get\+Resource\+Handle}} (uint32\+\_\+t layer\+\_\+index) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1NativeVKResource_aa8d7578f30f33d2dd932e8c598e70474}{Release\+G\+P\+U\+Resources}} (const std\+::vector$<$ \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{Resource\+Handle}} $>$ \&handles) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file nativevkresource.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeVKResource_a4b76979a95e1793c1d27438b888f90bb}\label{classhwcomposer_1_1NativeVKResource_a4b76979a95e1793c1d27438b888f90bb}} 
+\index{hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}!Native\+V\+K\+Resource@{Native\+V\+K\+Resource}}
+\index{Native\+V\+K\+Resource@{Native\+V\+K\+Resource}!hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}}
+\subsubsection{\texorpdfstring{Native\+V\+K\+Resource()}{NativeVKResource()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Native\+V\+K\+Resource\+::\+Native\+V\+K\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1NativeVKResource_a6efaba2eae08e44208dd3828b79dc7b6}\label{classhwcomposer_1_1NativeVKResource_a6efaba2eae08e44208dd3828b79dc7b6}} 
+\index{hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}!````~Native\+V\+K\+Resource@{$\sim$\+Native\+V\+K\+Resource}}
+\index{````~Native\+V\+K\+Resource@{$\sim$\+Native\+V\+K\+Resource}!hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}}
+\subsubsection{\texorpdfstring{$\sim$\+Native\+V\+K\+Resource()}{~NativeVKResource()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Native\+V\+K\+Resource\+::$\sim$\+Native\+V\+K\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 86 of file nativevkresource.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                     \{}
+\DoxyCodeLine{87   Reset();}
+\DoxyCodeLine{88 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeVKResource_a3402b7cdd51d36e65d5ccfa123e7224b}\label{classhwcomposer_1_1NativeVKResource_a3402b7cdd51d36e65d5ccfa123e7224b}} 
+\index{hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}!Get\+Resource\+Handle@{Get\+Resource\+Handle}}
+\index{Get\+Resource\+Handle@{Get\+Resource\+Handle}!hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}}
+\subsubsection{\texorpdfstring{Get\+Resource\+Handle()}{GetResourceHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacehwcomposer_a3da411c7c0213da2ce847c654bdc180d}{Gpu\+Resource\+Handle}} hwcomposer\+::\+Native\+V\+K\+Resource\+::\+Get\+Resource\+Handle (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{layer\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeGpuResource_a3d514dcd1abfb90b874f681a7d7f50f7}{hwcomposer\+::\+Native\+Gpu\+Resource}}.
+
+
+
+Definition at line 110 of file nativevkresource.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111                                 \{}
+\DoxyCodeLine{112   \textcolor{keywordflow}{if} (layer\_textures\_.size() < layer\_index) \{}
+\DoxyCodeLine{113     \textcolor{keyword}{struct }vk\_resource res = \{\};}
+\DoxyCodeLine{114     \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{115   \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117   \textcolor{keywordflow}{return} layer\_textures\_.at(layer\_index);}
+\DoxyCodeLine{118 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeVKResource_a0ec0dd54f25a32da5645d8e40e1ecf4f}\label{classhwcomposer_1_1NativeVKResource_a0ec0dd54f25a32da5645d8e40e1ecf4f}} 
+\index{hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}!Prepare\+Resources@{Prepare\+Resources}}
+\index{Prepare\+Resources@{Prepare\+Resources}!hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}}
+\subsubsection{\texorpdfstring{Prepare\+Resources()}{PrepareResources()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Native\+V\+K\+Resource\+::\+Prepare\+Resources (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1OverlayBuffer}{Overlay\+Buffer}} $\ast$$>$ \&}]{buffers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeGpuResource_a3f1da37f41ff245e1bfe9e44d69a3202}{hwcomposer\+::\+Native\+Gpu\+Resource}}.
+
+
+
+Definition at line 23 of file nativevkresource.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                               \{}
+\DoxyCodeLine{25   VkResult res;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27   Reset();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29   VkImageSubresourceRange clear\_range = \{\};}
+\DoxyCodeLine{30   clear\_range.aspectMask = VK\_IMAGE\_ASPECT\_COLOR\_BIT;}
+\DoxyCodeLine{31   clear\_range.levelCount = 1;}
+\DoxyCodeLine{32   clear\_range.layerCount = 1;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& buffer : buffers) \{}
+\DoxyCodeLine{35     \textcolor{keyword}{const} \textcolor{keyword}{struct }vk\_import\& \textcolor{keyword}{import} = buffer->GetGpuResource(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{36     \textcolor{keywordflow}{if} (\textcolor{keyword}{import}.image\_ == VK\_NULL\_HANDLE) \{}
+\DoxyCodeLine{37       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to make import image\(\backslash\)n"});}
+\DoxyCodeLine{38       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     \mbox{\hyperlink{namespacehwcomposer_a5c7514b014dac4a93f7eee8f538a433d}{src\_images\_}}.emplace\_back(\textcolor{keyword}{import}.image\_);}
+\DoxyCodeLine{41     src\_image\_memory\_.emplace\_back(\textcolor{keyword}{import}.memory\_);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     VkImageMemoryBarrier barrier = \{\};}
+\DoxyCodeLine{44     barrier.sType = VK\_STRUCTURE\_TYPE\_IMAGE\_MEMORY\_BARRIER;}
+\DoxyCodeLine{45     barrier.srcAccessMask = 0;}
+\DoxyCodeLine{46     barrier.dstAccessMask = VK\_ACCESS\_SHADER\_READ\_BIT;}
+\DoxyCodeLine{47     barrier.oldLayout = VK\_IMAGE\_LAYOUT\_UNDEFINED;}
+\DoxyCodeLine{48     barrier.newLayout = VK\_IMAGE\_LAYOUT\_SHADER\_READ\_ONLY\_OPTIMAL;}
+\DoxyCodeLine{49     barrier.srcQueueFamilyIndex = VK\_QUEUE\_FAMILY\_IGNORED;}
+\DoxyCodeLine{50     barrier.dstQueueFamilyIndex = VK\_QUEUE\_FAMILY\_IGNORED;}
+\DoxyCodeLine{51     barrier.image = \textcolor{keyword}{import}.image\_;}
+\DoxyCodeLine{52     barrier.subresourceRange = clear\_range;}
+\DoxyCodeLine{53     \mbox{\hyperlink{namespacehwcomposer_af73e429b9c07e50ab625f7f54205af77}{src\_barrier\_before\_clear\_}}.emplace\_back(barrier);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     VkImageViewCreateInfo view\_create = \{\};}
+\DoxyCodeLine{56     view\_create.sType = VK\_STRUCTURE\_TYPE\_IMAGE\_VIEW\_CREATE\_INFO;}
+\DoxyCodeLine{57     view\_create.image = \textcolor{keyword}{import}.image\_;}
+\DoxyCodeLine{58     view\_create.viewType = VK\_IMAGE\_VIEW\_TYPE\_2D;}
+\DoxyCodeLine{59     view\_create.format = NativeToVkFormat(buffer->GetFormat());}
+\DoxyCodeLine{60     view\_create.components = \{\};}
+\DoxyCodeLine{61     view\_create.components.r = VK\_COMPONENT\_SWIZZLE\_R;}
+\DoxyCodeLine{62     view\_create.components.g = VK\_COMPONENT\_SWIZZLE\_G;}
+\DoxyCodeLine{63     view\_create.components.b = VK\_COMPONENT\_SWIZZLE\_B;}
+\DoxyCodeLine{64     view\_create.components.a = VK\_COMPONENT\_SWIZZLE\_A;}
+\DoxyCodeLine{65     view\_create.subresourceRange = \{\};}
+\DoxyCodeLine{66     view\_create.subresourceRange.aspectMask = VK\_IMAGE\_ASPECT\_COLOR\_BIT;}
+\DoxyCodeLine{67     view\_create.subresourceRange.levelCount = 1;}
+\DoxyCodeLine{68     view\_create.subresourceRange.layerCount = 1;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     VkImageView image\_view;}
+\DoxyCodeLine{71     res = vkCreateImageView(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&view\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&image\_view);}
+\DoxyCodeLine{72     \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{73       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateImageView failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{74       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{75     \}}
+\DoxyCodeLine{76     \mbox{\hyperlink{namespacehwcomposer_ac0909ed99a987099fc76a01e0e7e6b1d}{src\_image\_views\_}}.emplace\_back(image\_view);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keyword}{struct }vk\_resource resource;}
+\DoxyCodeLine{79     resource.image = \textcolor{keyword}{import}.image\_;}
+\DoxyCodeLine{80     resource.image\_view = image\_view;}
+\DoxyCodeLine{81     layer\_textures\_.emplace\_back(resource);}
+\DoxyCodeLine{82   \}}
+\DoxyCodeLine{83   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{84 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1NativeVKResource_aa8d7578f30f33d2dd932e8c598e70474}\label{classhwcomposer_1_1NativeVKResource_aa8d7578f30f33d2dd932e8c598e70474}} 
+\index{hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}!Release\+G\+P\+U\+Resources@{Release\+G\+P\+U\+Resources}}
+\index{Release\+G\+P\+U\+Resources@{Release\+G\+P\+U\+Resources}!hwcomposer\+::\+Native\+V\+K\+Resource@{hwcomposer\+::\+Native\+V\+K\+Resource}}
+\subsubsection{\texorpdfstring{Release\+G\+P\+U\+Resources()}{ReleaseGPUResources()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Native\+V\+K\+Resource\+::\+Release\+G\+P\+U\+Resources (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacehwcomposer_a963c5a1d5902d2d05710dba19af35b48}{Resource\+Handle}} $>$ \&}]{handles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeGpuResource_aeeedb37b304fcf7d005f6f409d88e0f5}{hwcomposer\+::\+Native\+Gpu\+Resource}}.
+
+
+
+Definition at line 32 of file nativevkresource.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                          \{}
+\DoxyCodeLine{34   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/vk/\mbox{\hyperlink{nativevkresource_8h}{nativevkresource.\+h}}\item 
+common/compositor/vk/\mbox{\hyperlink{nativevkresource_8cpp}{nativevkresource.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,284 @@
+\hypertarget{structiahwc__output}{}\section{iahwc\+\_\+output Struct Reference}
+\label{structiahwc__output}\index{iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct weston\+\_\+output \mbox{\hyperlink{structiahwc__output_a33611f9c8d1354ea9c4df7c6077f593e}{base}}
+\item 
+\mbox{\hyperlink{nativedisplay_8h_a16ea3fc6b16060fd1e1257707006440e}{drm\+Mode\+Connector}} $\ast$ \mbox{\hyperlink{structiahwc__output_ab3dc520b844eed75e64c4732b8355f35}{connector}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structiahwc__output_a6e3ab85b62b65859fdb94afd042bfd00}{crtc\+\_\+id}}
+\item 
+int \mbox{\hyperlink{structiahwc__output_a34e4e1b6d16a36451f45dcd44de71592}{pipe}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structiahwc__output_ae1cf365db62f007f6a3d30bd19b5b0c8}{connector\+\_\+id}}
+\item 
+struct \mbox{\hyperlink{structiahwc__edid}{iahwc\+\_\+edid}} \mbox{\hyperlink{structiahwc__output_a60fac1882a96e0bb4e1b6a6d14ac9f17}{edid}}
+\item 
+enum dpms\+\_\+enum \mbox{\hyperlink{structiahwc__output_ae2065bbaeeccc8c9b3515fd3423c808d}{dpms}}
+\item 
+struct backlight $\ast$ \mbox{\hyperlink{structiahwc__output_a1ebafa94e848666e5f28c124d9b6b72e}{backlight}}
+\item 
+bool \mbox{\hyperlink{structiahwc__output_a87777ec8691b7e6422bb02a20742f45c}{state\+\_\+invalid}}
+\item 
+bool \mbox{\hyperlink{structiahwc__output_aefcab2462cfed7d4bdebf45010df3caa}{overlay\+\_\+enabled}}
+\item 
+struct weston\+\_\+plane \mbox{\hyperlink{structiahwc__output_a2f4e89c3089e28c38b9eda40293e8b62}{overlay\+\_\+plane}}
+\item 
+struct wl\+\_\+list \mbox{\hyperlink{structiahwc__output_ac6a6632a6b51024f9a2f5516ffedf60b}{overlay\+\_\+list}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structiahwc__output_a2523ed1ef619ab10f9da95c2e7abf731}{gbm\+\_\+format}}
+\item 
+pixman\+\_\+region32\+\_\+t \mbox{\hyperlink{structiahwc__output_a853f609b7a945b51ced6349755d9261c}{previous\+\_\+damage}}
+\item 
+struct vaapi\+\_\+recorder $\ast$ \mbox{\hyperlink{structiahwc__output_a3fe7dd1b11d07065ec10a0066bad6b0b}{recorder}}
+\item 
+struct wl\+\_\+listener \mbox{\hyperlink{structiahwc__output_a8d3cfee58372ebf417ed0e6b8ef08db1}{recorder\+\_\+frame\+\_\+listener}}
+\item 
+int \mbox{\hyperlink{structiahwc__output_a3137bfd94446ab2ee1cc823575894b2a}{release\+\_\+fence}}
+\item 
+struct wl\+\_\+event\+\_\+source $\ast$ \mbox{\hyperlink{structiahwc__output_a34dcb2b1a9089f0dcc5f36afb845e399}{release\+\_\+fence\+\_\+source}}
+\item 
+struct \mbox{\hyperlink{structiahwc__spinlock}{iahwc\+\_\+spinlock}} \mbox{\hyperlink{structiahwc__output_a4ba268dca4916063188a7ba33f2123cd}{spin\+\_\+lock}}
+\item 
+struct timespec \mbox{\hyperlink{structiahwc__output_aeb2dda1bb8a7ef76b2be89b059f3d524}{last\+\_\+vsync\+\_\+ts}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structiahwc__output_a62bb8c46afae61d108af6c2f17cd6ff5}{total\+\_\+layers}}
+\item 
+enum dpms\+\_\+enum \mbox{\hyperlink{structiahwc__output_a20868af3c280be48cfcbf0b96b0ab67c}{current\+\_\+dpms}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 175 of file compositor-\/iahwc.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structiahwc__output_a1ebafa94e848666e5f28c124d9b6b72e}\label{structiahwc__output_a1ebafa94e848666e5f28c124d9b6b72e}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!backlight@{backlight}}
+\index{backlight@{backlight}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{backlight}{backlight}}
+{\footnotesize\ttfamily struct backlight$\ast$ iahwc\+\_\+output\+::backlight}
+
+
+
+Definition at line 186 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a33611f9c8d1354ea9c4df7c6077f593e}\label{structiahwc__output_a33611f9c8d1354ea9c4df7c6077f593e}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!base@{base}}
+\index{base@{base}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily struct weston\+\_\+output iahwc\+\_\+output\+::base}
+
+
+
+Definition at line 176 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_ab3dc520b844eed75e64c4732b8355f35}\label{structiahwc__output_ab3dc520b844eed75e64c4732b8355f35}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!connector@{connector}}
+\index{connector@{connector}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{connector}{connector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{nativedisplay_8h_a16ea3fc6b16060fd1e1257707006440e}{drm\+Mode\+Connector}}$\ast$ iahwc\+\_\+output\+::connector}
+
+
+
+Definition at line 177 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_ae1cf365db62f007f6a3d30bd19b5b0c8}\label{structiahwc__output_ae1cf365db62f007f6a3d30bd19b5b0c8}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!connector\+\_\+id@{connector\+\_\+id}}
+\index{connector\+\_\+id@{connector\+\_\+id}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{connector\+\_\+id}{connector\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t iahwc\+\_\+output\+::connector\+\_\+id}
+
+
+
+Definition at line 181 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a6e3ab85b62b65859fdb94afd042bfd00}\label{structiahwc__output_a6e3ab85b62b65859fdb94afd042bfd00}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!crtc\+\_\+id@{crtc\+\_\+id}}
+\index{crtc\+\_\+id@{crtc\+\_\+id}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{crtc\+\_\+id}{crtc\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t iahwc\+\_\+output\+::crtc\+\_\+id}
+
+
+
+Definition at line 179 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a20868af3c280be48cfcbf0b96b0ab67c}\label{structiahwc__output_a20868af3c280be48cfcbf0b96b0ab67c}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!current\+\_\+dpms@{current\+\_\+dpms}}
+\index{current\+\_\+dpms@{current\+\_\+dpms}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{current\+\_\+dpms}{current\_dpms}}
+{\footnotesize\ttfamily enum dpms\+\_\+enum iahwc\+\_\+output\+::current\+\_\+dpms}
+
+
+
+Definition at line 207 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_ae2065bbaeeccc8c9b3515fd3423c808d}\label{structiahwc__output_ae2065bbaeeccc8c9b3515fd3423c808d}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!dpms@{dpms}}
+\index{dpms@{dpms}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{dpms}{dpms}}
+{\footnotesize\ttfamily enum dpms\+\_\+enum iahwc\+\_\+output\+::dpms}
+
+
+
+Definition at line 185 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a60fac1882a96e0bb4e1b6a6d14ac9f17}\label{structiahwc__output_a60fac1882a96e0bb4e1b6a6d14ac9f17}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!edid@{edid}}
+\index{edid@{edid}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{edid}{edid}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structiahwc__edid}{iahwc\+\_\+edid}} iahwc\+\_\+output\+::edid}
+
+
+
+Definition at line 183 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a2523ed1ef619ab10f9da95c2e7abf731}\label{structiahwc__output_a2523ed1ef619ab10f9da95c2e7abf731}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!gbm\+\_\+format@{gbm\+\_\+format}}
+\index{gbm\+\_\+format@{gbm\+\_\+format}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{gbm\+\_\+format}{gbm\_format}}
+{\footnotesize\ttfamily uint32\+\_\+t iahwc\+\_\+output\+::gbm\+\_\+format}
+
+
+
+Definition at line 194 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_aeb2dda1bb8a7ef76b2be89b059f3d524}\label{structiahwc__output_aeb2dda1bb8a7ef76b2be89b059f3d524}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!last\+\_\+vsync\+\_\+ts@{last\+\_\+vsync\+\_\+ts}}
+\index{last\+\_\+vsync\+\_\+ts@{last\+\_\+vsync\+\_\+ts}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{last\+\_\+vsync\+\_\+ts}{last\_vsync\_ts}}
+{\footnotesize\ttfamily struct timespec iahwc\+\_\+output\+::last\+\_\+vsync\+\_\+ts}
+
+
+
+Definition at line 204 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_aefcab2462cfed7d4bdebf45010df3caa}\label{structiahwc__output_aefcab2462cfed7d4bdebf45010df3caa}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!overlay\+\_\+enabled@{overlay\+\_\+enabled}}
+\index{overlay\+\_\+enabled@{overlay\+\_\+enabled}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{overlay\+\_\+enabled}{overlay\_enabled}}
+{\footnotesize\ttfamily bool iahwc\+\_\+output\+::overlay\+\_\+enabled}
+
+
+
+Definition at line 189 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_ac6a6632a6b51024f9a2f5516ffedf60b}\label{structiahwc__output_ac6a6632a6b51024f9a2f5516ffedf60b}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!overlay\+\_\+list@{overlay\+\_\+list}}
+\index{overlay\+\_\+list@{overlay\+\_\+list}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{overlay\+\_\+list}{overlay\_list}}
+{\footnotesize\ttfamily struct wl\+\_\+list iahwc\+\_\+output\+::overlay\+\_\+list}
+
+
+
+Definition at line 192 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a2f4e89c3089e28c38b9eda40293e8b62}\label{structiahwc__output_a2f4e89c3089e28c38b9eda40293e8b62}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!overlay\+\_\+plane@{overlay\+\_\+plane}}
+\index{overlay\+\_\+plane@{overlay\+\_\+plane}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{overlay\+\_\+plane}{overlay\_plane}}
+{\footnotesize\ttfamily struct weston\+\_\+plane iahwc\+\_\+output\+::overlay\+\_\+plane}
+
+
+
+Definition at line 191 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a34e4e1b6d16a36451f45dcd44de71592}\label{structiahwc__output_a34e4e1b6d16a36451f45dcd44de71592}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!pipe@{pipe}}
+\index{pipe@{pipe}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{pipe}{pipe}}
+{\footnotesize\ttfamily int iahwc\+\_\+output\+::pipe}
+
+
+
+Definition at line 180 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a853f609b7a945b51ced6349755d9261c}\label{structiahwc__output_a853f609b7a945b51ced6349755d9261c}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!previous\+\_\+damage@{previous\+\_\+damage}}
+\index{previous\+\_\+damage@{previous\+\_\+damage}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{previous\+\_\+damage}{previous\_damage}}
+{\footnotesize\ttfamily pixman\+\_\+region32\+\_\+t iahwc\+\_\+output\+::previous\+\_\+damage}
+
+
+
+Definition at line 196 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a3fe7dd1b11d07065ec10a0066bad6b0b}\label{structiahwc__output_a3fe7dd1b11d07065ec10a0066bad6b0b}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!recorder@{recorder}}
+\index{recorder@{recorder}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{recorder}{recorder}}
+{\footnotesize\ttfamily struct vaapi\+\_\+recorder$\ast$ iahwc\+\_\+output\+::recorder}
+
+
+
+Definition at line 198 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a8d3cfee58372ebf417ed0e6b8ef08db1}\label{structiahwc__output_a8d3cfee58372ebf417ed0e6b8ef08db1}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!recorder\+\_\+frame\+\_\+listener@{recorder\+\_\+frame\+\_\+listener}}
+\index{recorder\+\_\+frame\+\_\+listener@{recorder\+\_\+frame\+\_\+listener}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{recorder\+\_\+frame\+\_\+listener}{recorder\_frame\_listener}}
+{\footnotesize\ttfamily struct wl\+\_\+listener iahwc\+\_\+output\+::recorder\+\_\+frame\+\_\+listener}
+
+
+
+Definition at line 199 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a3137bfd94446ab2ee1cc823575894b2a}\label{structiahwc__output_a3137bfd94446ab2ee1cc823575894b2a}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!release\+\_\+fence@{release\+\_\+fence}}
+\index{release\+\_\+fence@{release\+\_\+fence}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{release\+\_\+fence}{release\_fence}}
+{\footnotesize\ttfamily int iahwc\+\_\+output\+::release\+\_\+fence}
+
+
+
+Definition at line 201 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a34dcb2b1a9089f0dcc5f36afb845e399}\label{structiahwc__output_a34dcb2b1a9089f0dcc5f36afb845e399}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!release\+\_\+fence\+\_\+source@{release\+\_\+fence\+\_\+source}}
+\index{release\+\_\+fence\+\_\+source@{release\+\_\+fence\+\_\+source}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{release\+\_\+fence\+\_\+source}{release\_fence\_source}}
+{\footnotesize\ttfamily struct wl\+\_\+event\+\_\+source$\ast$ iahwc\+\_\+output\+::release\+\_\+fence\+\_\+source}
+
+
+
+Definition at line 202 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a4ba268dca4916063188a7ba33f2123cd}\label{structiahwc__output_a4ba268dca4916063188a7ba33f2123cd}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!spin\+\_\+lock@{spin\+\_\+lock}}
+\index{spin\+\_\+lock@{spin\+\_\+lock}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{spin\+\_\+lock}{spin\_lock}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structiahwc__spinlock}{iahwc\+\_\+spinlock}} iahwc\+\_\+output\+::spin\+\_\+lock}
+
+
+
+Definition at line 203 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a87777ec8691b7e6422bb02a20742f45c}\label{structiahwc__output_a87777ec8691b7e6422bb02a20742f45c}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!state\+\_\+invalid@{state\+\_\+invalid}}
+\index{state\+\_\+invalid@{state\+\_\+invalid}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{state\+\_\+invalid}{state\_invalid}}
+{\footnotesize\ttfamily bool iahwc\+\_\+output\+::state\+\_\+invalid}
+
+
+
+Definition at line 188 of file compositor-\/iahwc.\+c.
+
+\mbox{\Hypertarget{structiahwc__output_a62bb8c46afae61d108af6c2f17cd6ff5}\label{structiahwc__output_a62bb8c46afae61d108af6c2f17cd6ff5}} 
+\index{iahwc\+\_\+output@{iahwc\+\_\+output}!total\+\_\+layers@{total\+\_\+layers}}
+\index{total\+\_\+layers@{total\+\_\+layers}!iahwc\+\_\+output@{iahwc\+\_\+output}}
+\subsubsection{\texorpdfstring{total\+\_\+layers}{total\_layers}}
+{\footnotesize\ttfamily uint32\+\_\+t iahwc\+\_\+output\+::total\+\_\+layers}
+
+
+
+Definition at line 205 of file compositor-\/iahwc.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/weston/plugin/\mbox{\hyperlink{compositor-iahwc_8c}{compositor-\/iahwc.\+c}}\end{DoxyCompactItemize}

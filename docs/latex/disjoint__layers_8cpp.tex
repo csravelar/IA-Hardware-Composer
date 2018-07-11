@@ -1,0 +1,46 @@
+\hypertarget{disjoint__layers_8cpp}{}\section{common/utils/disjoint\+\_\+layers.cpp File Reference}
+\label{disjoint__layers_8cpp}\index{common/utils/disjoint\+\_\+layers.\+cpp@{common/utils/disjoint\+\_\+layers.\+cpp}}
+{\ttfamily \#include \char`\"{}disjoint\+\_\+layers.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}hwctrace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hwcutils.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1YPOI}{hwcomposer\+::\+Y\+P\+OI}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1Region}{hwcomposer\+::\+Region}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1POI}{hwcomposer\+::\+P\+OI}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehwcomposer}{hwcomposer}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacehwcomposer_a4600de8fd807f9d693b865758557d612}{hwcomposer\+::\+Event\+Type}} \{ \mbox{\hyperlink{namespacehwcomposer_a4600de8fd807f9d693b865758557d612a48d396c5ef9494af5d982af8338f3a38}{hwcomposer\+::\+S\+T\+A\+RT}}, 
+\mbox{\hyperlink{namespacehwcomposer_a4600de8fd807f9d693b865758557d612ae21e818a356b4d1802094fb8153326d9}{hwcomposer\+::\+E\+ND}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacehwcomposer_a5851b0d99b50a9c09b2fe735d8877099}{hwcomposer\+::\+Generate\+Out\+Layers}} (Region $\ast$reg, uint64\+\_\+t x, const Hwc\+Rect$<$ int $>$ \&damage\+\_\+region, std\+::vector$<$ Rect\+Set$<$ int $>$$>$ $\ast$out)
+\item 
+void \mbox{\hyperlink{namespacehwcomposer_a30b57932ba9db84e2e9ed4c7c25c1c68}{hwcomposer\+::\+Remove\+Ypois}} (Region $\ast$reg, uint64\+\_\+t rect\+\_\+id)
+\item 
+bool \mbox{\hyperlink{namespacehwcomposer_a2be26fab6ae2698c79600d3127a3b153}{hwcomposer\+::compare\+\_\+region}} (const Region $\ast$first, const Region $\ast$second)
+\item 
+void \mbox{\hyperlink{namespacehwcomposer_a930d648f3fd5dc2b52d10d33139d6b27}{hwcomposer\+::get\+\_\+draw\+\_\+regions}} (const std\+::vector$<$ Rect$<$ int $>$$>$ \&in, const Hwc\+Rect$<$ int $>$ \&damage\+\_\+region, std\+::vector$<$ Rect\+Set$<$ int $>$$>$ $\ast$out)
+\end{DoxyCompactItemize}

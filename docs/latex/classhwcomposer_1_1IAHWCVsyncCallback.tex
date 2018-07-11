@@ -1,0 +1,71 @@
+\hypertarget{classhwcomposer_1_1IAHWCVsyncCallback}{}\section{hwcomposer\+:\+:I\+A\+H\+W\+C\+Vsync\+Callback Class Reference}
+\label{classhwcomposer_1_1IAHWCVsyncCallback}\index{hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback}}
+Inheritance diagram for hwcomposer\+:\+:I\+A\+H\+W\+C\+Vsync\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1IAHWCVsyncCallback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IAHWCVsyncCallback_a7710057d33beeaa74157a070aaad0972}{I\+A\+H\+W\+C\+Vsync\+Callback}} (\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}} data, \mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}} hook)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1IAHWCVsyncCallback_a8e89987e4a1f85b917f82166978ede94}{Callback}} (uint32\+\_\+t display, int64\+\_\+t timestamp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file linux\+\_\+frontend.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWCVsyncCallback_a7710057d33beeaa74157a070aaad0972}\label{classhwcomposer_1_1IAHWCVsyncCallback_a7710057d33beeaa74157a070aaad0972}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback}!I\+A\+H\+W\+C\+Vsync\+Callback@{I\+A\+H\+W\+C\+Vsync\+Callback}}
+\index{I\+A\+H\+W\+C\+Vsync\+Callback@{I\+A\+H\+W\+C\+Vsync\+Callback}!hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{I\+A\+H\+W\+C\+Vsync\+Callback()}{IAHWCVsyncCallback()}}
+{\footnotesize\ttfamily hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback\+::\+I\+A\+H\+W\+C\+Vsync\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iahwc_8h_a07fb4f73baa8a0cfbd40f64071e56a7c}{iahwc\+\_\+callback\+\_\+data\+\_\+t}}}]{data,  }\item[{\mbox{\hyperlink{iahwc_8h_a214bf51cce821fdb7b24210088c12cad}{iahwc\+\_\+function\+\_\+ptr\+\_\+t}}}]{hook }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 29 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30       : data\_(data), hook\_(hook) \{}
+\DoxyCodeLine{31   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IAHWCVsyncCallback_a8e89987e4a1f85b917f82166978ede94}\label{classhwcomposer_1_1IAHWCVsyncCallback_a8e89987e4a1f85b917f82166978ede94}} 
+\index{hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback@{hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback}}
+\subsubsection{\texorpdfstring{Callback()}{Callback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+I\+A\+H\+W\+C\+Vsync\+Callback\+::\+Callback (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{int64\+\_\+t}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1VsyncCallback_a632ac6a2e13e1b387df9508507a2ed4d}{hwcomposer\+::\+Vsync\+Callback}}.
+
+
+
+Definition at line 33 of file linux\+\_\+frontend.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                      \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{if} (hook\_ != \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{35       \textcolor{keyword}{auto} hook = \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{iahwc_8h_a17fc9ccb2b851174b75f6eaca8c2fdb5}{IAHWC\_PFN\_VSYNC}}\textcolor{keyword}{>}(hook\_);}
+\DoxyCodeLine{36       hook(data\_, display, timestamp);}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/\mbox{\hyperlink{linux__frontend_8cpp}{linux\+\_\+frontend.\+cpp}}\end{DoxyCompactItemize}

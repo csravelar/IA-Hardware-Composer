@@ -1,0 +1,86 @@
+\hypertarget{classhwcomposer_1_1IService}{}\section{hwcomposer\+:\+:I\+Service Class Reference}
+\label{classhwcomposer_1_1IService}\index{hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}}
+
+
+{\ttfamily \#include $<$iservice.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:I\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1IService}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IService_ad6bc53970c36eb2060aef96616c97367}{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}} (Service)
+\item 
+virtual sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$ \mbox{\hyperlink{classhwcomposer_1_1IService_ab8408be3aeef35ceef24739d85ca80fc}{Get\+Diagnostic}} ()=0
+\item 
+virtual sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IControls}{I\+Controls}} $>$ \mbox{\hyperlink{classhwcomposer_1_1IService_a88d42bf367d37d06ef71f9eab33da2d7}{Get\+Controls}} ()=0
+\item 
+virtual String8 \mbox{\hyperlink{classhwcomposer_1_1IService_a74bd053098590c03cf3e374f396222f8}{Get\+Hwc\+Version}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1IService_a5a418c67d99e61ad226210ad22bfa765}{Dump\+Options}} (void)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IService_a72bf2c3bbfbeeb72a2d1a4cbaadc97b7}{Set\+Option}} (String8 option, String8 option\+Value)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IService_aaddf58a1f2b64b1a05f7f68259b6c1f3}{Enable\+Logview\+To\+Logcat}} (bool enable=true)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Maintenance interface to control H\+WC activity. 
+
+Definition at line 34 of file iservice.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IService_ad6bc53970c36eb2060aef96616c97367}\label{classhwcomposer_1_1IService_ad6bc53970c36eb2060aef96616c97367}} 
+\index{hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}!D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E()}{DECLARE\_META\_INTERFACE()}}
+{\footnotesize\ttfamily hwcomposer\+::\+I\+Service\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE (\begin{DoxyParamCaption}\item[{Service}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IService_a5a418c67d99e61ad226210ad22bfa765}\label{classhwcomposer_1_1IService_a5a418c67d99e61ad226210ad22bfa765}} 
+\index{hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}!Dump\+Options@{Dump\+Options}}
+\index{Dump\+Options@{Dump\+Options}!hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}}
+\subsubsection{\texorpdfstring{Dump\+Options()}{DumpOptions()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+I\+Service\+::\+Dump\+Options (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IService_aaddf58a1f2b64b1a05f7f68259b6c1f3}\label{classhwcomposer_1_1IService_aaddf58a1f2b64b1a05f7f68259b6c1f3}} 
+\index{hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}!Enable\+Logview\+To\+Logcat@{Enable\+Logview\+To\+Logcat}}
+\index{Enable\+Logview\+To\+Logcat@{Enable\+Logview\+To\+Logcat}!hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}}
+\subsubsection{\texorpdfstring{Enable\+Logview\+To\+Logcat()}{EnableLogviewToLogcat()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Service\+::\+Enable\+Logview\+To\+Logcat (\begin{DoxyParamCaption}\item[{bool}]{enable = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IService_a88d42bf367d37d06ef71f9eab33da2d7}\label{classhwcomposer_1_1IService_a88d42bf367d37d06ef71f9eab33da2d7}} 
+\index{hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}!Get\+Controls@{Get\+Controls}}
+\index{Get\+Controls@{Get\+Controls}!hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}}
+\subsubsection{\texorpdfstring{Get\+Controls()}{GetControls()}}
+{\footnotesize\ttfamily virtual sp$<$\mbox{\hyperlink{classhwcomposer_1_1IControls}{I\+Controls}}$>$ hwcomposer\+::\+I\+Service\+::\+Get\+Controls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IService_ab8408be3aeef35ceef24739d85ca80fc}\label{classhwcomposer_1_1IService_ab8408be3aeef35ceef24739d85ca80fc}} 
+\index{hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}!Get\+Diagnostic@{Get\+Diagnostic}}
+\index{Get\+Diagnostic@{Get\+Diagnostic}!hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}}
+\subsubsection{\texorpdfstring{Get\+Diagnostic()}{GetDiagnostic()}}
+{\footnotesize\ttfamily virtual sp$<$\mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}}$>$ hwcomposer\+::\+I\+Service\+::\+Get\+Diagnostic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IService_a74bd053098590c03cf3e374f396222f8}\label{classhwcomposer_1_1IService_a74bd053098590c03cf3e374f396222f8}} 
+\index{hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}!Get\+Hwc\+Version@{Get\+Hwc\+Version}}
+\index{Get\+Hwc\+Version@{Get\+Hwc\+Version}!hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}}
+\subsubsection{\texorpdfstring{Get\+Hwc\+Version()}{GetHwcVersion()}}
+{\footnotesize\ttfamily virtual String8 hwcomposer\+::\+I\+Service\+::\+Get\+Hwc\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IService_a72bf2c3bbfbeeb72a2d1a4cbaadc97b7}\label{classhwcomposer_1_1IService_a72bf2c3bbfbeeb72a2d1a4cbaadc97b7}} 
+\index{hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}!Set\+Option@{Set\+Option}}
+\index{Set\+Option@{Set\+Option}!hwcomposer\+::\+I\+Service@{hwcomposer\+::\+I\+Service}}
+\subsubsection{\texorpdfstring{Set\+Option()}{SetOption()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Service\+::\+Set\+Option (\begin{DoxyParamCaption}\item[{String8}]{option,  }\item[{String8}]{option\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/android/libhwcservice/\mbox{\hyperlink{iservice_8h}{iservice.\+h}}\end{DoxyCompactItemize}

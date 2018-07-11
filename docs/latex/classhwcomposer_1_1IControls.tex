@@ -1,0 +1,254 @@
+\hypertarget{classhwcomposer_1_1IControls}{}\section{hwcomposer\+:\+:I\+Controls Class Reference}
+\label{classhwcomposer_1_1IControls}\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+
+
+{\ttfamily \#include $<$icontrols.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:I\+Controls\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1IControls}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1IControls_a1049f9600bef7b150a7fb457a79e4756}{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}} (Controls)
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a3f14720a7ba5e37f42a8d19f37187331}{Display\+Set\+Overscan}} (uint32\+\_\+t display, int32\+\_\+t xoverscan, int32\+\_\+t yoverscan)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a2234b4ef06ed8dee33283b4630fdf4a1}{Display\+Get\+Overscan}} (uint32\+\_\+t display, int32\+\_\+t $\ast$xoverscan, int32\+\_\+t $\ast$yoverscan)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a3c4fb4608f3de4adaafce6c3d058aa74}{Display\+Set\+Scaling}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}} e\+Scaling\+Mode)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a341b79ec50b6145db4f46d1cd878b47c}{Display\+Get\+Scaling}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}} $\ast$e\+Scaling\+Mode)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_af509cfd6ea30e5524ac8f2d5dd7482c1}{Display\+Enable\+Blank}} (uint32\+\_\+t display, bool blank)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_ac3eec02e6b87c04fc9856e0b5b28b9b9}{Display\+Restore\+Default\+Color\+Param}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}} color)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_aeb24361552467205e292bfe7a733760e}{Display\+Restore\+Default\+Deinterlace\+Param}} (uint32\+\_\+t display)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a2cf04dc4db1f9e1501dbd381fd390206}{Display\+Get\+Color\+Param}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}} color, float $\ast$value, float $\ast$startvalue, float $\ast$endvalue)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a85a46964e57700804a3e6f6289f8046f}{Display\+Set\+Color\+Param}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}} color, float value)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_ac1e0de62aefa375f4f6dfd565046ba1d}{Display\+Set\+Deinterlace\+Param}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{E\+Hwcs\+Deinterlace\+Control}} mode)=0
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $>$ \mbox{\hyperlink{classhwcomposer_1_1IControls_a89180fa507885f5d7ed1d02595f2be49}{Display\+Mode\+Get\+Available\+Modes}} (uint32\+\_\+t display)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_aa26011465d8f977f12a4ba19a646f917}{Display\+Mode\+Get\+Mode}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $\ast$p\+Mode)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a276c0ad9ee6973cab285da547f929e3f}{Display\+Mode\+Set\+Mode}} (uint32\+\_\+t display, const uint32\+\_\+t config)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a99550456802b4989806ac630f65db636}{Enable\+H\+D\+C\+P\+Session\+For\+Display}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}} content\+\_\+type)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a29659284e29653ae4d7fe9767794c06e}{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}} (\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}} content\+\_\+type)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_adfce6c02fc64430969111173989e0a9a}{Disable\+H\+D\+C\+P\+Session\+For\+Display}} (uint32\+\_\+t display)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a15854915f926445f5c67f2959e2b2131}{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}} ()=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a502ec367dd15a58771d4290e610641e6}{Video\+Enable\+Encrypted\+Session}} (uint32\+\_\+t session\+ID, uint32\+\_\+t instance\+ID)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a947e4a84ae4623fa3ff4df85db45be97}{Video\+Disable\+All\+Encrypted\+Sessions}} (uint32\+\_\+t session\+ID)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a3f60e4c78208d5ee55d0409cd7d96258}{Video\+Disable\+All\+Encrypted\+Sessions}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1IControls_a8a3368ae60a036bf5fa9ab5c3bdb9073}{Video\+Is\+Encrypted\+Session\+Enabled}} (uint32\+\_\+t session\+ID, uint32\+\_\+t instance\+ID)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a6ab5735df81c42f725641165136912f2}{Video\+Set\+Optimization\+Mode}} (\mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{E\+Hwcs\+Optimization\+Mode}} mode)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_ad2d374da82a11a7a6b2bade97dc87955}{Mds\+Update\+Video\+State}} (int64\+\_\+t video\+Session\+ID, bool is\+Prepared)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a15c005a5a1c9c0a5a30ffebefdfb6b6f}{Mds\+Update\+Video\+F\+PS}} (int64\+\_\+t video\+Session\+ID, int32\+\_\+t fps)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a762f814efdb6c21fdc156a5a19014a0e}{Mds\+Update\+Input\+State}} (bool state)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_a69047ef7180e98e50661dc75ab8fc794}{Widi\+Get\+Single\+Display}} (bool $\ast$p\+Enabled)=0
+\item 
+virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1IControls_abebb8408a1525be64b060b2af76f06f9}{Widi\+Set\+Single\+Display}} (bool enable)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 26 of file icontrols.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a1049f9600bef7b150a7fb457a79e4756}\label{classhwcomposer_1_1IControls_a1049f9600bef7b150a7fb457a79e4756}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E()}{DECLARE\_META\_INTERFACE()}}
+{\footnotesize\ttfamily hwcomposer\+::\+I\+Controls\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE (\begin{DoxyParamCaption}\item[{Controls}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a15854915f926445f5c67f2959e2b2131}\label{classhwcomposer_1_1IControls_a15854915f926445f5c67f2959e2b2131}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}}
+\index{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays()}{DisableHDCPSessionForAllDisplays()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_adfce6c02fc64430969111173989e0a9a}\label{classhwcomposer_1_1IControls_adfce6c02fc64430969111173989e0a9a}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Disable\+H\+D\+C\+P\+Session\+For\+Display@{Disable\+H\+D\+C\+P\+Session\+For\+Display}}
+\index{Disable\+H\+D\+C\+P\+Session\+For\+Display@{Disable\+H\+D\+C\+P\+Session\+For\+Display}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Disable\+H\+D\+C\+P\+Session\+For\+Display()}{DisableHDCPSessionForDisplay()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Disable\+H\+D\+C\+P\+Session\+For\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_af509cfd6ea30e5524ac8f2d5dd7482c1}\label{classhwcomposer_1_1IControls_af509cfd6ea30e5524ac8f2d5dd7482c1}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Enable\+Blank@{Display\+Enable\+Blank}}
+\index{Display\+Enable\+Blank@{Display\+Enable\+Blank}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Enable\+Blank()}{DisplayEnableBlank()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Enable\+Blank (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{bool}]{blank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a2cf04dc4db1f9e1501dbd381fd390206}\label{classhwcomposer_1_1IControls_a2cf04dc4db1f9e1501dbd381fd390206}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Get\+Color\+Param@{Display\+Get\+Color\+Param}}
+\index{Display\+Get\+Color\+Param@{Display\+Get\+Color\+Param}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Get\+Color\+Param()}{DisplayGetColorParam()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Get\+Color\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}]{color,  }\item[{float $\ast$}]{value,  }\item[{float $\ast$}]{startvalue,  }\item[{float $\ast$}]{endvalue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a2234b4ef06ed8dee33283b4630fdf4a1}\label{classhwcomposer_1_1IControls_a2234b4ef06ed8dee33283b4630fdf4a1}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Get\+Overscan@{Display\+Get\+Overscan}}
+\index{Display\+Get\+Overscan@{Display\+Get\+Overscan}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Get\+Overscan()}{DisplayGetOverscan()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Get\+Overscan (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{int32\+\_\+t $\ast$}]{xoverscan,  }\item[{int32\+\_\+t $\ast$}]{yoverscan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a341b79ec50b6145db4f46d1cd878b47c}\label{classhwcomposer_1_1IControls_a341b79ec50b6145db4f46d1cd878b47c}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Get\+Scaling@{Display\+Get\+Scaling}}
+\index{Display\+Get\+Scaling@{Display\+Get\+Scaling}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Get\+Scaling()}{DisplayGetScaling()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Get\+Scaling (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}} $\ast$}]{e\+Scaling\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a89180fa507885f5d7ed1d02595f2be49}\label{classhwcomposer_1_1IControls_a89180fa507885f5d7ed1d02595f2be49}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Mode\+Get\+Available\+Modes@{Display\+Mode\+Get\+Available\+Modes}}
+\index{Display\+Mode\+Get\+Available\+Modes@{Display\+Mode\+Get\+Available\+Modes}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Mode\+Get\+Available\+Modes()}{DisplayModeGetAvailableModes()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}}$>$ hwcomposer\+::\+I\+Controls\+::\+Display\+Mode\+Get\+Available\+Modes (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_aa26011465d8f977f12a4ba19a646f917}\label{classhwcomposer_1_1IControls_aa26011465d8f977f12a4ba19a646f917}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Mode\+Get\+Mode@{Display\+Mode\+Get\+Mode}}
+\index{Display\+Mode\+Get\+Mode@{Display\+Mode\+Get\+Mode}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Mode\+Get\+Mode()}{DisplayModeGetMode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Mode\+Get\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $\ast$}]{p\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a276c0ad9ee6973cab285da547f929e3f}\label{classhwcomposer_1_1IControls_a276c0ad9ee6973cab285da547f929e3f}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Mode\+Set\+Mode@{Display\+Mode\+Set\+Mode}}
+\index{Display\+Mode\+Set\+Mode@{Display\+Mode\+Set\+Mode}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Mode\+Set\+Mode()}{DisplayModeSetMode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Mode\+Set\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{const uint32\+\_\+t}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_ac3eec02e6b87c04fc9856e0b5b28b9b9}\label{classhwcomposer_1_1IControls_ac3eec02e6b87c04fc9856e0b5b28b9b9}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Restore\+Default\+Color\+Param@{Display\+Restore\+Default\+Color\+Param}}
+\index{Display\+Restore\+Default\+Color\+Param@{Display\+Restore\+Default\+Color\+Param}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Restore\+Default\+Color\+Param()}{DisplayRestoreDefaultColorParam()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Restore\+Default\+Color\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_aeb24361552467205e292bfe7a733760e}\label{classhwcomposer_1_1IControls_aeb24361552467205e292bfe7a733760e}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Restore\+Default\+Deinterlace\+Param@{Display\+Restore\+Default\+Deinterlace\+Param}}
+\index{Display\+Restore\+Default\+Deinterlace\+Param@{Display\+Restore\+Default\+Deinterlace\+Param}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Restore\+Default\+Deinterlace\+Param()}{DisplayRestoreDefaultDeinterlaceParam()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Restore\+Default\+Deinterlace\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a85a46964e57700804a3e6f6289f8046f}\label{classhwcomposer_1_1IControls_a85a46964e57700804a3e6f6289f8046f}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Set\+Color\+Param@{Display\+Set\+Color\+Param}}
+\index{Display\+Set\+Color\+Param@{Display\+Set\+Color\+Param}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Set\+Color\+Param()}{DisplaySetColorParam()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Set\+Color\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}]{color,  }\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_ac1e0de62aefa375f4f6dfd565046ba1d}\label{classhwcomposer_1_1IControls_ac1e0de62aefa375f4f6dfd565046ba1d}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Set\+Deinterlace\+Param@{Display\+Set\+Deinterlace\+Param}}
+\index{Display\+Set\+Deinterlace\+Param@{Display\+Set\+Deinterlace\+Param}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Set\+Deinterlace\+Param()}{DisplaySetDeinterlaceParam()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Set\+Deinterlace\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{E\+Hwcs\+Deinterlace\+Control}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a3f14720a7ba5e37f42a8d19f37187331}\label{classhwcomposer_1_1IControls_a3f14720a7ba5e37f42a8d19f37187331}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Set\+Overscan@{Display\+Set\+Overscan}}
+\index{Display\+Set\+Overscan@{Display\+Set\+Overscan}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Set\+Overscan()}{DisplaySetOverscan()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Set\+Overscan (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{int32\+\_\+t}]{xoverscan,  }\item[{int32\+\_\+t}]{yoverscan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a3c4fb4608f3de4adaafce6c3d058aa74}\label{classhwcomposer_1_1IControls_a3c4fb4608f3de4adaafce6c3d058aa74}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Display\+Set\+Scaling@{Display\+Set\+Scaling}}
+\index{Display\+Set\+Scaling@{Display\+Set\+Scaling}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Set\+Scaling()}{DisplaySetScaling()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Display\+Set\+Scaling (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}}}]{e\+Scaling\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a29659284e29653ae4d7fe9767794c06e}\label{classhwcomposer_1_1IControls_a29659284e29653ae4d7fe9767794c06e}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}}
+\index{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays()}{EnableHDCPSessionForAllDisplays()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}}]{content\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a99550456802b4989806ac630f65db636}\label{classhwcomposer_1_1IControls_a99550456802b4989806ac630f65db636}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Enable\+H\+D\+C\+P\+Session\+For\+Display@{Enable\+H\+D\+C\+P\+Session\+For\+Display}}
+\index{Enable\+H\+D\+C\+P\+Session\+For\+Display@{Enable\+H\+D\+C\+P\+Session\+For\+Display}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Enable\+H\+D\+C\+P\+Session\+For\+Display()}{EnableHDCPSessionForDisplay()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Enable\+H\+D\+C\+P\+Session\+For\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}}]{content\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a762f814efdb6c21fdc156a5a19014a0e}\label{classhwcomposer_1_1IControls_a762f814efdb6c21fdc156a5a19014a0e}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Mds\+Update\+Input\+State@{Mds\+Update\+Input\+State}}
+\index{Mds\+Update\+Input\+State@{Mds\+Update\+Input\+State}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Mds\+Update\+Input\+State()}{MdsUpdateInputState()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Mds\+Update\+Input\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a15c005a5a1c9c0a5a30ffebefdfb6b6f}\label{classhwcomposer_1_1IControls_a15c005a5a1c9c0a5a30ffebefdfb6b6f}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Mds\+Update\+Video\+F\+PS@{Mds\+Update\+Video\+F\+PS}}
+\index{Mds\+Update\+Video\+F\+PS@{Mds\+Update\+Video\+F\+PS}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Mds\+Update\+Video\+F\+P\+S()}{MdsUpdateVideoFPS()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Mds\+Update\+Video\+F\+PS (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{video\+Session\+ID,  }\item[{int32\+\_\+t}]{fps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_ad2d374da82a11a7a6b2bade97dc87955}\label{classhwcomposer_1_1IControls_ad2d374da82a11a7a6b2bade97dc87955}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Mds\+Update\+Video\+State@{Mds\+Update\+Video\+State}}
+\index{Mds\+Update\+Video\+State@{Mds\+Update\+Video\+State}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Mds\+Update\+Video\+State()}{MdsUpdateVideoState()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Mds\+Update\+Video\+State (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{video\+Session\+ID,  }\item[{bool}]{is\+Prepared }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a947e4a84ae4623fa3ff4df85db45be97}\label{classhwcomposer_1_1IControls_a947e4a84ae4623fa3ff4df85db45be97}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Video\+Disable\+All\+Encrypted\+Sessions@{Video\+Disable\+All\+Encrypted\+Sessions}}
+\index{Video\+Disable\+All\+Encrypted\+Sessions@{Video\+Disable\+All\+Encrypted\+Sessions}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Disable\+All\+Encrypted\+Sessions()}{VideoDisableAllEncryptedSessions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Video\+Disable\+All\+Encrypted\+Sessions (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{session\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a3f60e4c78208d5ee55d0409cd7d96258}\label{classhwcomposer_1_1IControls_a3f60e4c78208d5ee55d0409cd7d96258}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Video\+Disable\+All\+Encrypted\+Sessions@{Video\+Disable\+All\+Encrypted\+Sessions}}
+\index{Video\+Disable\+All\+Encrypted\+Sessions@{Video\+Disable\+All\+Encrypted\+Sessions}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Disable\+All\+Encrypted\+Sessions()}{VideoDisableAllEncryptedSessions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Video\+Disable\+All\+Encrypted\+Sessions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a502ec367dd15a58771d4290e610641e6}\label{classhwcomposer_1_1IControls_a502ec367dd15a58771d4290e610641e6}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Video\+Enable\+Encrypted\+Session@{Video\+Enable\+Encrypted\+Session}}
+\index{Video\+Enable\+Encrypted\+Session@{Video\+Enable\+Encrypted\+Session}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Enable\+Encrypted\+Session()}{VideoEnableEncryptedSession()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Video\+Enable\+Encrypted\+Session (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{session\+ID,  }\item[{uint32\+\_\+t}]{instance\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a8a3368ae60a036bf5fa9ab5c3bdb9073}\label{classhwcomposer_1_1IControls_a8a3368ae60a036bf5fa9ab5c3bdb9073}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Video\+Is\+Encrypted\+Session\+Enabled@{Video\+Is\+Encrypted\+Session\+Enabled}}
+\index{Video\+Is\+Encrypted\+Session\+Enabled@{Video\+Is\+Encrypted\+Session\+Enabled}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Is\+Encrypted\+Session\+Enabled()}{VideoIsEncryptedSessionEnabled()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+I\+Controls\+::\+Video\+Is\+Encrypted\+Session\+Enabled (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{session\+ID,  }\item[{uint32\+\_\+t}]{instance\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a6ab5735df81c42f725641165136912f2}\label{classhwcomposer_1_1IControls_a6ab5735df81c42f725641165136912f2}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Video\+Set\+Optimization\+Mode@{Video\+Set\+Optimization\+Mode}}
+\index{Video\+Set\+Optimization\+Mode@{Video\+Set\+Optimization\+Mode}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Set\+Optimization\+Mode()}{VideoSetOptimizationMode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Video\+Set\+Optimization\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{E\+Hwcs\+Optimization\+Mode}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_a69047ef7180e98e50661dc75ab8fc794}\label{classhwcomposer_1_1IControls_a69047ef7180e98e50661dc75ab8fc794}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Widi\+Get\+Single\+Display@{Widi\+Get\+Single\+Display}}
+\index{Widi\+Get\+Single\+Display@{Widi\+Get\+Single\+Display}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Widi\+Get\+Single\+Display()}{WidiGetSingleDisplay()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Widi\+Get\+Single\+Display (\begin{DoxyParamCaption}\item[{bool $\ast$}]{p\+Enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1IControls_abebb8408a1525be64b060b2af76f06f9}\label{classhwcomposer_1_1IControls_abebb8408a1525be64b060b2af76f06f9}} 
+\index{hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}!Widi\+Set\+Single\+Display@{Widi\+Set\+Single\+Display}}
+\index{Widi\+Set\+Single\+Display@{Widi\+Set\+Single\+Display}!hwcomposer\+::\+I\+Controls@{hwcomposer\+::\+I\+Controls}}
+\subsubsection{\texorpdfstring{Widi\+Set\+Single\+Display()}{WidiSetSingleDisplay()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+I\+Controls\+::\+Widi\+Set\+Single\+Display (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/android/libhwcservice/\mbox{\hyperlink{icontrols_8h}{icontrols.\+h}}\end{DoxyCompactItemize}

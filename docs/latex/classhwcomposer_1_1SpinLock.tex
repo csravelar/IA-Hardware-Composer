@@ -1,0 +1,61 @@
+\hypertarget{classhwcomposer_1_1SpinLock}{}\section{hwcomposer\+:\+:Spin\+Lock Class Reference}
+\label{classhwcomposer_1_1SpinLock}\index{hwcomposer\+::\+Spin\+Lock@{hwcomposer\+::\+Spin\+Lock}}
+
+
+{\ttfamily \#include $<$spinlock.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file spinlock.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}\label{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}} 
+\index{hwcomposer\+::\+Spin\+Lock@{hwcomposer\+::\+Spin\+Lock}!lock@{lock}}
+\index{lock@{lock}!hwcomposer\+::\+Spin\+Lock@{hwcomposer\+::\+Spin\+Lock}}
+\subsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Spin\+Lock\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 26 of file spinlock.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26               \{}
+\DoxyCodeLine{27     \textcolor{keywordflow}{while} (atomic\_lock\_.test\_and\_set(std::memory\_order\_acquire)) \{}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}\label{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}} 
+\index{hwcomposer\+::\+Spin\+Lock@{hwcomposer\+::\+Spin\+Lock}!unlock@{unlock}}
+\index{unlock@{unlock}!hwcomposer\+::\+Spin\+Lock@{hwcomposer\+::\+Spin\+Lock}}
+\subsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Spin\+Lock\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file spinlock.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                 \{}
+\DoxyCodeLine{32     atomic\_lock\_.clear(std::memory\_order\_release);}
+\DoxyCodeLine{33   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+public/\mbox{\hyperlink{spinlock_8h}{spinlock.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{iahwc2_8cpp}{}\section{os/android/iahwc2.cpp File Reference}
+\label{iahwc2_8cpp}\index{os/android/iahwc2.\+cpp@{os/android/iahwc2.\+cpp}}
+{\ttfamily \#include \char`\"{}iahwc2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils\+\_\+android.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$android/log.\+h$>$}\newline
+{\ttfamily \#include $<$cutils/properties.\+h$>$}\newline
+{\ttfamily \#include $<$hardware/hardware.\+h$>$}\newline
+{\ttfamily \#include $<$hardware/hwcomposer2.\+h$>$}\newline
+{\ttfamily \#include $<$system/graphics.\+h$>$}\newline
+{\ttfamily \#include $<$gpudevice.\+h$>$}\newline
+{\ttfamily \#include $<$hwcdefs.\+h$>$}\newline
+{\ttfamily \#include $<$nativedisplay.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mosaicdisplay.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classandroid_1_1IAVsyncCallback}{android\+::\+I\+A\+Vsync\+Callback}}
+\item 
+class \mbox{\hyperlink{classandroid_1_1IARefreshCallback}{android\+::\+I\+A\+Refresh\+Callback}}
+\item 
+class \mbox{\hyperlink{classandroid_1_1IAHotPlugEventCallback}{android\+::\+I\+A\+Hot\+Plug\+Event\+Callback}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceandroid}{android}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{iahwc2_8cpp_a50cf05a58707f5a1b08dd2ee4a86e1a4}{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}}~A\+T\+R\+A\+C\+E\+\_\+\+T\+A\+G\+\_\+\+G\+R\+A\+P\+H\+I\+CS
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+hw\+\_\+module\+\_\+t \mbox{\hyperlink{iahwc2_8cpp_a73bd1207b30dd5d05e716f7baa6164bd}{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{iahwc2_8cpp_a50cf05a58707f5a1b08dd2ee4a86e1a4}\label{iahwc2_8cpp_a50cf05a58707f5a1b08dd2ee4a86e1a4}} 
+\index{iahwc2.\+cpp@{iahwc2.\+cpp}!A\+T\+R\+A\+C\+E\+\_\+\+T\+AG@{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}}
+\index{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG@{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}!iahwc2.\+cpp@{iahwc2.\+cpp}}
+\subsubsection{\texorpdfstring{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}{ATRACE\_TAG}}
+{\footnotesize\ttfamily \#define A\+T\+R\+A\+C\+E\+\_\+\+T\+AG~A\+T\+R\+A\+C\+E\+\_\+\+T\+A\+G\+\_\+\+G\+R\+A\+P\+H\+I\+CS}
+
+
+
+Definition at line 17 of file iahwc2.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{iahwc2_8cpp_a73bd1207b30dd5d05e716f7baa6164bd}\label{iahwc2_8cpp_a73bd1207b30dd5d05e716f7baa6164bd}} 
+\index{iahwc2.\+cpp@{iahwc2.\+cpp}!H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM@{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}}
+\index{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM@{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}!iahwc2.\+cpp@{iahwc2.\+cpp}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}{HAL\_MODULE\_INFO\_SYM}}
+{\footnotesize\ttfamily hw\+\_\+module\+\_\+t H\+A\+L\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+YM}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    .tag = HARDWARE\_MODULE\_TAG,}
+\DoxyCodeLine{    .module\_api\_version = HARDWARE\_MODULE\_API\_VERSION(2, 0),}
+\DoxyCodeLine{    .id = HWC\_HARDWARE\_MODULE\_ID,}
+\DoxyCodeLine{    .name = \textcolor{stringliteral}{"IA-Hardware-Composer"},}
+\DoxyCodeLine{    .author = \textcolor{stringliteral}{"The Android Open Source Project"},}
+\DoxyCodeLine{    .methods = \&hwc2\_module\_methods,}
+\DoxyCodeLine{    .dso = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},}
+\DoxyCodeLine{    .reserved = \{0\},}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Definition at line 1289 of file iahwc2.\+cpp.
+

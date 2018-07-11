@@ -1,0 +1,361 @@
+\hypertarget{classandroid_1_1HwcService}{}\section{android\+:\+:Hwc\+Service Class Reference}
+\label{classandroid_1_1HwcService}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+
+
+{\ttfamily \#include $<$hwcservice.\+h$>$}
+
+Inheritance diagram for android\+:\+:Hwc\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classandroid_1_1HwcService}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls}{Controls}}
+\item 
+class \mbox{\hyperlink{classandroid_1_1HwcService_1_1Diagnostic}{Diagnostic}}
+\item 
+class \mbox{\hyperlink{classandroid_1_1HwcService_1_1NotifyCallback}{Notify\+Callback}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}{E\+Notification}} \{ \newline
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ad7f33ea927d7d401fd7490eb4b491e02}{e\+Invalid\+Nofiy}} = 0, 
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a6e3e5162fb367793dfcf25397ff5a4c2}{e\+Optimization\+Mode}}, 
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ab303c6dcf4d5fa1444af02bb33bee625}{e\+Mds\+Update\+Video\+State}}, 
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8aefca037092bb4ffbc9d60bdc9aa94189}{e\+Mds\+Update\+Input\+State}}, 
+\newline
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8abb2c3f69b090433de84041389c7cafd2}{e\+Mds\+Update\+Video\+Fps}}, 
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ac17d3b6fb8703dbdbafed791889e33e4}{e\+Pavp\+Enable\+Encrypted\+Session}}, 
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8acf6bbc015ac59c3762259abbd1f143e2}{e\+Pavp\+Disable\+Encrypted\+Session}}, 
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a85200caa728fb636f387e69a8d71bcda}{e\+Pavp\+Disable\+All\+Encrypted\+Sessions}}, 
+\newline
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a51d121657eeb30c9315f5a06c3cd8849}{e\+Pavp\+Is\+Encrypted\+Session\+Enabled}}, 
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8abc5fa09841febcae7d3548f84e518b99}{e\+Widi\+Get\+Single\+Display}}, 
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8afc7209f9d74f0a07624397ef62c3bc33}{e\+Widi\+Set\+Single\+Display}}, 
+\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8af22535a2747d5bca0031cf5047ccde9d}{e\+Need\+Set\+Key\+Frame\+Hint}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classandroid_1_1HwcService_a696bd30240b25fb0ec210fbaa943b3e9}{Start}} (\mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}} \&hwc)
+\item 
+sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$ \mbox{\hyperlink{classandroid_1_1HwcService_ad8be9ec253b8072a1055700d88e5d8c1}{Get\+Diagnostic}} ()
+\item 
+sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IControls}{I\+Controls}} $>$ \mbox{\hyperlink{classandroid_1_1HwcService_af5edb452f1564f0b4b70e3d58e4982f7}{Get\+Controls}} ()
+\item 
+android\+::\+String8 \mbox{\hyperlink{classandroid_1_1HwcService_a322632377b643c73a461dca0475d5e1f}{Get\+Hwc\+Version}} ()
+\item 
+void \mbox{\hyperlink{classandroid_1_1HwcService_addb78964103305845ce09edf2ef31a5c}{Dump\+Options}} (void)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_afbbee67c5f3220d22d7a319f09dc0314}{Set\+Option}} (android\+::\+String8 option, android\+::\+String8 option\+Value)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_a3a1044ce7389aae85f309c159a533f73}{Enable\+Logview\+To\+Logcat}} (bool enable=true)
+\item 
+void \mbox{\hyperlink{classandroid_1_1HwcService_a70e88e6da20467baf70f33cfe341583c}{Register\+Listener}} (\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}{E\+Notification}} notify, \mbox{\hyperlink{classandroid_1_1HwcService_1_1NotifyCallback}{Notify\+Callback}} $\ast$p\+Callback)
+\item 
+void \mbox{\hyperlink{classandroid_1_1HwcService_a8da7d6a6c098ab6334308a94c9508e84}{Unregister\+Listener}} (\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}{E\+Notification}} notify, \mbox{\hyperlink{classandroid_1_1HwcService_1_1NotifyCallback}{Notify\+Callback}} $\ast$p\+Callback)
+\item 
+void \mbox{\hyperlink{classandroid_1_1HwcService_a9ad9aea8e753da4d2267fd5ffa0afff4}{Notify}} (\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}{E\+Notification}} notify, int32\+\_\+t para\+Cnt, int64\+\_\+t para\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classandroid_1_1HwcService_a20f0fd2b9eaf2e89f95db870a0156930}{I\+A\+H\+W\+C2}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file hwcservice.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!E\+Notification@{E\+Notification}}
+\index{E\+Notification@{E\+Notification}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{E\+Notification}{ENotification}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}{android\+::\+Hwc\+Service\+::\+E\+Notification}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Invalid\+Nofiy@{e\+Invalid\+Nofiy}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Invalid\+Nofiy@{e\+Invalid\+Nofiy}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ad7f33ea927d7d401fd7490eb4b491e02}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ad7f33ea927d7d401fd7490eb4b491e02}} 
+e\+Invalid\+Nofiy&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Optimization\+Mode@{e\+Optimization\+Mode}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Optimization\+Mode@{e\+Optimization\+Mode}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a6e3e5162fb367793dfcf25397ff5a4c2}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a6e3e5162fb367793dfcf25397ff5a4c2}} 
+e\+Optimization\+Mode&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Mds\+Update\+Video\+State@{e\+Mds\+Update\+Video\+State}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Mds\+Update\+Video\+State@{e\+Mds\+Update\+Video\+State}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ab303c6dcf4d5fa1444af02bb33bee625}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ab303c6dcf4d5fa1444af02bb33bee625}} 
+e\+Mds\+Update\+Video\+State&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Mds\+Update\+Input\+State@{e\+Mds\+Update\+Input\+State}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Mds\+Update\+Input\+State@{e\+Mds\+Update\+Input\+State}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8aefca037092bb4ffbc9d60bdc9aa94189}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8aefca037092bb4ffbc9d60bdc9aa94189}} 
+e\+Mds\+Update\+Input\+State&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Mds\+Update\+Video\+Fps@{e\+Mds\+Update\+Video\+Fps}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Mds\+Update\+Video\+Fps@{e\+Mds\+Update\+Video\+Fps}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8abb2c3f69b090433de84041389c7cafd2}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8abb2c3f69b090433de84041389c7cafd2}} 
+e\+Mds\+Update\+Video\+Fps&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Pavp\+Enable\+Encrypted\+Session@{e\+Pavp\+Enable\+Encrypted\+Session}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Pavp\+Enable\+Encrypted\+Session@{e\+Pavp\+Enable\+Encrypted\+Session}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ac17d3b6fb8703dbdbafed791889e33e4}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ac17d3b6fb8703dbdbafed791889e33e4}} 
+e\+Pavp\+Enable\+Encrypted\+Session&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Pavp\+Disable\+Encrypted\+Session@{e\+Pavp\+Disable\+Encrypted\+Session}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Pavp\+Disable\+Encrypted\+Session@{e\+Pavp\+Disable\+Encrypted\+Session}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8acf6bbc015ac59c3762259abbd1f143e2}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8acf6bbc015ac59c3762259abbd1f143e2}} 
+e\+Pavp\+Disable\+Encrypted\+Session&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Pavp\+Disable\+All\+Encrypted\+Sessions@{e\+Pavp\+Disable\+All\+Encrypted\+Sessions}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Pavp\+Disable\+All\+Encrypted\+Sessions@{e\+Pavp\+Disable\+All\+Encrypted\+Sessions}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a85200caa728fb636f387e69a8d71bcda}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a85200caa728fb636f387e69a8d71bcda}} 
+e\+Pavp\+Disable\+All\+Encrypted\+Sessions&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Pavp\+Is\+Encrypted\+Session\+Enabled@{e\+Pavp\+Is\+Encrypted\+Session\+Enabled}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Pavp\+Is\+Encrypted\+Session\+Enabled@{e\+Pavp\+Is\+Encrypted\+Session\+Enabled}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a51d121657eeb30c9315f5a06c3cd8849}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a51d121657eeb30c9315f5a06c3cd8849}} 
+e\+Pavp\+Is\+Encrypted\+Session\+Enabled&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Widi\+Get\+Single\+Display@{e\+Widi\+Get\+Single\+Display}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Widi\+Get\+Single\+Display@{e\+Widi\+Get\+Single\+Display}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8abc5fa09841febcae7d3548f84e518b99}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8abc5fa09841febcae7d3548f84e518b99}} 
+e\+Widi\+Get\+Single\+Display&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Widi\+Set\+Single\+Display@{e\+Widi\+Set\+Single\+Display}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Widi\+Set\+Single\+Display@{e\+Widi\+Set\+Single\+Display}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8afc7209f9d74f0a07624397ef62c3bc33}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8afc7209f9d74f0a07624397ef62c3bc33}} 
+e\+Widi\+Set\+Single\+Display&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Need\+Set\+Key\+Frame\+Hint@{e\+Need\+Set\+Key\+Frame\+Hint}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!e\+Need\+Set\+Key\+Frame\+Hint@{e\+Need\+Set\+Key\+Frame\+Hint}}}\mbox{\Hypertarget{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8af22535a2747d5bca0031cf5047ccde9d}\label{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8af22535a2747d5bca0031cf5047ccde9d}} 
+e\+Need\+Set\+Key\+Frame\+Hint&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 121 of file hwcservice.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121                      \{}
+\DoxyCodeLine{122     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ad7f33ea927d7d401fd7490eb4b491e02}{eInvalidNofiy}} = 0,}
+\DoxyCodeLine{123     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a6e3e5162fb367793dfcf25397ff5a4c2}{eOptimizationMode}},}
+\DoxyCodeLine{124     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ab303c6dcf4d5fa1444af02bb33bee625}{eMdsUpdateVideoState}},}
+\DoxyCodeLine{125     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8aefca037092bb4ffbc9d60bdc9aa94189}{eMdsUpdateInputState}},}
+\DoxyCodeLine{126     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8abb2c3f69b090433de84041389c7cafd2}{eMdsUpdateVideoFps}},}
+\DoxyCodeLine{127     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8ac17d3b6fb8703dbdbafed791889e33e4}{ePavpEnableEncryptedSession}},}
+\DoxyCodeLine{128     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8acf6bbc015ac59c3762259abbd1f143e2}{ePavpDisableEncryptedSession}},}
+\DoxyCodeLine{129     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a85200caa728fb636f387e69a8d71bcda}{ePavpDisableAllEncryptedSessions}},}
+\DoxyCodeLine{130     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8a51d121657eeb30c9315f5a06c3cd8849}{ePavpIsEncryptedSessionEnabled}},}
+\DoxyCodeLine{131     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8abc5fa09841febcae7d3548f84e518b99}{eWidiGetSingleDisplay}},}
+\DoxyCodeLine{132     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8afc7209f9d74f0a07624397ef62c3bc33}{eWidiSetSingleDisplay}},}
+\DoxyCodeLine{133     \mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8af22535a2747d5bca0031cf5047ccde9d}{eNeedSetKeyFrameHint}},}
+\DoxyCodeLine{134   \};}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classandroid_1_1HwcService_addb78964103305845ce09edf2ef31a5c}\label{classandroid_1_1HwcService_addb78964103305845ce09edf2ef31a5c}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Dump\+Options@{Dump\+Options}}
+\index{Dump\+Options@{Dump\+Options}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Dump\+Options()}{DumpOptions()}}
+{\footnotesize\ttfamily void android\+::\+Hwc\+Service\+::\+Dump\+Options (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95                                  \{}
+\DoxyCodeLine{96   \textcolor{comment}{// ALOGD("\%s", OptionManager::getInstance().dump().string());}}
+\DoxyCodeLine{97 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_a3a1044ce7389aae85f309c159a533f73}\label{classandroid_1_1HwcService_a3a1044ce7389aae85f309c159a533f73}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Enable\+Logview\+To\+Logcat@{Enable\+Logview\+To\+Logcat}}
+\index{Enable\+Logview\+To\+Logcat@{Enable\+Logview\+To\+Logcat}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Enable\+Logview\+To\+Logcat()}{EnableLogviewToLogcat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Enable\+Logview\+To\+Logcat (\begin{DoxyParamCaption}\item[{bool}]{enable = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                                                       \{}
+\DoxyCodeLine{100   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{101   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{102 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_af5edb452f1564f0b4b70e3d58e4982f7}\label{classandroid_1_1HwcService_af5edb452f1564f0b4b70e3d58e4982f7}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Get\+Controls@{Get\+Controls}}
+\index{Get\+Controls@{Get\+Controls}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Get\+Controls()}{GetControls()}}
+{\footnotesize\ttfamily sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IControls}{I\+Controls}} $>$ android\+::\+Hwc\+Service\+::\+Get\+Controls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{118                                       \{}
+\DoxyCodeLine{119   \textcolor{comment}{// TODO: Check the need for lock}}
+\DoxyCodeLine{120   ALOG\_ASSERT(mpHwc);}
+\DoxyCodeLine{121   \textcolor{keywordflow}{return} \textcolor{keyword}{new} Controls(*mpHwc, *\textcolor{keyword}{this});}
+\DoxyCodeLine{122 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_ad8be9ec253b8072a1055700d88e5d8c1}\label{classandroid_1_1HwcService_ad8be9ec253b8072a1055700d88e5d8c1}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Get\+Diagnostic@{Get\+Diagnostic}}
+\index{Get\+Diagnostic@{Get\+Diagnostic}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Get\+Diagnostic()}{GetDiagnostic()}}
+{\footnotesize\ttfamily sp$<$ \mbox{\hyperlink{classhwcomposer_1_1IDiagnostic}{I\+Diagnostic}} $>$ android\+::\+Hwc\+Service\+::\+Get\+Diagnostic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 104 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104                                           \{}
+\DoxyCodeLine{105   \textcolor{comment}{// if (sbInternalBuild || sbLogViewerBuild)}}
+\DoxyCodeLine{106   \{}
+\DoxyCodeLine{107     lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{108     ALOG\_ASSERT(mpHwc);}
+\DoxyCodeLine{109     \textcolor{keywordflow}{if} (mpDiagnostic == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})}
+\DoxyCodeLine{110       mpDiagnostic = \textcolor{keyword}{new} Diagnostic(*mpHwc);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{113   \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115   \textcolor{keywordflow}{return} mpDiagnostic;}
+\DoxyCodeLine{116 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_a322632377b643c73a461dca0475d5e1f}\label{classandroid_1_1HwcService_a322632377b643c73a461dca0475d5e1f}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Get\+Hwc\+Version@{Get\+Hwc\+Version}}
+\index{Get\+Hwc\+Version@{Get\+Hwc\+Version}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Get\+Hwc\+Version()}{GetHwcVersion()}}
+{\footnotesize\ttfamily String8 android\+::\+Hwc\+Service\+::\+Get\+Hwc\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 87 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87                                   \{}
+\DoxyCodeLine{88   \textcolor{keywordflow}{return} String8((\mbox{\hyperlink{hwcservice_8cpp_a1dc46151b8c227cd440f0f34a34825b9}{HWC\_VERSION\_STRING}}));}
+\DoxyCodeLine{89 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_a9ad9aea8e753da4d2267fd5ffa0afff4}\label{classandroid_1_1HwcService_a9ad9aea8e753da4d2267fd5ffa0afff4}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Notify@{Notify}}
+\index{Notify@{Notify}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily void android\+::\+Hwc\+Service\+::\+Notify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}{E\+Notification}}}]{notify,  }\item[{int32\+\_\+t}]{para\+Cnt,  }\item[{int64\+\_\+t}]{para\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 459 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{459                                                                              \{}
+\DoxyCodeLine{460   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{461 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_a70e88e6da20467baf70f33cfe341583c}\label{classandroid_1_1HwcService_a70e88e6da20467baf70f33cfe341583c}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Register\+Listener@{Register\+Listener}}
+\index{Register\+Listener@{Register\+Listener}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Register\+Listener()}{RegisterListener()}}
+{\footnotesize\ttfamily void android\+::\+Hwc\+Service\+::\+Register\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}{E\+Notification}}}]{notify,  }\item[{\mbox{\hyperlink{classandroid_1_1HwcService_1_1NotifyCallback}{Notify\+Callback}} $\ast$}]{p\+Callback }\end{DoxyParamCaption})}
+
+
+
+Definition at line 449 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{450                                                              \{}
+\DoxyCodeLine{451   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{452 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_afbbee67c5f3220d22d7a319f09dc0314}\label{classandroid_1_1HwcService_afbbee67c5f3220d22d7a319f09dc0314}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Set\+Option@{Set\+Option}}
+\index{Set\+Option@{Set\+Option}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Set\+Option()}{SetOption()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Set\+Option (\begin{DoxyParamCaption}\item[{android\+::\+String8}]{option,  }\item[{android\+::\+String8}]{option\+Value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                                             \{}
+\DoxyCodeLine{92   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{93 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_a696bd30240b25fb0ec210fbaa943b3e9}\label{classandroid_1_1HwcService_a696bd30240b25fb0ec210fbaa943b3e9}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Start@{Start}}
+\index{Start@{Start}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily bool android\+::\+Hwc\+Service\+::\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}} \&}]{hwc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                   \{}
+\DoxyCodeLine{74   \textcolor{keywordflow}{if} (initialized\_)}
+\DoxyCodeLine{75     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77   mpHwc = \&hwc;}
+\DoxyCodeLine{78   sp<IServiceManager> sm(defaultServiceManager());}
+\DoxyCodeLine{79   \textcolor{keywordflow}{if} (sm->addService(String16(\mbox{\hyperlink{iservice_8h_a03d122faa3f4367040f301a1a6d90091}{IA\_HWC\_SERVICE\_NAME}}), \textcolor{keyword}{this}, \textcolor{keyword}{false})) \{}
+\DoxyCodeLine{80     ALOGE(\textcolor{stringliteral}{"Failed to start \%s service"}, \mbox{\hyperlink{iservice_8h_a03d122faa3f4367040f301a1a6d90091}{IA\_HWC\_SERVICE\_NAME}});}
+\DoxyCodeLine{81     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{82   \}}
+\DoxyCodeLine{83   initialized\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{84   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{85 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_a8da7d6a6c098ab6334308a94c9508e84}\label{classandroid_1_1HwcService_a8da7d6a6c098ab6334308a94c9508e84}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!Unregister\+Listener@{Unregister\+Listener}}
+\index{Unregister\+Listener@{Unregister\+Listener}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{Unregister\+Listener()}{UnregisterListener()}}
+{\footnotesize\ttfamily void android\+::\+Hwc\+Service\+::\+Unregister\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classandroid_1_1HwcService_a34049a831dd1c85ef002e59be99d1bd8}{E\+Notification}}}]{notify,  }\item[{\mbox{\hyperlink{classandroid_1_1HwcService_1_1NotifyCallback}{Notify\+Callback}} $\ast$}]{p\+Callback }\end{DoxyParamCaption})}
+
+
+
+Definition at line 454 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{455                                                                \{}
+\DoxyCodeLine{456   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{457 \}}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classandroid_1_1HwcService_a20f0fd2b9eaf2e89f95db870a0156930}\label{classandroid_1_1HwcService_a20f0fd2b9eaf2e89f95db870a0156930}} 
+\index{android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}!I\+A\+H\+W\+C2@{I\+A\+H\+W\+C2}}
+\index{I\+A\+H\+W\+C2@{I\+A\+H\+W\+C2}!android\+::\+Hwc\+Service@{android\+::\+Hwc\+Service}}
+\subsubsection{\texorpdfstring{I\+A\+H\+W\+C2}{IAHWC2}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 151 of file hwcservice.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/android/\mbox{\hyperlink{hwcservice_8h}{hwcservice.\+h}}\item 
+os/android/\mbox{\hyperlink{hwcservice_8cpp}{hwcservice.\+cpp}}\end{DoxyCompactItemize}

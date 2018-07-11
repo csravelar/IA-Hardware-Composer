@@ -1,0 +1,74 @@
+\hypertarget{drmbuffer_8cpp}{}\section{wsi/drm/drmbuffer.cpp File Reference}
+\label{drmbuffer_8cpp}\index{wsi/drm/drmbuffer.\+cpp@{wsi/drm/drmbuffer.\+cpp}}
+{\ttfamily \#include \char`\"{}drmbuffer.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$drm\+\_\+fourcc.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$xf86drm.\+h$>$}\newline
+{\ttfamily \#include $<$xf86drm\+Mode.\+h$>$}\newline
+{\ttfamily \#include $<$hwcdefs.\+h$>$}\newline
+{\ttfamily \#include $<$nativebufferhandler.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}framebuffermanager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hwctrace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hwcutils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}resourcemanager.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$va/va\+\_\+drmcommon.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vautils.\+h\char`\"{}}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehwcomposer}{hwcomposer}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{drmbuffer_8cpp_ae47c847a6b891b8e589177b36901085c}{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT}}~0x3443
+\item 
+\#define \mbox{\hyperlink{drmbuffer_8cpp_aaffb6f543f514e8d31b29839fb30c2fd}{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT}}~0x3444
+\item 
+\#define \mbox{\hyperlink{drmbuffer_8cpp_a72a8ef96c90fd2930cbc9ee5f5049b6d}{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT}}~0x3445
+\item 
+\#define \mbox{\hyperlink{drmbuffer_8cpp_a1a2b5bfe379b69767306ca63455788da}{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT}}~0x3446
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{drmbuffer_8cpp_aaffb6f543f514e8d31b29839fb30c2fd}\label{drmbuffer_8cpp_aaffb6f543f514e8d31b29839fb30c2fd}} 
+\index{drmbuffer.\+cpp@{drmbuffer.\+cpp}!E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT@{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT}}
+\index{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT@{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT}!drmbuffer.\+cpp@{drmbuffer.\+cpp}}
+\subsubsection{\texorpdfstring{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT}{EGL\_DMA\_BUF\_PLANE0\_MODIFIER\_HI\_EXT}}
+{\footnotesize\ttfamily \#define E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT~0x3444}
+
+
+
+Definition at line 42 of file drmbuffer.\+cpp.
+
+\mbox{\Hypertarget{drmbuffer_8cpp_ae47c847a6b891b8e589177b36901085c}\label{drmbuffer_8cpp_ae47c847a6b891b8e589177b36901085c}} 
+\index{drmbuffer.\+cpp@{drmbuffer.\+cpp}!E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT@{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT}}
+\index{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT@{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT}!drmbuffer.\+cpp@{drmbuffer.\+cpp}}
+\subsubsection{\texorpdfstring{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT}{EGL\_DMA\_BUF\_PLANE0\_MODIFIER\_LO\_EXT}}
+{\footnotesize\ttfamily \#define E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E0\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT~0x3443}
+
+
+
+Definition at line 38 of file drmbuffer.\+cpp.
+
+\mbox{\Hypertarget{drmbuffer_8cpp_a1a2b5bfe379b69767306ca63455788da}\label{drmbuffer_8cpp_a1a2b5bfe379b69767306ca63455788da}} 
+\index{drmbuffer.\+cpp@{drmbuffer.\+cpp}!E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT@{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT}}
+\index{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT@{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT}!drmbuffer.\+cpp@{drmbuffer.\+cpp}}
+\subsubsection{\texorpdfstring{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT}{EGL\_DMA\_BUF\_PLANE1\_MODIFIER\_HI\_EXT}}
+{\footnotesize\ttfamily \#define E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+H\+I\+\_\+\+E\+XT~0x3446}
+
+
+
+Definition at line 50 of file drmbuffer.\+cpp.
+
+\mbox{\Hypertarget{drmbuffer_8cpp_a72a8ef96c90fd2930cbc9ee5f5049b6d}\label{drmbuffer_8cpp_a72a8ef96c90fd2930cbc9ee5f5049b6d}} 
+\index{drmbuffer.\+cpp@{drmbuffer.\+cpp}!E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT@{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT}}
+\index{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT@{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT}!drmbuffer.\+cpp@{drmbuffer.\+cpp}}
+\subsubsection{\texorpdfstring{E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT}{EGL\_DMA\_BUF\_PLANE1\_MODIFIER\_LO\_EXT}}
+{\footnotesize\ttfamily \#define E\+G\+L\+\_\+\+D\+M\+A\+\_\+\+B\+U\+F\+\_\+\+P\+L\+A\+N\+E1\+\_\+\+M\+O\+D\+I\+F\+I\+E\+R\+\_\+\+L\+O\+\_\+\+E\+XT~0x3445}
+
+
+
+Definition at line 46 of file drmbuffer.\+cpp.
+

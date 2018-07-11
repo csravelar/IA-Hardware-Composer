@@ -1,0 +1,32 @@
+\hypertarget{structiahwc__pending__state}{}\section{iahwc\+\_\+pending\+\_\+state Struct Reference}
+\label{structiahwc__pending__state}\index{iahwc\+\_\+pending\+\_\+state@{iahwc\+\_\+pending\+\_\+state}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structiahwc__backend}{iahwc\+\_\+backend}} $\ast$ \mbox{\hyperlink{structiahwc__pending__state_a3214eb70000dc28955b6d065d533d1eb}{backend}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pending state holds one or more iahwc\+\_\+output\+\_\+state structures, collected from performing repaint. This pending state is transient, and only lives between beginning a repaint group and flushing the results\+: after flush, each output state will complete and be retired separately. 
+
+Definition at line 160 of file compositor-\/iahwc.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structiahwc__pending__state_a3214eb70000dc28955b6d065d533d1eb}\label{structiahwc__pending__state_a3214eb70000dc28955b6d065d533d1eb}} 
+\index{iahwc\+\_\+pending\+\_\+state@{iahwc\+\_\+pending\+\_\+state}!backend@{backend}}
+\index{backend@{backend}!iahwc\+\_\+pending\+\_\+state@{iahwc\+\_\+pending\+\_\+state}}
+\subsubsection{\texorpdfstring{backend}{backend}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structiahwc__backend}{iahwc\+\_\+backend}}$\ast$ iahwc\+\_\+pending\+\_\+state\+::backend}
+
+
+
+Definition at line 161 of file compositor-\/iahwc.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/weston/plugin/\mbox{\hyperlink{compositor-iahwc_8c}{compositor-\/iahwc.\+c}}\end{DoxyCompactItemize}

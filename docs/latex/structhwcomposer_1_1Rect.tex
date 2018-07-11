@@ -1,0 +1,274 @@
+\hypertarget{structhwcomposer_1_1Rect}{}\section{hwcomposer\+:\+:Rect$<$ T\+Float $>$ Struct Template Reference}
+\label{structhwcomposer_1_1Rect}\index{hwcomposer\+::\+Rect$<$ T\+Float $>$@{hwcomposer\+::\+Rect$<$ T\+Float $>$}}
+
+
+{\ttfamily \#include $<$hwcrect.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T\+Float \mbox{\hyperlink{structhwcomposer_1_1Rect_a2213394736c5d22a67a543d8aba355e6}{T\+Num}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1Rect_adbce36e618da93c3c776d1032b5e16fe}{Rect}} ()
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1Rect_ad7670c06999770001be36a8160642849}{Rect}} (T\+Float left\+\_\+, T\+Float top\+\_\+, T\+Float right\+\_\+, T\+Float bottom\+\_\+)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structhwcomposer_1_1Rect_a0cf8a9ffd29d165ff0b800f4a7f6fecb}{Rect}} (const \mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$ T $>$ \&rhs)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$ T\+Float $>$ \& \mbox{\hyperlink{structhwcomposer_1_1Rect_a2a0639148f54cae322649c063a7119d4}{operator=}} (const \mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$ T $>$ \&rhs)
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1Rect_a7c600a50d058b86fb3984bf1f0ce57c3}{operator==}} (const \mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{structhwcomposer_1_1Rect_a2a8a89f0070ee6ee8366a6631ab26161}{empty}} () const
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1Rect_a63dbe81fe15740d640c56bef243386ef}{reset}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>TFloat \mbox{\hyperlink{structhwcomposer_1_1Rect_a75263dbad1a165fae707a0b208358740}{left}}\\
+\>\>TFloat \mbox{\hyperlink{structhwcomposer_1_1Rect_af8fc690f7c7980ff2b763c3cf047e401}{top}}\\
+\>\>TFloat \mbox{\hyperlink{structhwcomposer_1_1Rect_ab93cc23bb659c53ef273acd7ab27ef9a}{right}}\\
+\>\>TFloat \mbox{\hyperlink{structhwcomposer_1_1Rect_ac93168730cfe6d9831ac79cc5bc1a222}{bottom}}\\
+\>\} \\
+\>TFloat \mbox{\hyperlink{structhwcomposer_1_1Rect_abb44f7a323bfd859d5df4206ed2ed522}{bounds}} \mbox{[}4\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T\+Float$>$\newline
+struct hwcomposer\+::\+Rect$<$ T\+Float $>$}
+
+
+
+Definition at line 28 of file hwcrect.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_a2213394736c5d22a67a543d8aba355e6}\label{structhwcomposer_1_1Rect_a2213394736c5d22a67a543d8aba355e6}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!T\+Num@{T\+Num}}
+\index{T\+Num@{T\+Num}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{T\+Num}{TNum}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+typedef T\+Float \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::\mbox{\hyperlink{structhwcomposer_1_1Rect_a2213394736c5d22a67a543d8aba355e6}{T\+Num}}}
+
+
+
+Definition at line 35 of file hwcrect.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_adbce36e618da93c3c776d1032b5e16fe}\label{structhwcomposer_1_1Rect_adbce36e618da93c3c776d1032b5e16fe}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{Rect()}{Rect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+\mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::\mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file hwcrect.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36          \{}
+\DoxyCodeLine{37     \mbox{\hyperlink{structhwcomposer_1_1Rect_a63dbe81fe15740d640c56bef243386ef}{reset}}();}
+\DoxyCodeLine{38   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_ad7670c06999770001be36a8160642849}\label{structhwcomposer_1_1Rect_ad7670c06999770001be36a8160642849}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{Rect()}{Rect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+\mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::\mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}} (\begin{DoxyParamCaption}\item[{T\+Float}]{left\+\_\+,  }\item[{T\+Float}]{top\+\_\+,  }\item[{T\+Float}]{right\+\_\+,  }\item[{T\+Float}]{bottom\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file hwcrect.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40       : \mbox{\hyperlink{structhwcomposer_1_1Rect_a75263dbad1a165fae707a0b208358740}{left}}(left\_), \mbox{\hyperlink{structhwcomposer_1_1Rect_af8fc690f7c7980ff2b763c3cf047e401}{top}}(top\_), \mbox{\hyperlink{structhwcomposer_1_1Rect_ab93cc23bb659c53ef273acd7ab27ef9a}{right}}(right\_), \mbox{\hyperlink{structhwcomposer_1_1Rect_ac93168730cfe6d9831ac79cc5bc1a222}{bottom}}(bottom\_) \{}
+\DoxyCodeLine{41   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_a0cf8a9ffd29d165ff0b800f4a7f6fecb}\label{structhwcomposer_1_1Rect_a0cf8a9ffd29d165ff0b800f4a7f6fecb}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{Rect()}{Rect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+template$<$typename T $>$ \\
+\mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::\mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file hwcrect.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                            \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++)}
+\DoxyCodeLine{45       \mbox{\hyperlink{structhwcomposer_1_1Rect_abb44f7a323bfd859d5df4206ed2ed522}{bounds}}[i] = rhs.bounds[i];}
+\DoxyCodeLine{46   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_a2a8a89f0070ee6ee8366a6631ab26161}\label{structhwcomposer_1_1Rect_a2a8a89f0070ee6ee8366a6631ab26161}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!empty@{empty}}
+\index{empty@{empty}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+bool \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 61 of file hwcrect.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                      \{}
+\DoxyCodeLine{62     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++) \{}
+\DoxyCodeLine{63       \textcolor{keywordflow}{if} (\mbox{\hyperlink{structhwcomposer_1_1Rect_abb44f7a323bfd859d5df4206ed2ed522}{bounds}}[i] != 0)}
+\DoxyCodeLine{64         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{67   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_a2a0639148f54cae322649c063a7119d4}\label{structhwcomposer_1_1Rect_a2a0639148f54cae322649c063a7119d4}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+template$<$typename T $>$ \\
+\mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$T\+Float$>$\& \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 48 of file hwcrect.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                               \{}
+\DoxyCodeLine{49     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++)}
+\DoxyCodeLine{50       \mbox{\hyperlink{structhwcomposer_1_1Rect_abb44f7a323bfd859d5df4206ed2ed522}{bounds}}[i] = rhs.bounds[i];}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{52   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_a7c600a50d058b86fb3984bf1f0ce57c3}\label{structhwcomposer_1_1Rect_a7c600a50d058b86fb3984bf1f0ce57c3}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!operator==@{operator==}}
+\index{operator==@{operator==}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+bool \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1Rect}{Rect}}$<$ T\+Float $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 53 of file hwcrect.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                          \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++) \{}
+\DoxyCodeLine{55       \textcolor{keywordflow}{if} (\mbox{\hyperlink{structhwcomposer_1_1Rect_abb44f7a323bfd859d5df4206ed2ed522}{bounds}}[i] != rhs.bounds[i])}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{59   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_a63dbe81fe15740d640c56bef243386ef}\label{structhwcomposer_1_1Rect_a63dbe81fe15740d640c56bef243386ef}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!reset@{reset}}
+\index{reset@{reset}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+void \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 69 of file hwcrect.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++) \{}
+\DoxyCodeLine{71       memset(\&\mbox{\hyperlink{structhwcomposer_1_1Rect_abb44f7a323bfd859d5df4206ed2ed522}{bounds}}, 0, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structhwcomposer_1_1Rect_abb44f7a323bfd859d5df4206ed2ed522}{bounds}}));}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_a7b1906b69092c779651460145478b126}\label{structhwcomposer_1_1Rect_a7b1906b69092c779651460145478b126}} 
+\subsubsection{\texorpdfstring{"@9}{@9}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_ac93168730cfe6d9831ac79cc5bc1a222}\label{structhwcomposer_1_1Rect_ac93168730cfe6d9831ac79cc5bc1a222}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!bottom@{bottom}}
+\index{bottom@{bottom}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{bottom}{bottom}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+T\+Float \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::bottom}
+
+
+
+Definition at line 31 of file hwcrect.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_abb44f7a323bfd859d5df4206ed2ed522}\label{structhwcomposer_1_1Rect_abb44f7a323bfd859d5df4206ed2ed522}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!bounds@{bounds}}
+\index{bounds@{bounds}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{bounds}{bounds}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+T\+Float \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::bounds\mbox{[}4\mbox{]}}
+
+
+
+Definition at line 33 of file hwcrect.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_a75263dbad1a165fae707a0b208358740}\label{structhwcomposer_1_1Rect_a75263dbad1a165fae707a0b208358740}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!left@{left}}
+\index{left@{left}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+T\+Float \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::left}
+
+
+
+Definition at line 31 of file hwcrect.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_ab93cc23bb659c53ef273acd7ab27ef9a}\label{structhwcomposer_1_1Rect_ab93cc23bb659c53ef273acd7ab27ef9a}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!right@{right}}
+\index{right@{right}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+T\+Float \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::right}
+
+
+
+Definition at line 31 of file hwcrect.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1Rect_af8fc690f7c7980ff2b763c3cf047e401}\label{structhwcomposer_1_1Rect_af8fc690f7c7980ff2b763c3cf047e401}} 
+\index{hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}!top@{top}}
+\index{top@{top}!hwcomposer\+::\+Rect@{hwcomposer\+::\+Rect}}
+\subsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily template$<$typename T\+Float$>$ \\
+T\+Float \mbox{\hyperlink{structhwcomposer_1_1Rect}{hwcomposer\+::\+Rect}}$<$ T\+Float $>$\+::top}
+
+
+
+Definition at line 31 of file hwcrect.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+public/\mbox{\hyperlink{hwcrect_8h}{hwcrect.\+h}}\end{DoxyCompactItemize}

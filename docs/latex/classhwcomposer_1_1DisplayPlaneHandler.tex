@@ -1,0 +1,74 @@
+\hypertarget{classhwcomposer_1_1DisplayPlaneHandler}{}\section{hwcomposer\+:\+:Display\+Plane\+Handler Class Reference}
+\label{classhwcomposer_1_1DisplayPlaneHandler}\index{hwcomposer\+::\+Display\+Plane\+Handler@{hwcomposer\+::\+Display\+Plane\+Handler}}
+
+
+{\ttfamily \#include $<$displayplanehandler.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Display\+Plane\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classhwcomposer_1_1DisplayPlaneHandler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler_aeab8a4a0c1db272293b3b6db6c7cd7b6}{$\sim$\+Display\+Plane\+Handler}} ()
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler_aa4d32269c693dbf4a4c91c31ed577784}{Populate\+Planes}} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $>$$>$ \&overlay\+\_\+planes)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneHandler_a1135b134010e6736aa49304100c9d3b9}{Test\+Commit}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayPlane}{Overlay\+Plane}} $>$ \&commit\+\_\+planes) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file displayplanehandler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneHandler_aeab8a4a0c1db272293b3b6db6c7cd7b6}\label{classhwcomposer_1_1DisplayPlaneHandler_aeab8a4a0c1db272293b3b6db6c7cd7b6}} 
+\index{hwcomposer\+::\+Display\+Plane\+Handler@{hwcomposer\+::\+Display\+Plane\+Handler}!````~Display\+Plane\+Handler@{$\sim$\+Display\+Plane\+Handler}}
+\index{````~Display\+Plane\+Handler@{$\sim$\+Display\+Plane\+Handler}!hwcomposer\+::\+Display\+Plane\+Handler@{hwcomposer\+::\+Display\+Plane\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Display\+Plane\+Handler()}{~DisplayPlaneHandler()}}
+{\footnotesize\ttfamily virtual hwcomposer\+::\+Display\+Plane\+Handler\+::$\sim$\+Display\+Plane\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 36 of file displayplanehandler.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36                                  \{}
+\DoxyCodeLine{37   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneHandler_aa4d32269c693dbf4a4c91c31ed577784}\label{classhwcomposer_1_1DisplayPlaneHandler_aa4d32269c693dbf4a4c91c31ed577784}} 
+\index{hwcomposer\+::\+Display\+Plane\+Handler@{hwcomposer\+::\+Display\+Plane\+Handler}!Populate\+Planes@{Populate\+Planes}}
+\index{Populate\+Planes@{Populate\+Planes}!hwcomposer\+::\+Display\+Plane\+Handler@{hwcomposer\+::\+Display\+Plane\+Handler}}
+\subsubsection{\texorpdfstring{Populate\+Planes()}{PopulatePlanes()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Display\+Plane\+Handler\+::\+Populate\+Planes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $>$$>$ \&}]{overlay\+\_\+planes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_afe0c0a304dab32918d3c40520f00d991}{hwcomposer\+::\+Physical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_acbf817afffc6ad6f2879d914a0335dd0}{hwcomposer\+::\+Drm\+Display}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneHandler_a1135b134010e6736aa49304100c9d3b9}\label{classhwcomposer_1_1DisplayPlaneHandler_a1135b134010e6736aa49304100c9d3b9}} 
+\index{hwcomposer\+::\+Display\+Plane\+Handler@{hwcomposer\+::\+Display\+Plane\+Handler}!Test\+Commit@{Test\+Commit}}
+\index{Test\+Commit@{Test\+Commit}!hwcomposer\+::\+Display\+Plane\+Handler@{hwcomposer\+::\+Display\+Plane\+Handler}}
+\subsubsection{\texorpdfstring{Test\+Commit()}{TestCommit()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Display\+Plane\+Handler\+::\+Test\+Commit (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayPlane}{Overlay\+Plane}} $>$ \&}]{commit\+\_\+planes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1PhysicalDisplay_a3c71b07e973c29b5603c35c333a42991}{hwcomposer\+::\+Physical\+Display}}, and \mbox{\hyperlink{classhwcomposer_1_1DrmDisplay_a7aaa318ce853a36ebcaf837fe1801f88}{hwcomposer\+::\+Drm\+Display}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wsi/\mbox{\hyperlink{displayplanehandler_8h}{displayplanehandler.\+h}}\end{DoxyCompactItemize}

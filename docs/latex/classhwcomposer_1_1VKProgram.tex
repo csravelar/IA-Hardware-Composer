@@ -1,0 +1,447 @@
+\hypertarget{classhwcomposer_1_1VKProgram}{}\section{hwcomposer\+:\+:V\+K\+Program Class Reference}
+\label{classhwcomposer_1_1VKProgram}\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+
+
+{\ttfamily \#include $<$vkprogram.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VKProgram_a15e76c025572a6483de66e0928c3018d}{V\+K\+Program}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VKProgram_aa3ba67bddb96d2a111a5fba945979c4c}{V\+K\+Program}} (const \mbox{\hyperlink{classhwcomposer_1_1VKProgram}{V\+K\+Program}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VKProgram}{V\+K\+Program}} \& \mbox{\hyperlink{classhwcomposer_1_1VKProgram_acc550b46c8f0bde96cae237a6ca7eca0}{operator=}} (const \mbox{\hyperlink{classhwcomposer_1_1VKProgram}{V\+K\+Program}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VKProgram_a5bcfa3adeced325075b84c750a28279f}{$\sim$\+V\+K\+Program}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VKProgram_a9c39fc6ef39a73ea5a8b7abf3d487f61}{Init}} (unsigned layer\+\_\+index)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VKProgram_a072cd6d43e404500c842cf120e431c52}{Use\+Program}} (const \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} \&cmd, unsigned int viewport\+\_\+width, unsigned int viewport\+\_\+height)
+\item 
+Vk\+Descriptor\+Set\+Layout \mbox{\hyperlink{classhwcomposer_1_1VKProgram_ab284e8acd8754df9a126f0e97b0af597}{get\+Desc\+Layout}} ()
+\item 
+Vk\+Pipeline\+Layout \mbox{\hyperlink{classhwcomposer_1_1VKProgram_a140236dd13e417fd206fb6d05cd29241}{get\+Pipe\+Layout}} ()
+\item 
+Vk\+Pipeline \mbox{\hyperlink{classhwcomposer_1_1VKProgram_ae3917cbafcab6f16ab5be091e8dc6dad}{get\+Pipeline}} ()
+\item 
+Vk\+Descriptor\+Buffer\+Info \mbox{\hyperlink{classhwcomposer_1_1VKProgram_ad3769113771d1a8566339ff4e108515c}{get\+Vert\+U\+B\+Info}} ()
+\item 
+Vk\+Descriptor\+Buffer\+Info \mbox{\hyperlink{classhwcomposer_1_1VKProgram_a1b5dabe3687b3e77567541300ae8a0ae}{get\+Frag\+U\+B\+Info}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 32 of file vkprogram.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_a15e76c025572a6483de66e0928c3018d}\label{classhwcomposer_1_1VKProgram_a15e76c025572a6483de66e0928c3018d}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!V\+K\+Program@{V\+K\+Program}}
+\index{V\+K\+Program@{V\+K\+Program}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{V\+K\+Program()}{VKProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+K\+Program\+::\+V\+K\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file vkprogram.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                      \{}
+\DoxyCodeLine{31   descriptor\_set\_layout\_ = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{32   pipeline\_layout\_ = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{33   vertex\_module\_ = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{34   fragment\_module\_ = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{35   pipeline\_ = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{36 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_aa3ba67bddb96d2a111a5fba945979c4c}\label{classhwcomposer_1_1VKProgram_aa3ba67bddb96d2a111a5fba945979c4c}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!V\+K\+Program@{V\+K\+Program}}
+\index{V\+K\+Program@{V\+K\+Program}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{V\+K\+Program()}{VKProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+K\+Program\+::\+V\+K\+Program (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1VKProgram}{V\+K\+Program}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_a5bcfa3adeced325075b84c750a28279f}\label{classhwcomposer_1_1VKProgram_a5bcfa3adeced325075b84c750a28279f}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!````~V\+K\+Program@{$\sim$\+V\+K\+Program}}
+\index{````~V\+K\+Program@{$\sim$\+V\+K\+Program}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{$\sim$\+V\+K\+Program()}{~VKProgram()}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+K\+Program\+::$\sim$\+V\+K\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file vkprogram.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                       \{}
+\DoxyCodeLine{39   vkDestroyDescriptorSetLayout(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, descriptor\_set\_layout\_, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{40   vkDestroyPipelineLayout(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, pipeline\_layout\_, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{41   vkDestroyShaderModule(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, vertex\_module\_, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{42   vkDestroyShaderModule(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, fragment\_module\_, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{43   vkDestroyPipeline(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, pipeline\_, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{44 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_ab284e8acd8754df9a126f0e97b0af597}\label{classhwcomposer_1_1VKProgram_ab284e8acd8754df9a126f0e97b0af597}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!get\+Desc\+Layout@{get\+Desc\+Layout}}
+\index{get\+Desc\+Layout@{get\+Desc\+Layout}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{get\+Desc\+Layout()}{getDescLayout()}}
+{\footnotesize\ttfamily Vk\+Descriptor\+Set\+Layout hwcomposer\+::\+V\+K\+Program\+::get\+Desc\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 44 of file vkprogram.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                         \{}
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} descriptor\_set\_layout\_;}
+\DoxyCodeLine{46   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_a1b5dabe3687b3e77567541300ae8a0ae}\label{classhwcomposer_1_1VKProgram_a1b5dabe3687b3e77567541300ae8a0ae}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!get\+Frag\+U\+B\+Info@{get\+Frag\+U\+B\+Info}}
+\index{get\+Frag\+U\+B\+Info@{get\+Frag\+U\+B\+Info}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{get\+Frag\+U\+B\+Info()}{getFragUBInfo()}}
+{\footnotesize\ttfamily Vk\+Descriptor\+Buffer\+Info hwcomposer\+::\+V\+K\+Program\+::get\+Frag\+U\+B\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 56 of file vkprogram.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                          \{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} frag\_buf\_info\_;}
+\DoxyCodeLine{58   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_a140236dd13e417fd206fb6d05cd29241}\label{classhwcomposer_1_1VKProgram_a140236dd13e417fd206fb6d05cd29241}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!get\+Pipe\+Layout@{get\+Pipe\+Layout}}
+\index{get\+Pipe\+Layout@{get\+Pipe\+Layout}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{get\+Pipe\+Layout()}{getPipeLayout()}}
+{\footnotesize\ttfamily Vk\+Pipeline\+Layout hwcomposer\+::\+V\+K\+Program\+::get\+Pipe\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 47 of file vkprogram.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                    \{}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} pipeline\_layout\_;}
+\DoxyCodeLine{49   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_ae3917cbafcab6f16ab5be091e8dc6dad}\label{classhwcomposer_1_1VKProgram_ae3917cbafcab6f16ab5be091e8dc6dad}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!get\+Pipeline@{get\+Pipeline}}
+\index{get\+Pipeline@{get\+Pipeline}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{get\+Pipeline()}{getPipeline()}}
+{\footnotesize\ttfamily Vk\+Pipeline hwcomposer\+::\+V\+K\+Program\+::get\+Pipeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 50 of file vkprogram.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                            \{}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} pipeline\_;}
+\DoxyCodeLine{52   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_ad3769113771d1a8566339ff4e108515c}\label{classhwcomposer_1_1VKProgram_ad3769113771d1a8566339ff4e108515c}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!get\+Vert\+U\+B\+Info@{get\+Vert\+U\+B\+Info}}
+\index{get\+Vert\+U\+B\+Info@{get\+Vert\+U\+B\+Info}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{get\+Vert\+U\+B\+Info()}{getVertUBInfo()}}
+{\footnotesize\ttfamily Vk\+Descriptor\+Buffer\+Info hwcomposer\+::\+V\+K\+Program\+::get\+Vert\+U\+B\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 53 of file vkprogram.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                          \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} vert\_buf\_info\_;}
+\DoxyCodeLine{55   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_a9c39fc6ef39a73ea5a8b7abf3d487f61}\label{classhwcomposer_1_1VKProgram_a9c39fc6ef39a73ea5a8b7abf3d487f61}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+V\+K\+Program\+::\+Init (\begin{DoxyParamCaption}\item[{unsigned}]{layer\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file vkprogram.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                          \{}
+\DoxyCodeLine{47   VkResult res;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49   VkDescriptorSetLayoutBinding bindings[] = \{}
+\DoxyCodeLine{50       \{0, VK\_DESCRIPTOR\_TYPE\_UNIFORM\_BUFFER, 1, VK\_SHADER\_STAGE\_VERTEX\_BIT,}
+\DoxyCodeLine{51        \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\},}
+\DoxyCodeLine{52       \{1, VK\_DESCRIPTOR\_TYPE\_UNIFORM\_BUFFER, 1, VK\_SHADER\_STAGE\_FRAGMENT\_BIT,}
+\DoxyCodeLine{53        \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\},}
+\DoxyCodeLine{54       \{2, VK\_DESCRIPTOR\_TYPE\_COMBINED\_IMAGE\_SAMPLER, layer\_index,}
+\DoxyCodeLine{55        VK\_SHADER\_STAGE\_FRAGMENT\_BIT, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\},}
+\DoxyCodeLine{56   \};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58   VkDescriptorSetLayoutCreateInfo desc\_create = \{\};}
+\DoxyCodeLine{59   desc\_create.sType = VK\_STRUCTURE\_TYPE\_DESCRIPTOR\_SET\_LAYOUT\_CREATE\_INFO;}
+\DoxyCodeLine{60   desc\_create.bindingCount = \mbox{\hyperlink{vkshim_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\_SIZE}}(bindings);}
+\DoxyCodeLine{61   desc\_create.pBindings = \&bindings[0];}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63   res = vkCreateDescriptorSetLayout(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&desc\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},}
+\DoxyCodeLine{64                                     \&descriptor\_set\_layout\_);}
+\DoxyCodeLine{65   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{66     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateDescriptorSetLayout failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{67     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{68   \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70   VkPipelineLayoutCreateInfo pipeline\_layout\_create = \{\};}
+\DoxyCodeLine{71   pipeline\_layout\_create.sType = VK\_STRUCTURE\_TYPE\_PIPELINE\_LAYOUT\_CREATE\_INFO;}
+\DoxyCodeLine{72   pipeline\_layout\_create.setLayoutCount = 1;}
+\DoxyCodeLine{73   pipeline\_layout\_create.pSetLayouts = \&descriptor\_set\_layout\_;}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75   res = vkCreatePipelineLayout(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&pipeline\_layout\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},}
+\DoxyCodeLine{76                                \&pipeline\_layout\_);}
+\DoxyCodeLine{77   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{78     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreatePipelineLayout failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{79     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{80   \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82   VkSpecializationMapEntry layer\_count\_spec = \{\};}
+\DoxyCodeLine{83   layer\_count\_spec.size = \textcolor{keyword}{sizeof}(uint32\_t);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85   VkShaderModuleCreateInfo module\_create = \{\};}
+\DoxyCodeLine{86   module\_create.sType = VK\_STRUCTURE\_TYPE\_SHADER\_MODULE\_CREATE\_INFO;}
+\DoxyCodeLine{87   module\_create.codeSize = \textcolor{keyword}{sizeof}(vkcomp\_vert\_spv);}
+\DoxyCodeLine{88   module\_create.pCode = (\textcolor{keyword}{const} uint32\_t *)vkcomp\_vert\_spv;}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90   res = vkCreateShaderModule(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&module\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&vertex\_module\_);}
+\DoxyCodeLine{91   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{92     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateShaderModule failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{93     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{94   \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96   module\_create.codeSize = \textcolor{keyword}{sizeof}(vkcomp\_frag\_spv);}
+\DoxyCodeLine{97   module\_create.pCode = (\textcolor{keyword}{const} uint32\_t *)vkcomp\_frag\_spv;}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   res = vkCreateShaderModule(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \&module\_create, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&fragment\_module\_);}
+\DoxyCodeLine{100   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{101     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateShaderModule failed (\%d)\(\backslash\)n"}, res);}
+\DoxyCodeLine{102     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{103   \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105   VkPipelineInputAssemblyStateCreateInfo input\_assembly = \{\};}
+\DoxyCodeLine{106   input\_assembly.sType =}
+\DoxyCodeLine{107       VK\_STRUCTURE\_TYPE\_PIPELINE\_INPUT\_ASSEMBLY\_STATE\_CREATE\_INFO;}
+\DoxyCodeLine{108   input\_assembly.topology = VK\_PRIMITIVE\_TOPOLOGY\_TRIANGLE\_LIST;}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110   VkVertexInputBindingDescription vertex\_input\_binding = \{\};}
+\DoxyCodeLine{111   vertex\_input\_binding.binding = 0;}
+\DoxyCodeLine{112   vertex\_input\_binding.stride = \textcolor{keyword}{sizeof}(float) * 4;}
+\DoxyCodeLine{113   vertex\_input\_binding.inputRate = VK\_VERTEX\_INPUT\_RATE\_VERTEX;}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115   VkVertexInputAttributeDescription vertex\_input\_attribs[2];}
+\DoxyCodeLine{116   vertex\_input\_attribs[0] = \{\};}
+\DoxyCodeLine{117   vertex\_input\_attribs[0].location = 0;}
+\DoxyCodeLine{118   vertex\_input\_attribs[0].binding = 0;}
+\DoxyCodeLine{119   vertex\_input\_attribs[0].format = VK\_FORMAT\_R32G32\_SFLOAT;}
+\DoxyCodeLine{120   vertex\_input\_attribs[0].offset = 0;}
+\DoxyCodeLine{121   vertex\_input\_attribs[1] = \{\};}
+\DoxyCodeLine{122   vertex\_input\_attribs[1].location = 1;}
+\DoxyCodeLine{123   vertex\_input\_attribs[1].binding = 0;}
+\DoxyCodeLine{124   vertex\_input\_attribs[1].format = VK\_FORMAT\_R32G32\_SFLOAT;}
+\DoxyCodeLine{125   vertex\_input\_attribs[1].offset = \textcolor{keyword}{sizeof}(float) * 2;}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127   VkPipelineVertexInputStateCreateInfo vertex\_input = \{\};}
+\DoxyCodeLine{128   vertex\_input.sType =}
+\DoxyCodeLine{129       VK\_STRUCTURE\_TYPE\_PIPELINE\_VERTEX\_INPUT\_STATE\_CREATE\_INFO;}
+\DoxyCodeLine{130   vertex\_input.vertexBindingDescriptionCount = 1;}
+\DoxyCodeLine{131   vertex\_input.pVertexBindingDescriptions = \&vertex\_input\_binding;}
+\DoxyCodeLine{132   vertex\_input.vertexAttributeDescriptionCount =}
+\DoxyCodeLine{133       \mbox{\hyperlink{vkshim_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\_SIZE}}(vertex\_input\_attribs);}
+\DoxyCodeLine{134   vertex\_input.pVertexAttributeDescriptions = \&vertex\_input\_attribs[0];}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   VkPipelineViewportStateCreateInfo viewport\_state = \{\};}
+\DoxyCodeLine{137   viewport\_state.sType = VK\_STRUCTURE\_TYPE\_PIPELINE\_VIEWPORT\_STATE\_CREATE\_INFO;}
+\DoxyCodeLine{138   viewport\_state.viewportCount = 1;}
+\DoxyCodeLine{139   viewport\_state.scissorCount = 1;}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141   VkPipelineRasterizationStateCreateInfo rasterization = \{\};}
+\DoxyCodeLine{142   rasterization.sType =}
+\DoxyCodeLine{143       VK\_STRUCTURE\_TYPE\_PIPELINE\_RASTERIZATION\_STATE\_CREATE\_INFO;}
+\DoxyCodeLine{144   rasterization.lineWidth = 1.0f;}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146   VkPipelineMultisampleStateCreateInfo multisample = \{\};}
+\DoxyCodeLine{147   multisample.sType = VK\_STRUCTURE\_TYPE\_PIPELINE\_MULTISAMPLE\_STATE\_CREATE\_INFO;}
+\DoxyCodeLine{148   multisample.rasterizationSamples = VK\_SAMPLE\_COUNT\_1\_BIT;}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150   VkPipelineColorBlendAttachmentState blend\_attach = \{\};}
+\DoxyCodeLine{151   blend\_attach.colorWriteMask = 0xF;}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153   VkPipelineColorBlendStateCreateInfo blending = \{\};}
+\DoxyCodeLine{154   blending.sType = VK\_STRUCTURE\_TYPE\_PIPELINE\_COLOR\_BLEND\_STATE\_CREATE\_INFO;}
+\DoxyCodeLine{155   blending.attachmentCount = 1;}
+\DoxyCodeLine{156   blending.pAttachments = \&blend\_attach;}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158   VkDynamicState dynamic\_states[] = \{VK\_DYNAMIC\_STATE\_VIEWPORT,}
+\DoxyCodeLine{159                                      VK\_DYNAMIC\_STATE\_SCISSOR\};}
+\DoxyCodeLine{160   VkPipelineDynamicStateCreateInfo dynamic\_state = \{\};}
+\DoxyCodeLine{161   dynamic\_state.sType = VK\_STRUCTURE\_TYPE\_PIPELINE\_DYNAMIC\_STATE\_CREATE\_INFO;}
+\DoxyCodeLine{162   dynamic\_state.dynamicStateCount = \mbox{\hyperlink{vkshim_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\_SIZE}}(dynamic\_states);}
+\DoxyCodeLine{163   dynamic\_state.pDynamicStates = \&dynamic\_states[0];}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165   \textcolor{keyword}{struct }pipeline\_info pipeline\_info;}
+\DoxyCodeLine{166   pipeline\_info.layer\_index = layer\_index;}
+\DoxyCodeLine{167   pipeline\_info.special = \{\};}
+\DoxyCodeLine{168   pipeline\_info.special.mapEntryCount = 1;}
+\DoxyCodeLine{169   pipeline\_info.special.pMapEntries = \&layer\_count\_spec;}
+\DoxyCodeLine{170   pipeline\_info.special.dataSize = \textcolor{keyword}{sizeof}(pipeline\_info.layer\_index);}
+\DoxyCodeLine{171   pipeline\_info.special.pData = \&pipeline\_info.layer\_index;}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173   pipeline\_info.stages[0] = \{\};}
+\DoxyCodeLine{174   pipeline\_info.stages[0].sType =}
+\DoxyCodeLine{175       VK\_STRUCTURE\_TYPE\_PIPELINE\_SHADER\_STAGE\_CREATE\_INFO;}
+\DoxyCodeLine{176   pipeline\_info.stages[0].stage = VK\_SHADER\_STAGE\_VERTEX\_BIT;}
+\DoxyCodeLine{177   pipeline\_info.stages[0].module = vertex\_module\_;}
+\DoxyCodeLine{178   pipeline\_info.stages[0].pName = \textcolor{stringliteral}{"main"};}
+\DoxyCodeLine{179   pipeline\_info.stages[0].pSpecializationInfo = \&pipeline\_info.special;}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181   pipeline\_info.stages[1] = \{\};}
+\DoxyCodeLine{182   pipeline\_info.stages[1].sType =}
+\DoxyCodeLine{183       VK\_STRUCTURE\_TYPE\_PIPELINE\_SHADER\_STAGE\_CREATE\_INFO;}
+\DoxyCodeLine{184   pipeline\_info.stages[1].stage = VK\_SHADER\_STAGE\_FRAGMENT\_BIT;}
+\DoxyCodeLine{185   pipeline\_info.stages[1].module = fragment\_module\_;}
+\DoxyCodeLine{186   pipeline\_info.stages[1].pName = \textcolor{stringliteral}{"main"};}
+\DoxyCodeLine{187   pipeline\_info.stages[1].pSpecializationInfo = \&pipeline\_info.special;}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189   VkGraphicsPipelineCreateInfo pipeline\_create = \{\};}
+\DoxyCodeLine{190   pipeline\_create.sType = VK\_STRUCTURE\_TYPE\_GRAPHICS\_PIPELINE\_CREATE\_INFO;}
+\DoxyCodeLine{191   pipeline\_create.stageCount = \mbox{\hyperlink{vkshim_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\_SIZE}}(pipeline\_info.stages);}
+\DoxyCodeLine{192   pipeline\_create.pStages = \&pipeline\_info.stages[0];}
+\DoxyCodeLine{193   pipeline\_create.pVertexInputState = \&vertex\_input;}
+\DoxyCodeLine{194   pipeline\_create.pInputAssemblyState = \&input\_assembly;}
+\DoxyCodeLine{195   pipeline\_create.pViewportState = \&viewport\_state;}
+\DoxyCodeLine{196   pipeline\_create.pRasterizationState = \&rasterization;}
+\DoxyCodeLine{197   pipeline\_create.pMultisampleState = \&multisample;}
+\DoxyCodeLine{198   pipeline\_create.pColorBlendState = \&blending;}
+\DoxyCodeLine{199   pipeline\_create.pDynamicState = \&dynamic\_state;}
+\DoxyCodeLine{200   pipeline\_create.layout = pipeline\_layout\_;}
+\DoxyCodeLine{201   pipeline\_create.renderPass = \mbox{\hyperlink{namespacehwcomposer_a4d9a582f332eed1a524e91fce91d09c2}{render\_pass\_}};}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203   res = vkCreateGraphicsPipelines(\mbox{\hyperlink{namespacehwcomposer_a2f412e9caa9936e522c2a7db388c57ec}{dev\_}}, \mbox{\hyperlink{namespacehwcomposer_af9df829b7f8d0582f51a2b9c77c477c3}{pipeline\_cache\_}}, 1, \&pipeline\_create,}
+\DoxyCodeLine{204                                   \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \&pipeline\_);}
+\DoxyCodeLine{205   \textcolor{keywordflow}{if} (res != VK\_SUCCESS) \{}
+\DoxyCodeLine{206     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vkCreateGraphicsPipelines failed (\%d0\(\backslash\)n"}, res);}
+\DoxyCodeLine{207     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{208   \}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{211 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_acc550b46c8f0bde96cae237a6ca7eca0}\label{classhwcomposer_1_1VKProgram_acc550b46c8f0bde96cae237a6ca7eca0}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1VKProgram}{V\+K\+Program}}\& hwcomposer\+::\+V\+K\+Program\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhwcomposer_1_1VKProgram}{V\+K\+Program}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1VKProgram_a072cd6d43e404500c842cf120e431c52}\label{classhwcomposer_1_1VKProgram_a072cd6d43e404500c842cf120e431c52}} 
+\index{hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}!Use\+Program@{Use\+Program}}
+\index{Use\+Program@{Use\+Program}!hwcomposer\+::\+V\+K\+Program@{hwcomposer\+::\+V\+K\+Program}}
+\subsubsection{\texorpdfstring{Use\+Program()}{UseProgram()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+V\+K\+Program\+::\+Use\+Program (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} \&}]{cmd,  }\item[{unsigned int}]{viewport\+\_\+width,  }\item[{unsigned int}]{viewport\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 213 of file vkprogram.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{215                                                          \{}
+\DoxyCodeLine{216   \textcolor{keywordtype}{unsigned} layer\_count = state.layer\_state\_.size();}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218   \textcolor{keywordtype}{size\_t} vert\_ub\_size = 4 + 12 * layer\_count;}
+\DoxyCodeLine{219   RingBuffer::Allocation vert\_ub\_alloc =}
+\DoxyCodeLine{220       \mbox{\hyperlink{namespacehwcomposer_a2fbb38712cfea2b605d1beeac8e33990}{ring\_buffer\_}}.\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_a8f9de6a65b9891573d5fc9fdda37b417}{Allocate}}(vert\_ub\_size * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}), 
+      \mbox{\hyperlink{namespacehwcomposer_a9833bb55d7e347e3d50e2f0f24ad3121}{ub\_offset\_align\_}});}
+\DoxyCodeLine{221   \textcolor{keywordflow}{if} (!vert\_ub\_alloc) \{}
+\DoxyCodeLine{222     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to allocate space for vert uniform buffer"});}
+\DoxyCodeLine{223     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{224   \}}
+\DoxyCodeLine{225   \textcolor{keywordtype}{float} *vert\_ub = vert\_ub\_alloc.get<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227   vert\_ub[0] = state.x\_ / (float)viewport\_width;}
+\DoxyCodeLine{228   vert\_ub[1] = state.y\_ / (float)viewport\_height;}
+\DoxyCodeLine{229   vert\_ub[2] = state.width\_ / (float)viewport\_width;}
+\DoxyCodeLine{230   vert\_ub[3] = state.height\_ / (float)viewport\_height;}
+\DoxyCodeLine{231   vert\_ub += 4;}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} src\_index = 0; src\_index < layer\_count; src\_index++) \{}
+\DoxyCodeLine{234     \textcolor{keyword}{const} RenderState::LayerState \&src = state.layer\_state\_[src\_index];}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236     vert\_ub[0] = src.crop\_bounds\_[0];}
+\DoxyCodeLine{237     vert\_ub[1] = src.crop\_bounds\_[1];}
+\DoxyCodeLine{238     vert\_ub[2] = src.crop\_bounds\_[2] - src.crop\_bounds\_[0];}
+\DoxyCodeLine{239     vert\_ub[3] = src.crop\_bounds\_[3] - src.crop\_bounds\_[1];}
+\DoxyCodeLine{240     vert\_ub += 4;}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242     std::copy\_n(src.texture\_matrix\_, 2, vert\_ub);}
+\DoxyCodeLine{243     vert\_ub += 4;  \textcolor{comment}{// 2 data + 2 padding}}
+\DoxyCodeLine{244     std::copy\_n(src.texture\_matrix\_ + 2, 2, vert\_ub);}
+\DoxyCodeLine{245     vert\_ub += 4;  \textcolor{comment}{// 2 data + 2 padding}}
+\DoxyCodeLine{246   \}}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248   \textcolor{keywordtype}{size\_t} frag\_ub\_size = 4 * layer\_count;}
+\DoxyCodeLine{249   RingBuffer::Allocation frag\_ub\_alloc =}
+\DoxyCodeLine{250       \mbox{\hyperlink{namespacehwcomposer_a2fbb38712cfea2b605d1beeac8e33990}{ring\_buffer\_}}.\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_a8f9de6a65b9891573d5fc9fdda37b417}{Allocate}}(frag\_ub\_size * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}), 
+      \mbox{\hyperlink{namespacehwcomposer_a9833bb55d7e347e3d50e2f0f24ad3121}{ub\_offset\_align\_}});}
+\DoxyCodeLine{251   \textcolor{keywordflow}{if} (!frag\_ub\_alloc) \{}
+\DoxyCodeLine{252     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"failed to allocate space for frag uniform buffer"});}
+\DoxyCodeLine{253     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{254   \}}
+\DoxyCodeLine{255   \textcolor{keywordtype}{float} *frag\_ub = frag\_ub\_alloc.get<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} src\_index = 0; src\_index < layer\_count; src\_index++) \{}
+\DoxyCodeLine{258     frag\_ub[0] = state.layer\_state\_[src\_index].alpha\_;}
+\DoxyCodeLine{259     frag\_ub[1] = state.layer\_state\_[src\_index].premult\_;}
+\DoxyCodeLine{260     frag\_ub += 4;  \textcolor{comment}{// 2 data + 2 padding}}
+\DoxyCodeLine{261   \}}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263   vert\_buf\_info\_ = \{\};}
+\DoxyCodeLine{264   vert\_buf\_info\_.buffer = \mbox{\hyperlink{namespacehwcomposer_a7f1b6f91ef21a2ba46ffc976c81d70ff}{uniform\_buffer\_}};}
+\DoxyCodeLine{265   vert\_buf\_info\_.offset = vert\_ub\_alloc.offset();}
+\DoxyCodeLine{266   vert\_buf\_info\_.range = vert\_ub\_size * \textcolor{keyword}{sizeof}(float);}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268   frag\_buf\_info\_ = \{\};}
+\DoxyCodeLine{269   frag\_buf\_info\_.buffer = \mbox{\hyperlink{namespacehwcomposer_a7f1b6f91ef21a2ba46ffc976c81d70ff}{uniform\_buffer\_}};}
+\DoxyCodeLine{270   frag\_buf\_info\_.offset = frag\_ub\_alloc.offset();}
+\DoxyCodeLine{271   frag\_buf\_info\_.range = frag\_ub\_size * \textcolor{keyword}{sizeof}(float);}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} src\_index = 0; src\_index < layer\_count; src\_index++) \{}
+\DoxyCodeLine{274     \textcolor{keyword}{const} RenderState::LayerState \&src = state.layer\_state\_[src\_index];}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276     VkDescriptorImageInfo image\_info = \{\};}
+\DoxyCodeLine{277     image\_info.sampler = \mbox{\hyperlink{namespacehwcomposer_a35eda7e12c33bc7d611bdc19b4eee4bb}{sampler\_}};}
+\DoxyCodeLine{278     image\_info.imageView = src.handle\_.image\_view;}
+\DoxyCodeLine{279     image\_info.imageLayout = VK\_IMAGE\_LAYOUT\_SHADER\_READ\_ONLY\_OPTIMAL;}
+\DoxyCodeLine{280     \mbox{\hyperlink{namespacehwcomposer_a7eca0feeff5b3292a308fc67388f1497}{src\_image\_infos\_}}.emplace\_back(image\_info);}
+\DoxyCodeLine{281   \}}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283   \mbox{\hyperlink{namespacehwcomposer_a60b6b92596cbf14268f77d148d32c042}{ub\_allocs\_}}.emplace\_back(std::move(vert\_ub\_alloc));}
+\DoxyCodeLine{284   \mbox{\hyperlink{namespacehwcomposer_a60b6b92596cbf14268f77d148d32c042}{ub\_allocs\_}}.emplace\_back(std::move(frag\_ub\_alloc));}
+\DoxyCodeLine{285 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/vk/\mbox{\hyperlink{vkprogram_8h}{vkprogram.\+h}}\item 
+common/compositor/vk/\mbox{\hyperlink{vkprogram_8cpp}{vkprogram.\+cpp}}\end{DoxyCompactItemize}

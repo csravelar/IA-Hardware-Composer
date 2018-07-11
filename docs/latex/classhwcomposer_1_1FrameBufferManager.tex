@@ -1,0 +1,172 @@
+\hypertarget{classhwcomposer_1_1FrameBufferManager}{}\section{hwcomposer\+:\+:Frame\+Buffer\+Manager Class Reference}
+\label{classhwcomposer_1_1FrameBufferManager}\index{hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}}
+
+
+{\ttfamily \#include $<$framebuffermanager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager_a8f45d7e5a1fa710844b3a1584821fa06}{Frame\+Buffer\+Manager}} (uint32\+\_\+t gpu\+\_\+fd)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager_ad0e2c6b841fa8384c0da6727d1ee3ac8}{$\sim$\+Frame\+Buffer\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager_aab2dd56fad91e4504cb846b7b73d8caf}{Register\+Gem\+Handles}} (const uint32\+\_\+t \&num\+\_\+planes, const uint32\+\_\+t(\&igem\+\_\+handles)\mbox{[}4\mbox{]})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager_a05c6f8e84120746c4aa6fede497142e0}{Find\+FB}} (const uint32\+\_\+t \&iwidth, const uint32\+\_\+t \&iheight, const uint64\+\_\+t \&modifier, const uint32\+\_\+t \&iframe\+\_\+buffer\+\_\+format, const uint32\+\_\+t \&num\+\_\+planes, const uint32\+\_\+t(\&igem\+\_\+handles)\mbox{[}4\mbox{]}, const uint32\+\_\+t(\&ipitches)\mbox{[}4\mbox{]}, const uint32\+\_\+t(\&ioffsets)\mbox{[}4\mbox{]})
+\item 
+int \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager_a77843c241c2631819a637f227dbc273d}{Remove\+FB}} (uint32\+\_\+t num\+\_\+planes, const uint32\+\_\+t(\&igem\+\_\+handles)\mbox{[}4\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 78 of file framebuffermanager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1FrameBufferManager_a8f45d7e5a1fa710844b3a1584821fa06}\label{classhwcomposer_1_1FrameBufferManager_a8f45d7e5a1fa710844b3a1584821fa06}} 
+\index{hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}!Frame\+Buffer\+Manager@{Frame\+Buffer\+Manager}}
+\index{Frame\+Buffer\+Manager@{Frame\+Buffer\+Manager}!hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}}
+\subsubsection{\texorpdfstring{Frame\+Buffer\+Manager()}{FrameBufferManager()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Frame\+Buffer\+Manager\+::\+Frame\+Buffer\+Manager (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 80 of file framebuffermanager.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                       : gpu\_fd\_(gpu\_fd) \{}
+\DoxyCodeLine{81   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1FrameBufferManager_ad0e2c6b841fa8384c0da6727d1ee3ac8}\label{classhwcomposer_1_1FrameBufferManager_ad0e2c6b841fa8384c0da6727d1ee3ac8}} 
+\index{hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}!````~Frame\+Buffer\+Manager@{$\sim$\+Frame\+Buffer\+Manager}}
+\index{````~Frame\+Buffer\+Manager@{$\sim$\+Frame\+Buffer\+Manager}!hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Frame\+Buffer\+Manager()}{~FrameBufferManager()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Frame\+Buffer\+Manager\+::$\sim$\+Frame\+Buffer\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 82 of file framebuffermanager.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                         \{}
+\DoxyCodeLine{83     PurgeAllFBs();}
+\DoxyCodeLine{84   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1FrameBufferManager_a05c6f8e84120746c4aa6fede497142e0}\label{classhwcomposer_1_1FrameBufferManager_a05c6f8e84120746c4aa6fede497142e0}} 
+\index{hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}!Find\+FB@{Find\+FB}}
+\index{Find\+FB@{Find\+FB}!hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}}
+\subsubsection{\texorpdfstring{Find\+F\+B()}{FindFB()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Frame\+Buffer\+Manager\+::\+Find\+FB (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{iwidth,  }\item[{const uint32\+\_\+t \&}]{iheight,  }\item[{const uint64\+\_\+t \&}]{modifier,  }\item[{const uint32\+\_\+t \&}]{iframe\+\_\+buffer\+\_\+format,  }\item[{const uint32\+\_\+t \&}]{num\+\_\+planes,  }\item[{const uint32\+\_\+t(\&)}]{igem\+\_\+handles\mbox{[}4\mbox{]},  }\item[{const uint32\+\_\+t(\&)}]{ipitches\mbox{[}4\mbox{]},  }\item[{const uint32\+\_\+t(\&)}]{ioffsets\mbox{[}4\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file framebuffermanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                    \{}
+\DoxyCodeLine{46   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{47   \mbox{\hyperlink{structFBKey}{FBKey}} key(num\_planes, igem\_handles);}
+\DoxyCodeLine{48   uint32\_t fb\_id = 0;}
+\DoxyCodeLine{49   \textcolor{keyword}{auto} it = fb\_map\_.find(key);}
+\DoxyCodeLine{50   \textcolor{keywordflow}{if} (it != fb\_map\_.end()) \{}
+\DoxyCodeLine{51     \textcolor{keywordflow}{if} (!it->second.fb\_created) \{}
+\DoxyCodeLine{52       it->second.fb\_created = \textcolor{keyword}{true};}
+\DoxyCodeLine{53       \mbox{\hyperlink{platformcommondefines_8h_a5050e57370d5385378dd668cfef1e3d7}{CreateFrameBuffer}}(iwidth, iheight, modifier, iframe\_buffer\_format,}
+\DoxyCodeLine{54                         num\_planes, igem\_handles, ipitches, ioffsets, gpu\_fd\_,}
+\DoxyCodeLine{55                         \&it->second.fb\_id);}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     fb\_id = it->second.fb\_id;}
+\DoxyCodeLine{59   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{60     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Handle not found in Cache \(\backslash\)n"});}
+\DoxyCodeLine{61   \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{64   \textcolor{keywordflow}{return} fb\_id;}
+\DoxyCodeLine{65 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1FrameBufferManager_aab2dd56fad91e4504cb846b7b73d8caf}\label{classhwcomposer_1_1FrameBufferManager_aab2dd56fad91e4504cb846b7b73d8caf}} 
+\index{hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}!Register\+Gem\+Handles@{Register\+Gem\+Handles}}
+\index{Register\+Gem\+Handles@{Register\+Gem\+Handles}!hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}}
+\subsubsection{\texorpdfstring{Register\+Gem\+Handles()}{RegisterGemHandles()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Frame\+Buffer\+Manager\+::\+Register\+Gem\+Handles (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{num\+\_\+planes,  }\item[{const uint32\+\_\+t(\&)}]{igem\+\_\+handles\mbox{[}4\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file framebuffermanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                                                                \{}
+\DoxyCodeLine{25   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{26   \mbox{\hyperlink{structFBKey}{FBKey}} key(num\_planes, igem\_handles);}
+\DoxyCodeLine{27   \textcolor{keyword}{auto} it = fb\_map\_.find(key);}
+\DoxyCodeLine{28   \textcolor{keywordflow}{if} (it != fb\_map\_.end()) \{}
+\DoxyCodeLine{29     it->second.fb\_ref++;}
+\DoxyCodeLine{30   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{31     FBValue value;}
+\DoxyCodeLine{32     value.fb\_ref = 1;}
+\DoxyCodeLine{33     value.fb\_id = 0;}
+\DoxyCodeLine{34     value.fb\_created = \textcolor{keyword}{false};}
+\DoxyCodeLine{35     fb\_map\_.emplace(std::make\_pair(key, value));}
+\DoxyCodeLine{36   \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{39 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1FrameBufferManager_a77843c241c2631819a637f227dbc273d}\label{classhwcomposer_1_1FrameBufferManager_a77843c241c2631819a637f227dbc273d}} 
+\index{hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}!Remove\+FB@{Remove\+FB}}
+\index{Remove\+FB@{Remove\+FB}!hwcomposer\+::\+Frame\+Buffer\+Manager@{hwcomposer\+::\+Frame\+Buffer\+Manager}}
+\subsubsection{\texorpdfstring{Remove\+F\+B()}{RemoveFB()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Frame\+Buffer\+Manager\+::\+Remove\+FB (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+planes,  }\item[{const uint32\+\_\+t(\&)}]{igem\+\_\+handles\mbox{[}4\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file framebuffermanager.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                                                     \{}
+\DoxyCodeLine{69   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71   \textcolor{keywordtype}{int} ret = 0;}
+\DoxyCodeLine{72   \mbox{\hyperlink{structFBKey}{FBKey}} key(num\_planes, igem\_handles);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74   \textcolor{keyword}{auto} it = fb\_map\_.find(key);}
+\DoxyCodeLine{75   \textcolor{keywordflow}{if} (it != fb\_map\_.end()) \{}
+\DoxyCodeLine{76     it->second.fb\_ref -= 1;}
+\DoxyCodeLine{77     \textcolor{keywordflow}{if} (it->second.fb\_ref == 0) \{}
+\DoxyCodeLine{78       ret = \mbox{\hyperlink{platformcommondefines_8h_ad633af7e3020e4d9004f19fac18c6296}{ReleaseFrameBuffer}}(it->first, it->second.fb\_id, gpu\_fd\_);}
+\DoxyCodeLine{79       fb\_map\_.erase(it);}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81   \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83   \textcolor{keywordflow}{if} (it == fb\_map\_.end()) \{}
+\DoxyCodeLine{84     \textcolor{keywordflow}{if} (igem\_handles[0] != 0 || igem\_handles[1] != 0 || igem\_handles[2] != 0 ||}
+\DoxyCodeLine{85         igem\_handles[3] != 0) \{}
+\DoxyCodeLine{86       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Unable to find fb in cache. \%d \%d \%d \%d \(\backslash\)n"}, igem\_handles[0],}
+\DoxyCodeLine{87              igem\_handles[1], igem\_handles[2], igem\_handles[3]);}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89   \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91   lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93   \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{94 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/core/\mbox{\hyperlink{framebuffermanager_8h}{framebuffermanager.\+h}}\item 
+common/core/\mbox{\hyperlink{framebuffermanager_8cpp}{framebuffermanager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,1574 @@
+\hypertarget{classhwcomposer_1_1DisplayPlaneState}{}\section{hwcomposer\+:\+:Display\+Plane\+State Class Reference}
+\label{classhwcomposer_1_1DisplayPlaneState}\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+
+
+{\ttfamily \#include $<$displayplanestate.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}{Re\+Validation\+Type}} \{ \newline
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aeade1efaa3a8e110807cd742c00c73c3}{k\+None}} = 0, 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aedc800f15466d51911516344e13b0a2d}{k\+Scanout}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a0f91100752f5d2f143b10222f264c133}{k\+Up\+Scalar}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a9295f4ad53b9f22fe8b976dd4afd84e0}{k\+Down\+Scaling}} = 1 $<$$<$ 2, 
+\newline
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a7d1a994f2b7c02f18851dca8471a1450}{k\+Rotation}} = 1 $<$$<$ 3
+ \}
+\item 
+enum \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}{Rotation\+Type}} \+: int32\+\_\+t \{ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a91c319c8bcf2c5686169929c170c8d2e}{Rotation\+Type\+::k\+Display\+Rotation}}, 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a5b98db46be3ebb427a634f7a07033357}{Rotation\+Type\+::k\+G\+P\+U\+Rotation}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a40f04a556f4e9871aa7cdf1ca5f6372a}{Display\+Plane\+State}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a6db912c3342b64ccdf674ad77b8c7db1}{Display\+Plane\+State}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&\&rhs)=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \& \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a8b6171b63e92d58b6f61742b7d816fd3}{operator=}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&\&other)=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a84ba73405579800349219c7105e3dce4}{Display\+Plane\+State}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $\ast$plane, \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$layer, \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager}{Display\+Plane\+Manager}} $\ast$plane\+\_\+manager, uint32\+\_\+t index, uint32\+\_\+t plane\+\_\+transform)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a9d078f6263568fea78ba7915e4a6a385}{Copy\+State}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&state)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_aa983a44ace5cc424fa95d1c6b4cfebfc}{Add\+Layer}} (const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$layer)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a639a5b33751b90cc4a76a94d6d5032e2}{Reset\+Layers}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers, size\+\_\+t remove\+\_\+index, bool $\ast$rects\+\_\+updated)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_acdbd9b16d22e9100bfa6b5700998ba44}{Refresh\+Layer\+Rects}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a6caea69cc46139ce6548ff2b029acbb0}{Force\+G\+P\+U\+Rendering}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a2da76e8aad6edf53502f2ca68030edf4}{Disable\+G\+P\+U\+Rendering}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_aeb81a113ccac011bf1b26d1850307220}{Set\+Overlay\+Layer}} (const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$layer)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_aa0aa12bd8efdabce1acd003eae3f77aa}{Set\+Off\+Screen\+Target}} (\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$target)
+\item 
+const Hwc\+Rect$<$ int $>$ \& \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ab25f0fdaa944c5d4e4381f0b16f5fe5f}{Get\+Display\+Frame}} () const
+\item 
+const Hwc\+Rect$<$ float $>$ \& \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_afc3838db64b5f6b368056c2d752540ee}{Get\+Source\+Crop}} () const
+\item 
+const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ac2efa7f10a97d64c9bcb8a41c49366ba}{Get\+Overlay\+Layer}} () const
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a1f7fe7a4a76b65cf04dbbde8ecaf6efa}{Get\+Off\+Screen\+Target}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$ $>$ \& \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a8b725592feb3ae11620bfce898c4d5be}{Get\+Surfaces}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a10c469b7a0d06ffe86bfdbd211cc7c1a}{Release\+Surfaces}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}{Refresh\+Surfaces}} (\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6}{Native\+Surface\+::\+Clear\+Type}} clear\+\_\+surface, bool force=false)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a49ce8c1f129155876a310a60a8609fae}{Update\+Damage}} (const Hwc\+Rect$<$ int $>$ \&surface\+\_\+damage)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a80539fcee6c9dff4f48f03f27474c7b0}{Get\+Display\+Plane}} () const
+\item 
+const std\+::vector$<$ size\+\_\+t $>$ \& \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a7b64f85b76a5d69e28cdec6ad6012c85}{Get\+Source\+Layers}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1CompositionRegion}{Composition\+Region}} $>$ \& \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a82bcf9816ab0727cb9c015b93da6458c}{Get\+Composition\+Region}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a075df3470b1301fbbfa05b4b6cd98168}{Reset\+Composition\+Region}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ac555ba37fe851fee55a7ffda0b5be599}{Is\+Cursor\+Plane}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ae7bb8080cc8ee5b5361d2a024a806192}{Has\+Cursor\+Layer}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a6d938a233ed083ac445272d3ac068a48}{Is\+Video\+Plane}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a192ea4a1150ab368a53ac75f8caa888a}{Set\+Video\+Plane}} (bool enable)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_aa09162c79c85636721823091e7af9f66}{Use\+Plane\+Scalar}} (bool enable, bool force\+\_\+refresh=true)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a15e55a34c3b5ca53096f50c7b499483b}{Is\+Using\+Plane\+Scalar}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a4fd65b7fd1dacb02778349a95c6adbaf}{Set\+Apply\+Effects}} (bool apply\+\_\+effects)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a3f56e95cfe47bc77b72682827930ed2c}{Apply\+Effects}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a69b12573e464516fa0a96fc55eed8ba8}{Scanout}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_aa560fed729358bea301f0dcfee1b4b98}{Needs\+Off\+Screen\+Composition}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a1df1d57e6ec6d9c79d520c5f9b48f8c3}{Revalidation\+Type}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_aed4135ad5bbd3274d2729f8984b25549}{Revalidation\+Done}} (uint32\+\_\+t validation\+\_\+done)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_abe1d277b77a97323c588993484312dd3}{Validate\+Re\+Validation}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a2ac64be5259b1970748f2904cd9fb9ad}{Can\+Squash}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a1bf41f47af43cae6b25f4e69c117f31b}{Can\+Use\+Display\+Up\+Scaling}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a0388118f03e5d1504565fa72150a7d98}{Can\+Use\+G\+P\+U\+Down\+Scaling}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a47bb9fccfaf18b5eeacd2a5142cb3910}{Set\+Rotation\+Type}} (\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}{Rotation\+Type}} type, bool refresh)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}{Rotation\+Type}} \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a952636f7cf311678e40ad2b85812f2f0}{Get\+Rotation\+Type}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a5ab29e4685340c83b8c71bfffc5adbba}{Set\+Display\+Down\+Scaling\+Factor}} (uint32\+\_\+t factor, bool clear\+\_\+surfaces)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ab4e0c78ad49efbe3c0b3853ebe4d0489}{Get\+Down\+Scaling\+Factor}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ac4f2030aecdb55059e7177597f5887d6}{Needs\+Surface\+Allocation}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a7f6188cc61cbe9897f7f6ea7bc5979f9}{Swap\+Surface\+If\+Needed}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a1459f66800f0c8a2dd2f466b3c8b41d1}{Handle\+Commit\+Failure}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ae87c91a3015833eb4882e42276d55925}{Is\+Surface\+Recycled}} () const
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a4769a056f7c76cb1e3fadf0269ff399d}{Can\+Support\+Video}} () const
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a620538eec4a6a5dbfd62c5ddb697d95d}{Dump}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file displayplanestate.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}\label{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Re\+Validation\+Type@{Re\+Validation\+Type}}
+\index{Re\+Validation\+Type@{Re\+Validation\+Type}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Re\+Validation\+Type}{ReValidationType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}{hwcomposer\+::\+Display\+Plane\+State\+::\+Re\+Validation\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+None@{k\+None}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!k\+None@{k\+None}}}\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aeade1efaa3a8e110807cd742c00c73c3}\label{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aeade1efaa3a8e110807cd742c00c73c3}} 
+k\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Scanout@{k\+Scanout}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!k\+Scanout@{k\+Scanout}}}\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aedc800f15466d51911516344e13b0a2d}\label{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aedc800f15466d51911516344e13b0a2d}} 
+k\+Scanout&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Up\+Scalar@{k\+Up\+Scalar}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!k\+Up\+Scalar@{k\+Up\+Scalar}}}\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a0f91100752f5d2f143b10222f264c133}\label{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a0f91100752f5d2f143b10222f264c133}} 
+k\+Up\+Scalar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Down\+Scaling@{k\+Down\+Scaling}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!k\+Down\+Scaling@{k\+Down\+Scaling}}}\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a9295f4ad53b9f22fe8b976dd4afd84e0}\label{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a9295f4ad53b9f22fe8b976dd4afd84e0}} 
+k\+Down\+Scaling&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Rotation@{k\+Rotation}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!k\+Rotation@{k\+Rotation}}}\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a7d1a994f2b7c02f18851dca8471a1450}\label{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a7d1a994f2b7c02f18851dca8471a1450}} 
+k\+Rotation&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 40 of file displayplanestate.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                         \{}
+\DoxyCodeLine{41     \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aeade1efaa3a8e110807cd742c00c73c3}{kNone}} = 0,              \textcolor{comment}{// No Revalidation Needed.}}
+\DoxyCodeLine{42     \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aedc800f15466d51911516344e13b0a2d}{kScanout}} = 1 << 0,      \textcolor{comment}{// Check if layer can be scanned out directly.}}
+\DoxyCodeLine{43     \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a0f91100752f5d2f143b10222f264c133}{kUpScalar}} = 1 << 1,     \textcolor{comment}{// Check if layer can use plane scalar.}}
+\DoxyCodeLine{44     \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a9295f4ad53b9f22fe8b976dd4afd84e0}{kDownScaling}} = 1 << 2,  \textcolor{comment}{// Check if layer can be downscaled.}}
+\DoxyCodeLine{45     \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a7d1a994f2b7c02f18851dca8471a1450}{kRotation}} = 1 << 3      \textcolor{comment}{// Check if display transform can be supported.}}
+\DoxyCodeLine{46   \};}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}\label{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Rotation\+Type@{Rotation\+Type}}
+\index{Rotation\+Type@{Rotation\+Type}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Rotation\+Type}{RotationType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}{hwcomposer\+::\+Display\+Plane\+State\+::\+Rotation\+Type}} \+: int32\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+Display\+Rotation@{k\+Display\+Rotation}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!k\+Display\+Rotation@{k\+Display\+Rotation}}}\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a91c319c8bcf2c5686169929c170c8d2e}\label{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a91c319c8bcf2c5686169929c170c8d2e}} 
+k\+Display\+Rotation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{k\+G\+P\+U\+Rotation@{k\+G\+P\+U\+Rotation}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!k\+G\+P\+U\+Rotation@{k\+G\+P\+U\+Rotation}}}\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a5b98db46be3ebb427a634f7a07033357}\label{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a5b98db46be3ebb427a634f7a07033357}} 
+k\+G\+P\+U\+Rotation&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 48 of file displayplanestate.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                           : int32\_t \{}
+\DoxyCodeLine{49     kDisplayRotation,  \textcolor{comment}{// Plane will be rotated during display composition.}}
+\DoxyCodeLine{50     kGPURotation       \textcolor{comment}{// Plane will be rotated during 3D composition.}}
+\DoxyCodeLine{51   \};}
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a40f04a556f4e9871aa7cdf1ca5f6372a}\label{classhwcomposer_1_1DisplayPlaneState_a40f04a556f4e9871aa7cdf1ca5f6372a}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Display\+Plane\+State@{Display\+Plane\+State}}
+\index{Display\+Plane\+State@{Display\+Plane\+State}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Display\+Plane\+State()}{DisplayPlaneState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Display\+Plane\+State\+::\+Display\+Plane\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a6db912c3342b64ccdf674ad77b8c7db1}\label{classhwcomposer_1_1DisplayPlaneState_a6db912c3342b64ccdf674ad77b8c7db1}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Display\+Plane\+State@{Display\+Plane\+State}}
+\index{Display\+Plane\+State@{Display\+Plane\+State}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Display\+Plane\+State()}{DisplayPlaneState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Display\+Plane\+State\+::\+Display\+Plane\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a84ba73405579800349219c7105e3dce4}\label{classhwcomposer_1_1DisplayPlaneState_a84ba73405579800349219c7105e3dce4}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Display\+Plane\+State@{Display\+Plane\+State}}
+\index{Display\+Plane\+State@{Display\+Plane\+State}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Display\+Plane\+State()}{DisplayPlaneState()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Display\+Plane\+State\+::\+Display\+Plane\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $\ast$}]{plane,  }\item[{\mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{layer,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager}{Display\+Plane\+Manager}} $\ast$}]{plane\+\_\+manager,  }\item[{uint32\+\_\+t}]{index,  }\item[{uint32\+\_\+t}]{plane\+\_\+transform }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                                                                \{}
+\DoxyCodeLine{42   private\_data\_ = std::make\_shared<DisplayPlanePrivateState>();}
+\DoxyCodeLine{43   private\_data\_->source\_layers\_.emplace\_back(index);}
+\DoxyCodeLine{44   private\_data\_->display\_frame\_ = layer->GetDisplayFrame();}
+\DoxyCodeLine{45   private\_data\_->rect\_updated\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{46   private\_data\_->source\_crop\_ = layer->GetSourceCrop();}
+\DoxyCodeLine{47   \textcolor{keywordflow}{if} (layer->IsCursorLayer()) \{}
+\DoxyCodeLine{48     private\_data\_->type\_ = DisplayPlanePrivateState::PlaneType::kCursor;}
+\DoxyCodeLine{49     private\_data\_->has\_cursor\_layer\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{50   \}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52   plane->SetInUse(\textcolor{keyword}{true});}
+\DoxyCodeLine{53   private\_data\_->plane\_ = plane;}
+\DoxyCodeLine{54   private\_data\_->layer\_ = layer;}
+\DoxyCodeLine{55   private\_data\_->plane\_transform\_ = plane\_transform;}
+\DoxyCodeLine{56   \textcolor{keywordflow}{if} (!private\_data\_->plane\_->IsSupportedTransform(plane\_transform)) \{}
+\DoxyCodeLine{57     private\_data\_->rotation\_type\_ =}
+\DoxyCodeLine{58         \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a5b98db46be3ebb427a634f7a07033357}{DisplayPlaneState::RotationType::kGPURotation}};}
+\DoxyCodeLine{59     private\_data\_->unsupported\_display\_rotation\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{60   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{61     private\_data\_->rotation\_type\_ = \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a91c319c8bcf2c5686169929c170c8d2e}{RotationType::kDisplayRotation}};}
+\DoxyCodeLine{62   \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   private\_data\_->plane\_manager\_ = plane\_manager;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{67 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_aa983a44ace5cc424fa95d1c6b4cfebfc}\label{classhwcomposer_1_1DisplayPlaneState_aa983a44ace5cc424fa95d1c6b4cfebfc}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Add\+Layer@{Add\+Layer}}
+\index{Add\+Layer@{Add\+Layer}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Add\+Layer()}{AddLayer()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Add\+Layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{layer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                                           \{}
+\DoxyCodeLine{87   \textcolor{keyword}{const} HwcRect<int> \&display\_frame = layer->GetDisplayFrame();}
+\DoxyCodeLine{88   HwcRect<int> target\_display\_frame = private\_data\_->display\_frame\_;}
+\DoxyCodeLine{89   \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(display\_frame, target\_display\_frame);}
+\DoxyCodeLine{90   HwcRect<float> target\_source\_crop = private\_data\_->source\_crop\_;}
+\DoxyCodeLine{91   \mbox{\hyperlink{namespacehwcomposer_a8b391b601cac0f823b0378aecc48062e}{CalculateSourceRect}}(layer->GetSourceCrop(), target\_source\_crop);}
+\DoxyCodeLine{92   private\_data\_->source\_layers\_.emplace\_back(layer->GetZorder());}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94   private\_data\_->state\_ = DisplayPlanePrivateState::State::kRender;}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96   \textcolor{comment}{// If layers are less than 2, we need to enforce rect checks as}}
+\DoxyCodeLine{97   \textcolor{comment}{// we shouldn't have done them yet (i.e. Previous state could have}}
+\DoxyCodeLine{98   \textcolor{comment}{// been direct scanout.)}}
+\DoxyCodeLine{99   \textcolor{keywordtype}{bool} rect\_updated = \textcolor{keyword}{true};}
+\DoxyCodeLine{100   \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{101     \textcolor{comment}{// Damage whole old rect.}}
+\DoxyCodeLine{102     surface->UpdateSurfaceDamage(private\_data\_->display\_frame\_, \textcolor{keyword}{true});}
+\DoxyCodeLine{103   \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105   \textcolor{keywordflow}{if} (private\_data\_->source\_layers\_.size() > 2 \&\&}
+\DoxyCodeLine{106       (private\_data\_->display\_frame\_ == target\_display\_frame) \&\&}
+\DoxyCodeLine{107       ((private\_data\_->source\_crop\_ == target\_source\_crop))) \{}
+\DoxyCodeLine{108     rect\_updated = \textcolor{keyword}{false};}
+\DoxyCodeLine{109   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{110     private\_data\_->display\_frame\_ = target\_display\_frame;}
+\DoxyCodeLine{111     private\_data\_->source\_crop\_ = target\_source\_crop;}
+\DoxyCodeLine{112     \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{113       surface->UpdateSurfaceDamage(private\_data\_->display\_frame\_, \textcolor{keyword}{true});}
+\DoxyCodeLine{114     \}}
+\DoxyCodeLine{115   \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117   \textcolor{keywordflow}{if} (!private\_data\_->rect\_updated\_)}
+\DoxyCodeLine{118     private\_data\_->rect\_updated\_ = rect\_updated;}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120   \textcolor{keywordflow}{if} (!private\_data\_->has\_cursor\_layer\_)}
+\DoxyCodeLine{121     private\_data\_->has\_cursor\_layer\_ = layer->IsCursorLayer();}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123   \textcolor{comment}{// TODO: Add checks for Video type once our}}
+\DoxyCodeLine{124   \textcolor{comment}{// Media backend can support compositing more}}
+\DoxyCodeLine{125   \textcolor{comment}{// than one layer together.}}
+\DoxyCodeLine{126   private\_data\_->type\_ = DisplayPlanePrivateState::PlaneType::kNormal;}
+\DoxyCodeLine{127   private\_data\_->apply\_effects\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129   \textcolor{comment}{// Reset Validation state.}}
+\DoxyCodeLine{130   \textcolor{keywordflow}{if} (re\_validate\_layer\_ \& ReValidationType::kScanout)}
+\DoxyCodeLine{131     re\_validate\_layer\_ \&= ~\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}{ReValidationType}}\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aedc800f15466d51911516344e13b0a2d}{::kScanout}};}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133   private\_data\_->refresh\_surface\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{134   \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}{RefreshSurfaces}}(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a9013ff88c3057374f48271defba26707}{NativeSurface::kPartialClear}});}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{137 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a3f56e95cfe47bc77b72682827930ed2c}\label{classhwcomposer_1_1DisplayPlaneState_a3f56e95cfe47bc77b72682827930ed2c}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Apply\+Effects@{Apply\+Effects}}
+\index{Apply\+Effects@{Apply\+Effects}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Apply\+Effects()}{ApplyEffects()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Apply\+Effects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 527 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{527                                            \{}
+\DoxyCodeLine{528   \textcolor{keywordflow}{return} private\_data\_->apply\_effects\_;}
+\DoxyCodeLine{529 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a2ac64be5259b1970748f2904cd9fb9ad}\label{classhwcomposer_1_1DisplayPlaneState_a2ac64be5259b1970748f2904cd9fb9ad}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Can\+Squash@{Can\+Squash}}
+\index{Can\+Squash@{Can\+Squash}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Can\+Squash()}{CanSquash()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Can\+Squash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 581 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{581                                         \{}
+\DoxyCodeLine{582   \textcolor{keywordflow}{if} (private\_data\_->state\_ == DisplayPlanePrivateState::State::kScanout)}
+\DoxyCodeLine{583     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{584 }
+\DoxyCodeLine{585   \textcolor{keywordflow}{if} (private\_data\_->type\_ == DisplayPlanePrivateState::PlaneType::kVideo)}
+\DoxyCodeLine{586     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{587 }
+\DoxyCodeLine{588   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{589 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a4769a056f7c76cb1e3fadf0269ff399d}\label{classhwcomposer_1_1DisplayPlaneState_a4769a056f7c76cb1e3fadf0269ff399d}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Can\+Support\+Video@{Can\+Support\+Video}}
+\index{Can\+Support\+Video@{Can\+Support\+Video}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Can\+Support\+Video()}{CanSupportVideo()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Can\+Support\+Video (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 229 of file displayplanestate.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{229                                \{}
+\DoxyCodeLine{230     \textcolor{keywordflow}{return} private\_data\_->supports\_video\_;}
+\DoxyCodeLine{231   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a1bf41f47af43cae6b25f4e69c117f31b}\label{classhwcomposer_1_1DisplayPlaneState_a1bf41f47af43cae6b25f4e69c117f31b}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Can\+Use\+Display\+Up\+Scaling@{Can\+Use\+Display\+Up\+Scaling}}
+\index{Can\+Use\+Display\+Up\+Scaling@{Can\+Use\+Display\+Up\+Scaling}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Can\+Use\+Display\+Up\+Scaling()}{CanUseDisplayUpScaling()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Can\+Use\+Display\+Up\+Scaling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 620 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{620                                                      \{}
+\DoxyCodeLine{621   \textcolor{keywordflow}{if} (!private\_data\_->rect\_updated\_) \{}
+\DoxyCodeLine{622     \textcolor{keywordflow}{return} private\_data\_->can\_use\_display\_scalar\_;}
+\DoxyCodeLine{623   \}}
+\DoxyCodeLine{624 }
+\DoxyCodeLine{625   \textcolor{keywordtype}{bool} value = \textcolor{keyword}{true};}
+\DoxyCodeLine{626 }
+\DoxyCodeLine{627   \textcolor{comment}{// We cannot use plane scaling for Layers with different scaling ratio.}}
+\DoxyCodeLine{628   \textcolor{keywordflow}{if} (private\_data\_->source\_layers\_.size() > 1) \{}
+\DoxyCodeLine{629     value = \textcolor{keyword}{false};}
+\DoxyCodeLine{630   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (private\_data\_->use\_plane\_scalar\_ \&\&}
+\DoxyCodeLine{631              !private\_data\_->can\_use\_downscaling\_) \{}
+\DoxyCodeLine{632     value = \textcolor{keyword}{false};}
+\DoxyCodeLine{633   \}}
+\DoxyCodeLine{634 }
+\DoxyCodeLine{635   \textcolor{keywordflow}{if} (value) \{}
+\DoxyCodeLine{636     \textcolor{keyword}{const} HwcRect<int> \&target\_display\_frame = private\_data\_->display\_frame\_;}
+\DoxyCodeLine{637     \textcolor{keyword}{const} HwcRect<float> \&target\_src\_rect = private\_data\_->source\_crop\_;}
+\DoxyCodeLine{638     uint32\_t display\_frame\_width =}
+\DoxyCodeLine{639         target\_display\_frame.right - target\_display\_frame.left;}
+\DoxyCodeLine{640     uint32\_t display\_frame\_height =}
+\DoxyCodeLine{641         target\_display\_frame.bottom - target\_display\_frame.top;}
+\DoxyCodeLine{642     uint32\_t source\_crop\_width = \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(}
+\DoxyCodeLine{643         ceilf(target\_src\_rect.right - target\_src\_rect.left));}
+\DoxyCodeLine{644     uint32\_t source\_crop\_height = \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(}
+\DoxyCodeLine{645         ceilf(target\_src\_rect.bottom - target\_src\_rect.top));}
+\DoxyCodeLine{646 }
+\DoxyCodeLine{647     \textcolor{keywordflow}{if} (value) \{}
+\DoxyCodeLine{648       \textcolor{comment}{// Source and Display frame width, height are same and scaling is not}}
+\DoxyCodeLine{649       \textcolor{comment}{// needed.}}
+\DoxyCodeLine{650       \textcolor{keywordflow}{if} ((display\_frame\_width == source\_crop\_width) \&\&}
+\DoxyCodeLine{651           (display\_frame\_height == source\_crop\_height)) \{}
+\DoxyCodeLine{652         value = \textcolor{keyword}{false};}
+\DoxyCodeLine{653       \}}
+\DoxyCodeLine{654 }
+\DoxyCodeLine{655       \textcolor{keywordflow}{if} (value) \{}
+\DoxyCodeLine{656         \textcolor{comment}{// Display frame width, height is lesser than Source. Let's downscale}}
+\DoxyCodeLine{657         \textcolor{comment}{// it with our compositor backend.}}
+\DoxyCodeLine{658         \textcolor{keywordflow}{if} ((display\_frame\_width < source\_crop\_width) \&\&}
+\DoxyCodeLine{659             (display\_frame\_height < source\_crop\_height)) \{}
+\DoxyCodeLine{660           value = \textcolor{keyword}{false};}
+\DoxyCodeLine{661         \}}
+\DoxyCodeLine{662       \}}
+\DoxyCodeLine{663 }
+\DoxyCodeLine{664       \textcolor{keywordflow}{if} (value) \{}
+\DoxyCodeLine{665         \textcolor{comment}{// Display frame height is less. If the cost of upscaling width is less}}
+\DoxyCodeLine{666         \textcolor{comment}{// than downscaling height, than return.}}
+\DoxyCodeLine{667         \textcolor{keywordflow}{if} ((display\_frame\_width > source\_crop\_width) \&\&}
+\DoxyCodeLine{668             (display\_frame\_height < source\_crop\_height)) \{}
+\DoxyCodeLine{669           uint32\_t width\_cost =}
+\DoxyCodeLine{670               (display\_frame\_width - source\_crop\_width) * display\_frame\_height;}
+\DoxyCodeLine{671           uint32\_t height\_cost =}
+\DoxyCodeLine{672               (source\_crop\_height - display\_frame\_height) * display\_frame\_width;}
+\DoxyCodeLine{673           \textcolor{keywordflow}{if} (height\_cost > width\_cost) \{}
+\DoxyCodeLine{674             value = \textcolor{keyword}{false};}
+\DoxyCodeLine{675           \}}
+\DoxyCodeLine{676         \}}
+\DoxyCodeLine{677       \}}
+\DoxyCodeLine{678 }
+\DoxyCodeLine{679       \textcolor{keywordflow}{if} (value) \{}
+\DoxyCodeLine{680         \textcolor{comment}{// Display frame width is less. If the cost of upscaling height is less}}
+\DoxyCodeLine{681         \textcolor{comment}{// than downscaling width, than return.}}
+\DoxyCodeLine{682         \textcolor{keywordflow}{if} ((display\_frame\_width < source\_crop\_width) \&\&}
+\DoxyCodeLine{683             (display\_frame\_height > source\_crop\_height)) \{}
+\DoxyCodeLine{684           uint32\_t width\_cost =}
+\DoxyCodeLine{685               (source\_crop\_width - display\_frame\_width) * display\_frame\_height;}
+\DoxyCodeLine{686           uint32\_t height\_cost =}
+\DoxyCodeLine{687               (display\_frame\_height - source\_crop\_height) * display\_frame\_width;}
+\DoxyCodeLine{688           \textcolor{keywordflow}{if} (width\_cost > height\_cost) \{}
+\DoxyCodeLine{689             value = \textcolor{keyword}{false};}
+\DoxyCodeLine{690           \}}
+\DoxyCodeLine{691         \}}
+\DoxyCodeLine{692       \}}
+\DoxyCodeLine{693     \}}
+\DoxyCodeLine{694   \}}
+\DoxyCodeLine{695 }
+\DoxyCodeLine{696   private\_data\_->can\_use\_display\_scalar\_ = value;}
+\DoxyCodeLine{697 }
+\DoxyCodeLine{698   \textcolor{keywordflow}{return} private\_data\_->can\_use\_display\_scalar\_;}
+\DoxyCodeLine{699 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a0388118f03e5d1504565fa72150a7d98}\label{classhwcomposer_1_1DisplayPlaneState_a0388118f03e5d1504565fa72150a7d98}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Can\+Use\+G\+P\+U\+Down\+Scaling@{Can\+Use\+G\+P\+U\+Down\+Scaling}}
+\index{Can\+Use\+G\+P\+U\+Down\+Scaling@{Can\+Use\+G\+P\+U\+Down\+Scaling}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Can\+Use\+G\+P\+U\+Down\+Scaling()}{CanUseGPUDownScaling()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Can\+Use\+G\+P\+U\+Down\+Scaling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 701 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{701                                                    \{}
+\DoxyCodeLine{702 \textcolor{preprocessor}{\#ifndef ENABLE\_DOWNSCALING}}
+\DoxyCodeLine{703   private\_data\_->can\_use\_downscaling\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{704   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{705 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{706   \textcolor{keywordflow}{if} (!private\_data\_->rect\_updated\_) \{}
+\DoxyCodeLine{707     \textcolor{keywordflow}{return} private\_data\_->can\_use\_downscaling\_;}
+\DoxyCodeLine{708   \}}
+\DoxyCodeLine{709 }
+\DoxyCodeLine{710   \textcolor{keywordtype}{bool} value = \textcolor{keyword}{false};}
+\DoxyCodeLine{711   private\_data\_->can\_use\_downscaling\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{712   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_aa560fed729358bea301f0dcfee1b4b98}{NeedsOffScreenComposition}}()) \{}
+\DoxyCodeLine{713     value = \textcolor{keyword}{false};}
+\DoxyCodeLine{714   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (private\_data\_->use\_plane\_scalar\_ \&\&}
+\DoxyCodeLine{715              private\_data\_->can\_use\_display\_scalar\_) \{}
+\DoxyCodeLine{716     value = \textcolor{keyword}{false};}
+\DoxyCodeLine{717   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{718     \textcolor{keyword}{const} HwcRect<int> \&target\_display\_frame = private\_data\_->display\_frame\_;}
+\DoxyCodeLine{719     \textcolor{keyword}{const} HwcRect<float> \&target\_src\_rect = private\_data\_->source\_crop\_;}
+\DoxyCodeLine{720 }
+\DoxyCodeLine{721     uint32\_t display\_frame\_width =}
+\DoxyCodeLine{722         target\_display\_frame.right - target\_display\_frame.left;}
+\DoxyCodeLine{723     uint32\_t display\_frame\_height =}
+\DoxyCodeLine{724         target\_display\_frame.bottom - target\_display\_frame.top;}
+\DoxyCodeLine{725     uint32\_t source\_crop\_width = \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(}
+\DoxyCodeLine{726         ceilf(target\_src\_rect.right - target\_src\_rect.left));}
+\DoxyCodeLine{727     uint32\_t source\_crop\_height = \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(}
+\DoxyCodeLine{728         ceilf(target\_src\_rect.bottom - target\_src\_rect.top));}
+\DoxyCodeLine{729     \textcolor{keywordflow}{if} (display\_frame\_width < 500) \{}
+\DoxyCodeLine{730       \textcolor{comment}{// Ignore < 500 pixels.}}
+\DoxyCodeLine{731       value = \textcolor{keyword}{false};}
+\DoxyCodeLine{732     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((display\_frame\_width == source\_crop\_width) \&\&}
+\DoxyCodeLine{733                (display\_frame\_height == source\_crop\_height)) \{}
+\DoxyCodeLine{734       value = \textcolor{keyword}{true};}
+\DoxyCodeLine{735     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{736       \textcolor{comment}{// If we are already downscaling content by less than 25\%, no need}}
+\DoxyCodeLine{737       \textcolor{comment}{// for any further downscaling.}}
+\DoxyCodeLine{738       \textcolor{keywordflow}{if} (display\_frame\_width >}
+\DoxyCodeLine{739           (source\_crop\_width -}
+\DoxyCodeLine{740            (source\_crop\_width / private\_data\_->down\_scaling\_factor\_))) \{}
+\DoxyCodeLine{741         value = \textcolor{keyword}{true};}
+\DoxyCodeLine{742       \}}
+\DoxyCodeLine{743     \}}
+\DoxyCodeLine{744   \}}
+\DoxyCodeLine{745 }
+\DoxyCodeLine{746   private\_data\_->can\_use\_downscaling\_ = value;}
+\DoxyCodeLine{747 }
+\DoxyCodeLine{748   \textcolor{keywordflow}{return} private\_data\_->can\_use\_display\_scalar\_;}
+\DoxyCodeLine{749 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a9d078f6263568fea78ba7915e4a6a385}\label{classhwcomposer_1_1DisplayPlaneState_a9d078f6263568fea78ba7915e4a6a385}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Copy\+State@{Copy\+State}}
+\index{Copy\+State@{Copy\+State}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Copy\+State()}{CopyState()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Copy\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                                           \{}
+\DoxyCodeLine{70   private\_data\_ = state.private\_data\_;}
+\DoxyCodeLine{71   \textcolor{keywordflow}{if} (private\_data\_->surfaces\_.size() == 3)}
+\DoxyCodeLine{72     needs\_surface\_allocation\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74   \textcolor{comment}{// We don't copy recycled\_surface\_ state as this}}
+\DoxyCodeLine{75   \textcolor{comment}{// should be determined in DisplayQueue for every frame.}}
+\DoxyCodeLine{76 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a2da76e8aad6edf53502f2ca68030edf4}\label{classhwcomposer_1_1DisplayPlaneState_a2da76e8aad6edf53502f2ca68030edf4}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Disable\+G\+P\+U\+Rendering@{Disable\+G\+P\+U\+Rendering}}
+\index{Disable\+G\+P\+U\+Rendering@{Disable\+G\+P\+U\+Rendering}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Disable\+G\+P\+U\+Rendering()}{DisableGPURendering()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Disable\+G\+P\+U\+Rendering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 296 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{296                                             \{}
+\DoxyCodeLine{297   private\_data\_->state\_ = DisplayPlanePrivateState::State::kScanout;}
+\DoxyCodeLine{298   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{299 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a620538eec4a6a5dbfd62c5ddb697d95d}\label{classhwcomposer_1_1DisplayPlaneState_a620538eec4a6a5dbfd62c5ddb697d95d}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Dump@{Dump}}
+\index{Dump@{Dump}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 813 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{813                              \{}
+\DoxyCodeLine{814   HwcRect<float> scaled\_rect;}
+\DoxyCodeLine{815   CalculateSourceCrop(scaled\_rect);}
+\DoxyCodeLine{816   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"SourceWidth: \%f"}, scaled\_rect.right - scaled\_rect.left);}
+\DoxyCodeLine{817   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"SourceHeight: \%f"}, scaled\_rect.bottom - scaled\_rect.top);}
+\DoxyCodeLine{818   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"DstWidth: \%d"}, private\_data\_->display\_frame\_.right -}
+\DoxyCodeLine{819                                 private\_data\_->display\_frame\_.left);}
+\DoxyCodeLine{820   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"DstHeight: \%d"}, private\_data\_->display\_frame\_.bottom -}
+\DoxyCodeLine{821                                  private\_data\_->display\_frame\_.top);}
+\DoxyCodeLine{822 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a6caea69cc46139ce6548ff2b029acbb0}\label{classhwcomposer_1_1DisplayPlaneState_a6caea69cc46139ce6548ff2b029acbb0}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Force\+G\+P\+U\+Rendering@{Force\+G\+P\+U\+Rendering}}
+\index{Force\+G\+P\+U\+Rendering@{Force\+G\+P\+U\+Rendering}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Force\+G\+P\+U\+Rendering()}{ForceGPURendering()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Force\+G\+P\+U\+Rendering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 291 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{291                                           \{}
+\DoxyCodeLine{292   private\_data\_->state\_ = DisplayPlanePrivateState::State::kRender;}
+\DoxyCodeLine{293   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{294 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a82bcf9816ab0727cb9c015b93da6458c}\label{classhwcomposer_1_1DisplayPlaneState_a82bcf9816ab0727cb9c015b93da6458c}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Composition\+Region@{Get\+Composition\+Region}}
+\index{Get\+Composition\+Region@{Get\+Composition\+Region}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Composition\+Region()}{GetCompositionRegion()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1CompositionRegion}{Composition\+Region}} $>$ \& hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Composition\+Region (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 452 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{452                                                                       \{}
+\DoxyCodeLine{453   \textcolor{keywordflow}{return} private\_data\_->composition\_region\_;}
+\DoxyCodeLine{454 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ab25f0fdaa944c5d4e4381f0b16f5fe5f}\label{classhwcomposer_1_1DisplayPlaneState_ab25f0fdaa944c5d4e4381f0b16f5fe5f}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Display\+Frame@{Get\+Display\+Frame}}
+\index{Get\+Display\+Frame@{Get\+Display\+Frame}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Display\+Frame()}{GetDisplayFrame()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$ int $>$ \& hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Display\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 78 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                              \{}
+\DoxyCodeLine{79   \textcolor{keywordflow}{return} private\_data\_->display\_frame\_;}
+\DoxyCodeLine{80 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a80539fcee6c9dff4f48f03f27474c7b0}\label{classhwcomposer_1_1DisplayPlaneState_a80539fcee6c9dff4f48f03f27474c7b0}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Display\+Plane@{Get\+Display\+Plane}}
+\index{Get\+Display\+Plane@{Get\+Display\+Plane}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Display\+Plane()}{GetDisplayPlane()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane}{Display\+Plane}} $\ast$ hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Display\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 444 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{444                                                        \{}
+\DoxyCodeLine{445   \textcolor{keywordflow}{return} private\_data\_->plane\_;}
+\DoxyCodeLine{446 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ab4e0c78ad49efbe3c0b3853ebe4d0489}\label{classhwcomposer_1_1DisplayPlaneState_ab4e0c78ad49efbe3c0b3853ebe4d0489}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Down\+Scaling\+Factor@{Get\+Down\+Scaling\+Factor}}
+\index{Get\+Down\+Scaling\+Factor@{Get\+Down\+Scaling\+Factor}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Down\+Scaling\+Factor()}{GetDownScalingFactor()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Down\+Scaling\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 794 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{794                                                        \{}
+\DoxyCodeLine{795   \textcolor{keywordflow}{return} private\_data\_->down\_scaling\_factor\_;}
+\DoxyCodeLine{796 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a1f7fe7a4a76b65cf04dbbde8ecaf6efa}\label{classhwcomposer_1_1DisplayPlaneState_a1f7fe7a4a76b65cf04dbbde8ecaf6efa}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Off\+Screen\+Target@{Get\+Off\+Screen\+Target}}
+\index{Get\+Off\+Screen\+Target@{Get\+Off\+Screen\+Target}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Off\+Screen\+Target()}{GetOffScreenTarget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$ hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Off\+Screen\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 325 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{325                                                            \{}
+\DoxyCodeLine{326   \textcolor{keywordflow}{if} (private\_data\_->surfaces\_.size() == 0) \{}
+\DoxyCodeLine{327     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{328   \}}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{330   \textcolor{keywordflow}{return} private\_data\_->surfaces\_.at(0);}
+\DoxyCodeLine{331 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ac2efa7f10a97d64c9bcb8a41c49366ba}\label{classhwcomposer_1_1DisplayPlaneState_ac2efa7f10a97d64c9bcb8a41c49366ba}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Overlay\+Layer@{Get\+Overlay\+Layer}}
+\index{Get\+Overlay\+Layer@{Get\+Overlay\+Layer}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Overlay\+Layer()}{GetOverlayLayer()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$ hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Overlay\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 306 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{306                                                              \{}
+\DoxyCodeLine{307   \textcolor{keywordflow}{return} private\_data\_->layer\_;}
+\DoxyCodeLine{308 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a952636f7cf311678e40ad2b85812f2f0}\label{classhwcomposer_1_1DisplayPlaneState_a952636f7cf311678e40ad2b85812f2f0}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Rotation\+Type@{Get\+Rotation\+Type}}
+\index{Get\+Rotation\+Type@{Get\+Rotation\+Type}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Rotation\+Type()}{GetRotationType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}{Display\+Plane\+State\+::\+Rotation\+Type}} hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Rotation\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 770 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{770                                                                        \{}
+\DoxyCodeLine{771   \textcolor{keywordflow}{return} private\_data\_->rotation\_type\_;}
+\DoxyCodeLine{772 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_afc3838db64b5f6b368056c2d752540ee}\label{classhwcomposer_1_1DisplayPlaneState_afc3838db64b5f6b368056c2d752540ee}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Source\+Crop@{Get\+Source\+Crop}}
+\index{Get\+Source\+Crop@{Get\+Source\+Crop}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Source\+Crop()}{GetSourceCrop()}}
+{\footnotesize\ttfamily const Hwc\+Rect$<$ float $>$ \& hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Source\+Crop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 82 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                                                              \{}
+\DoxyCodeLine{83   \textcolor{keywordflow}{return} private\_data\_->source\_crop\_;}
+\DoxyCodeLine{84 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a7b64f85b76a5d69e28cdec6ad6012c85}\label{classhwcomposer_1_1DisplayPlaneState_a7b64f85b76a5d69e28cdec6ad6012c85}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Source\+Layers@{Get\+Source\+Layers}}
+\index{Get\+Source\+Layers@{Get\+Source\+Layers}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Source\+Layers()}{GetSourceLayers()}}
+{\footnotesize\ttfamily const std\+::vector$<$ size\+\_\+t $>$ \& hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Source\+Layers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 448 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{448                                                                   \{}
+\DoxyCodeLine{449   \textcolor{keywordflow}{return} private\_data\_->source\_layers\_;}
+\DoxyCodeLine{450 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a8b725592feb3ae11620bfce898c4d5be}\label{classhwcomposer_1_1DisplayPlaneState_a8b725592feb3ae11620bfce898c4d5be}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Get\+Surfaces@{Get\+Surfaces}}
+\index{Get\+Surfaces@{Get\+Surfaces}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Get\+Surfaces()}{GetSurfaces()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$ $>$ \& hwcomposer\+::\+Display\+Plane\+State\+::\+Get\+Surfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 385 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{385                                                                        \{}
+\DoxyCodeLine{386   \textcolor{keywordflow}{return} private\_data\_->surfaces\_;}
+\DoxyCodeLine{387 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a1459f66800f0c8a2dd2f466b3c8b41d1}\label{classhwcomposer_1_1DisplayPlaneState_a1459f66800f0c8a2dd2f466b3c8b41d1}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Handle\+Commit\+Failure@{Handle\+Commit\+Failure}}
+\index{Handle\+Commit\+Failure@{Handle\+Commit\+Failure}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Handle\+Commit\+Failure()}{HandleCommitFailure()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Handle\+Commit\+Failure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 358 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{358                                             \{}
+\DoxyCodeLine{359   \textcolor{keywordtype}{size\_t} size = private\_data\_->surfaces\_.size();}
+\DoxyCodeLine{360   \textcolor{keywordflow}{if} (size == 0)}
+\DoxyCodeLine{361     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{362 }
+\DoxyCodeLine{363   \textcolor{keywordflow}{if} (surface\_swapped\_) \{}
+\DoxyCodeLine{364     \textcolor{keywordflow}{if} (size == 3) \{}
+\DoxyCodeLine{365       std::vector<NativeSurface *> temp;}
+\DoxyCodeLine{366       temp.reserve(size);}
+\DoxyCodeLine{367       \textcolor{comment}{// Lets make sure we restore the buffer queue.}}
+\DoxyCodeLine{368       temp.emplace\_back(private\_data\_->surfaces\_.at(1));}
+\DoxyCodeLine{369       temp.emplace\_back(private\_data\_->surfaces\_.at(2));}
+\DoxyCodeLine{370       temp.emplace\_back(private\_data\_->surfaces\_.at(0));}
+\DoxyCodeLine{371       private\_data\_->surfaces\_.swap(temp);}
+\DoxyCodeLine{372     \}}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{374     NativeSurface *surface = private\_data\_->surfaces\_.at(0);}
+\DoxyCodeLine{375     private\_data\_->layer\_ = surface->GetLayer();}
+\DoxyCodeLine{376   \}}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < size; i++) \{}
+\DoxyCodeLine{379     NativeSurface *surface = private\_data\_->surfaces\_.at(i);}
+\DoxyCodeLine{380     surface->SetSurfaceAge(2 - i);}
+\DoxyCodeLine{381     surface->SetClearSurface(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{NativeSurface::kFullClear}});}
+\DoxyCodeLine{382   \}}
+\DoxyCodeLine{383 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ae7bb8080cc8ee5b5361d2a024a806192}\label{classhwcomposer_1_1DisplayPlaneState_ae7bb8080cc8ee5b5361d2a024a806192}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Has\+Cursor\+Layer@{Has\+Cursor\+Layer}}
+\index{Has\+Cursor\+Layer@{Has\+Cursor\+Layer}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Has\+Cursor\+Layer()}{HasCursorLayer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Has\+Cursor\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 467 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{467                                              \{}
+\DoxyCodeLine{468   \textcolor{keywordflow}{return} private\_data\_->has\_cursor\_layer\_;}
+\DoxyCodeLine{469 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ac555ba37fe851fee55a7ffda0b5be599}\label{classhwcomposer_1_1DisplayPlaneState_ac555ba37fe851fee55a7ffda0b5be599}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Is\+Cursor\+Plane@{Is\+Cursor\+Plane}}
+\index{Is\+Cursor\+Plane@{Is\+Cursor\+Plane}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Is\+Cursor\+Plane()}{IsCursorPlane()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Is\+Cursor\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 463 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{463                                             \{}
+\DoxyCodeLine{464   \textcolor{keywordflow}{return} private\_data\_->type\_ == DisplayPlanePrivateState::PlaneType::kCursor;}
+\DoxyCodeLine{465 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ae87c91a3015833eb4882e42276d55925}\label{classhwcomposer_1_1DisplayPlaneState_ae87c91a3015833eb4882e42276d55925}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Is\+Surface\+Recycled@{Is\+Surface\+Recycled}}
+\index{Is\+Surface\+Recycled@{Is\+Surface\+Recycled}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Is\+Surface\+Recycled()}{IsSurfaceRecycled()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Is\+Surface\+Recycled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 223 of file displayplanestate.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{223                                  \{}
+\DoxyCodeLine{224     \textcolor{keywordflow}{return} recycled\_surface\_;}
+\DoxyCodeLine{225   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a15e55a34c3b5ca53096f50c7b499483b}\label{classhwcomposer_1_1DisplayPlaneState_a15e55a34c3b5ca53096f50c7b499483b}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Is\+Using\+Plane\+Scalar@{Is\+Using\+Plane\+Scalar}}
+\index{Is\+Using\+Plane\+Scalar@{Is\+Using\+Plane\+Scalar}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Is\+Using\+Plane\+Scalar()}{IsUsingPlaneScalar()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Is\+Using\+Plane\+Scalar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 508 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{508                                                  \{}
+\DoxyCodeLine{509   \textcolor{keywordflow}{return} private\_data\_->use\_plane\_scalar\_;}
+\DoxyCodeLine{510 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a6d938a233ed083ac445272d3ac068a48}\label{classhwcomposer_1_1DisplayPlaneState_a6d938a233ed083ac445272d3ac068a48}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Is\+Video\+Plane@{Is\+Video\+Plane}}
+\index{Is\+Video\+Plane@{Is\+Video\+Plane}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Is\+Video\+Plane()}{IsVideoPlane()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Is\+Video\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 471 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{471                                            \{}
+\DoxyCodeLine{472   \textcolor{keywordflow}{return} private\_data\_->type\_ == DisplayPlanePrivateState::PlaneType::kVideo;}
+\DoxyCodeLine{473 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_aa560fed729358bea301f0dcfee1b4b98}\label{classhwcomposer_1_1DisplayPlaneState_aa560fed729358bea301f0dcfee1b4b98}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Needs\+Off\+Screen\+Composition@{Needs\+Off\+Screen\+Composition}}
+\index{Needs\+Off\+Screen\+Composition@{Needs\+Off\+Screen\+Composition}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Needs\+Off\+Screen\+Composition()}{NeedsOffScreenComposition()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Needs\+Off\+Screen\+Composition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 543 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{543                                                         \{}
+\DoxyCodeLine{544   \textcolor{keywordflow}{if} (private\_data\_->state\_ == DisplayPlanePrivateState::State::kRender)}
+\DoxyCodeLine{545     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{546 }
+\DoxyCodeLine{547   \textcolor{keywordflow}{if} (private\_data\_->apply\_effects\_) \{}
+\DoxyCodeLine{548     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{549   \}}
+\DoxyCodeLine{550 }
+\DoxyCodeLine{551   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{552 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_ac4f2030aecdb55059e7177597f5887d6}\label{classhwcomposer_1_1DisplayPlaneState_ac4f2030aecdb55059e7177597f5887d6}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Needs\+Surface\+Allocation@{Needs\+Surface\+Allocation}}
+\index{Needs\+Surface\+Allocation@{Needs\+Surface\+Allocation}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Needs\+Surface\+Allocation()}{NeedsSurfaceAllocation()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Needs\+Surface\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 211 of file displayplanestate.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{211                                       \{}
+\DoxyCodeLine{212     \textcolor{keywordflow}{return} needs\_surface\_allocation\_;}
+\DoxyCodeLine{213   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a8b6171b63e92d58b6f61742b7d816fd3}\label{classhwcomposer_1_1DisplayPlaneState_a8b6171b63e92d58b6f61742b7d816fd3}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}}\& hwcomposer\+::\+Display\+Plane\+State\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState}{Display\+Plane\+State}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_acdbd9b16d22e9100bfa6b5700998ba44}\label{classhwcomposer_1_1DisplayPlaneState_acdbd9b16d22e9100bfa6b5700998ba44}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Refresh\+Layer\+Rects@{Refresh\+Layer\+Rects}}
+\index{Refresh\+Layer\+Rects@{Refresh\+Layer\+Rects}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Refresh\+Layer\+Rects()}{RefreshLayerRects()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Refresh\+Layer\+Rects (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers }\end{DoxyParamCaption})}
+
+
+
+Definition at line 239 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{240                                            \{}
+\DoxyCodeLine{241   \textcolor{keyword}{const} std::vector<size\_t> \&current\_layers = private\_data\_->source\_layers\_;}
+\DoxyCodeLine{242   HwcRect<int> target\_display\_frame;}
+\DoxyCodeLine{243   HwcRect<float> target\_source\_crop;}
+\DoxyCodeLine{244   HwcRect<int> surface\_damage = HwcRect<int>(0, 0, 0, 0);}
+\DoxyCodeLine{245   \textcolor{keywordtype}{bool} only\_cursor\_layer = \textcolor{keyword}{true};}
+\DoxyCodeLine{246   \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \&index : current\_layers) \{}
+\DoxyCodeLine{247     \textcolor{keyword}{const} OverlayLayer \&layer = layers.at(index);}
+\DoxyCodeLine{248     \textcolor{keyword}{const} HwcRect<int> \&df = layer.GetDisplayFrame();}
+\DoxyCodeLine{249     \textcolor{keyword}{const} HwcRect<float> \&source\_crop = layer.GetSourceCrop();}
+\DoxyCodeLine{250     \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(df, target\_display\_frame);}
+\DoxyCodeLine{251     \mbox{\hyperlink{namespacehwcomposer_a8b391b601cac0f823b0378aecc48062e}{CalculateSourceRect}}(source\_crop, target\_source\_crop);}
+\DoxyCodeLine{252     \textcolor{keywordflow}{if} (!layer.IsCursorLayer() \&\& (layer.HasDimensionsChanged())) \{}
+\DoxyCodeLine{253       only\_cursor\_layer = \textcolor{keyword}{false};}
+\DoxyCodeLine{254     \}}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256     \textcolor{keywordflow}{if} (layer.HasLayerContentChanged()) \{}
+\DoxyCodeLine{257       \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(layer.GetSurfaceDamage(), surface\_damage);}
+\DoxyCodeLine{258     \}}
+\DoxyCodeLine{259   \}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261   \textcolor{keywordflow}{if} (!only\_cursor\_layer) \{}
+\DoxyCodeLine{262     \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(private\_data\_->display\_frame\_, surface\_damage);}
+\DoxyCodeLine{263   \}}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265   \textcolor{keywordtype}{bool} rect\_updated = \textcolor{keyword}{true};}
+\DoxyCodeLine{266   \textcolor{keywordflow}{if} ((private\_data\_->display\_frame\_ == target\_display\_frame) \&\&}
+\DoxyCodeLine{267       ((private\_data\_->source\_crop\_ == target\_source\_crop))) \{}
+\DoxyCodeLine{268     rect\_updated = \textcolor{keyword}{false};}
+\DoxyCodeLine{269   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{270     private\_data\_->display\_frame\_ = target\_display\_frame;}
+\DoxyCodeLine{271     private\_data\_->source\_crop\_ = target\_source\_crop;}
+\DoxyCodeLine{272     \textcolor{keywordflow}{if} (!only\_cursor\_layer) \{}
+\DoxyCodeLine{273       \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(private\_data\_->display\_frame\_, surface\_damage);}
+\DoxyCodeLine{274     \}}
+\DoxyCodeLine{275   \}}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{277   \textcolor{keywordflow}{if} (!private\_data\_->rect\_updated\_)}
+\DoxyCodeLine{278     private\_data\_->rect\_updated\_ = rect\_updated;}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280   private\_data\_->refresh\_surface\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{281   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{282   \textcolor{keywordflow}{if} (!surface\_damage.empty()) \{}
+\DoxyCodeLine{283     \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{284       surface->UpdateSurfaceDamage(surface\_damage, \textcolor{keyword}{true});}
+\DoxyCodeLine{285     \}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287     \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}{RefreshSurfaces}}(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a9013ff88c3057374f48271defba26707}{NativeSurface::kPartialClear}});}
+\DoxyCodeLine{288   \}}
+\DoxyCodeLine{289 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}\label{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Refresh\+Surfaces@{Refresh\+Surfaces}}
+\index{Refresh\+Surfaces@{Refresh\+Surfaces}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Refresh\+Surfaces()}{RefreshSurfaces()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Refresh\+Surfaces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6}{Native\+Surface\+::\+Clear\+Type}}}]{clear\+\_\+surface,  }\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 399 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{400                                                     \{}
+\DoxyCodeLine{401   \textcolor{keywordflow}{if} (!private\_data\_->refresh\_surface\_ \&\& !force) \{}
+\DoxyCodeLine{402     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{403   \}}
+\DoxyCodeLine{404 }
+\DoxyCodeLine{405   \textcolor{keyword}{const} HwcRect<int> \&target\_display\_frame = private\_data\_->display\_frame\_;}
+\DoxyCodeLine{406   HwcRect<float> scaled\_rect;}
+\DoxyCodeLine{407   CalculateSourceCrop(scaled\_rect);}
+\DoxyCodeLine{408 }
+\DoxyCodeLine{409   \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{410     surface->ResetDisplayFrame(target\_display\_frame);}
+\DoxyCodeLine{411     surface->ResetSourceCrop(scaled\_rect);}
+\DoxyCodeLine{412 }
+\DoxyCodeLine{413     \textcolor{keywordtype}{bool} clear = surface->ClearSurface();}
+\DoxyCodeLine{414     \textcolor{keywordtype}{bool} partial\_clear = surface->IsPartialClear();}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416     \textcolor{keywordflow}{if} (clear\_surface == \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{NativeSurface::kFullClear}}) \{}
+\DoxyCodeLine{417       surface->SetClearSurface(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{NativeSurface::kFullClear}});}
+\DoxyCodeLine{418     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!clear \&\& !partial\_clear) \{}
+\DoxyCodeLine{419       surface->SetClearSurface(clear\_surface);}
+\DoxyCodeLine{420     \}}
+\DoxyCodeLine{421   \}}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{423   \textcolor{keywordflow}{if} (private\_data\_->rect\_updated\_) \{}
+\DoxyCodeLine{424     \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_abe1d277b77a97323c588993484312dd3}{ValidateReValidation}}();}
+\DoxyCodeLine{425   \}}
+\DoxyCodeLine{426 }
+\DoxyCodeLine{427   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{428   private\_data\_->refresh\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{429 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a10c469b7a0d06ffe86bfdbd211cc7c1a}\label{classhwcomposer_1_1DisplayPlaneState_a10c469b7a0d06ffe86bfdbd211cc7c1a}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Release\+Surfaces@{Release\+Surfaces}}
+\index{Release\+Surfaces@{Release\+Surfaces}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Release\+Surfaces()}{ReleaseSurfaces()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Release\+Surfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 389 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{389                                         \{}
+\DoxyCodeLine{390   \textcolor{keywordflow}{if} (!private\_data\_->surfaces\_.empty()) \{}
+\DoxyCodeLine{391     std::vector<NativeSurface *>().swap(private\_data\_->surfaces\_);}
+\DoxyCodeLine{392     private\_data\_->layer\_ = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{393   \}}
+\DoxyCodeLine{394 }
+\DoxyCodeLine{395   needs\_surface\_allocation\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{396   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{397 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a075df3470b1301fbbfa05b4b6cd98168}\label{classhwcomposer_1_1DisplayPlaneState_a075df3470b1301fbbfa05b4b6cd98168}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Reset\+Composition\+Region@{Reset\+Composition\+Region}}
+\index{Reset\+Composition\+Region@{Reset\+Composition\+Region}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Reset\+Composition\+Region()}{ResetCompositionRegion()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Reset\+Composition\+Region (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 456 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{456                                                \{}
+\DoxyCodeLine{457   \textcolor{keywordflow}{if} (!private\_data\_->composition\_region\_.empty())}
+\DoxyCodeLine{458     std::vector<CompositionRegion>().swap(private\_data\_->composition\_region\_);}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{460   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{461 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a639a5b33751b90cc4a76a94d6d5032e2}\label{classhwcomposer_1_1DisplayPlaneState_a639a5b33751b90cc4a76a94d6d5032e2}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Reset\+Layers@{Reset\+Layers}}
+\index{Reset\+Layers@{Reset\+Layers}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Reset\+Layers()}{ResetLayers()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Reset\+Layers (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers,  }\item[{size\+\_\+t}]{remove\+\_\+index,  }\item[{bool $\ast$}]{rects\+\_\+updated }\end{DoxyParamCaption})}
+
+
+
+Definition at line 139 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140                                                                               \{}
+\DoxyCodeLine{141   std::vector<size\_t> current\_layers = private\_data\_->source\_layers\_;}
+\DoxyCodeLine{142   std::vector<size\_t>().swap(private\_data\_->source\_layers\_);}
+\DoxyCodeLine{143   std::vector<size\_t> \&new\_layers = private\_data\_->source\_layers\_;}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145   private\_data\_->has\_cursor\_layer\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{146   HwcRect<int> target\_display\_frame;}
+\DoxyCodeLine{147   HwcRect<float> target\_source\_crop;}
+\DoxyCodeLine{148   \textcolor{keywordtype}{bool} has\_video = \textcolor{keyword}{false};}
+\DoxyCodeLine{149   \textcolor{keywordtype}{bool} layer\_removed = \textcolor{keyword}{false};}
+\DoxyCodeLine{150   \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \&index : current\_layers) \{}
+\DoxyCodeLine{151     \textcolor{keywordflow}{if} (index >= remove\_index) \{}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{153       \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"Reset breaks index: \%d remove\_index \%d \(\backslash\)n"}, index,}
+\DoxyCodeLine{154                     remove\_index);}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{156       layer\_removed = \textcolor{keyword}{true};}
+\DoxyCodeLine{157       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     \textcolor{keyword}{const} OverlayLayer \&layer = layers.at(index);}
+\DoxyCodeLine{161     \textcolor{keywordtype}{bool} is\_cursor = layer.IsCursorLayer();}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     \textcolor{keywordflow}{if} (is\_cursor) \{}
+\DoxyCodeLine{164       private\_data\_->has\_cursor\_layer\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{165     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!has\_video) \{}
+\DoxyCodeLine{166       has\_video = layer.IsVideoLayer();}
+\DoxyCodeLine{167     \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169     \textcolor{keyword}{const} HwcRect<int> \&df = layer.GetDisplayFrame();}
+\DoxyCodeLine{170     \textcolor{keyword}{const} HwcRect<float> \&source\_crop = layer.GetSourceCrop();}
+\DoxyCodeLine{171     \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{CalculateRect}}(df, target\_display\_frame);}
+\DoxyCodeLine{172     \mbox{\hyperlink{namespacehwcomposer_a8b391b601cac0f823b0378aecc48062e}{CalculateSourceRect}}(source\_crop, target\_source\_crop);}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{174     \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(\textcolor{stringliteral}{"Reset adds index: \%d \(\backslash\)n"}, layer.GetZorder());}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{176     new\_layers.emplace\_back(layer.GetZorder());}
+\DoxyCodeLine{177   \}}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#ifdef SURFACE\_TRACING}}
+\DoxyCodeLine{180   \mbox{\hyperlink{hwctrace_8h_a13ce5e3bbbbc8b8abe718d0c4631ee1d}{ISURFACETRACE}}(}
+\DoxyCodeLine{181       \textcolor{stringliteral}{"Reset called has\_video: \%d Source Layers Size: \%d Previous Source "}}
+\DoxyCodeLine{182       \textcolor{stringliteral}{"Layers Size: \%d Has Cursor: \%d Total Layers Size: \%d \(\backslash\)n"},}
+\DoxyCodeLine{183       has\_video, private\_data\_->source\_layers\_.size(), current\_layers.size(),}
+\DoxyCodeLine{184       private\_data\_->has\_cursor\_layer\_, layers.size());}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187   \textcolor{keywordflow}{if} (private\_data\_->source\_layers\_.empty()) \{}
+\DoxyCodeLine{188     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{189   \}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191   \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{192     \textcolor{comment}{// Damage whole old rect.}}
+\DoxyCodeLine{193     surface->UpdateSurfaceDamage(private\_data\_->display\_frame\_, \textcolor{keyword}{true});}
+\DoxyCodeLine{194   \}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196   \textcolor{keywordtype}{bool} rect\_updated = \textcolor{keyword}{true};}
+\DoxyCodeLine{197   \textcolor{keywordflow}{if} ((private\_data\_->display\_frame\_ == target\_display\_frame) \&\&}
+\DoxyCodeLine{198       ((private\_data\_->source\_crop\_ == target\_source\_crop))) \{}
+\DoxyCodeLine{199     rect\_updated = \textcolor{keyword}{false};}
+\DoxyCodeLine{200   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{201     private\_data\_->display\_frame\_ = target\_display\_frame;}
+\DoxyCodeLine{202     private\_data\_->source\_crop\_ = target\_source\_crop;}
+\DoxyCodeLine{203     \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{204       surface->UpdateSurfaceDamage(private\_data\_->display\_frame\_, \textcolor{keyword}{true});}
+\DoxyCodeLine{205     \}}
+\DoxyCodeLine{206   \}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208   \textcolor{keywordflow}{if} (!private\_data\_->rect\_updated\_)}
+\DoxyCodeLine{209     private\_data\_->rect\_updated\_ = rect\_updated;}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211   *rects\_updated = rect\_updated;}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213   \textcolor{keywordflow}{if} (private\_data\_->source\_layers\_.size() == 1) \{}
+\DoxyCodeLine{214     \textcolor{keywordflow}{if} (private\_data\_->has\_cursor\_layer\_) \{}
+\DoxyCodeLine{215       private\_data\_->type\_ = DisplayPlanePrivateState::PlaneType::kCursor;}
+\DoxyCodeLine{216     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (has\_video) \{}
+\DoxyCodeLine{217       private\_data\_->type\_ = DisplayPlanePrivateState::PlaneType::kVideo;}
+\DoxyCodeLine{218     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{219       private\_data\_->type\_ = DisplayPlanePrivateState::PlaneType::kNormal;}
+\DoxyCodeLine{220     \}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222     \textcolor{keywordflow}{if} (!has\_video) \{}
+\DoxyCodeLine{223       re\_validate\_layer\_ |= ReValidationType::kScanout;}
+\DoxyCodeLine{224     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{225       \textcolor{comment}{// Reset Validation state.}}
+\DoxyCodeLine{226       re\_validate\_layer\_ \&= ~\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}{ReValidationType}}\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aedc800f15466d51911516344e13b0a2d}{::kScanout}};}
+\DoxyCodeLine{227     \}}
+\DoxyCodeLine{228   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{229     private\_data\_->type\_ = DisplayPlanePrivateState::PlaneType::kNormal;}
+\DoxyCodeLine{230     \textcolor{comment}{// Reset Validation state.}}
+\DoxyCodeLine{231     re\_validate\_layer\_ \&= ~\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}{ReValidationType}}\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aedc800f15466d51911516344e13b0a2d}{::kScanout}};}
+\DoxyCodeLine{232   \}}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234   private\_data\_->refresh\_surface\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{235   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{236   \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}{RefreshSurfaces}}(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a9013ff88c3057374f48271defba26707}{NativeSurface::kPartialClear}});}
+\DoxyCodeLine{237 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_aed4135ad5bbd3274d2729f8984b25549}\label{classhwcomposer_1_1DisplayPlaneState_aed4135ad5bbd3274d2729f8984b25549}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Revalidation\+Done@{Revalidation\+Done}}
+\index{Revalidation\+Done@{Revalidation\+Done}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Revalidation\+Done()}{RevalidationDone()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Revalidation\+Done (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{validation\+\_\+done }\end{DoxyParamCaption})}
+
+
+
+Definition at line 558 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{558                                                                  \{}
+\DoxyCodeLine{559   \textcolor{keywordflow}{if} (validation\_done == ReValidationType::kNone)}
+\DoxyCodeLine{560     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{562   \textcolor{keywordflow}{if} (validation\_done \& ReValidationType::kScanout) \{}
+\DoxyCodeLine{563     re\_validate\_layer\_ \&= ~\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}{ReValidationType}}\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589aedc800f15466d51911516344e13b0a2d}{::kScanout}};}
+\DoxyCodeLine{564   \}}
+\DoxyCodeLine{565 }
+\DoxyCodeLine{566   \textcolor{keywordflow}{if} (validation\_done \& ReValidationType::kUpScalar) \{}
+\DoxyCodeLine{567     re\_validate\_layer\_ \&= ~\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}{ReValidationType}}\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a0f91100752f5d2f143b10222f264c133}{::kUpScalar}};}
+\DoxyCodeLine{568   \}}
+\DoxyCodeLine{569 }
+\DoxyCodeLine{570   \textcolor{keywordflow}{if} (validation\_done \& ReValidationType::kRotation) \{}
+\DoxyCodeLine{571     re\_validate\_layer\_ \&= ~\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}{ReValidationType}}\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a7d1a994f2b7c02f18851dca8471a1450}{::kRotation}};}
+\DoxyCodeLine{572   \}}
+\DoxyCodeLine{573 }
+\DoxyCodeLine{574   \textcolor{keywordflow}{if} (validation\_done \& ReValidationType::kDownScaling) \{}
+\DoxyCodeLine{575     re\_validate\_layer\_ \&= ~\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589}{ReValidationType}}\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_ad2e0ccaa6d76d538d9338563c91db589a9295f4ad53b9f22fe8b976dd4afd84e0}{::kDownScaling}};}
+\DoxyCodeLine{576   \}}
+\DoxyCodeLine{577 }
+\DoxyCodeLine{578   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{579 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a1df1d57e6ec6d9c79d520c5f9b48f8c3}\label{classhwcomposer_1_1DisplayPlaneState_a1df1d57e6ec6d9c79d520c5f9b48f8c3}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Revalidation\+Type@{Revalidation\+Type}}
+\index{Revalidation\+Type@{Revalidation\+Type}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Revalidation\+Type()}{RevalidationType()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Display\+Plane\+State\+::\+Revalidation\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 554 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{554                                                    \{}
+\DoxyCodeLine{555   \textcolor{keywordflow}{return} re\_validate\_layer\_;}
+\DoxyCodeLine{556 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a69b12573e464516fa0a96fc55eed8ba8}\label{classhwcomposer_1_1DisplayPlaneState_a69b12573e464516fa0a96fc55eed8ba8}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Scanout@{Scanout}}
+\index{Scanout@{Scanout}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Scanout()}{Scanout()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Display\+Plane\+State\+::\+Scanout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 531 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{531                                       \{}
+\DoxyCodeLine{532   \textcolor{keywordflow}{if} (recycled\_surface\_) \{}
+\DoxyCodeLine{533     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{534   \}}
+\DoxyCodeLine{535 }
+\DoxyCodeLine{536   \textcolor{keywordflow}{if} (private\_data\_->apply\_effects\_) \{}
+\DoxyCodeLine{537     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{538   \}}
+\DoxyCodeLine{539 }
+\DoxyCodeLine{540   \textcolor{keywordflow}{return} private\_data\_->state\_ == DisplayPlanePrivateState::State::kScanout;}
+\DoxyCodeLine{541 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a4fd65b7fd1dacb02778349a95c6adbaf}\label{classhwcomposer_1_1DisplayPlaneState_a4fd65b7fd1dacb02778349a95c6adbaf}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Set\+Apply\+Effects@{Set\+Apply\+Effects}}
+\index{Set\+Apply\+Effects@{Set\+Apply\+Effects}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Set\+Apply\+Effects()}{SetApplyEffects()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Set\+Apply\+Effects (\begin{DoxyParamCaption}\item[{bool}]{apply\+\_\+effects }\end{DoxyParamCaption})}
+
+
+
+Definition at line 512 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{512                                                           \{}
+\DoxyCodeLine{513   \textcolor{keywordflow}{if} (private\_data\_->apply\_effects\_ != apply\_effects) \{}
+\DoxyCodeLine{514     private\_data\_->apply\_effects\_ = apply\_effects;}
+\DoxyCodeLine{515     \textcolor{comment}{// Doesn't have any impact on planes which}}
+\DoxyCodeLine{516     \textcolor{comment}{// are not meant for video.}}
+\DoxyCodeLine{517     \textcolor{keywordflow}{if} (apply\_effects \&\&}
+\DoxyCodeLine{518         private\_data\_->type\_ != DisplayPlanePrivateState::PlaneType::kVideo) \{}
+\DoxyCodeLine{519       private\_data\_->apply\_effects\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{520     \}}
+\DoxyCodeLine{521 }
+\DoxyCodeLine{522     \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a075df3470b1301fbbfa05b4b6cd98168}{ResetCompositionRegion}}();}
+\DoxyCodeLine{523     recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{524   \}}
+\DoxyCodeLine{525 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a5ab29e4685340c83b8c71bfffc5adbba}\label{classhwcomposer_1_1DisplayPlaneState_a5ab29e4685340c83b8c71bfffc5adbba}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Set\+Display\+Down\+Scaling\+Factor@{Set\+Display\+Down\+Scaling\+Factor}}
+\index{Set\+Display\+Down\+Scaling\+Factor@{Set\+Display\+Down\+Scaling\+Factor}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Set\+Display\+Down\+Scaling\+Factor()}{SetDisplayDownScalingFactor()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Set\+Display\+Down\+Scaling\+Factor (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{factor,  }\item[{bool}]{clear\+\_\+surfaces }\end{DoxyParamCaption})}
+
+
+
+Definition at line 774 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{775                                                                          \{}
+\DoxyCodeLine{776 \textcolor{preprocessor}{\#ifndef ENABLE\_DOWNSCALING}}
+\DoxyCodeLine{777   \mbox{\hyperlink{platformcommondefines_8h_a55010dd9f045ede43b1c4fa3d249b1eb}{HWC\_UNUSED}}(factor);}
+\DoxyCodeLine{778   \mbox{\hyperlink{platformcommondefines_8h_a55010dd9f045ede43b1c4fa3d249b1eb}{HWC\_UNUSED}}(clear\_surfaces);}
+\DoxyCodeLine{779   \textcolor{keywordflow}{return};}
+\DoxyCodeLine{780 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{781   \textcolor{keywordflow}{if} (private\_data\_->down\_scaling\_factor\_ == factor)}
+\DoxyCodeLine{782     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{783 }
+\DoxyCodeLine{784   private\_data\_->down\_scaling\_factor\_ = factor;}
+\DoxyCodeLine{785   \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6}{NativeSurface::ClearType}} type = \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a61ab9864bcc7860917f12c33382befbc}{NativeSurface::kNone}};}
+\DoxyCodeLine{786 }
+\DoxyCodeLine{787   \textcolor{keywordflow}{if} (clear\_surfaces) \{}
+\DoxyCodeLine{788     type = \mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{NativeSurface::kFullClear}};}
+\DoxyCodeLine{789   \}}
+\DoxyCodeLine{790 }
+\DoxyCodeLine{791   \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}{RefreshSurfaces}}(type, \textcolor{keyword}{true});}
+\DoxyCodeLine{792 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_aa0aa12bd8efdabce1acd003eae3f77aa}\label{classhwcomposer_1_1DisplayPlaneState_aa0aa12bd8efdabce1acd003eae3f77aa}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Set\+Off\+Screen\+Target@{Set\+Off\+Screen\+Target}}
+\index{Set\+Off\+Screen\+Target@{Set\+Off\+Screen\+Target}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Set\+Off\+Screen\+Target()}{SetOffScreenTarget()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Set\+Off\+Screen\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line 310 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{310                                                                 \{}
+\DoxyCodeLine{311   private\_data\_->layer\_ = target->GetLayer();}
+\DoxyCodeLine{312   uint32\_t rotation = private\_data\_->plane\_transform\_;}
+\DoxyCodeLine{313   \textcolor{keywordflow}{if} (private\_data\_->rotation\_type\_ != \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a91c319c8bcf2c5686169929c170c8d2e}{RotationType::kDisplayRotation}})}
+\DoxyCodeLine{314     rotation = kIdentity;}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316   target->SetTransform(rotation);}
+\DoxyCodeLine{317   private\_data\_->surfaces\_.emplace(private\_data\_->surfaces\_.begin(), target);}
+\DoxyCodeLine{318   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{319   surface\_swapped\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{320   private\_data\_->refresh\_surface\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{321   \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}{RefreshSurfaces}}(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{NativeSurface::kFullClear}});}
+\DoxyCodeLine{322   needs\_surface\_allocation\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{323 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_aeb81a113ccac011bf1b26d1850307220}\label{classhwcomposer_1_1DisplayPlaneState_aeb81a113ccac011bf1b26d1850307220}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Set\+Overlay\+Layer@{Set\+Overlay\+Layer}}
+\index{Set\+Overlay\+Layer@{Set\+Overlay\+Layer}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Set\+Overlay\+Layer()}{SetOverlayLayer()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Set\+Overlay\+Layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{layer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 301 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{301                                                                  \{}
+\DoxyCodeLine{302   private\_data\_->layer\_ = layer;}
+\DoxyCodeLine{303   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{304 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a47bb9fccfaf18b5eeacd2a5142cb3910}\label{classhwcomposer_1_1DisplayPlaneState_a47bb9fccfaf18b5eeacd2a5142cb3910}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Set\+Rotation\+Type@{Set\+Rotation\+Type}}
+\index{Set\+Rotation\+Type@{Set\+Rotation\+Type}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Set\+Rotation\+Type()}{SetRotationType()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Set\+Rotation\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657}{Rotation\+Type}}}]{type,  }\item[{bool}]{refresh }\end{DoxyParamCaption})}
+
+
+
+Definition at line 751 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{751                                                                        \{}
+\DoxyCodeLine{752   \textcolor{keywordflow}{if} (private\_data\_->rotation\_type\_ != type) \{}
+\DoxyCodeLine{753     private\_data\_->rotation\_type\_ = type;}
+\DoxyCodeLine{754     \textcolor{keywordflow}{if} (refresh) \{}
+\DoxyCodeLine{755       \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}{RefreshSurfaces}}(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{NativeSurface::kFullClear}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{756     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{757       recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{758     \}}
+\DoxyCodeLine{759 }
+\DoxyCodeLine{760     uint32\_t rotation = private\_data\_->plane\_transform\_;}
+\DoxyCodeLine{761     \textcolor{keywordflow}{if} (type != \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a907c53d6739ccbfb5058a0f34f3de657a91c319c8bcf2c5686169929c170c8d2e}{RotationType::kDisplayRotation}})}
+\DoxyCodeLine{762       rotation = kIdentity;}
+\DoxyCodeLine{763 }
+\DoxyCodeLine{764     \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{765       surface->SetTransform(rotation);}
+\DoxyCodeLine{766     \}}
+\DoxyCodeLine{767   \}}
+\DoxyCodeLine{768 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a192ea4a1150ab368a53ac75f8caa888a}\label{classhwcomposer_1_1DisplayPlaneState_a192ea4a1150ab368a53ac75f8caa888a}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Set\+Video\+Plane@{Set\+Video\+Plane}}
+\index{Set\+Video\+Plane@{Set\+Video\+Plane}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Set\+Video\+Plane()}{SetVideoPlane()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Set\+Video\+Plane (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 475 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{475                                                        \{}
+\DoxyCodeLine{476 \textcolor{preprocessor}{\#ifndef DISABLE\_VA}}
+\DoxyCodeLine{477   \textcolor{keywordflow}{if} (enable\_video) \{}
+\DoxyCodeLine{478     private\_data\_->type\_ = DisplayPlanePrivateState::PlaneType::kVideo;}
+\DoxyCodeLine{479     private\_data\_->supports\_video\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{480   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{481     private\_data\_->type\_ = DisplayPlanePrivateState::PlaneType::kNormal;}
+\DoxyCodeLine{482   \}}
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{484 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a7f6188cc61cbe9897f7f6ea7bc5979f9}\label{classhwcomposer_1_1DisplayPlaneState_a7f6188cc61cbe9897f7f6ea7bc5979f9}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Swap\+Surface\+If\+Needed@{Swap\+Surface\+If\+Needed}}
+\index{Swap\+Surface\+If\+Needed@{Swap\+Surface\+If\+Needed}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Swap\+Surface\+If\+Needed()}{SwapSurfaceIfNeeded()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Swap\+Surface\+If\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 333 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{333                                             \{}
+\DoxyCodeLine{334   \textcolor{keywordflow}{if} (surface\_swapped\_) \{}
+\DoxyCodeLine{335     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{336   \}}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338   \textcolor{keywordtype}{size\_t} size = private\_data\_->surfaces\_.size();}
+\DoxyCodeLine{339   \textcolor{keywordflow}{if} (size == 0)}
+\DoxyCodeLine{340     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{342   \textcolor{keywordflow}{if} (size == 3) \{}
+\DoxyCodeLine{343     std::vector<NativeSurface *> temp;}
+\DoxyCodeLine{344     temp.reserve(size);}
+\DoxyCodeLine{345     \textcolor{comment}{// Lets make sure front buffer is now back in the list.}}
+\DoxyCodeLine{346     temp.emplace\_back(private\_data\_->surfaces\_.at(2));}
+\DoxyCodeLine{347     temp.emplace\_back(private\_data\_->surfaces\_.at(0));}
+\DoxyCodeLine{348     temp.emplace\_back(private\_data\_->surfaces\_.at(1));}
+\DoxyCodeLine{349     private\_data\_->surfaces\_.swap(temp);}
+\DoxyCodeLine{350   \}}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352   surface\_swapped\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{353   recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{354   NativeSurface *surface = private\_data\_->surfaces\_.at(0);}
+\DoxyCodeLine{355   private\_data\_->layer\_ = surface->GetLayer();}
+\DoxyCodeLine{356 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_a49ce8c1f129155876a310a60a8609fae}\label{classhwcomposer_1_1DisplayPlaneState_a49ce8c1f129155876a310a60a8609fae}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Update\+Damage@{Update\+Damage}}
+\index{Update\+Damage@{Update\+Damage}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Update\+Damage()}{UpdateDamage()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Update\+Damage (\begin{DoxyParamCaption}\item[{const Hwc\+Rect$<$ int $>$ \&}]{surface\+\_\+damage }\end{DoxyParamCaption})}
+
+
+
+Definition at line 431 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{431                                                                        \{}
+\DoxyCodeLine{432   \textcolor{keywordflow}{if} (surface\_damage.empty()) \{}
+\DoxyCodeLine{433     \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{434       surface->ResetDamage();}
+\DoxyCodeLine{435     \}}
+\DoxyCodeLine{436   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{437     recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{438     \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{439       surface->UpdateSurfaceDamage(surface\_damage, \textcolor{keyword}{false});}
+\DoxyCodeLine{440     \}}
+\DoxyCodeLine{441   \}}
+\DoxyCodeLine{442 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_aa09162c79c85636721823091e7af9f66}\label{classhwcomposer_1_1DisplayPlaneState_aa09162c79c85636721823091e7af9f66}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Use\+Plane\+Scalar@{Use\+Plane\+Scalar}}
+\index{Use\+Plane\+Scalar@{Use\+Plane\+Scalar}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Use\+Plane\+Scalar()}{UsePlaneScalar()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Use\+Plane\+Scalar (\begin{DoxyParamCaption}\item[{bool}]{enable,  }\item[{bool}]{force\+\_\+refresh = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 486 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{486                                                                       \{}
+\DoxyCodeLine{487   \textcolor{keywordflow}{if} (private\_data\_->use\_plane\_scalar\_ != enable) \{}
+\DoxyCodeLine{488     private\_data\_->use\_plane\_scalar\_ = enable;}
+\DoxyCodeLine{489     \textcolor{keywordflow}{if} (force\_refresh) \{}
+\DoxyCodeLine{490       \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a53b2ef41b70c5339e691eb43afc5ff92}{RefreshSurfaces}}(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a28fd0ed803677f131961bf65544b9f83}{NativeSurface::kFullClear}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{491     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{492       \textcolor{keyword}{const} HwcRect<int> \&target\_display\_frame = private\_data\_->display\_frame\_;}
+\DoxyCodeLine{493       HwcRect<float> scaled\_rect;}
+\DoxyCodeLine{494       CalculateSourceCrop(scaled\_rect);}
+\DoxyCodeLine{495       \textcolor{keywordflow}{for} (NativeSurface *surface : private\_data\_->surfaces\_) \{}
+\DoxyCodeLine{496         surface->ResetDisplayFrame(target\_display\_frame);}
+\DoxyCodeLine{497         surface->ResetSourceCrop(scaled\_rect);}
+\DoxyCodeLine{498         \textcolor{keywordflow}{if} (surface->ClearSurface()) \{}
+\DoxyCodeLine{499           surface->UpdateSurfaceDamage(scaled\_rect, \textcolor{keyword}{true});}
+\DoxyCodeLine{500         \}}
+\DoxyCodeLine{501       \}}
+\DoxyCodeLine{502 }
+\DoxyCodeLine{503       recycled\_surface\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{504     \}}
+\DoxyCodeLine{505   \}}
+\DoxyCodeLine{506 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlaneState_abe1d277b77a97323c588993484312dd3}\label{classhwcomposer_1_1DisplayPlaneState_abe1d277b77a97323c588993484312dd3}} 
+\index{hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}!Validate\+Re\+Validation@{Validate\+Re\+Validation}}
+\index{Validate\+Re\+Validation@{Validate\+Re\+Validation}!hwcomposer\+::\+Display\+Plane\+State@{hwcomposer\+::\+Display\+Plane\+State}}
+\subsubsection{\texorpdfstring{Validate\+Re\+Validation()}{ValidateReValidation()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Display\+Plane\+State\+::\+Validate\+Re\+Validation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 591 of file displayplanestate.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{591                                              \{}
+\DoxyCodeLine{592   \textcolor{keywordflow}{if} (!private\_data\_->rect\_updated\_)}
+\DoxyCodeLine{593     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{594 }
+\DoxyCodeLine{595   \textcolor{keywordflow}{if} (private\_data\_->plane\_transform\_ != kIdentity \&\&}
+\DoxyCodeLine{596       !private\_data\_->unsupported\_display\_rotation\_) \{}
+\DoxyCodeLine{597     re\_validate\_layer\_ |= ReValidationType::kRotation;}
+\DoxyCodeLine{598   \}}
+\DoxyCodeLine{599 }
+\DoxyCodeLine{600   \textcolor{keywordflow}{if} (private\_data\_->source\_layers\_.size() == 1 \&\&}
+\DoxyCodeLine{601       !(private\_data\_->type\_ == DisplayPlanePrivateState::PlaneType::kVideo)) \{}
+\DoxyCodeLine{602     re\_validate\_layer\_ |= ReValidationType::kScanout;}
+\DoxyCodeLine{603   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{604     \textcolor{keywordtype}{bool} use\_scalar = \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a1bf41f47af43cae6b25f4e69c117f31b}{CanUseDisplayUpScaling}}();}
+\DoxyCodeLine{605     \textcolor{keywordflow}{if} (private\_data\_->use\_plane\_scalar\_ != use\_scalar) \{}
+\DoxyCodeLine{606       re\_validate\_layer\_ |= ReValidationType::kUpScalar;}
+\DoxyCodeLine{607 \textcolor{preprocessor}{\#ifdef ENABLE\_DOWNSCALING}}
+\DoxyCodeLine{608     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{609       \textcolor{keywordtype}{bool} down\_scale = \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneState_a0388118f03e5d1504565fa72150a7d98}{CanUseGPUDownScaling}}();}
+\DoxyCodeLine{610       \textcolor{keywordflow}{if} ((private\_data\_->down\_scaling\_factor\_ > 0) != down\_scale) \{}
+\DoxyCodeLine{611         re\_validate\_layer\_ = ReValidationType::kDownScaling;}
+\DoxyCodeLine{612       \}}
+\DoxyCodeLine{613 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{614     \}}
+\DoxyCodeLine{615   \}}
+\DoxyCodeLine{616 }
+\DoxyCodeLine{617   private\_data\_->rect\_updated\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{618 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/display/\mbox{\hyperlink{displayplanestate_8h}{displayplanestate.\+h}}\item 
+common/display/\mbox{\hyperlink{displayplanestate_8cpp}{displayplanestate.\+cpp}}\end{DoxyCompactItemize}

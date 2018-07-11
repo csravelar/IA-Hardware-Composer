@@ -1,0 +1,62 @@
+\hypertarget{classhwcomposer_1_1ScopedSpinLocks}{}\section{hwcomposer\+:\+:Scoped\+Spin\+Locks Class Reference}
+\label{classhwcomposer_1_1ScopedSpinLocks}\index{hwcomposer\+::\+Scoped\+Spin\+Locks@{hwcomposer\+::\+Scoped\+Spin\+Locks}}
+
+
+{\ttfamily \#include $<$spinlock.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1ScopedSpinLocks_a4638e477e80bad55895fcd10cfc01314}{Scoped\+Spin\+Locks}} (\mbox{\hyperlink{classhwcomposer_1_1SpinLock}{Spin\+Lock}} \&lock1, \mbox{\hyperlink{classhwcomposer_1_1SpinLock}{Spin\+Lock}} \&lock2)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1ScopedSpinLocks_a8268d09703631b9927dda513c4555580}{$\sim$\+Scoped\+Spin\+Locks}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 58 of file spinlock.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1ScopedSpinLocks_a4638e477e80bad55895fcd10cfc01314}\label{classhwcomposer_1_1ScopedSpinLocks_a4638e477e80bad55895fcd10cfc01314}} 
+\index{hwcomposer\+::\+Scoped\+Spin\+Locks@{hwcomposer\+::\+Scoped\+Spin\+Locks}!Scoped\+Spin\+Locks@{Scoped\+Spin\+Locks}}
+\index{Scoped\+Spin\+Locks@{Scoped\+Spin\+Locks}!hwcomposer\+::\+Scoped\+Spin\+Locks@{hwcomposer\+::\+Scoped\+Spin\+Locks}}
+\subsubsection{\texorpdfstring{Scoped\+Spin\+Locks()}{ScopedSpinLocks()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Scoped\+Spin\+Locks\+::\+Scoped\+Spin\+Locks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1SpinLock}{Spin\+Lock}} \&}]{lock1,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1SpinLock}{Spin\+Lock}} \&}]{lock2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 60 of file spinlock.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61       : lock1\_(lock1), lock2\_(lock2) \{}
+\DoxyCodeLine{62     lock1\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{63     lock2\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{64   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1ScopedSpinLocks_a8268d09703631b9927dda513c4555580}\label{classhwcomposer_1_1ScopedSpinLocks_a8268d09703631b9927dda513c4555580}} 
+\index{hwcomposer\+::\+Scoped\+Spin\+Locks@{hwcomposer\+::\+Scoped\+Spin\+Locks}!````~Scoped\+Spin\+Locks@{$\sim$\+Scoped\+Spin\+Locks}}
+\index{````~Scoped\+Spin\+Locks@{$\sim$\+Scoped\+Spin\+Locks}!hwcomposer\+::\+Scoped\+Spin\+Locks@{hwcomposer\+::\+Scoped\+Spin\+Locks}}
+\subsubsection{\texorpdfstring{$\sim$\+Scoped\+Spin\+Locks()}{~ScopedSpinLocks()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Scoped\+Spin\+Locks\+::$\sim$\+Scoped\+Spin\+Locks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 66 of file spinlock.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                      \{}
+\DoxyCodeLine{67     lock1\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{68     lock2\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{69   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+public/\mbox{\hyperlink{spinlock_8h}{spinlock.\+h}}\end{DoxyCompactItemize}

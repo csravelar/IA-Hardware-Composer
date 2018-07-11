@@ -1,0 +1,43 @@
+\hypertarget{structhwcomposer_1_1DrmEncoderDeleter}{}\section{hwcomposer\+:\+:Drm\+Encoder\+Deleter Struct Reference}
+\label{structhwcomposer_1_1DrmEncoderDeleter}\index{hwcomposer\+::\+Drm\+Encoder\+Deleter@{hwcomposer\+::\+Drm\+Encoder\+Deleter}}
+
+
+{\ttfamily \#include $<$drmscopedtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structhwcomposer_1_1DrmEncoderDeleter_a1b4a4962fa31546fd6dc2f1ff2c161e2}{operator()}} (\mbox{\hyperlink{drmscopedtypes_8h_a6a3ef235514bbe2e938575fc4d2c919c}{drm\+Mode\+Encoder}} $\ast$encoder) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 44 of file drmscopedtypes.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1DrmEncoderDeleter_a1b4a4962fa31546fd6dc2f1ff2c161e2}\label{structhwcomposer_1_1DrmEncoderDeleter_a1b4a4962fa31546fd6dc2f1ff2c161e2}} 
+\index{hwcomposer\+::\+Drm\+Encoder\+Deleter@{hwcomposer\+::\+Drm\+Encoder\+Deleter}!operator()@{operator()}}
+\index{operator()@{operator()}!hwcomposer\+::\+Drm\+Encoder\+Deleter@{hwcomposer\+::\+Drm\+Encoder\+Deleter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Drm\+Encoder\+Deleter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drmscopedtypes_8h_a6a3ef235514bbe2e938575fc4d2c919c}{drm\+Mode\+Encoder}} $\ast$}]{encoder }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 35 of file drmscopedtypes.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                                 \{}
+\DoxyCodeLine{36   drmModeFreeEncoder(encoder);}
+\DoxyCodeLine{37 \}}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8h}{drmscopedtypes.\+h}}\item 
+wsi/drm/\mbox{\hyperlink{drmscopedtypes_8cpp}{drmscopedtypes.\+cpp}}\end{DoxyCompactItemize}

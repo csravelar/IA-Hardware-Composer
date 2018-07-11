@@ -1,0 +1,197 @@
+\hypertarget{drmscopedtypes_8h}{}\section{wsi/drm/drmscopedtypes.h File Reference}
+\label{drmscopedtypes_8h}\index{wsi/drm/drmscopedtypes.\+h@{wsi/drm/drmscopedtypes.\+h}}
+{\ttfamily \#include $<$memory$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1DrmResourcesDeleter}{hwcomposer\+::\+Drm\+Resources\+Deleter}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1DrmConnectorDeleter}{hwcomposer\+::\+Drm\+Connector\+Deleter}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1DrmCrtcDeleter}{hwcomposer\+::\+Drm\+Crtc\+Deleter}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1DrmEncoderDeleter}{hwcomposer\+::\+Drm\+Encoder\+Deleter}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1DrmObjectPropertiesDeleter}{hwcomposer\+::\+Drm\+Object\+Properties\+Deleter}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1DrmPlaneDeleter}{hwcomposer\+::\+Drm\+Plane\+Deleter}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1DrmPlaneResDeleter}{hwcomposer\+::\+Drm\+Plane\+Res\+Deleter}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1DrmPropertyDeleter}{hwcomposer\+::\+Drm\+Property\+Deleter}}
+\item 
+struct \mbox{\hyperlink{structhwcomposer_1_1DrmAtomicReqDeleter}{hwcomposer\+::\+Drm\+Atomic\+Req\+Deleter}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehwcomposer}{hwcomposer}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \+\_\+drm\+Mode\+Connector \mbox{\hyperlink{drmscopedtypes_8h_a16ea3fc6b16060fd1e1257707006440e}{drm\+Mode\+Connector}}
+\item 
+typedef struct \+\_\+drm\+Mode\+Crtc \mbox{\hyperlink{drmscopedtypes_8h_a847e3d935cfc3d51910e1a3934e88a1b}{drm\+Mode\+Crtc}}
+\item 
+typedef struct \+\_\+drm\+Mode\+Encoder \mbox{\hyperlink{drmscopedtypes_8h_a6a3ef235514bbe2e938575fc4d2c919c}{drm\+Mode\+Encoder}}
+\item 
+typedef struct \+\_\+drm\+Mode\+FB \mbox{\hyperlink{drmscopedtypes_8h_acd887ed873bb9b063334d30dab642059}{drm\+Mode\+FB}}
+\item 
+typedef struct \+\_\+drm\+Mode\+Object\+Properties \mbox{\hyperlink{drmscopedtypes_8h_a5b9e41a0b21c1a9017be96cfdf9f049c}{drm\+Mode\+Object\+Properties}}
+\item 
+typedef struct \+\_\+drm\+Mode\+Plane \mbox{\hyperlink{drmscopedtypes_8h_a41627c0f0f83a8fc263e592ae28ae6b4}{drm\+Mode\+Plane}}
+\item 
+typedef struct \+\_\+drm\+Mode\+Plane\+Res \mbox{\hyperlink{drmscopedtypes_8h_abc090a2f00ebaea9426f9a5636f40994}{drm\+Mode\+Plane\+Res}}
+\item 
+typedef struct \+\_\+drm\+Mode\+Property \mbox{\hyperlink{drmscopedtypes_8h_a4fb7f6f576c5cfbc7ee86d566c5c8673}{drm\+Mode\+Property\+Res}}
+\item 
+typedef struct \+\_\+drm\+Mode\+Atomic\+Req \mbox{\hyperlink{drmscopedtypes_8h_a6d8c8b40283089c14de1005f7fb2ee0c}{drm\+Mode\+Atomic\+Req}}
+\item 
+typedef struct \+\_\+drm\+Mode\+Property\+Blob \mbox{\hyperlink{drmscopedtypes_8h_af6c59557692daeb68d9aa41a67637f3f}{drm\+Mode\+Property\+Blob\+Res}}
+\item 
+typedef struct \+\_\+drm\+Mode\+Res \mbox{\hyperlink{drmscopedtypes_8h_a394774c7e66da001652fbd93d026b853}{drm\+Mode\+Res}}
+\item 
+typedef struct \+\_\+drm\+Event\+Context \mbox{\hyperlink{drmscopedtypes_8h_a68c269b142d827b4766ab57413a88a55}{drm\+Event\+Context}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{drmscopedtypes_8h_a394774c7e66da001652fbd93d026b853}{drm\+Mode\+Res}}, Drm\+Resources\+Deleter $>$ \mbox{\hyperlink{namespacehwcomposer_a88e61b5e1ae620a5424a9497d554aea7}{hwcomposer\+::\+Scoped\+Drm\+Resources\+Ptr}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{nativedisplay_8h_a16ea3fc6b16060fd1e1257707006440e}{drm\+Mode\+Connector}}, Drm\+Connector\+Deleter $>$ \mbox{\hyperlink{namespacehwcomposer_a6e831db409c69fed0af20a9cb29b50f1}{hwcomposer\+::\+Scoped\+Drm\+Connector\+Ptr}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{drmscopedtypes_8h_a847e3d935cfc3d51910e1a3934e88a1b}{drm\+Mode\+Crtc}}, Drm\+Crtc\+Deleter $>$ \mbox{\hyperlink{namespacehwcomposer_a9571d0c874674e369f17aa93c5d863e8}{hwcomposer\+::\+Scoped\+Drm\+Crtc\+Ptr}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{drmscopedtypes_8h_a6a3ef235514bbe2e938575fc4d2c919c}{drm\+Mode\+Encoder}}, Drm\+Encoder\+Deleter $>$ \mbox{\hyperlink{namespacehwcomposer_a8bf37e42152b3284fd9f087f8c02cd5c}{hwcomposer\+::\+Scoped\+Drm\+Encoder\+Ptr}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{drmscopedtypes_8h_a5b9e41a0b21c1a9017be96cfdf9f049c}{drm\+Mode\+Object\+Properties}}, Drm\+Object\+Properties\+Deleter $>$ \mbox{\hyperlink{namespacehwcomposer_ace195c2e057b634efb3013a5a4413799}{hwcomposer\+::\+Scoped\+Drm\+Object\+Property\+Ptr}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{drmscopedtypes_8h_a41627c0f0f83a8fc263e592ae28ae6b4}{drm\+Mode\+Plane}}, Drm\+Plane\+Deleter $>$ \mbox{\hyperlink{namespacehwcomposer_a65038450f2af31da16cb0817ad1725c8}{hwcomposer\+::\+Scoped\+Drm\+Plane\+Ptr}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{drmscopedtypes_8h_abc090a2f00ebaea9426f9a5636f40994}{drm\+Mode\+Plane\+Res}}, Drm\+Plane\+Res\+Deleter $>$ \mbox{\hyperlink{namespacehwcomposer_a0f1486ef5a49e79373fe75dfd767b85f}{hwcomposer\+::\+Scoped\+Drm\+Plane\+Res\+Ptr}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{drmscopedtypes_8h_a4fb7f6f576c5cfbc7ee86d566c5c8673}{drm\+Mode\+Property\+Res}}, Drm\+Property\+Deleter $>$ \mbox{\hyperlink{namespacehwcomposer_ae4038d517ff95af940c1f9cdf40e3834}{hwcomposer\+::\+Scoped\+Drm\+Property\+Ptr}}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{drmscopedtypes_8h_a6d8c8b40283089c14de1005f7fb2ee0c}{drm\+Mode\+Atomic\+Req}}, Drm\+Atomic\+Req\+Deleter $>$ \mbox{\hyperlink{namespacehwcomposer_a1db01e0534b5b990ac7d35376c4b7e03}{hwcomposer\+::\+Scoped\+Drm\+Atomic\+Req\+Ptr}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{drmscopedtypes_8h_a68c269b142d827b4766ab57413a88a55}\label{drmscopedtypes_8h_a68c269b142d827b4766ab57413a88a55}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Event\+Context@{drm\+Event\+Context}}
+\index{drm\+Event\+Context@{drm\+Event\+Context}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Event\+Context}{drmEventContext}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Event\+Context \mbox{\hyperlink{drmscopedtypes_8h_a68c269b142d827b4766ab57413a88a55}{drm\+Event\+Context}}}
+
+
+
+Definition at line 32 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_a6d8c8b40283089c14de1005f7fb2ee0c}\label{drmscopedtypes_8h_a6d8c8b40283089c14de1005f7fb2ee0c}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Atomic\+Req@{drm\+Mode\+Atomic\+Req}}
+\index{drm\+Mode\+Atomic\+Req@{drm\+Mode\+Atomic\+Req}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Atomic\+Req}{drmModeAtomicReq}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Atomic\+Req \mbox{\hyperlink{drmscopedtypes_8h_a6d8c8b40283089c14de1005f7fb2ee0c}{drm\+Mode\+Atomic\+Req}}}
+
+
+
+Definition at line 29 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_a16ea3fc6b16060fd1e1257707006440e}\label{drmscopedtypes_8h_a16ea3fc6b16060fd1e1257707006440e}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Connector@{drm\+Mode\+Connector}}
+\index{drm\+Mode\+Connector@{drm\+Mode\+Connector}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Connector}{drmModeConnector}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Connector \mbox{\hyperlink{nativedisplay_8h_a16ea3fc6b16060fd1e1257707006440e}{drm\+Mode\+Connector}}}
+
+
+
+Definition at line 21 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_a847e3d935cfc3d51910e1a3934e88a1b}\label{drmscopedtypes_8h_a847e3d935cfc3d51910e1a3934e88a1b}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Crtc@{drm\+Mode\+Crtc}}
+\index{drm\+Mode\+Crtc@{drm\+Mode\+Crtc}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Crtc}{drmModeCrtc}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Crtc \mbox{\hyperlink{drmscopedtypes_8h_a847e3d935cfc3d51910e1a3934e88a1b}{drm\+Mode\+Crtc}}}
+
+
+
+Definition at line 22 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_a6a3ef235514bbe2e938575fc4d2c919c}\label{drmscopedtypes_8h_a6a3ef235514bbe2e938575fc4d2c919c}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Encoder@{drm\+Mode\+Encoder}}
+\index{drm\+Mode\+Encoder@{drm\+Mode\+Encoder}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Encoder}{drmModeEncoder}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Encoder \mbox{\hyperlink{drmscopedtypes_8h_a6a3ef235514bbe2e938575fc4d2c919c}{drm\+Mode\+Encoder}}}
+
+
+
+Definition at line 23 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_acd887ed873bb9b063334d30dab642059}\label{drmscopedtypes_8h_acd887ed873bb9b063334d30dab642059}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+FB@{drm\+Mode\+FB}}
+\index{drm\+Mode\+FB@{drm\+Mode\+FB}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+FB}{drmModeFB}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+FB \mbox{\hyperlink{drmscopedtypes_8h_acd887ed873bb9b063334d30dab642059}{drm\+Mode\+FB}}}
+
+
+
+Definition at line 24 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_a5b9e41a0b21c1a9017be96cfdf9f049c}\label{drmscopedtypes_8h_a5b9e41a0b21c1a9017be96cfdf9f049c}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Object\+Properties@{drm\+Mode\+Object\+Properties}}
+\index{drm\+Mode\+Object\+Properties@{drm\+Mode\+Object\+Properties}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Object\+Properties}{drmModeObjectProperties}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Object\+Properties \mbox{\hyperlink{drmscopedtypes_8h_a5b9e41a0b21c1a9017be96cfdf9f049c}{drm\+Mode\+Object\+Properties}}}
+
+
+
+Definition at line 25 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_a41627c0f0f83a8fc263e592ae28ae6b4}\label{drmscopedtypes_8h_a41627c0f0f83a8fc263e592ae28ae6b4}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Plane@{drm\+Mode\+Plane}}
+\index{drm\+Mode\+Plane@{drm\+Mode\+Plane}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Plane}{drmModePlane}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Plane \mbox{\hyperlink{drmscopedtypes_8h_a41627c0f0f83a8fc263e592ae28ae6b4}{drm\+Mode\+Plane}}}
+
+
+
+Definition at line 26 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_abc090a2f00ebaea9426f9a5636f40994}\label{drmscopedtypes_8h_abc090a2f00ebaea9426f9a5636f40994}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Plane\+Res@{drm\+Mode\+Plane\+Res}}
+\index{drm\+Mode\+Plane\+Res@{drm\+Mode\+Plane\+Res}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Plane\+Res}{drmModePlaneRes}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Plane\+Res \mbox{\hyperlink{drmscopedtypes_8h_abc090a2f00ebaea9426f9a5636f40994}{drm\+Mode\+Plane\+Res}}}
+
+
+
+Definition at line 27 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_af6c59557692daeb68d9aa41a67637f3f}\label{drmscopedtypes_8h_af6c59557692daeb68d9aa41a67637f3f}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Property\+Blob\+Res@{drm\+Mode\+Property\+Blob\+Res}}
+\index{drm\+Mode\+Property\+Blob\+Res@{drm\+Mode\+Property\+Blob\+Res}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Property\+Blob\+Res}{drmModePropertyBlobRes}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Property\+Blob \mbox{\hyperlink{drmscopedtypes_8h_af6c59557692daeb68d9aa41a67637f3f}{drm\+Mode\+Property\+Blob\+Res}}}
+
+
+
+Definition at line 30 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_a4fb7f6f576c5cfbc7ee86d566c5c8673}\label{drmscopedtypes_8h_a4fb7f6f576c5cfbc7ee86d566c5c8673}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Property\+Res@{drm\+Mode\+Property\+Res}}
+\index{drm\+Mode\+Property\+Res@{drm\+Mode\+Property\+Res}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Property\+Res}{drmModePropertyRes}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Property \mbox{\hyperlink{drmscopedtypes_8h_a4fb7f6f576c5cfbc7ee86d566c5c8673}{drm\+Mode\+Property\+Res}}}
+
+
+
+Definition at line 28 of file drmscopedtypes.\+h.
+
+\mbox{\Hypertarget{drmscopedtypes_8h_a394774c7e66da001652fbd93d026b853}\label{drmscopedtypes_8h_a394774c7e66da001652fbd93d026b853}} 
+\index{drmscopedtypes.\+h@{drmscopedtypes.\+h}!drm\+Mode\+Res@{drm\+Mode\+Res}}
+\index{drm\+Mode\+Res@{drm\+Mode\+Res}!drmscopedtypes.\+h@{drmscopedtypes.\+h}}
+\subsubsection{\texorpdfstring{drm\+Mode\+Res}{drmModeRes}}
+{\footnotesize\ttfamily typedef struct \+\_\+drm\+Mode\+Res \mbox{\hyperlink{drmscopedtypes_8h_a394774c7e66da001652fbd93d026b853}{drm\+Mode\+Res}}}
+
+
+
+Definition at line 31 of file drmscopedtypes.\+h.
+

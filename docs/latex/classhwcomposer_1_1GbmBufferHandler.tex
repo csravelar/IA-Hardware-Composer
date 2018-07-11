@@ -1,0 +1,577 @@
+\hypertarget{classhwcomposer_1_1GbmBufferHandler}{}\section{hwcomposer\+:\+:Gbm\+Buffer\+Handler Class Reference}
+\label{classhwcomposer_1_1GbmBufferHandler}\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+
+
+{\ttfamily \#include $<$gbmbufferhandler.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Gbm\+Buffer\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1GbmBufferHandler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a2dd2cbac7542ffaead762e797ab673cc}{Gbm\+Buffer\+Handler}} (uint32\+\_\+t fd)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a253daef320a4a3376640a5add7f3bc15}{$\sim$\+Gbm\+Buffer\+Handler}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a2338ce2352177ab7a3d01376bcce7381}{Init}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_adf982a610866df90e9a2ee4f04801387}{Create\+Buffer}} (uint32\+\_\+t w, uint32\+\_\+t h, int format, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$handle, uint32\+\_\+t layer\+\_\+type=k\+Layer\+Normal, bool $\ast$modifier\+\_\+used=\mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}, int64\+\_\+t modifier=-\/1, bool raw\+\_\+pixel\+\_\+buffer=false) const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a9c2554d5c2fe0a76b785352754d369a1}{Release\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a0786f7b82b504105c71881eced9b5270}{Destroy\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_ae730a1b13a177dcf02084c0c60bcafb6}{Copy\+Handle}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} source, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$target) const override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a552812693a793705e94138855daaead0}{Import\+Buffer}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_a55b6cac51fced2198ae9aee706d03452}{Get\+Total\+Planes}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle) const override
+\item 
+void $\ast$ \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_ad6120de07407c36ed5ab99c8fcb628fd}{Map}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, uint32\+\_\+t x, uint32\+\_\+t y, uint32\+\_\+t width, uint32\+\_\+t height, uint32\+\_\+t $\ast$stride, void $\ast$$\ast$map\+\_\+data, size\+\_\+t plane) const override
+\item 
+int32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_af26a61bbdd91d36780e41b406e8b8dd9}{Un\+Map}} (\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle, void $\ast$map\+\_\+data) const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1GbmBufferHandler_ac204254aef6007d09474f8e76f9b6470}{Get\+Fd}} () const override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file gbmbufferhandler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_a2dd2cbac7542ffaead762e797ab673cc}\label{classhwcomposer_1_1GbmBufferHandler_a2dd2cbac7542ffaead762e797ab673cc}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Gbm\+Buffer\+Handler@{Gbm\+Buffer\+Handler}}
+\index{Gbm\+Buffer\+Handler@{Gbm\+Buffer\+Handler}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Gbm\+Buffer\+Handler()}{GbmBufferHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Gbm\+Buffer\+Handler (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 47 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48     : fd\_(fd),}
+\DoxyCodeLine{49       device\_(0),}
+\DoxyCodeLine{50       preferred\_cursor\_width\_(0),}
+\DoxyCodeLine{51       preferred\_cursor\_height\_(0) \{}
+\DoxyCodeLine{52 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_a253daef320a4a3376640a5add7f3bc15}\label{classhwcomposer_1_1GbmBufferHandler_a253daef320a4a3376640a5add7f3bc15}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!````~Gbm\+Buffer\+Handler@{$\sim$\+Gbm\+Buffer\+Handler}}
+\index{````~Gbm\+Buffer\+Handler@{$\sim$\+Gbm\+Buffer\+Handler}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Gbm\+Buffer\+Handler()}{~GbmBufferHandler()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Gbm\+Buffer\+Handler\+::$\sim$\+Gbm\+Buffer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 54 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                     \{}
+\DoxyCodeLine{55   \textcolor{keywordflow}{if} (device\_)}
+\DoxyCodeLine{56     gbm\_device\_destroy(device\_);}
+\DoxyCodeLine{57 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_ae730a1b13a177dcf02084c0c60bcafb6}\label{classhwcomposer_1_1GbmBufferHandler_ae730a1b13a177dcf02084c0c60bcafb6}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Copy\+Handle@{Copy\+Handle}}
+\index{Copy\+Handle@{Copy\+Handle}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Copy\+Handle()}{CopyHandle()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Copy\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{source,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a96581fb8bd36e959c8da6b9f634ecd32}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 220 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{221                                                                  \{}
+\DoxyCodeLine{222   \textcolor{keyword}{struct }\mbox{\hyperlink{structgbm__handle}{gbm\_handle}} *temp = \textcolor{keyword}{new} \textcolor{keyword}{struct }\mbox{\hyperlink{structgbm__handle}{gbm\_handle}}();}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224   \textcolor{keywordflow}{if} (!source->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[0]) \{}
+\DoxyCodeLine{225     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.width = source->import\_data.fd\_data.width;}
+\DoxyCodeLine{226     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.height = source->import\_data.fd\_data.height;}
+\DoxyCodeLine{227     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.format = source->import\_data.fd\_data.format;}
+\DoxyCodeLine{228     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.fd = dup(source->import\_data.fd\_data.fd);}
+\DoxyCodeLine{229     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.stride = source->import\_data.fd\_data.stride;}
+\DoxyCodeLine{230   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{231     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.width =}
+\DoxyCodeLine{232         source->import\_data.fd\_modifier\_data.width;}
+\DoxyCodeLine{233     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.height =}
+\DoxyCodeLine{234         source->import\_data.fd\_modifier\_data.height;}
+\DoxyCodeLine{235     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.format =}
+\DoxyCodeLine{236         source->import\_data.fd\_modifier\_data.format;}
+\DoxyCodeLine{237     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.num\_fds =}
+\DoxyCodeLine{238         source->import\_data.fd\_modifier\_data.num\_fds;}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{240     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.num\_fds; i++) \{}
+\DoxyCodeLine{241       temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.fds[i] =}
+\DoxyCodeLine{242           dup(source->import\_data.fd\_modifier\_data.fds[i]);}
+\DoxyCodeLine{243     \}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245     \textcolor{keywordtype}{size\_t} total\_planes = source->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ab48df5577e8ecd60f18b4b5e6ec6544d}{num\_planes\_}};}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < total\_planes; i++) \{}
+\DoxyCodeLine{248       temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.offsets[i] =}
+\DoxyCodeLine{249           source->import\_data.fd\_modifier\_data.offsets[i];}
+\DoxyCodeLine{250       temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.strides[i] =}
+\DoxyCodeLine{251           source->import\_data.fd\_modifier\_data.strides[i];}
+\DoxyCodeLine{252       temp->\mbox{\hyperlink{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[2 * i] =}
+\DoxyCodeLine{253           source->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[2 * i];}
+\DoxyCodeLine{254       temp->\mbox{\hyperlink{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[2 * i + 1] =}
+\DoxyCodeLine{255           source->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[2 * i + 1];}
+\DoxyCodeLine{256     \}}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.modifier =}
+\DoxyCodeLine{259         source->import\_data.fd\_modifier\_data.modifier;}
+\DoxyCodeLine{260   \}}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262   temp->\mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}} = source->bo;}
+\DoxyCodeLine{263   temp->\mbox{\hyperlink{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ab48df5577e8ecd60f18b4b5e6ec6544d}{num\_planes\_}} = source->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.
+      \mbox{\hyperlink{structHwcBuffer_ab48df5577e8ecd60f18b4b5e6ec6544d}{num\_planes\_}};}
+\DoxyCodeLine{264   temp->\mbox{\hyperlink{structgbm__handle_a5deee85dd01fe245644d1971dcdd1f89}{gbm\_flags}} = source->gbm\_flags;}
+\DoxyCodeLine{265   temp->\mbox{\hyperlink{structgbm__handle_aeaaf0fd4477abfe406de45109d6af33c}{layer\_type\_}} = source->layer\_type\_;}
+\DoxyCodeLine{266   *target = temp;}
+\DoxyCodeLine{267 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_adf982a610866df90e9a2ee4f04801387}\label{classhwcomposer_1_1GbmBufferHandler_adf982a610866df90e9a2ee4f04801387}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Create\+Buffer@{Create\+Buffer}}
+\index{Create\+Buffer@{Create\+Buffer}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Create\+Buffer()}{CreateBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Create\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{w,  }\item[{uint32\+\_\+t}]{h,  }\item[{int}]{format,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} $\ast$}]{handle,  }\item[{uint32\+\_\+t}]{layer\+\_\+type = {\ttfamily kLayerNormal},  }\item[{bool $\ast$}]{modifier\+\_\+used = {\ttfamily \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}},  }\item[{int64\+\_\+t}]{modifier = {\ttfamily -\/1},  }\item[{bool}]{raw\+\_\+pixel\+\_\+buffer = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a7e58e3d81d3f56cbee34c963b4999fde}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 84 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                                                                  \{}
+\DoxyCodeLine{89   uint32\_t gbm\_format = format;}
+\DoxyCodeLine{90   \textcolor{keywordflow}{if} (gbm\_format == 0)}
+\DoxyCodeLine{91     gbm\_format = GBM\_FORMAT\_XRGB8888;}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93   uint32\_t flags = 0;}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95   \textcolor{keywordflow}{if} (layer\_type == kLayerNormal || layer\_type == kLayerCursor) \{}
+\DoxyCodeLine{96     flags |= (GBM\_BO\_USE\_SCANOUT | GBM\_BO\_USE\_RENDERING);}
+\DoxyCodeLine{97   \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   \textcolor{keywordflow}{if} (raw\_pixel\_buffer) \{}
+\DoxyCodeLine{100     flags |= GBM\_BO\_USE\_LINEAR;}
+\DoxyCodeLine{101   \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103   \textcolor{keywordflow}{if} (layer\_type == kLayerCursor) \{}
+\DoxyCodeLine{104     \textcolor{keywordflow}{if} (w < preferred\_cursor\_width\_)}
+\DoxyCodeLine{105       w = preferred\_cursor\_width\_;}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107     \textcolor{keywordflow}{if} (h < preferred\_cursor\_height\_)}
+\DoxyCodeLine{108       h = preferred\_cursor\_height\_;}
+\DoxyCodeLine{109   \}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111   \textcolor{keyword}{struct }gbm\_bo *bo = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113   \textcolor{keywordtype}{bool} rbc\_enabled = \textcolor{keyword}{false};}
+\DoxyCodeLine{114   uint64\_t modifier = DRM\_FORMAT\_MOD\_NONE;}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#ifdef ENABLE\_RBC}}
+\DoxyCodeLine{116   \textcolor{keywordflow}{if} (preferred\_modifier != -1) \{}
+\DoxyCodeLine{117     modifier = preferred\_modifier;}
+\DoxyCodeLine{118   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{119     modifier = choose\_drm\_modifier(gbm\_format);}
+\DoxyCodeLine{120   \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122   \textcolor{keywordflow}{if} (modifier\_used) \{}
+\DoxyCodeLine{123     *modifier\_used = \textcolor{keyword}{true};}
+\DoxyCodeLine{124   \}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{126   \textcolor{keywordflow}{if} (modifier\_used) \{}
+\DoxyCodeLine{127     *modifier\_used = \textcolor{keyword}{false};}
+\DoxyCodeLine{128   \}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131   \textcolor{keywordflow}{if} (modifier != DRM\_FORMAT\_MOD\_NONE) \{}
+\DoxyCodeLine{132     bo = gbm\_bo\_create\_with\_modifiers(device\_, w, h, gbm\_format, \&modifier, 1);}
+\DoxyCodeLine{133     rbc\_enabled = \textcolor{keyword}{true};}
+\DoxyCodeLine{134   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{135     bo = gbm\_bo\_create(device\_, w, h, gbm\_format, flags);}
+\DoxyCodeLine{136   \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138   \textcolor{keywordflow}{if} (!bo) \{}
+\DoxyCodeLine{139     flags \&= ~GBM\_BO\_USE\_SCANOUT;}
+\DoxyCodeLine{140     bo = gbm\_bo\_create(device\_, w, h, gbm\_format, flags);}
+\DoxyCodeLine{141     rbc\_enabled = \textcolor{keyword}{false};}
+\DoxyCodeLine{142   \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144   \textcolor{keywordflow}{if} (!bo) \{}
+\DoxyCodeLine{145     flags \&= ~GBM\_BO\_USE\_RENDERING;}
+\DoxyCodeLine{146     bo = gbm\_bo\_create(device\_, w, h, gbm\_format, flags);}
+\DoxyCodeLine{147   \}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149   \textcolor{keywordflow}{if} (!bo) \{}
+\DoxyCodeLine{150     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"GbmBufferHandler: failed to create gbm\_bo"});}
+\DoxyCodeLine{151     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{152   \}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154   \textcolor{keyword}{struct }\mbox{\hyperlink{structgbm__handle}{gbm\_handle}} *temp = \textcolor{keyword}{new} \textcolor{keyword}{struct }\mbox{\hyperlink{structgbm__handle}{gbm\_handle}}();}
+\DoxyCodeLine{155   uint64\_t mod = 0;}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157   \textcolor{keywordflow}{if} (rbc\_enabled) \{}
+\DoxyCodeLine{158     temp->\mbox{\hyperlink{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ab48df5577e8ecd60f18b4b5e6ec6544d}{num\_planes\_}} = gbm\_bo\_get\_plane\_count(
+      \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{159     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.width = gbm\_bo\_get\_width(
+      \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{160     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.height = gbm\_bo\_get\_height(
+      \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{161     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.format = gbm\_bo\_get\_format(
+      \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{162     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.num\_fds = 1;}
+\DoxyCodeLine{163     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.fds[0] = gbm\_bo\_get\_fd(
+      \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.modifier = gbm\_bo\_get\_modifier(
+      \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{166     mod = temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.modifier;}
+\DoxyCodeLine{167     uint32\_t modifier\_low = \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(mod >> 32);}
+\DoxyCodeLine{168     uint32\_t modifier\_high = \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(mod);}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < temp->\mbox{\hyperlink{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ab48df5577e8ecd60f18b4b5e6ec6544d}{num\_planes\_}}; i++) \{}
+\DoxyCodeLine{171       temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.offsets[i] = gbm\_bo\_get\_offset(
+      \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}, i);}
+\DoxyCodeLine{172       temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_af706ddaa68480c1cf930a67d6698c1d6}{fd\_modifier\_data}}.strides[i] =}
+\DoxyCodeLine{173           gbm\_bo\_get\_stride\_for\_plane(\mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}, i);}
+\DoxyCodeLine{174       temp->\mbox{\hyperlink{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[2 * i] = modifier\_low;}
+\DoxyCodeLine{175       temp->\mbox{\hyperlink{structgbm__handle_a2d3bce2c387abbf976b37d52b272ebbe}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[2 * i + 1] = modifier\_high;}
+\DoxyCodeLine{176     \}}
+\DoxyCodeLine{177   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{178     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.width = gbm\_bo\_get\_width(\mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{179     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.height = gbm\_bo\_get\_height(\mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{180     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.format = gbm\_bo\_get\_format(\mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{181     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.fd = gbm\_bo\_get\_fd(\mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{182     temp->\mbox{\hyperlink{structgbm__handle_ac2450148a271a449b35ff12966de8518}{import\_data}}.\mbox{\hyperlink{structgbm__handle_ae11f3776ec272cc4b10ec0625b647170}{fd\_data}}.stride = gbm\_bo\_get\_stride(\mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}});}
+\DoxyCodeLine{183   \}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185   temp->\mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}} = \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}};}
+\DoxyCodeLine{186   temp->\mbox{\hyperlink{structgbm__handle_aa98e98315d3cd7596b980b80e1199649}{hwc\_buffer\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{187   temp->\mbox{\hyperlink{structgbm__handle_a5deee85dd01fe245644d1971dcdd1f89}{gbm\_flags}} = flags;}
+\DoxyCodeLine{188   temp->\mbox{\hyperlink{structgbm__handle_aeaaf0fd4477abfe406de45109d6af33c}{layer\_type\_}} = layer\_type;}
+\DoxyCodeLine{189   *handle = temp;}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{192 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_a0786f7b82b504105c71881eced9b5270}\label{classhwcomposer_1_1GbmBufferHandler_a0786f7b82b504105c71881eced9b5270}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Destroy\+Handle@{Destroy\+Handle}}
+\index{Destroy\+Handle@{Destroy\+Handle}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Destroy\+Handle()}{DestroyHandle()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Destroy\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_ab1e22d9737ca9f6c3e75d1b550e34ce9}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 215 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{215                                                                  \{}
+\DoxyCodeLine{216   \textcolor{keyword}{delete} handle;}
+\DoxyCodeLine{217   handle = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{218 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_ac204254aef6007d09474f8e76f9b6470}\label{classhwcomposer_1_1GbmBufferHandler_ac204254aef6007d09474f8e76f9b6470}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Get\+Fd@{Get\+Fd}}
+\index{Get\+Fd@{Get\+Fd}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Fd()}{GetFd()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Get\+Fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_adb5a4c6d14c012f8a5c71fbb2c984438}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 49 of file gbmbufferhandler.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                   \{}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} fd\_;}
+\DoxyCodeLine{51   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_a55b6cac51fced2198ae9aee706d03452}\label{classhwcomposer_1_1GbmBufferHandler_a55b6cac51fced2198ae9aee706d03452}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Get\+Total\+Planes@{Get\+Total\+Planes}}
+\index{Get\+Total\+Planes@{Get\+Total\+Planes}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Total\+Planes()}{GetTotalPlanes()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Get\+Total\+Planes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a3b4115de8c13c53b6cd233f755f46dc9}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 358 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{358                                                                       \{}
+\DoxyCodeLine{359   \textcolor{keywordflow}{return} handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ab48df5577e8ecd60f18b4b5e6ec6544d}{num\_planes\_}};}
+\DoxyCodeLine{360 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_a552812693a793705e94138855daaead0}\label{classhwcomposer_1_1GbmBufferHandler_a552812693a793705e94138855daaead0}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Import\+Buffer@{Import\+Buffer}}
+\index{Import\+Buffer@{Import\+Buffer}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Import\+Buffer()}{ImportBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Import\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a5841be467d2aa11e8c4d7233596fda3c}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 269 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{269                                                                 \{}
+\DoxyCodeLine{270   uint32\_t gem\_handle = 0;}
+\DoxyCodeLine{271   \mbox{\hyperlink{structHwcBuffer}{HwcBuffer}} *\mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}} = \&(handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}});}
+\DoxyCodeLine{272   \textcolor{keywordtype}{bool} use\_modifier = \textcolor{keyword}{true};}
+\DoxyCodeLine{273   uint64\_t mod = 0;}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275   \textcolor{keywordflow}{if} (!handle->imported\_bo) \{}
+\DoxyCodeLine{276     \textcolor{keywordflow}{if} (!handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[0]) \{}
+\DoxyCodeLine{277       use\_modifier = \textcolor{keyword}{false};}
+\DoxyCodeLine{278       \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}->format\_ = handle->import\_data.fd\_data.format;}
+\DoxyCodeLine{279       \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}->native\_format\_ = handle->import\_data.fd\_data.format;}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{281       handle->imported\_bo =}
+\DoxyCodeLine{282           gbm\_bo\_import(device\_, GBM\_BO\_IMPORT\_FD, \&handle->import\_data.fd\_data,}
+\DoxyCodeLine{283                         handle->gbm\_flags);}
+\DoxyCodeLine{284     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{285       \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}->format\_ = handle->import\_data.fd\_modifier\_data.format;}
+\DoxyCodeLine{286       \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}->native\_format\_ = handle->import\_data.fd\_modifier\_data.format;}
+\DoxyCodeLine{287       handle->imported\_bo = gbm\_bo\_import(device\_, GBM\_BO\_IMPORT\_FD\_MODIFIER,}
+\DoxyCodeLine{288                                           \&handle->import\_data.fd\_modifier\_data,}
+\DoxyCodeLine{289                                           handle->gbm\_flags);}
+\DoxyCodeLine{290     \}}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292     \textcolor{keywordflow}{if} (!handle->imported\_bo) \{}
+\DoxyCodeLine{293       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"can't import bo"});}
+\DoxyCodeLine{294     \}}
+\DoxyCodeLine{295   \}}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297   gem\_handle = gbm\_bo\_get\_handle(handle->imported\_bo).u32;}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{299   \textcolor{keywordflow}{if} (!gem\_handle) \{}
+\DoxyCodeLine{300     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Invalid GEM handle. \(\backslash\)n"});}
+\DoxyCodeLine{301     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{302   \}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304   \textcolor{keywordflow}{if} (!use\_modifier) \{}
+\DoxyCodeLine{305     handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_a30619ecf0d453e5f26717b4faa62a0ef}{width\_}} = handle->import\_data.fd\_data.width;}
+\DoxyCodeLine{306     handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_a0cdc2e30a285f500ebf3da7390b68d6a}{height\_}} = handle->import\_data.fd\_data.height;}
+\DoxyCodeLine{307   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{308     handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_a30619ecf0d453e5f26717b4faa62a0ef}{width\_}} = handle->import\_data.fd\_modifier\_data.width;}
+\DoxyCodeLine{309     handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_a0cdc2e30a285f500ebf3da7390b68d6a}{height\_}} = handle->import\_data.fd\_modifier\_data.height;}
+\DoxyCodeLine{310   \}}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312   \textcolor{keywordflow}{if} (handle->layer\_type\_ == hwcomposer::kLayerCursor) \{}
+\DoxyCodeLine{313     handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_aa3db6171195a29eb453006b3d5e5c5d9}{usage\_}} = hwcomposer::kLayerCursor;}
+\DoxyCodeLine{314     \textcolor{comment}{// We support DRM\_FORMAT\_ARGB8888 for cursor.}}
+\DoxyCodeLine{315     handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ae37e601e5fe0b02095f6f8426657001c}{format\_}} = DRM\_FORMAT\_ARGB8888;}
+\DoxyCodeLine{316   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacehwcomposer_a96195339fc55ee57f41cc4597a56746c}{hwcomposer::IsSupportedMediaFormat}}(handle->
+      \mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ae37e601e5fe0b02095f6f8426657001c}{format\_}})) \{}
+\DoxyCodeLine{317     handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_aa3db6171195a29eb453006b3d5e5c5d9}{usage\_}} = hwcomposer::kLayerVideo;}
+\DoxyCodeLine{318   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{319     handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_aa3db6171195a29eb453006b3d5e5c5d9}{usage\_}} = hwcomposer::kLayerNormal;}
+\DoxyCodeLine{320   \}}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322   \textcolor{keywordtype}{size\_t} total\_planes = gbm\_bo\_get\_plane\_count(handle->imported\_bo);}
+\DoxyCodeLine{323   handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ab48df5577e8ecd60f18b4b5e6ec6544d}{num\_planes\_}} = total\_planes;}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{325   \textcolor{keywordflow}{if} (!use\_modifier) \{}
+\DoxyCodeLine{326     \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}->prime\_fds\_[0] = handle->import\_data.fd\_data.fd;}
+\DoxyCodeLine{327     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < total\_planes; i++) \{}
+\DoxyCodeLine{328       handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_a0454a1651446654d1a863e844af23759}{gem\_handles\_}}[i] = gem\_handle;}
+\DoxyCodeLine{329       handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_acc511f1aa09a69ae1d9ee9d948730f5e}{offsets\_}}[i] =}
+\DoxyCodeLine{330           gbm\_bo\_get\_offset(handle->imported\_bo, i);}
+\DoxyCodeLine{331       handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ac387888cb4382f70e7f498a964ca7ce5}{pitches\_}}[i] =}
+\DoxyCodeLine{332           gbm\_bo\_get\_stride\_for\_plane(handle->imported\_bo, i);}
+\DoxyCodeLine{333       handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_a51f659d550dae6ea7b6208019cc08169}{prime\_fds\_}}[i] = handle->import\_data.fd\_data.fd;}
+\DoxyCodeLine{334     \}}
+\DoxyCodeLine{335   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{336     \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}->prime\_fds\_[0] = handle->import\_data.fd\_modifier\_data.fds[0];}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338     mod = gbm\_bo\_get\_modifier(handle->imported\_bo);}
+\DoxyCodeLine{339     uint32\_t modifier\_low = \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(mod >> 32);}
+\DoxyCodeLine{340     uint32\_t modifier\_high = \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(mod);}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{342     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < total\_planes; i++) \{}
+\DoxyCodeLine{343       handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_a0454a1651446654d1a863e844af23759}{gem\_handles\_}}[i] = gem\_handle;}
+\DoxyCodeLine{344       handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_acc511f1aa09a69ae1d9ee9d948730f5e}{offsets\_}}[i] =}
+\DoxyCodeLine{345           gbm\_bo\_get\_offset(handle->imported\_bo, i);}
+\DoxyCodeLine{346       handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ac387888cb4382f70e7f498a964ca7ce5}{pitches\_}}[i] =}
+\DoxyCodeLine{347           gbm\_bo\_get\_stride\_for\_plane(handle->imported\_bo, i);}
+\DoxyCodeLine{348       handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_a51f659d550dae6ea7b6208019cc08169}{prime\_fds\_}}[i] =}
+\DoxyCodeLine{349           handle->import\_data.fd\_modifier\_data.fds[0];}
+\DoxyCodeLine{350       \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}->fb\_modifiers\_[2 * i] = modifier\_low;}
+\DoxyCodeLine{351       \mbox{\hyperlink{structgbm__handle_a9010ca6ee25cee546643f6d6c5b6c4cf}{bo}}->fb\_modifiers\_[2 * i + 1] = modifier\_high;}
+\DoxyCodeLine{352     \}}
+\DoxyCodeLine{353   \}}
+\DoxyCodeLine{354 }
+\DoxyCodeLine{355   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{356 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_a2338ce2352177ab7a3d01376bcce7381}\label{classhwcomposer_1_1GbmBufferHandler_a2338ce2352177ab7a3d01376bcce7381}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                             \{}
+\DoxyCodeLine{60   device\_ = gbm\_create\_device(fd\_);}
+\DoxyCodeLine{61   \textcolor{keywordflow}{if} (!device\_) \{}
+\DoxyCodeLine{62     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"failed to create gbm device \(\backslash\)n"});}
+\DoxyCodeLine{63     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{64   \}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   uint64\_t width = 0, height = 0;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   \textcolor{keywordflow}{if} (drmGetCap(fd\_, DRM\_CAP\_CURSOR\_WIDTH, \&width)) \{}
+\DoxyCodeLine{69     width = 64;}
+\DoxyCodeLine{70     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"could not get cursor width."});}
+\DoxyCodeLine{71   \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73   \textcolor{keywordflow}{if} (drmGetCap(fd\_, DRM\_CAP\_CURSOR\_HEIGHT, \&height)) \{}
+\DoxyCodeLine{74     height = 64;}
+\DoxyCodeLine{75     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"could not get cursor height."});}
+\DoxyCodeLine{76   \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78   preferred\_cursor\_width\_ = width;}
+\DoxyCodeLine{79   preferred\_cursor\_height\_ = height;}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{82 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_ad6120de07407c36ed5ab99c8fcb628fd}\label{classhwcomposer_1_1GbmBufferHandler_ad6120de07407c36ed5ab99c8fcb628fd}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Map@{Map}}
+\index{Map@{Map}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily void $\ast$ hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{uint32\+\_\+t}]{x,  }\item[{uint32\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{uint32\+\_\+t $\ast$}]{stride,  }\item[{void $\ast$$\ast$}]{map\+\_\+data,  }\item[{size\+\_\+t}]{plane }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_a4ef1e64030d28540265fac46d503e9b8}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 362 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{364                                                                  \{}
+\DoxyCodeLine{365   \textcolor{keywordflow}{if} (!handle->bo)}
+\DoxyCodeLine{366     \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{367 }
+\DoxyCodeLine{368   \textcolor{keywordflow}{return} gbm\_bo\_map(handle->bo, x, y, width, height, GBM\_BO\_TRANSFER\_WRITE,}
+\DoxyCodeLine{369                     stride, map\_data);}
+\DoxyCodeLine{370 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_a9c2554d5c2fe0a76b785352754d369a1}\label{classhwcomposer_1_1GbmBufferHandler_a9c2554d5c2fe0a76b785352754d369a1}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Release\+Buffer@{Release\+Buffer}}
+\index{Release\+Buffer@{Release\+Buffer}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Release\+Buffer()}{ReleaseBuffer()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Release\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_abff911db92343545a36a0cc44a8d2eb8}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 194 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{194                                                                  \{}
+\DoxyCodeLine{195   \textcolor{keywordflow}{if} (handle->bo || handle->imported\_bo) \{}
+\DoxyCodeLine{196     \textcolor{keywordflow}{if} (handle->bo \&\& handle->\mbox{\hyperlink{structyalloc__handle_ad1b5a7934204f6636871eb6270329654}{hwc\_buffer\_}}) \{}
+\DoxyCodeLine{197       gbm\_bo\_destroy(handle->bo);}
+\DoxyCodeLine{198     \}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200     \textcolor{keywordflow}{if} (handle->imported\_bo) \{}
+\DoxyCodeLine{201       gbm\_bo\_destroy(handle->imported\_bo);}
+\DoxyCodeLine{202     \}}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204     \textcolor{keywordflow}{if} (!handle->\mbox{\hyperlink{structyalloc__handle_a2dfa4e2505a052e5ddbbe66e32b33875}{meta\_data\_}}.\mbox{\hyperlink{structHwcBuffer_ad16028811f8af57430b65129bf7ae67a}{fb\_modifiers\_}}[0]) \{}
+\DoxyCodeLine{205       close(handle->import\_data.fd\_data.fd);}
+\DoxyCodeLine{206     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{207       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < handle->import\_data.fd\_modifier\_data.num\_fds; i++)}
+\DoxyCodeLine{208         close(handle->import\_data.fd\_modifier\_data.fds[i]);}
+\DoxyCodeLine{209     \}}
+\DoxyCodeLine{210   \}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{213 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GbmBufferHandler_af26a61bbdd91d36780e41b406e8b8dd9}\label{classhwcomposer_1_1GbmBufferHandler_af26a61bbdd91d36780e41b406e8b8dd9}} 
+\index{hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}!Un\+Map@{Un\+Map}}
+\index{Un\+Map@{Un\+Map}!hwcomposer\+::\+Gbm\+Buffer\+Handler@{hwcomposer\+::\+Gbm\+Buffer\+Handler}}
+\subsubsection{\texorpdfstring{Un\+Map()}{UnMap()}}
+{\footnotesize\ttfamily int32\+\_\+t hwcomposer\+::\+Gbm\+Buffer\+Handler\+::\+Un\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle,  }\item[{void $\ast$}]{map\+\_\+data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1NativeBufferHandler_ae0da63bfef3f8342460fa1a958f8359c}{hwcomposer\+::\+Native\+Buffer\+Handler}}.
+
+
+
+Definition at line 372 of file gbmbufferhandler.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{372                                                                             \{}
+\DoxyCodeLine{373   \textcolor{keywordflow}{if} (!handle->bo)}
+\DoxyCodeLine{374     \textcolor{keywordflow}{return} -1;}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{376   gbm\_bo\_unmap(handle->bo, map\_data);}
+\DoxyCodeLine{377   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{378 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/\mbox{\hyperlink{gbmbufferhandler_8h}{gbmbufferhandler.\+h}}\item 
+os/linux/\mbox{\hyperlink{gbmbufferhandler_8cpp}{gbmbufferhandler.\+cpp}}\end{DoxyCompactItemize}

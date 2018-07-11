@@ -1,0 +1,68 @@
+\hypertarget{structweston__iahwc__output__api}{}\section{weston\+\_\+iahwc\+\_\+output\+\_\+api Struct Reference}
+\label{structweston__iahwc__output__api}\index{weston\+\_\+iahwc\+\_\+output\+\_\+api@{weston\+\_\+iahwc\+\_\+output\+\_\+api}}
+
+
+{\ttfamily \#include $<$compositor-\/iahwc.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int($\ast$ \mbox{\hyperlink{structweston__iahwc__output__api_a1b41645a52bae88cef5a7d8706995483}{set\+\_\+mode}} )(struct weston\+\_\+output $\ast$output, enum \mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1}{weston\+\_\+iahwc\+\_\+backend\+\_\+output\+\_\+mode}} mode, const char $\ast$modeline)
+\item 
+void($\ast$ \mbox{\hyperlink{structweston__iahwc__output__api_ae1d4658d13aa96318374dd5e9f1e2044}{set\+\_\+gbm\+\_\+format}} )(struct weston\+\_\+output $\ast$output, const char $\ast$gbm\+\_\+format)
+\item 
+void($\ast$ \mbox{\hyperlink{structweston__iahwc__output__api_a9338e2a3accee27c1ea4b09e5b2ce8bd}{set\+\_\+seat}} )(struct weston\+\_\+output $\ast$output, const char $\ast$seat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 46 of file compositor-\/iahwc.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structweston__iahwc__output__api_ae1d4658d13aa96318374dd5e9f1e2044}\label{structweston__iahwc__output__api_ae1d4658d13aa96318374dd5e9f1e2044}} 
+\index{weston\+\_\+iahwc\+\_\+output\+\_\+api@{weston\+\_\+iahwc\+\_\+output\+\_\+api}!set\+\_\+gbm\+\_\+format@{set\+\_\+gbm\+\_\+format}}
+\index{set\+\_\+gbm\+\_\+format@{set\+\_\+gbm\+\_\+format}!weston\+\_\+iahwc\+\_\+output\+\_\+api@{weston\+\_\+iahwc\+\_\+output\+\_\+api}}
+\subsubsection{\texorpdfstring{set\+\_\+gbm\+\_\+format}{set\_gbm\_format}}
+{\footnotesize\ttfamily void($\ast$ weston\+\_\+iahwc\+\_\+output\+\_\+api\+::set\+\_\+gbm\+\_\+format) (struct weston\+\_\+output $\ast$output, const char $\ast$gbm\+\_\+format)}
+
+The pixel format to be used by the output. Valid values are\+:
+\begin{DoxyItemize}
+\item N\+U\+LL -\/ The format set at backend creation time will be used;
+\item \char`\"{}xrgb8888\char`\"{};
+\item \char`\"{}rgb565\char`\"{}
+\item \char`\"{}xrgb2101010\char`\"{} 
+\end{DoxyItemize}
+
+Definition at line 62 of file compositor-\/iahwc.\+h.
+
+\mbox{\Hypertarget{structweston__iahwc__output__api_a1b41645a52bae88cef5a7d8706995483}\label{structweston__iahwc__output__api_a1b41645a52bae88cef5a7d8706995483}} 
+\index{weston\+\_\+iahwc\+\_\+output\+\_\+api@{weston\+\_\+iahwc\+\_\+output\+\_\+api}!set\+\_\+mode@{set\+\_\+mode}}
+\index{set\+\_\+mode@{set\+\_\+mode}!weston\+\_\+iahwc\+\_\+output\+\_\+api@{weston\+\_\+iahwc\+\_\+output\+\_\+api}}
+\subsubsection{\texorpdfstring{set\+\_\+mode}{set\_mode}}
+{\footnotesize\ttfamily int($\ast$ weston\+\_\+iahwc\+\_\+output\+\_\+api\+::set\+\_\+mode) (struct weston\+\_\+output $\ast$output, enum \mbox{\hyperlink{compositor-iahwc_8h_a992bc1439aa5a0996040fdde612744e1}{weston\+\_\+iahwc\+\_\+backend\+\_\+output\+\_\+mode}} mode, const char $\ast$modeline)}
+
+The mode to be used by the output. Refer to the documentation of W\+E\+S\+T\+O\+N\+\_\+\+I\+A\+H\+W\+C\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+R\+E\+F\+E\+R\+R\+ED for details.
+
+Returns 0 on success, -\/1 on failure. 
+
+Definition at line 52 of file compositor-\/iahwc.\+h.
+
+\mbox{\Hypertarget{structweston__iahwc__output__api_a9338e2a3accee27c1ea4b09e5b2ce8bd}\label{structweston__iahwc__output__api_a9338e2a3accee27c1ea4b09e5b2ce8bd}} 
+\index{weston\+\_\+iahwc\+\_\+output\+\_\+api@{weston\+\_\+iahwc\+\_\+output\+\_\+api}!set\+\_\+seat@{set\+\_\+seat}}
+\index{set\+\_\+seat@{set\+\_\+seat}!weston\+\_\+iahwc\+\_\+output\+\_\+api@{weston\+\_\+iahwc\+\_\+output\+\_\+api}}
+\subsubsection{\texorpdfstring{set\+\_\+seat}{set\_seat}}
+{\footnotesize\ttfamily void($\ast$ weston\+\_\+iahwc\+\_\+output\+\_\+api\+::set\+\_\+seat) (struct weston\+\_\+output $\ast$output, const char $\ast$seat)}
+
+The seat to be used by the output. Set to N\+U\+LL to use the default seat. 
+
+Definition at line 67 of file compositor-\/iahwc.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/weston/plugin/\mbox{\hyperlink{compositor-iahwc_8h}{compositor-\/iahwc.\+h}}\end{DoxyCompactItemize}

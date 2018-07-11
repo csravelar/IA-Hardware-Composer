@@ -1,0 +1,296 @@
+\hypertarget{classhwcomposer_1_1VARenderer}{}\section{hwcomposer\+:\+:V\+A\+Renderer Class Reference}
+\label{classhwcomposer_1_1VARenderer}\index{hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}}
+
+
+{\ttfamily \#include $<$varenderer.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:V\+A\+Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1VARenderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VARenderer_a7ba9e072366652966ab3a3007a779cec}{V\+A\+Renderer}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1VARenderer_affd21547dc812a4a39b1b5dbba33c9af}{$\sim$\+V\+A\+Renderer}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VARenderer_a93d5e911647cee44c892222c822df619}{Init}} (int gpu\+\_\+fd) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VARenderer_a5fdcb230093416433e8cf394137b9cc1}{Draw}} (const \mbox{\hyperlink{structhwcomposer_1_1MediaState}{Media\+State}} \&state, \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$surface) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VARenderer_aece2e9617febe0b91087342ce84812e2}{Insert\+Fence}} (int32\+\_\+t) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1VARenderer_a863e73b1d84e194300aac6f6c30fd037}{Set\+Explicit\+Sync\+Support}} (bool) override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1VARenderer_a0db23648105f69ce00fea498f28f87ec}{Destroy\+Media\+Resources}} (std\+::vector$<$ struct \mbox{\hyperlink{structhwcomposer_1_1media__import}{media\+\_\+import}} $>$ \&) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 84 of file varenderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VARenderer_a7ba9e072366652966ab3a3007a779cec}\label{classhwcomposer_1_1VARenderer_a7ba9e072366652966ab3a3007a779cec}} 
+\index{hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}!V\+A\+Renderer@{V\+A\+Renderer}}
+\index{V\+A\+Renderer@{V\+A\+Renderer}!hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}}
+\subsubsection{\texorpdfstring{V\+A\+Renderer()}{VARenderer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+A\+Renderer\+::\+V\+A\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1VARenderer_affd21547dc812a4a39b1b5dbba33c9af}\label{classhwcomposer_1_1VARenderer_affd21547dc812a4a39b1b5dbba33c9af}} 
+\index{hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}!````~V\+A\+Renderer@{$\sim$\+V\+A\+Renderer}}
+\index{````~V\+A\+Renderer@{$\sim$\+V\+A\+Renderer}!hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}}
+\subsubsection{\texorpdfstring{$\sim$\+V\+A\+Renderer()}{~VARenderer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+V\+A\+Renderer\+::$\sim$\+V\+A\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file varenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                         \{}
+\DoxyCodeLine{32   DestroyContext();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34   \textcolor{keywordflow}{if} (va\_display\_) \{}
+\DoxyCodeLine{35     vaTerminate(va\_display\_);}
+\DoxyCodeLine{36   \}}
+\DoxyCodeLine{37 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1VARenderer_a0db23648105f69ce00fea498f28f87ec}\label{classhwcomposer_1_1VARenderer_a0db23648105f69ce00fea498f28f87ec}} 
+\index{hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}!Destroy\+Media\+Resources@{Destroy\+Media\+Resources}}
+\index{Destroy\+Media\+Resources@{Destroy\+Media\+Resources}!hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}}
+\subsubsection{\texorpdfstring{Destroy\+Media\+Resources()}{DestroyMediaResources()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+V\+A\+Renderer\+::\+Destroy\+Media\+Resources (\begin{DoxyParamCaption}\item[{std\+::vector$<$ struct \mbox{\hyperlink{structhwcomposer_1_1media__import}{media\+\_\+import}} $>$ \&}]{resources }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1Renderer_a81d8de129d86d71d99366ae59a6fe7f7}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 328 of file varenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{329                                                \{}
+\DoxyCodeLine{330   \textcolor{keywordtype}{size\_t} purged\_size = resources.size();}
+\DoxyCodeLine{331   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < purged\_size; i++) \{}
+\DoxyCodeLine{332     \mbox{\hyperlink{namespacehwcomposer_aa99e35835961ac7d6baa59a04131ff42}{MediaResourceHandle}}\& handle = resources.at(i);}
+\DoxyCodeLine{333     \textcolor{keywordflow}{if} (handle.surface\_ != VA\_INVALID\_ID) \{}
+\DoxyCodeLine{334       vaDestroySurfaces(va\_display\_, \&handle.surface\_, 1);}
+\DoxyCodeLine{335     \}}
+\DoxyCodeLine{336   \}}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{339 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VARenderer_a5fdcb230093416433e8cf394137b9cc1}\label{classhwcomposer_1_1VARenderer_a5fdcb230093416433e8cf394137b9cc1}} 
+\index{hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}!Draw@{Draw}}
+\index{Draw@{Draw}!hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+V\+A\+Renderer\+::\+Draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1MediaState}{Media\+State}} \&}]{state,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1Renderer_a3811bf639ba6fd9b9891daf0b051b98b}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 216 of file varenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{216                                                                      \{}
+\DoxyCodeLine{217   \mbox{\hyperlink{hwctrace_8h_a539a95897071c72babce1012d503b3ca}{CTRACE}}();}
+\DoxyCodeLine{218   \textcolor{comment}{// TODO: Clear surface ?}}
+\DoxyCodeLine{219   surface->SetClearSurface(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a61ab9864bcc7860917f12c33382befbc}{NativeSurface::kNone}});}
+\DoxyCodeLine{220   OverlayBuffer* buffer\_out = surface->GetLayer()->GetBuffer();}
+\DoxyCodeLine{221   \textcolor{keywordtype}{int} rt\_format = \mbox{\hyperlink{namespacehwcomposer_a487f8d9f8fe8490d7057be9a1c67b42e}{DrmFormatToRTFormat}}(buffer\_out->GetFormat());}
+\DoxyCodeLine{222   \textcolor{keywordflow}{if} (va\_context\_ == VA\_INVALID\_ID || render\_target\_format\_ != rt\_format) \{}
+\DoxyCodeLine{223     render\_target\_format\_ = rt\_format;}
+\DoxyCodeLine{224     \textcolor{keywordflow}{if} (!CreateContext()) \{}
+\DoxyCodeLine{225       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Create VA context failed\(\backslash\)n"});}
+\DoxyCodeLine{226       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{227     \}}
+\DoxyCodeLine{228   \}}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230   \textcolor{comment}{// Get Input Surface.}}
+\DoxyCodeLine{231   OverlayBuffer* buffer\_in = state.layer\_->GetBuffer();}
+\DoxyCodeLine{232   \textcolor{keyword}{const} \mbox{\hyperlink{namespacehwcomposer_aa99e35835961ac7d6baa59a04131ff42}{MediaResourceHandle}}\& resource = buffer\_in->GetMediaResource(}
+\DoxyCodeLine{233       va\_display\_, state.layer\_->GetSourceCropWidth(),}
+\DoxyCodeLine{234       state.layer\_->GetSourceCropHeight());}
+\DoxyCodeLine{235   VASurfaceID surface\_in = resource.\mbox{\hyperlink{structhwcomposer_1_1media__import_af82420941f64a848639e0ac80a7b2861}{surface\_}};}
+\DoxyCodeLine{236   \textcolor{keywordflow}{if} (surface\_in == VA\_INVALID\_ID) \{}
+\DoxyCodeLine{237     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to create Va Input Surface. \(\backslash\)n"});}
+\DoxyCodeLine{238     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{239   \}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241   \textcolor{comment}{// Get Output Surface.}}
+\DoxyCodeLine{242   \textcolor{keyword}{const} OverlayLayer* layer\_out = surface->GetLayer();}
+\DoxyCodeLine{243   \textcolor{keyword}{const} \mbox{\hyperlink{namespacehwcomposer_aa99e35835961ac7d6baa59a04131ff42}{MediaResourceHandle}}\& out\_resource =}
+\DoxyCodeLine{244       layer\_out->GetBuffer()->GetMediaResource(}
+\DoxyCodeLine{245           va\_display\_, layer\_out->GetSourceCropWidth(),}
+\DoxyCodeLine{246           layer\_out->GetSourceCropHeight());}
+\DoxyCodeLine{247   VASurfaceID surface\_out = out\_resource.\mbox{\hyperlink{structhwcomposer_1_1media__import_af82420941f64a848639e0ac80a7b2861}{surface\_}};}
+\DoxyCodeLine{248   \textcolor{keywordflow}{if} (surface\_out == VA\_INVALID\_ID) \{}
+\DoxyCodeLine{249     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to create Va Output Surface. \(\backslash\)n"});}
+\DoxyCodeLine{250     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{251   \}}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253   VARectangle surface\_region;}
+\DoxyCodeLine{254   \textcolor{keyword}{const} OverlayLayer* layer\_in = state.layer\_;}
+\DoxyCodeLine{255   \textcolor{keyword}{const} HwcRect<float>\& source\_crop = layer\_in->GetSourceCrop();}
+\DoxyCodeLine{256   surface\_region.x = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(source\_crop.left);}
+\DoxyCodeLine{257   surface\_region.y = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(source\_crop.top);}
+\DoxyCodeLine{258   surface\_region.width = layer\_in->GetSourceCropWidth();}
+\DoxyCodeLine{259   surface\_region.height = layer\_in->GetSourceCropHeight();}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261   VARectangle output\_region;}
+\DoxyCodeLine{262   \textcolor{keyword}{const} HwcRect<float>\& source\_crop\_out = layer\_out->GetSourceCrop();}
+\DoxyCodeLine{263   output\_region.x = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(source\_crop\_out.left);}
+\DoxyCodeLine{264   output\_region.y = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(source\_crop\_out.top);}
+\DoxyCodeLine{265   output\_region.width = layer\_out->GetSourceCropWidth();}
+\DoxyCodeLine{266   output\_region.height = layer\_out->GetSourceCropHeight();}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268   VAProcPipelineParameterBuffer pipe\_param = \{\};}
+\DoxyCodeLine{269   pipe\_param.surface = surface\_in;}
+\DoxyCodeLine{270   pipe\_param.surface\_region = \&surface\_region;}
+\DoxyCodeLine{271   pipe\_param.surface\_color\_standard = VAProcColorStandardBT601;}
+\DoxyCodeLine{272   pipe\_param.output\_region = \&output\_region;}
+\DoxyCodeLine{273   pipe\_param.output\_color\_standard = VAProcColorStandardBT601;}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"surface\_region: (\%d, \%d, \%d, \%d)\(\backslash\)n"}, surface\_region.x,}
+\DoxyCodeLine{276             surface\_region.y, surface\_region.width, surface\_region.height);}
+\DoxyCodeLine{277   \mbox{\hyperlink{hwctrace_8h_a8f0916f7778d78a386afc1e5d8be8a25}{DUMPTRACE}}(\textcolor{stringliteral}{"Layer DisplayFrame:(\%d,\%d,\%d,\%d)\(\backslash\)n"}, output\_region.x,}
+\DoxyCodeLine{278             output\_region.y, output\_region.width, output\_region.height);}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} itr = state.colors\_.begin(); itr != state.colors\_.end(); itr++) \{}
+\DoxyCodeLine{281     SetVAProcFilterColorValue(itr->first, itr->second);}
+\DoxyCodeLine{282   \}}
+\DoxyCodeLine{283   SetVAProcFilterDeinterlaceMode(state.deinterlace\_);}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285   \textcolor{keywordflow}{if} (!UpdateCaps()) \{}
+\DoxyCodeLine{286     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to update capabailities. \(\backslash\)n"});}
+\DoxyCodeLine{287     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{288   \}}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{290   pipe\_param.filter\_flags = GetVAProcFilterScalingMode(state.scaling\_mode\_);}
+\DoxyCodeLine{291   \textcolor{keywordflow}{if} (filters\_.size()) \{}
+\DoxyCodeLine{292     pipe\_param.filters = filters\_.data();}
+\DoxyCodeLine{293   \}}
+\DoxyCodeLine{294   pipe\_param.num\_filters = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\textcolor{keyword}{>}(filters\_.size());}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#if VA\_MAJOR\_VERSION >= 1}}
+\DoxyCodeLine{297   \textcolor{comment}{// currently rotation is only supported by VA on Android.}}
+\DoxyCodeLine{298   uint32\_t rotation = 0, mirror = 0;}
+\DoxyCodeLine{299   HWCTransformToVA(state.layer\_->GetTransform(), rotation, mirror);}
+\DoxyCodeLine{300   pipe\_param.rotation\_state = rotation;}
+\DoxyCodeLine{301   pipe\_param.mirror\_state = mirror;}
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304   ScopedVABufferID pipeline\_buffer(va\_display\_);}
+\DoxyCodeLine{305   \textcolor{keywordflow}{if} (!pipeline\_buffer.CreateBuffer(}
+\DoxyCodeLine{306           va\_context\_, VAProcPipelineParameterBufferType,}
+\DoxyCodeLine{307           \textcolor{keyword}{sizeof}(VAProcPipelineParameterBuffer), 1, \&pipe\_param)) \{}
+\DoxyCodeLine{308     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{309   \}}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311   VAStatus ret = VA\_STATUS\_SUCCESS;}
+\DoxyCodeLine{312   ret = vaBeginPicture(va\_display\_, va\_context\_, surface\_out);}
+\DoxyCodeLine{313   ret |=}
+\DoxyCodeLine{314       vaRenderPicture(va\_display\_, va\_context\_, \&pipeline\_buffer.buffer(), 1);}
+\DoxyCodeLine{315   ret |= vaEndPicture(va\_display\_, va\_context\_);}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{317   \textcolor{keywordflow}{if} (surface\_region.width == 1920 \&\& surface\_region.height == 1080) \{}
+\DoxyCodeLine{318     \textcolor{comment}{// FIXME: WA for OAM-63127. Not sure why this is needed but seems}}
+\DoxyCodeLine{319     \textcolor{comment}{// to ensure we have consistent 60 fps.}}
+\DoxyCodeLine{320     vaSyncSurface(va\_display\_, surface\_out);}
+\DoxyCodeLine{321   \}}
+\DoxyCodeLine{322 }
+\DoxyCodeLine{323   surface->ResetDamage();}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{325   \textcolor{keywordflow}{return} ret == VA\_STATUS\_SUCCESS ? true : \textcolor{keyword}{false};}
+\DoxyCodeLine{326 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VARenderer_a93d5e911647cee44c892222c822df619}\label{classhwcomposer_1_1VARenderer_a93d5e911647cee44c892222c822df619}} 
+\index{hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+V\+A\+Renderer\+::\+Init (\begin{DoxyParamCaption}\item[{int}]{gpu\+\_\+fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1Renderer_a23d289f318b33cdcf998475c2a36aeb2}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 39 of file varenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                 \{}
+\DoxyCodeLine{40   va\_display\_ = \mbox{\hyperlink{alios_2platformdefines_8cpp_a776db37da150468eb39fc6fad0d7c9c1}{GetVADisplay}}(gpu\_fd);}
+\DoxyCodeLine{41   \textcolor{keywordflow}{if} (!va\_display\_) \{}
+\DoxyCodeLine{42     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"vaGetDisplay failed\(\backslash\)n"});}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{44   \}}
+\DoxyCodeLine{45   VAStatus ret = VA\_STATUS\_SUCCESS;}
+\DoxyCodeLine{46   \textcolor{keywordtype}{int} major, minor;}
+\DoxyCodeLine{47   ret = vaInitialize(va\_display\_, \&major, \&minor);}
+\DoxyCodeLine{48   \textcolor{keywordflow}{return} ret == VA\_STATUS\_SUCCESS ? true : \textcolor{keyword}{false};}
+\DoxyCodeLine{49 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VARenderer_aece2e9617febe0b91087342ce84812e2}\label{classhwcomposer_1_1VARenderer_aece2e9617febe0b91087342ce84812e2}} 
+\index{hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}!Insert\+Fence@{Insert\+Fence}}
+\index{Insert\+Fence@{Insert\+Fence}!hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}}
+\subsubsection{\texorpdfstring{Insert\+Fence()}{InsertFence()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+V\+A\+Renderer\+::\+Insert\+Fence (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1Renderer_a0b7be67ed8f89c994cf3bcfd418ef0a4}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 91 of file varenderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                        \{}
+\DoxyCodeLine{92   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1VARenderer_a863e73b1d84e194300aac6f6c30fd037}\label{classhwcomposer_1_1VARenderer_a863e73b1d84e194300aac6f6c30fd037}} 
+\index{hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}!Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}}
+\index{Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}!hwcomposer\+::\+V\+A\+Renderer@{hwcomposer\+::\+V\+A\+Renderer}}
+\subsubsection{\texorpdfstring{Set\+Explicit\+Sync\+Support()}{SetExplicitSyncSupport()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+V\+A\+Renderer\+::\+Set\+Explicit\+Sync\+Support (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1Renderer_a8f889bf7b26aa7d1436e9ecf6d15e629}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 93 of file varenderer.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                                                \{}
+\DoxyCodeLine{94   \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/va/\mbox{\hyperlink{varenderer_8h}{varenderer.\+h}}\item 
+common/compositor/va/\mbox{\hyperlink{varenderer_8cpp}{varenderer.\+cpp}}\end{DoxyCompactItemize}

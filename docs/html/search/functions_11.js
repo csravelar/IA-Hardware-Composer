@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['testcommit',['TestCommit',['../classhwcomposer_1_1DisplayPlaneHandler.html#a1135b134010e6736aa49304100c9d3b9',1,'hwcomposer::DisplayPlaneHandler::TestCommit()'],['../classhwcomposer_1_1DrmDisplay.html#a7aaa318ce853a36ebcaf837fe1801f88',1,'hwcomposer::DrmDisplay::TestCommit()'],['../classhwcomposer_1_1PhysicalDisplay.html#a3c71b07e973c29b5603c35c333a42991',1,'hwcomposer::PhysicalDisplay::TestCommit()']]],
+  ['tohook',['ToHook',['../classandroid_1_1IAHWC2.html#a456dbb88757cb56b49e90d543984c1a9',1,'android::IAHWC2::ToHook()'],['../classhwcomposer_1_1IAHWC.html#a87c94f049fd6c0212a94478e2e4faa1d',1,'hwcomposer::IAHWC::ToHook()']]],
+  ['toiahwc',['toIAHWC',['../classhwcomposer_1_1IAHWC.html#a9f236ac26693721c4c25f64a01e24307',1,'hwcomposer::IAHWC']]],
+  ['toiahwc2',['toIAHWC2',['../classandroid_1_1IAHWC2.html#a8a800faee2b34f1362effb240bedd921',1,'android::IAHWC2']]],
+  ['translaterect',['TranslateRect',['../namespacehwcomposer.html#ac60601bf8e2068d963dbbf172e08a317',1,'hwcomposer']]],
+  ['type',['type',['../classhwcomposer_1_1DrmPlane.html#aeedfc2e6824d27a9dd754bf4ee27b274',1,'hwcomposer::DrmPlane::type()'],['../classhwcomposer_1_1LogicalDisplay.html#a012b2a742cfd590405db34ff68f919a9',1,'hwcomposer::LogicalDisplay::Type()'],['../classhwcomposer_1_1MosaicDisplay.html#a7c5288febea28948c2689d7f6feee183',1,'hwcomposer::MosaicDisplay::Type()'],['../classhwcomposer_1_1NestedDisplay.html#a5e0cd87bc15e94b2997fcfbb37060602',1,'hwcomposer::NestedDisplay::Type()'],['../classhwcomposer_1_1VirtualDisplay.html#a20d0dc4afb2b131ffec31e81e046c52d',1,'hwcomposer::VirtualDisplay::Type()'],['../classhwcomposer_1_1NativeDisplay.html#a67018275066174f9e5d4b801cd6fea31',1,'hwcomposer::NativeDisplay::Type()'],['../classhwcomposer_1_1PhysicalDisplay.html#aa2a50f9dbb2740cf40256bcadad666c4',1,'hwcomposer::PhysicalDisplay::Type()']]],
+  ['type_5fchanged',['type_changed',['../classandroid_1_1IAHWC2_1_1Hwc2Layer.html#a21d5564c293990c35601edffc4b9b8b5',1,'android::IAHWC2::Hwc2Layer']]]
+];

@@ -1,0 +1,193 @@
+\hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation}{}\section{hwcomposer\+:\+:Ring\+Buffer\+:\+:Allocation Class Reference}
+\label{classhwcomposer_1_1RingBuffer_1_1Allocation}\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+
+
+{\ttfamily \#include $<$vkshim.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_a851607ba00803ed3251242a0777603c4}{Allocation}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_ab9defd9d5a17793bf5bfeca346d21b43}{Allocation}} (\mbox{\hyperlink{classhwcomposer_1_1RingBuffer}{Ring\+Buffer}} $\ast$parent, uint8\+\_\+t $\ast$\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_a3b2a81defb09b0aee75fdef9977a0944}{ptr}})
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_a5979a2cae091ade55e9ee39ba3ee52ee}{Allocation}} (\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation}{Allocation}} \&\&rhs) noexcept
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_a18406438ecf178b78dabaf9bfb4302b9}{$\sim$\+Allocation}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation}{Allocation}} \& \mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_aa91b90b55d600b2d4ce991f51179fc74}{operator=}} (\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation}{Allocation}} \&\&rhs) noexcept
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_ae5c14766d266601705a6e3f261f889c6}{operator bool}} () const
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_a3b2a81defb09b0aee75fdef9977a0944}{ptr}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_acad9872f07a2e24046e945f871f26431}{get}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_ad430a1ad9261704ed10a10d6f79530fe}{offset}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file vkshim.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation_a851607ba00803ed3251242a0777603c4}\label{classhwcomposer_1_1RingBuffer_1_1Allocation_a851607ba00803ed3251242a0777603c4}} 
+\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}!Allocation@{Allocation}}
+\index{Allocation@{Allocation}!hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+\subsubsection{\texorpdfstring{Allocation()}{Allocation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Ring\+Buffer\+::\+Allocation\+::\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation_ab9defd9d5a17793bf5bfeca346d21b43}\label{classhwcomposer_1_1RingBuffer_1_1Allocation_ab9defd9d5a17793bf5bfeca346d21b43}} 
+\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}!Allocation@{Allocation}}
+\index{Allocation@{Allocation}!hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+\subsubsection{\texorpdfstring{Allocation()}{Allocation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Ring\+Buffer\+::\+Allocation\+::\+Allocation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1RingBuffer}{Ring\+Buffer}} $\ast$}]{parent,  }\item[{uint8\+\_\+t $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file vkshim.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                                  \{}
+\DoxyCodeLine{38       parent\_ = parent;}
+\DoxyCodeLine{39       ptr\_ = \mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation_a3b2a81defb09b0aee75fdef9977a0944}{ptr}};}
+\DoxyCodeLine{40     \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation_a5979a2cae091ade55e9ee39ba3ee52ee}\label{classhwcomposer_1_1RingBuffer_1_1Allocation_a5979a2cae091ade55e9ee39ba3ee52ee}} 
+\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}!Allocation@{Allocation}}
+\index{Allocation@{Allocation}!hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+\subsubsection{\texorpdfstring{Allocation()}{Allocation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Ring\+Buffer\+::\+Allocation\+::\+Allocation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation}{Allocation}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 41 of file vkshim.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                           \{}
+\DoxyCodeLine{42       parent\_ = rhs.parent\_;}
+\DoxyCodeLine{43       ptr\_ = rhs.ptr\_;}
+\DoxyCodeLine{44       rhs.parent\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{45       rhs.ptr\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{46     \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation_a18406438ecf178b78dabaf9bfb4302b9}\label{classhwcomposer_1_1RingBuffer_1_1Allocation_a18406438ecf178b78dabaf9bfb4302b9}} 
+\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}!````~Allocation@{$\sim$\+Allocation}}
+\index{````~Allocation@{$\sim$\+Allocation}!hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+\subsubsection{\texorpdfstring{$\sim$\+Allocation()}{~Allocation()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Ring\+Buffer\+::\+Allocation\+::$\sim$\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 48 of file vkshim.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                   \{}
+\DoxyCodeLine{49       CheckedFree();}
+\DoxyCodeLine{50     \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation_acad9872f07a2e24046e945f871f26431}\label{classhwcomposer_1_1RingBuffer_1_1Allocation_acad9872f07a2e24046e945f871f26431}} 
+\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}!get@{get}}
+\index{get@{get}!hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ hwcomposer\+::\+Ring\+Buffer\+::\+Allocation\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 74 of file vkshim.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74              \{}
+\DoxyCodeLine{75       \textcolor{keywordflow}{return} (T *)ptr\_;}
+\DoxyCodeLine{76     \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation_ad430a1ad9261704ed10a10d6f79530fe}\label{classhwcomposer_1_1RingBuffer_1_1Allocation_ad430a1ad9261704ed10a10d6f79530fe}} 
+\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}!offset@{offset}}
+\index{offset@{offset}!hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+\subsubsection{\texorpdfstring{offset()}{offset()}}
+{\footnotesize\ttfamily size\+\_\+t hwcomposer\+::\+Ring\+Buffer\+::\+Allocation\+::offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 78 of file vkshim.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                           \{}
+\DoxyCodeLine{79       \textcolor{keywordflow}{return} ptr\_ - parent\_->buffer\_;}
+\DoxyCodeLine{80     \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation_ae5c14766d266601705a6e3f261f889c6}\label{classhwcomposer_1_1RingBuffer_1_1Allocation_ae5c14766d266601705a6e3f261f889c6}} 
+\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+\subsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Ring\+Buffer\+::\+Allocation\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line 65 of file vkshim.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                                    \{}
+\DoxyCodeLine{66       \textcolor{keywordflow}{return} ptr\_ != \textcolor{keyword}{nullptr} \&\& parent\_ != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{67     \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation_aa91b90b55d600b2d4ce991f51179fc74}\label{classhwcomposer_1_1RingBuffer_1_1Allocation_aa91b90b55d600b2d4ce991f51179fc74}} 
+\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation}{Allocation}}\& hwcomposer\+::\+Ring\+Buffer\+::\+Allocation\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1RingBuffer_1_1Allocation}{Allocation}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 52 of file vkshim.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                                      \{}
+\DoxyCodeLine{53       \textcolor{keywordflow}{if} (\&rhs == \textcolor{keyword}{this})}
+\DoxyCodeLine{54         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{55       CheckedFree();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57       parent\_ = rhs.parent\_;}
+\DoxyCodeLine{58       ptr\_ = rhs.ptr\_;}
+\DoxyCodeLine{59       rhs.parent\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{60       rhs.ptr\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62       \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{63     \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1RingBuffer_1_1Allocation_a3b2a81defb09b0aee75fdef9977a0944}\label{classhwcomposer_1_1RingBuffer_1_1Allocation_a3b2a81defb09b0aee75fdef9977a0944}} 
+\index{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}!ptr@{ptr}}
+\index{ptr@{ptr}!hwcomposer\+::\+Ring\+Buffer\+::\+Allocation@{hwcomposer\+::\+Ring\+Buffer\+::\+Allocation}}
+\subsubsection{\texorpdfstring{ptr()}{ptr()}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ hwcomposer\+::\+Ring\+Buffer\+::\+Allocation\+::ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 69 of file vkshim.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                    \{}
+\DoxyCodeLine{70       \textcolor{keywordflow}{return} ptr\_;}
+\DoxyCodeLine{71     \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/vk/\mbox{\hyperlink{vkshim_8h}{vkshim.\+h}}\end{DoxyCompactItemize}

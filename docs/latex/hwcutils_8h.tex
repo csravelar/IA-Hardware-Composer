@@ -1,0 +1,50 @@
+\hypertarget{hwcutils_8h}{}\section{public/hwcutils.h File Reference}
+\label{hwcutils_8h}\index{public/hwcutils.\+h@{public/hwcutils.\+h}}
+{\ttfamily \#include $<$hwcdefs.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehwcomposer}{hwcomposer}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacehwcomposer_a343d36a60de234fac01fc5982b8d0e38}{hwcomposer\+::\+Overlap\+Type}} \{ \mbox{\hyperlink{namespacehwcomposer_a343d36a60de234fac01fc5982b8d0e38a4d4bfa479e8b734adb9f14e2f86e872d}{hwcomposer\+::k\+Enclosed}} = 0, 
+\mbox{\hyperlink{namespacehwcomposer_a343d36a60de234fac01fc5982b8d0e38ad208a4fba129e4e2b98ff39a9bb99d01}{hwcomposer\+::k\+Overlapping}}, 
+\mbox{\hyperlink{namespacehwcomposer_a343d36a60de234fac01fc5982b8d0e38a7ab351e5e1da3b8232419a34e1dd9559}{hwcomposer\+::k\+Outside}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacehwcomposer_a095356a61c96d5f48d4ada5e8e193549}{hwcomposer\+::\+H\+W\+C\+Poll}} (int fd, int timeout)
+\item 
+void \mbox{\hyperlink{namespacehwcomposer_a691c500dd8ba703991673286e1920bd9}{hwcomposer\+::\+Reset\+Rect\+To\+Region}} (const Hwc\+Region \&hwc\+\_\+region, Hwc\+Rect$<$ int $>$ \&rect)
+\item 
+void \mbox{\hyperlink{namespacehwcomposer_a472acec9a1b2eedf8a58f690edd21652}{hwcomposer\+::\+Calculate\+Rect}} (const Hwc\+Rect$<$ int $>$ \&target\+\_\+rect, Hwc\+Rect$<$ int $>$ \&new\+\_\+rect)
+\item 
+void \mbox{\hyperlink{namespacehwcomposer_a8b391b601cac0f823b0378aecc48062e}{hwcomposer\+::\+Calculate\+Source\+Rect}} (const Hwc\+Rect$<$ float $>$ \&target\+\_\+rect, Hwc\+Rect$<$ float $>$ \&new\+\_\+rect)
+\item 
+bool \mbox{\hyperlink{namespacehwcomposer_a96195339fc55ee57f41cc4597a56746c}{hwcomposer\+::\+Is\+Supported\+Media\+Format}} (uint32\+\_\+t format)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacehwcomposer_a515188a123256557aa25b5f879b3e641}{hwcomposer\+::\+Get\+Total\+Planes\+For\+Format}} (uint32\+\_\+t format)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{namespacehwcomposer_aacb31a29f15f941c42d008129d00f9d0}{hwcomposer\+::\+Is\+Overlapping}} (T l1, T t1, T r1, T b1, T l2, T t2, T r2, T b2)
+\item 
+bool \mbox{\hyperlink{namespacehwcomposer_a85ee8afdfd9f51ed3dc5bae812bd6876}{hwcomposer\+::\+Is\+Overlapping}} (const hwcomposer\+::\+Hwc\+Rect$<$ int $>$ \&rect1, const hwcomposer\+::\+Hwc\+Rect$<$ int $>$ \&rect2)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{namespacehwcomposer_a32be7e41379debbd179fcd96a99a2afa}{hwcomposer\+::\+Is\+Enclosed\+By}} (T l1, T t1, T r1, T b1, T l2, T t2, T r2, T b2)
+\item 
+bool \mbox{\hyperlink{namespacehwcomposer_aee52dc2c0c8c0bbcd39530e880634de0}{hwcomposer\+::\+Is\+Enclosed\+By}} (const hwcomposer\+::\+Hwc\+Rect$<$ int $>$ \&rect1, const hwcomposer\+::\+Hwc\+Rect$<$ int $>$ \&rect2)
+\item 
+Overlap\+Type \mbox{\hyperlink{namespacehwcomposer_a2775b56090a031398e48a7b77b1dee05}{hwcomposer\+::\+Analyse\+Overlap}} (const hwcomposer\+::\+Hwc\+Rect$<$ int $>$ \&rect, const hwcomposer\+::\+Hwc\+Rect$<$ int $>$ \&bounds)
+\item 
+Hwc\+Rect$<$ int $>$ \mbox{\hyperlink{namespacehwcomposer_ac60601bf8e2068d963dbbf172e08a317}{hwcomposer\+::\+Translate\+Rect}} (Hwc\+Rect$<$ int $>$ rect, int x, int y)
+\item 
+Hwc\+Rect$<$ int $>$ \mbox{\hyperlink{namespacehwcomposer_a7e2b9700821805cf321089445e486447}{hwcomposer\+::\+Intersection}} (const hwcomposer\+::\+Hwc\+Rect$<$ int $>$ \&rect1, const hwcomposer\+::\+Hwc\+Rect$<$ int $>$ \&rect2)
+\item 
+std\+::string \mbox{\hyperlink{namespacehwcomposer_ae744afa47f47d3d45eb091546a72ab32}{hwcomposer\+::\+Stringify\+Rect}} (Hwc\+Rect$<$ int $>$ rect)
+\item 
+std\+::string \mbox{\hyperlink{namespacehwcomposer_a21671215b0bb9596fa5890531b532b9e}{hwcomposer\+::\+Stringify\+Region}} (Hwc\+Region region)
+\end{DoxyCompactItemize}

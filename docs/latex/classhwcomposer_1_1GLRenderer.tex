@@ -1,0 +1,308 @@
+\hypertarget{classhwcomposer_1_1GLRenderer}{}\section{hwcomposer\+:\+:G\+L\+Renderer Class Reference}
+\label{classhwcomposer_1_1GLRenderer}\index{hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}}
+
+
+{\ttfamily \#include $<$glrenderer.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:G\+L\+Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1GLRenderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GLRenderer_ad7df946c8af9df0bf948c04ecbf043d2}{G\+L\+Renderer}} ()=default
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GLRenderer_a8d398306fa084b620d309e9713b197d1}{$\sim$\+G\+L\+Renderer}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1GLRenderer_a13460f969b8fd85b74ae1fecadff744e}{Init}} () override
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1GLRenderer_a961208b3640ffb78a15438ca4504fe1a}{Draw}} (const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} $>$ \&commands, \mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$surface) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GLRenderer_af9eecc3a31c3acadaae84d2b31cf4807}{Insert\+Fence}} (int32\+\_\+t kms\+\_\+fence) override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GLRenderer_a8bd09dabfc0bd223f783454609b48a82}{Set\+Explicit\+Sync\+Support}} (bool disable\+\_\+explicit\+\_\+sync) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file glrenderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1GLRenderer_ad7df946c8af9df0bf948c04ecbf043d2}\label{classhwcomposer_1_1GLRenderer_ad7df946c8af9df0bf948c04ecbf043d2}} 
+\index{hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}!G\+L\+Renderer@{G\+L\+Renderer}}
+\index{G\+L\+Renderer@{G\+L\+Renderer}!hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}}
+\subsubsection{\texorpdfstring{G\+L\+Renderer()}{GLRenderer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+G\+L\+Renderer\+::\+G\+L\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhwcomposer_1_1GLRenderer_a8d398306fa084b620d309e9713b197d1}\label{classhwcomposer_1_1GLRenderer_a8d398306fa084b620d309e9713b197d1}} 
+\index{hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}!````~G\+L\+Renderer@{$\sim$\+G\+L\+Renderer}}
+\index{````~G\+L\+Renderer@{$\sim$\+G\+L\+Renderer}!hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}}
+\subsubsection{\texorpdfstring{$\sim$\+G\+L\+Renderer()}{~GLRenderer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+G\+L\+Renderer\+::$\sim$\+G\+L\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file glrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                         \{}
+\DoxyCodeLine{31   \textcolor{keywordflow}{if} (!context\_.\mbox{\hyperlink{classhwcomposer_1_1EGLOffScreenContext_a6a02ca4cb2ad6f22af3343ac473baf2a}{MakeCurrent}}()) \{}
+\DoxyCodeLine{32     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed make current context."});}
+\DoxyCodeLine{33     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{34   \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36   \textcolor{keywordflow}{if} (vertex\_array\_)}
+\DoxyCodeLine{37     \mbox{\hyperlink{namespacehwcomposer_a46185e5ed06a45be5a194dc535e742dc}{glDeleteVertexArraysOES}}(1, \&vertex\_array\_);}
+\DoxyCodeLine{38 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1GLRenderer_a961208b3640ffb78a15438ca4504fe1a}\label{classhwcomposer_1_1GLRenderer_a961208b3640ffb78a15438ca4504fe1a}} 
+\index{hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}!Draw@{Draw}}
+\index{Draw@{Draw}!hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+G\+L\+Renderer\+::\+Draw (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1RenderState}{Render\+State}} $>$ \&}]{commands,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1NativeSurface}{Native\+Surface}} $\ast$}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1Renderer_ab147e6d44d429c0ada5a3212ef7100f1}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 86 of file glrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87                                               \{}
+\DoxyCodeLine{88   GLuint frame\_width = surface->GetWidth();}
+\DoxyCodeLine{89   GLuint frame\_height = surface->GetHeight();}
+\DoxyCodeLine{90   GLuint left = 0;}
+\DoxyCodeLine{91   GLuint top = 0;}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93   \textcolor{keywordflow}{if} (!surface->MakeCurrent())}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#ifdef COMPOSITOR\_TRACING}}
+\DoxyCodeLine{96   \mbox{\hyperlink{hwctrace_8h_a58cbc02f40ecc84e207b9a5fa9dd4437}{ICOMPOSITORTRACE}}(\textcolor{stringliteral}{"Draw starts \(\backslash\)n"});}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   \textcolor{keywordtype}{bool} clear\_surface = surface->ClearSurface();}
+\DoxyCodeLine{100   \textcolor{keywordtype}{bool} partial\_clear = surface->IsPartialClear();}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102   surface->SetClearSurface(\mbox{\hyperlink{classhwcomposer_1_1NativeSurface_a0d0f955fc1e9f95c9684e9524f4217d6a61ab9864bcc7860917f12c33382befbc}{NativeSurface::kNone}});}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104   glViewport(left, top, frame\_width, frame\_height);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106   \textcolor{keywordflow}{if} (clear\_surface || partial\_clear) \{}
+\DoxyCodeLine{107     \textcolor{keyword}{const} HwcRect<int> \&damage = surface->GetSurfaceDamage();}
+\DoxyCodeLine{108     GLuint clear\_width = damage.right - damage.left;}
+\DoxyCodeLine{109     GLuint clear\_height = damage.bottom - damage.top;}
+\DoxyCodeLine{110     \textcolor{keywordflow}{if} (surface->IsOnScreen() \&\&}
+\DoxyCodeLine{111         ((frame\_width != clear\_width) || (frame\_height != clear\_height))) \{}
+\DoxyCodeLine{112       glEnable(GL\_SCISSOR\_TEST);}
+\DoxyCodeLine{113       glScissor(damage.left, damage.top, clear\_width, clear\_height);}
+\DoxyCodeLine{114       glClear(GL\_COLOR\_BUFFER\_BIT);}
+\DoxyCodeLine{115     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{116       glClear(GL\_COLOR\_BUFFER\_BIT);}
+\DoxyCodeLine{117       glEnable(GL\_SCISSOR\_TEST);}
+\DoxyCodeLine{118     \}}
+\DoxyCodeLine{119   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{120     glEnable(GL\_SCISSOR\_TEST);}
+\DoxyCodeLine{121   \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#ifdef COMPOSITOR\_TRACING}}
+\DoxyCodeLine{124   \textcolor{keyword}{const} HwcRect<int> \&damage = surface->GetSurfaceDamage();}
+\DoxyCodeLine{125   uint32\_t total\_width = 0;}
+\DoxyCodeLine{126   uint32\_t total\_height = 0;}
+\DoxyCodeLine{127   \mbox{\hyperlink{hwctrace_8h_a58cbc02f40ecc84e207b9a5fa9dd4437}{ICOMPOSITORTRACE}}(}
+\DoxyCodeLine{128       \textcolor{stringliteral}{"Full clear: \%d Partial clear: \%d Skipped clear: \%d damage.left: \%d "}}
+\DoxyCodeLine{129       \textcolor{stringliteral}{"damage.top: \%d damage.right - "}}
+\DoxyCodeLine{130       \textcolor{stringliteral}{"damage.left \%d damage.bottom - damage.top \%d \(\backslash\)n"},}
+\DoxyCodeLine{131       clear\_surface, partial\_clear, !(clear\_surface || partial\_clear),}
+\DoxyCodeLine{132       damage.left, damage.top, damage.right - damage.left,}
+\DoxyCodeLine{133       damage.bottom - damage.top);}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{135   \textcolor{keywordflow}{for} (\textcolor{keyword}{const} RenderState \&state : render\_states) \{}
+\DoxyCodeLine{136     \textcolor{keywordtype}{unsigned} size = state.layer\_state\_.size();}
+\DoxyCodeLine{137     GLProgram *program = GetProgram(size);}
+\DoxyCodeLine{138     \textcolor{keywordflow}{if} (!program)}
+\DoxyCodeLine{139       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     program->UseProgram(state, frame\_width, frame\_height);}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#ifdef COMPOSITOR\_TRACING}}
+\DoxyCodeLine{143     \mbox{\hyperlink{hwctrace_8h_a58cbc02f40ecc84e207b9a5fa9dd4437}{ICOMPOSITORTRACE}}(}
+\DoxyCodeLine{144         \textcolor{stringliteral}{"scissor\_x\_: \%d state.scissor\_y\_: \%d scissor\_width\_: \%d "}}
+\DoxyCodeLine{145         \textcolor{stringliteral}{"scissor\_height\_: \%d \(\backslash\)n"},}
+\DoxyCodeLine{146         state.scissor\_x\_, state.scissor\_y\_, state.scissor\_width\_,}
+\DoxyCodeLine{147         state.scissor\_height\_);}
+\DoxyCodeLine{148     total\_width += std::max(total\_width, state.scissor\_width\_);}
+\DoxyCodeLine{149     total\_height += state.scissor\_height\_;}
+\DoxyCodeLine{150     \textcolor{keyword}{const} HwcRect<int> \&damage = surface->GetSurfaceDamage();}
+\DoxyCodeLine{151     \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacehwcomposer_a2775b56090a031398e48a7b77b1dee05}{AnalyseOverlap}}(}
+\DoxyCodeLine{152             damage, HwcRect<int>(state.scissor\_x\_, state.scissor\_y\_,}
+\DoxyCodeLine{153                                  state.scissor\_x\_ + state.scissor\_width\_,}
+\DoxyCodeLine{154                                  state.scissor\_y\_ + state.scissor\_height\_)) ==}
+\DoxyCodeLine{155         \mbox{\hyperlink{namespacehwcomposer_a343d36a60de234fac01fc5982b8d0e38a7ab351e5e1da3b8232419a34e1dd9559}{kOutside}}) \{}
+\DoxyCodeLine{156       \mbox{\hyperlink{hwctrace_8h_a58cbc02f40ecc84e207b9a5fa9dd4437}{ICOMPOSITORTRACE}}(\textcolor{stringliteral}{"ALERT: Rendering Layer outside Damaged Region. \(\backslash\)n"});}
+\DoxyCodeLine{157     \}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{159     glScissor(state.scissor\_x\_, state.scissor\_y\_, state.scissor\_width\_,}
+\DoxyCodeLine{160               state.scissor\_height\_);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162     glDrawArrays(GL\_TRIANGLES, 0, 3);}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} src\_index = 0; src\_index < size; src\_index++) \{}
+\DoxyCodeLine{165       glActiveTexture(GL\_TEXTURE0 + src\_index);}
+\DoxyCodeLine{166       glBindTexture(GL\_TEXTURE\_EXTERNAL\_OES, 0);}
+\DoxyCodeLine{167     \}}
+\DoxyCodeLine{168   \}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170   glDisable(GL\_SCISSOR\_TEST);}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172   \textcolor{keywordflow}{if} (!disable\_explicit\_sync\_)}
+\DoxyCodeLine{173     surface->SetNativeFence(context\_.\mbox{\hyperlink{classhwcomposer_1_1EGLOffScreenContext_a8f98b9bb56923114d3d4c6051968e543}{GetSyncFD}}());}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175   surface->ResetDamage();}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#ifdef COMPOSITOR\_TRACING}}
+\DoxyCodeLine{177   \textcolor{keywordflow}{if} ((clear\_surface || partial\_clear) \&\&}
+\DoxyCodeLine{178       ((total\_width != surface->GetLayer()->GetDisplayFrameWidth()) ||}
+\DoxyCodeLine{179        (total\_height != surface->GetLayer()->GetDisplayFrameHeight()))) \{}
+\DoxyCodeLine{180     \mbox{\hyperlink{hwctrace_8h_a58cbc02f40ecc84e207b9a5fa9dd4437}{ICOMPOSITORTRACE}}(}
+\DoxyCodeLine{181         \textcolor{stringliteral}{"Alert Wong composition total\_width: \%d "}}
+\DoxyCodeLine{182         \textcolor{stringliteral}{"surface->GetLayer()->GetDisplayFrameWidth() \%d total\_height \%d "}}
+\DoxyCodeLine{183         \textcolor{stringliteral}{"surface->GetLayer()->GetDisplayFrameHeight() \%d. \(\backslash\)n"},}
+\DoxyCodeLine{184         total\_width, surface->GetLayer()->GetDisplayFrameWidth(), total\_height,}
+\DoxyCodeLine{185         surface->GetLayer()->GetDisplayFrameHeight());}
+\DoxyCodeLine{186   \}}
+\DoxyCodeLine{187   \mbox{\hyperlink{hwctrace_8h_a58cbc02f40ecc84e207b9a5fa9dd4437}{ICOMPOSITORTRACE}}(\textcolor{stringliteral}{"Draw Ends. \(\backslash\)n"});}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{189   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{190 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GLRenderer_a13460f969b8fd85b74ae1fecadff744e}\label{classhwcomposer_1_1GLRenderer_a13460f969b8fd85b74ae1fecadff744e}} 
+\index{hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}!Init@{Init}}
+\index{Init@{Init}!hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+G\+L\+Renderer\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1Renderer_aa7f5e7d36857fb67093b9f0cc3a7e606}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 40 of file glrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                       \{}
+\DoxyCodeLine{41   \textcolor{comment}{// clang-format off}}
+\DoxyCodeLine{42   \textcolor{keyword}{const} GLfloat verts[] = \{0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f,}
+\DoxyCodeLine{43                            0.0f, 2.0f, 2.0f, 0.0f, 2.0f, 0.0f\};}
+\DoxyCodeLine{44   \textcolor{comment}{// clang-format on}}
+\DoxyCodeLine{45   \textcolor{keywordflow}{if} (!context\_.\mbox{\hyperlink{classhwcomposer_1_1EGLOffScreenContext_a70b98f401e88080f13a6df4b2cc4c8e2}{Init}}()) \{}
+\DoxyCodeLine{46     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initialize EGLContext."});}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{48   \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50   \textcolor{keywordflow}{if} (!context\_.\mbox{\hyperlink{classhwcomposer_1_1EGLOffScreenContext_a6a02ca4cb2ad6f22af3343ac473baf2a}{MakeCurrent}}()) \{}
+\DoxyCodeLine{51     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initialize GLRenderer."});}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{53   \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55   \mbox{\hyperlink{namespacehwcomposer_a1e2712274f1d2ee3a6b1662cca909699}{InitializeShims}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \textcolor{comment}{// generate the VAO \& bind}}
+\DoxyCodeLine{58   GLuint vertex\_array;}
+\DoxyCodeLine{59   \mbox{\hyperlink{namespacehwcomposer_a593d085270cdd62b18ad5f33429025fd}{glGenVertexArraysOES}}(1, \&vertex\_array);}
+\DoxyCodeLine{60   \mbox{\hyperlink{namespacehwcomposer_a01ff1e215a53e156ec5064e53af6ab65}{glBindVertexArrayOES}}(vertex\_array);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62   GLuint vertex\_buffer;}
+\DoxyCodeLine{63   glGenBuffers(1, \&vertex\_buffer);}
+\DoxyCodeLine{64   glBindBuffer(GL\_ARRAY\_BUFFER, vertex\_buffer);}
+\DoxyCodeLine{65   glBufferData(GL\_ARRAY\_BUFFER, \textcolor{keyword}{sizeof}(verts), verts, GL\_STATIC\_DRAW);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67   std::unique\_ptr<GLProgram> program(\textcolor{keyword}{new} GLProgram());}
+\DoxyCodeLine{68   \textcolor{keywordflow}{if} (program->Init(1)) \{}
+\DoxyCodeLine{69     programs\_.emplace\_back(std::move(program));}
+\DoxyCodeLine{70   \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72   glEnableVertexAttribArray(0);}
+\DoxyCodeLine{73   glEnableVertexAttribArray(1);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75   glVertexAttribPointer(0, 2, GL\_FLOAT, GL\_FALSE, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}) * 4, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{76   glVertexAttribPointer(1, 2, GL\_FLOAT, GL\_FALSE, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}) * 4,}
+\DoxyCodeLine{77                         (\textcolor{keywordtype}{void} *)(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}) * 2));}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79   glBindBuffer(GL\_ARRAY\_BUFFER, 0);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   vertex\_array\_ = vertex\_array;}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{84 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GLRenderer_af9eecc3a31c3acadaae84d2b31cf4807}\label{classhwcomposer_1_1GLRenderer_af9eecc3a31c3acadaae84d2b31cf4807}} 
+\index{hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}!Insert\+Fence@{Insert\+Fence}}
+\index{Insert\+Fence@{Insert\+Fence}!hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}}
+\subsubsection{\texorpdfstring{Insert\+Fence()}{InsertFence()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+G\+L\+Renderer\+::\+Insert\+Fence (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{kms\+\_\+fence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1Renderer_a0b7be67ed8f89c994cf3bcfd418ef0a4}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 192 of file glrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{192                                               \{}
+\DoxyCodeLine{193   \textcolor{keywordflow}{if} (kms\_fence > 0) \{}
+\DoxyCodeLine{194     EGLint attrib\_list[] = \{}
+\DoxyCodeLine{195         EGL\_SYNC\_NATIVE\_FENCE\_FD\_ANDROID, \textcolor{keyword}{static\_cast<}EGLint\textcolor{keyword}{>}(kms\_fence),}
+\DoxyCodeLine{196         EGL\_NONE,}
+\DoxyCodeLine{197     \};}
+\DoxyCodeLine{198     EGLSyncKHR fence = \mbox{\hyperlink{namespacehwcomposer_aa4f7bf2ebb58d75fd8c42abff106d278}{eglCreateSyncKHR}}(}
+\DoxyCodeLine{199         context\_.\mbox{\hyperlink{classhwcomposer_1_1EGLOffScreenContext_a8fbaabaa0eb7d4c18143932d44d68ee2}{GetDisplay}}(), EGL\_SYNC\_NATIVE\_FENCE\_ANDROID, attrib\_list);}
+\DoxyCodeLine{200     \mbox{\hyperlink{namespacehwcomposer_a8e34f7fe887f616d18cdb67570c15963}{eglWaitSyncKHR}}(context\_.\mbox{\hyperlink{classhwcomposer_1_1EGLOffScreenContext_a8fbaabaa0eb7d4c18143932d44d68ee2}{GetDisplay}}(), fence, 0);}
+\DoxyCodeLine{201     \mbox{\hyperlink{namespacehwcomposer_afdd4be68020d78ee60456fbb07576228}{eglDestroySyncKHR}}(context\_.\mbox{\hyperlink{classhwcomposer_1_1EGLOffScreenContext_a8fbaabaa0eb7d4c18143932d44d68ee2}{GetDisplay}}(), fence);}
+\DoxyCodeLine{202   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{203     glFlush();}
+\DoxyCodeLine{204   \}}
+\DoxyCodeLine{205 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GLRenderer_a8bd09dabfc0bd223f783454609b48a82}\label{classhwcomposer_1_1GLRenderer_a8bd09dabfc0bd223f783454609b48a82}} 
+\index{hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}!Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}}
+\index{Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}!hwcomposer\+::\+G\+L\+Renderer@{hwcomposer\+::\+G\+L\+Renderer}}
+\subsubsection{\texorpdfstring{Set\+Explicit\+Sync\+Support()}{SetExplicitSyncSupport()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+G\+L\+Renderer\+::\+Set\+Explicit\+Sync\+Support (\begin{DoxyParamCaption}\item[{bool}]{disable\+\_\+explicit\+\_\+sync }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1Renderer_a8f889bf7b26aa7d1436e9ecf6d15e629}{hwcomposer\+::\+Renderer}}.
+
+
+
+Definition at line 207 of file glrenderer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{207                                                                   \{}
+\DoxyCodeLine{208   disable\_explicit\_sync\_ = disable\_explicit\_sync;}
+\DoxyCodeLine{209 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/gl/\mbox{\hyperlink{glrenderer_8h}{glrenderer.\+h}}\item 
+common/compositor/gl/\mbox{\hyperlink{glrenderer_8cpp}{glrenderer.\+cpp}}\end{DoxyCompactItemize}

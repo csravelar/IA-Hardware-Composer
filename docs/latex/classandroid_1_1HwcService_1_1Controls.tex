@@ -1,0 +1,691 @@
+\hypertarget{classandroid_1_1HwcService_1_1Controls}{}\section{android\+:\+:Hwc\+Service\+:\+:Controls Class Reference}
+\label{classandroid_1_1HwcService_1_1Controls}\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+
+
+{\ttfamily \#include $<$hwcservice.\+h$>$}
+
+Inheritance diagram for android\+:\+:Hwc\+Service\+:\+:Controls\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classandroid_1_1HwcService_1_1Controls}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_aeacac33397b3210a02241d5d477f81e5}{Controls}} (\mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}} \&hwc, \mbox{\hyperlink{classandroid_1_1HwcService}{Hwc\+Service}} \&hwc\+Service)
+\item 
+virtual \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_aa36cd79cbdaae3d5993f5159682cce25}{$\sim$\+Controls}} ()
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_adcf1f387f3090dc329279f9d0c433baf}{Display\+Set\+Overscan}} (uint32\+\_\+t display, int32\+\_\+t xoverscan, int32\+\_\+t yoverscan)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_ae9070f7ea0cce4a96d95bdcda6447324}{Display\+Get\+Overscan}} (uint32\+\_\+t display, int32\+\_\+t $\ast$xoverscan, int32\+\_\+t $\ast$yoverscan)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a5fb40a804ceea847a8ec98de7387d2ec}{Display\+Set\+Scaling}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}} e\+Scaling\+Mode)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a374b5ef0ffbe6cfc6cce6981b0647431}{Display\+Get\+Scaling}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}} $\ast$e\+Scaling\+Mode)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_ab38acaba6b6dfa89a91f1fd12bfc1943}{Display\+Enable\+Blank}} (uint32\+\_\+t display, bool blank)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_abbb4cbd0508e1faf4ee4141a9c64b5b0}{Display\+Restore\+Default\+Color\+Param}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}} color)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a25d328152f7bc1f79dd5f06b9b59c24d}{Display\+Restore\+Default\+Deinterlace\+Param}} (uint32\+\_\+t display)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a949dc7e60f66edf99982523e53cb5691}{Display\+Get\+Color\+Param}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}} color, float $\ast$value, float $\ast$startvalue, float $\ast$endvalue)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a87f1656780eb437cefb9f398713af762}{Display\+Set\+Color\+Param}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}} color, float value)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_adb0bdb522323be0ea0122464227459ef}{Display\+Set\+Deinterlace\+Param}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{E\+Hwcs\+Deinterlace\+Control}} mode)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $>$ \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_aae5310df10b584ddb537266bcb9399b5}{Display\+Mode\+Get\+Available\+Modes}} (uint32\+\_\+t display)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a359b41bbda3b6b5507dd23436cdca678}{Display\+Mode\+Get\+Mode}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $\ast$p\+Mode)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a93a09106cc484a459e73b0d250937509}{Display\+Mode\+Set\+Mode}} (uint32\+\_\+t display, const uint32\+\_\+t config)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a142e297708c613277cb7721c040b0a77}{Enable\+H\+D\+C\+P\+Session\+For\+Display}} (uint32\+\_\+t display, \mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}} content\+\_\+type)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_ae703b526fe5b7a155afba4ff1b476a29}{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}} (\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}} content\+\_\+type)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a7dcb46dcf375714e13431a237b82374f}{Disable\+H\+D\+C\+P\+Session\+For\+Display}} (uint32\+\_\+t display)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_aefda1ddf238e363f7b3fbae760f9658d}{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}} ()
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a17836d295dcf16b98ee2471d52a21d3f}{Video\+Enable\+Encrypted\+Session}} (uint32\+\_\+t session\+ID, uint32\+\_\+t instance\+ID)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a199821eab8be184fbc910305da592ff0}{Video\+Disable\+All\+Encrypted\+Sessions}} (uint32\+\_\+t session\+ID)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_ae4da8d03acf7eb18dfd91b41cfc55887}{Video\+Disable\+All\+Encrypted\+Sessions}} ()
+\item 
+bool \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a6e1af9c9130f6850c2e1a89df4a15158}{Video\+Is\+Encrypted\+Session\+Enabled}} (uint32\+\_\+t session\+ID, uint32\+\_\+t instance\+ID)
+\item 
+bool \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a298a713544146bc768127b2f1aaebd7f}{need\+Set\+Key\+Frame\+Hint}} ()
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a288b633b5e5e29d4778bcc4bff7e346b}{Video\+Set\+Optimization\+Mode}} (\mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{E\+Hwcs\+Optimization\+Mode}} mode)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_abed610ae73b7c38693a2f2d2221c2910}{Mds\+Update\+Video\+State}} (int64\+\_\+t video\+Session\+ID, bool is\+Prepared)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_aa87c6a814f7cf0473ecd5c10c7b0e2de}{Mds\+Update\+Video\+F\+PS}} (int64\+\_\+t video\+Session\+ID, int32\+\_\+t fps)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a9d0b5be8274a1e794186369c5e0f8384}{Mds\+Update\+Input\+State}} (bool state)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a1fa6ed897de094545383b2e865753834}{Widi\+Get\+Single\+Display}} (bool $\ast$p\+Enabled)
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classandroid_1_1HwcService_1_1Controls_a60113daf8a701fcef054ac2da704a2b9}{Widi\+Set\+Single\+Display}} (bool enable)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 62 of file hwcservice.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_aeacac33397b3210a02241d5d477f81e5}\label{classandroid_1_1HwcService_1_1Controls_aeacac33397b3210a02241d5d477f81e5}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Controls@{Controls}}
+\index{Controls@{Controls}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Controls()}{Controls()}}
+{\footnotesize\ttfamily android\+::\+Hwc\+Service\+::\+Controls\+::\+Controls (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classandroid_1_1IAHWC2}{I\+A\+H\+W\+C2}} \&}]{hwc,  }\item[{\mbox{\hyperlink{classandroid_1_1HwcService}{Hwc\+Service}} \&}]{hwc\+Service }\end{DoxyParamCaption})}
+
+
+
+Definition at line 138 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{139     : mHwc(hwc),}
+\DoxyCodeLine{140       mHwcService(hwcService),}
+\DoxyCodeLine{141       mbHaveSessionsEnabled(\textcolor{keyword}{false}),}
+\DoxyCodeLine{142       mCurrentOptimizationMode(\mbox{\hyperlink{hwcserviceapi_8h_abbce4018fab4dc54c5d3994ac2f6bf58a410bfe259d70975cc9a5098758309844}{HWCS\_OPTIMIZE\_NORMAL}}) \{}
+\DoxyCodeLine{143 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_aa36cd79cbdaae3d5993f5159682cce25}\label{classandroid_1_1HwcService_1_1Controls_aa36cd79cbdaae3d5993f5159682cce25}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!````~Controls@{$\sim$\+Controls}}
+\index{````~Controls@{$\sim$\+Controls}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{$\sim$\+Controls()}{~Controls()}}
+{\footnotesize\ttfamily android\+::\+Hwc\+Service\+::\+Controls\+::$\sim$\+Controls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 145 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145                               \{}
+\DoxyCodeLine{146 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_aefda1ddf238e363f7b3fbae760f9658d}\label{classandroid_1_1HwcService_1_1Controls_aefda1ddf238e363f7b3fbae760f9658d}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}}
+\index{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays()}{DisableHDCPSessionForAllDisplays()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 384 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{384                                                               \{}
+\DoxyCodeLine{385   mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_aab6e5e72a11dea3b84889e7df3ca76ee}{DisableHDCPSessionForAllDisplays}}();}
+\DoxyCodeLine{386   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{387 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a7dcb46dcf375714e13431a237b82374f}\label{classandroid_1_1HwcService_1_1Controls_a7dcb46dcf375714e13431a237b82374f}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Disable\+H\+D\+C\+P\+Session\+For\+Display@{Disable\+H\+D\+C\+P\+Session\+For\+Display}}
+\index{Disable\+H\+D\+C\+P\+Session\+For\+Display@{Disable\+H\+D\+C\+P\+Session\+For\+Display}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Disable\+H\+D\+C\+P\+Session\+For\+Display()}{DisableHDCPSessionForDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Disable\+H\+D\+C\+P\+Session\+For\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 379 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{379                                                                           \{}
+\DoxyCodeLine{380   mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_aaf25b167aeb33efb991f4872f421061f}{DisableHDCPSessionForDisplay}}(display);}
+\DoxyCodeLine{381   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{382 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_ab38acaba6b6dfa89a91f1fd12bfc1943}\label{classandroid_1_1HwcService_1_1Controls_ab38acaba6b6dfa89a91f1fd12bfc1943}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Enable\+Blank@{Display\+Enable\+Blank}}
+\index{Display\+Enable\+Blank@{Display\+Enable\+Blank}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Enable\+Blank()}{DisplayEnableBlank()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Enable\+Blank (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{bool}]{blank }\end{DoxyParamCaption})}
+
+
+
+Definition at line 221 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{222                                                               \{}
+\DoxyCodeLine{223   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{224   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{225 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a949dc7e60f66edf99982523e53cb5691}\label{classandroid_1_1HwcService_1_1Controls_a949dc7e60f66edf99982523e53cb5691}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Get\+Color\+Param@{Display\+Get\+Color\+Param}}
+\index{Display\+Get\+Color\+Param@{Display\+Get\+Color\+Param}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Get\+Color\+Param()}{DisplayGetColorParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Get\+Color\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}]{color,  }\item[{float $\ast$}]{value,  }\item[{float $\ast$}]{startvalue,  }\item[{float $\ast$}]{endvalue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 251 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{255                                                                      \{}
+\DoxyCodeLine{256   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *phyDisplay;}
+\DoxyCodeLine{257   \textcolor{keywordflow}{if} (!display) \{}
+\DoxyCodeLine{258     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}{GetPrimaryDisplay}}();}
+\DoxyCodeLine{259   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{260     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}{GetExtendedDisplay}}(display - 1);}
+\DoxyCodeLine{261   \}}
+\DoxyCodeLine{262   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a2db52a8a234064113a0e250a059663ac}{GetVideoColor}}(HWCS2HWC(color), value, startvalue, endvalue);}
+\DoxyCodeLine{263   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{264 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_ae9070f7ea0cce4a96d95bdcda6447324}\label{classandroid_1_1HwcService_1_1Controls_ae9070f7ea0cce4a96d95bdcda6447324}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Get\+Overscan@{Display\+Get\+Overscan}}
+\index{Display\+Get\+Overscan@{Display\+Get\+Overscan}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Get\+Overscan()}{DisplayGetOverscan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Get\+Overscan (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{int32\+\_\+t $\ast$}]{xoverscan,  }\item[{int32\+\_\+t $\ast$}]{yoverscan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 202 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{204                                                                       \{}
+\DoxyCodeLine{205   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{206   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{207 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a374b5ef0ffbe6cfc6cce6981b0647431}\label{classandroid_1_1HwcService_1_1Controls_a374b5ef0ffbe6cfc6cce6981b0647431}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Get\+Scaling@{Display\+Get\+Scaling}}
+\index{Display\+Get\+Scaling@{Display\+Get\+Scaling}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Get\+Scaling()}{DisplayGetScaling()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Get\+Scaling (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}} $\ast$}]{e\+Scaling\+Mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 215 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{216                                                        \{}
+\DoxyCodeLine{217   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{218   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{219 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_aae5310df10b584ddb537266bcb9399b5}\label{classandroid_1_1HwcService_1_1Controls_aae5310df10b584ddb537266bcb9399b5}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Mode\+Get\+Available\+Modes@{Display\+Mode\+Get\+Available\+Modes}}
+\index{Display\+Mode\+Get\+Available\+Modes@{Display\+Mode\+Get\+Available\+Modes}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Mode\+Get\+Available\+Modes()}{DisplayModeGetAvailableModes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $>$ android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Mode\+Get\+Available\+Modes (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 293 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{293                                                                  \{}
+\DoxyCodeLine{294   std::vector<HwcsDisplayModeInfo> modes;}
+\DoxyCodeLine{295   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *phyDisplay;}
+\DoxyCodeLine{296   \textcolor{keywordflow}{if} (!display) \{}
+\DoxyCodeLine{297     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}{GetPrimaryDisplay}}();}
+\DoxyCodeLine{298   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{299     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}{GetExtendedDisplay}}(display - 1);}
+\DoxyCodeLine{300   \}}
+\DoxyCodeLine{301   uint32\_t numConfigs;}
+\DoxyCodeLine{302   int32\_t tempValue;}
+\DoxyCodeLine{303   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9479dcf82765996db6d7ea1cdcef3864}{GetDisplayConfigs}}(\&numConfigs, \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{304   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < numConfigs; i++) \{}
+\DoxyCodeLine{305     \mbox{\hyperlink{struct__HwcsDisplayModeInfo}{HwcsDisplayModeInfo}} mode;}
+\DoxyCodeLine{306     phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(i, hwcomposer::HWCDisplayAttribute::kWidth,}
+\DoxyCodeLine{307                                     \&tempValue);}
+\DoxyCodeLine{308     mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a50ed795465b52cda71e38e0c5eae2804}{width}} = tempValue;}
+\DoxyCodeLine{309     phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(i, hwcomposer::HWCDisplayAttribute::kHeight,}
+\DoxyCodeLine{310                                     \&tempValue);}
+\DoxyCodeLine{311     mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a89f5474962a13b045ce25b84929c6be3}{height}} = tempValue;}
+\DoxyCodeLine{312     phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{313         i, hwcomposer::HWCDisplayAttribute::kRefreshRate, \&tempValue);}
+\DoxyCodeLine{314     mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_afbc17f7325634fd5b86eeb0a2023c635}{refresh}} = tempValue;}
+\DoxyCodeLine{315     phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(i, hwcomposer::HWCDisplayAttribute::kDpiX,}
+\DoxyCodeLine{316                                     \&tempValue);}
+\DoxyCodeLine{317     mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_ad8d33821439c3aeb8b125296cb62dbbb}{xdpi}} = tempValue;}
+\DoxyCodeLine{318     phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(i, hwcomposer::HWCDisplayAttribute::kDpiY,}
+\DoxyCodeLine{319                                     \&tempValue);}
+\DoxyCodeLine{320     mode.\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a53ef1f5ece0baea9b74b76dbf9c0fc19}{ydpi}} = tempValue;}
+\DoxyCodeLine{321     modes.push\_back(mode);}
+\DoxyCodeLine{322   \}}
+\DoxyCodeLine{323   \textcolor{keywordflow}{return} modes;}
+\DoxyCodeLine{324 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a359b41bbda3b6b5507dd23436cdca678}\label{classandroid_1_1HwcService_1_1Controls_a359b41bbda3b6b5507dd23436cdca678}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Mode\+Get\+Mode@{Display\+Mode\+Get\+Mode}}
+\index{Display\+Mode\+Get\+Mode@{Display\+Mode\+Get\+Mode}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Mode\+Get\+Mode()}{DisplayModeGetMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Mode\+Get\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a6e13f5285374b86aab82ec0c0ba62d7a}{Hwcs\+Display\+Mode\+Info}} $\ast$}]{p\+Mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 326 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{327                                                                               \{}
+\DoxyCodeLine{328   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *phyDisplay;}
+\DoxyCodeLine{329   \textcolor{keywordflow}{if} (!display) \{}
+\DoxyCodeLine{330     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}{GetPrimaryDisplay}}();}
+\DoxyCodeLine{331   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{332     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}{GetExtendedDisplay}}(display - 1);}
+\DoxyCodeLine{333   \}}
+\DoxyCodeLine{334   uint32\_t config;}
+\DoxyCodeLine{335   int32\_t tempValue;}
+\DoxyCodeLine{336   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a9d4d9d2f6633fe37025210cac6e8cc6c}{GetActiveConfig}}(\&config);}
+\DoxyCodeLine{337   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{338       config, hwcomposer::HWCDisplayAttribute::kWidth, \&tempValue);}
+\DoxyCodeLine{339   pMode->\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a50ed795465b52cda71e38e0c5eae2804}{width}} = tempValue;}
+\DoxyCodeLine{340   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{341       config, hwcomposer::HWCDisplayAttribute::kHeight, \&tempValue);}
+\DoxyCodeLine{342   pMode->\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a89f5474962a13b045ce25b84929c6be3}{height}} = tempValue;}
+\DoxyCodeLine{343   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{344       config, hwcomposer::HWCDisplayAttribute::kRefreshRate, \&tempValue);}
+\DoxyCodeLine{345   pMode->\mbox{\hyperlink{struct__HwcsDisplayModeInfo_afbc17f7325634fd5b86eeb0a2023c635}{refresh}} = tempValue;}
+\DoxyCodeLine{346   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{347       config, hwcomposer::HWCDisplayAttribute::kDpiX, \&tempValue);}
+\DoxyCodeLine{348   pMode->\mbox{\hyperlink{struct__HwcsDisplayModeInfo_ad8d33821439c3aeb8b125296cb62dbbb}{xdpi}} = tempValue;}
+\DoxyCodeLine{349   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_aeb880e4a295eab49a98804380c2dcb84}{GetDisplayAttribute}}(}
+\DoxyCodeLine{350       config, hwcomposer::HWCDisplayAttribute::kDpiY, \&tempValue);}
+\DoxyCodeLine{351   pMode->\mbox{\hyperlink{struct__HwcsDisplayModeInfo_a53ef1f5ece0baea9b74b76dbf9c0fc19}{ydpi}} = tempValue;}
+\DoxyCodeLine{352   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{353 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a93a09106cc484a459e73b0d250937509}\label{classandroid_1_1HwcService_1_1Controls_a93a09106cc484a459e73b0d250937509}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Mode\+Set\+Mode@{Display\+Mode\+Set\+Mode}}
+\index{Display\+Mode\+Set\+Mode@{Display\+Mode\+Set\+Mode}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Mode\+Set\+Mode()}{DisplayModeSetMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Mode\+Set\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{const uint32\+\_\+t}]{config }\end{DoxyParamCaption})}
+
+
+
+Definition at line 355 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{356                                                                          \{}
+\DoxyCodeLine{357   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *phyDisplay;}
+\DoxyCodeLine{358   \textcolor{keywordflow}{if} (!display) \{}
+\DoxyCodeLine{359     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}{GetPrimaryDisplay}}();}
+\DoxyCodeLine{360   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{361     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}{GetExtendedDisplay}}(display - 1);}
+\DoxyCodeLine{362   \}}
+\DoxyCodeLine{363   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a63c51853e0d82baf9d6445cf831a5ad1}{SetActiveConfig}}(config);}
+\DoxyCodeLine{364   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{365 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_abbb4cbd0508e1faf4ee4141a9c64b5b0}\label{classandroid_1_1HwcService_1_1Controls_abbb4cbd0508e1faf4ee4141a9c64b5b0}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Restore\+Default\+Color\+Param@{Display\+Restore\+Default\+Color\+Param}}
+\index{Display\+Restore\+Default\+Color\+Param@{Display\+Restore\+Default\+Color\+Param}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Restore\+Default\+Color\+Param()}{DisplayRestoreDefaultColorParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Restore\+Default\+Color\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line 227 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{228                                                \{}
+\DoxyCodeLine{229   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *phyDisplay;}
+\DoxyCodeLine{230   \textcolor{keywordflow}{if} (!display) \{}
+\DoxyCodeLine{231     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}{GetPrimaryDisplay}}();}
+\DoxyCodeLine{232   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{233     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}{GetExtendedDisplay}}(display - 1);}
+\DoxyCodeLine{234   \}}
+\DoxyCodeLine{235   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a06390d47f61b776338a03bee737634b3}{RestoreVideoDefaultColor}}(HWCS2HWC(color));}
+\DoxyCodeLine{236   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{237 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a25d328152f7bc1f79dd5f06b9b59c24d}\label{classandroid_1_1HwcService_1_1Controls_a25d328152f7bc1f79dd5f06b9b59c24d}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Restore\+Default\+Deinterlace\+Param@{Display\+Restore\+Default\+Deinterlace\+Param}}
+\index{Display\+Restore\+Default\+Deinterlace\+Param@{Display\+Restore\+Default\+Deinterlace\+Param}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Restore\+Default\+Deinterlace\+Param()}{DisplayRestoreDefaultDeinterlaceParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Restore\+Default\+Deinterlace\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 239 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{240                       \{}
+\DoxyCodeLine{241   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *phyDisplay;}
+\DoxyCodeLine{242   \textcolor{keywordflow}{if} (!display) \{}
+\DoxyCodeLine{243     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}{GetPrimaryDisplay}}();}
+\DoxyCodeLine{244   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{245     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}{GetExtendedDisplay}}(display - 1);}
+\DoxyCodeLine{246   \}}
+\DoxyCodeLine{247   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a686a2906dbe6543523a9f5fb5b4ae3f7}{RestoreVideoDefaultDeinterlace}}();}
+\DoxyCodeLine{248   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{249 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a87f1656780eb437cefb9f398713af762}\label{classandroid_1_1HwcService_1_1Controls_a87f1656780eb437cefb9f398713af762}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Set\+Color\+Param@{Display\+Set\+Color\+Param}}
+\index{Display\+Set\+Color\+Param@{Display\+Set\+Color\+Param}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Set\+Color\+Param()}{DisplaySetColorParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Set\+Color\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a1d1cbf448ce748672cf3dd96675d70e4}{E\+Hwcs\+Color\+Control}}}]{color,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 266 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{268                                                                  \{}
+\DoxyCodeLine{269   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *phyDisplay;}
+\DoxyCodeLine{270   \textcolor{keywordflow}{if} (!display) \{}
+\DoxyCodeLine{271     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}{GetPrimaryDisplay}}();}
+\DoxyCodeLine{272   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{273     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}{GetExtendedDisplay}}(display - 1);}
+\DoxyCodeLine{274   \}}
+\DoxyCodeLine{275   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_a373e7c998f9d2767bafedc918c4001bc}{SetVideoColor}}(HWCS2HWC(color), value);}
+\DoxyCodeLine{276   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{277 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_adb0bdb522323be0ea0122464227459ef}\label{classandroid_1_1HwcService_1_1Controls_adb0bdb522323be0ea0122464227459ef}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Set\+Deinterlace\+Param@{Display\+Set\+Deinterlace\+Param}}
+\index{Display\+Set\+Deinterlace\+Param@{Display\+Set\+Deinterlace\+Param}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Set\+Deinterlace\+Param()}{DisplaySetDeinterlaceParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Set\+Deinterlace\+Param (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a8473f2ec9e7333e67be46a1bea689113}{E\+Hwcs\+Deinterlace\+Control}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 279 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{280                                                     \{}
+\DoxyCodeLine{281   \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{hwcomposer::NativeDisplay}} *phyDisplay;}
+\DoxyCodeLine{282   \textcolor{keywordflow}{if} (!display) \{}
+\DoxyCodeLine{283     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a2ccc293910577a09cfe0a0f6c1f786ea}{GetPrimaryDisplay}}();}
+\DoxyCodeLine{284   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{285     phyDisplay = mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a9b5b98f12f0580b5d328e6fc6b1465dc}{GetExtendedDisplay}}(display - 1);}
+\DoxyCodeLine{286   \}}
+\DoxyCodeLine{287   phyDisplay->\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay_ae0c6d8eebaae9cdacd1e4bfba84585bf}{SetVideoDeinterlace}}(HWCDeinterlaceFlag::kDeinterlaceFlagForce,}
+\DoxyCodeLine{288                                   HWCS2HWCDeinterlace(mode));}
+\DoxyCodeLine{289   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{290 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_adcf1f387f3090dc329279f9d0c433baf}\label{classandroid_1_1HwcService_1_1Controls_adcf1f387f3090dc329279f9d0c433baf}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Set\+Overscan@{Display\+Set\+Overscan}}
+\index{Display\+Set\+Overscan@{Display\+Set\+Overscan}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Set\+Overscan()}{DisplaySetOverscan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Set\+Overscan (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{int32\+\_\+t}]{xoverscan,  }\item[{int32\+\_\+t}]{yoverscan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 195 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{197                                                                      \{}
+\DoxyCodeLine{198   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{199   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{200 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a5fb40a804ceea847a8ec98de7387d2ec}\label{classandroid_1_1HwcService_1_1Controls_a5fb40a804ceea847a8ec98de7387d2ec}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Display\+Set\+Scaling@{Display\+Set\+Scaling}}
+\index{Display\+Set\+Scaling@{Display\+Set\+Scaling}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Display\+Set\+Scaling()}{DisplaySetScaling()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Display\+Set\+Scaling (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_acdadfd5e7f15097833789174e442083f}{E\+Hwcs\+Scaling\+Mode}}}]{e\+Scaling\+Mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 209 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{210                                                      \{}
+\DoxyCodeLine{211   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{212   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{213 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_ae703b526fe5b7a155afba4ff1b476a29}\label{classandroid_1_1HwcService_1_1Controls_ae703b526fe5b7a155afba4ff1b476a29}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}}
+\index{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays()}{EnableHDCPSessionForAllDisplays()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 373 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{374                                    \{}
+\DoxyCodeLine{375   mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_aafac4b9c0d47342441cb104b9df8b52c}{EnableHDCPSessionForAllDisplays}}(content\_type);}
+\DoxyCodeLine{376   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{377 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a142e297708c613277cb7721c040b0a77}\label{classandroid_1_1HwcService_1_1Controls_a142e297708c613277cb7721c040b0a77}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Enable\+H\+D\+C\+P\+Session\+For\+Display@{Enable\+H\+D\+C\+P\+Session\+For\+Display}}
+\index{Enable\+H\+D\+C\+P\+Session\+For\+Display@{Enable\+H\+D\+C\+P\+Session\+For\+Display}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Enable\+H\+D\+C\+P\+Session\+For\+Display()}{EnableHDCPSessionForDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Enable\+H\+D\+C\+P\+Session\+For\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{\mbox{\hyperlink{hwcserviceapi_8h_a69e9b3a54e4c8e504845398c66eab655}{E\+Hwcs\+Content\+Type}}}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 367 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{368                                                      \{}
+\DoxyCodeLine{369   mHwc.\mbox{\hyperlink{classandroid_1_1IAHWC2_a473d60e8aa343e77381a6e0b04d18a23}{EnableHDCPSessionForDisplay}}(display, content\_type);}
+\DoxyCodeLine{370   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{371 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a9d0b5be8274a1e794186369c5e0f8384}\label{classandroid_1_1HwcService_1_1Controls_a9d0b5be8274a1e794186369c5e0f8384}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Mds\+Update\+Input\+State@{Mds\+Update\+Input\+State}}
+\index{Mds\+Update\+Input\+State@{Mds\+Update\+Input\+State}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Mds\+Update\+Input\+State()}{MdsUpdateInputState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Mds\+Update\+Input\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line 435 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{435                                                            \{}
+\DoxyCodeLine{436   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{437   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{438 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_aa87c6a814f7cf0473ecd5c10c7b0e2de}\label{classandroid_1_1HwcService_1_1Controls_aa87c6a814f7cf0473ecd5c10c7b0e2de}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Mds\+Update\+Video\+F\+PS@{Mds\+Update\+Video\+F\+PS}}
+\index{Mds\+Update\+Video\+F\+PS@{Mds\+Update\+Video\+F\+PS}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Mds\+Update\+Video\+F\+P\+S()}{MdsUpdateVideoFPS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Mds\+Update\+Video\+F\+PS (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{video\+Session\+ID,  }\item[{int32\+\_\+t}]{fps }\end{DoxyParamCaption})}
+
+
+
+Definition at line 429 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{430                                                               \{}
+\DoxyCodeLine{431   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{432   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{433 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_abed610ae73b7c38693a2f2d2221c2910}\label{classandroid_1_1HwcService_1_1Controls_abed610ae73b7c38693a2f2d2221c2910}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Mds\+Update\+Video\+State@{Mds\+Update\+Video\+State}}
+\index{Mds\+Update\+Video\+State@{Mds\+Update\+Video\+State}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Mds\+Update\+Video\+State()}{MdsUpdateVideoState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Mds\+Update\+Video\+State (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{video\+Session\+ID,  }\item[{bool}]{is\+Prepared }\end{DoxyParamCaption})}
+
+
+
+Definition at line 423 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{424                                                                     \{}
+\DoxyCodeLine{425   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{426   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{427 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a298a713544146bc768127b2f1aaebd7f}\label{classandroid_1_1HwcService_1_1Controls_a298a713544146bc768127b2f1aaebd7f}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!need\+Set\+Key\+Frame\+Hint@{need\+Set\+Key\+Frame\+Hint}}
+\index{need\+Set\+Key\+Frame\+Hint@{need\+Set\+Key\+Frame\+Hint}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{need\+Set\+Key\+Frame\+Hint()}{needSetKeyFrameHint()}}
+{\footnotesize\ttfamily bool android\+::\+Hwc\+Service\+::\+Controls\+::need\+Set\+Key\+Frame\+Hint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 412 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{412                                              \{}
+\DoxyCodeLine{413   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{414   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{415 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a199821eab8be184fbc910305da592ff0}\label{classandroid_1_1HwcService_1_1Controls_a199821eab8be184fbc910305da592ff0}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Video\+Disable\+All\+Encrypted\+Sessions@{Video\+Disable\+All\+Encrypted\+Sessions}}
+\index{Video\+Disable\+All\+Encrypted\+Sessions@{Video\+Disable\+All\+Encrypted\+Sessions}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Disable\+All\+Encrypted\+Sessions()}{VideoDisableAllEncryptedSessions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Video\+Disable\+All\+Encrypted\+Sessions (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{session\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line 395 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{396                         \{}
+\DoxyCodeLine{397   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{398   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{399 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_ae4da8d03acf7eb18dfd91b41cfc55887}\label{classandroid_1_1HwcService_1_1Controls_ae4da8d03acf7eb18dfd91b41cfc55887}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Video\+Disable\+All\+Encrypted\+Sessions@{Video\+Disable\+All\+Encrypted\+Sessions}}
+\index{Video\+Disable\+All\+Encrypted\+Sessions@{Video\+Disable\+All\+Encrypted\+Sessions}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Disable\+All\+Encrypted\+Sessions()}{VideoDisableAllEncryptedSessions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Video\+Disable\+All\+Encrypted\+Sessions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 401 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{401                                                               \{}
+\DoxyCodeLine{402   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{403   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{404 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a17836d295dcf16b98ee2471d52a21d3f}\label{classandroid_1_1HwcService_1_1Controls_a17836d295dcf16b98ee2471d52a21d3f}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Video\+Enable\+Encrypted\+Session@{Video\+Enable\+Encrypted\+Session}}
+\index{Video\+Enable\+Encrypted\+Session@{Video\+Enable\+Encrypted\+Session}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Enable\+Encrypted\+Session()}{VideoEnableEncryptedSession()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Video\+Enable\+Encrypted\+Session (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{session\+ID,  }\item[{uint32\+\_\+t}]{instance\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line 389 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{390                                              \{}
+\DoxyCodeLine{391   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{392   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{393 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a6e1af9c9130f6850c2e1a89df4a15158}\label{classandroid_1_1HwcService_1_1Controls_a6e1af9c9130f6850c2e1a89df4a15158}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Video\+Is\+Encrypted\+Session\+Enabled@{Video\+Is\+Encrypted\+Session\+Enabled}}
+\index{Video\+Is\+Encrypted\+Session\+Enabled@{Video\+Is\+Encrypted\+Session\+Enabled}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Is\+Encrypted\+Session\+Enabled()}{VideoIsEncryptedSessionEnabled()}}
+{\footnotesize\ttfamily bool android\+::\+Hwc\+Service\+::\+Controls\+::\+Video\+Is\+Encrypted\+Session\+Enabled (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{session\+ID,  }\item[{uint32\+\_\+t}]{instance\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line 406 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{407                                                                                \{}
+\DoxyCodeLine{408   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{409   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{410 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a288b633b5e5e29d4778bcc4bff7e346b}\label{classandroid_1_1HwcService_1_1Controls_a288b633b5e5e29d4778bcc4bff7e346b}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Video\+Set\+Optimization\+Mode@{Video\+Set\+Optimization\+Mode}}
+\index{Video\+Set\+Optimization\+Mode@{Video\+Set\+Optimization\+Mode}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Video\+Set\+Optimization\+Mode()}{VideoSetOptimizationMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Video\+Set\+Optimization\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hwcserviceapi_8h_a73044de23b8f474352d6753e21fca06d}{E\+Hwcs\+Optimization\+Mode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 417 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{418                                 \{}
+\DoxyCodeLine{419   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{420   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{421 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a1fa6ed897de094545383b2e865753834}\label{classandroid_1_1HwcService_1_1Controls_a1fa6ed897de094545383b2e865753834}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Widi\+Get\+Single\+Display@{Widi\+Get\+Single\+Display}}
+\index{Widi\+Get\+Single\+Display@{Widi\+Get\+Single\+Display}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Widi\+Get\+Single\+Display()}{WidiGetSingleDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Widi\+Get\+Single\+Display (\begin{DoxyParamCaption}\item[{bool $\ast$}]{p\+Enabled }\end{DoxyParamCaption})}
+
+
+
+Definition at line 440 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{440                                                                 \{}
+\DoxyCodeLine{441   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{442   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{443 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classandroid_1_1HwcService_1_1Controls_a60113daf8a701fcef054ac2da704a2b9}\label{classandroid_1_1HwcService_1_1Controls_a60113daf8a701fcef054ac2da704a2b9}} 
+\index{android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}!Widi\+Set\+Single\+Display@{Widi\+Set\+Single\+Display}}
+\index{Widi\+Set\+Single\+Display@{Widi\+Set\+Single\+Display}!android\+::\+Hwc\+Service\+::\+Controls@{android\+::\+Hwc\+Service\+::\+Controls}}
+\subsubsection{\texorpdfstring{Widi\+Set\+Single\+Display()}{WidiSetSingleDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} android\+::\+Hwc\+Service\+::\+Controls\+::\+Widi\+Set\+Single\+Display (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 445 of file hwcservice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{445                                                              \{}
+\DoxyCodeLine{446   \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{447   \textcolor{keywordflow}{return} OK;}
+\DoxyCodeLine{448 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/android/\mbox{\hyperlink{hwcservice_8h}{hwcservice.\+h}}\item 
+os/android/\mbox{\hyperlink{hwcservice_8cpp}{hwcservice.\+cpp}}\end{DoxyCompactItemize}

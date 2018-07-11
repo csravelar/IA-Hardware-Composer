@@ -1,0 +1,124 @@
+\hypertarget{structweston__iahwc__backend__config}{}\section{weston\+\_\+iahwc\+\_\+backend\+\_\+config Struct Reference}
+\label{structweston__iahwc__backend__config}\index{weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}}
+
+
+{\ttfamily \#include $<$compositor-\/iahwc.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct weston\+\_\+backend\+\_\+config \mbox{\hyperlink{structweston__iahwc__backend__config_a8b826a5287e002811707353940abebd0}{base}}
+\item 
+int \mbox{\hyperlink{structweston__iahwc__backend__config_a61199ee6b7a616cb0fe28b66b7c0d720}{tty}}
+\item 
+bool \mbox{\hyperlink{structweston__iahwc__backend__config_af939b243b744604cb451f831a29c5357}{use\+\_\+pixman}}
+\item 
+char $\ast$ \mbox{\hyperlink{structweston__iahwc__backend__config_aebd15a83584df1a374b36c7acccaa711}{seat\+\_\+id}}
+\item 
+char $\ast$ \mbox{\hyperlink{structweston__iahwc__backend__config_a7724433a34f97ba19aed8cf44e439257}{gbm\+\_\+format}}
+\item 
+void($\ast$ \mbox{\hyperlink{structweston__iahwc__backend__config_af60c36d07f2eae72f1164e2497a072f2}{configure\+\_\+device}} )(struct weston\+\_\+compositor $\ast$compositor, struct libinput\+\_\+device $\ast$device)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structweston__iahwc__backend__config_af4155ad1f54bc45582a1783d62c53fb9}{pageflip\+\_\+timeout}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The backend configuration struct.
+
+\mbox{\hyperlink{structweston__iahwc__backend__config}{weston\+\_\+iahwc\+\_\+backend\+\_\+config}} contains the configuration used by a I\+A\+H\+WC backend. 
+
+Definition at line 84 of file compositor-\/iahwc.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structweston__iahwc__backend__config_a8b826a5287e002811707353940abebd0}\label{structweston__iahwc__backend__config_a8b826a5287e002811707353940abebd0}} 
+\index{weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}!base@{base}}
+\index{base@{base}!weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}}
+\subsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily struct weston\+\_\+backend\+\_\+config weston\+\_\+iahwc\+\_\+backend\+\_\+config\+::base}
+
+
+
+Definition at line 85 of file compositor-\/iahwc.\+h.
+
+\mbox{\Hypertarget{structweston__iahwc__backend__config_af60c36d07f2eae72f1164e2497a072f2}\label{structweston__iahwc__backend__config_af60c36d07f2eae72f1164e2497a072f2}} 
+\index{weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}!configure\+\_\+device@{configure\+\_\+device}}
+\index{configure\+\_\+device@{configure\+\_\+device}!weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}}
+\subsubsection{\texorpdfstring{configure\+\_\+device}{configure\_device}}
+{\footnotesize\ttfamily void($\ast$ weston\+\_\+iahwc\+\_\+backend\+\_\+config\+::configure\+\_\+device) (struct weston\+\_\+compositor $\ast$compositor, struct libinput\+\_\+device $\ast$device)}
+
+Callback used to configure input devices.
+
+This function will be called by the backend when a new input device needs to be configured. If N\+U\+LL the device will use the default configuration. 
+
+Definition at line 119 of file compositor-\/iahwc.\+h.
+
+\mbox{\Hypertarget{structweston__iahwc__backend__config_a7724433a34f97ba19aed8cf44e439257}\label{structweston__iahwc__backend__config_a7724433a34f97ba19aed8cf44e439257}} 
+\index{weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}!gbm\+\_\+format@{gbm\+\_\+format}}
+\index{gbm\+\_\+format@{gbm\+\_\+format}!weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}}
+\subsubsection{\texorpdfstring{gbm\+\_\+format}{gbm\_format}}
+{\footnotesize\ttfamily char$\ast$ weston\+\_\+iahwc\+\_\+backend\+\_\+config\+::gbm\+\_\+format}
+
+The pixel format of the framebuffer to be used.
+
+Valid values are\+:
+\begin{DoxyItemize}
+\item N\+U\+LL -\/ The default format (\char`\"{}xrgb8888\char`\"{}) will be used;
+\item \char`\"{}xrgb8888\char`\"{};
+\item \char`\"{}rgb565\char`\"{}
+\item \char`\"{}xrgb2101010\char`\"{} The backend will take ownership of the format pointer and will free it on backend destruction. 
+\end{DoxyItemize}
+
+Definition at line 111 of file compositor-\/iahwc.\+h.
+
+\mbox{\Hypertarget{structweston__iahwc__backend__config_af4155ad1f54bc45582a1783d62c53fb9}\label{structweston__iahwc__backend__config_af4155ad1f54bc45582a1783d62c53fb9}} 
+\index{weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}!pageflip\+\_\+timeout@{pageflip\+\_\+timeout}}
+\index{pageflip\+\_\+timeout@{pageflip\+\_\+timeout}!weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}}
+\subsubsection{\texorpdfstring{pageflip\+\_\+timeout}{pageflip\_timeout}}
+{\footnotesize\ttfamily uint32\+\_\+t weston\+\_\+iahwc\+\_\+backend\+\_\+config\+::pageflip\+\_\+timeout}
+
+Maximum duration for a pageflip event to arrive, after which the compositor will consider the I\+A\+H\+WC driver crashed and will try to exit cleanly.
+
+It is exprimed in milliseconds, 0 means disabled. 
+
+Definition at line 127 of file compositor-\/iahwc.\+h.
+
+\mbox{\Hypertarget{structweston__iahwc__backend__config_aebd15a83584df1a374b36c7acccaa711}\label{structweston__iahwc__backend__config_aebd15a83584df1a374b36c7acccaa711}} 
+\index{weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}!seat\+\_\+id@{seat\+\_\+id}}
+\index{seat\+\_\+id@{seat\+\_\+id}!weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}}
+\subsubsection{\texorpdfstring{seat\+\_\+id}{seat\_id}}
+{\footnotesize\ttfamily char$\ast$ weston\+\_\+iahwc\+\_\+backend\+\_\+config\+::seat\+\_\+id}
+
+The seat to be used for input and output.
+
+If N\+U\+LL the default \char`\"{}seat0\char`\"{} will be used. The backend will take ownership of the seat\+\_\+id pointer and will free it on backend destruction. 
+
+Definition at line 99 of file compositor-\/iahwc.\+h.
+
+\mbox{\Hypertarget{structweston__iahwc__backend__config_a61199ee6b7a616cb0fe28b66b7c0d720}\label{structweston__iahwc__backend__config_a61199ee6b7a616cb0fe28b66b7c0d720}} 
+\index{weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}!tty@{tty}}
+\index{tty@{tty}!weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}}
+\subsubsection{\texorpdfstring{tty}{tty}}
+{\footnotesize\ttfamily int weston\+\_\+iahwc\+\_\+backend\+\_\+config\+::tty}
+
+The tty to be used. Set to 0 to use the current tty. 
+
+Definition at line 88 of file compositor-\/iahwc.\+h.
+
+\mbox{\Hypertarget{structweston__iahwc__backend__config_af939b243b744604cb451f831a29c5357}\label{structweston__iahwc__backend__config_af939b243b744604cb451f831a29c5357}} 
+\index{weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}!use\+\_\+pixman@{use\+\_\+pixman}}
+\index{use\+\_\+pixman@{use\+\_\+pixman}!weston\+\_\+iahwc\+\_\+backend\+\_\+config@{weston\+\_\+iahwc\+\_\+backend\+\_\+config}}
+\subsubsection{\texorpdfstring{use\+\_\+pixman}{use\_pixman}}
+{\footnotesize\ttfamily bool weston\+\_\+iahwc\+\_\+backend\+\_\+config\+::use\+\_\+pixman}
+
+Whether to use the pixman renderer instead of the Open\+GL ES renderer. 
+
+Definition at line 91 of file compositor-\/iahwc.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+os/linux/weston/plugin/\mbox{\hyperlink{compositor-iahwc_8h}{compositor-\/iahwc.\+h}}\end{DoxyCompactItemize}

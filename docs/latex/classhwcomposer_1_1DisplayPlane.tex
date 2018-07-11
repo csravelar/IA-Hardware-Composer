@@ -1,0 +1,206 @@
+\hypertarget{classhwcomposer_1_1DisplayPlane}{}\section{hwcomposer\+:\+:Display\+Plane Class Reference}
+\label{classhwcomposer_1_1DisplayPlane}\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+
+
+{\ttfamily \#include $<$displayplane.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Display\+Plane\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1DisplayPlane}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_aff38293d2f39ff6d298aa1a50f14409c}{$\sim$\+Display\+Plane}} ()
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a0af461a6ac4beccb8ed21aec933b6eed}{id}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a138f43531c6320ad6622ea48ab86df13}{Validate\+Layer}} (const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$layer)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a057c78a4a3657a04c5117ee0f1dba8be}{Is\+Supported\+Format}} (uint32\+\_\+t format)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_ade9032b0c8991b0e79d321e946c8f625}{Is\+Supported\+Transform}} (uint32\+\_\+t transform) const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_aab8aae5944b1107e4efc9d0d79c43c40}{Get\+Preferred\+Video\+Format}} () const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a963d17ec10be62d13f35a0b4ced4e8e1}{Get\+Preferred\+Format}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_ad95d2bd823ccf74fe3deccad7352f672}{Get\+Preferred\+Format\+Modifier}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a397270389f37f6c706a639be5225e62e}{Black\+List\+Preferred\+Format\+Modifier}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a8d2d4175bec7646f1f4216d3488bb2f6}{Preferred\+Format\+Modifier\+Validated}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a6f74f9f29977ae00d534f2488505d7d7}{Set\+In\+Use}} (bool in\+\_\+use)=0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a8461ec31b18379cc371cd0656ca0e615}{In\+Use}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a7b374ba9e799f7d0b53afbd939961c51}{Is\+Universal}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1DisplayPlane_a3754165ab1101fba4229b842c7f14556}{Dump}} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file displayplane.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_aff38293d2f39ff6d298aa1a50f14409c}\label{classhwcomposer_1_1DisplayPlane_aff38293d2f39ff6d298aa1a50f14409c}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!````~Display\+Plane@{$\sim$\+Display\+Plane}}
+\index{````~Display\+Plane@{$\sim$\+Display\+Plane}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{$\sim$\+Display\+Plane()}{~DisplayPlane()}}
+{\footnotesize\ttfamily virtual hwcomposer\+::\+Display\+Plane\+::$\sim$\+Display\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 29 of file displayplane.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                           \{}
+\DoxyCodeLine{30   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a397270389f37f6c706a639be5225e62e}\label{classhwcomposer_1_1DisplayPlane_a397270389f37f6c706a639be5225e62e}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Black\+List\+Preferred\+Format\+Modifier@{Black\+List\+Preferred\+Format\+Modifier}}
+\index{Black\+List\+Preferred\+Format\+Modifier@{Black\+List\+Preferred\+Format\+Modifier}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Black\+List\+Preferred\+Format\+Modifier()}{BlackListPreferredFormatModifier()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Display\+Plane\+::\+Black\+List\+Preferred\+Format\+Modifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for blacklisting preferred format modifier. This happens in case we failed to create FB for the buffer. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a6159712388e26258e14fcb3139d7cd19}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a3754165ab1101fba4229b842c7f14556}\label{classhwcomposer_1_1DisplayPlane_a3754165ab1101fba4229b842c7f14556}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Dump@{Dump}}
+\index{Dump@{Dump}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Display\+Plane\+::\+Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_abc9ca4823dfd433aa45747b8596cc673}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a963d17ec10be62d13f35a0b4ced4e8e1}\label{classhwcomposer_1_1DisplayPlane_a963d17ec10be62d13f35a0b4ced4e8e1}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Get\+Preferred\+Format@{Get\+Preferred\+Format}}
+\index{Get\+Preferred\+Format@{Get\+Preferred\+Format}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Get\+Preferred\+Format()}{GetPreferredFormat()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Display\+Plane\+::\+Get\+Preferred\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for querying preferred format supported by this plane for non-\/media content. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a3bca39231ec7b099980474b279c58ce8}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_ad95d2bd823ccf74fe3deccad7352f672}\label{classhwcomposer_1_1DisplayPlane_ad95d2bd823ccf74fe3deccad7352f672}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Get\+Preferred\+Format\+Modifier@{Get\+Preferred\+Format\+Modifier}}
+\index{Get\+Preferred\+Format\+Modifier@{Get\+Preferred\+Format\+Modifier}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Get\+Preferred\+Format\+Modifier()}{GetPreferredFormatModifier()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t hwcomposer\+::\+Display\+Plane\+::\+Get\+Preferred\+Format\+Modifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for querying preferred modifier supported by this plane\textquotesingle{}s preferred format for non-\/media content. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a185538f3aca7f84830f75f23efe551d6}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_aab8aae5944b1107e4efc9d0d79c43c40}\label{classhwcomposer_1_1DisplayPlane_aab8aae5944b1107e4efc9d0d79c43c40}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Get\+Preferred\+Video\+Format@{Get\+Preferred\+Video\+Format}}
+\index{Get\+Preferred\+Video\+Format@{Get\+Preferred\+Video\+Format}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Get\+Preferred\+Video\+Format()}{GetPreferredVideoFormat()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Display\+Plane\+::\+Get\+Preferred\+Video\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for querying preferred Video format supported by this plane. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a061caae8c703189ae6d05dbe8b303f12}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a0af461a6ac4beccb8ed21aec933b6eed}\label{classhwcomposer_1_1DisplayPlane_a0af461a6ac4beccb8ed21aec933b6eed}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!id@{id}}
+\index{id@{id}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t hwcomposer\+::\+Display\+Plane\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_ae84fc513bfb1f3ee35715ff9a808f447}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a8461ec31b18379cc371cd0656ca0e615}\label{classhwcomposer_1_1DisplayPlane_a8461ec31b18379cc371cd0656ca0e615}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!In\+Use@{In\+Use}}
+\index{In\+Use@{In\+Use}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{In\+Use()}{InUse()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Display\+Plane\+::\+In\+Use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_aeb8c1aecd933645e7e2743b149b06302}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a057c78a4a3657a04c5117ee0f1dba8be}\label{classhwcomposer_1_1DisplayPlane_a057c78a4a3657a04c5117ee0f1dba8be}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Is\+Supported\+Format@{Is\+Supported\+Format}}
+\index{Is\+Supported\+Format@{Is\+Supported\+Format}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Is\+Supported\+Format()}{IsSupportedFormat()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Display\+Plane\+::\+Is\+Supported\+Format (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a50940fd94a65453bd22d20011581796e}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_ade9032b0c8991b0e79d321e946c8f625}\label{classhwcomposer_1_1DisplayPlane_ade9032b0c8991b0e79d321e946c8f625}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Is\+Supported\+Transform@{Is\+Supported\+Transform}}
+\index{Is\+Supported\+Transform@{Is\+Supported\+Transform}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Is\+Supported\+Transform()}{IsSupportedTransform()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Display\+Plane\+::\+Is\+Supported\+Transform (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{transform }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for querying if transform is supported by this plane. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_ac3feae2eaa4adfb5678a47c835c2c2af}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a7b374ba9e799f7d0b53afbd939961c51}\label{classhwcomposer_1_1DisplayPlane_a7b374ba9e799f7d0b53afbd939961c51}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Is\+Universal@{Is\+Universal}}
+\index{Is\+Universal@{Is\+Universal}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Is\+Universal()}{IsUniversal()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Display\+Plane\+::\+Is\+Universal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for querying if this plane can support content other than cursor or can be used only for cursor. Should return false if this plane cannot be used for anything else than cursor. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a25b4218371d1c5984777b74553b554a4}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a8d2d4175bec7646f1f4216d3488bb2f6}\label{classhwcomposer_1_1DisplayPlane_a8d2d4175bec7646f1f4216d3488bb2f6}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Preferred\+Format\+Modifier\+Validated@{Preferred\+Format\+Modifier\+Validated}}
+\index{Preferred\+Format\+Modifier\+Validated@{Preferred\+Format\+Modifier\+Validated}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Preferred\+Format\+Modifier\+Validated()}{PreferredFormatModifierValidated()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Display\+Plane\+::\+Preferred\+Format\+Modifier\+Validated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A\+PI for informing Display Plane that preferred format modifier has been validated to work by \mbox{\hyperlink{classhwcomposer_1_1DisplayPlaneManager}{Display\+Plane\+Manager}}. If this is not called before Black\+List\+Preferred\+Format\+Modifier than Preferred\+Format\+Modifier should be set to 0. 
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_a476d9d42a81eddb775bb285cc1c68cfb}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a6f74f9f29977ae00d534f2488505d7d7}\label{classhwcomposer_1_1DisplayPlane_a6f74f9f29977ae00d534f2488505d7d7}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Set\+In\+Use@{Set\+In\+Use}}
+\index{Set\+In\+Use@{Set\+In\+Use}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Set\+In\+Use()}{SetInUse()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+Display\+Plane\+::\+Set\+In\+Use (\begin{DoxyParamCaption}\item[{bool}]{in\+\_\+use }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_aed0ac04d949d6457dd638e121c3618d5}{hwcomposer\+::\+Drm\+Plane}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1DisplayPlane_a138f43531c6320ad6622ea48ab86df13}\label{classhwcomposer_1_1DisplayPlane_a138f43531c6320ad6622ea48ab86df13}} 
+\index{hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}!Validate\+Layer@{Validate\+Layer}}
+\index{Validate\+Layer@{Validate\+Layer}!hwcomposer\+::\+Display\+Plane@{hwcomposer\+::\+Display\+Plane}}
+\subsubsection{\texorpdfstring{Validate\+Layer()}{ValidateLayer()}}
+{\footnotesize\ttfamily virtual bool hwcomposer\+::\+Display\+Plane\+::\+Validate\+Layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $\ast$}]{layer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmPlane_ad07df42def289d2dbbf9be4ad6748db8}{hwcomposer\+::\+Drm\+Plane}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wsi/\mbox{\hyperlink{displayplane_8h}{displayplane.\+h}}\end{DoxyCompactItemize}

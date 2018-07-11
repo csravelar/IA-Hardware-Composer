@@ -1,0 +1,240 @@
+\hypertarget{classhwcomposer_1_1HWCThread}{}\section{hwcomposer\+:\+:H\+W\+C\+Thread Class Reference}
+\label{classhwcomposer_1_1HWCThread}\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+
+
+{\ttfamily \#include $<$hwcthread.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:H\+W\+C\+Thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.051643cm]{classhwcomposer_1_1HWCThread}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a8780175b1679005955a94aa89fa62be1}{H\+W\+C\+Thread}} (int priority, const char $\ast$name)
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a48920a9e68258c345e5fc7d8507d7ce4}{$\sim$\+H\+W\+C\+Thread}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7162d49a6b4026673f77ac048eb4d07b}{Init\+Worker}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a5f38525b892525beaa7f37d2d4c50bde}{Resume}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1HWCThread_aa360360e4c27cbc7fed745f79990a190}{Exit}} ()
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a539ea080e6bf0e6cffe08e2341be1ee4}{Handle\+Routine}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a39a94bd0b12451fe3060729787921cbf}{Handle\+Exit}} ()
+\item 
+virtual void \mbox{\hyperlink{classhwcomposer_1_1HWCThread_ab5acded48bbd1bf4d7c3a54dadb91ef9}{Handle\+Wait}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1FDHandler}{F\+D\+Handler}} \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a26ef5b90fd394e2002d903ffd2521faf}{fd\+\_\+handler\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7461f5a7553b74324ad6744d532c731b}{initialized\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file hwcthread.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_a8780175b1679005955a94aa89fa62be1}\label{classhwcomposer_1_1HWCThread_a8780175b1679005955a94aa89fa62be1}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!H\+W\+C\+Thread@{H\+W\+C\+Thread}}
+\index{H\+W\+C\+Thread@{H\+W\+C\+Thread}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{H\+W\+C\+Thread()}{HWCThread()}}
+{\footnotesize\ttfamily hwcomposer\+::\+H\+W\+C\+Thread\+::\+H\+W\+C\+Thread (\begin{DoxyParamCaption}\item[{int}]{priority,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file hwcthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28     : \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7461f5a7553b74324ad6744d532c731b}{initialized\_}}(\textcolor{keyword}{false}), priority\_(priority), name\_(name) \{}
+\DoxyCodeLine{29 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_a48920a9e68258c345e5fc7d8507d7ce4}\label{classhwcomposer_1_1HWCThread_a48920a9e68258c345e5fc7d8507d7ce4}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!````~H\+W\+C\+Thread@{$\sim$\+H\+W\+C\+Thread}}
+\index{````~H\+W\+C\+Thread@{$\sim$\+H\+W\+C\+Thread}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{$\sim$\+H\+W\+C\+Thread()}{~HWCThread()}}
+{\footnotesize\ttfamily hwcomposer\+::\+H\+W\+C\+Thread\+::$\sim$\+H\+W\+C\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 31 of file hwcthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                       \{}
+\DoxyCodeLine{32   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_aa360360e4c27cbc7fed745f79990a190}{Exit}}();}
+\DoxyCodeLine{33 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_aa360360e4c27cbc7fed745f79990a190}\label{classhwcomposer_1_1HWCThread_aa360360e4c27cbc7fed745f79990a190}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!Exit@{Exit}}
+\index{Exit@{Exit}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{Exit()}{Exit()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+H\+W\+C\+Thread\+::\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 59 of file hwcthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                      \{}
+\DoxyCodeLine{60   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7461f5a7553b74324ad6744d532c731b}{initialized\_}})}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7461f5a7553b74324ad6744d532c731b}{initialized\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{64   exit\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{65   \mbox{\hyperlink{hwctrace_8h_af8c38c979e9089c283d2f5923089b538}{IHOTPLUGEVENTTRACE}}(\textcolor{stringliteral}{"HWCThread::Exit recieved."});}
+\DoxyCodeLine{66   event\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a3cd16bda8f4fd8bcbda6dae72ff15f57}{Signal}}();}
+\DoxyCodeLine{67   thread\_->join();}
+\DoxyCodeLine{68 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_a39a94bd0b12451fe3060729787921cbf}\label{classhwcomposer_1_1HWCThread_a39a94bd0b12451fe3060729787921cbf}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!Handle\+Exit@{Handle\+Exit}}
+\index{Handle\+Exit@{Handle\+Exit}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{Handle\+Exit()}{HandleExit()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+H\+W\+C\+Thread\+::\+Handle\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_ae6bfd528de70bc53d8eb30eb76b8d8fd}{hwcomposer\+::\+Pixel\+Uploader}}, and \mbox{\hyperlink{classhwcomposer_1_1CompositorThread_a15f97ae71050432ba2780555368a3fca}{hwcomposer\+::\+Compositor\+Thread}}.
+
+
+
+Definition at line 70 of file hwcthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70                            \{}
+\DoxyCodeLine{71 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_a539ea080e6bf0e6cffe08e2341be1ee4}\label{classhwcomposer_1_1HWCThread_a539ea080e6bf0e6cffe08e2341be1ee4}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!Handle\+Routine@{Handle\+Routine}}
+\index{Handle\+Routine@{Handle\+Routine}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{Handle\+Routine()}{HandleRoutine()}}
+{\footnotesize\ttfamily virtual void hwcomposer\+::\+H\+W\+C\+Thread\+::\+Handle\+Routine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_a3f29044c35ff76edb4718ed19f340794}{hwcomposer\+::\+Drm\+Display\+Manager}}, \mbox{\hyperlink{classhwcomposer_1_1PixelUploader_a73abd205b50c5cdcc693886536553889}{hwcomposer\+::\+Pixel\+Uploader}}, \mbox{\hyperlink{classhwcomposer_1_1CompositorThread_af80e4eb7864b2f83a1eaa266a17b3a28}{hwcomposer\+::\+Compositor\+Thread}}, and \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_a229ed2c06dc41d88000fdebcc3dd81f9}{hwcomposer\+::\+Vblank\+Event\+Handler}}.
+
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_ab5acded48bbd1bf4d7c3a54dadb91ef9}\label{classhwcomposer_1_1HWCThread_ab5acded48bbd1bf4d7c3a54dadb91ef9}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!Handle\+Wait@{Handle\+Wait}}
+\index{Handle\+Wait@{Handle\+Wait}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{Handle\+Wait()}{HandleWait()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+H\+W\+C\+Thread\+::\+Handle\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager_abcf8a2a9394d722a58b79060f9f51dbc}{hwcomposer\+::\+Drm\+Display\+Manager}}, and \mbox{\hyperlink{classhwcomposer_1_1VblankEventHandler_a567c783bd9baa74b99fdf4ae98fe25b1}{hwcomposer\+::\+Vblank\+Event\+Handler}}.
+
+
+
+Definition at line 73 of file hwcthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                            \{}
+\DoxyCodeLine{74   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a26ef5b90fd394e2002d903ffd2521faf}{fd\_handler\_}}.\mbox{\hyperlink{classhwcomposer_1_1FDHandler_a5ab233d1f474eab69552321e87159a9d}{Poll}}(-1) <= 0) \{}
+\DoxyCodeLine{75     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Poll Failed in DisplayManager \%s"}, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{76     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{77   \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a26ef5b90fd394e2002d903ffd2521faf}{fd\_handler\_}}.\mbox{\hyperlink{classhwcomposer_1_1FDHandler_ad635c0c7631838aa99e0140c4164425f}{IsReady}}(event\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a103324deefcbf4402fd302b737474416}{get\_fd}}())) \{}
+\DoxyCodeLine{80     \textcolor{comment}{// If eventfd\_ is ready, we need to wait on it (using read()) to clean}}
+\DoxyCodeLine{81     \textcolor{comment}{// the flag that says it is ready.}}
+\DoxyCodeLine{82     event\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a013f137de83e0e45988d72317179a7ef}{Wait}}();}
+\DoxyCodeLine{83   \}}
+\DoxyCodeLine{84 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_a7162d49a6b4026673f77ac048eb4d07b}\label{classhwcomposer_1_1HWCThread_a7162d49a6b4026673f77ac048eb4d07b}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!Init\+Worker@{Init\+Worker}}
+\index{Init\+Worker@{Init\+Worker}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{Init\+Worker()}{InitWorker()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+H\+W\+C\+Thread\+::\+Init\+Worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 35 of file hwcthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                            \{}
+\DoxyCodeLine{36   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7461f5a7553b74324ad6744d532c731b}{initialized\_}})}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7461f5a7553b74324ad6744d532c731b}{initialized\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{40   exit\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42   \textcolor{keywordflow}{if} (!event\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a5b5ee0d26d11c5697e20cde63a255e97}{Initialize}}())}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a26ef5b90fd394e2002d903ffd2521faf}{fd\_handler\_}}.\mbox{\hyperlink{classhwcomposer_1_1FDHandler_aee421fa4ae54b7d4fcc352ebea15b4f8}{AddFd}}(event\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a103324deefcbf4402fd302b737474416}{get\_fd}}());}
+\DoxyCodeLine{46   thread\_ = std::unique\_ptr<std::thread>(}
+\DoxyCodeLine{47       \textcolor{keyword}{new} std::thread(\&HWCThread::ProcessThread, \textcolor{keyword}{this}));}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{50 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_a5f38525b892525beaa7f37d2d4c50bde}\label{classhwcomposer_1_1HWCThread_a5f38525b892525beaa7f37d2d4c50bde}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!Resume@{Resume}}
+\index{Resume@{Resume}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{Resume()}{Resume()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+H\+W\+C\+Thread\+::\+Resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 52 of file hwcthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                        \{}
+\DoxyCodeLine{53   \textcolor{keywordflow}{if} (exit\_ || !\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7461f5a7553b74324ad6744d532c731b}{initialized\_}})}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56   event\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a3cd16bda8f4fd8bcbda6dae72ff15f57}{Signal}}();}
+\DoxyCodeLine{57 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_a26ef5b90fd394e2002d903ffd2521faf}\label{classhwcomposer_1_1HWCThread_a26ef5b90fd394e2002d903ffd2521faf}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!fd\+\_\+handler\+\_\+@{fd\+\_\+handler\+\_\+}}
+\index{fd\+\_\+handler\+\_\+@{fd\+\_\+handler\+\_\+}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{fd\+\_\+handler\+\_\+}{fd\_handler\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1FDHandler}{F\+D\+Handler}} hwcomposer\+::\+H\+W\+C\+Thread\+::fd\+\_\+handler\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file hwcthread.\+h.
+
+\mbox{\Hypertarget{classhwcomposer_1_1HWCThread_a7461f5a7553b74324ad6744d532c731b}\label{classhwcomposer_1_1HWCThread_a7461f5a7553b74324ad6744d532c731b}} 
+\index{hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}!initialized\+\_\+@{initialized\+\_\+}}
+\index{initialized\+\_\+@{initialized\+\_\+}!hwcomposer\+::\+H\+W\+C\+Thread@{hwcomposer\+::\+H\+W\+C\+Thread}}
+\subsubsection{\texorpdfstring{initialized\+\_\+}{initialized\_}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+H\+W\+C\+Thread\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 45 of file hwcthread.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/utils/\mbox{\hyperlink{hwcthread_8h}{hwcthread.\+h}}\item 
+common/utils/\mbox{\hyperlink{hwcthread_8cpp}{hwcthread.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,128 @@
+\hypertarget{classhwcomposer_1_1BnDiagnostic}{}\section{hwcomposer\+:\+:Bn\+Diagnostic Class Reference}
+\label{classhwcomposer_1_1BnDiagnostic}\index{hwcomposer\+::\+Bn\+Diagnostic@{hwcomposer\+::\+Bn\+Diagnostic}}
+
+
+{\ttfamily \#include $<$idiagnostic.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Bn\+Diagnostic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classhwcomposer_1_1BnDiagnostic}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1BnDiagnostic_a0dae02c0aa18aa54bb5aefb2ef9b4cd5}{Bn\+Diagnostic}} ()
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1BnDiagnostic_acb90849642dd99099514c8d4ec1ee55b}{$\sim$\+Bn\+Diagnostic}} ()
+\item 
+\mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} \mbox{\hyperlink{classhwcomposer_1_1BnDiagnostic_a3b524b73de19be10529cefa88ecd59ff}{on\+Transact}} (uint32\+\_\+t, const Parcel \&, Parcel $\ast$, uint32\+\_\+t) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 48 of file idiagnostic.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1BnDiagnostic_a0dae02c0aa18aa54bb5aefb2ef9b4cd5}\label{classhwcomposer_1_1BnDiagnostic_a0dae02c0aa18aa54bb5aefb2ef9b4cd5}} 
+\index{hwcomposer\+::\+Bn\+Diagnostic@{hwcomposer\+::\+Bn\+Diagnostic}!Bn\+Diagnostic@{Bn\+Diagnostic}}
+\index{Bn\+Diagnostic@{Bn\+Diagnostic}!hwcomposer\+::\+Bn\+Diagnostic@{hwcomposer\+::\+Bn\+Diagnostic}}
+\subsubsection{\texorpdfstring{Bn\+Diagnostic()}{BnDiagnostic()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Bn\+Diagnostic\+::\+Bn\+Diagnostic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 50 of file idiagnostic.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                  \{}
+\DoxyCodeLine{51   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1BnDiagnostic_acb90849642dd99099514c8d4ec1ee55b}\label{classhwcomposer_1_1BnDiagnostic_acb90849642dd99099514c8d4ec1ee55b}} 
+\index{hwcomposer\+::\+Bn\+Diagnostic@{hwcomposer\+::\+Bn\+Diagnostic}!````~Bn\+Diagnostic@{$\sim$\+Bn\+Diagnostic}}
+\index{````~Bn\+Diagnostic@{$\sim$\+Bn\+Diagnostic}!hwcomposer\+::\+Bn\+Diagnostic@{hwcomposer\+::\+Bn\+Diagnostic}}
+\subsubsection{\texorpdfstring{$\sim$\+Bn\+Diagnostic()}{~BnDiagnostic()}}
+{\footnotesize\ttfamily virtual hwcomposer\+::\+Bn\+Diagnostic\+::$\sim$\+Bn\+Diagnostic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 53 of file idiagnostic.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                           \{}
+\DoxyCodeLine{54   \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1BnDiagnostic_a3b524b73de19be10529cefa88ecd59ff}\label{classhwcomposer_1_1BnDiagnostic_a3b524b73de19be10529cefa88ecd59ff}} 
+\index{hwcomposer\+::\+Bn\+Diagnostic@{hwcomposer\+::\+Bn\+Diagnostic}!on\+Transact@{on\+Transact}}
+\index{on\+Transact@{on\+Transact}!hwcomposer\+::\+Bn\+Diagnostic@{hwcomposer\+::\+Bn\+Diagnostic}}
+\subsubsection{\texorpdfstring{on\+Transact()}{onTransact()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\+\_\+t}} hwcomposer\+::\+Bn\+Diagnostic\+::on\+Transact (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{code,  }\item[{const Parcel \&}]{data,  }\item[{Parcel $\ast$}]{reply,  }\item[{uint32\+\_\+t}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 110 of file idiagnostic.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111                                                                  \{}
+\DoxyCodeLine{112   \textcolor{keywordflow}{switch} (code) \{}
+\DoxyCodeLine{113     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpDiagnostic_a28475ea102b977cb7213262dc96a568da1c6934eb57e46477b1b76921ab9e1d8d}{BpDiagnostic::TRANSACT\_READ\_LOG\_PARCEL}}: \{}
+\DoxyCodeLine{114       CHECK\_INTERFACE(IDiagnostic, data, reply);}
+\DoxyCodeLine{115       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} err = ReadLogParcel(reply);}
+\DoxyCodeLine{116       \textcolor{keywordflow}{return} err;}
+\DoxyCodeLine{117     \}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpDiagnostic_a28475ea102b977cb7213262dc96a568daccd4b7373af1f931dede971ad0e92972}{BpDiagnostic::TRANSACT\_ENABLE\_DISPLAY}}: \{}
+\DoxyCodeLine{120       CHECK\_INTERFACE(IDiagnostic, data, reply);}
+\DoxyCodeLine{121       uint32\_t d = data.readInt32();}
+\DoxyCodeLine{122       EnableDisplay(d);}
+\DoxyCodeLine{123       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{124     \}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpDiagnostic_a28475ea102b977cb7213262dc96a568dae96b3abe1c20751a136bbe4309230923}{BpDiagnostic::TRANSACT\_DISABLE\_DISPLAY}}: \{}
+\DoxyCodeLine{127       CHECK\_INTERFACE(IDiagnostic, data, reply);}
+\DoxyCodeLine{128       uint32\_t d = data.readInt32();}
+\DoxyCodeLine{129       \textcolor{keywordtype}{bool} bBlank = data.readInt32();}
+\DoxyCodeLine{130       DisableDisplay(d, bBlank);}
+\DoxyCodeLine{131       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{132     \}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpDiagnostic_a28475ea102b977cb7213262dc96a568daf904704142b648f549b6b220ee158711}{BpDiagnostic::TRANSACT\_MASK\_LAYER}}: \{}
+\DoxyCodeLine{135       CHECK\_INTERFACE(IDiagnostic, data, reply);}
+\DoxyCodeLine{136       uint32\_t d = data.readInt32();}
+\DoxyCodeLine{137       uint32\_t layer = data.readInt32();}
+\DoxyCodeLine{138       \textcolor{keywordtype}{bool} bHide = data.readInt32();}
+\DoxyCodeLine{139       MaskLayer(d, layer, bHide);}
+\DoxyCodeLine{140       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{141     \}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143     \textcolor{keywordflow}{case} \mbox{\hyperlink{classhwcomposer_1_1BpDiagnostic_a28475ea102b977cb7213262dc96a568dac8e288e1260c1218aa4f35e308cb3546}{BpDiagnostic::TRANSACT\_DUMP\_FRAMES}}: \{}
+\DoxyCodeLine{144       CHECK\_INTERFACE(IDiagnostic, data, reply);}
+\DoxyCodeLine{145       uint32\_t d = data.readInt32();}
+\DoxyCodeLine{146       int32\_t frames = data.readInt32();}
+\DoxyCodeLine{147       \textcolor{keywordtype}{bool} bSync = data.readInt32();}
+\DoxyCodeLine{148       DumpFrames(d, frames, bSync);}
+\DoxyCodeLine{149       \textcolor{keywordflow}{return} NO\_ERROR;}
+\DoxyCodeLine{150     \}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{153       \textcolor{keywordflow}{return} BBinder::onTransact(code, data, reply, flags);}
+\DoxyCodeLine{154   \}}
+\DoxyCodeLine{155 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/android/libhwcservice/\mbox{\hyperlink{idiagnostic_8h}{idiagnostic.\+h}}\item 
+os/android/libhwcservice/\mbox{\hyperlink{idiagnostic_8cpp}{idiagnostic.\+cpp}}\end{DoxyCompactItemize}

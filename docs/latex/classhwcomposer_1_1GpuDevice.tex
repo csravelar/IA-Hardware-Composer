@@ -1,0 +1,363 @@
+\hypertarget{classhwcomposer_1_1GpuDevice}{}\section{hwcomposer\+:\+:Gpu\+Device Class Reference}
+\label{classhwcomposer_1_1GpuDevice}\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+
+
+{\ttfamily \#include $<$gpudevice.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Gpu\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1GpuDevice}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a058336b2b96090c51011b2d8e24a9765}{Gpu\+Device}} ()
+\item 
+virtual \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a2ccba76dae02bd1b810a90bb5c3c4183}{$\sim$\+Gpu\+Device}} ()
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a794b3bd7590853c44f59e32252d2b3d7}{Initialize}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a5b79c50e063249ae797255e73726df87}{Get\+FD}} () const
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_aca453b8ff7b694b6c0580f0c30573978}{Get\+Display}} (uint32\+\_\+t display)
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_adfec63ead3453ee2cd80b5183d4961d8}{Get\+Virtual\+Display}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_aa5ea5011fbcb67cddb67faca689c97d1}{Get\+Nested\+Display}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a1283357881144bc77606b18505fc8fce}{Get\+Connected\+Physical\+Displays}} (std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$$>$ \&displays)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ $>$ \& \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a36bad6a205218da9546f18e282af05a5}{Get\+All\+Displays}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a5d28fa3fc5eda73115f36d371aa37664}{Register\+Hot\+Plug\+Event\+Callback}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayHotPlugEventCallback}{Display\+Hot\+Plug\+Event\+Callback}} $>$ callback)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_aa558c97ab2f80eac47ede0a788a59a28}{Enable\+H\+D\+C\+P\+Session\+For\+Display}} (uint32\+\_\+t display, H\+W\+C\+Content\+Type content\+\_\+type)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a5a42e70ab1648c6e7741b2322f898691}{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}} (H\+W\+C\+Content\+Type content\+\_\+type)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_ae61aa61ee1591464e7e5a703b2c6c848}{Disable\+H\+D\+C\+P\+Session\+For\+Display}} (uint32\+\_\+t display)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a7038e1dc3d4a2be7206e6a35717521e2}{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classhwcomposer_1_1GpuDevice_a4f7966ae9851735e6eddc713ec174b2f}{Drm\+Display\+Manager}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file gpudevice.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a058336b2b96090c51011b2d8e24a9765}\label{classhwcomposer_1_1GpuDevice_a058336b2b96090c51011b2d8e24a9765}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Gpu\+Device@{Gpu\+Device}}
+\index{Gpu\+Device@{Gpu\+Device}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Gpu\+Device()}{GpuDevice()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Gpu\+Device\+::\+Gpu\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                      : \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a8780175b1679005955a94aa89fa62be1}{HWCThread}}(-8, \textcolor{stringliteral}{"GpuDevice"}) \{}
+\DoxyCodeLine{28 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a2ccba76dae02bd1b810a90bb5c3c4183}\label{classhwcomposer_1_1GpuDevice_a2ccba76dae02bd1b810a90bb5c3c4183}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!````~Gpu\+Device@{$\sim$\+Gpu\+Device}}
+\index{````~Gpu\+Device@{$\sim$\+Gpu\+Device}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{$\sim$\+Gpu\+Device()}{~GpuDevice()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Gpu\+Device\+::$\sim$\+Gpu\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 30 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                       \{}
+\DoxyCodeLine{31   display\_manager\_.reset(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{32 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a7038e1dc3d4a2be7206e6a35717521e2}\label{classhwcomposer_1_1GpuDevice_a7038e1dc3d4a2be7206e6a35717521e2}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}}
+\index{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays()}{DisableHDCPSessionForAllDisplays()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gpu\+Device\+::\+Disable\+H\+D\+C\+P\+Session\+For\+All\+Displays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 617 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{617                                                  \{}
+\DoxyCodeLine{618   \textcolor{keywordtype}{size\_t} size = total\_displays\_.size();}
+\DoxyCodeLine{619   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; i++) \{}
+\DoxyCodeLine{620     total\_displays\_.at(i)->SetHDCPState(HWCContentProtection::kUnDesired,}
+\DoxyCodeLine{621                                         HWCContentType::kInvalid);}
+\DoxyCodeLine{622   \}}
+\DoxyCodeLine{623 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_ae61aa61ee1591464e7e5a703b2c6c848}\label{classhwcomposer_1_1GpuDevice_ae61aa61ee1591464e7e5a703b2c6c848}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Disable\+H\+D\+C\+P\+Session\+For\+Display@{Disable\+H\+D\+C\+P\+Session\+For\+Display}}
+\index{Disable\+H\+D\+C\+P\+Session\+For\+Display@{Disable\+H\+D\+C\+P\+Session\+For\+Display}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Disable\+H\+D\+C\+P\+Session\+For\+Display()}{DisableHDCPSessionForDisplay()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gpu\+Device\+::\+Disable\+H\+D\+C\+P\+Session\+For\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 606 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{606                                                              \{}
+\DoxyCodeLine{607   \textcolor{keywordflow}{if} (total\_displays\_.size() <= display) \{}
+\DoxyCodeLine{608     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Tried to enable HDCP for invalid display \%u \(\backslash\)n"}, display);}
+\DoxyCodeLine{609     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{610   \}}
+\DoxyCodeLine{611 }
+\DoxyCodeLine{612   NativeDisplay *native\_display = total\_displays\_.at(display);}
+\DoxyCodeLine{613   native\_display->SetHDCPState(HWCContentProtection::kUnDesired,}
+\DoxyCodeLine{614                                HWCContentType::kInvalid);}
+\DoxyCodeLine{615 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a5a42e70ab1648c6e7741b2322f898691}\label{classhwcomposer_1_1GpuDevice_a5a42e70ab1648c6e7741b2322f898691}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}}
+\index{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays@{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays()}{EnableHDCPSessionForAllDisplays()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gpu\+Device\+::\+Enable\+H\+D\+C\+P\+Session\+For\+All\+Displays (\begin{DoxyParamCaption}\item[{H\+W\+C\+Content\+Type}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 598 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{598                                                                            \{}
+\DoxyCodeLine{599   \textcolor{keywordtype}{size\_t} size = total\_displays\_.size();}
+\DoxyCodeLine{600   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; i++) \{}
+\DoxyCodeLine{601     total\_displays\_.at(i)}
+\DoxyCodeLine{602         ->SetHDCPState(HWCContentProtection::kDesired, content\_type);}
+\DoxyCodeLine{603   \}}
+\DoxyCodeLine{604 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_aa558c97ab2f80eac47ede0a788a59a28}\label{classhwcomposer_1_1GpuDevice_aa558c97ab2f80eac47ede0a788a59a28}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Enable\+H\+D\+C\+P\+Session\+For\+Display@{Enable\+H\+D\+C\+P\+Session\+For\+Display}}
+\index{Enable\+H\+D\+C\+P\+Session\+For\+Display@{Enable\+H\+D\+C\+P\+Session\+For\+Display}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Enable\+H\+D\+C\+P\+Session\+For\+Display()}{EnableHDCPSessionForDisplay()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gpu\+Device\+::\+Enable\+H\+D\+C\+P\+Session\+For\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display,  }\item[{H\+W\+C\+Content\+Type}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 587 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{588                                                                          \{}
+\DoxyCodeLine{589   \textcolor{keywordflow}{if} (total\_displays\_.size() <= display) \{}
+\DoxyCodeLine{590     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Tried to enable HDCP for invalid display \%u \(\backslash\)n"}, display);}
+\DoxyCodeLine{591     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{592   \}}
+\DoxyCodeLine{593 }
+\DoxyCodeLine{594   NativeDisplay *native\_display = total\_displays\_.at(display);}
+\DoxyCodeLine{595   native\_display->SetHDCPState(HWCContentProtection::kDesired, content\_type);}
+\DoxyCodeLine{596 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a36bad6a205218da9546f18e282af05a5}\label{classhwcomposer_1_1GpuDevice_a36bad6a205218da9546f18e282af05a5}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Get\+All\+Displays@{Get\+All\+Displays}}
+\index{Get\+All\+Displays@{Get\+All\+Displays}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Get\+All\+Displays()}{GetAllDisplays()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ $>$ \& hwcomposer\+::\+Gpu\+Device\+::\+Get\+All\+Displays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 98 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98                                                             \{}
+\DoxyCodeLine{99   \textcolor{keywordflow}{return} total\_displays\_;}
+\DoxyCodeLine{100 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a1283357881144bc77606b18505fc8fce}\label{classhwcomposer_1_1GpuDevice_a1283357881144bc77606b18505fc8fce}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Get\+Connected\+Physical\+Displays@{Get\+Connected\+Physical\+Displays}}
+\index{Get\+Connected\+Physical\+Displays@{Get\+Connected\+Physical\+Displays}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Get\+Connected\+Physical\+Displays()}{GetConnectedPhysicalDisplays()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gpu\+Device\+::\+Get\+Connected\+Physical\+Displays (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$$>$ \&}]{displays }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                           \{}
+\DoxyCodeLine{90   \textcolor{keywordtype}{size\_t} size = total\_displays\_.size();}
+\DoxyCodeLine{91   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; i++) \{}
+\DoxyCodeLine{92     \textcolor{keywordflow}{if} (total\_displays\_.at(i)->IsConnected()) \{}
+\DoxyCodeLine{93       displays.emplace\_back(total\_displays\_.at(i));}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95   \}}
+\DoxyCodeLine{96 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_aca453b8ff7b694b6c0580f0c30573978}\label{classhwcomposer_1_1GpuDevice_aca453b8ff7b694b6c0580f0c30573978}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Get\+Display@{Get\+Display}}
+\index{Get\+Display@{Get\+Display}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Get\+Display()}{GetDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ hwcomposer\+::\+Gpu\+Device\+::\+Get\+Display (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                                         \{}
+\DoxyCodeLine{73   \textcolor{keywordflow}{if} (total\_displays\_.size() > display\_id)}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} total\_displays\_.at(display\_id);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76   \textcolor{keywordflow}{return} \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{77 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a5b79c50e063249ae797255e73726df87}\label{classhwcomposer_1_1GpuDevice_a5b79c50e063249ae797255e73726df87}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Get\+FD@{Get\+FD}}
+\index{Get\+FD@{Get\+FD}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Get\+F\+D()}{GetFD()}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Gpu\+Device\+::\+Get\+FD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 68 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                 \{}
+\DoxyCodeLine{69   \textcolor{keywordflow}{return} display\_manager\_->GetFD();}
+\DoxyCodeLine{70 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_aa5ea5011fbcb67cddb67faca689c97d1}\label{classhwcomposer_1_1GpuDevice_aa5ea5011fbcb67cddb67faca689c97d1}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Get\+Nested\+Display@{Get\+Nested\+Display}}
+\index{Get\+Nested\+Display@{Get\+Nested\+Display}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Get\+Nested\+Display()}{GetNestedDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ hwcomposer\+::\+Gpu\+Device\+::\+Get\+Nested\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                            \{}
+\DoxyCodeLine{85   \textcolor{keywordflow}{return} display\_manager\_->GetNestedDisplay();}
+\DoxyCodeLine{86 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_adfec63ead3453ee2cd80b5183d4961d8}\label{classhwcomposer_1_1GpuDevice_adfec63ead3453ee2cd80b5183d4961d8}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Get\+Virtual\+Display@{Get\+Virtual\+Display}}
+\index{Get\+Virtual\+Display@{Get\+Virtual\+Display}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Get\+Virtual\+Display()}{GetVirtualDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhwcomposer_1_1NativeDisplay}{Native\+Display}} $\ast$ hwcomposer\+::\+Gpu\+Device\+::\+Get\+Virtual\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 79 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                                             \{}
+\DoxyCodeLine{80   \textcolor{keywordflow}{return} display\_manager\_->GetVirtualDisplay();}
+\DoxyCodeLine{81 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a794b3bd7590853c44f59e32252d2b3d7}\label{classhwcomposer_1_1GpuDevice_a794b3bd7590853c44f59e32252d2b3d7}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Gpu\+Device\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                            \{}
+\DoxyCodeLine{35   initialization\_state\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{36   \textcolor{keywordflow}{if} (initialization\_state\_ \& kInitialized) \{}
+\DoxyCodeLine{37     initialization\_state\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{39   \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41   initialization\_state\_ |= kInitialized;}
+\DoxyCodeLine{42   initialization\_state\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44   display\_manager\_.reset(\mbox{\hyperlink{classhwcomposer_1_1DisplayManager_aed4adf531c3ea168ff4e2f7c82fd1cbb}{DisplayManager::CreateDisplayManager}}(\textcolor{keyword}{this}));}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46   \textcolor{keywordtype}{bool} success = display\_manager\_->Initialize();}
+\DoxyCodeLine{47   \textcolor{keywordflow}{if} (!success) \{}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{49   \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   display\_manager\_->InitializeDisplayResources();}
+\DoxyCodeLine{52   display\_manager\_->StartHotPlugMonitor();}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54   HandleHWCSettings();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56   lock\_fd\_ = open(\textcolor{stringliteral}{"/vendor/hwc.lock"}, O\_RDONLY);}
+\DoxyCodeLine{57   \textcolor{keywordflow}{if} (-1 != lock\_fd\_) \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7162d49a6b4026673f77ac048eb4d07b}{InitWorker}}()) \{}
+\DoxyCodeLine{59       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initalize thread for GpuDevice. \%s"}, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{62     \mbox{\hyperlink{alios_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}{ITRACE}}(\textcolor{stringliteral}{"Failed to open "} LOCK\_DIR\_PREFIX \textcolor{stringliteral}{"/hwc.lock file!"});}
+\DoxyCodeLine{63   \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{66 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a5d28fa3fc5eda73115f36d371aa37664}\label{classhwcomposer_1_1GpuDevice_a5d28fa3fc5eda73115f36d371aa37664}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Register\+Hot\+Plug\+Event\+Callback@{Register\+Hot\+Plug\+Event\+Callback}}
+\index{Register\+Hot\+Plug\+Event\+Callback@{Register\+Hot\+Plug\+Event\+Callback}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Register\+Hot\+Plug\+Event\+Callback()}{RegisterHotPlugEventCallback()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Gpu\+Device\+::\+Register\+Hot\+Plug\+Event\+Callback (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhwcomposer_1_1DisplayHotPlugEventCallback}{Display\+Hot\+Plug\+Event\+Callback}} $>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Definition at line 102 of file gpudevice.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103                                                          \{}
+\DoxyCodeLine{104   display\_manager\_->RegisterHotPlugEventCallback(callback);}
+\DoxyCodeLine{105 \}}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1GpuDevice_a4f7966ae9851735e6eddc713ec174b2f}\label{classhwcomposer_1_1GpuDevice_a4f7966ae9851735e6eddc713ec174b2f}} 
+\index{hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}!Drm\+Display\+Manager@{Drm\+Display\+Manager}}
+\index{Drm\+Display\+Manager@{Drm\+Display\+Manager}!hwcomposer\+::\+Gpu\+Device@{hwcomposer\+::\+Gpu\+Device}}
+\subsubsection{\texorpdfstring{Drm\+Display\+Manager}{DrmDisplayManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classhwcomposer_1_1DrmDisplayManager}{Drm\+Display\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 102 of file gpudevice.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+public/\mbox{\hyperlink{gpudevice_8h}{gpudevice.\+h}}\item 
+common/core/\mbox{\hyperlink{gpudevice_8cpp}{gpudevice.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,151 @@
+\hypertarget{logview_8cpp}{}\section{common/utils/logview.cpp File Reference}
+\label{logview_8cpp}\index{common/utils/logview.\+cpp@{common/utils/logview.\+cpp}}
+{\ttfamily \#include \char`\"{}iservice.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}idiagnostic.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$binder/\+I\+Service\+Manager.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}logentry.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logview_8cpp_a55ec6f6ba7f58ec046c46095a7f09133}{T\+E\+N\+T\+H\+\_\+\+S\+E\+C\+O\+ND}}~100000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{logview_8cpp_ae19e0a10c9b6b5aaf1878cac27ea9541}{print\+Help}} (void)
+\item 
+int \mbox{\hyperlink{logview_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logview_8cpp_a55ec6f6ba7f58ec046c46095a7f09133}\label{logview_8cpp_a55ec6f6ba7f58ec046c46095a7f09133}} 
+\index{logview.\+cpp@{logview.\+cpp}!T\+E\+N\+T\+H\+\_\+\+S\+E\+C\+O\+ND@{T\+E\+N\+T\+H\+\_\+\+S\+E\+C\+O\+ND}}
+\index{T\+E\+N\+T\+H\+\_\+\+S\+E\+C\+O\+ND@{T\+E\+N\+T\+H\+\_\+\+S\+E\+C\+O\+ND}!logview.\+cpp@{logview.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+N\+T\+H\+\_\+\+S\+E\+C\+O\+ND}{TENTH\_SECOND}}
+{\footnotesize\ttfamily \#define T\+E\+N\+T\+H\+\_\+\+S\+E\+C\+O\+ND~100000}
+
+
+
+Definition at line 24 of file logview.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{logview_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{logview_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{logview.\+cpp@{logview.\+cpp}!main@{main}}
+\index{main@{main}!logview.\+cpp@{logview.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file logview.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                 \{}
+\DoxyCodeLine{42   \textcolor{keywordtype}{bool} bVeryVerbose = \textcolor{keyword}{false};}
+\DoxyCodeLine{43   \textcolor{keywordtype}{bool} bVerbose = \textcolor{keyword}{false};}
+\DoxyCodeLine{44   \textcolor{keywordtype}{bool} bFences = \textcolor{keyword}{false};}
+\DoxyCodeLine{45   \textcolor{keywordtype}{bool} bBufferManager = \textcolor{keyword}{false};}
+\DoxyCodeLine{46   \textcolor{keywordtype}{bool} bQueue = \textcolor{keyword}{false};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48   \textcolor{comment}{// process arguments}}
+\DoxyCodeLine{49   \textcolor{keywordtype}{int} argIndex = 1;}
+\DoxyCodeLine{50   \textcolor{keywordflow}{while} (argIndex < argc) \{}
+\DoxyCodeLine{51     \textcolor{keywordflow}{if} (strcmp(argv[argIndex], \textcolor{stringliteral}{"-h"}) == 0) \{}
+\DoxyCodeLine{52       \mbox{\hyperlink{logview_8cpp_ae19e0a10c9b6b5aaf1878cac27ea9541}{printHelp}}();}
+\DoxyCodeLine{53       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55     \textcolor{keywordflow}{if} (strcmp(argv[argIndex], \textcolor{stringliteral}{"-v"}) == 0) \{}
+\DoxyCodeLine{56       bVerbose = \textcolor{keyword}{true};}
+\DoxyCodeLine{57       printf(\textcolor{stringliteral}{"bVerbose = \%d\(\backslash\)n"}, bVerbose);}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59     \textcolor{keywordflow}{if} (strcmp(argv[argIndex], \textcolor{stringliteral}{"-vv"}) == 0) \{}
+\DoxyCodeLine{60       bVeryVerbose = \textcolor{keyword}{true};}
+\DoxyCodeLine{61       printf(\textcolor{stringliteral}{"bVeryVerbose = \%d\(\backslash\)n"}, bVeryVerbose);}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63     \textcolor{keywordflow}{if} (strcmp(argv[argIndex], \textcolor{stringliteral}{"-f"}) == 0) \{}
+\DoxyCodeLine{64       bFences = \textcolor{keyword}{true};}
+\DoxyCodeLine{65       printf(\textcolor{stringliteral}{"bFences = \%d\(\backslash\)n"}, bFences);}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67     \textcolor{keywordflow}{if} (strcmp(argv[argIndex], \textcolor{stringliteral}{"-b"}) == 0) \{}
+\DoxyCodeLine{68       bBufferManager = \textcolor{keyword}{true};}
+\DoxyCodeLine{69       printf(\textcolor{stringliteral}{"bBufferManager = \%d\(\backslash\)n"}, bBufferManager);}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71     \textcolor{keywordflow}{if} (strcmp(argv[argIndex], \textcolor{stringliteral}{"-q"}) == 0) \{}
+\DoxyCodeLine{72       bQueue = \textcolor{keyword}{true};}
+\DoxyCodeLine{73       printf(\textcolor{stringliteral}{"bQueue = \%d\(\backslash\)n"}, bQueue);}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75     argIndex++;}
+\DoxyCodeLine{76   \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78   \textcolor{keywordflow}{while} (1) \{}
+\DoxyCodeLine{79     \textcolor{comment}{// Find and connect to HWC service}}
+\DoxyCodeLine{80     sp<IService> hwcService = interface\_cast<\mbox{\hyperlink{classhwcomposer_1_1IService}{IService}}>(}
+\DoxyCodeLine{81         defaultServiceManager()->getService(String16(\mbox{\hyperlink{iservice_8h_a03d122faa3f4367040f301a1a6d90091}{IA\_HWC\_SERVICE\_NAME}})));}
+\DoxyCodeLine{82     \textcolor{keywordflow}{if} (hwcService == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{83       usleep(\mbox{\hyperlink{logview_8cpp_a55ec6f6ba7f58ec046c46095a7f09133}{TENTH\_SECOND}});}
+\DoxyCodeLine{84       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     sp<IDiagnostic> pDiagnostic = hwcService->GetDiagnostic();}
+\DoxyCodeLine{88     \textcolor{keywordflow}{if} (pDiagnostic == \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{89       usleep(\mbox{\hyperlink{logview_8cpp_a55ec6f6ba7f58ec046c46095a7f09133}{TENTH\_SECOND}});}
+\DoxyCodeLine{90       \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     printf(\textcolor{stringliteral}{"Connected to service \%s and obtained diagnostic interface\(\backslash\)n\(\backslash\)n"},}
+\DoxyCodeLine{94            \mbox{\hyperlink{iservice_8h_a03d122faa3f4367040f301a1a6d90091}{IA\_HWC\_SERVICE\_NAME}});}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     \textcolor{keywordflow}{while} (1) \{}
+\DoxyCodeLine{97       \mbox{\hyperlink{classLogEntry}{LogEntry}} entry;}
+\DoxyCodeLine{98       \mbox{\hyperlink{hwcserviceapi_8h_a3806fb2027d9a316d8ca8d9b8b8eb96f}{status\_t}} ret = entry.\mbox{\hyperlink{classLogEntry_a1c92a359f9d4e3635ae3c2f228ff6206}{read}}(pDiagnostic);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100       \textcolor{keywordflow}{if} (ret != OK) \{}
+\DoxyCodeLine{101         \textcolor{keywordflow}{if} (ret == IDiagnostic::eLogTruncated) \{}
+\DoxyCodeLine{102           printf(\textcolor{stringliteral}{"...\(\backslash\)n"});}
+\DoxyCodeLine{103         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ret == NOT\_ENOUGH\_DATA) \{}
+\DoxyCodeLine{104           fflush(stdout);}
+\DoxyCodeLine{105           usleep(4000);  \textcolor{comment}{// 4 ms sleep}}
+\DoxyCodeLine{106           \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{107         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{108           printf(\textcolor{stringliteral}{"readLogEntry error, attempting to reconnect.\(\backslash\)n\(\backslash\)n"});}
+\DoxyCodeLine{109           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111       \}}
+\DoxyCodeLine{112       entry.\mbox{\hyperlink{classLogEntry_a15620abfed3ae9b39e565de00b50cf00}{print}}(bVeryVerbose, bVerbose, bFences, bBufferManager, bQueue);}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{114   \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{117 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{logview_8cpp_ae19e0a10c9b6b5aaf1878cac27ea9541}\label{logview_8cpp_ae19e0a10c9b6b5aaf1878cac27ea9541}} 
+\index{logview.\+cpp@{logview.\+cpp}!print\+Help@{print\+Help}}
+\index{print\+Help@{print\+Help}!logview.\+cpp@{logview.\+cpp}}
+\subsubsection{\texorpdfstring{print\+Help()}{printHelp()}}
+{\footnotesize\ttfamily void print\+Help (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file logview.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26                      \{}
+\DoxyCodeLine{27   printf(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{28   printf(\textcolor{stringliteral}{"HWC Log Viewer\(\backslash\)n"});}
+\DoxyCodeLine{29   printf(\textcolor{stringliteral}{" -h   Print help\(\backslash\)n"});}
+\DoxyCodeLine{30   printf(\textcolor{stringliteral}{" -v   More verbose trace\(\backslash\)n"});}
+\DoxyCodeLine{31   printf(\textcolor{stringliteral}{" -f   + Include Fence trace\(\backslash\)n"});}
+\DoxyCodeLine{32   printf(\textcolor{stringliteral}{" -b   + Include BufferManager trace\(\backslash\)n"});}
+\DoxyCodeLine{33   printf(\textcolor{stringliteral}{" -q   + Include Queue trace\(\backslash\)n"});}
+\DoxyCodeLine{34   printf(\textcolor{stringliteral}{" -vv  All trace - very verbose\(\backslash\)n"});}
+\DoxyCodeLine{35   printf(\textcolor{stringliteral}{" \(\backslash\)n"});}
+\DoxyCodeLine{36   printf(\textcolor{stringliteral}{" To merge all trace to logcat (very verbose):\(\backslash\)n"});}
+\DoxyCodeLine{37   printf(\textcolor{stringliteral}{"   adb shell service call hwc.info 99\(\backslash\)n"});}
+\DoxyCodeLine{38   printf(\textcolor{stringliteral}{" \(\backslash\)n"});}
+\DoxyCodeLine{39 \}}
+\end{DoxyCode}

@@ -1,0 +1,111 @@
+\hypertarget{platformcommondrmdefines_8cpp}{}\section{os/platformcommondrmdefines.cpp File Reference}
+\label{platformcommondrmdefines_8cpp}\index{os/platformcommondrmdefines.\+cpp@{os/platformcommondrmdefines.\+cpp}}
+{\ttfamily \#include \char`\"{}platformcommondefines.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hwctrace.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$drm\+\_\+fourcc.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{platformcommondrmdefines_8cpp_ad633af7e3020e4d9004f19fac18c6296}{Release\+Frame\+Buffer}} (const \mbox{\hyperlink{structFBKey}{F\+B\+Key}} \&key, uint32\+\_\+t fd, uint32\+\_\+t gpu\+\_\+fd)
+\item 
+int \mbox{\hyperlink{platformcommondrmdefines_8cpp_a5050e57370d5385378dd668cfef1e3d7}{Create\+Frame\+Buffer}} (const uint32\+\_\+t \&iwidth, const uint32\+\_\+t \&iheight, const uint64\+\_\+t \&modifier, const uint32\+\_\+t \&iframe\+\_\+buffer\+\_\+format, const uint32\+\_\+t \&num\+\_\+planes, const uint32\+\_\+t(\&igem\+\_\+handles)\mbox{[}4\mbox{]}, const uint32\+\_\+t(\&ipitches)\mbox{[}4\mbox{]}, const uint32\+\_\+t(\&ioffsets)\mbox{[}4\mbox{]}, uint32\+\_\+t gpu\+\_\+fd, uint32\+\_\+t $\ast$fb\+\_\+id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{platformcommondrmdefines_8cpp_a5050e57370d5385378dd668cfef1e3d7}\label{platformcommondrmdefines_8cpp_a5050e57370d5385378dd668cfef1e3d7}} 
+\index{platformcommondrmdefines.\+cpp@{platformcommondrmdefines.\+cpp}!Create\+Frame\+Buffer@{Create\+Frame\+Buffer}}
+\index{Create\+Frame\+Buffer@{Create\+Frame\+Buffer}!platformcommondrmdefines.\+cpp@{platformcommondrmdefines.\+cpp}}
+\subsubsection{\texorpdfstring{Create\+Frame\+Buffer()}{CreateFrameBuffer()}}
+{\footnotesize\ttfamily int Create\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{iwidth,  }\item[{const uint32\+\_\+t \&}]{iheight,  }\item[{const uint64\+\_\+t \&}]{modifier,  }\item[{const uint32\+\_\+t \&}]{iframe\+\_\+buffer\+\_\+format,  }\item[{const uint32\+\_\+t \&}]{num\+\_\+planes,  }\item[{const uint32\+\_\+t(\&)}]{igem\+\_\+handles\mbox{[}4\mbox{]},  }\item[{const uint32\+\_\+t(\&)}]{ipitches\mbox{[}4\mbox{]},  }\item[{const uint32\+\_\+t(\&)}]{ioffsets\mbox{[}4\mbox{]},  }\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{uint32\+\_\+t $\ast$}]{fb\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file platformcommondrmdefines.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                                      \{}
+\DoxyCodeLine{65   \textcolor{keywordtype}{int} ret = 0;}
+\DoxyCodeLine{66   uint32\_t *m\_igem\_handles = (uint32\_t *)igem\_handles;}
+\DoxyCodeLine{67   uint32\_t *m\_ipitches = (uint32\_t *)ipitches;}
+\DoxyCodeLine{68   uint32\_t *m\_ioffsets = (uint32\_t *)ioffsets;}
+\DoxyCodeLine{69   \textcolor{keywordflow}{if} (modifier > 0) \{}
+\DoxyCodeLine{70     uint64\_t modifiers[4];}
+\DoxyCodeLine{71     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < num\_planes; i++) \{}
+\DoxyCodeLine{72       modifiers[i] = modifier;}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \textcolor{keywordflow}{for} (uint32\_t i = num\_planes; i < 4; i++) \{}
+\DoxyCodeLine{76       modifiers[i] = DRM\_FORMAT\_MOD\_NONE;}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     ret = drmModeAddFB2WithModifiers(}
+\DoxyCodeLine{80         gpu\_fd, iwidth, iheight, iframe\_buffer\_format, m\_igem\_handles,}
+\DoxyCodeLine{81         m\_ipitches, m\_ioffsets, modifiers, fb\_id, DRM\_MODE\_FB\_MODIFIERS);}
+\DoxyCodeLine{82   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{83     ret = drmModeAddFB2(gpu\_fd, iwidth, iheight, iframe\_buffer\_format,}
+\DoxyCodeLine{84                         m\_igem\_handles, m\_ipitches, m\_ioffsets, fb\_id, 0);}
+\DoxyCodeLine{85   \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87   \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{88     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"\%s error (\%dx\%d, \%c\%c\%c\%c, handle \%d pitch \%d) (\%s)"},}
+\DoxyCodeLine{89            (modifier == 0) ? \textcolor{stringliteral}{"drmModeAddFB2"} : \textcolor{stringliteral}{"drmModeAddFB2WithModifiers"},}
+\DoxyCodeLine{90            iwidth, iheight, iframe\_buffer\_format, iframe\_buffer\_format >> 8,}
+\DoxyCodeLine{91            iframe\_buffer\_format >> 16, iframe\_buffer\_format >> 24,}
+\DoxyCodeLine{92            m\_igem\_handles[0], m\_ipitches[0], strerror(-ret));}
+\DoxyCodeLine{93     *fb\_id = 0;}
+\DoxyCodeLine{94   \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96   \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{97 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{platformcommondrmdefines_8cpp_ad633af7e3020e4d9004f19fac18c6296}\label{platformcommondrmdefines_8cpp_ad633af7e3020e4d9004f19fac18c6296}} 
+\index{platformcommondrmdefines.\+cpp@{platformcommondrmdefines.\+cpp}!Release\+Frame\+Buffer@{Release\+Frame\+Buffer}}
+\index{Release\+Frame\+Buffer@{Release\+Frame\+Buffer}!platformcommondrmdefines.\+cpp@{platformcommondrmdefines.\+cpp}}
+\subsubsection{\texorpdfstring{Release\+Frame\+Buffer()}{ReleaseFrameBuffer()}}
+{\footnotesize\ttfamily int Release\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structFBKey}{F\+B\+Key}} \&}]{key,  }\item[{uint32\+\_\+t}]{fd,  }\item[{uint32\+\_\+t}]{gpu\+\_\+fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file platformcommondrmdefines.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                                                        \{}
+\DoxyCodeLine{24   \textcolor{keywordtype}{int} ret = fd > 0 ? drmModeRmFB(gpu\_fd, fd) : 0;}
+\DoxyCodeLine{25   \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{26     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to Remove FD ErrorCode: \%d FD: \%d \(\backslash\)n"}, ret, fd);}
+\DoxyCodeLine{27   \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#ifdef HANDLE\_OWNED\_BY\_BUFFER\_MANAGER}}
+\DoxyCodeLine{30   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33   uint32\_t total\_planes = key.\mbox{\hyperlink{structFBKey_a3d3bda0ee29a63ca3f9c676d23a472e3}{num\_planes\_}};}
+\DoxyCodeLine{34   \textcolor{keyword}{struct }drm\_gem\_close gem\_close;}
+\DoxyCodeLine{35   \textcolor{keywordtype}{int} last\_gem\_handle = -1;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37   \textcolor{keywordflow}{for} (uint32\_t plane = 0; plane < total\_planes; plane++) \{}
+\DoxyCodeLine{38     uint32\_t current\_gem\_handle = key.\mbox{\hyperlink{structFBKey_af9c338051a21174ecb54479cf78116c8}{gem\_handles\_}}[plane];}
+\DoxyCodeLine{39     \textcolor{keywordflow}{if} ((last\_gem\_handle != -1) \&\&}
+\DoxyCodeLine{40         (current\_gem\_handle == static\_cast<uint32\_t>(last\_gem\_handle))) \{}
+\DoxyCodeLine{41       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     memset(\&gem\_close, 0, \textcolor{keyword}{sizeof}(gem\_close));}
+\DoxyCodeLine{45     last\_gem\_handle = current\_gem\_handle;}
+\DoxyCodeLine{46     gem\_close.handle = current\_gem\_handle;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     ret = drmIoctl(gpu\_fd, DRM\_IOCTL\_GEM\_CLOSE, \&gem\_close);}
+\DoxyCodeLine{49     \textcolor{keywordflow}{if} (ret) \{}
+\DoxyCodeLine{50       \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(}
+\DoxyCodeLine{51           \textcolor{stringliteral}{"Failed to close gem handle ErrorCode: \%d PrimeFD: \%d "}}
+\DoxyCodeLine{52           \textcolor{stringliteral}{"GemHandle: \%d  \(\backslash\)n"},}
+\DoxyCodeLine{53           ret, fd, current\_gem\_handle);}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55   \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{58 \}}
+\end{DoxyCode}

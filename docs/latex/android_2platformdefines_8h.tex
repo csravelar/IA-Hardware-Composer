@@ -1,0 +1,176 @@
+\hypertarget{android_2platformdefines_8h}{}\section{os/android/platformdefines.h File Reference}
+\label{android_2platformdefines_8h}\index{os/android/platformdefines.\+h@{os/android/platformdefines.\+h}}
+{\ttfamily \#include $<$android/log.\+h$>$}\newline
+{\ttfamily \#include $<$cros\+\_\+gralloc\+\_\+handle.\+h$>$}\newline
+{\ttfamily \#include $<$hardware/hardware.\+h$>$}\newline
+{\ttfamily \#include $<$hardware/hwcomposer.\+h$>$}\newline
+{\ttfamily \#include $<$ui/\+Graphic\+Buffer.\+h$>$}\newline
+{\ttfamily \#include $<$utils/\+Trace.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}platformcommondefines.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$i915\+\_\+private\+\_\+android\+\_\+types.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgralloc__handle}{gralloc\+\_\+handle}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8h_a7ce0df38eb467e59f209470c8f5ac4e6}{L\+O\+G\+\_\+\+T\+AG}}~\char`\"{}iahwcomposer\char`\"{}
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8h_a50cf05a58707f5a1b08dd2ee4a86e1a4}{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}}~A\+T\+R\+A\+C\+E\+\_\+\+T\+A\+G\+\_\+\+G\+R\+A\+P\+H\+I\+CS
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8h_ac785a9b7bc9e243da6f82c6b66b90455}{D\+R\+V\+\_\+\+I915}}~1
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8h_ae69eb3ae60a4b88fdfcf918d2171efca}{V\+T\+R\+A\+CE}}(fmt, ...)~A\+L\+O\+GV(\char`\"{}\%s\+: \char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8h_adacf8735c8504b8cc864a299145acc52}{D\+T\+R\+A\+CE}}(fmt, ...)~A\+L\+O\+GD(\char`\"{}\%s\+: \char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}{I\+T\+R\+A\+CE}}(fmt, ...)~A\+L\+O\+GI(fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}{W\+T\+R\+A\+CE}}(fmt, ...)~A\+L\+O\+GW(\char`\"{}\%s\+: \char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{E\+T\+R\+A\+CE}}(fmt, ...)~A\+L\+O\+GE(\char`\"{}\%s\+: \char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{android_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}{S\+T\+R\+A\+CE}}()~A\+T\+R\+A\+C\+E\+\_\+\+C\+A\+LL()
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structgralloc__handle}{gralloc\+\_\+handle}} $\ast$ \mbox{\hyperlink{android_2platformdefines_8h_a21da25977fe172ca71a8f0a39018282f}{H\+W\+C\+Native\+Handle}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{android_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}{Get\+Native\+Buffer}} (uint32\+\_\+t gpu\+\_\+fd, \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}} handle)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{android_2platformdefines_8h_a50cf05a58707f5a1b08dd2ee4a86e1a4}\label{android_2platformdefines_8h_a50cf05a58707f5a1b08dd2ee4a86e1a4}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!A\+T\+R\+A\+C\+E\+\_\+\+T\+AG@{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}}
+\index{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG@{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{A\+T\+R\+A\+C\+E\+\_\+\+T\+AG}{ATRACE\_TAG}}
+{\footnotesize\ttfamily \#define A\+T\+R\+A\+C\+E\+\_\+\+T\+AG~A\+T\+R\+A\+C\+E\+\_\+\+T\+A\+G\+\_\+\+G\+R\+A\+P\+H\+I\+CS}
+
+
+
+Definition at line 25 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{android_2platformdefines_8h_ac785a9b7bc9e243da6f82c6b66b90455}\label{android_2platformdefines_8h_ac785a9b7bc9e243da6f82c6b66b90455}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!D\+R\+V\+\_\+\+I915@{D\+R\+V\+\_\+\+I915}}
+\index{D\+R\+V\+\_\+\+I915@{D\+R\+V\+\_\+\+I915}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+R\+V\+\_\+\+I915}{DRV\_I915}}
+{\footnotesize\ttfamily \#define D\+R\+V\+\_\+\+I915~1}
+
+
+
+Definition at line 36 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{android_2platformdefines_8h_adacf8735c8504b8cc864a299145acc52}\label{android_2platformdefines_8h_adacf8735c8504b8cc864a299145acc52}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!D\+T\+R\+A\+CE@{D\+T\+R\+A\+CE}}
+\index{D\+T\+R\+A\+CE@{D\+T\+R\+A\+CE}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+R\+A\+CE}{DTRACE}}
+{\footnotesize\ttfamily \#define D\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~A\+L\+O\+GD(\char`\"{}\%s\+: \char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 55 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{android_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}\label{android_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!E\+T\+R\+A\+CE@{E\+T\+R\+A\+CE}}
+\index{E\+T\+R\+A\+CE@{E\+T\+R\+A\+CE}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{E\+T\+R\+A\+CE}{ETRACE}}
+{\footnotesize\ttfamily \#define E\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~A\+L\+O\+GE(\char`\"{}\%s\+: \char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 58 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{android_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}\label{android_2platformdefines_8h_a2407a03fb42f0c0d39cdf7fe4850ec87}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!I\+T\+R\+A\+CE@{I\+T\+R\+A\+CE}}
+\index{I\+T\+R\+A\+CE@{I\+T\+R\+A\+CE}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{I\+T\+R\+A\+CE}{ITRACE}}
+{\footnotesize\ttfamily \#define I\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~A\+L\+O\+GI(fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 56 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{android_2platformdefines_8h_a7ce0df38eb467e59f209470c8f5ac4e6}\label{android_2platformdefines_8h_a7ce0df38eb467e59f209470c8f5ac4e6}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!L\+O\+G\+\_\+\+T\+AG@{L\+O\+G\+\_\+\+T\+AG}}
+\index{L\+O\+G\+\_\+\+T\+AG@{L\+O\+G\+\_\+\+T\+AG}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+T\+AG}{LOG\_TAG}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+AG~\char`\"{}iahwcomposer\char`\"{}}
+
+
+
+Definition at line 21 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{android_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}\label{android_2platformdefines_8h_a52f79074a8b73d0bc1eaad4e13c99254}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!S\+T\+R\+A\+CE@{S\+T\+R\+A\+CE}}
+\index{S\+T\+R\+A\+CE@{S\+T\+R\+A\+CE}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+R\+A\+CE}{STRACE}}
+{\footnotesize\ttfamily \#define S\+T\+R\+A\+CE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~A\+T\+R\+A\+C\+E\+\_\+\+C\+A\+LL()}
+
+
+
+Definition at line 59 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{android_2platformdefines_8h_ae69eb3ae60a4b88fdfcf918d2171efca}\label{android_2platformdefines_8h_ae69eb3ae60a4b88fdfcf918d2171efca}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!V\+T\+R\+A\+CE@{V\+T\+R\+A\+CE}}
+\index{V\+T\+R\+A\+CE@{V\+T\+R\+A\+CE}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{V\+T\+R\+A\+CE}{VTRACE}}
+{\footnotesize\ttfamily \#define V\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~A\+L\+O\+GV(\char`\"{}\%s\+: \char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 54 of file platformdefines.\+h.
+
+\mbox{\Hypertarget{android_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}\label{android_2platformdefines_8h_acf170c48646d06441f4ea26cd5cf8acb}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!W\+T\+R\+A\+CE@{W\+T\+R\+A\+CE}}
+\index{W\+T\+R\+A\+CE@{W\+T\+R\+A\+CE}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{W\+T\+R\+A\+CE}{WTRACE}}
+{\footnotesize\ttfamily \#define W\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~A\+L\+O\+GW(\char`\"{}\%s\+: \char`\"{} fmt, \+\_\+\+\_\+func\+\_\+\+\_\+, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 57 of file platformdefines.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{android_2platformdefines_8h_a21da25977fe172ca71a8f0a39018282f}\label{android_2platformdefines_8h_a21da25977fe172ca71a8f0a39018282f}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!H\+W\+C\+Native\+Handle@{H\+W\+C\+Native\+Handle}}
+\index{H\+W\+C\+Native\+Handle@{H\+W\+C\+Native\+Handle}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{H\+W\+C\+Native\+Handle}{HWCNativeHandle}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structgralloc__handle}{gralloc\+\_\+handle}}$\ast$ \mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}
+
+
+
+Definition at line 52 of file platformdefines.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{android_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}\label{android_2platformdefines_8h_a8ade94a0e04a62845b08de68ec9a6a3c}} 
+\index{android/platformdefines.\+h@{android/platformdefines.\+h}!Get\+Native\+Buffer@{Get\+Native\+Buffer}}
+\index{Get\+Native\+Buffer@{Get\+Native\+Buffer}!android/platformdefines.\+h@{android/platformdefines.\+h}}
+\subsubsection{\texorpdfstring{Get\+Native\+Buffer()}{GetNativeBuffer()}}
+{\footnotesize\ttfamily uint32\+\_\+t Get\+Native\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{\mbox{\hyperlink{alios_2platformdefines_8h_ac0a2eaf260f556d17fe489911f017bdf}{H\+W\+C\+Native\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 61 of file platformdefines.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                                                          \{}
+\DoxyCodeLine{62   uint32\_t \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{63   uint32\_t prime\_fd = handle->handle\_->data[0];}
+\DoxyCodeLine{64   \textcolor{keywordflow}{if} (drmPrimeFDToHandle(gpu\_fd, prime\_fd, \&\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{65     \mbox{\hyperlink{android_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Error generate handle from prime fd \%d"}, prime\_fd);}
+\DoxyCodeLine{66   \}}
+\DoxyCodeLine{67   \textcolor{keywordflow}{return} id;}
+\DoxyCodeLine{68 \}}
+\end{DoxyCode}

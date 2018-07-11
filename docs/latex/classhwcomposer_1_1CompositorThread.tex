@@ -1,0 +1,272 @@
+\hypertarget{classhwcomposer_1_1CompositorThread}{}\section{hwcomposer\+:\+:Compositor\+Thread Class Reference}
+\label{classhwcomposer_1_1CompositorThread}\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+
+
+{\ttfamily \#include $<$compositorthread.\+h$>$}
+
+Inheritance diagram for hwcomposer\+:\+:Compositor\+Thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhwcomposer_1_1CompositorThread}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1CompositorThread_a28f5c6de7aee95706fed421ecf3f2ff5}{Compositor\+Thread}} ()
+\item 
+\mbox{\hyperlink{classhwcomposer_1_1CompositorThread_aa93b1c77c0d6d55bf30a86cb429724b7}{$\sim$\+Compositor\+Thread}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1CompositorThread_a0e36f2bd6e14959ffd8eff5faeefcbef}{Initialize}} (\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$resource\+\_\+manager, uint32\+\_\+t gpu\+\_\+fd, \mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$frame\+\_\+buffer\+\_\+manager)
+\item 
+bool \mbox{\hyperlink{classhwcomposer_1_1CompositorThread_a16c0227a122423a7f83a8369f600923b}{Draw}} (std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1DrawState}{Draw\+State}} $>$ \&states, std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1DrawState}{Draw\+State}} $>$ \&media\+\_\+states, const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&layers)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1CompositorThread_a9a304d478866ab7518765ce632eca964}{Set\+Explicit\+Sync\+Support}} (bool disable\+\_\+explicit\+\_\+sync)
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1CompositorThread_af48eb5b73445e424b74c7e9375bf8f7c}{Free\+Resources}} ()
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1CompositorThread_af80e4eb7864b2f83a1eaa266a17b3a28}{Handle\+Routine}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1CompositorThread_a15f97ae71050432ba2780555368a3fca}{Handle\+Exit}} () override
+\item 
+void \mbox{\hyperlink{classhwcomposer_1_1CompositorThread_a700ec2d3412ae4a3cbc5742c6003e660}{Exit\+Thread}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file compositorthread.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1CompositorThread_a28f5c6de7aee95706fed421ecf3f2ff5}\label{classhwcomposer_1_1CompositorThread_a28f5c6de7aee95706fed421ecf3f2ff5}} 
+\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}!Compositor\+Thread@{Compositor\+Thread}}
+\index{Compositor\+Thread@{Compositor\+Thread}!hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+\subsubsection{\texorpdfstring{Compositor\+Thread()}{CompositorThread()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Compositor\+Thread\+::\+Compositor\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file compositorthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                    : \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a8780175b1679005955a94aa89fa62be1}{HWCThread}}(-8, \textcolor{stringliteral}{"CompositorThread"}) \{}
+\DoxyCodeLine{34   \textcolor{keywordflow}{if} (!cevent\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a5b5ee0d26d11c5697e20cde63a255e97}{Initialize}}())}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37   fd\_chandler\_.\mbox{\hyperlink{classhwcomposer_1_1FDHandler_aee421fa4ae54b7d4fcc352ebea15b4f8}{AddFd}}(cevent\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a103324deefcbf4402fd302b737474416}{get\_fd}}());}
+\DoxyCodeLine{38 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1CompositorThread_aa93b1c77c0d6d55bf30a86cb429724b7}\label{classhwcomposer_1_1CompositorThread_aa93b1c77c0d6d55bf30a86cb429724b7}} 
+\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}!````~Compositor\+Thread@{$\sim$\+Compositor\+Thread}}
+\index{````~Compositor\+Thread@{$\sim$\+Compositor\+Thread}!hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+\subsubsection{\texorpdfstring{$\sim$\+Compositor\+Thread()}{~CompositorThread()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Compositor\+Thread\+::$\sim$\+Compositor\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 40 of file compositorthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                     \{}
+\DoxyCodeLine{41 \}}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwcomposer_1_1CompositorThread_a16c0227a122423a7f83a8369f600923b}\label{classhwcomposer_1_1CompositorThread_a16c0227a122423a7f83a8369f600923b}} 
+\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}!Draw@{Draw}}
+\index{Draw@{Draw}!hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool hwcomposer\+::\+Compositor\+Thread\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1DrawState}{Draw\+State}} $>$ \&}]{states,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1DrawState}{Draw\+State}} $>$ \&}]{media\+\_\+states,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structhwcomposer_1_1OverlayLayer}{Overlay\+Layer}} $>$ \&}]{layers }\end{DoxyParamCaption})}
+
+
+
+Definition at line 83 of file compositorthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                                                                    \{}
+\DoxyCodeLine{86   states\_.swap(states);}
+\DoxyCodeLine{87   tasks\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   \textcolor{keywordflow}{if} (!states\_.empty()) \{}
+\DoxyCodeLine{90     std::vector<OverlayBuffer *>().swap(buffers\_);}
+\DoxyCodeLine{91     buffers\_.reserve(layers.size());}
+\DoxyCodeLine{92     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&layer : layers) \{}
+\DoxyCodeLine{93       buffers\_.emplace\_back(layer.GetBuffer());}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     tasks\_ |= kRender3D;}
+\DoxyCodeLine{97   \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   \textcolor{keywordflow}{if} (!media\_states.empty()) \{}
+\DoxyCodeLine{100     media\_states\_.swap(media\_states);}
+\DoxyCodeLine{101     tasks\_ |= kRenderMedia;}
+\DoxyCodeLine{102   \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104   \textcolor{comment}{// We start of assuming that the draw calls}}
+\DoxyCodeLine{105   \textcolor{comment}{// succeed.}}
+\DoxyCodeLine{106   draw\_succeeded\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{107   tasks\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109   \textcolor{comment}{// Adding check to avoid waiting in this}}
+\DoxyCodeLine{110   \textcolor{comment}{// thread in certain corner case.}}
+\DoxyCodeLine{111   \textcolor{keywordflow}{if} (states\_.empty() \&\& media\_states\_.empty()) \{}
+\DoxyCodeLine{112     \textcolor{keywordflow}{return} draw\_succeeded\_;}
+\DoxyCodeLine{113   \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a5f38525b892525beaa7f37d2d4c50bde}{Resume}}();}
+\DoxyCodeLine{116   Wait();}
+\DoxyCodeLine{117   \textcolor{keywordflow}{return} draw\_succeeded\_;}
+\DoxyCodeLine{118 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1CompositorThread_a700ec2d3412ae4a3cbc5742c6003e660}\label{classhwcomposer_1_1CompositorThread_a700ec2d3412ae4a3cbc5742c6003e660}} 
+\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}!Exit\+Thread@{Exit\+Thread}}
+\index{Exit\+Thread@{Exit\+Thread}!hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+\subsubsection{\texorpdfstring{Exit\+Thread()}{ExitThread()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+Thread\+::\+Exit\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 120 of file compositorthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{120                                   \{}
+\DoxyCodeLine{121   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_aa360360e4c27cbc7fed745f79990a190}{HWCThread::Exit}}();}
+\DoxyCodeLine{122   std::vector<DrawState>().swap(states\_);}
+\DoxyCodeLine{123   std::vector<OverlayBuffer *>().swap(buffers\_);}
+\DoxyCodeLine{124 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1CompositorThread_af48eb5b73445e424b74c7e9375bf8f7c}\label{classhwcomposer_1_1CompositorThread_af48eb5b73445e424b74c7e9375bf8f7c}} 
+\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}!Free\+Resources@{Free\+Resources}}
+\index{Free\+Resources@{Free\+Resources}!hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+\subsubsection{\texorpdfstring{Free\+Resources()}{FreeResources()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+Thread\+::\+Free\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file compositorthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                      \{}
+\DoxyCodeLine{64   tasks\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{65   tasks\_ |= kReleaseResources;}
+\DoxyCodeLine{66   tasks\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{67   \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a5f38525b892525beaa7f37d2d4c50bde}{Resume}}();}
+\DoxyCodeLine{68 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1CompositorThread_a15f97ae71050432ba2780555368a3fca}\label{classhwcomposer_1_1CompositorThread_a15f97ae71050432ba2780555368a3fca}} 
+\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}!Handle\+Exit@{Handle\+Exit}}
+\index{Handle\+Exit@{Handle\+Exit}!hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+\subsubsection{\texorpdfstring{Handle\+Exit()}{HandleExit()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+Thread\+::\+Handle\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a39a94bd0b12451fe3060729787921cbf}{hwcomposer\+::\+H\+W\+C\+Thread}}.
+
+
+
+Definition at line 126 of file compositorthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126                                   \{}
+\DoxyCodeLine{127   HandleReleaseRequest();}
+\DoxyCodeLine{128   gl\_renderer\_.reset(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{129   gpu\_resource\_handler\_.reset(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{130 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1CompositorThread_af80e4eb7864b2f83a1eaa266a17b3a28}\label{classhwcomposer_1_1CompositorThread_af80e4eb7864b2f83a1eaa266a17b3a28}} 
+\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}!Handle\+Routine@{Handle\+Routine}}
+\index{Handle\+Routine@{Handle\+Routine}!hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+\subsubsection{\texorpdfstring{Handle\+Routine()}{HandleRoutine()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+Thread\+::\+Handle\+Routine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhwcomposer_1_1HWCThread_a539ea080e6bf0e6cffe08e2341be1ee4}{hwcomposer\+::\+H\+W\+C\+Thread}}.
+
+
+
+Definition at line 132 of file compositorthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{132                                      \{}
+\DoxyCodeLine{133   \textcolor{keywordtype}{bool} signal = \textcolor{keyword}{false};}
+\DoxyCodeLine{134   \textcolor{keywordflow}{if} (tasks\_ \& kRender3D) \{}
+\DoxyCodeLine{135     Handle3DDrawRequest();}
+\DoxyCodeLine{136     signal = \textcolor{keyword}{true};}
+\DoxyCodeLine{137   \}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139   \textcolor{keywordflow}{if} (tasks\_ \& kRenderMedia) \{}
+\DoxyCodeLine{140     HandleMediaDrawRequest();}
+\DoxyCodeLine{141     signal = \textcolor{keyword}{true};}
+\DoxyCodeLine{142   \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144   \textcolor{keywordflow}{if} (tasks\_ \& kReleaseResources) \{}
+\DoxyCodeLine{145     HandleReleaseRequest();}
+\DoxyCodeLine{146   \}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148   \textcolor{keywordflow}{if} (signal) \{}
+\DoxyCodeLine{149     cevent\_.\mbox{\hyperlink{classhwcomposer_1_1HWCEvent_a3cd16bda8f4fd8bcbda6dae72ff15f57}{Signal}}();}
+\DoxyCodeLine{150   \}}
+\DoxyCodeLine{151 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1CompositorThread_a0e36f2bd6e14959ffd8eff5faeefcbef}\label{classhwcomposer_1_1CompositorThread_a0e36f2bd6e14959ffd8eff5faeefcbef}} 
+\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+Thread\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhwcomposer_1_1ResourceManager}{Resource\+Manager}} $\ast$}]{resource\+\_\+manager,  }\item[{uint32\+\_\+t}]{gpu\+\_\+fd,  }\item[{\mbox{\hyperlink{classhwcomposer_1_1FrameBufferManager}{Frame\+Buffer\+Manager}} $\ast$}]{frame\+\_\+buffer\+\_\+manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file compositorthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                                                             \{}
+\DoxyCodeLine{46   fb\_manager\_ = frame\_buffer\_manager;}
+\DoxyCodeLine{47   tasks\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_a863f9d0f1b270f863a9298161b52faf1}{lock}}();}
+\DoxyCodeLine{48   \textcolor{keywordflow}{if} (!gpu\_resource\_handler\_)}
+\DoxyCodeLine{49     gpu\_resource\_handler\_.reset(\mbox{\hyperlink{namespacehwcomposer_a37cb4c79bf84a69887ed09adb9c5b4b0}{CreateNativeGpuResourceHandler}}());}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   resource\_manager\_ = resource\_manager;}
+\DoxyCodeLine{52   gpu\_fd\_ = gpu\_fd;}
+\DoxyCodeLine{53   tasks\_lock\_.\mbox{\hyperlink{classhwcomposer_1_1SpinLock_ae5cf624b4f0ec710833ce44e945b85d7}{unlock}}();}
+\DoxyCodeLine{54   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classhwcomposer_1_1HWCThread_a7162d49a6b4026673f77ac048eb4d07b}{InitWorker}}()) \{}
+\DoxyCodeLine{55     \mbox{\hyperlink{alios_2platformdefines_8h_a226d6c99e4bcfca193c095e085e9097d}{ETRACE}}(\textcolor{stringliteral}{"Failed to initalize CompositorThread. \%s"}, \mbox{\hyperlink{hwctrace_8h_a791a01fa8fe130cef13d68a706df9034}{PRINTERROR}}());}
+\DoxyCodeLine{56   \}}
+\DoxyCodeLine{57 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{classhwcomposer_1_1CompositorThread_a9a304d478866ab7518765ce632eca964}\label{classhwcomposer_1_1CompositorThread_a9a304d478866ab7518765ce632eca964}} 
+\index{hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}!Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}}
+\index{Set\+Explicit\+Sync\+Support@{Set\+Explicit\+Sync\+Support}!hwcomposer\+::\+Compositor\+Thread@{hwcomposer\+::\+Compositor\+Thread}}
+\subsubsection{\texorpdfstring{Set\+Explicit\+Sync\+Support()}{SetExplicitSyncSupport()}}
+{\footnotesize\ttfamily void hwcomposer\+::\+Compositor\+Thread\+::\+Set\+Explicit\+Sync\+Support (\begin{DoxyParamCaption}\item[{bool}]{disable\+\_\+explicit\+\_\+sync }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file compositorthread.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                                                         \{}
+\DoxyCodeLine{60   disable\_explicit\_sync\_ = disable\_explicit\_sync;}
+\DoxyCodeLine{61 \}}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/compositor/\mbox{\hyperlink{compositorthread_8h}{compositorthread.\+h}}\item 
+common/compositor/\mbox{\hyperlink{compositorthread_8cpp}{compositorthread.\+cpp}}\end{DoxyCompactItemize}

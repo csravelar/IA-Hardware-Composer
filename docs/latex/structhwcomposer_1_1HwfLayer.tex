@@ -1,0 +1,220 @@
+\hypertarget{structhwcomposer_1_1HwfLayer}{}\section{hwcomposer\+:\+:Hwf\+Layer Struct Reference}
+\label{structhwcomposer_1_1HwfLayer}\index{hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}}
+
+
+{\ttfamily \#include $<$hwf\+\_\+alioshal.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a37d86dd6882069242e98dfbe210c4263}{$\sim$\+Hwf\+Layer}} ()
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a33387806d7d38a3d253f102abfeddfdd}{Hwf\+Layer}} ()=default
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a5d306079ca0f1c7995b54b1415e6ca32}{Hwf\+Layer}} (const \mbox{\hyperlink{structhwcomposer_1_1HwfLayer}{Hwf\+Layer}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwfLayer}{Hwf\+Layer}} \& \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a76f2388744229f57a4ab440dcd73f778}{operator=}} (const \mbox{\hyperlink{structhwcomposer_1_1HwfLayer}{Hwf\+Layer}} \&rhs)=delete
+\item 
+int \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a78c4b1590cf54cfad77fc3382cce9ce5}{Init\+From\+Hwc\+Layer}} (hwf\+\_\+layer\+\_\+t $\ast$sf\+\_\+layer)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structyalloc__handle}{yalloc\+\_\+handle}} \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a6dc6b7acf0edab3cf5f49a9e3c389ce3}{native\+\_\+handle\+\_\+}}
+\item 
+\mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{hwcomposer\+::\+Hwc\+Layer}} $\ast$ \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\+\_\+layer\+\_\+}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_af8ca4030957aaef1c746b178592bb5cc}{index\+\_\+}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 97 of file hwf\+\_\+alioshal.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfLayer_a37d86dd6882069242e98dfbe210c4263}\label{structhwcomposer_1_1HwfLayer_a37d86dd6882069242e98dfbe210c4263}} 
+\index{hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}!````~Hwf\+Layer@{$\sim$\+Hwf\+Layer}}
+\index{````~Hwf\+Layer@{$\sim$\+Hwf\+Layer}!hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}}
+\subsubsection{\texorpdfstring{$\sim$\+Hwf\+Layer()}{~HwfLayer()}}
+{\footnotesize\ttfamily hwcomposer\+::\+Hwf\+Layer\+::$\sim$\+Hwf\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 98 of file hwf\+\_\+alioshal.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98               \{}
+\DoxyCodeLine{99     \textcolor{keyword}{delete} \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}};  \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{100     \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}} = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{101   \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfLayer_a33387806d7d38a3d253f102abfeddfdd}\label{structhwcomposer_1_1HwfLayer_a33387806d7d38a3d253f102abfeddfdd}} 
+\index{hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}!Hwf\+Layer@{Hwf\+Layer}}
+\index{Hwf\+Layer@{Hwf\+Layer}!hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}}
+\subsubsection{\texorpdfstring{Hwf\+Layer()}{HwfLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Hwf\+Layer\+::\+Hwf\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwfLayer_a5d306079ca0f1c7995b54b1415e6ca32}\label{structhwcomposer_1_1HwfLayer_a5d306079ca0f1c7995b54b1415e6ca32}} 
+\index{hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}!Hwf\+Layer@{Hwf\+Layer}}
+\index{Hwf\+Layer@{Hwf\+Layer}!hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}}
+\subsubsection{\texorpdfstring{Hwf\+Layer()}{HwfLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hwcomposer\+::\+Hwf\+Layer\+::\+Hwf\+Layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1HwfLayer}{Hwf\+Layer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfLayer_a78c4b1590cf54cfad77fc3382cce9ce5}\label{structhwcomposer_1_1HwfLayer_a78c4b1590cf54cfad77fc3382cce9ce5}} 
+\index{hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}!Init\+From\+Hwc\+Layer@{Init\+From\+Hwc\+Layer}}
+\index{Init\+From\+Hwc\+Layer@{Init\+From\+Hwc\+Layer}!hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}}
+\subsubsection{\texorpdfstring{Init\+From\+Hwc\+Layer()}{InitFromHwcLayer()}}
+{\footnotesize\ttfamily int hwcomposer\+::\+Hwf\+Layer\+::\+Init\+From\+Hwc\+Layer (\begin{DoxyParamCaption}\item[{hwf\+\_\+layer\+\_\+t $\ast$}]{sf\+\_\+layer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file hwf\+\_\+alioshal.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                                     \{}
+\DoxyCodeLine{33   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}) \{}
+\DoxyCodeLine{34     \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}} = \textcolor{keyword}{new} \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{hwcomposer::HwcLayer}}();}
+\DoxyCodeLine{35   \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37   \textcolor{keywordtype}{bool} surface\_damage = \textcolor{keyword}{true};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39   \textcolor{keywordflow}{if} (\mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a970873c68e816a7cfdbbe900262b8b44}{GetNativeHandle}}() \&\&}
+\DoxyCodeLine{40       (\mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a970873c68e816a7cfdbbe900262b8b44}{GetNativeHandle}}()->\mbox{\hyperlink{structyalloc__handle_a36250e79fcdc6f1e58020a9d2b891a48}{target\_}} == sf\_layer->target))}
+\DoxyCodeLine{41     surface\_damage = \textcolor{keyword}{false};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43   \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a6dc6b7acf0edab3cf5f49a9e3c389ce3}{native\_handle\_}}.\mbox{\hyperlink{structyalloc__handle_a36250e79fcdc6f1e58020a9d2b891a48}{target\_}} = sf\_layer->target;}
+\DoxyCodeLine{44   \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_aeaeb1f0fd1d4c5754e0946b43c6eef84}{SetNativeHandle}}(\&\mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a6dc6b7acf0edab3cf5f49a9e3c389ce3}{native\_handle\_}});}
+\DoxyCodeLine{45   \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a312a7530c7cdca364df62c950ccbd024}{SetAlpha}}(sf\_layer->globalAlpha);}
+\DoxyCodeLine{46   \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a83bafbef5b9c98ad5821acdeddd9a26e}{SetSourceCrop}}(hwcomposer::HwcRect<float>(}
+\DoxyCodeLine{47       sf\_layer->srcRect.left, sf\_layer->srcRect.top, sf\_layer->srcRect.right,}
+\DoxyCodeLine{48       sf\_layer->srcRect.bottom));}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50   \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a0bf1d6ab9b9d45a7e118567b493dd346}{SetDisplayFrame}}(}
+\DoxyCodeLine{51       hwcomposer::HwcRect<int>(sf\_layer->destRect.left, sf\_layer->destRect.top,}
+\DoxyCodeLine{52                                sf\_layer->destRect.right,}
+\DoxyCodeLine{53                                sf\_layer->destRect.bottom),}
+\DoxyCodeLine{54       0, 0);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56   uint32\_t transform = 0;}
+\DoxyCodeLine{57   \textcolor{keywordflow}{if} (sf\_layer->transform == HWF\_TRANSFORM\_ROT\_270) \{}
+\DoxyCodeLine{58     transform = hwcomposer::HWCTransform::kTransform270;}
+\DoxyCodeLine{59   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (sf\_layer->transform == HWF\_TRANSFORM\_ROT\_180) \{}
+\DoxyCodeLine{60     transform = hwcomposer::HWCTransform::kTransform180;}
+\DoxyCodeLine{61   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{62     \textcolor{keywordflow}{if} (sf\_layer->transform \& HWF\_TRANSFORM\_FLIP\_H)}
+\DoxyCodeLine{63       transform |= hwcomposer::HWCTransform::kReflectX;}
+\DoxyCodeLine{64     \textcolor{keywordflow}{if} (sf\_layer->transform \& HWF\_TRANSFORM\_FLIP\_V)}
+\DoxyCodeLine{65       transform |= hwcomposer::HWCTransform::kReflectY;}
+\DoxyCodeLine{66     \textcolor{keywordflow}{if} (sf\_layer->transform \& HWF\_TRANSFORM\_ROT\_90)}
+\DoxyCodeLine{67       transform |= hwcomposer::HWCTransform::kTransform90;}
+\DoxyCodeLine{68   \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70   \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_ab30467eafc63b3b95059ff6ca3738933}{SetTransform}}(transform);}
+\DoxyCodeLine{71   \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_aaa01965ccb44cf807ec30956651c431a}{SetAcquireFence}}(dup(sf\_layer->acquireSyncFd));}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73   \textcolor{keywordflow}{switch} (sf\_layer->blendMode) \{}
+\DoxyCodeLine{74     \textcolor{keywordflow}{case} HWF\_BLENDING\_NONE:}
+\DoxyCodeLine{75       \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a7705d2ba4b36529f37dc0f7e706417eb}{SetBlending}}(hwcomposer::HWCBlending::kBlendingNone);}
+\DoxyCodeLine{76       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keywordflow}{case} HWF\_BLENDING\_PREMULT:}
+\DoxyCodeLine{79       \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a7705d2ba4b36529f37dc0f7e706417eb}{SetBlending}}(hwcomposer::HWCBlending::kBlendingPremult);}
+\DoxyCodeLine{80       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keywordflow}{case} HWF\_BLENDING\_COVERAGE:}
+\DoxyCodeLine{83       \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a7705d2ba4b36529f37dc0f7e706417eb}{SetBlending}}(hwcomposer::HWCBlending::kBlendingCoverage);}
+\DoxyCodeLine{84       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{87       LOG\_E(\textcolor{stringliteral}{"Invalid blendMode in hwc\_layer\_1\_t \%d"}, sf\_layer->blendMode);}
+\DoxyCodeLine{88       \textcolor{keywordflow}{return} -EINVAL;}
+\DoxyCodeLine{89   \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91   \textcolor{comment}{// TODO: Add the damage detection.}}
+\DoxyCodeLine{92   \textcolor{keywordflow}{if} (surface\_damage) \{}
+\DoxyCodeLine{93     hwcomposer::HwcRegion hwc\_region;}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#if 0}}
+\DoxyCodeLine{95     uint32\_t num\_rects = sf\_layer->surfaceDamage.numRects;}
+\DoxyCodeLine{96     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} rect = 0; rect < num\_rects; ++rect) \{}
+\DoxyCodeLine{97         hwc\_region.emplace\_back(sf\_layer->surfaceDamage.rects[rect].left,}
+\DoxyCodeLine{98                   sf\_layer->surfaceDamage.rects[rect].top,}
+\DoxyCodeLine{99                   sf\_layer->surfaceDamage.rects[rect].right,}
+\DoxyCodeLine{100                   sf\_layer->surfaceDamage.rects[rect].bottom);}
+\DoxyCodeLine{101         \}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{103     \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a25ec3931c5bb7108c4b8c39c839b26dc}{SetSurfaceDamage}}(hwc\_region);}
+\DoxyCodeLine{104   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{105     hwcomposer::HwcRegion hwc\_region;}
+\DoxyCodeLine{106     hwc\_region.emplace\_back(0, 0, 0, 0);}
+\DoxyCodeLine{107     \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a25ec3931c5bb7108c4b8c39c839b26dc}{SetSurfaceDamage}}(hwc\_region);}
+\DoxyCodeLine{108   \}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110   uint32\_t num\_rects = sf\_layer->visibleRegion.num;}
+\DoxyCodeLine{111   hwcomposer::HwcRegion visible\_region;}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} rect = 0; rect < num\_rects; ++rect) \{}
+\DoxyCodeLine{114     visible\_region.emplace\_back(sf\_layer->visibleRegion.rects[rect].left,}
+\DoxyCodeLine{115                                 sf\_layer->visibleRegion.rects[rect].top,}
+\DoxyCodeLine{116                                 sf\_layer->visibleRegion.rects[rect].right,}
+\DoxyCodeLine{117                                 sf\_layer->visibleRegion.rects[rect].bottom);}
+\DoxyCodeLine{118   \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120   \mbox{\hyperlink{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}{hwc\_layer\_}}->\mbox{\hyperlink{structhwcomposer_1_1HwcLayer_a27744cfd952d0648168a1d28c65ff092}{SetVisibleRegion}}(visible\_region);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{123 \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfLayer_a76f2388744229f57a4ab440dcd73f778}\label{structhwcomposer_1_1HwfLayer_a76f2388744229f57a4ab440dcd73f778}} 
+\index{hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}!operator=@{operator=}}
+\index{operator=@{operator=}!hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1HwfLayer}{Hwf\+Layer}}\& hwcomposer\+::\+Hwf\+Layer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhwcomposer_1_1HwfLayer}{Hwf\+Layer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}\label{structhwcomposer_1_1HwfLayer_a02efa34343c78c9903973f69cca6f842}} 
+\index{hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}!hwc\+\_\+layer\+\_\+@{hwc\+\_\+layer\+\_\+}}
+\index{hwc\+\_\+layer\+\_\+@{hwc\+\_\+layer\+\_\+}!hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}}
+\subsubsection{\texorpdfstring{hwc\+\_\+layer\+\_\+}{hwc\_layer\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhwcomposer_1_1HwcLayer}{hwcomposer\+::\+Hwc\+Layer}}$\ast$ hwcomposer\+::\+Hwf\+Layer\+::hwc\+\_\+layer\+\_\+ = \mbox{\hyperlink{alios_2platformdefines_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}}
+
+
+
+Definition at line 109 of file hwf\+\_\+alioshal.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwfLayer_af8ca4030957aaef1c746b178592bb5cc}\label{structhwcomposer_1_1HwfLayer_af8ca4030957aaef1c746b178592bb5cc}} 
+\index{hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}!index\+\_\+@{index\+\_\+}}
+\index{index\+\_\+@{index\+\_\+}!hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}}
+\subsubsection{\texorpdfstring{index\+\_\+}{index\_}}
+{\footnotesize\ttfamily uint32\+\_\+t hwcomposer\+::\+Hwf\+Layer\+::index\+\_\+ = 0}
+
+
+
+Definition at line 110 of file hwf\+\_\+alioshal.\+h.
+
+\mbox{\Hypertarget{structhwcomposer_1_1HwfLayer_a6dc6b7acf0edab3cf5f49a9e3c389ce3}\label{structhwcomposer_1_1HwfLayer_a6dc6b7acf0edab3cf5f49a9e3c389ce3}} 
+\index{hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}!native\+\_\+handle\+\_\+@{native\+\_\+handle\+\_\+}}
+\index{native\+\_\+handle\+\_\+@{native\+\_\+handle\+\_\+}!hwcomposer\+::\+Hwf\+Layer@{hwcomposer\+::\+Hwf\+Layer}}
+\subsubsection{\texorpdfstring{native\+\_\+handle\+\_\+}{native\_handle\_}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structyalloc__handle}{yalloc\+\_\+handle}} hwcomposer\+::\+Hwf\+Layer\+::native\+\_\+handle\+\_\+}
+
+
+
+Definition at line 108 of file hwf\+\_\+alioshal.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+os/alios/\mbox{\hyperlink{hwf__alioshal_8h}{hwf\+\_\+alioshal.\+h}}\item 
+os/alios/\mbox{\hyperlink{hwf__alioshal_8cpp}{hwf\+\_\+alioshal.\+cpp}}\end{DoxyCompactItemize}
