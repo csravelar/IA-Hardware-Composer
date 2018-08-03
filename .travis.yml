@@ -65,13 +65,6 @@ script:
 - make -j5 && make install
 - popd
 
-#clone and build vaapi : dependency
-- git clone https://github.com/projectceladon/vaapi.git /tmp/vaapi
-- pushd /tmp/vaapi
-- ./autogen.sh --prefix=$WLD
-- make -j5 && make install
-- popd
-
 # finally, build the hardware composer itself
 - ./autogen.sh --prefix=$WLD
 - make -j5
