@@ -35,8 +35,8 @@ script:
 - sudo cp ninja /usr/bin/
 - popd
 
-#clone and build vaapi : dependency
-- pushd /tmp/vaapi
+#clone and build libva : dependency
+- pushd /tmp/libva
 - git clean -xfd > /dev/null
 - ./autogen.sh --prefix=$WLD
 - make -j5 && make install
