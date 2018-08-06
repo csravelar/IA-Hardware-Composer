@@ -65,13 +65,6 @@ script:
 - make -j5 && make install
 - popd
 
-#clone and build vaapi : dependency
-- git clone https://github.com/projectceladon/vaapi.git /tmp/vaapi
-- pushd /tmp/vaapi
-- ./autogen.sh --prefix=$WLD
-- make -j5 && make install
-- popd
-
 # finally, build the hardware composer itself
 - ./autogen.sh --prefix=$WLD
 - make -j5
@@ -151,13 +144,6 @@ script:
 - make -j5 && make install
 - popd
 
-#clone and build vaapi : dependency
-- pushd /tmp/vaapi
-- git clean -xfd > /dev/null
-- ./autogen.sh --prefix=$WLD
-- make -j5 && make install
-- popd
-
 #Build weston and weston plugin
 - git clone -b iahwc-plugin https://github.com/intel/external-weston.git ../weston
 - cd ../weston
@@ -165,7 +151,3 @@ script:
 - cp -r ../IA-Hardware-Composer ../iahwc
 - cd -
 - os/linux/weston/build_script.sh --weston-dir=../weston --iahwc-dir=$(pwd) --build
-
-branches:
-  only:
-  - master
