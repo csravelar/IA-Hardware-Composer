@@ -58,13 +58,6 @@ script:
 - make CFLAGS=-DSYS_memfd_create=319 CPPFLAGS=--std=c11 -j5 && make install
 - popd
 
-#clone and build libva : dependency
-- git clone https://github.com/projectceladon/libva.git /tmp/libva
-- pushd /tmp/libva
-- ./autogen.sh --prefix=$WLD
-- make -j5 && make install
-- popd
-
 # finally, build the hardware composer itself
 - ./autogen.sh --prefix=$WLD
 - make -j5
@@ -135,13 +128,6 @@ script:
 - git clean -xfd > /dev/null
 - ./autogen.sh --prefix=$WLD --with-platforms=surfaceless,drm,wayland,x11 --disable-dri3 --enable-shared-glapi --disable-glx --disable-glx-tls --enable-gbm --without-gallium-drivers --with-dri-drivers=i965
 - make CFLAGS=-DSYS_memfd_create=319 CPPFLAGS=--std=c11 -j5 && make install
-- popd
-
-#clone and build libva : dependency
-- pushd /tmp/libva
-- git clean -xfd > /dev/null
-- ./autogen.sh --prefix=$WLD
-- make -j5 && make install
 - popd
 
 #Build weston and weston plugin
