@@ -91,6 +91,7 @@ before_install:
 
 install:
   - |
+
     test -n "$OVERRIDE_CC" && export CC="$OVERRIDE_CC"
     test -n "$OVERRIDE_CXX" && export CXX="$OVERRIDE_CXX"
 
@@ -189,7 +190,3 @@ script:
       cd -
       os/linux/weston/build_script.sh --weston-dir=../weston --iahwc-dir=$(pwd) --build
     fi
-
-branches:
-  only:
-    - master
