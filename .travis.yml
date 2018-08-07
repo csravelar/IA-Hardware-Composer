@@ -31,60 +31,23 @@ matrix:
     - env:
         - LABEL="Static analysis"
         - BUILD=static
-      addons:
-        apt:
-          packages:
-            - clang-format-3.9
-            - cppcheck
       install: true
       script: true
     - env:
         - LABEL="Default"
         - BUILD=make
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-4.9
-            - g++-4.9
-            - libelf-dev
     - env:
         - LABEL="Disable hotplug"
         - BUILD=make
         - HWC_FLAGS="--disable-hotplug-support"
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-4.9
-            - g++-4.9
-            - libelf-dev
     - env:
         - LABEL="Dummy compositor"
         - BUILD=make
         - HWC_FLAGS="--enable-dummy-compositor"
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-4.9
-            - g++-4.9
-            - libelf-dev
     - env:
         - LABEL="Vulkan compositor"
         - BUILD=make
         - HWC_FLAGS="--enable-vulkan"
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-4.9
-            - g++-4.9
-            - libelf-dev
     - env:
         - LABEL="Weston plugin"
         - BUILD=weston
@@ -94,9 +57,6 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - gcc-4.9
-            - g++-4.9
-            - libelf-dev
             - xutils-dev
             - libxcb*
             - libx11-xcb-dev
@@ -115,6 +75,14 @@ matrix:
             - libevdev-dev
             - libmtdev-dev
             - mtdev-tools
+addons:
+apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.9
+    - g++-4.9
+    - libelf-dev
 
 before_install:
   - if test "x$BUILD" = xstatic; then
